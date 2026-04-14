@@ -57,7 +57,7 @@ export default function VateraPage() {
           {/* Practical info */}
           <div>
             <h2 className="text-2xl font-semibold mb-3">Activities</h2>
-            <ul className="list-disc pl-5 text-gray-700 space-y-2">
+            <ul className="text-gray-700 space-y-2 list-disc pl-5">
               <li> Bird observation </li>
               <li> Nature photo </li>
               <li> Hiking on natural paths </li>
@@ -69,7 +69,7 @@ export default function VateraPage() {
          {/* Prosvasi */}
           <div>
             <h2 className="text-2xl font-semibold mb-3">Access</h2>
-            <ul className="text-gray-700 space-y-2">
+            <ul className="text-gray-700 space-y-2 list-disc pl-5">
               <p>The bay is located in the main part of the island and is easily accessible: </p>
               <li> about 40 – 50 minutes from Mytilene</li>
               <li> near villages such as Kalloni and Skalochori</li>
@@ -80,7 +80,7 @@ export default function VateraPage() {
  {/* apaeuthinetai*/}
           <div>
             <h2 className="text-2xl font-semibold mb-3">Ideal for</h2>
-            <ul className="text-gray-700 space-y-2">
+            <ul className="text-gray-700 space-y-2 list-disc pl-5">
               <li> Love of nature and wildlife </li>
               <li> Photographers </li>
               <li>  Couples and travelers looking for peace </li>
