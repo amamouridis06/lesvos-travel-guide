@@ -14,8 +14,8 @@ export default function VateraPage() {
       {/* HERO */}
       <section className="relative h-[60vh] w-full">
         <Image
-          src="/vatera.jpg"
-          alt="Beach of Vatera Lesvos"
+          src="/agios-isidoros.jpg"
+          alt="Beach of Agios Isidoros Lesvos"
           fill
           className="object-cover"
           priority
@@ -42,9 +42,7 @@ export default function VateraPage() {
           <div>
             <h2 className="text-2xl font-semibold mb-3">Why you should go</h2>
             <p className="text-gray-700 leading-relaxed">
-              Vatera is an extensive sandy beach in southern Lesvos, a ideal for relaxing holidays by the sea. The combination
-              floating beach, clean water and seaside taverns
-              makes it a favorite choice for families and couples.
+              Agios Isidoros beach in Lesvos is one of the most famous and beautiful beaches of the island, especially near Ploma
             </p>
           </div>
 
@@ -63,10 +61,15 @@ export default function VateraPage() {
           <div>
             <h2 className="text-2xl font-semibold mb-3">Useful Informations</h2>
             <ul className="text-gray-700 space-y-2">
-              <li> <strong> Type: </strong> Sandy </li>
-              <li> <strong> Organization: </strong> Umbrellas & sunbeds in places </li>
+              <li> <strong> Type: </strong> medium to thick pebbles </li>
+              <li> <strong> Organization: </strong> * Umbrellas & sunbeds (usually through beach bar consumption)
+                                                    * Beach bars with music (some more relaxed, some more lily)
+                                                    * Coffee & taverns along the beach
+                                                    * Shower and locker rooms
+                                                    * Lifeguard (season)
+                                                    * A little beach volleyball stadium </li>
               <li> <strong> Access: </strong> Easy by car </li>
-              <li> <strong> Ideal for: </strong> Families, relaxation </li>
+              <li> <strong> Ideal for: </strong> Αll people, relaxation </li>
             </ul>
           </div>
         </div>
