@@ -67,7 +67,7 @@ export default function VateraPage() {
               <li> <strong> Organization: </strong> Umbrellas & sunbeds (usually through beach bar consumption), Beach bars with music (some more relaxed, some more lily)
                           , Coffee & taverns along the beach, Shower and locker rooms, Lifeguard (season), Beach volleyball stadium </li>
               <li> <strong> Access: </strong> Easy by car </li>
-              <li> <strong> Ideal for: </strong> Families, relaxation </li>
+              <li> <strong> Ideal for: </strong> All people, relaxation </li>
             </ul>
           </div>
         </div>
@@ -78,7 +78,7 @@ export default function VateraPage() {
           {/* Map */}
           <div className="w-full h-48 rounded-lg overflow-hidden">
             <iframe
-                src="https://www.google.com/maps/place/%CE%92%CE%B1%CF%84%CE%B5%CF%81%CE%AC+813+00,+%CE%95%CE%BB%CE%BB%CE%AC%CE%B4%CE%B1/@39.0205683,26.1787428,4538m/data=!3m2!1e3!4b1!4m6!3m5!1s0x14baef8e3ce47107:0xa00bd2f74c274e0!8m2!3d39.0195659!4d26.1978707!16zL20vMDJsOG43?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5848.771269722645!2d26.39389675!3d38.96713955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14baf78b3ca36ae3%3A0x11ec44cd23d9097!2sAgios%20Isidoros%20812%2000!5e1!3m2!1sen!2sgr!4v1776163983586!5m2!1sen!2sgr" 
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
