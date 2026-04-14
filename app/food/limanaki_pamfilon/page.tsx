@@ -24,7 +24,7 @@ export default function LimanakiPamfilonPage() {
 
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 text-center text-white px-6 max-w-3xl">
           <h1 className="text-4xl md:text-5xl font-bold drop-shadow-lg">
-            To limanaki ton filon
+            To limanaki ton Pamfilon
           </h1>
           <p className="mt-3 text-lg text-gray-200">
             Traditional tavern by the sea
