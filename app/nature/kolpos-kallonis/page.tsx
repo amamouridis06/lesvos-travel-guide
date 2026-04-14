@@ -241,7 +241,7 @@ export default function VateraPage() {
 }
 
           <div className="bg-white rounded-xl shadow p-4">
-            <h3 className="font-semibold mb-3">Nearbys</h3>
+            <h3 className="font-semibold mb-3">Nearby</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 🏘{" "}
