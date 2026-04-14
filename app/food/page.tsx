@@ -151,30 +151,28 @@ export default function FoodGuideCategoriesPage() {
         </div>
       </section>
 
-      <main className="mx-auto max-w-7xl space-y-20 px-6 py-12 md:px-10 md:py-16">
-        {categories.map((category, index) => (
-          <section
-            id={category.id}
-            key={category.id}
-            className="scroll-mt-36"
-            style={{ animation: `fadeIn 0.7s ease-out ${index * 0.1}s both` }}
-          >
-            <div className="mb-8 flex items-end justify-between gap-4 border-b border-black/5 pb-4">
-              <div>
-                <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-sm shadow-sm">
-                  <span>{category.icon}</span>
-                  <span className="font-medium">{category.title}</span>
-                </div>
-                <h3 className="text-3xl font-bold tracking-tight">{category.title}</h3>
-                <p className="mt-2 max-w-2xl text-slate-600">{category.description}</p>
-              </div>
-              <button
-                onClick={() => scrollToSection("categories")}
-                className="hidden rounded-2xl border border-black/10 bg-white px-4 py-2 text-sm font-medium shadow-sm transition hover:-translate-y-0.5 hover:shadow md:block"
-              >
-                Πίσω στις κατηγορίες
-              </button>
-            </div>
+
+    <div className="flex gap-4 overflow-x-auto pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+  {categories.map((category, index) => (
+    <button
+      key={category.id}
+      onClick={() => scrollToSection(category.id)}
+      className="group min-w-[240px] rounded-3xl border border-black/5 bg-white px-5 py-4 text-left shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/5 md:min-w-[260px]"
+      style={{ animation: `fadeUp 0.55s ease-out ${index * 0.08}s both` }}
+    >
+      <div className="mb-3 flex items-center gap-3">
+        <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-stone-100 text-xl transition duration-300 group-hover:scale-110">
+          {category.icon}
+        </span>
+        <span className="text-lg font-semibold">{category.title}</span>
+      </div>
+      <p className="text-sm leading-6 text-slate-500">
+        {category.description}
+      </p>
+    </button>
+  ))}
+</div>
+    
 
             <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
               {category.items.map((item, itemIndex) => (
