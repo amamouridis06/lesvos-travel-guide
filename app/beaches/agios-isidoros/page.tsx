@@ -108,13 +108,13 @@ export default function VateraPage() {
       {/* CTA */}
       <section className="bg-neutral-900 text-white py-16 text-center">
         <h2 className="text-2xl font-semibold mb-4">
-          Δείτε κι άλλες παραλίες στη Λέσβο
+          See other beaches in Lesvos
         </h2>
         <Link
           href="/beaches"
           className="inline-block px-6 py-3 bg-yellow-600 text-black rounded-lg font-semibold hover:bg-yellow-500 transition"
         >
-          Όλες οι παραλίες
+         All beaches
         </Link>
       </section>
 
