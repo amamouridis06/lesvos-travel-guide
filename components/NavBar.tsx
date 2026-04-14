@@ -69,12 +69,7 @@ export default function NavBar() {
                 >
                  Archaeological Sites
                 </Link>
-                <Link
-                  href="/nature"
-                  className="block px-4 py-2 hover:bg-white/10"
-                >
-                 Nature
-                </Link>
+                
               </div>
             )}
           </div>
