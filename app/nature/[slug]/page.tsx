@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export default function NaturePage() {
-  const beaches = [
+  const nature = [
     {
       slug: "vatera",
       name: "Βατερά",
