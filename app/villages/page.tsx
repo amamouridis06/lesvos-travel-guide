@@ -31,6 +31,12 @@ const villages = [
     image: "/mantamados.jpg",
     href: "/villages/mantamados",
   },
+    {
+    name: "Σκάλα Καλλονής ",
+    description: "Ούζο, καφέ & θάλλασα",
+    image: "/skala-kallonis.jpg",
+    href: "/villages/skala-kallonis",
+  },
 ];
 
 export default function VillagesPage() {
