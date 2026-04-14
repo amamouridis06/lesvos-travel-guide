@@ -14,7 +14,7 @@ export default function VateraPage() {
       {/* HERO */}
       <section className="relative h-[60vh] w-full">
         <Image
-          src="/agios-isidoros1.jpg"
+          src="/agios-isidoros1.jpeg"
           alt="Beach of Agios Isidoros"
           fill
           className="object-cover"
