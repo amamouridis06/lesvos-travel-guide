@@ -39,14 +39,14 @@ export default function VateraPage() {
 
           {/* Overview */}
           <div>
-            <h2 className="text-2xl font-semibold mb-3">Why you should visit the Gulf of Kalloni:</h2>
+            <h2 className="text-2xl font-semibold mb-3">Why you should visit the Gulf of Kalloni</h2>
             <p className="text-gray-700 leading-relaxed">
              The Gulf of Kalloni is one of the most significant wetlands in the Mediterranean and a truly unique natural attraction of Lesvos. Its exceptional ecological importance draws visitors from around the world, particularly nature enthusiasts and birdwatchers who come to experience its rich biodiversity.
             </p>
           </div>
            {/* */}
           <div>
-            <h2 className="text-2xl font-semibold mb-3">🌿 What makes the Gulf of Kalloni special:</h2>
+            <h2 className="text-2xl font-semibold mb-3">🌿 What makes the Gulf of Kalloni special</h2>
             <p className="text-gray-700 leading-relaxed">
               The area hosts over 250 species of birds, including well-known flamingos, herons, and many migratory species. The shallow waters and extensive wetlands create an ideal environment for wildlife, offering unique and captivating landscapes throughout the year.
             </p>
