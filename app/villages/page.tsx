@@ -34,7 +34,7 @@ const villages = [
     {
     name: "Σκάλα Καλλονής ",
     description: "Ούζο, καφέ & θάλλασα",
-    image: "/skala-kallonis.jpg",
+    image: "/skala-kallonis.jpeg",
     href: "/villages/skala-kallonis",
   },
 ];
