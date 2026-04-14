@@ -103,18 +103,18 @@ export default function VateraPage() {
 
           {/* Nearby */}
           <div className="bg-white rounded-xl shadow p-4">
-            <h3 className="font-semibold mb-3">Nearbys</h3>
+            <h3 className="font-semibold mb-3">Nearby</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 🏘{" "}
                 <Link href="/villages/kalloni" className="text-blue-600 hover:underline">
-                  Kalloni
+                 <p>Kalloni</p> 
                 </Link>
                 <Link href="/villages/skalla-kallonis" className="text-blue-600 hover:underline">
-                 Skalla Kallonis
+                 <p> Skalla Kallonis</p> 
                 </Link>
                 <Link href="/villages/agia-paraskeui" className="text-blue-600 hover:underline">
-                 Agia Paraskeui
+                 <p> Agia Paraskeui</p> 
                 </Link>
               </li>
             </ul>
