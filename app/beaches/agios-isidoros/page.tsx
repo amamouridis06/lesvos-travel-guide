@@ -64,7 +64,8 @@ export default function VateraPage() {
             <h2 className="text-2xl font-semibold mb-3">Useful Informations</h2>
             <ul className="text-gray-700 space-y-2">
               <li> <strong> Type: </strong> Sandy </li>
-              <li> <strong> Organization: </strong> Umbrellas & sunbeds in places </li>
+              <li> <strong> Organization: </strong> Umbrellas & sunbeds (usually through beach bar consumption), Beach bars with music (some more relaxed, some more lily)
+                          Coffee & taverns along the beach, Shower and locker rooms, Lifeguard (season), Beach volleyball stadium </li>
               <li> <strong> Access: </strong> Easy by car </li>
               <li> <strong> Ideal for: </strong> Families, relaxation </li>
             </ul>
