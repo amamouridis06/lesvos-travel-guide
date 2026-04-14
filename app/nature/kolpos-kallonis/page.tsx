@@ -14,7 +14,7 @@ export default function VateraPage() {
       {/* HERO */}
       <section className="relative h-[60vh] w-full">
         <Image
-          src="/kolpos-kallonis.jpeg"
+          src="/flamingo.jpeg"
           alt=" The Gulf of Kalloni"
           fill
           className="object-cover"
