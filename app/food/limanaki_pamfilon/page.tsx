@@ -2,9 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Το Λιμανάκι των Παμφίλων | Lesvos Travel Guide",
+  title: "To limanaki ton Pamfilon | Lesvos Travel Guide",
   description:
-    "Το Λιμανάκι των Παμφίλων: παραδοσιακή ταβέρνα δίπλα στη θάλασσα, γνωστή για ψάρι, θαλασσινά και αυθεντικές γεύσεις στη Λέσβο.",
+    "To limanaki ton Pamfilon: traditional tavern by the sea, known for fish, seafood and authentic flavors in Lesvos.",
 };
 
 export default function LimanakiPamfilonPage() {
@@ -15,7 +15,7 @@ export default function LimanakiPamfilonPage() {
       <section className="relative h-[70vh] w-full">
         <Image
           src="/limanaki_pamf.jpg"
-          alt="Το Λιμανάκι των Παμφίλων"
+          alt="To limanaki ton Pamfilon"
           fill
           className="object-cover"
           priority
@@ -24,10 +24,10 @@ export default function LimanakiPamfilonPage() {
 
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 text-center text-white px-6 max-w-3xl">
           <h1 className="text-4xl md:text-5xl font-bold drop-shadow-lg">
-            Το Λιμανάκι των Παμφίλων
+            To limanaki ton Pamfilon
           </h1>
           <p className="mt-3 text-lg text-gray-200">
-            Παραδοσιακή ταβέρνα δίπλα στη θάλασσα
+            Traditional tavern by the sea
           </p>
         </div>
       </section>
@@ -42,10 +42,10 @@ export default function LimanakiPamfilonPage() {
           <div>
             <h2 className="text-2xl font-semibold mb-4">Γιατί να πάτε</h2>
             <p className="text-gray-700 leading-relaxed text-lg">
-              Το Λιμανάκι των Παμφίλων είναι μια αγαπημένη παραθαλάσσια ταβέρνα
-              στη Σκάλα Παμφίλων. Με τραπέζια σχεδόν πάνω στο κύμα, προσφέρει
-              φρέσκο ψάρι, θαλασσινά και αυθεντικές γεύσεις σε ένα απόλυτα
-              καλοκαιρινό σκηνικό.
+              To limanaki ton Pamfilon is a favorite seaside tavern
+              in Pamphilos Skala. With tables almost on the wave, it offers
+              fresh fish, seafood and authentic flavors in one absolutely
+              summer setting.
             </p>
           </div>
 
@@ -53,20 +53,20 @@ export default function LimanakiPamfilonPage() {
           <div>
             <h2 className="text-2xl font-semibold mb-4">Highlights</h2>
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-700">
-              <li>🌊 Τραπέζια δίπλα στη θάλασσα</li>
-              <li>🐟 Φρέσκο ψάρι ημέρας</li>
-              <li>🍤 Θαλασσινά & μεζέδες</li>
-              <li>☀️ Ιδανικό για καλοκαίρι</li>
+              <li>🌊 Tables by the sea</li>
+              <li>🐟 Fresh day fish</li>
+              <li>🍤 Sea & delicacies</li>
+              <li>☀️ Ideal for summer</li>
             </ul>
           </div>
 
           {/* What to try */}
           <div>
-            <h2 className="text-2xl font-semibold mb-4">Τι να δοκιμάσετε</h2>
+            <h2 className="text-2xl font-semibold mb-4">What to try</h2>
             <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-6">
-              <li>Φρέσκο ψάρι ημέρας</li>
-              <li>Καλαμαράκια & γαρίδες</li>
-              <li>Θαλασσινούς μεζέδες με ούζο</li>
+              <li>Fresh day fish</li>
+              <li>Kalamari & shrimp</li>
+              <li>Sea delicacies with ouzo</li>
             </ul>
 
             <div className="relative h-72 rounded-xl overflow-hidden shadow">
@@ -87,10 +87,10 @@ export default function LimanakiPamfilonPage() {
           <div className="bg-white rounded-xl shadow p-6">
             <h3 className="font-semibold mb-4 text-lg">Πληροφορίες</h3>
             <ul className="text-sm space-y-3 text-gray-700">
-              <li><strong>Τύπος:</strong> Παραδοσιακή ταβέρνα</li>
-              <li><strong>Κουζίνα:</strong> Ελληνική / Θαλασσινά</li>
+              <li><strong>Τύπος:</strong> Tranditional Tavern</li>
+              <li><strong>Κουζίνα:</strong> Greek</li>
               <li><strong>Τιμές:</strong> €€</li>
-              <li><strong>Κατάλληλο για:</strong> Οικογένειες, ζευγάρια</li>
+              <li><strong>Κατάλληλο για:</strong> Families, couples</li>
             </ul>
           </div>
 
@@ -108,9 +108,9 @@ export default function LimanakiPamfilonPage() {
           <div className="bg-white rounded-xl shadow p-6">
             <h3 className="font-semibold mb-4 text-lg">Κοντά στο μαγαζί</h3>
             <ul className="text-sm space-y-2 text-gray-700">
-              <li>🏘 Παμφίλα</li>
-              <li>🏖 Παραλίες Μυτιλήνης</li>
-              <li>🍽 Άλλα παραθαλάσσια μαγαζιά</li>
+              <li>🏘 Pamfila/li>
+              <li>🏖 Beaches of Mytilini</li>
+              <li>🍽 Other seaside taverns or shops</li>
             </ul>
           </div>
         </aside>
@@ -119,13 +119,13 @@ export default function LimanakiPamfilonPage() {
       {/* ================= CTA ================= */}
       <section className="bg-neutral-900 text-white py-20 text-center">
         <h2 className="text-2xl md:text-3xl font-semibold mb-6">
-          Δείτε κι άλλα μέρη για φαγητό στη Λέσβο
+          See other places to eat in Lesvos
         </h2>
         <Link
           href="/food"
           className="inline-block px-8 py-3 bg-yellow-600 text-black rounded-lg font-semibold hover:bg-yellow-500 transition"
         >
-          Όλα τα μαγαζιά
+          All shops
         </Link>
       </section>
 
