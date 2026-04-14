@@ -58,36 +58,44 @@ export default function VateraPage() {
           </div>
 
           {/* Practical info */}
-        <div>
-  <h2 className="text-2xl font-semibold mb-4">Useful Informations</h2>
+      <div>
+  <h2 className="text-2xl font-semibold mb-4">Useful Information</h2>
 
   <ul className="text-gray-700 space-y-4">
     
     <li>
-      <strong>Type:</strong>
-      <p className="mt-1">Medium to thick pebbles</p>
+      <div>
+        <strong>Type:</strong>
+        <p className="mt-1">Medium to thick pebbles</p>
+      </div>
     </li>
 
     <li>
-      <strong>Organization:</strong>
-      <ul className="list-disc ml-5 mt-1 space-y-1">
-        <li>Umbrellas & sunbeds (usually via beach bar consumption)</li>
-        <li>Beach bars with music (some relaxed, some more lively)</li>
-        <li>Coffee spots & taverns along the beach</li>
-        <li>Showers and locker rooms</li>
-        <li>Lifeguard (seasonal)</li>
-        <li>Small beach volleyball area</li>
-      </ul>
+      <div>
+        <strong>Organization:</strong>
+        <ul className="list-disc ml-5 mt-1 space-y-1">
+          <li>Umbrellas & sunbeds (usually via beach bar consumption)</li>
+          <li>Beach bars with music (some relaxed, some more lively)</li>
+          <li>Coffee spots & taverns along the beach</li>
+          <li>Showers and locker rooms</li>
+          <li>Lifeguard (seasonal)</li>
+          <li>Small beach volleyball area</li>
+        </ul>
+      </div>
     </li>
 
     <li>
-      <strong>Access:</strong>
-      <p className="mt-1">Easy by car</p>
+      <div>
+        <strong>Access:</strong>
+        <p className="mt-1">Easy by car</p>
+      </div>
     </li>
 
     <li>
-      <strong>Ideal for:</strong>
-      <p className="mt-1">All types of visitors, especially for relaxation</p>
+      <div>
+        <strong>Ideal for:</strong>
+        <p className="mt-1">All types of visitors, especially for relaxation</p>
+      </div>
     </li>
 
   </ul>
