@@ -97,7 +97,7 @@ export default function LimanakiPamfilonPage() {
          {/* Map */}
           <div className="w-full h-48 rounded-lg overflow-hidden">
             <iframe 
-             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3270.9619515967324!2d26.526763926143023!3d39.15840182166955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ba677e1a3b5845%3A0xd278dcca3b94ec29!2sTo%20limanaki%20ton%20Pamfilon!5e1!3m2!1sen!2sgr!4v1776166522249!5m2!1sen!2sgr" 
+             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3270.9619515967324!2d26.526763926143023!3d39.15840182166955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ba677e1a3b5845%3A0xd278dcca3b94ec29!2sTo%20limanaki%20ton%20Pamfilon!5e1!3m2!1sen!2sgr!4v1776166522249!5m2!1sen!2sgr"  
                 style={{ border: 0 }}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
