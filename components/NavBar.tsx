@@ -52,22 +52,28 @@ export default function NavBar() {
                   Beaches 🏖
                 </Link>
                 <Link
-                  href="/culture"
+                  href="/villages"
                   className="block px-4 py-2 hover:bg-white/10"
                 >
                   Villages 🏘
                 </Link>
                 <Link
-                  href="/activities"
+                  href="/muesums"
                   className="block px-4 py-2 hover:bg-white/10"
                 >
-                  Food & Drink
+                 Museums 🏛
                 </Link>
                 <Link
-                  href="/maps"
+                  href="/sites"
                   className="block px-4 py-2 hover:bg-white/10"
                 >
-                  Maps
+                 Archaeological Sites
+                </Link>
+                <Link
+                  href="/nature"
+                  className="block px-4 py-2 hover:bg-white/10"
+                >
+                 Nature
                 </Link>
               </div>
             )}
