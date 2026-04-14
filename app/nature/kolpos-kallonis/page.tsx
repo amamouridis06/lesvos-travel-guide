@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata = {
   title:"The Gulf of Kalloni",
-  description:"Agios Isidoros beach in Lesvos is one of the most famous and beautiful beaches of the island, especially near Plomari.",
+  description:"Agios Isidoros beach in Lesvos is one of the most famous and beautiful beaches of the island, especially near Plomari."
 };
 
 export default function VateraPage() {
