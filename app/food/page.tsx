@@ -129,8 +129,13 @@ export default function FoodGuideCategoriesPage() {
             {categories.map((category, index) => (
               <button
                 key={category.id}
-                onClick={() => scrollToSection(category.id)}
-                className="group min-w-[240px] rounded-3xl border border-black/5 bg-white px-5 py-4 text-left shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/5 md:min-w-[260px]"
+               <button
+                    onClick={() => scrollToSection(category.id)}
+                    className="group min-w-[240px] rounded-3xl border border-black/5 bg-white px-5 py-4 text-left shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/5 md:min-w-[260px]"
+                    >
+                    {category.title}
+                    </button>
+
                 style={{ animation: `fadeUp 0.55s ease-out ${index * 0.08}s both` }}
               >
                 <div className="mb-3 flex items-center gap-3">
