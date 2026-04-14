@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata = {
   title: "Beach of Agios Isidoros",
   description:
-    "The beach of Vatera in Lesvos: the largest beach of the island, ideal for relaxation, families and good food next to the sea.",
+    "Agios Isidoros beach in Lesvos is one of the most famous and beautiful beaches of the island, especially near Plomari.",
 };
 
 export default function VateraPage() {
@@ -15,7 +15,7 @@ export default function VateraPage() {
       <section className="relative h-[60vh] w-full">
         <Image
           src="/agios-isidoros.jpg"
-          alt="Beach of Agios Isidoros Lesvos"
+          alt="Beach of Agios Isidoros"
           fill
           className="object-cover"
           priority
@@ -27,95 +27,93 @@ export default function VateraPage() {
             Beach of Agios Isidoros
           </h1>
           <p className="mt-2 text-lg text-gray-200">
-            The largest beach in Lesvos, perfect for relaxation and family holidays.
+            Agios Isidoros: Clean waters, clear moments.
           </p>
         </div>
       </section>
 
-      <section className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-  {/* MAIN CONTENT */}
-  <div className="lg:col-span-2 space-y-8">
-    {/* Practical info */}
-    <div>
-      <h2 className="text-2xl font-semibold mb-4">Useful Information</h2>
+      {/* CONTENT */}
+      <section className="max-w-5xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-12">
 
-      <ul className="text-gray-700 space-y-4">
-        <li>
+        {/* MAIN CONTENT */}
+        <div className="md:col-span-2 space-y-10">
+
+          {/* Overview */}
           <div>
-            <strong>Type:</strong>
-            <p className="mt-1">Sandy</p>
+            <h2 className="text-2xl font-semibold mb-3">Why you should go</h2>
+            <p className="text-gray-700 leading-relaxed">
+              Vatera is an extensive sandy beach in southern Lesvos, a ideal for relaxing holidays by the sea. The combination
+              floating beach, clean water and seaside taverns
+              makes it a favorite choice for families and couples.
+            </p>
           </div>
-        </li>
 
-        <li>
+          {/* Highlights */}
           <div>
-            <strong>Organization:</strong>
-            <ul className="list-disc ml-5 mt-1 space-y-1">
-              <li>Umbrellas & sunbeds in some areas</li>
-              <li>Beach bars with relaxed atmosphere</li>
-              <li>Taverns and coffee spots along the beach</li>
+            <h2 className="text-2xl font-semibold mb-3">Highlights</h2>
+            <ul className="list-disc pl-5 text-gray-700 space-y-2">
+              <li> Very large in length, ideal for walking </li>
+              <li> Dry waters – suitable for children </li>
+              <li> Taverns and coffee literally on the wave </li>
+              <li> Beautiful sunsets </li>
             </ul>
           </div>
-        </li>
 
-        <li>
+          {/* Practical info */}
           <div>
-            <strong>Access:</strong>
-            <p className="mt-1">Easy by car</p>
+            <h2 className="text-2xl font-semibold mb-3">Useful Informations</h2>
+            <ul className="text-gray-700 space-y-2">
+              <li> <strong> Type: </strong> Sandy </li>
+              <li> <strong> Organization: </strong> Umbrellas & sunbeds in places </li>
+              <li> <strong> Access: </strong> Easy by car </li>
+              <li> <strong> Ideal for: </strong> Families, relaxation </li>
+            </ul>
           </div>
-        </li>
+        </div>
 
-        <li>
-          <div>
-            <strong>Ideal for:</strong>
-            <p className="mt-1">Families, relaxation</p>
+        {/* SIDEBAR */}
+        <aside className="space-y-8">
+
+          {/* Map */}
+          <div className="w-full h-48 rounded-lg overflow-hidden">
+            <iframe
+                src="https://www.google.com/maps/place/%CE%92%CE%B1%CF%84%CE%B5%CF%81%CE%AC+813+00,+%CE%95%CE%BB%CE%BB%CE%AC%CE%B4%CE%B1/@39.0205683,26.1787428,4538m/data=!3m2!1e3!4b1!4m6!3m5!1s0x14baef8e3ce47107:0xa00bd2f74c274e0!8m2!3d39.0195659!4d26.1978707!16zL20vMDJsOG43?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
-        </li>
-      </ul>
-    </div>
-  </div>
 
-  {/* SIDEBAR */}
-  <aside className="space-y-8">
-    {/* Map */}
-    <div className="w-full h-48 rounded-lg overflow-hidden">
-      <iframe
-        src="X"
-        width="100%"
-        height="100%"
-        style={{ border: 0 }}
-        loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
-      />
-    </div>
 
-    {/* Nearby */}
-    <div className="bg-white rounded-xl shadow p-4">
-      <h3 className="font-semibold mb-3">Nearby X</h3>
-      <ul className="space-y-2 text-sm">
-        <li>
-          🏘{" "}
-          <Link href="/villages/X" className="text-blue-600 hover:underline">
-            Plomari
-          </Link>
-        </li>
-        <li>🍽 Seafront taverns</li>
-        <li>🏖 Smaller quieter beaches in the area</li>
-      </ul>
-    </div>
-  </aside>
-</section>
+          {/* Nearby */}
+          <div className="bg-white rounded-xl shadow p-4">
+            <h3 className="font-semibold mb-3">Nearby Vatera</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                🏘{" "}
+                <Link href="/villages/plomari" className="text-blue-600 hover:underline">
+                  Plomari
+                </Link>
+              </li>
+              <li>🍽 Seafront taverns</li>
+              <li>🏖 Smaller quieter beaches in the area</li>
+            </ul>
+          </div>
+        </aside>
+      </section>
 
       {/* CTA */}
       <section className="bg-neutral-900 text-white py-16 text-center">
         <h2 className="text-2xl font-semibold mb-4">
-          See other beaches in Lesvos
+          Δείτε κι άλλες παραλίες στη Λέσβο
         </h2>
         <Link
           href="/beaches"
           className="inline-block px-6 py-3 bg-yellow-600 text-black rounded-lg font-semibold hover:bg-yellow-500 transition"
         >
-          All beaches
+          Όλες οι παραλίες
         </Link>
       </section>
 
