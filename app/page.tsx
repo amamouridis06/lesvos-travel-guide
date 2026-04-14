@@ -13,18 +13,18 @@ export default function Home() {
           <div className="max-w-6xl mx-auto px-6">
             <div className="max-w-xl bg-black/40 backdrop-blur-md p-8 rounded-xl shadow-xl">
               <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">
-                Ανακαλύψτε τη Λέσβο <br /> με τον απόλυτο οδηγό ταξιδιών
+                 Discover Lesvos <br /> with the ultimate travel guide
               </h1>
 
               <p className="mt-4 text-lg text-gray-200">
-                Χωριά, παραλίες και αυθεντικές γεύσεις — επιλεγμένα μέρη που αξίζουν πραγματικά
+                 Villages, beaches and authentic flavors — selected places that really deserve
               </p>
 
               <Link
                 href="/planner"
                 className="inline-block mt-6 px-6 py-3 rounded-lg bg-yellow-600 text-white font-semibold hover:bg-yellow-700 transition"
               >
-                Εξερεύνησε το νησί
+                Explore the island
               </Link>
             </div>
           </div>
@@ -35,26 +35,26 @@ export default function Home() {
       <section className="w-full max-w-6xl mx-auto px-6 py-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {[
           {
-            title: "Παραλίες",
-            desc: "Οι καλύτερες παραλίες του νησιού",
+            title: "Beaches",
+            desc: "The best beaches on the island",
             img: "/beach.jpg",
             href: "/beaches",
           },
           {
-            title: "Χωριά",
-            desc: "Τα πιο γραφικά χωριά της Λέσβου",
+            title: "Villages",
+            desc: "The most picturesque villages of Lesvos",
             img: "/village.jpg",
             href: "/villages",
           },
           {
-            title: "Φαγητό",
-            desc: "Ταβέρνες και τοπικές γεύσεις",
+            title: "Food",
+            desc: "Τaverns and local flavors",
             img: "/food.jpg",
             href: "/food",
           },
           {
-            title: "Φύση",
-            desc: "Μονοπάτια και φυσικά τοπία",
+            title: "Nature",
+            desc: "Paths and natural landscapes",
             img: "/nature.jpg",
             href: "/nature",
           },
@@ -84,20 +84,20 @@ export default function Home() {
           {/* TEXT */}
           <div>
             <h2 className="text-3xl font-bold mb-4">
-              Φτιάξε το πρόγραμμα των διακοπών σου
+              Make your vacation program
             </h2>
 
             <p className="text-gray-600 text-lg mb-8 max-w-xl">
-              Πες μας πού θα διαμείνεις και πόσες μέρες έχεις διαθέσιμες
-              και θα σου προτείνουμε ένα ρεαλιστικό πρόγραμμα,
-              προσαρμοσμένο στον χρόνο και την περιοχή σου.
+               Tell us where to stay and how many days you have available
+              and we will suggest you a realistic program,
+              tailored to your time and area.
             </p>
 
             <Link
               href="/planner"
               className="inline-block px-8 py-4 rounded-xl bg-neutral-900 text-white font-semibold text-lg hover:bg-neutral-800 transition"
             >
-              Ξεκίνα τον προγραμματισμό →
+               Start planning →
             </Link>
           </div>
 
@@ -105,7 +105,7 @@ export default function Home() {
           <div className="relative h-80 rounded-2xl overflow-hidden shadow-xl">
             <img
               src="/map-lesvos.jpg"
-              alt="Χάρτης Λέσβου"
+              alt="The Map"
               className="absolute inset-0 w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-black/30" />
@@ -117,26 +117,26 @@ export default function Home() {
       {/* ================= FEATURED DESTINATIONS ================= */}
       <section className="w-full max-w-6xl mx-auto px-6 pb-24">
         <h2 className="text-2xl font-semibold mb-8">
-          Κορυφαίοι Προορισμοί στη Λέσβο
+          Top Destinations in Lesvos
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
             {
-              title: "Μόλυβος",
-              subtitle: "Μεσαιωνικό γραφικό χωριό",
+              title: "Molivos",
+              subtitle: "Medieval picturesque village",
               img: "/molivos.jpg",
               href: "/villages/molivos",
             },
             {
-              title: "Βατερά",
-              subtitle: "Η μεγαλύτερη παραλία του νησιού",
+              title: "Vatera",
+              subtitle: "The largest beach on the island",
               img: "/vatera.jpg",
               href: "/beaches/vatera",
             },
             {
-              title: "Πλωμάρι",
-              subtitle: "Ούζο, θάλασσα & παράδοση",
+              title: "Plomari",
+              subtitle: "Ouzo, sea & tradition",
               img: "/plomari2.jpg",
               href: "/villages/plomari",
             },
