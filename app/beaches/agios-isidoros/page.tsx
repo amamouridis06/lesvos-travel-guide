@@ -58,48 +58,58 @@ export default function VateraPage() {
           </div>
 
           {/* Practical info */}
-      <div>
-  <h2 className="text-2xl font-semibold mb-4">Useful Information</h2>
+     <>
+  <div>
+    <h2 className="text-2xl font-semibold mb-3">Highlights</h2>
+    <ul className="list-disc pl-5 text-gray-700 space-y-2">
+      <li>Very large in length, ideal for walking</li>
+      <li>Shallow waters – suitable for children</li>
+      <li>Taverns and coffee literally on the wave</li>
+      <li>Beautiful sunsets</li>
+    </ul>
+  </div>
 
-  <ul className="text-gray-700 space-y-4">
-    
-    <li>
-      <div>
-        <strong>Type:</strong>
-        <p className="mt-1">Medium to thick pebbles</p>
-      </div>
-    </li>
+  {/* Practical info */}
+  <div>
+    <h2 className="text-2xl font-semibold mb-4">Useful Information</h2>
 
-    <li>
-      <div>
-        <strong>Organization:</strong>
-        <ul className="list-disc ml-5 mt-1 space-y-1">
-          <li>Umbrellas & sunbeds (usually via beach bar consumption)</li>
-          <li>Beach bars with music (some relaxed, some more lively)</li>
-          <li>Coffee spots & taverns along the beach</li>
-          <li>Showers and locker rooms</li>
-          <li>Lifeguard (seasonal)</li>
-          <li>Small beach volleyball area</li>
-        </ul>
-      </div>
-    </li>
+    <ul className="text-gray-700 space-y-4">
+      
+      <li>
+        <div>
+          <strong>Type:</strong>
+          <p className="mt-1">Sandy</p>
+        </div>
+      </li>
 
-    <li>
-      <div>
-        <strong>Access:</strong>
-        <p className="mt-1">Easy by car</p>
-      </div>
-    </li>
+      <li>
+        <div>
+          <strong>Organization:</strong>
+          <ul className="list-disc ml-5 mt-1 space-y-1">
+            <li>Umbrellas & sunbeds in some areas</li>
+            <li>Beach bars with relaxed atmosphere</li>
+            <li>Taverns and coffee spots along the beach</li>
+          </ul>
+        </div>
+      </li>
 
-    <li>
-      <div>
-        <strong>Ideal for:</strong>
-        <p className="mt-1">All types of visitors, especially for relaxation</p>
-      </div>
-    </li>
+      <li>
+        <div>
+          <strong>Access:</strong>
+          <p className="mt-1">Easy by car</p>
+        </div>
+      </li>
 
-  </ul>
-</div>
+      <li>
+        <div>
+          <strong>Ideal for:</strong>
+          <p className="mt-1">Families, relaxation</p>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</>
         {/* SIDEBAR */}
         <aside className="space-y-8">
 
