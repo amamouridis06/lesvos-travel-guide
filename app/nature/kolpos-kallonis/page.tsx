@@ -107,7 +107,6 @@ export default function VateraPage() {
             <h3 className="font-semibold mb-3">Nearby</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                🏘{" "}
                 <Link href="/villages/kalloni" className="text-blue-600 hover:underline">
                  <p>Kalloni</p> 
                 </Link>
