@@ -5,7 +5,7 @@ export default function NaturePage() {
     {
       slug: "kolpos-kallonis",
       name: "Kalloni Bay",
-      img: "/flamingo.jpeg",
+      img: "/kolpos-kallonis1.jpg",
       desc: "A paradise of biodiversity."
     },
     // {
