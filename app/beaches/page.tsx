@@ -9,7 +9,7 @@ export default function BeachesPage() {
       desc: "Sandy beach 8 km long."
     },
     {
-      slug: "agios isidoros",
+      slug: "agios-isidoros",
       name: "Agios Isidoros",
       img: "/agios-isidoros.jpg",
       desc: "Famous beach with blue flag."
