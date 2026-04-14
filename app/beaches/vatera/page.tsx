@@ -77,7 +77,7 @@ export default function VateraPage() {
           {/* Map */}
           <div className="w-full h-48 rounded-lg overflow-hidden">
             <iframe
-                src="https://www.google.com/maps/place/%CE%92%CE%B1%CF%84%CE%B5%CF%81%CE%AC+813+00,+%CE%95%CE%BB%CE%BB%CE%AC%CE%B4%CE%B1/@39.0205683,26.1787428,4538m/data=!3m2!1e3!4b1!4m6!3m5!1s0x14baef8e3ce47107:0xa00bd2f74c274e0!8m2!3d39.0195659!4d26.1978707!16zL20vMDJsOG43?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52442.62385052624!2d26.179372848547395!3d39.014022754774174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14baeff2a84e3b1f%3A0x12a7105ca3e69a0a!2sVatera%20Beach!5e1!3m2!1sen!2sgr!4v1776159751071!5m2!1sen!2sgr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
