@@ -1,20 +1,20 @@
 import Link from "next/link";
 
 export default function NaturePage() {
-//   const beaches = [
-//     {
-//       slug: "vatera",
-//       name: "Vatera",
-//       img: "/vatera.jpg",
-//       desc: "Sandy beach 8 km long."
-//     },
-//     {
-//       slug: "agios-isidoros",
-//       name: "Agios Isidoros",
-//       img: "/agios-isidoros.jpg",
-//       desc: "Famous beach with blue flag."
-//     }
-//   ];
+  const nature = [
+    {
+      slug: "vatera",
+      name: "Vatera",
+      img: "/vatera.jpg",
+      desc: "Sandy beach 8 km long."
+    },
+    {
+      slug: "agios-isidoros",
+      name: "Agios Isidoros",
+      img: "/agios-isidoros.jpg",
+      desc: "Famous beach with blue flag."
+    }
+  ];
 
 return (
     <main className="min-h-screen bg-black text-white px-6 pt-32 pb-16 bg-[url('/flamingo.jpeg')] bg-cover bg-center bg-fixed relative">
