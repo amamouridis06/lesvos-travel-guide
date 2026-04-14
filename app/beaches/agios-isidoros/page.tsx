@@ -59,7 +59,7 @@ export default function VateraPage() {
 
           {/* Practical info */}
         <div>
-  <h2 className="text-2xl font-semibold mb-4">Useful Information</h2>
+  <h2 className="text-2xl font-semibold mb-4">Useful Informations</h2>
 
   <ul className="text-gray-700 space-y-4">
     
