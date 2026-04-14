@@ -4,15 +4,15 @@ export default function BeachesPage() {
   const beaches = [
     {
       slug: "vatera",
-      name: "Βατερά",
+      name: "Vatera",
       img: "/vatera.jpg",
-      desc: "Αμμώδης παραλία μήκους 8 km."
+      desc: "Sandy beach 8 km long."
     },
     {
       slug: "agios-isidoros",
-      name: "Άγιος Ισίδωρος",
+      name: "Agios Isidoros",
       img: "/agios-isidoros.jpg",
-      desc: "Διάσημη παραλία με γαλάζια σημαία."
+      desc: "Famous beach with blue flag."
     }
   ];
 
@@ -22,7 +22,7 @@ export default function BeachesPage() {
       <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>
 
       <div className="relative z-10">
-        <h1 className="text-4xl font-bold text-center mb-10">Παραλίες Λέσβου</h1>
+        <h1 className="text-4xl font-bold text-center mb-10">Lesvos beaches</h1>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {beaches.map((b, i) => (
