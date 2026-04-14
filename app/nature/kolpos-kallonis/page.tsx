@@ -128,10 +128,10 @@ export default function VateraPage() {
           See other places in Lesvos
         </h2>
         <Link
-          href="/beaches"
+          href="/planner"
           className="inline-block px-6 py-3 bg-yellow-600 text-black rounded-lg font-semibold hover:bg-yellow-500 transition"
         >
-         All places
+         Other places
         </Link>
       </section>
 
