@@ -64,6 +64,7 @@ export default function VateraPage() {
               <li> Relaxing in a quiet environment</li>
             </ul>
           </div>
+          </div>
         
          {/* Prosvasi */}
           <div>
@@ -116,7 +117,6 @@ export default function VateraPage() {
             </ul>
           </div>
         </aside>
-        </div>
         </section>
 
       {/* CTA */}
