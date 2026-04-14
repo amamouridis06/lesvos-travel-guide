@@ -94,28 +94,16 @@ export default function LimanakiPamfilonPage() {
             </ul>
           </div>
 
-          {/* Map */}
-          <div className="bg-white rounded-xl shadow p-6">
-            <h3 className="font-semibold mb-4 text-lg">Τοποθεσία</h3>
-            <div className="w-full h-52 rounded-lg overflow-hidden">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25794.80770969093!2d26.5863!3d39.1116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ba8b1d8b0e6b0f%3A0x9b6f52c7e2a9d2f3!2sSkala%20Pamfilon!5e0!3m2!1sel!2sgr!4v1700000000000"
-                className="w-full h-full border-0"
+         {/* Map */}
+          <div className="w-full h-48 rounded-lg overflow-hidden">
+            <iframe 
+             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3270.9619515967324!2d26.526763926143023!3d39.15840182166955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ba677e1a3b5845%3A0xd278dcca3b94ec29!2sTo%20limanaki%20ton%20Pamfilon!5e1!3m2!1sen!2sgr!4v1776166522249!5m2!1sen!2sgr" 
+                style={{ border: 0 }}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               />
-            </div>
-
-            <a
-              href="https://www.google.com/maps/place/Skala+Pamfilon"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block mt-3 text-sm text-blue-600 hover:underline"
-            >
-              Άνοιγμα στο Google Maps →
-            </a>
           </div>
-
+          
           {/* Nearby */}
           <div className="bg-white rounded-xl shadow p-6">
             <h3 className="font-semibold mb-4 text-lg">Κοντά στο μαγαζί</h3>
