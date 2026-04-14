@@ -18,32 +18,30 @@ export default function AboutPage() {
         {/* Mission */}
         <h2 className="text-3xl font-bold mb-4">Our Mission</h2>
         <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-          Το <b>Lesvos Travel</b> δημιουργήθηκε για να προσφέρει έναν σύγχρονο, 
-          καθαρό και εύχρηστο οδηγό για το νησί της Λέσβου. 
-          Στόχος μας είναι να αναδείξουμε την ομορφιά, τις παραλίες, τα χωριά, 
-          τον πολιτισμό και τη φύση του νησιού.
+         <b> Lesvos Travel </ b> was created to offer a modern one, 
+          clean and easy-to-use guide for the island of Lesvos. 
+          Our goal is to highlight beauty, beaches, villages, 
+          the culture and nature of the island.
         </p>
 
         {/* What users find */}
         <h2 className="text-3xl font-bold mb-4">What You Will Find</h2>
         <ul className="list-disc ml-6 text-gray-700 text-lg leading-relaxed mb-8">
-          <li>Λεπτομερείς πληροφορίες για παραλίες της Λέσβου</li>
-          <li>Περιγραφές χωριών και αξιοθέατων</li>
-          <li>Φωτογραφίες υψηλής ποιότητας</li>
-          <li>Εύκολη πλοήγηση σε κάθε κατηγορία</li>
+          <li>Detailed information about beaches of Lesvos</li>
+          <li>Descriptions of villages and attractions</li>
+          <li>High quality photos</li>
+          <li>Easy navigation in each category</li>
         </ul>
 
         {/* Developer */}
         <h2 className="text-3xl font-bold mb-4">Who Created This Website?</h2>
         <p className="text-lg text-gray-700 leading-relaxed mb-8">
-          Το website σχεδιάστηκε και αναπτύχθηκε από τον <b>Angelos Mamouridis</b>.
-          Χρησιμοποιήθηκαν σύγχρονες τεχνολογίες όπως:
-          <br /> <b>Next.js, TypeScript, React, TailwindCSS και Vercel</b>.
+          The website was designed and developed by Angelos Mamouridis.
         </p>
 
         {/* Contact button */}
         <a 
-          href="mailto:angelosmamouridis@gmail.com"
+          href="mailto:amamourids@gmail.com"
           className="inline-block mt-4 px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition"
         >
           Contact Me
