@@ -24,7 +24,7 @@ export default function LimanakiPamfilonPage() {
 
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 text-center text-white px-6 max-w-3xl">
           <h1 className="text-4xl md:text-5xl font-bold drop-shadow-lg">
-            To limanaki ton Pamfilon
+            To limanaki ton filon
           </h1>
           <p className="mt-3 text-lg text-gray-200">
             Traditional tavern by the sea
@@ -42,8 +42,8 @@ export default function LimanakiPamfilonPage() {
           <div>
             <h2 className="text-2xl font-semibold mb-4">Γιατί να πάτε</h2>
             <p className="text-gray-700 leading-relaxed text-lg">
-              To limanaki ton Pamfilon is a favorite seaside tavern
-              in Pamphilos Skala. With tables almost on the wave, it offers
+              To limanaki ton filon is a favorite seaside tavern
+              in philos Skala. With tables almost on the wave, it offers
               fresh fish, seafood and authentic flavors in one absolutely
               summer setting.
             </p>
@@ -85,19 +85,19 @@ export default function LimanakiPamfilonPage() {
 
           {/* Info */}
           <div className="bg-white rounded-xl shadow p-6">
-            <h3 className="font-semibold mb-4 text-lg">Πληροφορίες</h3>
+            <h3 className="font-semibold mb-4 text-lg">Informations</h3>
             <ul className="text-sm space-y-3 text-gray-700">
-              <li><strong>Τύπος:</strong> Tranditional Tavern</li>
-              <li><strong>Κουζίνα:</strong> Greek</li>
-              <li><strong>Τιμές:</strong> €€</li>
-              <li><strong>Κατάλληλο για:</strong> Families, couples</li>
+              <li><strong>Type:</strong> Tranditional Tavern</li>
+              <li><strong>Kitchen:</strong> Greek</li>
+              <li><strong>Prices:</strong> €€</li>
+              <li><strong>Suitable for:</strong> Families, couples</li>
             </ul>
           </div>
 
          {/* Map */}
           <div className="w-full h-48 rounded-lg overflow-hidden">
             <iframe 
-             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3270.9619515967324!2d26.526763926143023!3d39.15840182166955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ba677e1a3b5845%3A0xd278dcca3b94ec29!2sTo%20limanaki%20ton%20Pamfilon!5e1!3m2!1sen!2sgr!4v1776166522249!5m2!1sen!2sgr"  
+             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3270.9619515967324!2d26.526763926143023!3d39.15840182166955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ba677e1a3b5845%3A0xd278dcca3b94ec29!2sTo%20limanaki%20ton%20filon!5e1!3m2!1sen!2sgr!4v1776166522249!5m2!1sen!2sgr"  
                 style={{ border: 0 }}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -106,9 +106,9 @@ export default function LimanakiPamfilonPage() {
           
           {/* Nearby */}
           <div className="bg-white rounded-xl shadow p-6">
-            <h3 className="font-semibold mb-4 text-lg">Κοντά στο μαγαζί</h3>
+            <h3 className="font-semibold mb-4 text-lg">Near the restaurant</h3>
             <ul className="text-sm space-y-2 text-gray-700">
-              <li>🏘 Pamfila/li>
+              <li>🏘 Pamfila</li>
               <li>🏖 Beaches of Mytilini</li>
               <li>🍽 Other seaside taverns or shops</li>
             </ul>
