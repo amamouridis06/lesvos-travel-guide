@@ -1,20 +1,20 @@
 import Link from "next/link";
 
 export default function NaturePage() {
-  // const beaches = [
-  //   {
-  //     slug: "vatera",
-  //     name: "Βατερά",
-  //     img: "/vatera.jpg",
-  //     desc: "Αμμώδης παραλία μήκους 8 km."
-  //   },
-  //   {
-  //     slug: "agios-isidoros",
-  //     name: "Άγιος Ισίδωρος",
-  //     img: "/agios-isidoros.jpg",
-  //     desc: "Διάσημη παραλία με γαλάζια σημαία."
-  //   }
-  // ];
+  const nature = [
+    {
+      slug: "vatera",
+      name: "Βατερά",
+      img: "/vatera.jpg",
+      desc: "Αμμώδης παραλία μήκους 8 km."
+    },
+    {
+      slug: "agios-isidoros",
+      name: "Άγιος Ισίδωρος",
+      img: "/agios-isidoros.jpg",
+      desc: "Διάσημη παραλία με γαλάζια σημαία."
+    }
+  ];
 
   return (
     <main className="min-h-screen bg-black text-white px-6 pt-32 pb-16 bg-[url('/beach.jpg')] bg-cover bg-center bg-fixed relative">
