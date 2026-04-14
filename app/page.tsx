@@ -21,7 +21,7 @@ export default function Home() {
               </p>
 
               <Link
-                href="/explore"
+                href="https://lesvos-travel-guide-five.vercel.app/beaches"
                 className="inline-block mt-6 px-6 py-3 rounded-lg bg-yellow-600 text-white font-semibold hover:bg-yellow-700 transition"
               >
                 Εξερεύνησε το νησί
