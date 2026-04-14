@@ -2,9 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Παραλία Βατερά",
+  title: "Beach of Vatera",
   description:
-    "Η παραλία Βατερά στη Λέσβο: η μεγαλύτερη παραλία του νησιού, ιδανική για χαλάρωση, οικογένειες και καλό φαγητό δίπλα στη θάλασσα.",
+    "The beach of Vatera in Lesvos: the largest beach of the island, ideal for relaxation, families and good food next to the sea.",
 };
 
 export default function VateraPage() {
@@ -15,7 +15,7 @@ export default function VateraPage() {
       <section className="relative h-[60vh] w-full">
         <Image
           src="/vatera.jpg"
-          alt="Παραλία Βατερά Λέσβος"
+          alt="Beach of Vatera Lesvos"
           fill
           className="object-cover"
           priority
@@ -100,13 +100,13 @@ export default function VateraPage() {
       {/* CTA */}
       <section className="bg-neutral-900 text-white py-16 text-center">
         <h2 className="text-2xl font-semibold mb-4">
-          Δείτε κι άλλες παραλίες στη Λέσβο
+          See other beaches in Lesvos
         </h2>
         <Link
           href="/beaches"
           className="inline-block px-6 py-3 bg-yellow-600 text-black rounded-lg font-semibold hover:bg-yellow-500 transition"
         >
-          Όλες οι παραλίες
+          All beaches
         </Link>
       </section>
 
