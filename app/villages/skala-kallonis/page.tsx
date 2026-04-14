@@ -34,7 +34,7 @@ export default function MolyvosPage() {
         </div>
 
         <div>
-          <h2 className="text-2xl font-semibold mb-4">n Skala Kalloni you’ll find everything you need for a relaxed and enjoyable stay</h2>
+          <h2 className="text-2xl font-semibold mb-4">What ddo you find in Skala Kallonis</h2>
           <ul className="list-disc list-inside text-gray-700 space-y-2">
             <li>Traditional taverns and restaurants serving fresh fish, including the famous Kalloni sardines</li>
             <li>Seafront cafés and beach bars perfect for unwinding by the water</li>
@@ -44,7 +44,7 @@ export default function MolyvosPage() {
         </div>
 
         <div>
-          <h2 className="text-2xl font-semibold mb-4">Ιδανικός για</h2>
+          <h2 className="text-2xl font-semibold mb-4">Ideal for</h2>
           <ul className="list-disc list-inside text-gray-700 space-y-2">
             <li> Families with children, thanks to its calm waters, safe beaches, and laid-back environment </li>
             <li> Relaxed swimming and sunbathing, with plenty of space to unwind by the sea at your own pace </li>
