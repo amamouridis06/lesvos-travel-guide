@@ -129,13 +129,8 @@ export default function FoodGuideCategoriesPage() {
             {categories.map((category, index) => (
               <button
                 key={category.id}
-               <button
-                    onClick={() => scrollToSection(category.id)}
-                    className="group min-w-[240px] rounded-3xl border border-black/5 bg-white px-5 py-4 text-left shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/5 md:min-w-[260px]"
-                    >
-                    {category.title}
-                    </button>
-
+                onClick={() => scrollToSection(category.id)}
+                className="group min-w-[240px] rounded-3xl border border-black/5 bg-white px-5 py-4 text-left shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/5 md:min-w-[260px]"
                 style={{ animation: `fadeUp 0.55s ease-out ${index * 0.08}s both` }}
               >
                 <div className="mb-3 flex items-center gap-3">
@@ -144,35 +139,32 @@ export default function FoodGuideCategoriesPage() {
                   </span>
                   <span className="text-lg font-semibold">{category.title}</span>
                 </div>
-                <p className="text-sm leading-6 text-slate-500">{category.description}</p>
+                <p className="text-sm leading-6 text-slate-500">
+                  {category.description}
+                </p>
               </button>
             ))}
           </div>
         </div>
       </section>
 
-
-    <div className="flex gap-4 overflow-x-auto pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-  {categories.map((category, index) => (
-    <button
-      key={category.id}
-      onClick={() => scrollToSection(category.id)}
-      className="group min-w-[240px] rounded-3xl border border-black/5 bg-white px-5 py-4 text-left shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/5 md:min-w-[260px]"
-      style={{ animation: `fadeUp 0.55s ease-out ${index * 0.08}s both` }}
-    >
-      <div className="mb-3 flex items-center gap-3">
-        <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-stone-100 text-xl transition duration-300 group-hover:scale-110">
-          {category.icon}
-        </span>
-        <span className="text-lg font-semibold">{category.title}</span>
-      </div>
-      <p className="text-sm leading-6 text-slate-500">
-        {category.description}
-      </p>
-    </button>
-  ))}
-</div>
-    
+      <main className="mx-auto max-w-7xl px-6 py-10 md:px-10 md:py-14">
+        {categories.map((category, index) => (
+          <section
+            key={category.id}
+            id={category.id}
+            className="mb-14 scroll-mt-32"
+            style={{ animation: `fadeIn 0.4s ease-out ${index * 0.05}s both` }}
+          >
+            <div className="mb-6 flex items-center gap-4">
+              <div className="flex h-14 w-14 items-center justify-center rounded-3xl bg-white text-2xl shadow-sm">
+                {category.icon}
+              </div>
+              <div>
+                <h3 className="text-3xl font-bold tracking-tight">{category.title}</h3>
+                <p className="mt-1 text-slate-500">{category.description}</p>
+              </div>
+            </div>
 
             <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
               {category.items.map((item, itemIndex) => (
@@ -236,4 +228,3 @@ export default function FoodGuideCategoriesPage() {
     </div>
   );
 }
-
