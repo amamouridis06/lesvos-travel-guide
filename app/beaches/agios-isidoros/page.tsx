@@ -58,22 +58,40 @@ export default function VateraPage() {
           </div>
 
           {/* Practical info */}
-          <div>
-            <h2 className="text-2xl font-semibold mb-3">Useful Informations</h2>
-            <ul className="text-gray-700 space-y-2">
-              <li> <strong> Type: </strong> medium to thick pebbles </li>
-              <li> <strong> Organization: </strong> * Umbrellas & sunbeds (usually through beach bar consumption)
-                                                    * Beach bars with music (some more relaxed, some more lily)
-                                                    * Coffee & taverns along the beach
-                                                    * Shower and locker rooms
-                                                    * Lifeguard (season)
-                                                    * A little beach volleyball stadium </li>
-              <li> <strong> Access: </strong> Easy by car </li>
-              <li> <strong> Ideal for: </strong> Αll people, relaxation </li>
-            </ul>
-          </div>
-        </div>
+        <div>
+  <h2 className="text-2xl font-semibold mb-4">Useful Information</h2>
 
+  <ul className="text-gray-700 space-y-4">
+    
+    <li>
+      <strong>Type:</strong>
+      <p className="mt-1">Medium to thick pebbles</p>
+    </li>
+
+    <li>
+      <strong>Organization:</strong>
+      <ul className="list-disc ml-5 mt-1 space-y-1">
+        <li>Umbrellas & sunbeds (usually via beach bar consumption)</li>
+        <li>Beach bars with music (some relaxed, some more lively)</li>
+        <li>Coffee spots & taverns along the beach</li>
+        <li>Showers and locker rooms</li>
+        <li>Lifeguard (seasonal)</li>
+        <li>Small beach volleyball area</li>
+      </ul>
+    </li>
+
+    <li>
+      <strong>Access:</strong>
+      <p className="mt-1">Easy by car</p>
+    </li>
+
+    <li>
+      <strong>Ideal for:</strong>
+      <p className="mt-1">All types of visitors, especially for relaxation</p>
+    </li>
+
+  </ul>
+</div>
         {/* SIDEBAR */}
         <aside className="space-y-8">
 
