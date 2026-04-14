@@ -26,7 +26,7 @@ export default function NaturePage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {nature.map((b, i) => (
-            <Link href={`/narure/${b.slug}`} key={i}>
+            <Link href={`/nature/${b.slug}`} key={i}>
               <div className="bg-gray-900/80 backdrop-blur-sm rounded-xl border border-gray-700 shadow-xl overflow-hidden hover:scale-[1.03] transition-transform cursor-pointer">
                 
                 <img src={b.img} alt={b.name} className="h-48 w-full object-cover" />
