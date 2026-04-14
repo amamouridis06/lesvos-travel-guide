@@ -102,7 +102,7 @@ export default function PlomariPage() {
             <h3 className="font-semibold mb-3">Τοποθεσία</h3>
             <div className="w-full h-48 rounded-lg overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25820.01037316422!2d26.357505!3d39.000095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ba5f5a7e7e1f45%3A0x400bd2ce2b98a70!2sPlomari%2C%20Greece!5e0!3m2!1sel!2sgr!4v1700000000000"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13117.646574990798!2d26.362266366013927!3d38.9762999973138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14baf6e960a76133%3A0x400bd2ce2b9b5a0!2sPlomari!5e1!3m2!1sen!2sgr!4v1776190790774!5m2!1sen!2sgr"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
