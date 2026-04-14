@@ -246,7 +246,9 @@ export default function VateraPage() {
               <li>
                 🏘{" "}
                 <Link href="/villages/plomari" className="text-blue-600 hover:underline">
-                 <p> Kalloni, </p> <p>Skalla Kallonis,</p> Agia Paraskeui</p>
+                 <p> Kalloni, </p>
+                  <p>Skalla Kallonis,</p> 
+                  <p>Agia Paraskeui</p>
                 </Link>
               </li>
             </ul>
