@@ -116,7 +116,7 @@ export default function VateraPage() {
             </ul>
           </div>
         </aside>
-      </section>
+    
 
       {/* CTA */}
       <section className="bg-neutral-900 text-white py-16 text-center">
