@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function BeachesPage() {
+export default function NaturePage() {
   // const beaches = [
   //   {
   //     slug: "vatera",
