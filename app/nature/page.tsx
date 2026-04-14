@@ -17,7 +17,7 @@ export default function NaturePage() {
   ];
 
 return (
-    <main className="min-h-screen bg-black text-white px-6 pt-32 pb-16 bg-[url('/flamingo.jpeg')] bg-cover bg-center bg-fixed relative">
+    <main className="min-h-screen bg-black text-white px-6 pt-32 pb-16 bg-[url('/nature-lesvos.jpg')] bg-cover bg-center bg-fixed relative">
 
       <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>
 
