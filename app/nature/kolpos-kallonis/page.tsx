@@ -64,7 +64,7 @@ export default function VateraPage() {
               <li> Relaxing in a quiet environment</li>
             </ul>
           </div>
-        </div>
+        
          {/* Prosvasi */}
           <div>
             <h2 className="text-2xl font-semibold mb-3">Access</h2>
@@ -86,7 +86,7 @@ export default function VateraPage() {
               <li>  Visitors who want an authentic experience beyond the beaches </li>
             </ul>
           </div>
-        </div>
+       
         {/* SIDEBAR */}
         <aside className="space-y-8">
 
