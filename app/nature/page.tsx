@@ -3,17 +3,17 @@ import Link from "next/link";
 export default function NaturePage() {
   const nature = [
     {
-      slug: "vatera",
-      name: "Vatera",
-      img: "/vatera.jpg",
-      desc: "Sandy beach 8 km long."
+      slug: "kolpos-kallonis",
+      name: "Kalonni Bay",
+      img: "/kolpos-kallonis.jpeg",
+      desc: "A paradise of biodiversity."
     },
-    {
-      slug: "agios-isidoros",
-      name: "Agios Isidoros",
-      img: "/agios-isidoros.jpg",
-      desc: "Famous beach with blue flag."
-    }
+    // {
+    //   slug: "agios-isidoros",
+    //   name: "Agios Isidoros",
+    //   img: "/agios-isidoros.jpg",
+    //   desc: "Famous beach with blue flag."
+    // }
   ];
 
 return (
