@@ -93,9 +93,8 @@ export default function VateraPage() {
 
           {/* Map */}
           <div className="w-full h-48 rounded-lg overflow-hidden">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5848.771269722645!2d26.39389675!3d38.96713955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14baf78b3ca36ae3%3A0x11ec44cd23d9097!2sAgios%20Isidoros%20812%2000!5e1!3m2!1sen!2sgr!4v1776163983586!5m2!1sen!2sgr" 
-                width="100%"
+           <iframe 
+             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d104686.49581410048!2d26.109380664101998!3d39.147838689548536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14baed19213dba9d%3A0xfabf74bc86841952!2zS8OzbHBvcyBLYWxsb27DrXM!5e1!3m2!1sen!2sgr!4v1776180544862!5m2!1sen!2sgr" 
                 height="100%"
                 style={{ border: 0 }}
                 loading="lazy"
