@@ -32,116 +32,79 @@ export default function VateraPage() {
         </div>
       </section>
 
-      {/* CONTENT */}
-      <section className="max-w-5xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-12">
+      <section className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+  {/* MAIN CONTENT */}
+  <div className="lg:col-span-2 space-y-8">
+    {/* Practical info */}
+    <div>
+      <h2 className="text-2xl font-semibold mb-4">Useful Information</h2>
 
-        {/* MAIN CONTENT */}
-        <div className="md:col-span-2 space-y-10">
-
-          {/* Overview */}
+      <ul className="text-gray-700 space-y-4">
+        <li>
           <div>
-            <h2 className="text-2xl font-semibold mb-3">Why you should go</h2>
-            <p className="text-gray-700 leading-relaxed">
-              Agios Isidoros beach in Lesvos is one of the most famous and beautiful beaches of the island, especially near Ploma
-            </p>
+            <strong>Type:</strong>
+            <p className="mt-1">Sandy</p>
           </div>
+        </li>
 
-          {/* Highlights */}
+        <li>
           <div>
-            <h2 className="text-2xl font-semibold mb-3">Highlights</h2>
-            <ul className="list-disc pl-5 text-gray-700 space-y-2">
-              <li> Very large in length, ideal for walking </li>
-              <li> Dry waters – suitable for children </li>
-              <li> Taverns and coffee literally on the wave </li>
-              <li> Beautiful sunsets </li>
+            <strong>Organization:</strong>
+            <ul className="list-disc ml-5 mt-1 space-y-1">
+              <li>Umbrellas & sunbeds in some areas</li>
+              <li>Beach bars with relaxed atmosphere</li>
+              <li>Taverns and coffee spots along the beach</li>
             </ul>
           </div>
+        </li>
 
-          {/* Practical info */}
-     <>
-  <div>
-    <h2 className="text-2xl font-semibold mb-3">Highlights</h2>
-    <ul className="list-disc pl-5 text-gray-700 space-y-2">
-      <li>Very large in length, ideal for walking</li>
-      <li>Shallow waters – suitable for children</li>
-      <li>Taverns and coffee literally on the wave</li>
-      <li>Beautiful sunsets</li>
-    </ul>
+        <li>
+          <div>
+            <strong>Access:</strong>
+            <p className="mt-1">Easy by car</p>
+          </div>
+        </li>
+
+        <li>
+          <div>
+            <strong>Ideal for:</strong>
+            <p className="mt-1">Families, relaxation</p>
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
 
-  {/* Practical info */}
-  <div>
-    <h2 className="text-2xl font-semibold mb-4">Useful Information</h2>
+  {/* SIDEBAR */}
+  <aside className="space-y-8">
+    {/* Map */}
+    <div className="w-full h-48 rounded-lg overflow-hidden">
+      <iframe
+        src="X"
+        width="100%"
+        height="100%"
+        style={{ border: 0 }}
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+      />
+    </div>
 
-    <ul className="text-gray-700 space-y-4">
-      
-      <li>
-        <div>
-          <strong>Type:</strong>
-          <p className="mt-1">Sandy</p>
-        </div>
-      </li>
-
-      <li>
-        <div>
-          <strong>Organization:</strong>
-          <ul className="list-disc ml-5 mt-1 space-y-1">
-            <li>Umbrellas & sunbeds in some areas</li>
-            <li>Beach bars with relaxed atmosphere</li>
-            <li>Taverns and coffee spots along the beach</li>
-          </ul>
-        </div>
-      </li>
-
-      <li>
-        <div>
-          <strong>Access:</strong>
-          <p className="mt-1">Easy by car</p>
-        </div>
-      </li>
-
-      <li>
-        <div>
-          <strong>Ideal for:</strong>
-          <p className="mt-1">Families, relaxation</p>
-        </div>
-      </li>
-
-    </ul>
-  </div>
-</>
-        {/* SIDEBAR */}
-        <aside className="space-y-8">
-
-          {/* Map */}
-          <div className="w-full h-48 rounded-lg overflow-hidden">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52442.62385052624!2d26.179372848547395!3d39.014022754774174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14baeff2a84e3b1f%3A0x12a7105ca3e69a0a!2sVatera%20Beach!5e1!3m2!1sen!2sgr!4v1776159751071!5m2!1sen!2sgr"
-             width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-          </div>
-
-
-          {/* Nearby */}
-          <div className="bg-white rounded-xl shadow p-4">
-            <h3 className="font-semibold mb-3">Nearby Vatera</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                🏘{" "}
-                <Link href="/villages/plomari" className="text-blue-600 hover:underline">
-                  Plomari
-                </Link>
-              </li>
-              <li>🍽 Seafront taverns</li>
-              <li>🏖 Smaller quieter beaches in the area</li>
-            </ul>
-          </div>
-        </aside>
-      
+    {/* Nearby */}
+    <div className="bg-white rounded-xl shadow p-4">
+      <h3 className="font-semibold mb-3">Nearby X</h3>
+      <ul className="space-y-2 text-sm">
+        <li>
+          🏘{" "}
+          <Link href="/villages/X" className="text-blue-600 hover:underline">
+            Plomari
+          </Link>
+        </li>
+        <li>🍽 Seafront taverns</li>
+        <li>🏖 Smaller quieter beaches in the area</li>
+      </ul>
+    </div>
+  </aside>
+</section>
 
       {/* CTA */}
       <section className="bg-neutral-900 text-white py-16 text-center">
