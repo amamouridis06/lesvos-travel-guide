@@ -76,7 +76,87 @@ export default function MolyvosPage() {
             ← Επιστροφή στην αρχική
           </a>
         </div> */}
+   <footer
+      style={{
+        background: "#0f172a",
+        color: "#e5e7eb",
+        padding: "60px 20px 30px",
+      }}
+    >
+      <div
+        style={{
+          maxWidth: "1200px",
+          margin: "0 auto",
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+          gap: "40px",
+        }}
+      >
+        {/* Brand */}
+        <div>
+          <h2 style={{ color: "#fff", marginBottom: "12px" }}>{brand}</h2>
+          <p style={{ fontSize: "14px", lineHeight: 1.6 }}>
+            Ανακάλυψε τους καλύτερους προορισμούς στην Ελλάδα. Ο απόλυτος
+            οδηγός για ταξίδια, εμπειρίες και τοπικές προτάσεις.
+          </p>
+        </div>
 
+        {/* Destinations */}
+        <div>
+          <h3 style={{ color: "#fff", marginBottom: "12px" }}>
+            Προορισμοί
+          </h3>
+          <ul style={{ listStyle: "none", padding: 0, fontSize: "14px" }}>
+            <li>Σαντορίνη</li>
+            <li>Μύκονος</li>
+            <li>Κρήτη</li>
+            <li>Ρόδος</li>
+            <li>Θεσσαλονίκη</li>
+          </ul>
+        </div>
+
+        {/* Info */}
+        <div>
+          <h3 style={{ color: "#fff", marginBottom: "12px" }}>
+            Πληροφορίες
+          </h3>
+          <ul style={{ listStyle: "none", padding: 0, fontSize: "14px" }}>
+            <li>Σχετικά με εμάς</li>
+            <li>Blog</li>
+            <li>Συμβουλές ταξιδιού</li>
+            <li>Συχνές ερωτήσεις</li>
+          </ul>
+        </div>
+
+        {/* Contact */}
+        <div>
+          <h3 style={{ color: "#fff", marginBottom: "12px" }}>
+            Επικοινωνία
+          </h3>
+          <p style={{ fontSize: "14px", marginBottom: "8px" }}>
+            📍 Αθήνα, Ελλάδα
+          </p>
+          <p style={{ fontSize: "14px", marginBottom: "8px" }}>
+            📧 info@travelguide.gr
+          </p>
+          <p style={{ fontSize: "14px" }}>📞 +30 210 1234567</p>
+        </div>
+      </div>
+
+      {/* Bottom Bar */}
+      <div
+        style={{
+          borderTop: "1px solid rgba(255,255,255,0.1)",
+          marginTop: "40px",
+          paddingTop: "20px",
+          textAlign: "center",
+          fontSize: "13px",
+          color: "#9ca3af",
+        }}
+      >
+        © {new Date().getFullYear()} {brand}. All rights reserved.
+      </div>
+    </footer>
       </section>
     </main>
   );
