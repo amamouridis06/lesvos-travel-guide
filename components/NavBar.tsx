@@ -49,19 +49,19 @@ export default function NavBar() {
                   href="/beaches"
                   className="block px-4 py-2 hover:bg-white/10"
                 >
-                  Beaches
+                  Beaches 🏖
                 </Link>
                 <Link
                   href="/culture"
                   className="block px-4 py-2 hover:bg-white/10"
                 >
-                  Culture & History
+                  Villages 🏘
                 </Link>
                 <Link
                   href="/activities"
                   className="block px-4 py-2 hover:bg-white/10"
                 >
-                  Activities
+                  Food & Drink
                 </Link>
                 <Link
                   href="/maps"
