@@ -57,7 +57,7 @@ export default function VateraPage() {
           {/* Practical info */}
           <div>
             <h2 className="text-2xl font-semibold mb-3">Activities</h2>
-            <ul className="text-gray-700 space-y-2">
+            <ul className="list-disc pl-5 text-gray-700 space-y-2">
               <li> Bird observation </li>
               <li> Nature photo </li>
               <li> Hiking on natural paths </li>
