@@ -40,7 +40,7 @@ export default function LimanakiPamfilonPage() {
 
           {/* Intro */}
           <div>
-            <h2 className="text-2xl font-semibold mb-4">Γιατί να πάτε</h2>
+            <h2 className="text-2xl font-semibold mb-4">Why should you go</h2>
             <p className="text-gray-700 leading-relaxed text-lg">
               To limanaki ton filon is a favorite seaside tavern
               in philos Skala. With tables almost on the wave, it offers
