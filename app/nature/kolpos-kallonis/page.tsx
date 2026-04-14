@@ -39,16 +39,16 @@ export default function VateraPage() {
 
           {/* Overview */}
           <div>
-            <h2 className="text-2xl font-semibold mb-3">Why you should go</h2>
+            <h2 className="text-2xl font-semibold mb-3">Why you should visit the Gulf of Kalloni:</h2>
             <p className="text-gray-700 leading-relaxed">
-              The Gulf of Kalloni is one of the most important wetlands of the Mediterranean and one of the most special attractions of course Lesvat. Its only ecological value attracts visitors from all over the world, especially those interested in nature and bird observation.
+             The Gulf of Kalloni is one of the most significant wetlands in the Mediterranean and a truly unique natural attraction of Lesvos. Its exceptional ecological importance draws visitors from around the world, particularly nature enthusiasts and birdwatchers who come to experience its rich biodiversity.
             </p>
           </div>
            {/* */}
           <div>
-            <h2 className="text-2xl font-semibold mb-3">🌿 What makes him special</h2>
+            <h2 className="text-2xl font-semibold mb-3">🌿 What makes the Gulf of Kalloni special:</h2>
             <p className="text-gray-700 leading-relaxed">
-              The area hosts over 250 species of birds, with more well-known flamingos, erotic and many migratory species. The shallow waters and extensive wetlands create an ideal environment for wild life, offering unique images all years of time.
+              The area hosts over 250 species of birds, including well-known flamingos, herons, and many migratory species. The shallow waters and extensive wetlands create an ideal environment for wildlife, offering unique and captivating landscapes throughout the year.
             </p>
           </div>
          
@@ -57,36 +57,37 @@ export default function VateraPage() {
           <div>
             <h2 className="text-2xl font-semibold mb-3">Activities</h2>
             <ul className="text-gray-700 space-y-2 list-disc pl-5">
-              <li> Bird observation </li>
-              <li> Nature photo </li>
-              <li> Hiking on natural paths </li>
-              <li> Relaxing in a quiet environment</li>
-            </ul>
+             <li>Birdwatching in a unique wetland habitat</li>
+    <li>Capturing stunning nature photography</li>
+<li>Hiking along scenic natural trails</li>
+<li>Relaxing in a peaceful and unspoiled environment</li>
+</ul>
           </div>
           
         
          {/* Prosvasi */}
           <div>
-            <h2 className="text-2xl font-semibold mb-3">Access</h2>
-            <ul className="text-gray-700 space-y-2 list-disc pl-5">
-              <p>The bay is located in the main part of the island and is easily accessible: </p>
-              <li> about 40 – 50 minutes from Mytilene</li>
-              <li> near villages such as Kalloni and Skalochori</li>
-              <li> with bicycle, on foot, by car or local means of transport </li>
-            </ul>
-          </div>
+  <p className="text-gray-700 mb-2">
+    The bay is located in the central part of the island and is easily accessible:
+  </p>
+  <ul className="text-gray-700 space-y-2 list-disc pl-5">
+    <li>About 40–50 minutes from Mytilene</li>
+    <li>Close to villages such as Kalloni and Skalochori</li>
+    <li>Accessible by bicycle, on foot, by car, or public transport</li>
+  </ul>
+</div>
        
  {/* apaeuthinetai*/}
-          <div>
-            <h2 className="text-2xl font-semibold mb-3">Ideal for</h2>
-            <ul className="text-gray-700 space-y-2 list-disc pl-5">
-              <li> Love of nature and wildlife </li>
-              <li> Photographers </li>
-              <li>  Couples and travelers looking for peace </li>
-              <li>  Visitors who want an authentic experience beyond the beaches </li>
-            </ul>
-          </div>
-       </div>
+<div>
+  <h2 className="text-2xl font-semibold mb-3">Ideal for</h2>
+  <ul className="text-gray-700 space-y-2 list-disc pl-5">
+    <li>Nature and wildlife lovers</li>
+    <li>Photographers</li>
+    <li>Couples and travelers seeking peace and relaxation</li>
+    <li>Visitors looking for an authentic experience beyond the beaches</li>
+  </ul>
+</div>
+</div>
         {/* SIDEBAR */}
         <aside className="space-y-8">
 
