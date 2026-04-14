@@ -27,7 +27,7 @@ export default function VateraPage() {
             Beach of Agios Isidoros
           </h1>
           <p className="mt-2 text-lg text-gray-200">
-            Agios Isidoros: Clean waters, clear moments.
+            Clean waters, clear moments.
           </p>
         </div>
       </section>
