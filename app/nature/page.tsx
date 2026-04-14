@@ -4,7 +4,7 @@ export default function NaturePage() {
   const nature = [
     {
       slug: "kolpos-kallonis",
-      name: "The Gulf of Kalloni",
+      name: "Kalloni Bay",
       img: "/flamingo.jpeg",
       desc: "A paradise of biodiversity."
     },
