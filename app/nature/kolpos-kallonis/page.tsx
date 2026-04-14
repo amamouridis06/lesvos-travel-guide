@@ -75,7 +75,7 @@ export default function VateraPage() {
               <li> with bicycle, on foot, by car or local means of transport </li>
             </ul>
           </div>
-        </div>
+       
  {/* apaeuthinetai*/}
           <div>
             <h2 className="text-2xl font-semibold mb-3">Ideal for</h2>
