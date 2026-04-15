@@ -94,7 +94,7 @@ export default function VillagesPage() {
 
       {/* ================= HERO ================= */}
       <section className="relative h-[60vh] bg-[url('/map-lesvos.jpg')] bg-cover bg-center bg-fixed">
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-black/35" />
         <div className="relative z-10 h-full flex items-end">
           <div className="max-w-6xl mx-auto px-6 pb-12">
             <h1 className="text-4xl md:text-5xl font-bold text-white">
