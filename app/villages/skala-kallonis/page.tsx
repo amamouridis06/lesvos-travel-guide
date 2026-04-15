@@ -55,12 +55,12 @@ export default function MolyvosPage() {
   {/* Images */}
   <div className="grid grid-cols-2 gap-1">
     <img 
-      src="/images/hotel-pela.jpg" 
+      src="/hotel-pela.jpg" 
       alt="Hotel view" 
       className="w-full h-40 object-cover"
     />
     <img 
-      src="/images/hotel-pela1.jpg" 
+      src="/hotel-pela1.jpg" 
       alt="Hotel room" 
       className="w-full h-40 object-cover"
     />
