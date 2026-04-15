@@ -39,6 +39,7 @@ export default function FoodPage() {
             { title: "Ταβέρνες", href: "#taverns" },
             { title: "Εστιατόρια", href: "#restaurants" },
             { title: "Καφέ & Bar", href: "#cafes" },
+            { title: "Tranditional cafes", href: "#t-cafes" },
             { title: "Τοπικά Προϊόντα", href: "#local" },
           ].map((cat) => (
             <a
@@ -56,46 +57,79 @@ export default function FoodPage() {
       <section className="max-w-6xl mx-auto px-6 pb-24 space-y-20">
 
         {/* Taverns */}
-        <div id="taverns">
-          <h2 className="text-2xl font-semibold mb-6">Ταβέρνες</h2>
+       <div id="taverns">
+  <h2 className="text-2xl font-semibold mb-6">Τaverns</h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-xl shadow p-6 flex gap-4">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    
+    <Link href="/food/limanaki_pamfilon" className="block">
+      <div className="bg-white rounded-xl shadow p-6 flex gap-4 hover:shadow-lg transition cursor-pointer">
 
-              {/* Image */}
-              <div className="w-24 h-24 relative">
-                <Image
-                  src="/limanaki_pamf.jpg"
-                  alt="Το Λιμανάκι των Παμφίλων"
-                  className="object-cover rounded-lg"
-                />
-              </div>
-
-              {/* Content */}
-              <div>
-                <h3 className="font-semibold text-lg">
-                  Το Λιμανάκι των Παμφίλων
-                </h3>
-
-                <p className="text-sm text-gray-600">
-                  Παραδοσιακή κουζίνα • Παραθαλάσσια
-                </p>
-
-                <p className="text-sm mt-2">
-                  📍 Σκάλα Παμφίλων, Μυτιλήνη
-                </p>
-
-                <Link
-                  href="/food/limanaki_pamfilon"
-                  className="text-sm text-blue-600 hover:underline mt-2 inline-block"
-                > 
-                  Δείτε λεπτομέρειες →
-                </Link>
-              </div>
-            </div>
-          </div>
+        {/* Image */}
+        <div className="w-24 h-24 relative">
+          <Image
+            src="/limanaki_pamf.jpg"
+            alt="To limanaki ton Pamfilon"
+            className="object-cover rounded-lg"
+          />
         </div>
 
+        {/* Content */}
+        <div>
+          <h3 className="font-semibold text-lg">
+            To limanaki ton Pamfilon
+          </h3>
+
+          <p className="text-sm text-gray-600">
+            Tranditional Kitchen • side by sea
+          </p>
+
+          <p className="text-sm mt-2">
+            📍 Skala Pamfilon, Mytilini
+          </p>
+        </div>
+
+      </div>
+    </Link>
+
+  </div>
+</div>
+        </div>
+
+      {/* Tranditional Cafes */}
+        <div id="t-cafes">
+          <h2 className="text-2xl font-semibold mb-6">Tranditional Cafes</h2>
+          <p className="text-gray-600">
+             <Link href="/food/pallas-cafe-grill" className="block">
+      <div className="bg-white rounded-xl shadow p-6 flex gap-4 hover:shadow-lg transition cursor-pointer">
+
+        {/* Image */}
+        <div className="w-24 h-24 relative">
+          <Image
+            src="/pallas.jpg"
+            alt="Pallas cafe - grill"
+            className="object-cover rounded-lg"
+          />
+        </div>
+
+        {/* Content */}
+        <div>
+          <h3 className="font-semibold text-lg">
+            Pallas cafe - grill
+          </h3>
+
+          <p className="text-sm text-gray-600">
+            Tranditional Kitchen • peace
+          </p>
+
+          <p className="text-sm mt-2">
+            📍 Mesotopos
+          </p>
+        </div>
+
+      </div>
+    </Link>
+  </div>
         {/* Restaurants */}
         <div id="restaurants">
           <h2 className="text-2xl font-semibold mb-6">Εστιατόρια</h2>
