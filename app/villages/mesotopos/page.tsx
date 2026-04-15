@@ -133,6 +133,30 @@ export default function PlomariPage() {
     </ul>
   </div>
 
+   {/* Tips */}
+  <div className="bg-white rounded-xl shadow p-4">
+    <h3 className="font-semibold mb-3">Nearby</h3>
+    <ul className="text-sm space-y-2 text-gray-700">
+      <li>
+     
+      <Link href="/villages/tavari" className="text-blue-600 hover:underline">
+        Tavari
+      </Link>
+    </li>
+
+    <li> 
+      <Link href="/beaches/podaras" className="text-blue-600 hover:underline">
+        Podaras
+      </Link>
+    </li>
+     <li> 
+      <Link href="/villages/skala-eresou" className="text-blue-600 hover:underline">
+        Skala Eresou
+      </Link>
+    </li>
+    </ul>
+  </div>
+
 </aside>
       </section>
 
