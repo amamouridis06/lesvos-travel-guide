@@ -7,11 +7,11 @@ export default function Home() {
 
       {/* ================= HERO ================= */}
       <section className="relative w-full h-screen bg-[url('/plomari2.jpg')] bg-cover bg-center">
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-white/40" />
 
         <div className="relative z-10 h-full flex items-center">
           <div className="max-w-6xl mx-auto px-6">
-            <div className="max-w-xl bg-black/40 backdrop-blur-md p-8 rounded-xl shadow-xl">
+            <div className="max-w-xl bg-white/40 backdrop-blur-md p-8 rounded-xl shadow-xl">
               <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">
                  Discover Lesvos <br /> with the ultimate travel guide
               </h1>
@@ -108,7 +108,7 @@ export default function Home() {
               alt="The Map"
               className="absolute inset-0 w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-black/30" />
+            <div className="absolute inset-0 bg-white/30" />
           </div>
 
         </div>
@@ -151,7 +151,7 @@ export default function Home() {
                 alt={place.title}
                 className="h-64 w-full object-cover group-hover:scale-105 transition duration-300"
               />
-              <div className="absolute inset-0 bg-black/40 flex flex-col justify-end p-4 pointer-events-none">
+              <div className="absolute inset-0 bg-white/40 flex flex-col justify-end p-4 pointer-events-none">
                 <h3 className="text-white text-lg font-semibold">
                   {place.title}
                 </h3>
