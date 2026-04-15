@@ -41,7 +41,7 @@ const villages = [
     name: "Eresos",
     description: "Bohemian, relaxed, artistic, historic, authentic",
     image: "/eressosx.jpeg",
-    href: "/villages/eresosx",
+    href: "/villages/eresos",
   },
 
   
