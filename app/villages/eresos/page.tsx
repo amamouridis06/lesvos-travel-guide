@@ -54,7 +54,21 @@ export default function MolyvosPage() {
     </a>
   </p>
 </div>
+  {/* SIDEBAR */}
+        <aside className="space-y-8">
 
+          {/* Map */}
+          <div className="w-full h-48 rounded-lg overflow-hidden">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7333.073555117193!2d25.927862351416827!3d39.16919723123768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bac6b9c8777dfb%3A0x352d5bb55977c0b4!2sEresos%20811%2005!5e1!3m2!1sen!2sgr!4v1776247277625!5m2!1sen!2sgr" 
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+          </div>
+        </aside>
          {/* BACK BUTTON */}
         {/* <div>
           <a
