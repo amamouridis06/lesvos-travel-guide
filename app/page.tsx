@@ -7,11 +7,11 @@ export default function Home() {
 
       {/* ================= HERO ================= */}
       <section className="relative w-full h-screen bg-[url('/plomari2.jpg')] bg-cover bg-center">
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/20" />
 
         <div className="relative z-10 h-full flex items-center">
           <div className="max-w-6xl mx-auto px-6">
-            <div className="max-w-xl bg-black/40 backdrop-blur-md p-8 rounded-xl shadow-xl">
+            <div className="max-w-xl bg-black/20 backdrop-blur-md p-8 rounded-xl shadow-xl">
               <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">
                  Discover Lesvos <br /> with the ultimate travel guide
               </h1>
