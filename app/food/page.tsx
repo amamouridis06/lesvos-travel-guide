@@ -96,11 +96,13 @@ export default function FoodPage() {
 
         
 
-      {/* Tranditional Cafes */}
-        <div id="t-cafes">
-          <h2 className="text-2xl font-semibold mb-6">Tranditional Cafes</h2>
-          <p className="text-gray-600">
-             <Link href="/food/pallas-cafe-grill" className="block">
+     {/* Traditional Cafes */}
+<div id="t-cafes">
+  <h2 className="text-2xl font-semibold mb-6">Traditional Cafes</h2>
+
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+    <Link href="/food/pallas-cafe-grill" className="block">
       <div className="bg-white rounded-xl shadow p-6 flex gap-4 hover:shadow-lg transition cursor-pointer">
 
         {/* Image */}
@@ -119,7 +121,7 @@ export default function FoodPage() {
           </h3>
 
           <p className="text-sm text-gray-600">
-            Tranditional Kitchen • peace
+            Traditional kitchen • peaceful atmosphere
           </p>
 
           <p className="text-sm mt-2">
@@ -129,7 +131,9 @@ export default function FoodPage() {
 
       </div>
     </Link>
+
   </div>
+</div>
         {/* Restaurants */}
         <div id="restaurants">
           <h2 className="text-2xl font-semibold mb-6">Εστιατόρια</h2>
