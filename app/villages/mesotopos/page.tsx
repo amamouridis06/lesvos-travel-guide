@@ -85,20 +85,25 @@ export default function PlomariPage() {
 </div>
 
     
-{/* Food */}
-<div>
-  <h2 className="text-2xl font-semibold mb-3">Where to eat</h2>
-  <p className="text-gray-700">
-    In Mesotopos, you can visit the traditional tavern{" "}
-    <a
-      href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3232.297674348716!2d26.000671685914426!3d39.13174448516577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bac228d71967a5%3A0x9a58b0962bc523e!2zzp8gzqDOrM67zrvOsc-C!5e0!3m2!1sel!2sgr!4v1776256906720!5m2!1sel!2sgr"
-      rel="noopener noreferrer"
-      className="text-blue-600 hover:underline"
-    >
-      Pallas Café – Grill
-    </a>
-    , where you can enjoy local flavors in an authentic setting. In the nearby seaside village of Tavari, you will also find traditional tavernas serving fresh fish, local dishes, and authentic flavors of Lesvos in a relaxed and welcoming atmosphere.
-  </p>
+           {/* Content */}
+  <div className="p-4">
+    <h3 className="text-xl font-semibold mb-2">Where to eat</h3>
+    
+    <p className="text-gray-700 mb-2">
+      In Mesotopos, you can visit the traditional tavern{" "}
+      <a 
+        href="https://maps.app.goo.gl/g9Mhqzhuuux8Pshg7" 
+        className="text-blue-600 hover:underline"
+      >
+       Pallas Café – Grill
+      </a>, 
+       where you can enjoy local flavors in an authentic setting. In the nearby seaside village of Tavari, you will also find traditional tavernas serving fresh fish, local dishes, and authentic flavors of Lesvos in a relaxed and welcoming atmosphere.
+    </p>
+
+    <p className="text-gray-600 text-sm">
+      Perfect for a relaxed and authentic island experience.
+    </p>
+  </div>
 </div>
         </div>
 
@@ -111,7 +116,7 @@ export default function PlomariPage() {
 
     <div className="w-full h-48 rounded-lg overflow-hidden">
       <iframe
-        src="https://www.google.com/maps/embed?pb=..."
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6544.391119793698!2d25.998184695876198!3d39.13186033669969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bac187a0d4a45f%3A0xbadf38c24202ceb5!2sMesotopos%20811%2005!5e1!3m2!1sen!2sgr!4v1776259666781!5m2!1sen!2sgr" 
         width="100%"
         height="100%"
         style={{ border: 0 }}
