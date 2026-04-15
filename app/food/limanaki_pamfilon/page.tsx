@@ -1,13 +1,37 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-
-export const metadata = {
-  title: "To limanaki ton Pamfilon | Lesvos Travel Guide",
-  description:
-    "To limanaki ton Pamfilon: traditional tavern by the sea, known for fish, seafood and authentic flavors in Lesvos.",
-};
+import { useEffect, useState } from "react";
 
 export default function LimanakiPamfilonPage() {
+
+  // ===== CAROUSEL =====
+  const images = [
+    "/food1lim.jpg",
+    "/dessert-limanaki.jpg",
+    "/limanaki_pamf1.jpg",
+  ];
+
+  const [index, setIndex] = useState(0);
+
+  const next = () => {
+    setIndex((prev) => (prev + 1) % images.length);
+  };
+
+  const prev = () => {
+    setIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
+
+  // 👉 autoplay
+  useEffect(() => {
+    const interval = setInterval(() => {
+      next();
+    }, 3500);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <main className="bg-neutral-100 text-neutral-900 min-h-screen">
 
@@ -20,7 +44,7 @@ export default function LimanakiPamfilonPage() {
           className="object-cover"
           priority
         />
-        
+
         <div className="absolute inset-0 bg-black/50" />
 
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 text-center text-white px-6 max-w-3xl">
@@ -67,21 +91,45 @@ export default function LimanakiPamfilonPage() {
               <li>🍋 Seafood meze paired with ouzo</li>
             </ul>
 
+            {/* ===== CAROUSEL ===== */}
             <div className="relative h-72 rounded-xl overflow-hidden shadow">
-                             <Image
-          src="/food1lim.jpg"
-          alt="To limanaki ton Pamfilon"
-          fill
-          className="object-cover"
-          priority
-        />
-         <Image
-          src="/dessert-limanaki.jpg"
-          alt="To limanaki ton Pamfilon"
-          fill
-          className="object-cover"
-          priority
-        />
+
+              {/* Image */}
+              <Image
+                src={images[index]}
+                alt="To limanaki ton Pamfilon"
+                fill
+                className="object-cover transition-opacity duration-700"
+              />
+
+              {/* Arrows */}
+              <button
+                onClick={prev}
+                className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-1 rounded-full hover:bg-black/70"
+              >
+                ‹
+              </button>
+
+              <button
+                onClick={next}
+                className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-1 rounded-full hover:bg-black/70"
+              >
+                ›
+              </button>
+
+              {/* Dots */}
+              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
+                {images.map((_, i) => (
+                  <div
+                    key={i}
+                    onClick={() => setIndex(i)}
+                    className={`w-2.5 h-2.5 rounded-full cursor-pointer transition ${
+                      i === index ? "bg-white scale-110" : "bg-white/50"
+                    }`}
+                  />
+                ))}
+              </div>
+
             </div>
           </div>
         </div>
@@ -89,7 +137,6 @@ export default function LimanakiPamfilonPage() {
         {/* ===== SIDEBAR ===== */}
         <aside className="space-y-10">
 
-          {/* Info */}
           <div className="bg-white rounded-xl shadow p-6">
             <h3 className="font-semibold mb-4 text-lg">Informations</h3>
             <ul className="text-sm space-y-3 text-gray-700">
@@ -100,17 +147,14 @@ export default function LimanakiPamfilonPage() {
             </ul>
           </div>
 
-         {/* Map */}
           <div className="w-full h-48 rounded-lg overflow-hidden">
             <iframe 
-             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3270.9619515967324!2d26.526763926143023!3d39.15840182166955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ba677e1a3b5845%3A0xd278dcca3b94ec29!2sTo%20limanaki%20ton%20filon!5e1!3m2!1sen!2sgr!4v1776166522249!5m2!1sen!2sgr"  
-                style={{ border: 0 }}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3270.9619515967324!2d26.526763926143023!3d39.15840182166955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ba677e1a3b5845%3A0xd278dcca3b94ec29!2sTo%20limanaki%20ton%20filon!5e1!3m2!1sen!2sgr!4v1776166522249!5m2!1sen!2sgr"
+              style={{ border: 0 }}
+              loading="lazy"
+            />
           </div>
-          
-          {/* Nearby */}
+
           <div className="bg-white rounded-xl shadow p-6">
             <h3 className="font-semibold mb-4 text-lg">Near the restaurant</h3>
             <ul className="text-sm space-y-2 text-gray-700">
@@ -119,6 +163,7 @@ export default function LimanakiPamfilonPage() {
               <li>🍽 Other seaside taverns or shops</li>
             </ul>
           </div>
+
         </aside>
       </section>
 
