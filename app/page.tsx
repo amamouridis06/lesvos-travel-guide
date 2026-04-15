@@ -164,12 +164,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ================= FOOTER ================= */}
-      <footer className="mt-auto py-6 text-center text-gray-500 text-sm border-t border-black/10">
-        <p>© 2025 Lesvos Travel Guide</p>
-      </footer>
-
-     
+    
 
     </main>
   );
