@@ -37,6 +37,14 @@ const villages = [
     image: "/skala-kallonis.jpeg",
     href: "/villages/skala-kallonis",
   },
+   {
+    name: "Eresos",
+    description: "Bohemian, relaxed, artistic, historic, authentic",
+    image: "/eresosx.jpeg",
+    href: "/villages/eresosx",
+  },
+
+  
 ];
 
 export default function VillagesPage() {
