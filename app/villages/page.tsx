@@ -52,19 +52,19 @@ const villages = [
  {
     name: "Mestotopos",
     description: "",
-    image: "/mesotopos.jpeg",
+    image: "/pallas.jpg",
     href: "/villages/mesotopos",
   },
   {
     name: "Melinta",
     description: "",
-    image: "/melinta.jpeg",
+    image: "/plomari1.jpg",
     href: "/villages/melinta",
   },
    {
     name: "Sigri",
     description: "",
-    image: "/sigri.jpeg",
+    image: "/ouzo.jpg",
     href: "/villages/sigri",
   },
   {
