@@ -1,149 +1,118 @@
-// --- TYPES ---
-type Village = {
-  name: string;
-  desc: string;
-  image: string; // url
-};
+import React from "react";
 
-type Healthcare = {
-  name: string;
-  location: string;
-  phone: string;
-  nearestVillage: string;
-  distanceKm: number;
-};
-
-// --- DATA (EDIT FREELY) ---
-// const villages: Village[] = [
-//   { name: "Molyvos (Mithymna)", desc: "Medieval charm & sunset views", image: "/images/molyvos.jpg" },
-//   { name: "Skala Sykamineas", desc: "Seaside serenity & poetic beauty", image: "/images/sykaminea.jpg" },
-//   { name: "Agiasos", desc: "Mountain culture & local crafts", image: "/images/agiasos.jpg" },
-//   { name: "Petra", desc: "Iconic rock church & beach life", image: "/images/petra.jpg" },
-//   { name: "Eresos", desc: "Bohemian vibe & rich history", image: "/images/eresos.jpg" },
-//   { name: "Mandamados", desc: "Religious heritage & ceramics", image: "/images/mandamados.jpg" },
-//   { name: "Plomari", desc: "Ouzo capital & coastal energy", image: "/images/plomari.jpg" },
-//   { name: "Sigri", desc: "Wild landscapes & unique geology", image: "/images/sigri.jpg" },
-//   { name: "Skala Kallonis", desc: "Wetlands & birdwatching", image: "/images/kalloni.jpg" },
-// ];
-
-const healthcare: Healthcare[] = [
+const villages = [
   {
-    name: "Kalloni Health Center",
-    location: "Kalloni",
-    phone: "+30 22530 22000",
-    nearestVillage: "Skala Kallonis",
-    distanceKm: 3,
+    name: "Molyvos (Mithymna)",
+    description: "Medieval, picturesque, stone-built, romantic, sunsets",
   },
   {
-    name: "Mytilene Hospital",
-    location: "Mytilene",
-    phone: "+30 22513 50000",
-    nearestVillage: "Mandamados",
-    distanceKm: 37,
+    name: "Skala Sykamineas",
+    description: "Fishing, peaceful, seaside, chapel, poetic",
   },
   {
-    name: "Plomari Clinic",
-    location: "Plomari",
-    phone: "+30 22520 32000",
-    nearestVillage: "Plomari",
-    distanceKm: 0,
+    name: "Agiasos",
+    description: "Mountain, traditional, crafts, cultural, vibrant",
+  },
+  {
+    name: "Petra",
+    description: "Coastal, iconic, church, scenic, charming",
+  },
+  {
+    name: "Eresos",
+    description: "Bohemian, relaxed, artistic, historic, authentic",
+  },
+  {
+    name: "Mandamados",
+    description: "Religious, heritage, ceramics, local, traditional",
+  },
+  {
+    name: "Plomari",
+    description: "Coastal, ouzo, lively, maritime, authentic",
+  },
+  {
+    name: "Sigri",
+    description: "Remote, wild, unique, geological, peaceful",
+  },
+  {
+    name: "Skala Kallonis",
+    description: "Wetlands, birdwatching, seaside, tranquil, authentic",
   },
 ];
 
-export default function LesvosPage() {
-  const [search, setSearch] = useState("");
+const healthcare = [
+  {
+    location: "Kalloni",
+    type: "Health Center",
+  },
+  {
+    location: "Mytilene",
+    type: "Hospital & Medical Services",
+  },
+  {
+    location: "Plomari",
+    type: "Regional Clinic",
+  },
+];
 
-  const filteredHealthcare = healthcare.filter((h) =>
-    h.name.toLowerCase().includes(search.toLowerCase()) ||
-    h.location.toLowerCase().includes(search.toLowerCase())
-  );
-
+const LesvosPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white p-6">
-      <div className="max-w-6xl mx-auto">
-        {/* HERO */}
-        <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold text-gray-800 mb-4">Lesvos Guide</h1>
-          <p className="text-gray-600">Villages, healthcare & useful contacts</p>
-        </div>
+    <div className="min-h-screen bg-gray-50 p-8">
+      <div className="max-w-5xl mx-auto">
+        {/* Title */}
+        <h1 className="text-4xl font-bold mb-6 text-gray-800">
+          Discover Lesvos
+        </h1>
 
-        {/* VILLAGES WITH IMAGES */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-semibold mb-8 flex items-center gap-2">
-            <MapPin /> Villages
+        <p className="text-lg text-gray-600 mb-10">
+          Traditional settlements, history, and authentic island life
+        </p>
+
+        {/* Villages Section */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-semibold mb-6 text-gray-800">
+            Picturesque Villages
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-6">
-            {villages.map((v, i) => (
-              <div className="bg-white rounded-2xl shadow-md p-4">
-                <img
-                  src={v.image}
-                  alt={v.name}
-                  className="h-40 w-full object-cover"
-                />
-                <div className="p-4">
-                  <h3 className="font-semibold text-lg">{v.name}</h3>
-                  <p className="text-gray-600 text-sm">{v.desc}</p>
-                </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            {villages.map((village, index) => (
+              <div
+                key={index}
+                className="bg-white p-5 rounded-2xl shadow-sm hover:shadow-md transition"
+              >
+                <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                  {village.name}
+                </h3>
+                <p className="text-gray-600">{village.description}</p>
               </div>
             ))}
           </div>
         </section>
 
-        {/* HEALTHCARE WITH DISTANCES */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-semibold mb-6 flex items-center gap-2">
-            <HeartPulse /> Healthcare & Distances
-          </h2>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {healthcare.map((h, i) => (
-              <div className="bg-white rounded-2xl shadow-md p-4">
-                <div className="bg-white rounded-2xl shadow-md p-4">
-                  <h3 className="font-semibold text-lg">{h.name}</h3>
-                  <p className="text-sm text-gray-600">📍 {h.location}</p>
-                  <p className="text-sm text-gray-600">
-                    Nearest village: {h.nearestVillage}
-                  </p>
-                  <p className="text-sm text-gray-600">
-                    Distance: {h.distanceKm} km
-                  </p>
-                  <p className="text-sm mt-2 flex items-center gap-2">
-                    <Phone className="w-4 h-4" /> {h.phone}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* PHONE DIRECTORY */}
+        {/* Healthcare Section */}
         <section>
-          <h2 className="text-3xl font-semibold mb-6 flex items-center gap-2">
-            <Phone /> Phone Directory
+          <h2 className="text-2xl font-semibold mb-6 text-gray-800">
+            Healthcare Facilities
           </h2>
 
-          <div className="mb-4 flex items-center gap-2">
-            <Search className="w-4 h-4" />
-            <input
-              type="text"
-              placeholder="Search..."
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              className="border p-2 rounded w-full"
-            />
-          </div>
-
-          <div className="bg-white rounded-2xl shadow-sm p-4">
-            {filteredHealthcare.map((h, i) => (
-              <div key={i} className="flex justify-between border-b py-2">
-                <span>{h.name}</span>
-                <span>{h.phone}</span>
-              </div>
-            ))}
+          <div className="bg-white rounded-2xl shadow-sm p-6">
+            <ul className="space-y-4">
+              {healthcare.map((item, index) => (
+                <li
+                  key={index}
+                  className="flex justify-between border-b pb-2"
+                >
+                  <span className="font-medium text-gray-700">
+                    {item.location}
+                  </span>
+                  <span className="text-gray-500">{item.type}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
       </div>
     </div>
   );
-}
+};
+
+export default LesvosPage;
