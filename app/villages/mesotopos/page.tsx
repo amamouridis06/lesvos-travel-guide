@@ -86,7 +86,7 @@ export default function PlomariPage() {
   </ul>
 
   {/* Content (merged) */}
-  <div className="p-4 bg-white rounded-lg shadow">
+  {/* <div className="p-4 bg-white rounded-lg shadow"> */}
     
     <h3 className="text-xl font-semibold mb-2">Where to eat</h3>
 
@@ -108,7 +108,7 @@ export default function PlomariPage() {
 
   </div>
 </div>
-</div>
+{/* </div> */}
        
 
         {/* SIDEBAR */}
