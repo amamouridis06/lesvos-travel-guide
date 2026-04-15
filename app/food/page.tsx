@@ -93,8 +93,8 @@ export default function FoodPage() {
     </Link>
 
   </div>
-</div>
-        </div>
+
+        
 
       {/* Tranditional Cafes */}
         <div id="t-cafes">
