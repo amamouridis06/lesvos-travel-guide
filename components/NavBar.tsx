@@ -16,7 +16,7 @@ export default function NavBar() {
     isEnglish ? pathname.replace("/en", "") || "/" : `/en${pathname}`;
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-black/10">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-blue-600/80 backdrop-blur-md border-b border-blue-500">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
 
         {/* Logo */}
