@@ -24,10 +24,10 @@ export default function PlomariPage() {
 
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-center text-white px-6">
           <h1 className="text-4xl md:text-5xl font-bold">
-            Πλωμάρι
+            Mesotopos
           </h1>
           <p className="mt-2 text-lg text-gray-200">
-            Ούζο, θάλασσα & παράδοση
+            Peace and Tranditional Food
           </p>
         </div>
       </section>
