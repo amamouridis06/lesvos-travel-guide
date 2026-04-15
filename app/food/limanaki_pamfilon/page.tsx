@@ -56,10 +56,7 @@ export default function LimanakiPamfilonPage() {
           <div>
             <h2 className="text-2xl font-semibold mb-4">Why should you go</h2>
             <p className="text-gray-700 leading-relaxed text-lg">
-              To limanaki ton filon is a favorite seaside tavern
-              in philos Skala. With tables almost on the wave, it offers
-              fresh fish, seafood and authentic flavors in one absolutely
-              summer setting.
+              To Limanaki ton Pamfilon is a favorite seaside tavern in Skala Pamfilon, offering a truly summery setting right by the water. With tables set almost on the waves, it serves fresh fish, seafood, and authentic local flavors in a relaxed, picturesque atmosphere.
             </p>
           </div>
 
@@ -67,10 +64,10 @@ export default function LimanakiPamfilonPage() {
           <div>
             <h2 className="text-2xl font-semibold mb-4">Highlights</h2>
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-700">
-              <li>🌊 Tables by the sea</li>
-              <li>🐟 Fresh day fish</li>
-              <li>🍤 Sea & delicacies</li>
-              <li>☀️ Ideal for summer</li>
+              <li>🌊 Seaside dining with tables by the water</li>
+              <li>🐟 Fresh daily catch</li>
+              <li>🍤 Seafood & local delicacies</li>
+              <li>☀️ Perfect summer atmosphere</li>
             </ul>
           </div>
 
@@ -78,9 +75,9 @@ export default function LimanakiPamfilonPage() {
           <div>
             <h2 className="text-2xl font-semibold mb-4">What to try</h2>
             <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-6">
-              <li>Fresh day fish</li>
-              <li>Kalamari & shrimp</li>
-              <li>Sea delicacies with ouzo</li>
+              <li>🐟 Fresh daily catch</li>
+              <li>🍤 Grilled Kalamari & shrimp</li>
+              <li>🍋 Seafood meze paired with ouzo</li>
             </ul>
 
             <div className="relative h-72 rounded-xl overflow-hidden shadow">
@@ -101,7 +98,7 @@ export default function LimanakiPamfilonPage() {
           <div className="bg-white rounded-xl shadow p-6">
             <h3 className="font-semibold mb-4 text-lg">Informations</h3>
             <ul className="text-sm space-y-3 text-gray-700">
-              <li><strong>Type:</strong> Tranditional Tavern</li>
+              <li><strong>Type:</strong> Restaurant</li>
               <li><strong>Kitchen:</strong> Greek</li>
               <li><strong>Prices:</strong> €€</li>
               <li><strong>Suitable for:</strong> Families, couples</li>
