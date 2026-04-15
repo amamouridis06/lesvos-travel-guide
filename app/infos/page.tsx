@@ -1,7 +1,3 @@
-// import React, { useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
-// import { MapPin, Phone, Image as ImageIcon, HeartPulse, Search } from "lucide-react";
-
 // --- TYPES ---
 type Village = {
   name: string;
@@ -79,17 +75,17 @@ export default function LesvosPage() {
 
           <div className="grid md:grid-cols-3 gap-6">
             {villages.map((v, i) => (
-              <Card key={i} className="overflow-hidden rounded-2xl shadow-md">
+              <div className="bg-white rounded-2xl shadow-md p-4">
                 <img
                   src={v.image}
                   alt={v.name}
                   className="h-40 w-full object-cover"
                 />
-                <CardContent className="p-4">
+                <div className="p-4">
                   <h3 className="font-semibold text-lg">{v.name}</h3>
                   <p className="text-gray-600 text-sm">{v.desc}</p>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             ))}
           </div>
         </section>
@@ -102,8 +98,8 @@ export default function LesvosPage() {
 
           <div className="grid md:grid-cols-3 gap-6">
             {healthcare.map((h, i) => (
-              <Card key={i} className="rounded-2xl shadow-sm">
-                <CardContent className="p-5">
+              <div className="bg-white rounded-2xl shadow-md p-4">
+                <div className="bg-white rounded-2xl shadow-md p-4">
                   <h3 className="font-semibold text-lg">{h.name}</h3>
                   <p className="text-sm text-gray-600">📍 {h.location}</p>
                   <p className="text-sm text-gray-600">
@@ -115,8 +111,8 @@ export default function LesvosPage() {
                   <p className="text-sm mt-2 flex items-center gap-2">
                     <Phone className="w-4 h-4" /> {h.phone}
                   </p>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             ))}
           </div>
         </section>
