@@ -14,7 +14,21 @@ export default function LimanakiPamfilonPage() {
       {/* ================= HERO ================= */}
       <section className="relative h-[70vh] w-full">
         <Image
-          src="/limanaki_pamf.jpg"
+          src="/limanaki_pamf1.jpg"
+          alt="To limanaki ton Pamfilon"
+          fill
+          className="object-cover"
+          priority
+        />
+         <Image
+          src="/food1lim.jpg"
+          alt="To limanaki ton Pamfilon"
+          fill
+          className="object-cover"
+          priority
+        />
+         <Image
+          src="/dessert-limanaki.jpg"
           alt="To limanaki ton Pamfilon"
           fill
           className="object-cover"
