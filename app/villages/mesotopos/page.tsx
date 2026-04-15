@@ -101,36 +101,37 @@ export default function PlomariPage() {
   </p>
 </div>
         </div>
+
         {/* SIDEBAR */}
-        <aside className="space-y-8">
+<aside className="space-y-8">
 
-          {/* Map */}
-          <div className="bg-white rounded-xl shadow p-4">
-            <h3 className="font-semibold mb-3">Τοποθεσία</h3>
-            <div className="w-full h-48 rounded-lg overflow-hidden">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3232.297674348716!2d26.000671685914426!3d39.13174448516577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bac187a0d4a45f%3A0xbadf38c24202ceb5!2zzpzOtc-Dz4zPhM6_z4DOv8-CIDgxMSAwNQ!5e0!3m2!1sel!2sgr!4v1776256956208!5m2!1sel!2sgr"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </div>
+  {/* Map */}
+  <div className="bg-white rounded-xl shadow p-4">
+    <h3 className="font-semibold mb-3">Τοποθεσία</h3>
 
-          </div>
+    <div className="w-full h-48 rounded-lg overflow-hidden">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=..."
+        width="100%"
+        height="100%"
+        style={{ border: 0 }}
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+      />
+    </div>
+  </div>
 
-         {/* Tips */}
-<div className="bg-white rounded-xl shadow p-4">
-  <h3 className="font-semibold mb-3">Tips</h3>
-  <ul className="text-sm space-y-2 text-gray-700">
-    <li>🚗 Best explored by car due to its remote location</li>
-    <li>🌿 Ideal for a peaceful and authentic village experience</li>
-    <li>🍽 Try local dishes and traditional meze with ouzo</li>
-  </ul>
-</div>
-            </div>
-        </aside>
+  {/* Tips */}
+  <div className="bg-white rounded-xl shadow p-4">
+    <h3 className="font-semibold mb-3">Tips</h3>
+    <ul className="text-sm space-y-2 text-gray-700">
+      <li>🚗 Best explored by car due to its remote location</li>
+      <li>🌿 Ideal for a peaceful and authentic village experience</li>
+      <li>🍽 Try local dishes and traditional meze with ouzo</li>
+    </ul>
+  </div>
+
+</aside>
       </section>
 
       {/* CTA */}
