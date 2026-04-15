@@ -20,20 +20,7 @@ export default function LimanakiPamfilonPage() {
           className="object-cover"
           priority
         />
-         <Image
-          src="/food1lim.jpg"
-          alt="To limanaki ton Pamfilon"
-          fill
-          className="object-cover"
-          priority
-        />
-         <Image
-          src="/dessert-limanaki.jpg"
-          alt="To limanaki ton Pamfilon"
-          fill
-          className="object-cover"
-          priority
-        />
+        
         <div className="absolute inset-0 bg-black/50" />
 
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 text-center text-white px-6 max-w-3xl">
@@ -87,6 +74,20 @@ export default function LimanakiPamfilonPage() {
                 fill
                 className="object-cover"
               />
+               <Image
+          src="/food1lim.jpg"
+          alt="To limanaki ton Pamfilon"
+          fill
+          className="object-cover"
+          priority
+        />
+         <Image
+          src="/dessert-limanaki.jpg"
+          alt="To limanaki ton Pamfilon"
+          fill
+          className="object-cover"
+          priority
+        />
             </div>
           </div>
         </div>
