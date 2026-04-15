@@ -85,8 +85,7 @@ export default function PlomariPage() {
     <li>🏖 Skala Eresos</li>
   </ul>
 
-  {/* Content (merged) */}
-  {/* <div className="p-4 bg-white rounded-lg shadow"> */}
+ 
     
     <h3 className="text-xl font-semibold mb-2">Where to eat</h3>
 
@@ -102,13 +101,9 @@ export default function PlomariPage() {
       In the nearby seaside village of Tavari, you will also find traditional tavernas serving fresh fish, local dishes, and authentic flavors of Lesvos in a relaxed and welcoming atmosphere.
     </p>
 
-    <p className="text-gray-600 text-sm">
-      Perfect for a relaxed and authentic island experience.
-    </p>
-
+   
   </div>
 </div>
-{/* </div> */}
        
 
         {/* SIDEBAR */}
