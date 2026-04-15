@@ -151,7 +151,7 @@ export default function Home() {
                 alt={place.title}
                 className="h-64 w-full object-cover group-hover:scale-105 transition duration-300"
               />
-              <div className="absolute inset-0 bg-white/40 flex flex-col justify-end p-4 pointer-events-none">
+              <div className="absolute inset-0 bg-black/40 flex flex-col justify-end p-4 pointer-events-none">
                 <h3 className="text-white text-lg font-semibold">
                   {place.title}
                 </h3>
