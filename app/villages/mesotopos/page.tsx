@@ -117,7 +117,7 @@ export default function PlomariPage() {
     </p>
   </div>
 </div>
-        </div>
+       
 
         {/* SIDEBAR */}
 <aside className="space-y-8">
