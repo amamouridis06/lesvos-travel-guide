@@ -71,24 +71,6 @@ export default function PlomariPage() {
 
 <div>
   <h2 className="text-2xl font-semibold mb-3">Where to eat</h2>
-
-  {/* List */}
-  <ul className="space-y-2 text-gray-700 mb-4">
-    <li>
-      🏖{" "}
-      <Link href="/beaches/tavari" className="text-blue-600 hover:underline">
-        Tavari
-      </Link>
-    </li>
-
-    <li>🏖 Podara</li>
-    <li>🏖 Skala Eresos</li>
-  </ul>
-
- 
-    
-    <h3 className="text-xl font-semibold mb-2">Where to eat</h3>
-
     <p className="text-gray-700 mb-2">
       In Mesotopos, you can visit the traditional tavern{" "}
       <Link href="/food/pallas-cafe-grill" className="text-blue-600 hover:underline">
@@ -96,10 +78,6 @@ export default function PlomariPage() {
       </Link>
       , where you can enjoy local flavors in an authentic setting. In the nearby seaside village of Tavari, you will also find traditional tavernas serving fresh fish, local dishes, and authentic flavors of Lesvos in a relaxed and welcoming atmosphere.
     </p>
-
-   
-
-   
   </div>
 </div>
        
