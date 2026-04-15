@@ -129,10 +129,10 @@ export default function Home() {
               href: "/villages/molivos",
             },
             {
-              title: "Vatera",
-              subtitle: "The largest beach on the island",
-              img: "/vatera.jpg",
-              href: "/beaches/vatera",
+              title: "SKala Kalonis",
+              subtitle: "Where Tranquility Meets the Aegean",
+              img: "/skala-kallonis.jpeg",
+              href: "/villages/skala-kallonis",
             },
             {
               title: "Plomari",
