@@ -1,59 +1,61 @@
 export default function Footer() {
   return (
-    <footer className="mt-20 border-t border-black/5 bg-white">
-      <div className="mx-auto max-w-7xl px-6 py-12 md:px-10">
+    <footer className="mt-24 bg-[#0b0b0c] text-white">
+      <div className="mx-auto max-w-7xl px-6 py-16 md:px-10">
         
         {/* Top */}
-        <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
+        <div className="flex flex-col gap-12 md:flex-row md:justify-between">
           
           {/* Brand */}
           <div className="max-w-sm">
             <h3 className="text-xl font-semibold tracking-tight">
               Lesvos Guide
             </h3>
-            <p className="mt-3 text-sm leading-6 text-slate-500">
+            <p className="mt-4 text-sm leading-6 text-white/60">
               Ένας σύγχρονος οδηγός για φαγητό, εμπειρίες και διαμονή στη Λέσβο.
             </p>
           </div>
 
           {/* Links */}
-          <div className="grid grid-cols-2 gap-8 text-sm md:grid-cols-3">
+          <div className="grid grid-cols-2 gap-10 text-sm md:grid-cols-3">
             
             <div>
-              <h4 className="mb-3 font-semibold text-slate-900">Οδηγός</h4>
-              <ul className="space-y-2 text-slate-500">
-                <li><a href="#" className="hover:text-slate-900">Φαγητό</a></li>
-                <li><a href="#" className="hover:text-slate-900">Καφέ</a></li>
-                <li><a href="#" className="hover:text-slate-900">Παραλίες</a></li>
+              <h4 className="mb-4 font-semibold text-white/90">Οδηγός</h4>
+              <ul className="space-y-2 text-white/60">
+                <li><a href="#" className="hover:text-white">Φαγητό</a></li>
+                <li><a href="#" className="hover:text-white">Καφέ</a></li>
+                <li><a href="#" className="hover:text-white">Παραλίες</a></li>
               </ul>
             </div>
 
             <div>
-              <h4 className="mb-3 font-semibold text-slate-900">Explore</h4>
-              <ul className="space-y-2 text-slate-500">
-                <li><a href="#" className="hover:text-slate-900">Χάρτης</a></li>
-                <li><a href="#" className="hover:text-slate-900">Top επιλογές</a></li>
-                <li><a href="#" className="hover:text-slate-900">Πλάνο ταξιδιού</a></li>
+              <h4 className="mb-4 font-semibold text-white/90">Explore</h4>
+              <ul className="space-y-2 text-white/60">
+                <li><a href="#" className="hover:text-white">Χάρτης</a></li>
+                <li><a href="#" className="hover:text-white">Top επιλογές</a></li>
+                <li><a href="#" className="hover:text-white">Πλάνο ταξιδιού</a></li>
               </ul>
             </div>
 
             <div>
-              <h4 className="mb-3 font-semibold text-slate-900">Info</h4>
-              <ul className="space-y-2 text-slate-500">
-                <li><a href="#" className="hover:text-slate-900">About</a></li>
-                <li><a href="#" className="hover:text-slate-900">Contact</a></li>
+              <h4 className="mb-4 font-semibold text-white/90">Info</h4>
+              <ul className="space-y-2 text-white/60">
+                <li><a href="#" className="hover:text-white">About</a></li>
+                <li><a href="#" className="hover:text-white">Contact</a></li>
               </ul>
             </div>
 
           </div>
         </div>
 
+        {/* Divider */}
+        <div className="my-10 h-px bg-white/10" />
+
         {/* Bottom */}
-        <div className="mt-10 flex flex-col gap-4 border-t border-black/5 pt-6 text-sm text-slate-500 md:flex-row md:items-center md:justify-between">
+        <div className="flex flex-col gap-4 text-sm text-white/50 md:flex-row md:justify-between">
           <span>© {new Date().getFullYear()} Lesvos Guide</span>
           <span>Made with care in Greece 🇬🇷</span>
         </div>
-
       </div>
     </footer>
   );
