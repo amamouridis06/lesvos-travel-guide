@@ -43,7 +43,48 @@ const villages = [
     image: "/eressosx.jpeg",
     href: "/villages/eresos",
   },
-
+  {
+    name: "Skala Eresou",
+    description: "",
+    image: "/eressos.jpeg",
+    href: "/villages/skala-eresou",
+  },
+ {
+    name: "Mestotopos",
+    description: "",
+    image: "/mesotopos.jpeg",
+    href: "/villages/mesotopos",
+  },
+  {
+    name: "Melinta",
+    description: "",
+    image: "/melinta.jpeg",
+    href: "/villages/melinta",
+  },
+   {
+    name: "Sigri",
+    description: "",
+    image: "/sigri.jpeg",
+    href: "/villages/sigri",
+  },
+  {
+    name: "Thermi",
+    description: "",
+    image: "/thermi.jpeg",
+    href: "/villages/thermi",
+  },
+   {
+    name: "Skaloxori",
+    description: "",
+    image: "/skaloxori.jpeg",
+    href: "/villages/skaloxori",
+  },
+   {
+    name: "Filia",
+    description: "",
+    image: "/filia.jpeg",
+    href: "/villages/filia",
+  },
   
 ];
 
