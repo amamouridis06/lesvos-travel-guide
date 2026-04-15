@@ -68,13 +68,7 @@ export default function LimanakiPamfilonPage() {
             </ul>
 
             <div className="relative h-72 rounded-xl overflow-hidden shadow">
-              <Image
-                src="/food.jpg"
-                alt="Θαλασσινά στο Λιμανάκι των Παμφίλων"
-                fill
-                className="object-cover"
-              />
-               <Image
+                             <Image
           src="/food1lim.jpg"
           alt="To limanaki ton Pamfilon"
           fill
