@@ -14,7 +14,7 @@ export default function PlomariPage() {
       {/* HERO */}
       <section className="relative h-[60vh] w-full">
         <Image
-          src="/mesotopos.jpg"
+          src="/pallas.jpg"
           alt="Mesotopos Lesvos"
           fill
           className="object-cover"
@@ -87,12 +87,12 @@ export default function PlomariPage() {
       {/* Images */}
   <div className="grid grid-cols-2 gap-1">
     <img 
-      src="/palas.jpg" 
+      src="/pallas.jpg" 
       alt="Tavern view" 
       className="w-full h-40 object-cover"
     />
     <img 
-      src="/palas.jpg" 
+      src="/pallas.jpg" 
       alt="Tavern view" 
       className="w-full h-40 object-cover"
     />
