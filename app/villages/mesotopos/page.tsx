@@ -14,7 +14,7 @@ export default function PlomariPage() {
       {/* HERO */}
       <section className="relative h-[60vh] w-full">
         <Image
-          src="/mesotopos.jpeg"
+          src="/mesotopos.jpg"
           alt="Mesotopos Lesvos"
           fill
           className="object-cover"
