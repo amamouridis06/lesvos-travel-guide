@@ -1,5 +1,7 @@
 import "./globals.css";
 import NavBar from "../components/NavBar";
+import Footer from "@/components/Footer";
+// import Header from "@/components/Header";
 
 export const metadata = {
   title: "Lesvos Travel & Culture Website",
@@ -35,6 +37,19 @@ export default function RootLayout({
       <body className="bg-black text-white">
         <NavBar />
         <div className="pt-20">{children}</div>
+      </body>
+    </html>
+  );
+}
+
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="el">
+      <body>
+        <Header />
+        {children}
+        <Footer />
       </body>
     </html>
   );
