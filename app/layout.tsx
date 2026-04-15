@@ -1,7 +1,7 @@
 import "./globals.css";
 import NavBar from "../components/NavBar";
 import Footer from "@/components/Footer";
-// import Header from "@/components/Header";
+import Header from "@/components/Header";
 
 export const metadata = {
   title: "Lesvos Travel & Culture Website",
