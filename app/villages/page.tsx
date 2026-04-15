@@ -1,39 +1,39 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Χωριά της Λέσβου | Lesvos Travel Guide",
+  title: "Villages of Lesvos | Lesvos Travel Guide",
   description:
-    "Ανακαλύψτε τα πιο όμορφα και γραφικά χωριά της Λέσβου, με παράδοση, ιστορία και αυθεντική ατμόσφαιρα.",
+    "Explore the most charming and authentic villages of Lesvos—places where tradition, history, and timeless atmosphere come together. From stone-built settlements and seaside hamlets to mountain villages rich in culture, Lesvos offers a unique glimpse into genuine Greek island life",
 };
 
 const villages = [
   {
-    name: "Μόλυβος",
-    description: "Μεσαιωνικό γραφικό χωριό με κάστρο",
+    name: "Molyvos (Mithymna)",
+    description: "Medieval, picturesque, stone-built, romantic, sunsets",
     image: "/molivos.jpg",
     href: "/villages/molivos",
   },
   {
     name: "Πλωμάρι",
-    description: "Ούζο, θάλασσα & παράδοση",
+    description: "Coastal, ouzo, lively, maritime, authentic",
     image: "/plomari2.jpg",
     href: "/villages/plomari",
   },
   {
     name: "Αγιάσος",
-    description: "Παραδοσιακό χωριό στο βουνό",
+    description: "Mountain, traditional, crafts, cultural, vibrant",
     image: "/agiasos.jpg",
     href: "/villages/agiasos",
   },
   {
     name: "Μανταμάδος",
-    description: "Προστάτης της Λέσβου και παραδοσιακή ζωή",
+    description: "Religious, heritage, ceramics, local, traditional",
     image: "/mantamados.jpg",
     href: "/villages/mantamados",
   },
     {
     name: "Σκάλα Καλλονής ",
-    description: "Ούζο, καφέ & θάλλασα",
+    description: "Wetlands, birdwatching, seaside, tranquil, authentic",
     image: "/skala-kallonis.jpeg",
     href: "/villages/skala-kallonis",
   },
@@ -49,10 +49,10 @@ export default function VillagesPage() {
         <div className="relative z-10 h-full flex items-end">
           <div className="max-w-6xl mx-auto px-6 pb-12">
             <h1 className="text-4xl md:text-5xl font-bold text-white">
-              Χωριά της Λέσβου
+              Villages of Lesvos
             </h1>
             <p className="text-gray-200 mt-2 max-w-xl">
-              Παραδοσιακοί οικισμοί, ιστορία και αυθεντική νησιωτική ζωή
+              Traditional settlements, history, and authentic island life
             </p>
           </div>
         </div>
@@ -84,15 +84,15 @@ export default function VillagesPage() {
         </div>
       </section>
 
-      {/* ================= BACK ================= */}
-      <div className="text-center pb-20">
+      {/* /* {/* ================= BACK ================= */}
+      {/* <div className="text-center pb-20">
         <Link
           href="/"
           className="inline-block px-6 py-3 rounded-lg bg-yellow-600 text-white font-semibold hover:bg-yellow-700 transition"
         >
           ← Επιστροφή στην αρχική
         </Link>
-      </div>
+      </div>  */}
 
     </main>
   );
