@@ -108,10 +108,10 @@ export default function VateraPage() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/villages/kalloni" className="text-blue-600 hover:underline">
-                 <p>Kalloni</p> 
+                 <p>Kaloni</p> 
                 </Link>
-                <Link href="/villages/skalla-kallonis" className="text-blue-600 hover:underline">
-                 <p> Skalla Kallonis</p> 
+                <Link href="/villages/skala-kallonis" className="text-blue-600 hover:underline">
+                 <p> Skala Kalonis</p> 
                 </Link>
                 <Link href="/villages/agia-paraskeui" className="text-blue-600 hover:underline">
                  <p> Agia Paraskeui</p> 
