@@ -69,50 +69,45 @@ export default function PlomariPage() {
   </ul>
 </div>
 
-         {/* Nearby Beaches */}
 <div>
-  <h2 className="text-2xl font-semibold mb-3">Nearby Beaches</h2>
-  <ul className="space-y-2 text-gray-700">
+  <h2 className="text-2xl font-semibold mb-3">Where to eat</h2>
+
+  {/* List */}
+  <ul className="space-y-2 text-gray-700 mb-4">
     <li>
       🏖{" "}
       <Link href="/beaches/tavari" className="text-blue-600 hover:underline">
         Tavari
       </Link>
     </li>
+
     <li>🏖 Podara</li>
     <li>🏖 Skala Eresos</li>
   </ul>
-</div>
 
-      {/* Images */}
-  <div className="grid grid-cols-2 gap-1">
-    <img 
-      src="/pallas.jpg" 
-      alt="Tavern view" 
-      className="w-full h-40 object-cover"
-    />
-    <img 
-      src="/pallas.jpg" 
-      alt="Tavern view" 
-      className="w-full h-40 object-cover"
-    />
-  </div>
-           {/* Content */}
-  <div className="p-4">
-    <h3 className="text-xl font-semibold mb-2">Where to eat</h3>
+  {/* Content (merged) */}
+  <div className="p-4 bg-white rounded-lg shadow">
     
+    <h3 className="text-xl font-semibold mb-2">Where to eat</h3>
+
     <p className="text-gray-700 mb-2">
       In Mesotopos, you can visit the traditional tavern{" "}
       <Link href="/food/pallas-cafe-grill" className="text-blue-600 hover:underline">
         Pallas cafe-grill
-      </Link>, 
-       where you can enjoy local flavors in an authentic setting. In the nearby seaside village of Tavari, you will also find traditional tavernas serving fresh fish, local dishes, and authentic flavors of Lesvos in a relaxed and welcoming atmosphere.
+      </Link>
+      , where you can enjoy local flavors in an authentic setting.
+    </p>
+
+    <p className="text-gray-700 mb-2">
+      In the nearby seaside village of Tavari, you will also find traditional tavernas serving fresh fish, local dishes, and authentic flavors of Lesvos in a relaxed and welcoming atmosphere.
     </p>
 
     <p className="text-gray-600 text-sm">
       Perfect for a relaxed and authentic island experience.
     </p>
+
   </div>
+</div>
 </div>
        
 
