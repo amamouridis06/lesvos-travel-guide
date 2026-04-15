@@ -51,7 +51,42 @@ export default function MolyvosPage() {
             <li> Quiet moments away from noise, offering a peaceful atmosphere ideal for rest and disconnection </li>
           </ul>
         </div>
+        <div className="bg-white rounded-2xl shadow-md overflow-hidden">
+  {/* Images */}
+  <div className="grid grid-cols-2 gap-1">
+    <img 
+      src="/images/hotel-pela.jpg" 
+      alt="Hotel view" 
+      className="w-full h-40 object-cover"
+    />
+    <img 
+      src="/images/hotel-pela1.jpg" 
+      alt="Hotel room" 
+      className="w-full h-40 object-cover"
+    />
+  </div>
 
+  {/* Content */}
+  <div className="p-4">
+    <h3 className="text-xl font-semibold mb-2">Where to stay</h3>
+    
+    <p className="text-gray-700 mb-2">
+      A great option in Skala Kalloni is{" "}
+      <a 
+        href="#" 
+        className="text-blue-600 hover:underline"
+      >
+        Hotel Pela
+      </a>, 
+      ideally located in the heart of the village, just a few steps 
+      from the beach and local taverns.
+    </p>
+
+    <p className="text-gray-600 text-sm">
+      Perfect for a relaxed and authentic island experience.
+    </p>
+  </div>
+</div>
          {/* SIDEBAR */}
         <aside className="space-y-8">
 
