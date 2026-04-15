@@ -84,7 +84,19 @@ export default function PlomariPage() {
   </ul>
 </div>
 
-    
+      {/* Images */}
+  <div className="grid grid-cols-2 gap-1">
+    <img 
+      src="/palas.jpg" 
+      alt="Tavern view" 
+      className="w-full h-40 object-cover"
+    />
+    <img 
+      src="/palas.jpg" 
+      alt="Tavern view" 
+      className="w-full h-40 object-cover"
+    />
+  </div>
            {/* Content */}
   <div className="p-4">
     <h3 className="text-xl font-semibold mb-2">Where to eat</h3>
