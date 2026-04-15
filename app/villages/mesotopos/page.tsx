@@ -103,8 +103,8 @@ export default function PlomariPage() {
     
     <p className="text-gray-700 mb-2">
       In Mesotopos, you can visit the traditional tavern{" "}
-      <Link href="/beaches/tavari" className="text-blue-600 hover:underline">
-        Tavari
+      <Link href="/villages/pallas-cafe-grill" className="text-blue-600 hover:underline">
+        Pallas cafe-grill
       </Link>, 
        where you can enjoy local flavors in an authentic setting. In the nearby seaside village of Tavari, you will also find traditional tavernas serving fresh fish, local dishes, and authentic flavors of Lesvos in a relaxed and welcoming atmosphere.
     </p>
