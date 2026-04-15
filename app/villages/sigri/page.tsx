@@ -40,7 +40,7 @@ export default function PlomariPage() {
 
           {/* Overview */}
           <div>
-            <h2 className="text-2xl font-semibold mb-3">Γιατί να επισκεφθείτε το Πλωμάρι</h2>
+            <h2 className="text-2xl font-semibold mb-3">Why Visit Sigri?</h2>
             <p className="text-gray-700 leading-relaxed">
               Sigri is a charming fishing village on the westernmost edge of Lesvos, known for its peaceful atmosphere, stunning sunsets, and unique natural landscape. It is home to the nearby Petrified Forest of Lesvos, one of Europe’s most remarkable geological sites. Sigri is an ideal destination for travelers seeking tranquility, authenticity, and a deep connection with nature.
             </p>
