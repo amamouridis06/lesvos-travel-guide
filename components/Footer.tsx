@@ -54,7 +54,12 @@ export default function Footer() {
         {/* Bottom */}
         <div className="flex flex-col gap-4 text-sm text-white/50 md:flex-row md:justify-between">
           <span>© {new Date().getFullYear()} Lesvos Guide</span>
-          <span>Made with care in Greece 🇬🇷</span>
+          <span>
+            Made with care by{" "}
+              <a href="https://github.com/amamouridis06" target="" rel="noopener noreferrer">
+            Angel Dev
+          </a>
+</span>
         </div>
       </div>
     </footer>
