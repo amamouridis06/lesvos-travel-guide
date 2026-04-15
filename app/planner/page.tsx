@@ -160,18 +160,18 @@ export default function PlannerPage() {
 
       {/* HERO */}
       <section className="py-24 bg-neutral-900 text-white text-center">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          Φτιάξε το ταξίδι σου
-        </h1>
-        <p className="text-gray-300 text-lg">
-          Πες μας πού θα μείνεις και πόσες μέρες έχεις
-        </p>
+       <h1 className="text-5xl font-bold tracking-tight md:text-7xl">
+  Φτιάξε το ταξίδι σου
+</h1>
+<p className="mx-auto max-w-2xl text-lg leading-8 text-white/70">
+  Πες μας πού θα μείνεις και πόσες μέρες έχεις για να σου προτείνουμε ιδέες.
+</p>
       </section>
 
       {/* CONTROLS */}
       <section className="max-w-4xl mx-auto px-6 py-16 space-y-10">
         <div>
-          <label className="block font-semibold mb-2">Πού θα διαμείνεις;</label>
+         <label className="mb-3 block text-sm font-semibold text-slate-800"> Πού θα διαμείνεις;</label>
           <select
             value={location}
             onChange={(e) =>
