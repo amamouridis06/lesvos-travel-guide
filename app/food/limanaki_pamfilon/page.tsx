@@ -139,7 +139,7 @@ export default function LimanakiPamfilonPage() {
           href="/food"
           className="inline-block px-8 py-3 bg-yellow-600 text-black rounded-lg font-semibold hover:bg-yellow-500 transition"
         >
-          All shops
+          Other places
         </Link>
       </section>
 
