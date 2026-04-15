@@ -15,16 +15,16 @@ export const metadata = {
     "Beaches",
     "Villages",
   ],
-  authors: [{ name: "Your Name" }],
+  authors: [{ name: "Angelos Mamouridis" }],
   openGraph: {
     title: "Lesvos Travel & Culture Website",
     description:
       "Explore the most beautiful places in Lesvos — beaches, villages, culture, and nature.",
-    url: "https://your-vercel-url.com",
+    url: "https://lesvos-travel-guide-five.vercel.app",
     siteName: "Lesvos Travel",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/map-lesvos.jpg",
         width: 1200,
         height: 630,
         alt: "Lesvos Travel Hero Image",
@@ -42,7 +42,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="el">
-      <body className="bg-black text-white">
+      <body className="bg-neutral-100 text-neutral-900">
         <NavBar />
         <div className="pt-20">{children}</div>
         <Footer />
