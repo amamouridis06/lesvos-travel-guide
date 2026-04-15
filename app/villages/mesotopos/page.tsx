@@ -100,6 +100,7 @@ export default function PlomariPage() {
     , where you can enjoy local flavors in an authentic setting. In the nearby seaside village of Tavari, you will also find traditional tavernas serving fresh fish, local dishes, and authentic flavors of Lesvos in a relaxed and welcoming atmosphere.
   </p>
 </div>
+        </div>
         {/* SIDEBAR */}
         <aside className="space-y-8">
 
@@ -128,6 +129,7 @@ export default function PlomariPage() {
     <li>🍽 Try local dishes and traditional meze with ouzo</li>
   </ul>
 </div>
+            </div>
         </aside>
       </section>
 
