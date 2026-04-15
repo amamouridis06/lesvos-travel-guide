@@ -34,7 +34,7 @@ export default function NavBar() {
           </Link>
 
           {/* Explore Dropdown */}
-          <div
+          {/* <div
             className="relative"
             onMouseEnter={() => setExploreOpen(true)}
             onMouseLeave={() => setExploreOpen(false)}
@@ -43,41 +43,15 @@ export default function NavBar() {
               Explore
             </button>
 
-            {exploreOpen && (
-               <div className="absolute top-8 left-0 bg-black rounded-lg py-3 w-48 shadow-lg">
-                <Link
-                  href="/beaches"
-                  className="block px-4 py-2 hover:bg-white/10"
-                >
-                  Beaches 🏖
-                </Link>
-                <Link
-                  href="/villages"
-                  className="block px-4 py-2 hover:bg-white/10"
-                >
-                  Villages 🏘
-                </Link>
-                <Link
-                  href="/muesums"
-                  className="block px-4 py-2 hover:bg-white/10"
-                >
-                 Museums 🏛
-                </Link>
-                <Link
-                  href="/sites"
-                  className="block px-4 py-2 hover:bg-white/10"
-                >
-                 Archaeological Sites
-                </Link>
-                
-              </div>
-            )}
-          </div>
+          
+          </div> */}
 
           <Link href="/villages" className="hover:text-yellow-400 transition">
             Villages
           </Link>
-
+          <Link href="/villages" className="hover:text-yellow-400 transition">
+            Infos
+          </Link>
           <Link href="/food" className="hover:text-yellow-400 transition">
             Food
           </Link>
