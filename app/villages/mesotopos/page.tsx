@@ -139,7 +139,7 @@ export default function PlomariPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-neutral-900 text-white py-16 text-center">
+      {/* <section className="bg-neutral-900 text-white py-16 text-center">
         <h2 className="text-2xl font-semibold mb-4">
           Explore other villages in Lesvos
         </h2>
@@ -149,7 +149,7 @@ export default function PlomariPage() {
         >
           Other villages
         </Link>
-      </section>
+      </section> */}
 
     </main>
   );
