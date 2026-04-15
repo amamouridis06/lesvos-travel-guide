@@ -17,12 +17,12 @@ export default function NavBar() {
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-blue-600/80 backdrop-blur-md border-b border-blue-500">
-      <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-4 py-8 text-center text-white">
 
         {/* Logo */}
         <Link
           href="/"
-          className="text-white text-lg font-bold tracking-wide"
+          className="font-semibold mb-2"
         >
           Lesvos Travel Guide
         </Link>
