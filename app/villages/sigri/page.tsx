@@ -82,7 +82,7 @@ export default function PlomariPage() {
           <div>
             <h2 className="text-2xl font-semibold mb-3">Τι να κάνετε</h2>
             <ul className="list-disc pl-5 space-y-2 text-gray-700">
-              <li>Enjoy an evening stroll along the harbor/li>
+              <li>Enjoy an evening stroll along the harbor</li>
               <li>Taste local ouzo and traditional meze</li>
               <li>Explore nearby beaches and hidden coves</li>
             </ul>
