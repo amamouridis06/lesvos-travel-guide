@@ -104,7 +104,7 @@ export default function Home() {
               alt="The Map"
               className="absolute inset-0 w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-white/50" />
+            <div className="absolute inset-0 bg-white/15" />
           </div>
         </div>
       </section>
