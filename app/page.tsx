@@ -5,7 +5,7 @@ export default function Home() {
     <main className="flex flex-col min-h-screen bg-neutral-100 text-neutral-900">
       {/* ================= HERO ================= */}
       <section className="relative w-full min-h-[85vh] md:h-screen bg-[url('/plomari2.jpg')] bg-cover bg-center">
-        <div className="absolute inset-0 bg-black/30" />
+        {/* <div className="absolute inset-0 bg-black/30" /> */}
 
         <div className="relative z-10 flex min-h-[85vh] md:h-full items-center">
           <div className="max-w-6xl mx-auto w-full px-4 sm:px-6">
@@ -158,7 +158,7 @@ export default function Home() {
               </div>
             </Link>
           ))}
-        </div>
+        {/* </div> */}
       </section>
     </main>
   );
