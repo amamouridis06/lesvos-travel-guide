@@ -81,6 +81,7 @@ export default function LimanakiPamfilonPage() {
   local recipes, and a variety of meze, perfectly paired with ouzo or tsipouro.
 </p>
           {/* Highlights */}
+           <h2 className="text-2xl font-semibold mb-4">What to try</h2>
          <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-6">
   <li>🍖 Grilled meats and traditional homemade dishes</li>
   <li>🍲 Daily cooked meals prepared with local ingredients</li>
