@@ -20,7 +20,7 @@ const pharmacies = [
 </ul>
       ],
     maps: "https://maps.app.goo.gl/QkQFu1yjxsVx9zYX6",
-    emergency: true,
+    emergency: false,
   },
   // {
   //   name: "Kalloni Pharmacy",
