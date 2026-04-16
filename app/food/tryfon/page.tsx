@@ -7,9 +7,12 @@ import { useEffect, useState } from "react";
 export default function LimanakiPamfilonPage() {
 
   const images = [
-    "/pallas.jpg",
-    "/dessert-limanaki.jpg",
-    "/limanaki_pamf1.jpg",
+    "/tryfon6.jpg",
+    "/tryfon1.jpeg",
+    "/tryfon2.jpeg",
+    "/tryfon3.jpeg",
+    "/tryfon4.jpeg",
+    "/tryfon5.jpeg",
   ];
 
   const [index, setIndex] = useState(0);
@@ -36,8 +39,8 @@ export default function LimanakiPamfilonPage() {
       {/* ================= HERO ================= */}
       <section className="relative h-[70vh] w-full">
         <Image
-          src="/pallas.jpg"
-          alt="Pallas cafe - grill"
+          src="/tryfon6.jpg"
+          alt="Tryfon cafe - tavern "
           fill
           className="object-cover"
           priority
@@ -47,10 +50,10 @@ export default function LimanakiPamfilonPage() {
 
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 text-center text-white px-6 max-w-3xl">
           <h1 className="text-4xl md:text-5xl font-bold drop-shadow-lg">
-            Pallas cafe - grill
+            Tryfon cafe - tavern
           </h1>
           <p className="mt-3 text-lg text-gray-200">
-            Traditional tavern by the sea
+            Traditional cafe - tavern in Kalloni
           </p>
         </div>
       </section>
@@ -65,31 +68,32 @@ export default function LimanakiPamfilonPage() {
           <div>
             <h2 className="text-2xl font-semibold mb-4">Why should you go</h2>
             <p className="text-gray-700 leading-relaxed text-lg">
-              To Limanaki ton Pamfilon is a favorite seaside tavern in Skala Pamfilon, offering a truly summery setting right by the water. With tables set almost on the waves, it serves fresh fish, seafood, and authentic local flavors in a relaxed, picturesque atmosphere.
+              Tryfon is a traditional café–tavern, welcoming guests since 1981 and offering an authentic taste of local life. With its relaxed atmosphere and genuine hospitality, it reflects the simplicity and charm of a true island dining experience.
+
+              Known for its homemade dishes and fresh local ingredients, the tavern serves classic recipes passed down through generations—ranging from traditional meze and grilled meats to seasonal specialties, often paired with local ouzo or wine.
+
+              Whether you visit for a morning coffee, a leisurely lunch, or a laid-back evening meal, Tryfon offers a warm, unpretentious setting where visitors can experience the true flavors and spirit of the island.
             </p>
           </div>
-
+    <p className="text-gray-700 mb-4">
+  The menu focuses on traditional homemade cuisine, with an emphasis on grilled meats,
+  local recipes, and a variety of meze, perfectly paired with ouzo or tsipouro.
+</p>
           {/* Highlights */}
-          <div>
-            <h2 className="text-2xl font-semibold mb-4">Highlights</h2>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-700">
-              <li>🌊 Seaside dining with tables by the water</li>
-              <li>🐟 Fresh daily catch</li>
-              <li>🍤 Seafood & local delicacies</li>
-              <li>☀️ Perfect summer atmosphere</li>
-            </ul>
-          </div>
-
+         <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-6">
+  <li>🍖 Grilled meats and traditional homemade dishes</li>
+  <li>🍲 Daily cooked meals prepared with local ingredients</li>
+  <li>🥓 A variety of meze, perfect to share</li>
+  <li>🧀 Local cheeses and traditional appetizers</li>
+  <li>🥗 Fresh seasonal salads</li>
+  <li>🍶 Ouzo and tsipouro, ideal for a relaxed meal</li>
+  <li>☕ Greek coffee and simple desserts</li>
+</ul>
           {/* What to try + CAROUSEL */}
           <div>
             <h2 className="text-2xl font-semibold mb-4">What to try</h2>
 
-            <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-6">
-              <li>🐟 Fresh daily catch</li>
-              <li>🍤 Grilled Kalamari & shrimp</li>
-              <li>🍋 Seafood meze paired with ouzo</li>
-            </ul>
-
+            
             {/* ===== CAROUSEL ===== */}
             <div
               className="relative h-80 rounded-2xl overflow-hidden shadow-xl group cursor-pointer"
