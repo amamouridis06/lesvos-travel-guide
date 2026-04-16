@@ -18,6 +18,7 @@ const pharmacies = [
   <li>Tue–Thu–Fri: 08:00–14:30 &amp; 18:00–21:00</li>
   <li>Sat–Sun: Closed</li>
 </ul>
+      ],
     maps: "https://maps.app.goo.gl/QkQFu1yjxsVx9zYX6",
     emergency: true,
   },
