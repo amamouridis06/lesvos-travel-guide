@@ -28,8 +28,8 @@ const traditionalCafes = [
   {
     name: "Tryfon",
     description: "Homemade dishes • meze • ouzo & tsipouro",
-    location: "Mesotopos",
-    image: "/tryfon.jpg",
+    location: "Kalloni",
+    image: "/tryfon6.jpg",
     href: "/food/tryfon",
   },
 ];
