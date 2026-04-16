@@ -5,8 +5,6 @@ export default function Home() {
     <main className="flex flex-col min-h-screen bg-neutral-100 text-neutral-900">
       {/* ================= HERO ================= */}
       <section className="relative w-full min-h-[85vh] md:h-screen bg-[url('/plomari2.jpg')] bg-cover bg-center">
-        {/* <div className="absolute inset-0 bg-black/30" /> */}
-
         <div className="relative z-10 flex min-h-[85vh] md:h-full items-center">
           <div className="max-w-6xl mx-auto w-full px-4 sm:px-6">
             <div className="max-w-xl bg-black/35 backdrop-blur-md p-5 sm:p-6 md:p-8 rounded-xl shadow-xl">
@@ -81,7 +79,6 @@ export default function Home() {
       {/* ================= TRIP PLANNER CTA ================= */}
       <section className="w-full bg-white py-14 sm:py-20 md:py-24">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
-          {/* TEXT */}
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold mb-4">
               Make your vacation program
@@ -101,7 +98,6 @@ export default function Home() {
             </Link>
           </div>
 
-          {/* VISUAL */}
           <div className="relative h-64 sm:h-72 md:h-80 rounded-2xl overflow-hidden shadow-xl">
             <img
               src="/map-lesvos.jpg"
@@ -110,7 +106,7 @@ export default function Home() {
             />
             <div className="absolute inset-0 bg-white/30" />
           </div>
-        {/* </div> */}
+        </div>
       </section>
 
       {/* ================= FEATURED DESTINATIONS ================= */}
