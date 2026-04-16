@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 export default function LimanakiPamfilonPage() {
 
   const images = [
+    "/tryfon7.jpg",
     "/tryfon6.jpg",
     "/tryfon1.jpeg",
     "/tryfon2.jpeg",
@@ -39,7 +40,7 @@ export default function LimanakiPamfilonPage() {
       {/* ================= HERO ================= */}
       <section className="relative h-[70vh] w-full">
         <Image
-          src="/tryfon6.jpg"
+          src="/tryfon7.jpg"
           alt="Tryfon cafe - tavern "
           fill
           className="object-cover"
@@ -172,7 +173,7 @@ export default function LimanakiPamfilonPage() {
 
           <div className="w-full h-48 rounded-lg overflow-hidden">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3275.642314910913!2d26.000742641101155!3d39.132672936154606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bac228d71967a5%3A0x9a58b0962bc523e!2sPallas!5e1!3m2!1sen!2sgr!4v1776287351740!5m2!1sen!2sgr" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3083.1482036703565!2d26.20368545576998!3d39.233087330711065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ba921818b1b90f%3A0xd86e90df52ec1d1!2zVHLDvXBoxY1u!5e1!3m2!1sen!2sgr!4v1776336589161!5m2!1sen!2sgr"
               style={{ border: 0 }}
               loading="lazy"
             />
@@ -183,20 +184,20 @@ export default function LimanakiPamfilonPage() {
   <ul className="space-y-2 text-gray-700">
     <li>
       🏖{" "}
-      <Link href="/villages/tavari" className="text-blue-600 hover:underline">
-        Tavari
+      <Link href="/villages/dafia" className="text-blue-600 hover:underline">
+        Dafia
       </Link>
     </li>
     <li>
       🏖{" "}
-      <Link href="/villages/podaras" className="text-blue-600 hover:underline">
-        Podaras
+      <Link href="/villages/skala-kallonis" className="text-blue-600 hover:underline">
+        Skala Kaloni
       </Link>
     </li>
     <li>
       🏖{" "}
-      <Link href="/villages/xrousos" className="text-blue-600 hover:underline">
-        Xrousos
+      <Link href="/villages/agia-paraskevi" className="text-blue-600 hover:underline">
+        Agia Paraskevi
       </Link>
     </li>
   </ul>
