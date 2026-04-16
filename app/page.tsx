@@ -110,7 +110,7 @@ export default function Home() {
             />
             <div className="absolute inset-0 bg-white/30" />
           </div>
-        </div>
+        {/* </div> */}
       </section>
 
       {/* ================= FEATURED DESTINATIONS ================= */}
@@ -158,7 +158,7 @@ export default function Home() {
               </div>
             </Link>
           ))}
-        {/* </div> */}
+        </div>
       </section>
     </main>
   );
