@@ -7,7 +7,7 @@ export default function Home() {
       <section className="relative w-full min-h-[85vh] md:h-screen bg-[url('/plomari2.jpg')] bg-cover bg-center">
         <div className="relative z-10 flex min-h-[85vh] md:h-full items-center">
           <div className="max-w-6xl mx-auto w-full px-4 sm:px-6">
-            <div className="max-w-xl bg-black/35 backdrop-blur-md p-5 sm:p-6 md:p-8 rounded-xl shadow-xl">
+            <div className="max-w-xl  backdrop-blur-md p-5 sm:p-6 md:p-8 rounded-xl shadow-xl">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">
                 Discover Lesvos <br /> with the ultimate travel guide
               </h1>
