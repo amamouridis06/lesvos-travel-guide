@@ -8,48 +8,52 @@ export const metadata = {
 
 const pharmacies = [
   {
-    name: "Central Pharmacy Mytilene",
-    area: "Mytilene",
-    address: "21 Ermou Street, Mytilene",
-    phone: "+30 22510 12345",
-    hours: "Mon–Sat: 08:00–21:00",
-    maps: "https://maps.google.com",
+    name: "Pharmacy Mariolas O.E",
+    area: "Kalloni ",
+    address: "Centre Square, Kalloni",
+    phone: "+30 2253022022",
+    hours: [
+      "Mon–Wed–Sat: 08:00–14:30",
+      "Tue–Thu–Fri: 08:00–14:30 & 18.00–21:00",
+      "Sat-Sun: Closed,"
+    ]
+    maps: "https://maps.app.goo.gl/QkQFu1yjxsVx9zYX6",
     emergency: true,
   },
-  {
-    name: "Kalloni Pharmacy",
-    area: "Kalloni",
-    address: "Kalloni Central Square",
-    phone: "+30 22530 12345",
-    hours: "Mon–Sat: 08:00–20:00",
-    maps: "https://maps.google.com",
-    emergency: false,
-  },
-  {
-    name: "Plomari Pharmacy",
-    area: "Plomari",
-    address: "Main Road, Plomari",
-    phone: "+30 22520 12345",
-    hours: "Mon–Sat: 08:00–20:00",
-    maps: "https://maps.google.com",
-    emergency: false,
-  },
-  {
-    name: "Molyvos Pharmacy",
-    area: "Molyvos",
-    address: "Molyvos Village Center",
-    phone: "+30 22530 67890",
-    hours: "Mon–Sat: 08:00–20:00",
-    maps: "https://maps.google.com",
-    emergency: false,
-  },
+  // {
+  //   name: "Kalloni Pharmacy",
+  //   area: "Kalloni",
+  //   address: "Kalloni Central Square",
+  //   phone: "+30 22530 12345",
+  //   hours: "Mon–Sat: 08:00–20:00",
+  //   maps: "https://maps.google.com",
+  //   emergency: false,
+  // },
+  // {
+  //   name: "Plomari Pharmacy",
+  //   area: "Plomari",
+  //   address: "Main Road, Plomari",
+  //   phone: "+30 22520 12345",
+  //   hours: "Mon–Sat: 08:00–20:00",
+  //   maps: "https://maps.google.com",
+  //   emergency: false,
+  // },
+  // {
+  //   name: "Molyvos Pharmacy",
+  //   area: "Molyvos",
+  //   address: "Molyvos Village Center",
+  //   phone: "+30 22530 67890",
+  //   hours: "Mon–Sat: 08:00–20:00",
+  //   maps: "https://maps.google.com",
+  //   emergency: false,
+  // },
 ];
 
 export default function PharmaciesPage() {
   return (
     <main className="min-h-screen bg-neutral-100 text-neutral-900">
       {/* HERO */}
-      <section className="relative h-[35vh] sm:h-[40vh] md:h-[50vh] bg-[url('/map-lesvos.jpg')] bg-cover bg-center">
+      <section className="relative h-[35vh] sm:h-[40vh] md:h-[50vh] bg-[url('/pharmacies.png')] bg-cover bg-center">
         <div className="absolute inset-0 bg-black/35" />
         <div className="relative z-10 h-full flex items-end">
           <div className="max-w-6xl mx-auto w-full px-4 sm:px-6 pb-8 sm:pb-10">
