@@ -24,7 +24,7 @@ export const metadata = {
     siteName: "Lesvos Travel",
     images: [
       {
-        url: "/map-lesvos.jpg",
+        url: "/logo.jpeg",
         width: 1200,
         height: 630,
         alt: "Lesvos Travel Hero Image",
