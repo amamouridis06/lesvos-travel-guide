@@ -83,7 +83,9 @@ export default function LimanakiPamfilonPage() {
              The menu focuses on traditional homemade cuisine, with an emphasis on grilled meats,
   local recipes, and a variety of meze, perfectly paired with ouzo or tsipouro.
           </p>
-
+            <h2 className="text-xl md:text-2xl font-semibold mb-4">
+              What to try
+            </h2>
           <ul className="list-disc pl-5 space-y-2 text-gray-700 text-sm md:text-base">
             <li>🍖 Grilled meats and traditional homemade dishes</li>
             <li>🍲 Daily cooked meals prepared with local ingredients</li>
@@ -96,9 +98,7 @@ export default function LimanakiPamfilonPage() {
 
           {/* CAROUSEL */}
           <div>
-            <h2 className="text-xl md:text-2xl font-semibold mb-4">
-              What to try
-            </h2>
+            
 
             <div
               className="relative h-56 md:h-80 rounded-2xl overflow-hidden shadow-xl group cursor-pointer"
