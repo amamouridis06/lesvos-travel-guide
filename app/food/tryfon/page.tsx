@@ -93,7 +93,7 @@ export default function LimanakiPamfilonPage() {
 </ul>
           {/* What to try + CAROUSEL */}
           <div>
-            <h2 className="text-2xl font-semibold mb-4">What to try</h2>
+           
 
             
             {/* ===== CAROUSEL ===== */}
