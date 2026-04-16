@@ -6,7 +6,6 @@ import { usePathname, useRouter } from "next/navigation";
 
 export default function NavBar() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [exploreOpen, setExploreOpen] = useState(false);
 
   const pathname = usePathname();
   const router = useRouter();
@@ -15,108 +14,123 @@ export default function NavBar() {
   const toggleLanguage =
     isEnglish ? pathname.replace("/en", "") || "/" : `/en${pathname}`;
 
+  const closeMenu = () => setMobileOpen(false);
+
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-blue-600/60 backdrop-blur-md border-b border-blue-500">
-      <div className="max-w-6xl mx-auto px-4 py-8 text-center text-white">
-
-        {/* Logo */}
-        <Link
-          href="/"
-          className="font-semibold mb-2"
-        >
-          Lesvos Travel Guide
-        </Link>
-
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-8 text-sm font-medium text-white">
-          <Link href="/" className="hover:text-yellow-400 transition">
-            Home
+    <nav className="fixed top-0 left-0 w-full z-50 bg-blue-600/90 backdrop-blur-md border-b border-blue-500 shadow-sm">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        {/* Top bar */}
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <Link
+            href="/"
+            className="text-white font-semibold text-base sm:text-lg"
+            onClick={closeMenu}
+          >
+            Lesvos Travel Guide
           </Link>
 
-          {/* Explore Dropdown */}
-          {/* <div
-            className="relative"
-            onMouseEnter={() => setExploreOpen(true)}
-            onMouseLeave={() => setExploreOpen(false)}
-          >
-            <button className="hover:text-yellow-400 transition">
-              Explore
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8 text-sm font-medium text-white">
+            <Link href="/" className="hover:text-yellow-300 transition">
+              Home
+            </Link>
+            <Link href="/villages" className="hover:text-yellow-300 transition">
+              Villages
+            </Link>
+            <Link href="/infos" className="hover:text-yellow-300 transition">
+              Infos
+            </Link>
+            <Link href="/food" className="hover:text-yellow-300 transition">
+              Food
+            </Link>
+            <Link href="/nature" className="hover:text-yellow-300 transition">
+              Nature
+            </Link>
+            <Link href="/about" className="hover:text-yellow-300 transition">
+              About
+            </Link>
+
+            <button
+              onClick={() => router.push(toggleLanguage)}
+              className="ml-2 px-3 py-1 rounded-full border border-white/40 text-xs hover:bg-white hover:text-blue-700 transition"
+            >
+              {isEnglish ? "EL" : "EN"}
+            </button>
+          </div>
+
+          {/* Mobile actions */}
+          <div className="flex items-center gap-2 md:hidden">
+            <button
+              onClick={() => router.push(toggleLanguage)}
+              className="px-3 py-1 rounded-full border border-white/40 text-xs text-white hover:bg-white hover:text-blue-700 transition"
+            >
+              {isEnglish ? "EL" : "EN"}
             </button>
 
-          
-          </div> */}
-
-          <Link href="/villages" className="hover:text-yellow-400 transition">
-            Villages
-          </Link>
-          <Link href="/villages" className="hover:text-yellow-400 transition">
-            Infos
-          </Link>
-          <Link href="/food" className="hover:text-yellow-400 transition">
-            Food
-          </Link>
-
-          <Link href="/nature" className="hover:text-yellow-400 transition">
-            Nature
-          </Link>
-
-          <Link href="/about" className="hover:text-yellow-400 transition">
-            About
-          </Link>
-
-          {/* Language Toggle */}
-          <button
-            onClick={() => router.push(toggleLanguage)}
-            className="ml-4 px-3 py-1 rounded-full border border-white/40 text-xs hover:bg-white hover:text-black transition"
-          >
-            {isEnglish ? "EL" : "EN"}
-          </button>
+            <button
+              className="text-2xl text-white leading-none"
+              onClick={() => setMobileOpen(!mobileOpen)}
+              aria-label="Toggle menu"
+            >
+              {mobileOpen ? "✕" : "☰"}
+            </button>
+          </div>
         </div>
-
-        {/* Mobile button */}
-        <button
-          className="md:hidden text-2xl text-white"
-          onClick={() => setMobileOpen(!mobileOpen)}
-        >
-          ☰
-        </button>
       </div>
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-black text-white border-t border-white/10 px-6 py-4 space-y-3 text-sm">
-          <Link href="/" onClick={() => setMobileOpen(false)}>
-            Home
-          </Link>
+        <div className="md:hidden bg-white border-t border-blue-100 shadow-lg">
+          <div className="max-w-6xl mx-auto px-4 py-4 flex flex-col">
+            <Link
+              href="/"
+              onClick={closeMenu}
+              className="py-3 text-neutral-800 border-b border-neutral-100"
+            >
+              Home
+            </Link>
 
-          <div className="pt-2 border-t border-white/10">
-            <p className="text-xs uppercase text-gray-400 mb-2">Explore</p>
-            <Link href="/beaches" onClick={() => setMobileOpen(false)}>
-              Beaches
+            <Link
+              href="/villages"
+              onClick={closeMenu}
+              className="py-3 text-neutral-800 border-b border-neutral-100"
+            >
+              Villages
             </Link>
-            <Link href="/culture" onClick={() => setMobileOpen(false)}>
-              Culture & History
+
+            <Link
+              href="/infos"
+              onClick={closeMenu}
+              className="py-3 text-neutral-800 border-b border-neutral-100"
+            >
+              Infos
             </Link>
-            <Link href="/activities" onClick={() => setMobileOpen(false)}>
-              Activities
+
+            <Link
+              href="/food"
+              onClick={closeMenu}
+              className="py-3 text-neutral-800 border-b border-neutral-100"
+            >
+              Food
             </Link>
-            <Link href="/maps" onClick={() => setMobileOpen(false)}>
-              Maps
+
+            <Link
+              href="/nature"
+              onClick={closeMenu}
+              className="py-3 text-neutral-800 border-b border-neutral-100"
+            >
+              Nature
+            </Link>
+
+            <Link
+              href="/about"
+              onClick={closeMenu}
+              className="py-3 text-neutral-800"
+            >
+              About
             </Link>
           </div>
-
-          <Link href="/villages" onClick={() => setMobileOpen(false)}>
-            Villages
-          </Link>
-          <Link href="/food" onClick={() => setMobileOpen(false)}>
-            Food
-          </Link>
-          <Link href="/nature" onClick={() => setMobileOpen(false)}>
-            Nature
-          </Link>
-          <Link href="/about" onClick={() => setMobileOpen(false)}>
-            About
-          </Link>
         </div>
       )}
     </nav>
