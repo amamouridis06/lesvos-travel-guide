@@ -84,7 +84,7 @@ export default function NavBar() {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-blue/90 border-t  shadow-lg text-white">
+        <div className="md:hidden bg-blue-600/90 border-t shadow-lg text-white [&_a]:text-white">
           <div className="max-w-6xl mx-auto px-4 py-4 flex flex-col">
             <Link
               href="/"
