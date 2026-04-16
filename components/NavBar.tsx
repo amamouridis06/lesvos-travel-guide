@@ -20,7 +20,7 @@ export default function NavBar() {
   const closeMenu = () => setMobileOpen(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-blue-600/90 backdrop-blur-md border-b border-blue-500 shadow-sm">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-white/70 backdrop-blur-lg border-b border-white/30 shadow-sm">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Top bar */}
         <div className="flex items-center justify-between h-16">
