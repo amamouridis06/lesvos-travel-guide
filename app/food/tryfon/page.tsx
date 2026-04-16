@@ -64,12 +64,17 @@ export default function LimanakiPamfilonPage() {
             </h2>
 
             <p className="text-gray-700 leading-relaxed text-base md:text-lg">
-              Tryfon is a traditional café–tavern, welcoming guests since 1981...
+             Tryfon is a traditional café–tavern, welcoming guests since 1981 and offering an authentic taste of local life. With its relaxed atmosphere and genuine hospitality, it reflects the simplicity and charm of a true island dining experience.
+
+              Known for its homemade dishes and fresh local ingredients, the tavern serves classic recipes passed down through generations—ranging from traditional meze and grilled meats to seasonal specialties, often paired with local ouzo or wine.
+
+              Whether you visit for a morning coffee, a leisurely lunch, or a laid-back evening meal, Tryfon offers a warm, unpretentious setting where visitors can experience the true flavors and spirit of the island.
             </p>
           </div>
 
           <p className="text-gray-700 text-sm md:text-base">
-            The menu focuses on traditional homemade cuisine...
+            The menu focuses on traditional homemade cuisine, with an emphasis on grilled meats,
+  local recipes, and a variety of meze, perfectly paired with ouzo or tsipouro.
           </p>
 
           {/* WHAT TO TRY */}
