@@ -13,10 +13,10 @@ const pharmacies = [
     address: "Centre Square, Kalloni",
     phone: "+30 2253022022",
     hours: [
-      "Mon–Wed–Sat: 08:00–14:30",
-      "Tue–Thu–Fri: 08:00–14:30 & 18.00–21:00",
-      "Sat-Sun: Closed,"
-    ],
+  <li>Mon–Wed–Sat: 08:00–14:30</li>,
+  <li>Tue–Thu–Fri: 08:00–14:30 &amp; 18:00–21:00</li>,
+  <li>Sat–Sun: Closed</li>
+],
     maps: "https://maps.app.goo.gl/QkQFu1yjxsVx9zYX6",
     emergency: true,
   },
