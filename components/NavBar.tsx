@@ -11,8 +11,11 @@ export default function NavBar() {
   const router = useRouter();
 
   const isEnglish = pathname.startsWith("/en");
-  const toggleLanguage =
-    isEnglish ? pathname.replace("/en", "") || "/" : `/en${pathname}`;
+  const toggleLanguage = isEnglish
+  ? pathname.replace(/^\/en/, "") || "/"
+  : pathname === "/"
+  ? "/en"
+  : `/en${pathname}`;
 
   const closeMenu = () => setMobileOpen(false);
 
