@@ -12,8 +12,8 @@ export default function Home() {
                 Discover Lesvos <br /> with the ultimate travel guide
               </h1>
 
-              <p className="mt-3 sm:mt-4 text-base sm:text-lg text-gray-200">
-                Villages, beaches and authentic flavors — selected places that
+              <p className="mt-3 sm:mt-4 FFtext-base sm:text-lg text-gray-200">
+                Villages, beaches and authentiFc flavors — selected places that
                 really deserve
               </p>
 
@@ -104,7 +104,7 @@ export default function Home() {
               alt="The Map"
               className="absolute inset-0 w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-white/30" />
+            <div className="absolute inset-0 bg-white/50" />
           </div>
         </div>
       </section>
