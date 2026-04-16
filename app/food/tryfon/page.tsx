@@ -178,18 +178,18 @@ export default function LimanakiPamfilonPage() {
 
             <ul className="space-y-2 text-sm md:text-base text-gray-700">
               <li>
-                <Link href="/villages/tavari" className="text-blue-600 hover:underline">
-                  Tavari
+                <Link href="/villages/skala-kallonis" className="text-blue-600 hover:underline">
+                  Skala Kallonis
                 </Link>
               </li>
               <li>
-                <Link href="/villages/podaras" className="text-blue-600 hover:underline">
-                  Podaras
+                <Link href="/villages/Dafia" className="text-blue-600 hover:underline">
+                  Dafia
                 </Link>
               </li>
               <li>
-                <Link href="/villages/xrousos" className="text-blue-600 hover:underline">
-                  Xrousos
+                <Link href="/villages/agia-paraskevi" className="text-blue-600 hover:underline">
+                  Agia Paraskevi
                 </Link>
               </li>
             </ul>
