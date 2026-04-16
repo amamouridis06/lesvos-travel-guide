@@ -103,11 +103,11 @@ export default function NavBar() {
             </Link>
 
             <Link
-              href="/infos"
+              href="/beaches"
               onClick={closeMenu}
               className="py-3 text-neutral-800 border-b border-neutral-100"
             >
-              Infos
+              Beaches
             </Link>
 
             <Link
