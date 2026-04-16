@@ -50,6 +50,9 @@ export default function NavBar() {
             <Link href="/nature" className="hover:text-yellow-300 transition">
               Nature
             </Link>
+            <Link href="/emergency" className="hover:text-yellow-300 transition">
+             Emergency
+            </Link>
             <Link href="/about" className="hover:text-yellow-300 transition">
               About
             </Link>
