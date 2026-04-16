@@ -12,7 +12,7 @@ export default function Footer() {
               Lesvos Guide
             </h3>
             <p className="mt-3 text-sm text-white/70 leading-relaxed">
-              Ένας σύγχρονος οδηγός για φαγητό, εμπειρίες και διαμονή στη Λέσβο.
+             A modern guide to food, authentic experiences, and places to stay in Lesvos.
             </p>
           </div>
 
@@ -20,28 +20,28 @@ export default function Footer() {
           <div className="grid grid-cols-2 gap-8 text-sm sm:grid-cols-3 text-center md:text-left">
             
             <div>
-              <h4 className="mb-3 font-semibold text-white/90">Οδηγός</h4>
+              <h4 className="mb-3 font-semibold text-white/90">Guide</h4>
               <ul className="space-y-2 text-white/70">
-                <li><a href="#" className="block py-1 hover:text-white">Φαγητό</a></li>
-                <li><a href="#" className="block py-1 hover:text-white">Καφέ</a></li>
-                <li><a href="#" className="block py-1 hover:text-white">Παραλίες</a></li>
+                <li><a href="/food" className="block py-1 hover:text-white">Food</a></li>
+                <li><a href="/food" className="block py-1 hover:text-white">Cafe</a></li>
+                <li><a href="/beaches" className="block py-1 hover:text-white">Beaches</a></li>
               </ul>
             </div>
 
             <div>
               <h4 className="mb-3 font-semibold text-white/90">Explore</h4>
               <ul className="space-y-2 text-white/70">
-                <li><a href="#" className="block py-1 hover:text-white">Χάρτης</a></li>
-                <li><a href="#" className="block py-1 hover:text-white">Top επιλογές</a></li>
-                <li><a href="#" className="block py-1 hover:text-white">Πλάνο ταξιδιού</a></li>
+                <li><a href="#" className="block py-1 hover:text-white">Map</a></li>
+                <li><a href="#" className="block py-1 hover:text-white">Top options</a></li>
+                <li><a href="/planner" className="block py-1 hover:text-white">Travel Plan</a></li>
               </ul>
             </div>
 
             <div>
               <h4 className="mb-3 font-semibold text-white/90">Info</h4>
               <ul className="space-y-2 text-white/70">
-                <li><a href="#" className="block py-1 hover:text-white">About</a></li>
-                <li><a href="#" className="block py-1 hover:text-white">Contact</a></li>
+                <li><a href="/about" className="block py-1 hover:text-white">About</a></li>
+                <li><a href="/contact" className="block py-1 hover:text-white">Contact</a></li>
               </ul>
             </div>
 
