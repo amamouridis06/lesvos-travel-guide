@@ -14,9 +14,6 @@ export const metadata = {
     "Greece",
     "Beaches",
     "Villages",
-    "Λέσβος",
-    "τουριστικός".
-    "οδηγός",
   ],
   authors: [{ name: "Angelos Mamouridis" }],
   openGraph: {
