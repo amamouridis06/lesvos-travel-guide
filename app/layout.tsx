@@ -20,7 +20,7 @@ export const metadata = {
   ],
   authors: [{ name: "Angelos Mamouridis" }],
   openGraph: {
-    title: "Lesvos Travel & Culture Website",
+    title: "Lesvos Travel Guide",
     description:
       "Explore the most beautiful places in Lesvos — beaches, villages, culture, and nature.",
     url: "https://lesvos-travel-guide-five.vercel.app",
