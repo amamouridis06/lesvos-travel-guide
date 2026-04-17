@@ -81,7 +81,7 @@ const restaurants = [
     area: "Skala Pamfilon",
     desc: "Fresh seafood and local flavors in a beautiful seaside setting.",
     img: "/limanaki_pamf1.jpg",
-    href: "/food/limanaki_pamfilon",
+    href: "/food/limanaki-pamfilon",
   },
   {
     name: "Pallas Cafe - Grill",
@@ -112,7 +112,7 @@ function SectionHeader({
 }: SectionHeaderProps) {
   return (
     <motion.div
-      className="mb-8 md:mb-10 max-w-2xl"
+      className="mb-8 max-w-2xl md:mb-10"
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
@@ -124,7 +124,7 @@ function SectionHeader({
         </p>
       ) : null}
 
-      <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-neutral-900">
+      <h2 className="text-3xl font-bold tracking-tight text-neutral-900 md:text-4xl">
         {title}
       </h2>
 
@@ -133,6 +133,55 @@ function SectionHeader({
           {description}
         </p>
       ) : null}
+    </motion.div>
+  );
+}
+
+type CardItem = {
+  title?: string;
+  subtitle?: string;
+  name?: string;
+  area?: string;
+  desc?: string;
+  img: string;
+  href: string;
+};
+
+function AnimatedImageCard({
+  href,
+  img,
+  alt,
+  children,
+  className = "",
+}: {
+  href: string;
+  img: string;
+  alt: string;
+  children: React.ReactNode;
+  className?: string;
+}) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.15 }}
+      transition={{ duration: 0.5 }}
+    >
+      <Link
+        href={href}
+        className={`group block overflow-hidden rounded-[24px] border border-neutral-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl ${className}`}
+      >
+        <div className="overflow-hidden">
+          <motion.img
+            src={img}
+            alt={alt}
+            className="h-56 w-full object-cover"
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.4 }}
+          />
+        </div>
+        {children}
+      </Link>
     </motion.div>
   );
 }
