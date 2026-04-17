@@ -74,25 +74,25 @@ const hotels = [
 
 const restaurants = [
   {
-    name: "Restaurant 1",
-    area: "Skala Sykamineas",
+    name: "limanaki_pamf1.jpg",
+    area: "Skalla Pamfilon",
     desc: "Fresh seafood and local flavors in a beautiful seaside setting.",
-    img: "/restaurant1.jpg",
-    href: "/restaurants/restaurant-1",
+    img: "/limanaki_pamf1.jpg",
+    href: "/food/limanaki_pamfilon",
   },
   {
-    name: "Restaurant 2",
-    area: "Plomari",
+    name: "Pallas cafe - grill",
+    area: "Mesotopos",
     desc: "Traditional recipes with quality ingredients and warm hospitality.",
-    img: "/restaurant2.jpg",
-    href: "/restaurants/restaurant-2",
+    img: "/pallas.jpg",
+    href: "/food/pallas-cafe-grill",
   },
   {
-    name: "Restaurant 3",
-    area: "Mytilene",
+    name: "Tryfon",
+    area: "Kalloni",
     desc: "A welcoming place for authentic dishes and local wine.",
-    img: "/restaurant3.jpg",
-    href: "/restaurants/restaurant-3",
+    img: "/tryfon7.jpg",
+    href: "/food/tryfon",
   },
 ];
 
