@@ -185,13 +185,15 @@ export default function LesvosSubscriptionPlans() {
               Επικοινωνήστε μαζί μας για να διαμορφώσουμε το κατάλληλο πακέτο συνεργασίας για το ξενοδοχείο, το
               κατάστημα ή την επιχείρησή σας.
             </p>
+            <div>
            <a
               href="/contact"
               className="rounded-2xl bg-white px-6 py-3.5 font-semibold text-blue-700 hover:bg-blue-50 transition"
               >
               Επικοινωνία
             </a>
-
+            </div>
+         
           {/* <a
           href="/offer"
           className="rounded-2xl border border-white/30 px-6 py-3.5 font-semibold text-white hover:bg-white/10 transition"
