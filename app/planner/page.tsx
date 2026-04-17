@@ -7,7 +7,7 @@ const itineraries = {
   molivos: {
     label: "Μόλυβος",
     description:
-      "Ιδανική βάση για βόλτες σε παραδοσιακά χωριά, παραλίες και βόρεια διαδρομή.",
+      "Ιδανική βάση για βόλτες σε παραδοσιακά χωριά, παραλίες και τη βόρεια πλευρά του νησιού.",
     nearby: [
       {
         place: "Μόλυβος",
@@ -62,7 +62,6 @@ const itineraries = {
       },
     ],
   },
-
   plomari: {
     label: "Πλωμάρι",
     description:
@@ -107,7 +106,6 @@ const itineraries = {
       },
     ],
   },
-
   mytilini: {
     label: "Μυτιλήνη",
     description:
@@ -156,6 +154,15 @@ const itineraries = {
 
 type LocationKey = keyof typeof itineraries;
 
+type DayPlan = {
+  day: number;
+  place: string;
+  area: string;
+  see: readonly string[];
+  eat: readonly string[];
+  tip: string;
+};
+
 function SectionTitle({
   eyebrow,
   title,
@@ -166,7 +173,7 @@ function SectionTitle({
   description?: string;
 }) {
   return (
-    <div className="max-w-2xl">
+    <div className="max-w-3xl">
       {eyebrow ? (
         <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-amber-600">
           {eyebrow}
@@ -176,7 +183,7 @@ function SectionTitle({
         {title}
       </h2>
       {description ? (
-        <p className="mt-3 text-base leading-relaxed text-slate-600 md:text-lg">
+        <p className="mt-4 text-base leading-7 text-slate-600 md:text-lg">
           {description}
         </p>
       ) : null}
@@ -184,13 +191,26 @@ function SectionTitle({
   );
 }
 
+function BulletList({ items, dotColor }: { items: readonly string[]; dotColor: string }) {
+  return (
+    <ul className="space-y-3">
+      {items.map((item) => (
+        <li key={item} className="flex items-start gap-3 text-slate-700 leading-6">
+          <span className={`mt-2 h-2.5 w-2.5 shrink-0 rounded-full ${dotColor}`} />
+          <span>{item}</span>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 export default function PlannerPage() {
   const [location, setLocation] = useState<LocationKey | "">("");
-  const [days, setDays] = useState(3);
+  const [days, setDays] = useState<number>(3);
 
   const selectedLocation = location ? itineraries[location] : null;
 
-  const plan = useMemo(() => {
+  const plan = useMemo<DayPlan[]>(() => {
     if (!location) return [];
 
     const base = itineraries[location];
@@ -205,25 +225,42 @@ export default function PlannerPage() {
   return (
     <main className="min-h-screen bg-slate-50 text-slate-900">
       <section className="relative overflow-hidden bg-slate-950 text-white">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(245,158,11,0.18),transparent_30%),radial-gradient(circle_at_left,rgba(59,130,246,0.16),transparent_35%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(245,158,11,0.18),transparent_28%),radial-gradient(circle_at_left,rgba(59,130,246,0.14),transparent_35%)]" />
         <div className="relative mx-auto max-w-7xl px-6 py-20 md:px-8 md:py-28">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-sm font-medium text-white/85 backdrop-blur">
-              Lesvos Travel Planner
+          <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
+            <div className="max-w-3xl">
+              <div className="inline-flex items-center rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-sm font-medium text-white/85 backdrop-blur">
+                Lesvos Travel Planner
+              </div>
+              <h1 className="mt-6 text-4xl font-bold tracking-tight md:text-6xl md:leading-[1.05]">
+                Φτιάξε το ταξίδι σου στη Λέσβο με πιο σωστό και όμορφο πλάνο
+              </h1>
+              <p className="mt-5 max-w-2xl text-base leading-7 text-white/75 md:text-xl md:leading-8">
+                Επίλεξε πού θα μείνεις και πόσες ημέρες διαθέτεις, και δες ένα οργανωμένο προτεινόμενο πρόγραμμα με αξιοθέατα, ιδέες για φαγητό και χρήσιμες travel tips.
+              </p>
             </div>
-            <h1 className="mt-6 text-4xl font-bold tracking-tight md:text-6xl">
-              Φτιάξε το ταξίδι σου στη Λέσβο με πιο οργανωμένο τρόπο
-            </h1>
-            <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/75 md:text-xl">
-              Επίλεξε πού θα μείνεις και πόσες ημέρες διαθέτεις, και δες ένα προτεινόμενο πλάνο με μέρη να επισκεφθείς, ιδέες για φαγητό και χρήσιμες μικρές συμβουλές.
-            </p>
+
+            <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">
+              <div className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur">
+                <p className="text-sm text-white/60">Περιοχές βάσης</p>
+                <p className="mt-2 text-2xl font-bold">3</p>
+              </div>
+              <div className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur">
+                <p className="text-sm text-white/60">Ημέρες planner</p>
+                <p className="mt-2 text-2xl font-bold">1–10</p>
+              </div>
+              <div className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur">
+                <p className="text-sm text-white/60">Στυλ προγράμματος</p>
+                <p className="mt-2 text-2xl font-bold">Flexible</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="mx-auto -mt-10 max-w-6xl px-6 pb-12 md:px-8">
-        <div className="rounded-[28px] border border-slate-200 bg-white p-6 shadow-xl md:p-8">
-          <div className="grid gap-8 md:grid-cols-[1.2fr_1fr] md:items-end">
+      <section className="mx-auto -mt-10 max-w-6xl px-6 pb-14 md:px-8">
+        <div className="rounded-[30px] border border-slate-200 bg-white p-6 shadow-xl md:p-8">
+          <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
             <div>
               <label className="mb-3 block text-sm font-semibold text-slate-800">
                 Πού θα διαμείνεις;
@@ -240,13 +277,13 @@ export default function PlannerPage() {
               </select>
 
               {selectedLocation ? (
-                <p className="mt-4 text-sm leading-relaxed text-slate-600">
+                <div className="mt-4 rounded-2xl border border-amber-100 bg-amber-50/70 px-4 py-3 text-sm leading-6 text-slate-700">
                   <span className="font-semibold text-slate-900">{selectedLocation.label}:</span>{" "}
                   {selectedLocation.description}
-                </p>
+                </div>
               ) : (
-                <p className="mt-4 text-sm leading-relaxed text-slate-500">
-                  Διάλεξε την περιοχή διαμονής σου για να χτίσουμε ένα πλάνο προσαρμοσμένο στη βάση σου.
+                <p className="mt-4 text-sm leading-6 text-slate-500">
+                  Διάλεξε την περιοχή διαμονής σου για να εμφανιστεί ένα πλάνο προσαρμοσμένο στη βάση σου.
                 </p>
               )}
             </div>
@@ -273,6 +310,11 @@ export default function PlannerPage() {
                 <span>5</span>
                 <span>10</span>
               </div>
+              <div className="mt-4 rounded-2xl bg-slate-50 px-4 py-3 text-sm text-slate-600">
+                {days <= 3
+                  ? "Θα δεις πιο κοντινές επιλογές γύρω από τη βάση σου."
+                  : "Θα προστεθούν και πιο εκτεταμένες ημερήσιες εξορμήσεις."}
+              </div>
             </div>
           </div>
         </div>
@@ -280,16 +322,14 @@ export default function PlannerPage() {
 
       {location ? (
         <section className="mx-auto max-w-6xl px-6 pb-24 md:px-8">
-          <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div className="mb-10 flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
             <SectionTitle
               eyebrow="Suggested itinerary"
               title={`Προτεινόμενο πρόγραμμα για ${selectedLocation?.label}`}
-              description="Το πλάνο προσαρμόζεται στις ημέρες που έχεις διαθέσιμες και εστιάζει σε κοντινές ή πιο εκτεταμένες διαδρομές ανάλογα με τη διάρκεια της διαμονής σου."
+              description="Το πλάνο προσαρμόζεται στη διάρκεια της διαμονής σου και σου δίνει μια πιο καθαρή εικόνα για το πώς να οργανώσεις κάθε ημέρα σου στο νησί."
             />
-            <div className="rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-600 shadow-sm">
-              {days <= 3
-                ? "Πρόγραμμα με έμφαση σε κοντινές αποστάσεις"
-                : "Πρόγραμμα με κοντινές και ημερήσιες εξορμήσεις"}
+            <div className="w-fit rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-600 shadow-sm">
+              {plan.length} προτεινόμενες ημέρες
             </div>
           </div>
 
@@ -297,56 +337,42 @@ export default function PlannerPage() {
             {plan.map((day) => (
               <article
                 key={`${day.day}-${day.place}`}
-                className="overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-sm transition hover:shadow-md"
+                className="overflow-hidden rounded-[30px] border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-lg"
               >
-                <div className="border-b border-slate-100 bg-slate-50 px-6 py-4">
-                  <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+                <div className="border-b border-slate-100 bg-gradient-to-r from-slate-50 to-white px-6 py-5 md:px-7">
+                  <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
                     <div>
                       <p className="text-sm font-semibold uppercase tracking-[0.14em] text-amber-600">
                         Ημέρα {day.day}
                       </p>
-                      <h3 className="mt-1 text-2xl font-bold tracking-tight text-slate-900">
+                      <h3 className="mt-1 text-2xl font-bold tracking-tight text-slate-900 md:text-[28px]">
                         {day.place}
                       </h3>
                     </div>
-                    <span className="inline-flex w-fit items-center rounded-full bg-slate-900 px-3 py-1 text-sm font-medium text-white">
+                    <span className="inline-flex w-fit items-center rounded-full bg-slate-900 px-3.5 py-1.5 text-sm font-medium text-white">
                       {day.area}
                     </span>
                   </div>
                 </div>
 
-                <div className="grid gap-6 px-6 py-6 md:grid-cols-2">
-                  <div className="rounded-2xl bg-slate-50 p-5">
-                    <p className="mb-3 text-sm font-semibold uppercase tracking-[0.14em] text-slate-500">
+                <div className="grid gap-5 px-6 py-6 md:grid-cols-2 md:px-7">
+                  <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                    <p className="mb-4 text-sm font-semibold uppercase tracking-[0.14em] text-slate-500">
                       Τι να δεις
                     </p>
-                    <ul className="space-y-2">
-                      {day.see.map((item) => (
-                        <li key={item} className="flex items-start gap-3 text-slate-700">
-                          <span className="mt-2 h-2.5 w-2.5 rounded-full bg-amber-500" />
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
+                    <BulletList items={day.see} dotColor="bg-amber-500" />
                   </div>
 
-                  <div className="rounded-2xl bg-slate-50 p-5">
-                    <p className="mb-3 text-sm font-semibold uppercase tracking-[0.14em] text-slate-500">
+                  <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                    <p className="mb-4 text-sm font-semibold uppercase tracking-[0.14em] text-slate-500">
                       Πού να φας
                     </p>
-                    <ul className="space-y-2">
-                      {day.eat.map((item) => (
-                        <li key={item} className="flex items-start gap-3 text-slate-700">
-                          <span className="mt-2 h-2.5 w-2.5 rounded-full bg-sky-500" />
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
+                    <BulletList items={day.eat} dotColor="bg-sky-500" />
                   </div>
                 </div>
 
-                <div className="px-6 pb-6">
-                  <div className="rounded-2xl border border-amber-100 bg-amber-50 px-5 py-4 text-sm leading-relaxed text-amber-900">
+                <div className="px-6 pb-6 md:px-7 md:pb-7">
+                  <div className="rounded-2xl border border-amber-100 bg-amber-50 px-5 py-4 text-sm leading-6 text-amber-950">
                     <span className="font-semibold">Travel tip:</span> {day.tip}
                   </div>
                 </div>
@@ -356,20 +382,20 @@ export default function PlannerPage() {
         </section>
       ) : (
         <section className="mx-auto max-w-6xl px-6 pb-24 md:px-8">
-          <div className="rounded-[28px] border border-dashed border-slate-300 bg-white px-6 py-14 text-center shadow-sm">
-            <h2 className="text-2xl font-bold text-slate-900">
-              Επίλεξε περιοχή και ημέρες για να δεις το προτεινόμενο πλάνο
+          <div className="rounded-[30px] border border-dashed border-slate-300 bg-white px-6 py-16 text-center shadow-sm">
+            <h2 className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">
+              Επίλεξε περιοχή και διάρκεια διαμονής
             </h2>
-            <p className="mx-auto mt-3 max-w-2xl text-slate-600">
-              Ο planner θα σου εμφανίσει οργανωμένες ιδέες για κάθε ημέρα, με προτάσεις για αξιοθέατα, φαγητό και μικρές χρήσιμες συμβουλές.
+            <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-slate-600">
+              Ο planner θα σου εμφανίσει ένα πιο οργανωμένο πρόγραμμα με αξιοθέατα, σημεία για φαγητό και πρακτικές ιδέες για κάθε ημέρα.
             </p>
           </div>
         </section>
       )}
 
       <section className="mx-auto max-w-6xl px-6 pb-24 md:px-8">
-        <div className="rounded-[32px] bg-slate-900 px-8 py-10 text-white shadow-xl md:px-10 md:py-12">
-          <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+        <div className="overflow-hidden rounded-[34px] bg-gradient-to-r from-slate-900 to-slate-800 px-8 py-10 text-white shadow-xl md:px-10 md:py-12">
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
             <div className="max-w-2xl">
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-amber-400">
                 Continue exploring
@@ -377,7 +403,7 @@ export default function PlannerPage() {
               <h3 className="mt-3 text-2xl font-bold tracking-tight md:text-3xl">
                 Ανακάλυψε περισσότερα μέρη, εμπειρίες και προτάσεις για τη Λέσβο
               </h3>
-              <p className="mt-3 text-white/70">
+              <p className="mt-4 text-base leading-7 text-white/70">
                 Συνέχισε την περιήγηση στον ταξιδιωτικό οδηγό και βρες χωριά, παραλίες, φαγητό και προτεινόμενες διαμονές.
               </p>
             </div>
