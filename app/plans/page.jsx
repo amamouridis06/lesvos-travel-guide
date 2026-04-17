@@ -188,7 +188,7 @@ export default function LesvosSubscriptionPlans() {
             <div>
            <a
               href="/contact"
-              className="rounded-2xl bg-white px-6 py-3.5 font-semibold text-blue-700 hover:bg-blue-50 transition"
+              className="rounded-2xl bg-white px-3 py-3.5 font-semibold text-blue-700 hover:bg-blue-50 transition"
               >
               Επικοινωνία
             </a>
