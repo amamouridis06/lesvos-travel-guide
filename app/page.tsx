@@ -74,7 +74,7 @@ const hotels = [
 
 const restaurants = [
   {
-    name: "limanaki_pamf1.jpg",
+    name: "To limanaki ton Pamfilon",
     area: "Skalla Pamfilon",
     desc: "Fresh seafood and local flavors in a beautiful seaside setting.",
     img: "/limanaki_pamf1.jpg",
