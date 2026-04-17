@@ -111,7 +111,7 @@ function SectionHeader({
   description,
 }: SectionHeaderProps) {
   return (
-    div
+    <div
       className="mb-8 max-w-2xl md:mb-10"
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
