@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const categories = [
   {
@@ -75,7 +78,7 @@ const hotels = [
 const restaurants = [
   {
     name: "To limanaki ton Pamfilon",
-    area: "Skalla Pamfilon",
+    area: "Skala Pamfilon",
     desc: "Fresh seafood and local flavors in a beautiful seaside setting.",
     img: "/limanaki_pamf1.jpg",
     href: "/food/limanaki_pamfilon",
@@ -102,15 +105,42 @@ type SectionHeaderProps = {
   description?: string;
 };
 
+const fadeUp = {
+  hidden: { opacity: 0, y: 28 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.65,
+      ease: "easeOut",
+    },
+  },
+};
+
+const staggerContainer = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.12,
+    },
+  },
+};
+
 function SectionHeader({
   eyebrow,
   title,
   description,
 }: SectionHeaderProps) {
   return (
-    <div className="mb-8 md:mb-10 max-w-2xl">
+    <motion.div
+      className="mb-8 md:mb-10 max-w-2xl"
+      variants={fadeUp}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.2 }}
+    >
       {eyebrow && (
-        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-yellow-700 mb-3">
+        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-yellow-700">
           {eyebrow}
         </p>
       )}
@@ -122,48 +152,67 @@ function SectionHeader({
           {description}
         </p>
       )}
-    </div>
+    </motion.div>
   );
 }
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-neutral-50 text-neutral-900">
+    <main className="min-h-screen bg-neutral-50 text-neutral-900 overflow-x-hidden">
       <section className="relative isolate min-h-[90vh] bg-[url('/plomari2.jpg')] bg-cover bg-center">
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/45 to-black/20" />
 
-        <div className="relative z-10 mx-auto flex min-h-[90vh] max-w-7xl items-center px-4 py-16 sm:px-6 lg:px-8">
+        <motion.div
+          className="relative z-10 mx-auto flex min-h-[90vh] max-w-7xl items-center px-4 py-16 sm:px-6 lg:px-8"
+          initial="hidden"
+          animate="show"
+          variants={staggerContainer}
+        >
           <div className="max-w-3xl">
-            <div className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-medium text-white backdrop-blur-md">
+            <motion.div
+              variants={fadeUp}
+              className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-medium text-white backdrop-blur-md"
+            >
               Lesvos Travel Guide
-            </div>
+            </motion.div>
 
-            <h1 className="mt-6 text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl">
+            <motion.h1
+              variants={fadeUp}
+              className="mt-6 text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl"
+            >
               Discover Lesvos through places, flavors, and authentic experiences
-            </h1>
+            </motion.h1>
 
-            <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/85 sm:text-lg md:text-xl">
+            <motion.p
+              variants={fadeUp}
+              className="mt-5 max-w-2xl text-base leading-relaxed text-white/85 sm:text-lg md:text-xl"
+            >
               Explore villages, beaches, local gastronomy, and handpicked stays
               with a travel guide designed to help you experience the island in
               a more meaningful way.
-            </p>
+            </motion.p>
 
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Link
-                href="/planner"
-                className="inline-flex items-center rounded-xl bg-yellow-600 px-6 py-3.5 font-semibold text-white shadow-lg transition hover:bg-yellow-700"
-              >
-                Start planning
-              </Link>
-              <Link
-                href="/villages"
-                className="inline-flex items-center rounded-xl border border-white/30 bg-white/10 px-6 py-3.5 font-semibold text-white backdrop-blur-md transition hover:bg-white/20"
-              >
-                Explore destinations
-              </Link>
-            </div>
+            <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-4">
+              <motion.div whileHover={{ y: -2 }} whileTap={{ scale: 0.98 }}>
+                <Link
+                  href="/planner"
+                  className="inline-flex items-center rounded-xl bg-yellow-600 px-6 py-3.5 font-semibold text-white shadow-lg transition hover:bg-yellow-700"
+                >
+                  Start planning
+                </Link>
+              </motion.div>
+
+              <motion.div whileHover={{ y: -2 }} whileTap={{ scale: 0.98 }}>
+                <Link
+                  href="/villages"
+                  className="inline-flex items-center rounded-xl border border-white/30 bg-white/10 px-6 py-3.5 font-semibold text-white backdrop-blur-md transition hover:bg-white/20"
+                >
+                  Explore destinations
+                </Link>
+              </motion.div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6 md:py-20 lg:px-8">
@@ -173,58 +222,81 @@ export default function Home() {
           description="Browse the island through curated categories and discover what to see, where to go, and what not to miss."
         />
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <motion.div
+          className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.15 }}
+        >
           {categories.map((item) => (
-            <Link
-              key={item.title}
-              href={item.href}
-              className="group overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
-            >
-              <div className="overflow-hidden">
-                <img
-                  src={item.img}
-                  alt={item.title}
-                  className="h-52 w-full object-cover transition duration-500 group-hover:scale-105"
-                />
-              </div>
-              <div className="p-5">
-                <h3 className="text-xl font-semibold text-neutral-900">
-                  {item.title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-neutral-600">
-                  {item.desc}
-                </p>
-              </div>
-            </Link>
+            <motion.div key={item.title} variants={fadeUp}>
+              <Link
+                href={item.href}
+                className="group block overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+              >
+                <div className="overflow-hidden">
+                  <motion.img
+                    src={item.img}
+                    alt={item.title}
+                    className="h-52 w-full object-cover"
+                    whileHover={{ scale: 1.06 }}
+                    transition={{ duration: 0.45 }}
+                  />
+                </div>
+                <div className="p-5">
+                  <h3 className="text-xl font-semibold text-neutral-900">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-neutral-600">
+                    {item.desc}
+                  </p>
+                </div>
+              </Link>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </section>
 
       <section className="bg-white py-16 md:py-24">
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 md:grid-cols-2 lg:px-8">
-          <div>
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.2 }}
+          >
             <SectionHeader
               eyebrow="Trip planner"
               title="Build a realistic itinerary for your stay"
               description="Tell us where you are staying and how many days you have, and discover a travel plan that matches your pace, area, and interests."
             />
 
-            <Link
-              href="/planner"
-              className="inline-flex items-center rounded-xl bg-neutral-900 px-7 py-3.5 font-semibold text-white transition hover:bg-neutral-800"
-            >
-              Start planning your trip
-            </Link>
-          </div>
+            <motion.div whileHover={{ y: -2 }} whileTap={{ scale: 0.98 }}>
+              <Link
+                href="/planner"
+                className="inline-flex items-center rounded-xl bg-neutral-900 px-7 py-3.5 font-semibold text-white transition hover:bg-neutral-800"
+              >
+                Start planning your trip
+              </Link>
+            </motion.div>
+          </motion.div>
 
-          <div className="relative h-72 overflow-hidden rounded-[28px] shadow-2xl md:h-[420px]">
+          <motion.div
+            className="relative h-72 overflow-hidden rounded-[28px] shadow-2xl md:h-[420px]"
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            whileHover={{ y: -4 }}
+          >
             <img
               src="/map-lesvos.jpg"
               alt="Map of Lesvos"
               className="absolute inset-0 h-full w-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent" />
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -235,26 +307,41 @@ export default function Home() {
           description="From iconic villages to peaceful coastal areas, these destinations are among the most loved places on the island."
         />
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <motion.div
+          className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.15 }}
+        >
           {destinations.map((place) => (
-            <Link
-              key={place.title}
-              href={place.href}
-              className="group relative block overflow-hidden rounded-[24px]"
-            >
-              <img
-                src={place.img}
-                alt={place.title}
-                className="h-72 w-full object-cover transition duration-500 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-              <div className="absolute inset-x-0 bottom-0 p-5 text-white">
-                <h3 className="text-2xl font-semibold">{place.title}</h3>
-                <p className="mt-1 text-sm text-white/85">{place.subtitle}</p>
-              </div>
-            </Link>
+            <motion.div key={place.title} variants={fadeUp}>
+              <Link
+                href={place.href}
+                className="group relative block overflow-hidden rounded-[24px]"
+              >
+                <motion.img
+                  src={place.img}
+                  alt={place.title}
+                  className="h-72 w-full object-cover"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.45 }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                <motion.div
+                  className="absolute inset-x-0 bottom-0 p-5 text-white"
+                  initial={{ opacity: 0, y: 18 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.1 }}
+                >
+                  <h3 className="text-2xl font-semibold">{place.title}</h3>
+                  <p className="mt-1 text-sm text-white/85">{place.subtitle}</p>
+                </motion.div>
+              </Link>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </section>
 
       <section className="bg-neutral-100 py-16 md:py-20">
@@ -265,32 +352,43 @@ export default function Home() {
             description="Selected places to stay that combine location, style, and atmosphere for travelers visiting Lesvos."
           />
 
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          <motion.div
+            className="grid grid-cols-1 gap-6 md:grid-cols-3"
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.15 }}
+          >
             {hotels.map((hotel) => (
-              <Link
-                key={hotel.name}
-                href={hotel.href}
-                className="group overflow-hidden rounded-[24px] border border-neutral-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
-              >
-                <img
-                  src={hotel.img}
-                  alt={hotel.name}
-                  className="h-56 w-full object-cover transition duration-500 group-hover:scale-105"
-                />
-                <div className="p-5">
-                  <div className="text-sm font-medium text-yellow-700">
-                    {hotel.area}
+              <motion.div key={hotel.name} variants={fadeUp}>
+                <Link
+                  href={hotel.href}
+                  className="group block overflow-hidden rounded-[24px] border border-neutral-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+                >
+                  <div className="overflow-hidden">
+                    <motion.img
+                      src={hotel.img}
+                      alt={hotel.name}
+                      className="h-56 w-full object-cover"
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.45 }}
+                    />
                   </div>
-                  <h3 className="mt-2 text-xl font-semibold text-neutral-900">
-                    {hotel.name}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-neutral-600">
-                    {hotel.desc}
-                  </p>
-                </div>
-              </Link>
+                  <div className="p-5">
+                    <div className="text-sm font-medium text-yellow-700">
+                      {hotel.area}
+                    </div>
+                    <h3 className="mt-2 text-xl font-semibold text-neutral-900">
+                      {hotel.name}
+                    </h3>
+                    <p className="mt-2 text-sm leading-relaxed text-neutral-600">
+                      {hotel.desc}
+                    </p>
+                  </div>
+                </Link>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -302,32 +400,43 @@ export default function Home() {
             description="A curated selection of places where local flavors, fresh ingredients, and island hospitality come together."
           />
 
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          <motion.div
+            className="grid grid-cols-1 gap-6 md:grid-cols-3"
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.15 }}
+          >
             {restaurants.map((restaurant) => (
-              <Link
-                key={restaurant.name}
-                href={restaurant.href}
-                className="group overflow-hidden rounded-[24px] border border-neutral-200 bg-neutral-50 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
-              >
-                <img
-                  src={restaurant.img}
-                  alt={restaurant.name}
-                  className="h-56 w-full object-cover transition duration-500 group-hover:scale-105"
-                />
-                <div className="p-5">
-                  <div className="text-sm font-medium text-yellow-700">
-                    {restaurant.area}
+              <motion.div key={restaurant.name} variants={fadeUp}>
+                <Link
+                  href={restaurant.href}
+                  className="group block overflow-hidden rounded-[24px] border border-neutral-200 bg-neutral-50 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+                >
+                  <div className="overflow-hidden">
+                    <motion.img
+                      src={restaurant.img}
+                      alt={restaurant.name}
+                      className="h-56 w-full object-cover"
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.45 }}
+                    />
                   </div>
-                  <h3 className="mt-2 text-xl font-semibold text-neutral-900">
-                    {restaurant.name}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-neutral-600">
-                    {restaurant.desc}
-                  </p>
-                </div>
-              </Link>
+                  <div className="p-5">
+                    <div className="text-sm font-medium text-yellow-700">
+                      {restaurant.area}
+                    </div>
+                    <h3 className="mt-2 text-xl font-semibold text-neutral-900">
+                      {restaurant.name}
+                    </h3>
+                    <p className="mt-2 text-sm leading-relaxed text-neutral-600">
+                      {restaurant.desc}
+                    </p>
+                  </div>
+                </Link>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
     </main>
