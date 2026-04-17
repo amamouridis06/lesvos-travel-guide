@@ -108,11 +108,11 @@ export default function LesvosSubscriptionPlans() {
   ];
 
   const [selectedPlanId, setSelectedPlanId] = useState("professional");
-  const [selectedExtras, setSelectedExtras] = useState<string[]>([]);
+  const [selectedExtras, setSelectedExtras] = useState([]);
 
   const selectedPlan = plans.find((plan) => plan.id === selectedPlanId) || plans[1];
 
-  const toggleExtra = (extraId: string) => {
+  const toggleExtra = (extraId) => {
     setSelectedExtras((prev) =>
       prev.includes(extraId)
         ? prev.filter((id) => id !== extraId)
