@@ -2,7 +2,7 @@ export default function LesvosSubscriptionPlans() {
   const plans = [
     {
       name: "Starter Listing",
-      price: "€49",
+      price: "€15",
       period: "/month",
       description:
         "Για μικρές επιχειρήσεις που θέλουν μια καθαρή και αξιόπιστη παρουσία στον ταξιδιωτικό οδηγό.",
@@ -18,7 +18,7 @@ export default function LesvosSubscriptionPlans() {
     },
     {
       name: "Professional",
-      price: "€99",
+      price: "€20",
       period: "/month",
       description:
         "Η ιδανική επιλογή για ξενοδοχεία, εστιατόρια και καταστήματα που θέλουν αυξημένη προβολή.",
@@ -35,7 +35,7 @@ export default function LesvosSubscriptionPlans() {
     },
     {
       name: "Featured Partner",
-      price: "€199",
+      price: "€35",
       period: "/month",
       description:
         "Για επιχειρήσεις που επιθυμούν premium τοποθέτηση, ενισχυμένη προβολή και σταθερή προώθηση.",
@@ -185,14 +185,19 @@ export default function LesvosSubscriptionPlans() {
               Επικοινωνήστε μαζί μας για να διαμορφώσουμε το κατάλληλο πακέτο συνεργασίας για το ξενοδοχείο, το
               κατάστημα ή την επιχείρησή σας.
             </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <button className="rounded-2xl bg-white px-6 py-3.5 font-semibold text-blue-700 hover:bg-blue-50 transition">
-                Επικοινωνία
-              </button>
-              <button className="rounded-2xl border border-white/30 px-6 py-3.5 font-semibold text-white hover:bg-white/10 transition">
-                Ζητήστε προσφορά
-              </button>
-            </div>
+           <a
+              href="/contact"
+              className="rounded-2xl bg-white px-6 py-3.5 font-semibold text-blue-700 hover:bg-blue-50 transition"
+              >
+              Επικοινωνία
+            </a>
+
+          {/* <a
+          href="/offer"
+          className="rounded-2xl border border-white/30 px-6 py-3.5 font-semibold text-white hover:bg-white/10 transition"
+          >
+  Ζητήστε προσφορά
+</a> */}
           </div>
         </section>
       </div>
