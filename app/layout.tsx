@@ -46,12 +46,12 @@ export default function RootLayout({
       <body className="bg-neutral-100 text-neutral-900">
         <NavBar />
         <div className="pt-20">{children}</div>
-        
+
         <Footer />
-                {/* 🍪 Cookie Banner */}
+
+        {/* 🍪 Cookie Banner */}
         <CookieConsent />
       </body>
     </html>
   );
-}
 }
