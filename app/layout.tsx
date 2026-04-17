@@ -1,6 +1,7 @@
 import "./globals.css";
 import NavBar from "../components/NavBar";
 import Footer from "@/components/Footer";
+import CookieConsent from "@/components/CookieConsent";
 
 export const metadata = {
   title: "Lesvos Travel & Culture Website",
@@ -45,8 +46,12 @@ export default function RootLayout({
       <body className="bg-neutral-100 text-neutral-900">
         <NavBar />
         <div className="pt-20">{children}</div>
+        
         <Footer />
+                {/* 🍪 Cookie Banner */}
+        <CookieConsent />
       </body>
     </html>
   );
+}
 }
