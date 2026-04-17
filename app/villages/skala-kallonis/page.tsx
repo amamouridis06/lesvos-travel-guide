@@ -55,12 +55,12 @@ export default function MolyvosPage() {
   {/* Images */}
   <div className="grid grid-cols-2 gap-1">
     <img 
-      src="/hotel-pela.jpg" 
+      src="/molivos1.jpeg" 
       alt="Hotel view" 
       className="w-full h-40 object-cover"
     />
     <img 
-      src="/hotel-pela1.jpg" 
+      src="/molivos2.jpeg" 
       alt="Hotel room" 
       className="w-full h-40 object-cover"
     />
@@ -76,7 +76,7 @@ export default function MolyvosPage() {
         href="https://www.tripadvisor.com/Hotel_Review-g1191973-d316848-Reviews-or10-Pela-Skala_Kallonis_Lesbos_Northeast_Aegean_Islands.html" 
         className="text-blue-600 hover:underline"
       >
-        Hotel Pela
+        Hotel ...
       </a>, 
       ideally located in the heart of the village, just a few steps 
       from the beach and local taverns.
