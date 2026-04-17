@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 
-
 const categories = [
   {
     title: "Beaches",
@@ -111,13 +110,7 @@ function SectionHeader({
   description,
 }: SectionHeaderProps) {
   return (
-    <div
-      className="mb-8 max-w-2xl md:mb-10"
-      initial={{ opacity: 0, y: 24 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.6 }}
-    >
+    <div className="mb-8 max-w-2xl md:mb-10">
       {eyebrow ? (
         <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-yellow-700">
           {eyebrow}
@@ -137,55 +130,6 @@ function SectionHeader({
   );
 }
 
-type CardItem = {
-  title?: string;
-  subtitle?: string;
-  name?: string;
-  area?: string;
-  desc?: string;
-  img: string;
-  href: string;
-};
-
-function AnimatedImageCard({
-  href,
-  img,
-  alt,
-  children,
-  className = "",
-}: {
-  href: string;
-  img: string;
-  alt: string;
-  children: React.ReactNode;
-  className?: string;
-}) {
-  return (
-    <div
-      initial={{ opacity: 0, y: 24 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.15 }}
-      transition={{ duration: 0.5 }}
-    >
-      <Link
-        href={href}
-        className={`group block overflow-hidden rounded-[24px] border border-neutral-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl ${className}`}
-      >
-        <div className="overflow-hidden">
-          <img
-            src={img}
-            alt={alt}
-            className="h-56 w-full object-cover"
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.4 }}
-          />
-        </div>
-        {children}
-      </Link>
-    </div>
-  );
-}
-
 export default function Home() {
   return (
     <main className="min-h-screen overflow-x-hidden bg-neutral-50 text-neutral-900">
@@ -193,60 +137,35 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/45 to-black/20" />
 
         <div className="relative z-10 mx-auto flex min-h-[90vh] max-w-7xl items-center px-4 py-16 sm:px-6 lg:px-8">
-          <div
-            className="max-w-3xl"
-            initial={{ opacity: 0, y: 28 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-          >
-            <div
-              className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-medium text-white backdrop-blur-md"
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-            >
+          <div className="max-w-3xl">
+            <div className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-medium text-white backdrop-blur-md">
               Lesvos Travel Guide
             </div>
 
-            <h1
-              className="mt-6 text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl"
-              initial={{ opacity: 0, y: 22 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
+            <h1 className="mt-6 text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl">
               Discover Lesvos through places, flavors, and authentic experiences
             </h1>
 
-            <<p>
-              className="mt-5 max-w-2xl text-base leading-relaxed text-white/85 sm:text-lg md:text-xl"
-              initial={{ opacity: 0, y: 22 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-            >
+            <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/85 sm:text-lg md:text-xl">
               Explore villages, beaches, local gastronomy, and handpicked stays
               with a travel guide designed to help you experience the island in
               a more meaningful way.
             </p>
 
-            <div
-              className="mt-8 flex flex-wrap gap-4"
-              initial={{ opacity: 0, y: 22 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-            >
-              <div whileHover={{ y: -2 }} whileTap={{ scale: 0.98 }}>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <div>
                 <Link
                   href="/planner"
-                  className="inline-flex items-center rounded-xl bg-yellow-600 px-6 py-3.5 font-semibold text-white shadow-lg transition hover:bg-yellow-700"
+                  className="inline-flex items-center rounded-xl bg-yellow-600 px-6 py-3.5 font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-yellow-700"
                 >
                   Start planning
                 </Link>
               </div>
 
-              div whileHover={{ y: -2 }} whileTap={{ scale: 0.98 }}>
+              <div>
                 <Link
                   href="/villages"
-                  className="inline-flex items-center rounded-xl border border-white/30 bg-white/10 px-6 py-3.5 font-semibold text-white backdrop-blur-md transition hover:bg-white/20"
+                  className="inline-flex items-center rounded-xl border border-white/30 bg-white/10 px-6 py-3.5 font-semibold text-white backdrop-blur-md transition hover:-translate-y-0.5 hover:bg-white/20"
                 >
                   Explore destinations
                 </Link>
@@ -264,14 +183,8 @@ export default function Home() {
         />
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {categories.map((item, index) => (
-            <div
-              key={item.title}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.15 }}
-              transition={{ duration: 0.5, delay: index * 0.08 }}
-            >
+          {categories.map((item) => (
+            <div key={item.title}>
               <Link
                 href={item.href}
                 className="group block overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
@@ -280,9 +193,7 @@ export default function Home() {
                   <img
                     src={item.img}
                     alt={item.title}
-                    className="h-52 w-full object-cover"
-                    whileHover={{ scale: 1.06 }}
-                    transition={{ duration: 0.4 }}
+                    className="h-52 w-full object-cover transition duration-300 group-hover:scale-105"
                   />
                 </div>
                 <div className="p-5">
@@ -301,36 +212,24 @@ export default function Home() {
 
       <section className="bg-white py-16 md:py-24">
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 md:grid-cols-2 lg:px-8">
-          <div
-            initial={{ opacity: 0, y: 26 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6 }}
-          >
+          <div>
             <SectionHeader
               eyebrow="Trip planner"
               title="Build a realistic itinerary for your stay"
               description="Tell us where you are staying and how many days you have, and discover a travel plan that matches your pace, area, and interests."
             />
 
-            <div whileHover={{ y: -2 }} whileTap={{ scale: 0.98 }}>
+            <div>
               <Link
                 href="/planner"
-                className="inline-flex items-center rounded-xl bg-neutral-900 px-7 py-3.5 font-semibold text-white transition hover:bg-neutral-800"
+                className="inline-flex items-center rounded-xl bg-neutral-900 px-7 py-3.5 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-neutral-800"
               >
                 Start planning your trip
               </Link>
             </div>
           </div>
 
-          <div
-            className="relative h-72 overflow-hidden rounded-[28px] shadow-2xl md:h-[420px]"
-            initial={{ opacity: 0, x: 36 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.7 }}
-            whileHover={{ y: -4 }}
-          >
+          <div className="relative h-72 overflow-hidden rounded-[28px] shadow-2xl transition hover:-translate-y-1 md:h-[420px]">
             <img
               src="/map-lesvos.jpg"
               alt="Map of Lesvos"
@@ -349,14 +248,8 @@ export default function Home() {
         />
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {destinations.map((place, index) => (
-            <div
-              key={place.title}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.15 }}
-              transition={{ duration: 0.5, delay: index * 0.08 }}
-            >
+          {destinations.map((place) => (
+            <div key={place.title}>
               <Link
                 href={place.href}
                 className="group relative block overflow-hidden rounded-[24px]"
@@ -364,9 +257,7 @@ export default function Home() {
                 <img
                   src={place.img}
                   alt={place.title}
-                  className="h-72 w-full object-cover"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.4 }}
+                  className="h-72 w-full object-cover transition duration-300 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-5 text-white">
@@ -388,14 +279,8 @@ export default function Home() {
           />
 
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-            {hotels.map((hotel, index) => (
-              <div
-                key={hotel.name}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.15 }}
-                transition={{ duration: 0.5, delay: index * 0.08 }}
-              >
+            {hotels.map((hotel) => (
+              <div key={hotel.name}>
                 <Link
                   href={hotel.href}
                   className="group block overflow-hidden rounded-[24px] border border-neutral-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
@@ -404,9 +289,7 @@ export default function Home() {
                     <img
                       src={hotel.img}
                       alt={hotel.name}
-                      className="h-56 w-full object-cover"
-                      whileHover={{ scale: 1.05 }}
-                      transition={{ duration: 0.4 }}
+                      className="h-56 w-full object-cover transition duration-300 group-hover:scale-105"
                     />
                   </div>
                   <div className="p-5">
@@ -436,14 +319,8 @@ export default function Home() {
           />
 
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-            {restaurants.map((restaurant, index) => (
-              <div
-                key={restaurant.name}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.15 }}
-                transition={{ duration: 0.5, delay: index * 0.08 }}
-              >
+            {restaurants.map((restaurant) => (
+              <div key={restaurant.name}>
                 <Link
                   href={restaurant.href}
                   className="group block overflow-hidden rounded-[24px] border border-neutral-200 bg-neutral-50 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
@@ -452,9 +329,7 @@ export default function Home() {
                     <img
                       src={restaurant.img}
                       alt={restaurant.name}
-                      className="h-56 w-full object-cover"
-                      whileHover={{ scale: 1.05 }}
-                      transition={{ duration: 0.4 }}
+                      className="h-56 w-full object-cover transition duration-300 group-hover:scale-105"
                     />
                   </div>
                   <div className="p-5">
