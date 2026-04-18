@@ -5,7 +5,7 @@ export default function AboutPage() {
       {/* HERO SECTION */}
       <section 
         className="relative w-full h-[55vh] bg-cover bg-center flex items-center justify-center"
-        style={{ backgroundImage: `url('/lesvos.jpg')` }}
+        style={{ backgroundImage: `url('/logo.jpeg')` }}
       >
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative text-center px-6">
