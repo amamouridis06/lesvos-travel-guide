@@ -2,16 +2,16 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata = {
-  title: "Φαγητό στη Λέσβο",
+  title: "Food in Lesvos",
   description:
-    "Τα καλύτερα μέρη για φαγητό στη Λέσβο: ταβέρνες, εστιατόρια, καφέ και τοπικά προϊόντα.",
+    "The best places to eat: Taverns, restaurants, cafe and local products.",
 };
 
 const taverns = [
   {
-    name: "Το Λιμανάκι των Παμφίλων",
-    description: "Traditional kitchen • By the sea",
-    location: "Σκάλα Παμφίλων, Μυτιλήνη",
+    name: "To limanaki ton Pamfilon",
+    description: "Traditional kitchen • by the sea",
+    location: "📍Skalla Pamfilon",
     image: "/limanaki_pamf.jpg",
     href: "/food/limanaki_pamfilon",
   },
@@ -83,10 +83,10 @@ export default function FoodPage() {
 
         <div className="relative z-10 text-center px-4 sm:px-6">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
-            Φαγητό στη Λέσβο
+            Food in Lesvos
           </h1>
           <p className="mt-4 text-base sm:text-lg text-gray-200 max-w-2xl mx-auto">
-            Ταβέρνες, εστιατόρια και τοπικές γεύσεις — επιλεγμένα μέρη που αξίζουν.
+            Taverns, restaurants and local flavors,  selected parts worth it.
           </p>
         </div>
       </section>
@@ -97,11 +97,11 @@ export default function FoodPage() {
 
         <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6">
           {[
-            { title: "Ταβέρνες", href: "#taverns" },
-            { title: "Εστιατόρια", href: "#restaurants" },
-            { title: "Καφέ & Bar", href: "#cafes" },
+            { title: "Taverns", href: "#taverns" },
+            { title: "Restaurants", href: "#restaurants" },
+            { title: "Cafe & Bar", href: "#cafes" },
             { title: "Traditional Cafes - Taverns", href: "#t-cafes" },
-            { title: "Τοπικά Προϊόντα", href: "#local" },
+            { title: "Local Products", href: "#local" },
           ].map((cat) => (
             <a
               key={cat.title}
@@ -118,7 +118,7 @@ export default function FoodPage() {
       <section className="max-w-6xl mx-auto px-4 sm:px-6 pb-16 sm:pb-24 space-y-14 sm:space-y-20">
         {/* TAVERNAS */}
         <div id="taverns">
-          <h2 className="text-2xl font-semibold mb-6">Ταβέρνες</h2>
+          <h2 className="text-2xl font-semibold mb-6">Taverns</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             {taverns.map((item) => (
@@ -140,21 +140,21 @@ export default function FoodPage() {
 
         {/* RESTAURANTS */}
         <div id="restaurants">
-          <h2 className="text-2xl font-semibold mb-6">Εστιατόρια</h2>
-          <p className="text-gray-600">(Θα προστεθούν σύντομα)</p>
+          <h2 className="text-2xl font-semibold mb-6">Restaurants</h2>
+          <p className="text-gray-600">(soon)</p>
         </div>
 
         {/* CAFES */}
         <div id="cafes">
           <h2 className="text-2xl font-semibold mb-6">Καφέ & Bar</h2>
-          <p className="text-gray-600">(Θα προστεθούν σύντομα)</p>
+          <p className="text-gray-600">(soon)</p>
         </div>
 
         {/* LOCAL PRODUCTS */}
         <div id="local">
-          <h2 className="text-2xl font-semibold mb-6">Τοπικά Προϊόντα</h2>
+          <h2 className="text-2xl font-semibold mb-6">Local Products</h2>
           <p className="text-gray-600">
-            Ούζο, ελαιόλαδο, τυριά και παραδοσιακά προϊόντα.
+            soon
           </p>
         </div>
       </section>
