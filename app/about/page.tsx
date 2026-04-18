@@ -4,48 +4,80 @@ export default function AboutPage() {
       
       {/* HERO SECTION */}
       <section 
-        className="w-full h-[50vh] bg-cover bg-center flex items-center justify-center"
+        className="relative w-full h-[55vh] bg-cover bg-center flex items-center justify-center"
         style={{ backgroundImage: `url('/lesvos.jpg')` }}
       >
-        <div className="bg-black/40 backdrop-blur-sm p-6 rounded-xl">
-          <h1 className="text-5xl font-bold text-white">About Lesvos Travel</h1>
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative text-center px-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-white tracking-tight">
+            About Lesvos Travel
+          </h1>
+          <p className="mt-4 text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
+            Discover the island through curated experiences, local insights, and authentic places.
+          </p>
         </div>
       </section>
 
       {/* CONTENT */}
-      <div className="max-w-4xl mx-auto px-6 mt-12">
+      <div className="max-w-4xl mx-auto px-6 mt-14">
         
         {/* Mission */}
-        <h2 className="text-3xl font-bold mb-4">Our Mission</h2>
-        <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-         <b> Lesvos Travel </ b> was created to offer a modern one, 
-          clean and easy-to-use guide for the island of Lesvos. 
-          Our goal is to highlight beauty, beaches, villages, 
-          the culture and nature of the island.
-        </p>
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold mb-4">Our Mission</h2>
+          <p className="text-lg text-gray-700 leading-relaxed">
+            <strong>Lesvos Travel</strong> was created to offer a modern, clean and easy-to-use travel guide 
+            for the island of Lesvos. Our goal is to highlight the island’s natural beauty, 
+            traditional villages, beaches, local culture, and authentic experiences.
+          </p>
+        </section>
 
         {/* What users find */}
-        <h2 className="text-3xl font-bold mb-4">What You Will Find</h2>
-        <ul className="list-disc ml-6 text-gray-700 text-lg leading-relaxed mb-8">
-          <li>Detailed information about beaches of Lesvos</li>
-          <li>Descriptions of villages and attractions</li>
-          <li>High quality photos</li>
-          <li>Easy navigation in each category</li>
-        </ul>
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold mb-4">What You’ll Discover</h2>
+          <ul className="space-y-3 text-gray-700 text-lg leading-relaxed">
+            <li>• Carefully selected beaches and hidden spots</li>
+            <li>• Traditional villages and must-visit destinations</li>
+            <li>• Local food, taverns, and authentic experiences</li>
+            <li>• High-quality visuals and curated recommendations</li>
+            <li>• Easy navigation to plan your trip effortlessly</li>
+          </ul>
+        </section>
 
-        {/* Developer */}
-        <h2 className="text-3xl font-bold mb-4">Who Created This Website?</h2>
-        <p className="text-lg text-gray-700 leading-relaxed mb-8">
-          The website was designed and developed by Angelos Mamouridis.
-        </p>
+        {/* Vision */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold mb-4">Our Vision</h2>
+          <p className="text-lg text-gray-700 leading-relaxed">
+            We aim to promote Lesvos as a unique travel destination worldwide, 
+            connecting visitors with local businesses and experiences that truly represent the island.
+          </p>
+        </section>
 
-        {/* Contact button */}
-        <a 
-          href="mailto:amamourids@gmail.com"
-          className="inline-block mt-4 px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition"
-        >
-          Contact Me
-        </a>
+        {/* Creator */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold mb-4">Who Created This Website?</h2>
+          <p className="text-lg text-gray-700 leading-relaxed">
+            This project was designed and developed by <strong>X</strong>, 
+            with the goal of building a modern digital guide that supports local businesses 
+            and enhances the travel experience for visitors.
+          </p>
+        </section>
+
+        {/* CTA */}
+        <div className="mt-10 flex flex-col sm:flex-row gap-4">
+          <a 
+            href="/contact"
+            className="inline-block px-6 py-3 bg-black text-white rounded-xl hover:bg-gray-800 transition font-semibold"
+          >
+            Get in touch
+          </a>
+
+          <a 
+            href="/"
+            className="inline-block px-6 py-3 border border-gray-300 text-black rounded-xl hover:bg-gray-100 transition font-semibold"
+          >
+            Explore the guide
+          </a>
+        </div>
 
       </div>
     </main>
