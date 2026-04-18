@@ -59,6 +59,9 @@ export default function NavBar() {
             <Link href="/plans" className="hover:text-yellow-300 transition">
               Συνδρομή
             </Link>
+            <Link href="/news" className="hover:text-yellow-300 transition">
+              News
+            </Link>
             <button
               onClick={() => router.push(toggleLanguage)}
               className="ml-2 px-3 py-1 rounded-full border border-white/40 text-xs hover:bg-white hover:text-blue-700 transition"
