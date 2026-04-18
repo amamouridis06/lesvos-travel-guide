@@ -9,7 +9,7 @@ export default function MolyvosPage() {
     <main className="bg-neutral-100 text-neutral-900">
 
       {/* HERO */}
-      <section className="relative h-[70vh] bg-[url('/molivos1.jpg')] bg-cover bg-center">
+      <section className="relative h-[70vh] bg-[url('/molivos1.jpeg')] bg-cover bg-center">
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 h-full flex items-end">
           <div className="max-w-6xl mx-auto px-6 pb-12">
