@@ -62,6 +62,9 @@ export default function NavBar() {
             <Link href="/news" className="hover:text-yellow-300 transition">
               News
             </Link>
+             <Link href="/hotels/thanos-cozy-appartments" className="hover:text-yellow-300 transition">
+              Hotels
+            </Link>
             <button
               onClick={() => router.push(toggleLanguage)}
               className="ml-2 px-3 py-1 rounded-full border border-white/40 text-xs hover:bg-white hover:text-blue-700 transition"
