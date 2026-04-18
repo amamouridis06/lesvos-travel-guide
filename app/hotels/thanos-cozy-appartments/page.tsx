@@ -52,8 +52,7 @@ export default function ApartmentPage() {
             </h1>
 
             <p className="mt-5 max-w-2xl text-base leading-7 text-white/90 sm:text-lg">
-              A modern and comfortable apartment in the heart of Skala Kallonis,
-              ideal for relaxing holidays, family stays, and easy access to the
+              A modern and comfortable apartment for relaxing holidays, family stays, and easy access to the
               local square, restaurants, and nearby beaches.
             </p>
 
@@ -80,10 +79,11 @@ export default function ApartmentPage() {
           <div>
             <h2 className="text-3xl font-bold text-gray-900">About the Apartment</h2>
             <p className="mt-5 text-base leading-8 text-gray-600">
-              Thanos Cozy Apartments offers a warm and elegant stay in one of the
-              most convenient locations in Skala Kallonis. Designed for comfort and
-              simplicity, the apartment includes spacious indoor areas, modern
-              furnishings, and everything needed for a pleasant short or extended stay.
+              <li>Comfortable Accommodation: Thanos Cozy Apartments in Skala Kallonis offers a sun terrace and free WiFi. Each apartment features air-conditioning, a terrace, and a balcony with sea views.</li>
+
+                <li>Modern Amenities: Guests enjoy a kitchenette, private bathroom, washing machine, and a work desk. Additional facilities include a paid shuttle service, 24-hour front desk, daily housekeeping, and luggage storage.</li>
+
+               <li>Prime Location: Skala Kallonis Beach is a 4-minute walk away. Nearby attractions include Agia Paraskevi and Olive Museum, each 10 km from the property. Mytilene International Airport is 46 km distant.</li>
             </p>
             <p className="mt-4 text-base leading-8 text-gray-600">
               It is ideal for couples, families, or small groups looking for a quiet
@@ -114,7 +114,7 @@ export default function ApartmentPage() {
             <div className="mt-4 overflow-hidden rounded-2xl border border-gray-200">
               <iframe
                 title="Map of Skala Kallonis"
-                src="https://www.google.com/maps?q=Skala%20Kallonis%20Lesvos&z=14&output=embed"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2071.5071451047647!2d26.208322117000183!3d39.20674076014447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ba93ec07a5c773%3A0x4dca5510e8276b2e!2sThanos%20Cozy%20Apartments!5e1!3m2!1sen!2sgr!4v1776534581632!5m2!1sen!2sgr" 
                 className="h-64 w-full"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -128,11 +128,11 @@ export default function ApartmentPage() {
               </p>
               <p>
                 <span className="font-semibold text-gray-900">Phone:</span>{" "}
-                +30 XXX XXX XXXX
+                +30 6974603592
               </p>
               <p>
                 <span className="font-semibold text-gray-900">Email:</span>{" "}
-                example@email.com
+                tcanancy@gmail.com
               </p>
               <p>
                 <span className="font-semibold text-gray-900">Check-in:</span>{" "}
@@ -239,8 +239,8 @@ export default function ApartmentPage() {
           </p>
 
           <div className="mt-6 space-y-3 text-sm sm:text-base text-gray-700">
-            <p>📞 +30 XXX XXX XXXX</p>
-            <p>✉️ example@email.com</p>
+            <p>📞 +30 6974603592</p>
+            <p>✉️ tcanancy@gmail.com</p>
             <p>🕒 Check-in: 15:00 | Check-out: 11:00</p>
           </div>
         </div>
