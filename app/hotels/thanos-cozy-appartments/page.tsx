@@ -138,11 +138,11 @@ export default function ApartmentPage() {
               </p>
               <p>
                 <span className="font-semibold text-gray-900">Phone:</span>{" "}
-                +30 XXX XXX XXXX
+                +30 6974603592
               </p>
               <p>
                 <span className="font-semibold text-gray-900">Email:</span>{" "}
-                example@email.com
+               tcanancy@gmail.com
               </p>
               <p>
                 <span className="font-semibold text-gray-900">Check-in:</span>{" "}
@@ -155,7 +155,7 @@ export default function ApartmentPage() {
             </div>
 
             <a
-              href="#reviews"
+              href="https://www.booking.com/hotel/gr/thanos-cozy-apartments.en-gb.html?aid=397594&label=gog235jc-10CAEoggI46AdIM1gDaFyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4Av2Ij88GwAIB0gIkNjI4OTI5MGEtOGEzNy00ZTg5LWIwZTgtOWQxMTcwZTRlZjc42AIB4AIB&sid=68f00793dd2d449b60f30b808935e305&checkin=2026-05-04&checkout=2026-05-08&dest_id=14571543&dest_type=hotel&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&soh=1&sr_order=popularity&srepoch=1776534673&srpvid=d3497d8676dc01f8&type=total&ucfs=1&#tab-reviews"
               className="mt-6 block w-full rounded-xl bg-orange-500 px-5 py-3 text-center font-medium text-white transition hover:bg-orange-600"
             >
               See Guest Reviews
@@ -234,7 +234,7 @@ export default function ApartmentPage() {
       </section>
 
       {/* REVIEWS */}
-      <section href="https://www.booking.com/hotel/gr/thanos-cozy-apartments.en-gb.html?aid=397594&label=gog235jc-10CAEoggI46AdIM1gDaFyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4Av2Ij88GwAIB0gIkNjI4OTI5MGEtOGEzNy00ZTg5LWIwZTgtOWQxMTcwZTRlZjc42AIB4AIB&sid=68f00793dd2d449b60f30b808935e305&checkin=2026-05-04&checkout=2026-05-08&dest_id=14571543&dest_type=hotel&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&soh=1&sr_order=popularity&srepoch=1776534673&srpvid=d3497d8676dc01f8&type=total&ucfs=1&#tab-reviews" className="bg-gray-900 py-12 text-white sm:py-16">
+      <section id= "#reviews" className="bg-gray-900 py-12 text-white sm:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold">Guest Reviews</h2>
 
@@ -272,8 +272,8 @@ export default function ApartmentPage() {
           </p>
 
           <div className="mt-6 space-y-3 text-sm text-gray-700 sm:text-base">
-            <p>📞 +30 XXX XXX XXXX</p>
-            <p>✉️ example@email.com</p>
+            <p>📞 +30 6974603592</p>
+            <p>✉️ tcanancy@gmail.com</p>
             <p>🕒 Check-in: 15:00 | Check-out: 11:00</p>
           </div>
         </div>
