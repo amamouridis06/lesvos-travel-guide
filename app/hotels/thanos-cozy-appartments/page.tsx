@@ -153,13 +153,6 @@ export default function ApartmentPage() {
                 11:00
               </p>
             </div>
-
-            {/* <a
-              href="https://www.booking.com/hotel/gr/thanos-cozy-apartments.en-gb.html?aid=397594&label=gog235jc-10CAEoggI46AdIM1gDaFyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4Av2Ij88GwAIB0gIkNjI4OTI5MGEtOGEzNy00ZTg5LWIwZTgtOWQxMTcwZTRlZjc42AIB4AIB&sid=68f00793dd2d449b60f30b808935e305&checkin=2026-05-04&checkout=2026-05-08&dest_id=14571543&dest_type=hotel&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&soh=1&sr_order=popularity&srepoch=1776534673&srpvid=d3497d8676dc01f8&type=total&ucfs=1&#tab-reviews"
-              className="mt-6 block w-full rounded-xl bg-orange-500 px-5 py-3 text-center font-medium text-white transition hover:bg-orange-600"
-            >
-              See Guest Reviews
-            </a> */}
           </aside>
         </div>
       </section>
@@ -303,11 +296,11 @@ export default function ApartmentPage() {
               ✕
             </button>
 
-            <img
+            {/* <img
               src={selectedImage}
               alt="Full view"
               className="max-h-[90vh] w-full rounded-2xl bg-white object-contain"
-            />
+            /> */}
           </div>
         </div>
       )}
