@@ -27,7 +27,7 @@ export default function MolyvosPage() {
       <section className="max-w-4xl mx-auto px-6 py-16 space-y-10">
 
         <div>
-          <h2 className="text-2xl font-semibold mb-4">Γιατί να επισκεφθείτε τον Μόλυβο</h2>
+          <h2 className="text-2xl font-semibold mb-4">Why visit Molivos?</h2>
           <p className="text-gray-700 leading-relaxed">
            A magical, old village that feels like it belongs to another era, with picturesque alleyways inviting you to wander through them. The locals are exceptionally warm and welcoming, and the small shops offer authentic tastes of traditional Greek cuisine.
 
@@ -38,7 +38,7 @@ export default function MolyvosPage() {
         </div>
 
         <div>
-          <h2 className="text-2xl font-semibold mb-4">Τι να δείτε</h2>
+          <h2 className="text-2xl font-semibold mb-4">Activities</h2>
           <ul className="list-disc list-inside text-gray-700 space-y-2">
             <li>The Castle of Molivos</li>
             <li>The picturesque alleys of the village</li>
