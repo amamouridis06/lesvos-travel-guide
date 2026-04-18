@@ -126,7 +126,7 @@ export default function SkalaKallonisPage() {
               </div>
               <div className="h-64 w-full">
                 <iframe
-                  src=""
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3268.7127752453366!2d26.207192726145344!3d39.20675477165979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ba92612321ace7%3A0xa00bd2f74c26dd0!2sSkala%20Kallonis!5e1!3m2!1sen!2sgr!4v1776511137373!5m2!1sen!2sgr"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
