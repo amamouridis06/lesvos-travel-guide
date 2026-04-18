@@ -12,7 +12,7 @@ const amenities: Amenity[] = [
   { label: "Coffee Machine" },
 ];
 
-export default function ApartmentPage(): JSX.Element {
+export default function ApartmentPage(){
   return (
     <div className="min-h-screen bg-white text-gray-800">
 
