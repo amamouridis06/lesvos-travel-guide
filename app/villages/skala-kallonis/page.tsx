@@ -16,7 +16,7 @@ export default function SkalaKallonisPage() {
               Skala Kallonis
             </h1>
             <p className="mt-2 text-gray-200 text-lg">
-              Where Tranquility Meets the Aegean
+              In the heart of Lesvos
             </p>
           </div>
         </div>
