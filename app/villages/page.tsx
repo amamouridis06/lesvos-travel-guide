@@ -10,7 +10,7 @@ const villages = [
   {
     name: "Molyvos (Mithymna)",
     description: "Medieval, picturesque, stone-built, romantic, sunsets",
-    image: "/molivos1.jpg",
+    image: "/molivos1.jpeg",
     href: "/villages/molivos",
   },
   {
