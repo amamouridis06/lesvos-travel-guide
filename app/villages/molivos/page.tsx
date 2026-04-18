@@ -1,7 +1,7 @@
 export const metadata = {
-  title: "Μόλυβος | Lesvos Travel Guide",
+  title: "Molivos | Lesvos Travel Guide",
   description:
-    "Ανακαλύψτε τον Μόλυβο, το μεσαιωνικό στολίδι της Λέσβου με κάστρο, παραλίες και γραφικά σοκάκια.",
+    "Explore Molivos: castle, beaches , restarurants and cafes",
 };
 
 export default function MolyvosPage() {
@@ -14,10 +14,10 @@ export default function MolyvosPage() {
         <div className="relative z-10 h-full flex items-end">
           <div className="max-w-6xl mx-auto px-6 pb-12">
             <h1 className="text-4xl md:text-5xl font-bold text-white">
-              Μόλυβος
+             Molivos
             </h1>
             <p className="text-gray-200 mt-2">
-              Μεσαιωνικό γραφικό χωριό της Λέσβου
+              Medieval picturesque village of Lesvos
             </p>
           </div>
         </div>
@@ -29,39 +29,41 @@ export default function MolyvosPage() {
         <div>
           <h2 className="text-2xl font-semibold mb-4">Γιατί να επισκεφθείτε τον Μόλυβο</h2>
           <p className="text-gray-700 leading-relaxed">
-            Ο Μόλυβος (ή Μήθυμνα) είναι ένα από τα πιο όμορφα και καλοδιατηρημένα
-            χωριά της Λέσβου. Τα πέτρινα σπίτια, τα στενά καλντερίμια και το
-            εντυπωσιακό μεσαιωνικό κάστρο δημιουργούν μια μοναδική ατμόσφαιρα.
+           A magical, old village that feels like it belongs to another era, with picturesque alleyways inviting you to wander through them. The locals are exceptionally warm and welcoming, and the small shops offer authentic tastes of traditional Greek cuisine.
+
+          Don’t forget to visit the castle, ideally in the afternoon, so you can enjoy the stunning sunset. There, you can relax with a coffee or a drink at the charming spot located on-site.
+
+          And if you’re not ready to end your stroll, continue exploring the village, where you’ll find wonderful restaurants serving fresh seafood and fish caught daily. Of course, no visit is complete without tasting a glass of fine Greek ouzo.
           </p>
         </div>
 
         <div>
           <h2 className="text-2xl font-semibold mb-4">Τι να δείτε</h2>
           <ul className="list-disc list-inside text-gray-700 space-y-2">
-            <li>Το Κάστρο του Μολύβου</li>
-            <li>Τα γραφικά σοκάκια του χωριού</li>
-            <li>Το λιμάνι και τα καφέ δίπλα στη θάλασσα</li>
-            <li>Η παραλία Μολύβου & Εφταλού</li>
+            <li>The Castle of Molivos</li>
+            <li>The picturesque alleys of the village</li>
+            <li>The port and coffee next to the port</li>
+            <li>The beach of Molivos & Eftalou</li>
           </ul>
         </div>
 
         <div>
-          <h2 className="text-2xl font-semibold mb-4">Ιδανικός για</h2>
+          <h2 className="text-2xl font-semibold mb-4">Ideal for</h2>
           <p className="text-gray-700">
-            Ζευγάρια, ρομαντικές αποδράσεις, χαλαρές διακοπές και όσους αγαπούν
-            την ιστορία και την αυθεντική αρχιτεκτονική.
+            Couples, romantic escapes, relaxed holidays and those who love
+            history and authentic architecture.
           </p>
         </div>
 
         {/* BACK BUTTON */}
-        <div>
+        {/* <div>
           <a
             href="/"
             className="inline-block mt-8 px-6 py-3 rounded-lg bg-yellow-600 text-white font-semibold hover:bg-yellow-700 transition"
           >
             ← Επιστροφή στην αρχική
           </a>
-        </div>
+        </div> */}
 
       </section>
     </main>
