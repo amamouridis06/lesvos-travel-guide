@@ -9,7 +9,7 @@ export default function MolyvosPage() {
     <main className="bg-neutral-100 text-neutral-900">
 
       {/* HERO */}
-      <section className="relative h-[70vh] bg-[url('/molivos.jpg')] bg-cover bg-center">
+      <section className="relative h-[70vh] bg-[url('/molivos1.jpg')] bg-cover bg-center">
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 h-full flex items-end">
           <div className="max-w-6xl mx-auto px-6 pb-12">
@@ -64,7 +64,7 @@ export default function MolyvosPage() {
             <h3 className="font-semibold mb-3">Location</h3>
             <div className="w-full h-48 rounded-lg overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6522.369986093671!2d26.1698681803955!3d39.36822513650014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ba84d0ca43c0c7%3A0x400bd2ce2b9b550!2sMithymna!5e1!3m2!1sen!2sgr!4v1776508666514!5m2!1sen!2sgr" width="400" height="300" style="border:0;"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6522.369986093671!2d26.1698681803955!3d39.36822513650014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ba84d0ca43c0c7%3A0x400bd2ce2b9b550!2sMithymna!5e1!3m2!1sen!2sgr!4v1776508666514!5m2!1sen!2sgr" 
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
