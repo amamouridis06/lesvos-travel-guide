@@ -68,12 +68,7 @@ export default function ApartmentPage() {
                 Book Now
               </button>
 
-              <a
-                href="#reviews"
-                className="rounded-xl border border-white/30 bg-white/10 px-6 py-3 text-center font-medium text-white backdrop-blur-sm transition hover:bg-white/20"
-              >
-                Read Reviews
-              </a>
+             
             </div>
           </div>
         </div>
@@ -153,12 +148,12 @@ export default function ApartmentPage() {
               </p>
             </div>
 
-            <a
+            {/* <a
               href="https://www.booking.com/hotel/gr/thanos-cozy-apartments.en-gb.html?aid=397594&label=gog235jc-10CAEoggI46AdIM1gDaFyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4Av2Ij88GwAIB0gIkNjI4OTI5MGEtOGEzNy00ZTg5LWIwZTgtOWQxMTcwZTRlZjc42AIB4AIB&sid=68f00793dd2d449b60f30b808935e305&checkin=2026-05-04&checkout=2026-05-08&dest_id=14571543&dest_type=hotel&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&soh=1&sr_order=popularity&srepoch=1776534673&srpvid=d3497d8676dc01f8&type=total&ucfs=1&#tab-reviews"
               className="mt-6 block w-full rounded-xl bg-orange-500 px-5 py-3 text-center font-medium text-white transition hover:bg-orange-600"
             >
               See Guest Reviews
-            </a>
+            </a> */}
           </aside>
         </div>
       </section>
@@ -258,6 +253,12 @@ export default function ApartmentPage() {
                 Lovely apartment with everything we needed. We would definitely stay again.
               </p>
             </div>
+            <a
+              href="https://www.booking.com/hotel/gr/thanos-cozy-apartments.en-gb.html?aid=397594&label=gog235jc-10CAEoggI46AdIM1gDaFyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4Av2Ij88GwAIB0gIkNjI4OTI5MGEtOGEzNy00ZTg5LWIwZTgtOWQxMTcwZTRlZjc42AIB4AIB&sid=68f00793dd2d449b60f30b808935e305&checkin=2026-05-04&checkout=2026-05-08&dest_id=14571543&dest_type=hotel&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&soh=1&sr_order=popularity&srepoch=1776534673&srpvid=d3497d8676dc01f8&type=total&ucfs=1&#tab-reviews"
+              className="mt-6 block w-full rounded-xl bg-orange-500 px-5 py-3 text-center font-medium text-white transition hover:bg-orange-600"
+            >
+              See Guest Reviews
+            </a>
           </div>
         </div>
       </section>
