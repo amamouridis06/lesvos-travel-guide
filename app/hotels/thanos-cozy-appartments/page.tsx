@@ -15,10 +15,15 @@ const amenities: Amenity[] = [
 ];
 
 const images = [
+  "thanoshouse.jpg",
   "/thanosliv.jpg",
   "/thanosbath.jpg",
+  "/thanostable.jpg",
   "/thanosk.jpg",
+  "/thanosbed2.jpg",
+  "/thanosb.jpg",
 ];
+
 
 export default function ApartmentPage() {
   const [index, setIndex] = useState(0);
