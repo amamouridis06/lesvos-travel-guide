@@ -14,9 +14,9 @@ const amenities: Amenity[] = [
 ];
 
 const images = [
-  "/thanosliv.jpeg",
-  "/thanosbath.jpeg",
-  "/thanosk.jpeg",
+  "/thanosliv.jpg",
+  "/thanosbath.jpg",
+  "/thanosk.jpg",
 ];
 
 export default function ApartmentPage() {
@@ -36,7 +36,7 @@ export default function ApartmentPage() {
       <section
         className="min-h-[70vh] sm:min-h-[80vh] flex items-center bg-cover bg-center"
         style={{
-          backgroundImage: "url('/thanosbackround.jpeg')",
+          backgroundImage: "url('/thanosbackround.jpg')",
         }}
       >
         <div className="bg-black/55 w-full min-h-[70vh] sm:min-h-[80vh] flex items-center">
