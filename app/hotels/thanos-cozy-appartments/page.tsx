@@ -280,7 +280,7 @@ export default function ApartmentPage() {
       </section>
 
       {/* IMAGE MODAL */}
-      {selectedImage && (
+      {/* /* {selectedImage && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
           onClick={() => setSelectedImage(null)}
@@ -296,14 +296,10 @@ export default function ApartmentPage() {
               ✕
             </button>
 
-            {/* <img
-              src={selectedImage}
-              alt="Full view"
-              className="max-h-[90vh] w-full rounded-2xl bg-white object-contain"
-            /> */}
+            
           </div>
         </div>
-      )}
+      )} */ */}
     </div>
   );
 }
