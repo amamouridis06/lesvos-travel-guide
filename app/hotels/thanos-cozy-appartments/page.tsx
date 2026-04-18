@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState } from "react";
 
 type Amenity = {
@@ -6,11 +7,11 @@ type Amenity = {
 };
 
 const amenities: Amenity[] = [
-  { label: "2 bedrooms" },
-  { label: "2 bathrooms" },
-  { label: "Kitchen" },
-  { label: "Living room" },
-  { label: "Balcony" },
+  { label: "2 Bedrooms" },
+  { label: "2 Bathrooms" },
+  { label: "Fully Equipped Kitchen" },
+  { label: "Spacious Living Room" },
+  { label: "Private Balcony" },
 ];
 
 const images = [
@@ -34,70 +35,143 @@ export default function ApartmentPage() {
     <div className="min-h-screen bg-white text-gray-800">
       {/* HERO */}
       <section
-        className="min-h-[70vh] sm:min-h-[80vh] flex items-center bg-cover bg-center"
+        className="relative min-h-[78vh] bg-cover bg-center"
         style={{
           backgroundImage: "url('/thanosbackround.jpg')",
         }}
       >
-        <div className="bg-black/55 w-full min-h-[70vh] sm:min-h-[80vh] flex items-center">
-          <div className="max-w-6xl mx-auto w-full px-4 sm:px-6 lg:px-8 text-white">
-            <div className="max-w-2xl">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight">
-                Thanos Cozy Apartments
-              </h1>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/55 to-black/30" />
+        <div className="relative mx-auto flex min-h-[78vh] max-w-7xl items-center px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl text-white">
+            <p className="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-orange-300">
+              Cozy Stay in Lesvos
+            </p>
 
-              <p className="text-base sm:text-lg md:text-xl mb-4 text-white/90">
-                Modern apartment near Skala Kallonis square
-              </p>
+            <h1 className="text-4xl font-bold leading-tight sm:text-5xl md:text-6xl">
+              Thanos Cozy Apartments
+            </h1>
 
-              <div className="mb-6 text-sm sm:text-base text-white/90">
-                📍 Skala Kallonis, Lesvos
-              </div>
+            <p className="mt-5 max-w-2xl text-base leading-7 text-white/90 sm:text-lg">
+              A modern and comfortable apartment in the heart of Skala Kallonis,
+              ideal for relaxing holidays, family stays, and easy access to the
+              local square, restaurants, and nearby beaches.
+            </p>
 
-              <button className="bg-orange-500 hover:bg-orange-600 transition px-5 sm:px-6 py-3 rounded-xl text-sm sm:text-base font-medium w-full sm:w-auto">
+            <div className="mt-5 text-sm sm:text-base text-white/90">
+              📍 Skala Kallonis, Lesvos
+            </div>
+
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <button className="rounded-xl bg-orange-500 px-6 py-3 font-medium text-white transition hover:bg-orange-600">
                 Book Now
+              </button>
+              <button className="rounded-xl border border-white/30 bg-white/10 px-6 py-3 font-medium text-white backdrop-blur-sm transition hover:bg-white/20">
+                View Gallery
               </button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* FACILITIES */}
-      <section className="py-10 sm:py-12 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-        <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-center sm:text-left">
-          Facilities
-        </h2>
+      {/* OVERVIEW + SIDEBAR */}
+      <section className="py-12 sm:py-16">
+        <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[1.4fr_0.8fr] lg:px-8">
+          {/* LEFT CONTENT */}
+          <div>
+            <h2 className="text-3xl font-bold text-gray-900">About the Apartment</h2>
+            <p className="mt-5 text-base leading-8 text-gray-600">
+              Thanos Cozy Apartments offers a warm and elegant stay in one of the
+              most convenient locations in Skala Kallonis. Designed for comfort and
+              simplicity, the apartment includes spacious indoor areas, modern
+              furnishings, and everything needed for a pleasant short or extended stay.
+            </p>
+            <p className="mt-4 text-base leading-8 text-gray-600">
+              It is ideal for couples, families, or small groups looking for a quiet
+              place close to the village center, with easy access to local shops,
+              tavernas, and the coastal area.
+            </p>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
-          {amenities.map((item, i) => (
-            <div
-              key={i}
-              className="text-center bg-gray-100 rounded-xl p-4 sm:p-5 shadow-sm"
-            >
-              <p className="text-sm sm:text-base font-medium">{item.label}</p>
+            {/* FACILITIES */}
+            <div className="mt-10">
+              <h3 className="text-2xl font-semibold text-gray-900">Facilities</h3>
+              <div className="mt-5 grid grid-cols-2 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {amenities.map((item, i) => (
+                  <div
+                    key={i}
+                    className="rounded-2xl border border-gray-200 bg-gray-50 p-4 text-sm font-medium text-gray-700 shadow-sm"
+                  >
+                    {item.label}
+                  </div>
+                ))}
+              </div>
             </div>
-          ))}
+          </div>
+
+          {/* SIDEBAR */}
+          <aside className="h-fit rounded-3xl border border-gray-200 bg-white p-5 shadow-lg">
+            <h3 className="text-xl font-semibold text-gray-900">Location & Info</h3>
+
+            <div className="mt-4 overflow-hidden rounded-2xl border border-gray-200">
+              <iframe
+                title="Map of Skala Kallonis"
+                src="https://www.google.com/maps?q=Skala%20Kallonis%20Lesvos&z=14&output=embed"
+                className="h-64 w-full"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+
+            <div className="mt-5 space-y-3 text-sm text-gray-600">
+              <p>
+                <span className="font-semibold text-gray-900">Address:</span>{" "}
+                Skala Kallonis, Lesvos
+              </p>
+              <p>
+                <span className="font-semibold text-gray-900">Phone:</span>{" "}
+                +30 XXX XXX XXXX
+              </p>
+              <p>
+                <span className="font-semibold text-gray-900">Email:</span>{" "}
+                example@email.com
+              </p>
+              <p>
+                <span className="font-semibold text-gray-900">Check-in:</span>{" "}
+                15:00
+              </p>
+              <p>
+                <span className="font-semibold text-gray-900">Check-out:</span>{" "}
+                11:00
+              </p>
+            </div>
+
+            <button className="mt-6 w-full rounded-xl bg-orange-500 px-5 py-3 font-medium text-white transition hover:bg-orange-600">
+              Contact for Availability
+            </button>
+          </aside>
         </div>
       </section>
 
       {/* GALLERY / CAROUSEL */}
-      <section className="bg-gray-100 py-10 sm:py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">
-            Gallery
-          </h2>
+      <section className="bg-gray-100 py-12 sm:py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-8 text-center">
+            <h2 className="text-3xl font-bold text-gray-900">Gallery</h2>
+            <p className="mt-3 text-gray-600">
+              A quick look at the apartment interiors and comfort.
+            </p>
+          </div>
 
-          <div className="relative max-w-3xl mx-auto">
+          <div className="relative mx-auto max-w-4xl">
             <img
               src={images[index]}
-              className="w-full h-[240px] sm:h-[320px] md:h-[420px] object-cover rounded-2xl shadow-md"
+              className="h-[260px] w-full rounded-3xl object-cover shadow-lg sm:h-[360px] md:h-[500px]"
               alt={`Apartment image ${index + 1}`}
             />
 
             <button
               onClick={prev}
               aria-label="Previous image"
-              className="absolute left-3 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 w-10 h-10 sm:w-12 sm:h-12 rounded-full shadow flex items-center justify-center"
+              className="absolute left-3 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-gray-800 shadow transition hover:bg-white"
             >
               ◀
             </button>
@@ -105,14 +179,13 @@ export default function ApartmentPage() {
             <button
               onClick={next}
               aria-label="Next image"
-              className="absolute right-3 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 w-10 h-10 sm:w-12 sm:h-12 rounded-full shadow flex items-center justify-center"
+              className="absolute right-3 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-gray-800 shadow transition hover:bg-white"
             >
               ▶
             </button>
           </div>
 
-          {/* dots */}
-          <div className="flex justify-center gap-2 mt-5">
+          <div className="mt-5 flex justify-center gap-2">
             {images.map((_, i) => (
               <button
                 key={i}
@@ -128,31 +201,29 @@ export default function ApartmentPage() {
       </section>
 
       {/* REVIEWS */}
-      <section className="bg-gray-900 text-white py-10 sm:py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center sm:text-left">
-            Reviews
-          </h2>
+      <section className="bg-gray-900 py-12 text-white sm:py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold">Guest Reviews</h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
-            <div className="bg-white/5 rounded-2xl p-5">
-              <div className="mb-2 text-lg">⭐⭐⭐⭐⭐</div>
-              <p className="text-sm sm:text-base text-white/90">
-                Τέλειο μέρος, πολύ καθαρό!
+          <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-3">
+            <div className="rounded-3xl bg-white/5 p-6">
+              <div className="mb-3 text-lg">⭐⭐⭐⭐⭐</div>
+              <p className="text-white/90">
+                Very clean, comfortable, and in a great location near everything we needed.
               </p>
             </div>
 
-            <div className="bg-white/5 rounded-2xl p-5">
-              <div className="mb-2 text-lg">⭐⭐⭐⭐⭐</div>
-              <p className="text-sm sm:text-base text-white/90">
-                Ιδανικό για διακοπές!
+            <div className="rounded-3xl bg-white/5 p-6">
+              <div className="mb-3 text-lg">⭐⭐⭐⭐⭐</div>
+              <p className="text-white/90">
+                Perfect for a family stay. Quiet area, spacious rooms, and easy access to the beach.
               </p>
             </div>
 
-            <div className="bg-white/5 rounded-2xl p-5">
-              <div className="mb-2 text-lg">⭐⭐⭐⭐⭐</div>
-              <p className="text-sm sm:text-base text-white/90">
-                Θα ξαναέρθουμε!
+            <div className="rounded-3xl bg-white/5 p-6">
+              <div className="mb-3 text-lg">⭐⭐⭐⭐⭐</div>
+              <p className="text-white/90">
+                Lovely apartment with everything we needed. We would definitely stay again.
               </p>
             </div>
           </div>
@@ -160,14 +231,17 @@ export default function ApartmentPage() {
       </section>
 
       {/* CONTACT */}
-      <section className="py-10 sm:py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4">Contact</h2>
+      <section className="py-12 sm:py-16">
+        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900">Contact</h2>
+          <p className="mt-3 text-gray-600">
+            For bookings, availability, and more information, get in touch with us.
+          </p>
 
-          <div className="space-y-3 text-sm sm:text-base">
-            <p>📞 +30 6974603592 </p>
-            <p>✉️ tcanancy@gmail.com</p>
-            <p>🕒 Check-in 15:00</p>
+          <div className="mt-6 space-y-3 text-sm sm:text-base text-gray-700">
+            <p>📞 +30 XXX XXX XXXX</p>
+            <p>✉️ example@email.com</p>
+            <p>🕒 Check-in: 15:00 | Check-out: 11:00</p>
           </div>
         </div>
       </section>
