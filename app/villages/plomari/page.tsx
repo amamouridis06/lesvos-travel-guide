@@ -111,16 +111,7 @@ export default function PlomariPage() {
               />
             </div>
 
-            <p className="mt-2 text-xs text-gray-500">
-              <a
-                href="https://www.google.com/maps/place/Πλωμάρι,+Ελλάδα"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:underline"
-              >
-                Άνοιγμα στο Google Maps →
-              </a>
-            </p>
+         
           </div>
 
           {/* Tips */}
