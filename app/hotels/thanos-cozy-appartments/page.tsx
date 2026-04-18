@@ -296,7 +296,11 @@ export default function ApartmentPage() {
               ✕
             </button>
 
-            
+             { <img
+              src={selectedImage}
+              alt="Full view"
+              className="max-h-[90vh] w-full rounded-2xl bg-white object-contain"
+            /> }
           </div>
         </div>
       )} 
