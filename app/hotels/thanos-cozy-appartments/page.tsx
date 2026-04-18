@@ -124,8 +124,7 @@ export default function ApartmentPage() {
             <div className="mt-4 overflow-hidden rounded-2xl border border-gray-200">
               <iframe
                 title="Map of Skala Kallonis"
-                src="https://www.google.com/maps?q=Skala%20Kallonis%20Lesvos&z=14&output=embed"
-                className="h-64 w-full"
+               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2071.5071451047647!2d26.208322117000183!3d39.20674076014447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ba93ec07a5c773%3A0x4dca5510e8276b2e!2sThanos%20Cozy%20Apartments!5e1!3m2!1sen!2sgr!4v1776536090791!5m2!1sen!2sgr" 
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               />
