@@ -79,11 +79,11 @@ export default function ApartmentPage() {
           <div>
             <h2 className="text-3xl font-bold text-gray-900">About the Apartment</h2>
             <p className="mt-5 text-base leading-8 text-gray-600">
-              <li>Comfortable Accommodation: Thanos Cozy Apartments in Skala Kallonis offers a sun terrace and free WiFi. Each apartment features air-conditioning, a terrace, and a balcony with sea views.</li>
+              <li><strong>Comfortable Accommodation</strong>: Thanos Cozy Apartments in Skala Kallonis offers a sun terrace and free WiFi. Each apartment features air-conditioning, a terrace, and a balcony with sea views.</li>
 
-                <li>Modern Amenities: Guests enjoy a kitchenette, private bathroom, washing machine, and a work desk. Additional facilities include a paid shuttle service, 24-hour front desk, daily housekeeping, and luggage storage.</li>
+                <li><strong>Modern Amenities</strong>: Guests enjoy a kitchenette, private bathroom, washing machine, and a work desk. Additional facilities include a paid shuttle service, 24-hour front desk, daily housekeeping, and luggage storage.</li>
 
-               <li>Prime Location: Skala Kallonis Beach is a 4-minute walk away. Nearby attractions include Agia Paraskevi and Olive Museum, each 10 km from the property. Mytilene International Airport is 46 km distant.</li>
+               <li><strong>Prime Location</strong>: Skala Kallonis Beach is a 4-minute walk away. Nearby attractions include Agia Paraskevi and Olive Museum, each 10 km from the property. Mytilene International Airport is 46 km distant.</li>
             </p>
             <p className="mt-4 text-base leading-8 text-gray-600">
               It is ideal for couples, families, or small groups looking for a quiet
