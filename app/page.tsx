@@ -52,11 +52,11 @@ const destinations = [
 
 const hotels = [
   {
-    name: "Recommended Hotel 1",
+    name: "Thanos Cozy Appartment",
     area: "Molyvos",
-    desc: "A beautiful stay with sea views and authentic island atmosphere.",
-    img: "/hotel1.jpg",
-    href: "/hotels/hotel-1",
+    desc: "A beautiful apartment near the Skalla Kallonis Beach",
+    img: "/thanosbed2.jpg",
+    href: "/hotels/thanos-cozy-appartments",
   },
   {
     name: "Recommended Hotel 2",
