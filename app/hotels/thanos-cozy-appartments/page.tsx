@@ -5,12 +5,30 @@ type Amenity = {
 };
 
 const amenities: Amenity[] = [
-  { label: "Free Wi-Fi" },
+  { label: "2 bedrooms" },
+  { label: "2 bathrooms" },
   { label: "Kitchen" },
-  { label: "Nearby Beach" },
-  { label: "Parking" },
-  { label: "Coffee Machine" },
+  { label: "Living room" },
+  { label: "Balcon" },
 ];
+
+const images = [
+  "/thanosliv.jpeg",
+  "/thanosbath.jpeg",
+  "/thanosk.jpeg",
+];
+
+export default function RoomsCarousel() {
+  const [index, setIndex] = useState(0);
+
+  const next = () => {
+    setIndex((prev) => (prev + 1) % images.length);
+  };
+
+  const prev = () => {
+    setIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
+
 
 export default function ApartmentPage(){
   return (
@@ -21,30 +39,30 @@ export default function ApartmentPage(){
         className="h-[80vh] flex items-center bg-cover bg-center"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85')",
+            "url('/thanosbackround.jpeg')",
         }}
       >
         <div className="bg-black/50 w-full h-full flex items-center">
           <div className="max-w-5xl mx-auto px-6 text-white">
-            <h1 className="text-5xl font-bold mb-4">Azure Bay Apartment</h1>
+            <h1 className="text-5xl font-bold mb-4">Thanos Cozy Appartments</h1>
             <p className="text-lg mb-4">
-              Μοντέρνο apartment δίπλα στη θάλασσα για άνετη διαμονή.
+              Montern appartment near the Skalla Kallonis square
             </p>
 
             <div className="mb-6">
-              📍 Πάρος, Ελλάδα
+              📍 Skalla Kallonis, Lesvos
             </div>
 
             <button className="bg-orange-500 px-6 py-3 rounded-xl">
-              Κάνε Κράτηση
+              Book
             </button>
           </div>
         </div>
       </section>
 
-      {/* AMENITIES */}
+      {/*Facilities */}
       <section className="py-12 px-6 max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold mb-6">Παροχές</h2>
+        <h2 className="text-3xl font-bold mb-6">Facilities</h2>
 
         <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
           {amenities.map((item, i) => (
@@ -57,55 +75,36 @@ export default function ApartmentPage(){
 
       {/* ROOMS */}
       <section className="bg-gray-100 py-12 px-6">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8">Χώροι</h2>
+        <div className="relative max-w-xl mx-auto">
 
-          <div className="grid md:grid-cols-3 gap-6">
-            
-            <div className="bg-white rounded-xl shadow overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85"
-                alt="Living room"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-4">
-                <h3 className="font-semibold">Living Room</h3>
-                <p>Άνετο καθιστικό με καναπέ και θέα.</p>
-              </div>
-            </div>
+      <img
+        src={images[index]}
+        className="w-full h-64 object-cover rounded-xl"
+        alt="Room"
+      />
 
-            <div className="bg-white rounded-xl shadow overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267"
-                alt="Bedroom"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-4">
-                <h3 className="font-semibold">Bedroom</h3>
-                <p>Ήσυχο δωμάτιο για ξεκούραση.</p>
-              </div>
-            </div>
+      {/* Buttons */}
+      <button
+        onClick={prev}
+        className="absolute left-2 top-1/2 -translate-y-1/2 bg-white px-3 py-1 rounded"
+      >
+        ◀
+      </button>
 
-            <div className="bg-white rounded-xl shadow overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1566665797739-1674de7a421a"
-                alt="Kitchen"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-4">
-                <h3 className="font-semibold">Kitchen</h3>
-                <p>Πλήρως εξοπλισμένη κουζίνα.</p>
-              </div>
-            </div>
+      <button
+        onClick={next}
+        className="absolute right-2 top-1/2 -translate-y-1/2 bg-white px-3 py-1 rounded"
+      >
+        ▶
+      </button>
 
-          </div>
-        </div>
+    </div>
       </section>
 
       {/* REVIEWS */}
       <section className="bg-gray-900 text-white py-12 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8">Κριτικές</h2>
+          <h2 className="text-3xl font-bold mb-8">Reviews</h2>
 
           <div className="grid md:grid-cols-3 gap-6">
             <div>
@@ -128,11 +127,11 @@ export default function ApartmentPage(){
 
       {/* CONTACT */}
       <section className="py-12 px-6 text-center">
-        <h2 className="text-3xl font-bold mb-4">Επικοινωνία</h2>
+        <h2 className="text-3xl font-bold mb-4">Contact/h2>
 
         <div className="space-y-2">
-          <p>📞 +30 210 1234567</p>
-          <p>✉️ stay@email.com</p>
+          <p>📞 +30 6974603592</p>
+          <p>✉️ tcanancy@gmail.com</p>
           <p>🕒 Check-in 15:00</p>
         </div>
       </section>
