@@ -15,7 +15,7 @@ const amenities: Amenity[] = [
 ];
 
 const images = [
-  "thanoshouse.jpg",
+  "/thanoshouse.jpg",
   "/thanosliv.jpg",
   "/thanosbath.jpg",
   "/thanostable.jpg",
