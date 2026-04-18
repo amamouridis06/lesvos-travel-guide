@@ -234,23 +234,24 @@ export default function ApartmentPage() {
 
           <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-3">
             <div className="rounded-3xl bg-white/5 p-6">
-              <div className="mb-3 text-lg">⭐⭐⭐⭐⭐</div>
+              <div className="mb-3 text-lg">⭐⭐⭐⭐⭐ - Fadime </div>
               <p className="text-white/90">
-                Very clean, comfortable, and in a great location near everything we needed.
+               The house was extremely clean and had been cleaned and arranged after we went out. The items in the kitchen were so beautiful that I would want to use them in my own home. The personal care products she put in the bathroom were very good and of good quality. I even found the shower gel at the supermarket and bought it when I left.
+              The landlady was sweet, very helpful and made us feel very comfortable. The house was like a junction point of many places, so it could definitely be preferred as a location.
               </p>
             </div>
 
             <div className="rounded-3xl bg-white/5 p-6">
-              <div className="mb-3 text-lg">⭐⭐⭐⭐⭐</div>
+              <div className="mb-3 text-lg">⭐⭐⭐⭐⭐ - Spyridoula</div>
               <p className="text-white/90">
-                Perfect for a family stay. Quiet area, spacious rooms, and easy access to the beach.
+                Everything was wonderful, the accommodation was spotlessly clean, beautiful and the bed very comfortable!
               </p>
             </div>
 
             <div className="rounded-3xl bg-white/5 p-6">
-              <div className="mb-3 text-lg">⭐⭐⭐⭐⭐</div>
+              <div className="mb-3 text-lg">⭐⭐⭐⭐⭐ - Hüseyin</div>
               <p className="text-white/90">
-                Lovely apartment with everything we needed. We would definitely stay again.
+               Our hostess, Nancy, was a very sweet and helpful lady. His own house was also very close to the place so it was easy to reach in any situation. The rooms were very clean and tidy and everything was almost brand new. The cookies he left as a snack with his coffee were a very thoughtful move. It was also one of the most affordable facilities in terms of price. Considering its location in the middle of the island, it was easy to reach other areas.
               </p>
             </div>
             <a
