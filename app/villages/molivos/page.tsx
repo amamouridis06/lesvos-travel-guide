@@ -55,6 +55,46 @@ export default function MolyvosPage() {
           </p>
         </div>
 
+
+        {/* SIDEBAR */}
+        <aside className="space-y-8">
+
+          {/* Map */}
+          <div className="bg-white rounded-xl shadow p-4">
+            <h3 className="font-semibold mb-3">Location</h3>
+            <div className="w-full h-48 rounded-lg overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6522.369986093671!2d26.1698681803955!3d39.36822513650014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ba84d0ca43c0c7%3A0x400bd2ce2b9b550!2sMithymna!5e1!3m2!1sen!2sgr!4v1776508666514!5m2!1sen!2sgr" width="400" height="300" style="border:0;"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+
+         
+          </div>
+
+          {/* Tips */}
+          <div className="bg-white rounded-xl shadow p-4">
+            <h3 className="font-semibold mb-3">Tips</h3>
+            <ul className="text-sm space-y-2 text-gray-700">
+              <li>🚗 Easy access by car</li>
+              <li>☀️ Ideal for afternoon walks</li>
+              <li>🍽 Try mezes with ouzo </li>
+            </ul>
+          </div>
+           {/*Nearby */}
+          <div className="bg-white rounded-xl shadow p-4">
+            <h3 className="font-semibold mb-3">Nearby Villages</h3>
+            <ul className="text-sm space-y-2 text-gray-700">
+              <li>Vafeios</li>
+              <li>Petra</li>
+              <li>Petri</li>
+            </ul>
+          </div>
+        </aside>
         {/* BACK BUTTON */}
         {/* <div>
           <a
