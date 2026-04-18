@@ -56,7 +56,7 @@ export default function AboutPage() {
         <section className="mb-12">
           <h2 className="text-3xl font-bold mb-4">Who Created This Website?</h2>
           <p className="text-lg text-gray-700 leading-relaxed">
-            This project was designed and developed by <strong>X</strong>, 
+            This project was designed and developed by <strong>Angelos Mamouridis</strong>, 
             with the goal of building a modern digital guide that supports local businesses 
             and enhances the travel experience for visitors.
           </p>
