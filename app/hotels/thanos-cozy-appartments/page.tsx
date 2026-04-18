@@ -22,6 +22,7 @@ const images = [
 
 export default function ApartmentPage() {
   const [index, setIndex] = useState(0);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const next = () => {
     setIndex((prev) => (prev + 1) % images.length);
@@ -41,6 +42,7 @@ export default function ApartmentPage() {
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/55 to-black/30" />
+
         <div className="relative mx-auto flex min-h-[78vh] max-w-7xl items-center px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl text-white">
             <p className="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-orange-300">
@@ -52,11 +54,12 @@ export default function ApartmentPage() {
             </h1>
 
             <p className="mt-5 max-w-2xl text-base leading-7 text-white/90 sm:text-lg">
-              A modern and comfortable apartment for relaxing holidays, family stays, and easy access to the
+              A modern and comfortable apartment in the heart of Skala Kallonis,
+              ideal for relaxing holidays, family stays, and easy access to the
               local square, restaurants, and nearby beaches.
             </p>
 
-            <div className="mt-5 text-sm sm:text-base text-white/90">
+            <div className="mt-5 text-sm text-white/90 sm:text-base">
               📍 Skala Kallonis, Lesvos
             </div>
 
@@ -64,9 +67,13 @@ export default function ApartmentPage() {
               <button className="rounded-xl bg-orange-500 px-6 py-3 font-medium text-white transition hover:bg-orange-600">
                 Book Now
               </button>
-              <button className="rounded-xl border border-white/30 bg-white/10 px-6 py-3 font-medium text-white backdrop-blur-sm transition hover:bg-white/20">
-                View Gallery
-              </button>
+
+              <a
+                href="#reviews"
+                className="rounded-xl border border-white/30 bg-white/10 px-6 py-3 text-center font-medium text-white backdrop-blur-sm transition hover:bg-white/20"
+              >
+                Read Reviews
+              </a>
             </div>
           </div>
         </div>
@@ -75,16 +82,18 @@ export default function ApartmentPage() {
       {/* OVERVIEW + SIDEBAR */}
       <section className="py-12 sm:py-16">
         <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[1.4fr_0.8fr] lg:px-8">
-          {/* LEFT CONTENT */}
           <div>
-            <h2 className="text-3xl font-bold text-gray-900">About the Apartment</h2>
+            <h2 className="text-3xl font-bold text-gray-900">
+              About the Apartment
+            </h2>
+
             <p className="mt-5 text-base leading-8 text-gray-600">
-              <li><strong>Comfortable Accommodation</strong>: Thanos Cozy Apartments in Skala Kallonis offers a sun terrace and free WiFi. Each apartment features air-conditioning, a terrace, and a balcony with sea views.</li>
-
-                <li><strong>Modern Amenities</strong>: Guests enjoy a kitchenette, private bathroom, washing machine, and a work desk. Additional facilities include a paid shuttle service, 24-hour front desk, daily housekeeping, and luggage storage.</li>
-
-               <li><strong>Prime Location</strong>: Skala Kallonis Beach is a 4-minute walk away. Nearby attractions include Agia Paraskevi and Olive Museum, each 10 km from the property. Mytilene International Airport is 46 km distant.</li>
+              Thanos Cozy Apartments offers a warm and elegant stay in one of the
+              most convenient locations in Skala Kallonis. Designed for comfort and
+              simplicity, the apartment includes spacious indoor areas, modern
+              furnishings, and everything needed for a pleasant short or extended stay.
             </p>
+
             <p className="mt-4 text-base leading-8 text-gray-600">
               It is ideal for couples, families, or small groups looking for a quiet
               place close to the village center, with easy access to local shops,
@@ -94,6 +103,7 @@ export default function ApartmentPage() {
             {/* FACILITIES */}
             <div className="mt-10">
               <h3 className="text-2xl font-semibold text-gray-900">Facilities</h3>
+
               <div className="mt-5 grid grid-cols-2 gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {amenities.map((item, i) => (
                   <div
@@ -114,7 +124,7 @@ export default function ApartmentPage() {
             <div className="mt-4 overflow-hidden rounded-2xl border border-gray-200">
               <iframe
                 title="Map of Skala Kallonis"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2071.5071451047647!2d26.208322117000183!3d39.20674076014447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ba93ec07a5c773%3A0x4dca5510e8276b2e!2sThanos%20Cozy%20Apartments!5e1!3m2!1sen!2sgr!4v1776534581632!5m2!1sen!2sgr" 
+                src="https://www.google.com/maps?q=Skala%20Kallonis%20Lesvos&z=14&output=embed"
                 className="h-64 w-full"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -128,11 +138,11 @@ export default function ApartmentPage() {
               </p>
               <p>
                 <span className="font-semibold text-gray-900">Phone:</span>{" "}
-                +30 6974603592
+                +30 XXX XXX XXXX
               </p>
               <p>
                 <span className="font-semibold text-gray-900">Email:</span>{" "}
-                tcanancy@gmail.com
+                example@email.com
               </p>
               <p>
                 <span className="font-semibold text-gray-900">Check-in:</span>{" "}
@@ -144,9 +154,12 @@ export default function ApartmentPage() {
               </p>
             </div>
 
-            <button className="mt-6 w-full rounded-xl bg-orange-500 px-5 py-3 font-medium text-white transition hover:bg-orange-600">
-              Contact for Availability
-            </button>
+            <a
+              href="#reviews"
+              className="mt-6 block w-full rounded-xl bg-orange-500 px-5 py-3 text-center font-medium text-white transition hover:bg-orange-600"
+            >
+              See Guest Reviews
+            </a>
           </aside>
         </div>
       </section>
@@ -164,8 +177,9 @@ export default function ApartmentPage() {
           <div className="relative mx-auto max-w-4xl">
             <img
               src={images[index]}
-              className="h-[260px] w-full rounded-3xl object-cover shadow-lg sm:h-[360px] md:h-[500px]"
+              className="h-[260px] w-full cursor-pointer rounded-3xl object-cover shadow-lg sm:h-[360px] md:h-[500px]"
               alt={`Apartment image ${index + 1}`}
+              onClick={() => setSelectedImage(images[index])}
             />
 
             <button
@@ -197,11 +211,30 @@ export default function ApartmentPage() {
               />
             ))}
           </div>
+
+          <div className="mx-auto mt-6 grid max-w-4xl grid-cols-3 gap-3 sm:gap-4">
+            {images.map((image, i) => (
+              <button
+                key={i}
+                onClick={() => {
+                  setIndex(i);
+                  setSelectedImage(image);
+                }}
+                className="overflow-hidden rounded-2xl"
+              >
+                <img
+                  src={image}
+                  alt={`Thumbnail ${i + 1}`}
+                  className="h-24 w-full object-cover transition hover:scale-105"
+                />
+              </button>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* REVIEWS */}
-      <section className="bg-gray-900 py-12 text-white sm:py-16">
+      <section id="reviews" className="bg-gray-900 py-12 text-white sm:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold">Guest Reviews</h2>
 
@@ -238,13 +271,39 @@ export default function ApartmentPage() {
             For bookings, availability, and more information, get in touch with us.
           </p>
 
-          <div className="mt-6 space-y-3 text-sm sm:text-base text-gray-700">
-            <p>📞 +30 6974603592</p>
-            <p>✉️ tcanancy@gmail.com</p>
+          <div className="mt-6 space-y-3 text-sm text-gray-700 sm:text-base">
+            <p>📞 +30 XXX XXX XXXX</p>
+            <p>✉️ example@email.com</p>
             <p>🕒 Check-in: 15:00 | Check-out: 11:00</p>
           </div>
         </div>
       </section>
+
+      {/* IMAGE MODAL */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
+          onClick={() => setSelectedImage(null)}
+        >
+          <div
+            className="relative w-full max-w-6xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setSelectedImage(null)}
+              className="absolute right-2 top-2 z-10 rounded-full bg-white px-3 py-1 text-black shadow"
+            >
+              ✕
+            </button>
+
+            <img
+              src={selectedImage}
+              alt="Full view"
+              className="max-h-[90vh] w-full rounded-2xl bg-white object-contain"
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
