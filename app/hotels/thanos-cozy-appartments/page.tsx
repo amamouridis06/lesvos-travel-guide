@@ -44,7 +44,7 @@ export default function ApartmentPage() {
       <section
         className="relative min-h-[65vh] bg-cover bg-center sm:min-h-[72vh] lg:min-h-[78vh]"
         style={{
-          backgroundImage: "url('/thanosbackround.jpg')",
+          backgroundImage: "url('/thanosliv.jpg')",
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/35" />
