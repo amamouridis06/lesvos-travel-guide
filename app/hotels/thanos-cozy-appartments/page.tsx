@@ -326,7 +326,7 @@ export default function ApartmentPage() {
           <div className="mt-6 space-y-3 text-sm text-white sm:text-base">
             <p>📞 +30 6974603592</p>
             <p>✉️ tcanancy@gmail.com</p>
-            <p>🕒 Check-in: 15:00 | Check-out: 11:00</p>
+            <p>🕒 Check-in: From 15:00 to 23:00 | Check-out: From 8:00 to 10:00</p>
           </div>
         </div>
       </section>
