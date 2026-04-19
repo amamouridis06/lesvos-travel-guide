@@ -104,7 +104,7 @@ export default function FoodPage() {
 
       {/* CATEGORIES */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-14 md:py-16">
-        <h2 className="text-2xl font-semibold mb-8">Κατηγορίες</h2>
+        <h2 className="text-2xl font-semibold mb-8">Categories</h2>
 
         <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6">
           {[
