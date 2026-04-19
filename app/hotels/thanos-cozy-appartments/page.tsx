@@ -141,7 +141,6 @@ export default function ApartmentPage() {
               See more facilites in Booking.com
             </a>
           </div>
-          </div>
           </section>
 
           {/* SIDEBAR */}
