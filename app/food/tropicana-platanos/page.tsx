@@ -158,62 +158,69 @@ export default function LimanakiPamfilonPage() {
         {/* ===== SIDEBAR ===== */}
         <aside className="space-y-10">
 
-          <div className="bg-white rounded-xl shadow p-6">
-            <h3 className="font-semibold mb-4 text-lg">Informations</h3>
-            <ul className="text-sm space-y-3 text-gray-700">
-              <li><strong>Type:</strong> Restaurant & cafe</li>
-              <li><strong>Kitchen:</strong> Greek</li>
-              <li><strong>Prices:</strong> €€</li>
-              <li><strong>Suitable for:</strong> Families, couples, kids and for relax</li>
-            </ul>
-          </div>
+      <div className="grid gap-6">
 
-          
-            <div className="mt-4 overflow-hidden rounded-2xl border border-gray-200">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.1282669522334!2d26.173488099999997!3d39.369439799999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ba9bad08e0eb0d%3A0x8d3cdff7c431108!2sTropicana%20Platanos!5e1!3m2!1sen!2sgr!4v1776641899243!5m2!1sen!2sgr" 
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="h-64 w-full sm:h-72"
-              />
-            </div>
+  {/* Informations */}
+  <div className="bg-white rounded-2xl shadow-md p-6 border border-gray-100">
+    <h3 className="font-semibold mb-4 text-lg">Informations</h3>
+    <ul className="text-sm space-y-3 text-gray-700">
+      <li><strong>Type:</strong> Restaurant & cafe</li>
+      <li><strong>Kitchen:</strong> Greek</li>
+      <li><strong>Prices:</strong> €€</li>
+      <li><strong>Suitable for:</strong> Families, couples, kids and for relax</li>
+    </ul>
+  </div>
 
-            <div className="mt-5 space-y-3 text-sm text-gray-600">
-              <p>
-                <span className="font-semibold text-gray-900">Address:</span>{" "}
-               Plateia Kiriakou, Mithimna 811 08
-              </p>
-              <p>
-                <span className="font-semibold text-gray-900">Phone:</span>{" "}
-                22530 71869
-              </p>
-              <p>
-                <span className="font-semibold text-gray-900">Check-in:</span>{" "}
-                Working hours: From 9:30 to 23:30
-              </p>
-            </div>
-          <div>
-  <h2 className="text-2xl font-semibold mb-3"> Nearby Sightseeings and Villages</h2>
-  <ul className="space-y-2 text-gray-700">
-    <li>
-      🏖{" "}
-      <Link href="/sightseeings/molyvos-castle" className="text-blue-600 hover:underline">
-        Molyvos Castle
-      </Link>
-    </li>
-    <li>
-      🏖{" "}
-      <Link href="/villages/petra" className="text-blue-600 hover:underline">
-        Petra
-      </Link>
-    </li>
-    <li>
-      🏖{" "}
-      <Link href="/villages/xrousos" className="text-blue-600 hover:underline">
-        Vafeios
-      </Link>
-    </li>
-  </ul>
+  {/* Map */}
+  <div className="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden">
+    <iframe
+      src=""
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+      className="h-64 w-full sm:h-72"
+    />
+  </div>
+
+  {/* Contact Info */}
+  <div className="bg-white rounded-2xl shadow-md p-6 border border-gray-100 space-y-3 text-sm text-gray-600">
+    <p>
+      <span className="font-semibold text-gray-900">Address:</span> x
+    </p>
+    <p>
+      <span className="font-semibold text-gray-900">Phone:</span> x
+    </p>
+    <p>
+      <span className="font-semibold text-gray-900">Working hours:</span> From 9:30 to 23:30
+    </p>
+  </div>
+
+  {/* Nearby */}
+  <div className="bg-white rounded-2xl shadow-md p-6 border border-gray-100">
+    <h2 className="text-xl font-semibold mb-4">
+      Nearby Sightseeings and Villages
+    </h2>
+    <ul className="space-y-2 text-gray-700">
+      <li>
+        🏖{" "}
+        <Link href="/sightseeings/molyvos-castle" className="text-blue-600 hover:underline">
+          Molyvos Castle
+        </Link>
+      </li>
+      <li>
+        🏖{" "}
+        <Link href="/villages/petra" className="text-blue-600 hover:underline">
+          Petra
+        </Link>
+      </li>
+      <li>
+        🏖{" "}
+        <Link href="/villages/xrousos" className="text-blue-600 hover:underline">
+          Vafeios
+        </Link>
+      </li>
+    </ul>
+  </div>
+
 </div>
 
         </aside>
