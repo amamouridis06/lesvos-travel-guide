@@ -309,8 +309,8 @@ export default function ApartmentPage() {
           <p className="mt-3 text-sm text-gray-600 sm:text-base">
             For bookings, availability, and more information, get in touch with us.
           </p>
-
-          <div className="mt-6 space-y-3 text-sm text-gray-700 sm:text-base">
+          <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl">Contact</h2>
+          <div className="mt-6 space-y-3 text-sm text-white sm:text-base">
             <p>📞 +30 6974603592</p>
             <p>✉️ tcanancy@gmail.com</p>
             <p>🕒 Check-in: 15:00 | Check-out: 11:00</p>
