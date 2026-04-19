@@ -12,11 +12,13 @@ const amenities: Amenity[] = [
   { label: "Fully Equipped Kitchen" },
   { label: "Spacious Living Room" },
   { label: "Private Balcony" },
+  { label: "Free WiFi" },
+  { label: "Airport shuttle" },
 ];
 
 const images = [
-  "/thanoshouse.jpg",
   "/thanosliv.jpg",
+  "/thanoshouse.jpg",
   "/thanosbath.jpg",
   "/thanostable.jpg",
   "/thanosk.jpg",
