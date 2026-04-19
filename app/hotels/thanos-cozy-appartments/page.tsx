@@ -72,6 +72,8 @@ export default function ApartmentPage() {
             <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
               <a
                 href="https://www.booking.com/hotel/gr/thanos-cozy-apartments.en-gb.html?aid=397594&label=gog235jc-10CAEoggI46AdIM1gDaFyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4Asejj88GwAIB0gIkOWM2NDNmYTctNGU2ZC00Y2JlLTllMDktM2VkMmViZGY5NTM32AIB4AIB&sid=68f00793dd2d449b60f30b808935e305&checkin=2026-05-11&checkout=2026-05-14&dest_id=14571543&dest_type=hotel&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&soh=1&sr_order=popularity&srepoch=1776538142&srpvid=ec81844de1470058&type=total&ucfs=1&#no_availability_msg"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block w-full rounded-xl bg-orange-500 px-6 py-3 text-center font-medium text-white transition hover:bg-orange-600 sm:w-auto"
               >
                 Book Now
@@ -117,36 +119,35 @@ export default function ApartmentPage() {
               tavernas, and the coastal area.
             </p>
 
-           {/* FACILITIES */}
-<div className="mt-10">
-  <h3 className="text-xl font-semibold text-gray-900 sm:text-2xl">
-    Facilities
-  </h3>
+            {/* FACILITIES */}
+            <div className="mt-10">
+              <h3 className="text-xl font-semibold text-gray-900 sm:text-2xl">
+                Facilities
+              </h3>
 
-  <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-    {amenities.map((item, i) => (
-      <div
-        key={i}
-        className="rounded-2xl border border-gray-200 bg-gray-50 p-4 text-sm font-medium text-gray-700 shadow-sm"
-      >
-        {item.label}
-      </div>
-    ))}
-  </div>
+              <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                {amenities.map((item, i) => (
+                  <div
+                    key={i}
+                    className="rounded-2xl border border-gray-200 bg-gray-50 p-4 text-sm font-medium text-gray-700 shadow-sm"
+                  >
+                    {item.label}
+                  </div>
+                ))}
+              </div>
 
-  {/* BOOKING LINK */}
-  <div className="mt-6">
-    <a
-      href="https://www.booking.com/hotel/gr/thanos-cozy-apartments.en-gb.html#hotelFacilities"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="block w-full rounded-xl bg-orange-500 px-5 py-3 text-center font-medium text-white transition hover:bg-orange-600 sm:w-auto sm:inline-block"
-    >
-      See more facilities on Booking.com
-    </a>
-  </div>
-</div>
-       
+              <div className="mt-6">
+                <a
+                  href="https://www.booking.com/hotel/gr/thanos-cozy-apartments.en-gb.html#hotelFacilities"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full rounded-xl bg-orange-500 px-5 py-3 text-center font-medium text-white transition hover:bg-orange-600 sm:inline-block sm:w-auto"
+                >
+                  See more facilities on Booking.com
+                </a>
+              </div>
+            </div>
+          </div>
 
           {/* SIDEBAR */}
           <aside className="order-1 h-fit rounded-3xl border border-gray-200 bg-white p-4 shadow-lg sm:p-5 lg:order-2">
@@ -170,10 +171,12 @@ export default function ApartmentPage() {
                 Skala Kallonis, Lesvos
               </p>
               <p>
-                <span className="font-semibold text-gray-900">Phone:</span> +30 6974603592
+                <span className="font-semibold text-gray-900">Phone:</span>{" "}
+                +30 6974603592
               </p>
               <p>
-                <span className="font-semibold text-gray-900">Email:</span> tcanancy@gmail.com
+                <span className="font-semibold text-gray-900">Email:</span>{" "}
+                tcanancy@gmail.com
               </p>
               <p>
                 <span className="font-semibold text-gray-900">Check-in:</span>{" "}
@@ -280,7 +283,9 @@ export default function ApartmentPage() {
             </div>
 
             <div className="rounded-3xl bg-white/5 p-5 sm:p-6">
-              <div className="mb-3 text-base sm:text-lg">⭐⭐⭐⭐⭐ - Spyridoula</div>
+              <div className="mb-3 text-base sm:text-lg">
+                ⭐⭐⭐⭐⭐ - Spyridoula
+              </div>
               <p className="text-sm leading-7 text-white/90 sm:text-base">
                 Everything was wonderful, the accommodation was spotlessly clean,
                 beautiful and the bed very comfortable!
@@ -304,15 +309,18 @@ export default function ApartmentPage() {
           <div className="mt-6">
             <a
               href="https://www.booking.com/hotel/gr/thanos-cozy-apartments.en-gb.html?aid=397594&label=gog235jc-10CAEoggI46AdIM1gDaFyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4Av2Ij88GwAIB0gIkNjI4OTI5MGEtOGEzNy00ZTg5LWIwZTgtOWQxMTcwZTRlZjc42AIB4AIB&sid=68f00793dd2d449b60f30b808935e305&checkin=2026-05-04&checkout=2026-05-08&dest_id=14571543&dest_type=hotel&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&soh=1&sr_order=popularity&srepoch=1776534673&srpvid=d3497d8676dc01f8&type=total&ucfs=1&#tab-reviews"
-              className="block w-full rounded-xl bg-orange-500 px-5 py-3 text-center font-medium text-white transition hover:bg-orange-600 sm:w-auto sm:inline-block"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full rounded-xl bg-orange-500 px-5 py-3 text-center font-medium text-white transition hover:bg-orange-600 sm:inline-block sm:w-auto"
             >
               See Guest Reviews
             </a>
           </div>
         </div>
-         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl">Contact</h2>
-          <p className="mt-3 text-sm text-white sm:text-base">
+
+        <div className="mx-auto mt-12 max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-white sm:text-3xl">Contact</h2>
+          <p className="mt-3 text-sm text-white/90 sm:text-base">
             For bookings, availability, and more information, get in touch with us.
           </p>
           <div className="mt-6 space-y-3 text-sm text-white sm:text-base">
@@ -322,22 +330,6 @@ export default function ApartmentPage() {
           </div>
         </div>
       </section>
-
-      {/* CONTACT */}
-      {/* <section className="py-10 sm:py-16">
-        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl">Contact</h2>
-          <p className="mt-3 text-sm text-gray-600 sm:text-base">
-            For bookings, availability, and more information, get in touch with us.
-          </p>
-
-          <div className="mt-6 space-y-3 text-sm text-gray-700 sm:text-base">
-            <p>📞 +30 Χ</p>
-            <p>✉️ Χ</p>
-            <p>🕒 Check-in: 15:00 | Check-out: 11:00</p>
-          </div>
-        </div>
-      </section> */}
 
       {/* IMAGE MODAL */}
       {selectedImage && (
