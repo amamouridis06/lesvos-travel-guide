@@ -153,7 +153,7 @@ export default function FoodPage() {
         <div id="restaurants">
           <h2 className="text-2xl font-semibold mb-6">Restaurants</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-            {Restaurants.map((item) => (
+            {restaurants.map((item) => (
               <FoodCard key={item.name} {...item} />
             ))}
           </div>
