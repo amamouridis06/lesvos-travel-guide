@@ -168,31 +168,25 @@ export default function LimanakiPamfilonPage() {
       <li><strong>Kitchen:</strong> Greek</li>
       <li><strong>Prices:</strong> €€</li>
       <li><strong>Suitable for:</strong> Families, couples, kids and for relax</li>
+      <li> </li>
+      <li><strong>Address:</strong> Plateia Kiriakou, Mithimna 811 08</li>
+      <li><strong>Phone:</strong> 22530 71869</li>
+      <li><strong>Working hours:</strong></span> From 9:30 to 23:30</li>
     </ul>
-  </div>
+   
 
   {/* Map */}
   <div className="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden">
     <iframe
-      src=""
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.1282669522334!2d26.173488099999997!3d39.369439799999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ba9bad08e0eb0d%3A0x8d3cdff7c431108!2sTropicana%20Platanos!5e1!3m2!1sen!2sgr!4v1776642629570!5m2!1sen!2sgr" 
       loading="lazy"
       referrerPolicy="no-referrer-when-downgrade"
       className="h-64 w-full sm:h-72"
     />
   </div>
 
-  {/* Contact Info */}
-  <div className="bg-white rounded-2xl shadow-md p-6 border border-gray-100 space-y-3 text-sm text-gray-600">
-    <p>
-      <span className="font-semibold text-gray-900">Address:</span> x
-    </p>
-    <p>
-      <span className="font-semibold text-gray-900">Phone:</span> x
-    </p>
-    <p>
-      <span className="font-semibold text-gray-900">Working hours:</span> From 9:30 to 23:30
-    </p>
-  </div>
+ 
+
 
   {/* Nearby */}
   <div className="bg-white rounded-2xl shadow-md p-6 border border-gray-100">
