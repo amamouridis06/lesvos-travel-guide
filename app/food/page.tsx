@@ -21,17 +21,28 @@ const traditionalCafes = [
   {
     name: "Pallas cafe - grill",
     description: "Traditional kitchen • peaceful atmosphere",
-    location: "Mesotopos",
+    location: "📍Mesotopos",
     image: "/pallas.jpg",
     href: "/food/pallas-cafe-grill",
   },
   {
     name: "Tryfon",
     description: "Homemade dishes • meze • ouzo & tsipouro",
-    location: "Kalloni",
+    location: "📍Kalloni",
     image: "/tryfon6.jpg",
     href: "/food/tryfon",
   },
+];
+
+const restaurants = [
+  {
+    name: "Tropicana Platanos",
+    description: "Delicious disces • ideal place for realax ",
+    location: "📍Molivos",
+    image: "/tropicana1.jpg",
+    href: "/food/tropicana-platanos",
+  },
+  
 ];
 
 function FoodCard({
