@@ -39,8 +39,8 @@ export default function LimanakiPamfilonPage() {
       {/* ================= HERO ================= */}
       <section className="relative h-[70vh] w-full">
         <Image
-          src="/tryfon6.jpg"
-          alt="Tryfon cafe - tavern "
+          src="/tropicana1.jpg"
+          alt="Tropicana Platanos "
           fill
           className="object-cover"
           priority
@@ -81,8 +81,8 @@ export default function LimanakiPamfilonPage() {
 </p>
           {/* Highlights */}
          <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-6">
-  <li>🍖 Grilled meats and traditional homemade dishes</li>
-  <li>🍲 Daily cooked meals prepared with local ingredients</li>
+  <li>Grilled meats and traditional homemade dishes</li>
+  <li>Daily cooked meals prepared with local ingredients</li>
   <li> A variety of meze, perfect to share</li>
   <li> The best ice cream </li>
   <li> Fantastic Aubergine and delicius dolmadakia stuffed Wine Leaves</li>
