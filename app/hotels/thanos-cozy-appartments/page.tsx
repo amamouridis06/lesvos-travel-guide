@@ -180,11 +180,11 @@ export default function ApartmentPage() {
               </p>
               <p>
                 <span className="font-semibold text-gray-900">Check-in:</span>{" "}
-                15:00
+                From 15:00 to 23:00
               </p>
               <p>
                 <span className="font-semibold text-gray-900">Check-out:</span>{" "}
-                11:00
+                From 08:00 to 10:00
               </p>
             </div>
           </aside>
