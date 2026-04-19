@@ -131,15 +131,14 @@ export default function ApartmentPage() {
                   </div>
                 ))}
               </div>
-              <a
-                href="https://www.booking.com/hotel/gr/thanos-cozy-apartments.en-gb.html?aid=397594&label=gog235jc-10CAEoggI46AdIM1gDaFyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4Asejj88GwAIB0gIkOWM2NDNmYTctNGU2ZC00Y2JlLTllMDktM2VkMmViZGY5NTM32AIB4AIB&sid=68f00793dd2d449b60f30b808935e305&dest_id=14571543&dest_type=hotel&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1776593098&srpvid=ed2146e33956013a&type=total&ucfs=1&#tab-main"
-                  target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 inline-block text-sm font-medium text-orange-600 hover:text-orange-700"
->
-  See all facilities on Booking
-</a>
-            </div>
+             <div className="mt-6">
+            <a
+              href="https://www.booking.com/hotel/gr/thanos-cozy-apartments.en-gb.html?aid=397594&label=gog235jc-10CAEoggI46AdIM1gDaFyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4Asejj88GwAIB0gIkOWM2NDNmYTctNGU2ZC00Y2JlLTllMDktM2VkMmViZGY5NTM32AIB4AIB&sid=68f00793dd2d449b60f30b808935e305&dest_id=14571543&dest_type=hotel&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1776593098&srpvid=ed2146e33956013a&type=total&ucfs=1&#tab-main"
+              className="block w-full rounded-xl bg-orange-500 px-5 py-3 text-center font-medium text-white transition hover:bg-orange-600 sm:w-auto sm:inline-block"
+            >
+              See more facilites in Booking.com
+            </a>
+          </div>
           </div>
 
           {/* SIDEBAR */}
