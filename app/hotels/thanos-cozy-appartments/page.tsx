@@ -146,7 +146,7 @@ export default function ApartmentPage() {
     </a>
   </div>
 </div>
-          </section>
+       
 
           {/* SIDEBAR */}
           <aside className="order-1 h-fit rounded-3xl border border-gray-200 bg-white p-4 shadow-lg sm:p-5 lg:order-2">
