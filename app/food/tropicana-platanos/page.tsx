@@ -168,12 +168,19 @@ export default function LimanakiPamfilonPage() {
       <li><strong>Kitchen:</strong> Greek</li>
       <li><strong>Prices:</strong> €€</li>
       <li><strong>Suitable for:</strong> Families, couples, kids and for relax</li>
-      <li> </li>
       <li><strong>Address:</strong> Plateia Kiriakou, Mithimna 811 08</li>
       <li><strong>Phone:</strong> 22530 71869</li>
       <li><strong>Working hours:</strong> From 9:30 to 23:30</li>
     </ul>
-   
+  </div>
+  <div className="bg-white rounded-2xl shadow-md p-6 border border-gray-100">
+    <h3 className="font-semibold mb-4 text-lg">Location & Contact Info</h3>
+    <ul className="text-sm space-y-3 text-gray-700">
+      <li><strong>Address:</strong> Plateia Kiriakou, Mithimna 811 08</li>
+      <li><strong>Phone:</strong> 22530 71869</li>
+      <li><strong>Working hours:</strong> From 9:30 to 23:30</li>
+    </ul>
+  </div>
 
   {/* Map */}
   <div className="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden">
