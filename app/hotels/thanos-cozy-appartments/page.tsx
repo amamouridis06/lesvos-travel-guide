@@ -131,6 +131,14 @@ export default function ApartmentPage() {
                   </div>
                 ))}
               </div>
+              <a
+                href="https://www.booking.com/hotel/gr/thanos-cozy-apartments.en-gb.html?aid=397594&label=gog235jc-10CAEoggI46AdIM1gDaFyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4Asejj88GwAIB0gIkOWM2NDNmYTctNGU2ZC00Y2JlLTllMDktM2VkMmViZGY5NTM32AIB4AIB&sid=68f00793dd2d449b60f30b808935e305&dest_id=14571543&dest_type=hotel&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1776593098&srpvid=ed2146e33956013a&type=total&ucfs=1&#tab-main"
+                  target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-block text-sm font-medium text-orange-600 hover:text-orange-700"
+>
+  See all facilities on Booking
+</a>
             </div>
           </div>
 
@@ -156,10 +164,10 @@ export default function ApartmentPage() {
                 Skala Kallonis, Lesvos
               </p>
               <p>
-                <span className="font-semibold text-gray-900">Phone:</span> +30 Χ
+                <span className="font-semibold text-gray-900">Phone:</span> +30 6974603592
               </p>
               <p>
-                <span className="font-semibold text-gray-900">Email:</span> Χ
+                <span className="font-semibold text-gray-900">Email:</span> tcanancy@gmail.com
               </p>
               <p>
                 <span className="font-semibold text-gray-900">Check-in:</span>{" "}
@@ -252,7 +260,7 @@ export default function ApartmentPage() {
 
           <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-3">
             <div className="rounded-3xl bg-white/5 p-5 sm:p-6">
-              <div className="mb-3 text-base sm:text-lg">⭐⭐⭐⭐⭐ - Fad</div>
+              <div className="mb-3 text-base sm:text-lg">⭐⭐⭐⭐⭐ - Fadime</div>
               <p className="text-sm leading-7 text-white/90 sm:text-base">
                 The house was extremely clean and had been cleaned and arranged
                 after we went out. The items in the kitchen were so beautiful that
@@ -266,7 +274,7 @@ export default function ApartmentPage() {
             </div>
 
             <div className="rounded-3xl bg-white/5 p-5 sm:p-6">
-              <div className="mb-3 text-base sm:text-lg">⭐⭐⭐⭐⭐ - Spy</div>
+              <div className="mb-3 text-base sm:text-lg">⭐⭐⭐⭐⭐ - Spyridoula</div>
               <p className="text-sm leading-7 text-white/90 sm:text-base">
                 Everything was wonderful, the accommodation was spotlessly clean,
                 beautiful and the bed very comfortable!
@@ -274,7 +282,7 @@ export default function ApartmentPage() {
             </div>
 
             <div className="rounded-3xl bg-white/5 p-5 sm:p-6">
-              <div className="mb-3 text-base sm:text-lg">⭐⭐⭐⭐⭐ - Hüse</div>
+              <div className="mb-3 text-base sm:text-lg">⭐⭐⭐⭐⭐ - Hüseyin</div>
               <p className="text-sm leading-7 text-white/90 sm:text-base">
                 Our hostess, Nancy, was a very sweet and helpful lady. His own house
                 was also very close to the place so it was easy to reach in any
@@ -296,10 +304,22 @@ export default function ApartmentPage() {
             </a>
           </div>
         </div>
+         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl">Contact</h2>
+          <p className="mt-3 text-sm text-gray-600 sm:text-base">
+            For bookings, availability, and more information, get in touch with us.
+          </p>
+
+          <div className="mt-6 space-y-3 text-sm text-gray-700 sm:text-base">
+            <p>📞 +30 6974603592</p>
+            <p>✉️ tcanancy@gmail.com</p>
+            <p>🕒 Check-in: 15:00 | Check-out: 11:00</p>
+          </div>
+        </div>
       </section>
 
       {/* CONTACT */}
-      <section className="py-10 sm:py-16">
+      {/* <section className="py-10 sm:py-16">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl">Contact</h2>
           <p className="mt-3 text-sm text-gray-600 sm:text-base">
@@ -312,7 +332,7 @@ export default function ApartmentPage() {
             <p>🕒 Check-in: 15:00 | Check-out: 11:00</p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* IMAGE MODAL */}
       {selectedImage && (
