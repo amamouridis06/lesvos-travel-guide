@@ -171,7 +171,7 @@ export default function LimanakiPamfilonPage() {
       <li> </li>
       <li><strong>Address:</strong> Plateia Kiriakou, Mithimna 811 08</li>
       <li><strong>Phone:</strong> 22530 71869</li>
-      <li><strong>Working hours:</strong></span> From 9:30 to 23:30</li>
+      <li><strong>Working hours:</strong> From 9:30 to 23:30</li>
     </ul>
    
 
