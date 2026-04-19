@@ -75,12 +75,10 @@ export default function LimanakiPamfilonPage() {
                Custumers  come, eat, relax sing, say good night and come again and again. So here you are too. We are always happy to treat you as family. We are waiting to come..
                </p>
           </div>
-    <p className="text-gray-700 mb-4">
-  The menu focuses on traditional homemade cuisine, with an emphasis on grilled meats,
-  local recipes, and a variety of meze, perfectly paired with ouzo or tsipouro.
-</p>
+  
           {/* Highlights */}
          <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-6">
+           <h2 className="text-2xl font-semibold mb-4">What to try</h2>
   <li>Grilled meats and traditional homemade dishes</li>
   <li>Daily cooked meals prepared with local ingredients</li>
   <li> A variety of meze, perfect to share</li>
@@ -89,7 +87,7 @@ export default function LimanakiPamfilonPage() {
 </ul>
           {/* What to try + CAROUSEL */}
           <div>
-            <h2 className="text-2xl font-semibold mb-4">What to try</h2>
+            {/* <h2 className="text-2xl font-semibold mb-4">What to try</h2> */}
 
             
             {/* ===== CAROUSEL ===== */}
@@ -175,7 +173,7 @@ export default function LimanakiPamfilonPage() {
     <ul className="text-sm space-y-3 text-gray-700">
       <li><strong>Address:</strong> Plateia Kiriakou, Mithimna 811 08</li>
       <li><strong>Phone:</strong> 22530 71869</li>
-      <li><strong>Working hours:</strong> From 9:30 to 23:30</li>
+      <li><strong>Working hours:</strong> From 9:30 AM to 23:30 PM</li>
     </ul>
   </div>
 
