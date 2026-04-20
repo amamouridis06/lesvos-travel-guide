@@ -58,20 +58,20 @@ const hotels = [
     img: "/thanosbed2.jpg",
     href: "/hotels/thanos-cozy-appartments",
   },
-  {
-    name: "Recommended Hotel 2",
-    area: "Mytilene",
-    desc: "Comfortable accommodation in a great location for exploring Lesvos.",
-    img: "/hotel2.jpg",
-    href: "/hotels/hotel-2",
-  },
-  {
-    name: "Recommended Hotel 3",
-    area: "Petra",
-    desc: "A relaxing place near the sea, ideal for peaceful holidays.",
-    img: "/hotel3.jpg",
-    href: "/hotels/hotel-3",
-  },
+  // {
+  //   name: "Recommended Hotel 2",
+  //   area: "Mytilene",
+  //   desc: "Comfortable accommodation in a great location for exploring Lesvos.",
+  //   img: "/hotel2.jpg",
+  //   href: "/hotels/hotel-2",
+  // },
+  // {
+  //   name: "Recommended Hotel 3",
+  //   area: "Petra",
+  //   desc: "A relaxing place near the sea, ideal for peaceful holidays.",
+  //   img: "/hotel3.jpg",
+  //   href: "/hotels/hotel-3",
+  // },
 ];
 
 const restaurants = [
