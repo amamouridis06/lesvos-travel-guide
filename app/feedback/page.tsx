@@ -1,80 +1,108 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-export default function FeedbackPage() {
+type Feedback = {
+  id: number;
+  name: string;
+  rating: string;
+  comment: string;
+  date: string;
+};
+
+export default function Page() {
   const [name, setName] = useState("");
   const [rating, setRating] = useState("");
   const [comment, setComment] = useState("");
-  const [submitted, setSubmitted] = useState(false);
+  const [feedbacks, setFeedbacks] = useState<Feedback[]>([]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  useEffect(() => {
+    fetch("/api/feedback")
+      .then((res) => res.json())
+      .then(setFeedbacks);
+  }, []);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // εδώ μπορείς να στείλεις τα δεδομένα σε API / database
-    console.log({ name, rating, comment });
+    const res = await fetch("/api/feedback", {
+      method: "POST",
+      body: JSON.stringify({ name, rating, comment }),
+    });
 
-    setSubmitted(true);
+    const newFeedback = await res.json();
+
+    setFeedbacks((prev) => [newFeedback, ...prev]);
+
+    setName("");
+    setRating("");
+    setComment("");
   };
 
-  if (submitted) {
-    return (
-      <div className="flex h-screen items-center justify-center">
-        <h1 className="text-xl font-semibold">
-          Ευχαριστώ πολύ για το feedback! 🙏
-        </h1>
-      </div>
-    );
-  }
-
   return (
-    <div className="flex min-h-screen items-center justify-center p-4">
-      <form
-        onSubmit={handleSubmit}
-        className="w-full max-w-md space-y-4 rounded-2xl shadow-lg p-6"
-      >
-        <h1 className="text-2xl font-bold text-center">
-          Πείτε μας τη γνώμη σας
+    <div className="min-h-screen bg-gray-50 p-6 flex flex-col items-center">
+      <div className="w-full max-w-xl bg-white p-6 rounded-2xl shadow-md">
+        <h1 className="text-2xl font-bold mb-4 text-center">
+          Αξιολογήσεις Πελατών
         </h1>
 
-        <input
-          type="text"
-          placeholder="Όνομα (προαιρετικό)"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          className="w-full border p-2 rounded"
-        />
+        <form onSubmit={handleSubmit} className="space-y-3">
+          <input
+            type="text"
+            placeholder="Όνομα (προαιρετικό)"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            className="w-full border p-2 rounded"
+          />
 
-        <select
-          value={rating}
-          onChange={(e) => setRating(e.target.value)}
-          required
-          className="w-full border p-2 rounded"
-        >
-          <option value="">Βαθμολογία</option>
-          <option value="5">⭐⭐⭐⭐⭐</option>
-          <option value="4">⭐⭐⭐⭐</option>
-          <option value="3">⭐⭐⭐</option>
-          <option value="2">⭐⭐</option>
-          <option value="1">⭐</option>
-        </select>
+          <select
+            value={rating}
+            onChange={(e) => setRating(e.target.value)}
+            required
+            className="w-full border p-2 rounded"
+          >
+            <option value="">Βαθμολογία</option>
+            <option value="5">⭐⭐⭐⭐⭐</option>
+            <option value="4">⭐⭐⭐⭐</option>
+            <option value="3">⭐⭐⭐</option>
+            <option value="2">⭐⭐</option>
+            <option value="1">⭐</option>
+          </select>
 
-        <textarea
-          placeholder="Το σχόλιό σας..."
-          value={comment}
-          onChange={(e) => setComment(e.target.value)}
-          required
-          className="w-full border p-2 rounded"
-          rows={4}
-        />
+          <textarea
+            placeholder="Γράψε τη γνώμη σου..."
+            value={comment}
+            onChange={(e) => setComment(e.target.value)}
+            required
+            className="w-full border p-2 rounded"
+          />
 
-        <button
-          type="submit"
-          className="w-full bg-black text-white p-2 rounded hover:opacity-90"
-        >
-          Αποστολή
-        </button>
-      </form>
+          <button className="w-full bg-black text-white p-2 rounded hover:opacity-90">
+            Αποστολή
+          </button>
+        </form>
+      </div>
+
+      {/* LIST */}
+      <div className="w-full max-w-xl mt-6 space-y-4">
+        {feedbacks.map((f) => (
+          <div
+            key={f.id}
+            className="bg-white p-4 rounded-xl shadow-sm border"
+          >
+            <div className="flex justify-between items-center mb-1">
+              <h2 className="font-semibold">{f.name}</h2>
+              <span className="text-sm text-gray-400">{f.date}</span>
+            </div>
+
+            <div className="text-yellow-500 mb-2">
+              {"⭐".repeat(Number(f.rating))}
+            </div>
+
+            <p className="text-gray-700">{f.comment}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
