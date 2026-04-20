@@ -83,11 +83,11 @@ const restaurants = [
     href: "/food/limanaki-pamfilon",
   },
   {
-    name: "Pallas Cafe - Grill",
-    area: "Mesotopos",
-    desc: "Traditional recipes with quality ingredients and warm hospitality.",
-    img: "/pallas.jpg",
-    href: "/food/pallas-cafe-grill",
+    name: "Tropicana - Platanos",
+    area: "Molivos",
+    desc: "A traditional restaurant-cafe based in Molyvos",
+    img: "/tropicana1.jpg",
+    href: "/food/tropicana-platanos",
   },
   {
     name: "Tryfon",
