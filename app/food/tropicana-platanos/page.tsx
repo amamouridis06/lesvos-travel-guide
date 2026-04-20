@@ -83,7 +83,6 @@ export default function LimanakiPamfilonPage() {
               <li>Daily cooked meals with local ingredients</li>
               <li>Variety of meze perfect to share</li>
               <li>Homemade ice cream</li>
-              <li>Aubergine & dolmadakia (stuffed vine leaves)</li>
             </ul>
 
             {/* ===== CAROUSEL ===== */}
@@ -186,7 +185,7 @@ export default function LimanakiPamfilonPage() {
             {/* Nearby */}
             <div className="bg-white rounded-2xl shadow-md p-4 sm:p-6 border border-gray-100">
               <h2 className="text-lg sm:text-xl font-semibold mb-4">
-                Nearby Sightseeings
+                Nearby Sightseeings and Villages
               </h2>
               <ul className="space-y-2 text-gray-700 text-sm sm:text-base">
                 <li>
