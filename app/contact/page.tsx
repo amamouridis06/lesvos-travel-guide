@@ -62,20 +62,20 @@ export default function ContactPage() {
           <div className="grid gap-6 sm:grid-cols-2">
             <div>
               <label className="mb-1 block font-medium text-neutral-800">
-                Full Name
+                Full Name <span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
                 name="name"
                 required
-                placeholder="John Doe"
+                placeholder="Ang M"
                 className="w-full rounded-xl border border-neutral-300 px-4 py-3 outline-none transition focus:border-emerald-600 focus:ring-2 focus:ring-emerald-100"
               />
             </div>
 
             <div>
               <label className="mb-1 block font-medium text-neutral-800">
-                Email
+                Email <span className="text-red-500">*</span>
               </label>
               <input
                 type="email"
@@ -90,7 +90,7 @@ export default function ContactPage() {
           <div className="grid gap-6 sm:grid-cols-2">
             <div>
               <label className="mb-1 block font-medium text-neutral-800">
-                Phone
+                Phone <span className="text-red-500">*</span>
               </label>
               <input
                 type="tel"
@@ -102,7 +102,7 @@ export default function ContactPage() {
 
             <div>
               <label className="mb-1 block font-medium text-neutral-800">
-                Company / Brand
+                Name of Company 
               </label>
               <input
                 type="text"
@@ -115,7 +115,7 @@ export default function ContactPage() {
 
           <div>
             <label className="mb-1 block font-medium text-neutral-800">
-              Subject
+              Subject <span className="text-red-500">*</span>
             </label>
             <input
               type="text"
@@ -129,7 +129,7 @@ export default function ContactPage() {
           <div className="grid gap-6 sm:grid-cols-2">
             <div>
               <label className="mb-1 block font-medium text-neutral-800">
-                Inquiry Type
+                Inquiry Type <span className="text-red-500">*</span>
               </label>
               <select
                 name="inquiryType"
@@ -140,8 +140,6 @@ export default function ContactPage() {
                   Select an option
                 </option>
                 <option value="collaboration">Collaboration</option>
-                <option value="freelance">Freelance Project</option>
-                <option value="consulting">Consulting</option>
                 <option value="question">Question</option>
                 <option value="other">Other</option>
               </select>
@@ -149,7 +147,7 @@ export default function ContactPage() {
 
             <div>
               <label className="mb-1 block font-medium text-neutral-800">
-                Preferred Contact Method
+                Preferred Contact Method <span className="text-red-500">*</span>
               </label>
               <select
                 name="contactMethod"
@@ -176,10 +174,10 @@ export default function ContactPage() {
                 <option value="" disabled>
                   Select budget
                 </option>
-                <option value="under-500">Under €500</option>
-                <option value="500-1000">€500 - €1,000</option>
-                <option value="1000-3000">€1,000 - €3,000</option>
-                <option value="3000-plus">€3,000+</option>
+                <option value="under-500">Under €50</option>
+                <option value="500-1000">€50 - €100</option>
+                <option value="1000-3000">€100 - €300</option>
+                <option value="3000-plus">€300+</option>
                 <option value="not-sure">Not sure yet</option>
               </select>
             </div>
@@ -196,7 +194,6 @@ export default function ContactPage() {
                 <option value="" disabled>
                   Select timeline
                 </option>
-                <option value="asap">ASAP</option>
                 <option value="1-2-weeks">1–2 weeks</option>
                 <option value="this-month">This month</option>
                 <option value="1-3-months">1–3 months</option>
@@ -218,7 +215,7 @@ export default function ContactPage() {
             />
           </div>
 
-          <div>
+          {/* <div>
             <label className="mb-1 block font-medium text-neutral-800">
               Website / Reference Link
             </label>
@@ -228,7 +225,7 @@ export default function ContactPage() {
               placeholder="https://example.com"
               className="w-full rounded-xl border border-neutral-300 px-4 py-3 outline-none transition focus:border-emerald-600 focus:ring-2 focus:ring-emerald-100"
             />
-          </div>
+          </div> */}
 
           <input
             type="hidden"
