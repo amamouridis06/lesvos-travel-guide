@@ -78,7 +78,7 @@ const restaurants = [
   {
     name: "To Limanaki ton Pamfilon",
     area: "Skala Pamfilon",
-    desc: "Fresh seafood and local flavors in a beautiful seaside setting.",
+    desc: "Fresh seafood and local flavors.",
     img: "/limanaki_pamf1.jpg",
     href: "/food/limanaki-pamfilon",
   },
