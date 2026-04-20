@@ -199,7 +199,7 @@ export default function ApartmentPage() {
               Gallery
             </h2>
             <p className="mt-3 text-sm text-gray-600 sm:text-base">
-              A quick look at the apartment interiors and comfort.
+              A quick look at the apartment
             </p>
           </div>
 
@@ -216,7 +216,7 @@ export default function ApartmentPage() {
               aria-label="Previous image"
               className="absolute left-2 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-sm text-gray-800 shadow transition hover:bg-white sm:left-3 sm:h-11 sm:w-11"
             >
-              >
+              ◀
             </button>
 
             <button
@@ -224,7 +224,7 @@ export default function ApartmentPage() {
               aria-label="Next image"
               className="absolute right-2 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-sm text-gray-800 shadow transition hover:bg-white sm:right-3 sm:h-11 sm:w-11"
             >
-              >
+               ▶
             </button>
           </div>
 
