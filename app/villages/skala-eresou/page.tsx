@@ -43,7 +43,7 @@ export default function PlomariPage() {
                 What to see
               </h2>
               <ul className="list-disc list-inside space-y-3 leading-relaxed text-gray-700">
-                <li>TThe main beach of Skala Eressos</li>
+                <li>The main beach of Skala Eressos</li>
                 <li>Sunset by the sea</li>
                 <li>Local food</li>
                 <li>Water sports</li>
@@ -165,7 +165,7 @@ export default function PlomariPage() {
             </div>
 
             {/* FOOD */}
-            <div>
+          <div className="rounded-2xl bg-white p-5 shadow-sm">
               <h2 className="text-2xl font-semibold mb-3">Where to eat</h2>
               <p className="space-y-2 text-sm text-gray-700">
                 In Skala Eressou you will find traditional seaside taverns, ideal for fresh fish, local meze, and of course ouzo.
