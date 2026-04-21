@@ -39,7 +39,7 @@ export default function PlomariPage() {
         <div className="md:col-span-2 space-y-10">
 
           {/* Overview */}
-          <div>
+          <div className="bg-white rounded-xl shadow p-4">
             <h2 className="text-2xl font-semibold mb-3">Why Visit Mesotopos?</h2>
             <p className="text-gray-700 leading-relaxed">
               Mesotopos is a traditional village on the western side of Lesvos, known for its authentic atmosphere, local traditions, and the sense of tranquility it offers to visitors.
