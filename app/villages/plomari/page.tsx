@@ -4,11 +4,11 @@ export const metadata = {
     "Plomari Lesvos: Ouzo, sea & trandition",
 };
 
-export default function SkalaKallonisPage() {
+export default function PlomariPage() {
   return (
     <main className="bg-neutral-100 text-neutral-900">
       {/* HERO */}
-      <section className="relative h-[72vh] bg-[url('/skala-kallonis2.jpeg')] bg-cover bg-center">
+      <section className="relative h-[72vh] bg-[url('/plomari2.jpg')] bg-cover bg-center">
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 flex h-full items-end">
           <div className="mx-auto w-full max-w-6xl px-6 pb-12">
