@@ -7,7 +7,7 @@ export default function LesvosSubscriptionPlans() {
     {
       id: "starter",
       name: "Starter Listing",
-      price: 15,
+      price: 18,
       period: "/month",
       description:
         "Για μικρές επιχειρήσεις που θέλουν μια καθαρή και αξιόπιστη παρουσία στον ταξιδιωτικό οδηγό.",
@@ -24,7 +24,7 @@ export default function LesvosSubscriptionPlans() {
     {
       id: "professional",
       name: "Professional",
-      price: 20,
+      price: 23,
       period: "/month",
       description:
         "Η ιδανική επιλογή για ξενοδοχεία, εστιατόρια και καταστήματα που θέλουν αυξημένη προβολή.",
@@ -42,7 +42,7 @@ export default function LesvosSubscriptionPlans() {
     {
       id: "featured",
       name: "Featured Partner",
-      price: 35,
+      price: 45,
       period: "/month",
       description:
         "Για επιχειρήσεις που επιθυμούν premium τοποθέτηση, ενισχυμένη προβολή και σταθερή προώθηση.",
@@ -76,13 +76,13 @@ export default function LesvosSubscriptionPlans() {
       id: "instagramStory",
       name: "Instagram story",
       description: "1 επιπλέον story προβολής στα social media.",
-      price: 8,
+      price: 4,
     },
     {
       id: "instagramPost",
       name: "Instagram post",
       description: "1 επιπλέον post για ενίσχυση της επιχείρησής σας.",
-      price: 15,
+      price: 9,
     },
     {
       id: "featuredBadge",
@@ -92,9 +92,9 @@ export default function LesvosSubscriptionPlans() {
     },
     {
       id: "seoPage",
-      name: "Αναλυτική SEO σελίδα",
-      description: "Ξεχωριστή πιο αναλυτική σελίδα για καλύτερη online παρουσία.",
-      price: 20,
+      name: "24/7 υποστήριξη",
+      description: "Υποστήριξη όλο το 24ωρο",
+      price: 25,
     },
   ];
 
