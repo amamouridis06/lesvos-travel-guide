@@ -161,7 +161,7 @@ export default function PlomariPage() {
             </div>
 
             {/* FOOD */}
-            <div>
+           <div className="rounded-2xl bg-white p-5 shadow-sm">
               <h2 className="text-2xl font-semibold mb-3">Where to eat</h2>
               <p className="text-gray-700">
                 In Plomari you will find traditional seaside taverns, ideal for fresh fish, local meze, and of course ouzo.
