@@ -63,6 +63,13 @@ export default function PlomariPage() {
                 </li>
               </ul>
             </div>
+             {/* FOOD */}
+           <div className="rounded-2xl bg-white p-5 shadow-sm">
+             <h2 className="mb-3 font-semibold">Where to eat</h2>
+              <p className="text-gray-700">
+                In Mantmados you will find traditional seaside taverns, ideal for fresh fish, local meze, and of course ouzo.
+              </p>
+            </div>
 
          </div>
 
@@ -128,14 +135,6 @@ export default function PlomariPage() {
                   </Link>
                 </li>
               </ul>
-            </div>
-
-            {/* FOOD */}
-           <div className="rounded-2xl bg-white p-5 shadow-sm">
-             <h2 className="mb-3 font-semibold">Where to eat</h2>
-              <p className="text-gray-700">
-                In Mantmados you will find traditional seaside taverns, ideal for fresh fish, local meze, and of course ouzo.
-              </p>
             </div>
           </aside>
         </div>
