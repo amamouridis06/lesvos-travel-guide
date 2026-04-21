@@ -1,7 +1,9 @@
+import Link from "next/link";
+
 export const metadata = {
-  title: "Plomari | Lesvos Travel Guide",
+  title: "Plomari, Lesvos – Ouzo, Beaches & Travel Guide",
   description:
-    "Plomari Lesvos: Ouzo, sea & trandition",
+    "Plomari Lesvos: Ouzo, sea & tradition",
 };
 
 export default function PlomariPage() {
@@ -13,10 +15,10 @@ export default function PlomariPage() {
         <div className="relative z-10 flex h-full items-end">
           <div className="mx-auto w-full max-w-6xl px-6 pb-12">
             <h1 className="text-4xl font-bold text-white md:text-5xl">
-               Plomari 
+              Plomari
             </h1>
             <p className="mt-2 text-gray-200 text-lg">
-              Ouzo, sea & trandition
+              Ouzo, sea & tradition
             </p>
           </div>
         </div>
@@ -32,7 +34,7 @@ export default function PlomariPage() {
                 Why Visit Plomari?
               </h2>
               <p className="leading-relaxed text-gray-700">
-                 Plomari is a seaside village in the southwest of Lesvos. This village is one of the most picturesque on the island where you can walk in the afternoon after the excellent food it has. There are ouz0 museums, beaches with clear blue waters as well as a picturesque port
+                Plomari is a charming seaside village in the southwest of Lesvos, known for its authentic character, traditional architecture, and relaxed atmosphere. Visitors can enjoy scenic coastal walks, taste excellent local cuisine, explore ouzo museums, and discover beautiful beaches with crystal-clear waters.
               </p>
             </div>
 
@@ -42,9 +44,9 @@ export default function PlomariPage() {
               </h2>
               <ul className="list-disc list-inside space-y-3 leading-relaxed text-gray-700">
                 <li>The picturesque port in Plomari</li>
-              <li>Ouzo Museums (Varvagianni, Plomari)</li>
-              <li>Traditional alleys and cafes</li>
-              <li> Beaches with clear blue waters (Agios Isidoros, Melinta, Tarti)</li>
+                <li>Ouzo Museums (Varvagianni, Plomari)</li>
+                <li>Traditional alleys and cafes</li>
+                <li>Beaches with clear blue waters (Agios Isidoros, Melinta, Tarti)</li>
               </ul>
             </div>
 
@@ -52,16 +54,13 @@ export default function PlomariPage() {
               <h2 className="mb-4 text-2xl font-semibold">Ideal For</h2>
               <ul className="list-disc list-inside space-y-3 leading-relaxed text-gray-700">
                 <li>
-                  Families with children, thanks to its calm waters, safe
-                  beaches, and laid-back environment
+                  Families with children, thanks to its calm waters, safe beaches, and laid-back environment
                 </li>
                 <li>
-                  Relaxed swimming and sunbathing, with plenty of space to
-                  unwind by the sea at your own pace
+                  Relaxed swimming and sunbathing, with plenty of space to unwind by the sea
                 </li>
                 <li>
-                  Quiet moments away from noise, offering a peaceful atmosphere
-                  ideal for rest and disconnection
+                  Quiet moments away from noise, ideal for rest and disconnection
                 </li>
               </ul>
             </div>
@@ -70,13 +69,13 @@ export default function PlomariPage() {
             <div className="overflow-hidden rounded-2xl bg-white shadow-sm">
               <div className="grid grid-cols-2 gap-1">
                 <img
-                  src="/skala-kallonis.jpeg"
-                  alt="Skala Kallonis stay"
+                  src="/plomari1.jpg"
+                  alt="Plomari stay"
                   className="h-44 w-full object-cover"
                 />
                 <img
-                  src="/skala-kallonis.jpeg"
-                  alt="Accommodation in Skala Kallonis"
+                  src="/plomari2.jpg"
+                  alt="Accommodation in Plomari"
                   className="h-44 w-full object-cover"
                 />
               </div>
@@ -85,17 +84,15 @@ export default function PlomariPage() {
                 <h3 className="mb-3 text-xl font-semibold">Where to stay</h3>
 
                 <p className="mb-3 leading-relaxed text-gray-700">
-                  A great option in Skala Kalloni is{" "}
-                  <a href="X" className="font-medium text-blue-600 hover:underline">
+                  A great option in Plomari is{" "}
+                  <a href="#" className="font-medium text-blue-600 hover:underline">
                     Hotel Name
                   </a>
-                  , ideally located in the heart of the village, just a short
-                  walk from the beach, the promenade, and local taverns.
+                  , ideally located near the beach, the promenade, and local taverns.
                 </p>
 
                 <p className="text-sm leading-relaxed text-gray-600">
-                  Perfect for travelers looking for a relaxed and authentic
-                  island experience with easy access to the rest of Lesvos.
+                  Perfect for travelers looking for a relaxed and authentic island experience.
                 </p>
               </div>
             </div>
@@ -115,19 +112,18 @@ export default function PlomariPage() {
                   height="100%"
                   style={{ border: 0 }}
                   loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
                 />
               </div>
-            
+            </div>
 
             {/* QUICK INFO */}
             <div className="rounded-2xl bg-white p-5 shadow-sm">
               <h3 className="mb-3 font-semibold">Quick Info</h3>
               <ul className="space-y-2 text-sm text-gray-700">
                 <li>📍 South Lesvos</li>
-                <li>🏖 Calm beach and relaxed atmosphere</li>
+                <li>🏖 Beautiful beaches nearby</li>
                 <li>🍽 Great seafood and local taverns</li>
-                <li>🚗 Convenient base for exploring the island</li>
+                <li>🚗 Ideal base for exploring the island</li>
               </ul>
             </div>
 
@@ -136,36 +132,41 @@ export default function PlomariPage() {
               <h3 className="mb-3 font-semibold">Tips</h3>
               <ul className="space-y-2 text-sm text-gray-700">
                 <li>☀️ Ideal for slow mornings and sunset walks</li>
-                <li>🍽 Try local sardines from Kalloni</li>
-                <li>🚘 Great starting point for road trips around Lesvos</li>
+                <li>🍽 Try local ouzo and seafood</li>
+                <li>🚘 Great starting point for road trips</li>
               </ul>
             </div>
 
             {/* NEARBY */}
-          <div>
-            <h2 className="text-2xl font-semibold mb-3">Κοντινές παραλίες</h2>
-            <ul className="space-y-2 text-gray-700">
-              <li>
-                🏖{" "}
-                <Link href="/beaches/tarti" className="text-blue-600 hover:underline">
-                  Tarti
-                </Link>
-              </li>
-              <Link href="/beaches/melinta" className="text-blue-600 hover:underline">
-                  Melinta
-                </Link>
-              <Link href="/beaches/agios-isidoros" className="text-blue-600 hover:underline">
-                  Agios Isidoros
-                </Link>
-            </ul>
-          </div>
+            <div className="rounded-2xl bg-white p-5 shadow-sm">
+              <h2 className="mb-3 font-semibold">Nearby Beaches</h2>
+              <ul className="space-y-2 text-sm text-gray-700">
+                <li>
+                  🏖{" "}
+                  <Link href="/beaches/tarti" className="text-blue-600 hover:underline">
+                    Tarti
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/beaches/melinta" className="text-blue-600 hover:underline">
+                    Melinta
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/beaches/agios-isidoros" className="text-blue-600 hover:underline">
+                    Agios Isidoros
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* FOOD */}
             <div>
-            <h2 className="text-2xl font-semibold mb-3">Πού να φάτε</h2>
-            <p className="text-gray-700">
-            In Plomari you will find traditional taverns by the sea, ideal for fish, appetizers and of course ouzo.
-            </p>
-          </div>
-        </div>
+              <h2 className="text-2xl font-semibold mb-3">Where to eat</h2>
+              <p className="text-gray-700">
+                In Plomari you will find traditional seaside taverns, ideal for fresh fish, local meze, and of course ouzo.
+              </p>
+            </div>
           </aside>
         </div>
       </section>
