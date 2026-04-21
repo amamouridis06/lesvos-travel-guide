@@ -22,6 +22,7 @@ const images = [
   "/thanosbath.jpg",
   "/thanostable.jpg",
   "/thanosk.jpg",
+  "/thanosbed.jpg",
   "/thanosbed2.jpg",
   "/thanosb.jpg",
 ];
