@@ -47,7 +47,7 @@ export default function PlomariPage() {
           </div>
 
          {/* What to see */}
-<div>
+<div className="bg-white rounded-xl shadow p-4">
   <h2 className="text-2xl font-semibold mb-3">What to see</h2>
   <ul className="list-disc pl-5 space-y-2 text-gray-700">
     <li>The village’s main church, a central landmark and meeting point</li>
@@ -58,7 +58,7 @@ export default function PlomariPage() {
 </div>
 
           {/* What to do */}
-<div>
+<div className="bg-white rounded-xl shadow p-4">
   <h2 className="text-2xl font-semibold mb-3">What to do</h2>
   <ul className="list-disc pl-5 space-y-2 text-gray-700">
     <li>Stroll through the quiet village streets and traditional alleys</li>
@@ -69,7 +69,7 @@ export default function PlomariPage() {
   </ul>
 </div>
 
-<div>
+<div className="bg-white rounded-xl shadow p-4">
   <h2 className="text-2xl font-semibold mb-3">Where to eat</h2>
     <p className="text-gray-700 mb-2">
       In Mesotopos, you can visit the traditional tavern{" "}
