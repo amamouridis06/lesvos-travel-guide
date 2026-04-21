@@ -148,11 +148,14 @@ export default function PlomariPage() {
                   </Link>
                 </li>
                 <li>
+                  🏖{" "}
                   <Link href="/beaches/melinta" className="text-blue-600 hover:underline">
+                    
                     Melinta
                   </Link>
                 </li>
                 <li>
+                  🏖{" "}
                   <Link href="/beaches/agios-isidoros" className="text-blue-600 hover:underline">
                     Agios Isidoros
                   </Link>
