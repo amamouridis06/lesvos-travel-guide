@@ -167,7 +167,7 @@ export default function PlomariPage() {
             {/* FOOD */}
             <div>
               <h2 className="text-2xl font-semibold mb-3">Where to eat</h2>
-              <p className="text-gray-700">
+              <p className="space-y-2 text-sm text-gray-700">
                 In Skala Eressou you will find traditional seaside taverns, ideal for fresh fish, local meze, and of course ouzo.
               </p>
             </div>
