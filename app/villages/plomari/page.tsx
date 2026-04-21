@@ -40,7 +40,7 @@ export default function PlomariPage() {
 
           {/* Overview */}
           <div>
-            <h2 className="text-2xl font-semibold mb-3">Γιατί να επισκεφθείτε το Πλωμάρι</h2>
+            <h2 className="text-2xl font-semibold mb-3">Why visit Plomari?</h2>
             <p className="text-gray-700 leading-relaxed">
               Plomari is a seaside village in the southwest of Lesvos. This village is one of the most picturesque on the island where you can walk in the afternoon after the excellent food it has. There are ouz0 museums, beaches with clear blue waters as well as a picturesque port
             </p>
@@ -103,7 +103,7 @@ export default function PlomariPage() {
             <h3 className="font-semibold mb-3">Location</h3>
             <div className="w-full h-48 rounded-lg overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25820.01037316422!2d26.357505!3d39.000095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ba5f5a7e7e1f45%3A0x400bd2ce2b98a70!2sPlomari%2C%20Greece!5e0!3m2!1sel!2sgr!4v1700000000000"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2928.198596225246!2d26.368774326425427!3d38.97504945226084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14baf6e960a76133%3A0x400bd2ce2b9b5a0!2sPlomari!5e1!3m2!1sen!2sgr!4v1776769152854!5m2!1sen!2sgr"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
