@@ -10,12 +10,12 @@ export default function NavBar() {
   const pathname = usePathname();
   const router = useRouter();
 
-  const isEnglish = pathname.startsWith("/en");
-  const toggleLanguage = isEnglish
-  ? pathname.replace(/^\/en/, "") || "/"
-  : pathname === "/"
-  ? "/en"
-  : `/en${pathname}`;
+  // const isEnglish = pathname.startsWith("/en");
+  // const toggleLanguage = isEnglish
+  // ? pathname.replace(/^\/en/, "") || "/"
+  // : pathname === "/"
+  // ? "/en"
+  // : `/en${pathname}`;
 
   const closeMenu = () => setMobileOpen(false);
 
@@ -59,12 +59,12 @@ export default function NavBar() {
              <Link href="/emergency" className="hover:text-yellow-300 transition">
              Emergency
             </Link>
-            <button
+            {/* <button
               onClick={() => router.push(toggleLanguage)}
               className="ml-2 px-3 py-1 rounded-full border border-white/40 text-xs hover:bg-white hover:text-blue-700 transition"
             >
               {isEnglish ? "EL" : "EN"}
-            </button>
+            </button> */}
           </div>
 
           {/* Mobile actions */}
