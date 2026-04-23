@@ -50,20 +50,14 @@ export default function NavBar() {
             <Link href="/nature" className="hover:text-yellow-300 transition">
               Nature
             </Link>
-            <Link href="/emergency" className="hover:text-yellow-300 transition">
-             Emergency
+             <Link href="/hotels/thanos-cozy-appartments" className="hover:text-yellow-300 transition">
+              Hotels
             </Link>
             <Link href="/about" className="hover:text-yellow-300 transition">
               About
             </Link>
-            <Link href="/plans" className="hover:text-yellow-300 transition">
-              Συνδρομή
-            </Link>
-            <Link href="/news" className="hover:text-yellow-300 transition">
-              News
-            </Link>
-             <Link href="/hotels/thanos-cozy-appartments" className="hover:text-yellow-300 transition">
-              Hotels
+             <Link href="/emergency" className="hover:text-yellow-300 transition">
+             Emergency
             </Link>
             <button
               onClick={() => router.push(toggleLanguage)}
@@ -136,13 +130,26 @@ export default function NavBar() {
             >
               Nature
             </Link>
-
+             <Link
+              href="/hotels"
+              onClick={closeMenu}
+              className="py-3 text-neutral-800 border-b border-neutral-100"
+            >
+              Hotels
+            </Link>
             <Link
               href="/about"
               onClick={closeMenu}
               className="py-3 text-neutral-800"
             >
               About
+            </Link>
+             <Link
+              href="/emergency"
+              onClick={closeMenu}
+              className="py-3 text-neutral-800"
+            >
+             Emergency
             </Link>
           </div>
         </div>
