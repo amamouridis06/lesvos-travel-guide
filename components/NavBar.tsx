@@ -69,12 +69,12 @@ export default function NavBar() {
 
           {/* Mobile actions */}
           <div className="flex items-center gap-2 md:hidden">
-            <button
+            {/* <button
               onClick={() => router.push(toggleLanguage)}
               className="px-3 py-1 rounded-full border border-white/40 text-xs text-white hover:bg-white hover:text-blue-700 transition"
             >
               {isEnglish ? "EL" : "EN"}
-            </button>
+            </button> */}
 
             <button
               className="text-2xl text-white leading-none"
