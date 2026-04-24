@@ -23,24 +23,9 @@ const villages = [
   { name: "Mytilini",description: "Capital, vibrant, cultural, historic", image: "/placeholder.jpg",href: "/villages/mytilini",},
   {name: "Moria", description: "Historic, traditional, local life",image: "/placeholder.jpg",href: "/villages/moria",},
   {name: "Panagiouda",description: "Seaside, peaceful, authentic",image: "/placeholder.jpg",href: "/villages/panagiouda",},
-  {
-    name: "Pamfila",
-    description: "Quiet, traditional, local charm",
-    image: "/placeholder.jpg",
-    href: "/villages/pamfila",
-  },
-  {
-    name: "Loutra",
-    description: "Thermal springs, relaxing, historic",
-    image: "/placeholder.jpg",
-    href: "/villages/loutra",
-  },
-  {
-    name: "Neapoli",
-    description: "Residential, calm, local",
-    image: "/placeholder.jpg",
-    href: "/villages/neapoli",
-  },
+  {name: "Pamfila",description: "Quiet, traditional, local charm",image: "/placeholder.jpg",href: "/villages/pamfila",},
+  { name: "Loutra",   description: "Thermal springs, relaxing, historic",   image: "/placeholder.jpg",   href: "/villages/loutra",  },
+  {   name: "Neapoli",    description: "Residential, calm, local",    image: "/placeholder.jpg",    href: "/villages/neapoli", },
   {
     name: "Agia Marina",
     description: "Coastal, relaxed, local life",
@@ -160,12 +145,6 @@ const villages = [
     description: "Historic, quiet, local",
     image: "/placeholder.jpg",
     href: "/villages/kato-tritos",
-  },
-  {
-    name: "Mytilinioi",
-    description: "Traditional, central, authentic",
-    image: "/placeholder.jpg",
-    href: "/villages/mytilinioi",
   },
   {
     name: "Agioi Anargyroi",
