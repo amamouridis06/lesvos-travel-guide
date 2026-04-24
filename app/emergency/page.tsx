@@ -35,7 +35,7 @@ const healthCenters = [
   {
     name: "Mytilene General Hospital",
     area: "Mytilene",
-    address: "8th km Mytilene-Kalloni Road",
+    address: "Efstratiou Vostani 48, Mitilini 811 32",
     phone: "+30 22510 57700",
     maps: "https://maps.app.goo.gl/39HZCU4Et7TGByNN7",
   },
