@@ -17,16 +17,16 @@ const emergencyServices = [
 
 const pharmacies = [
   {
-    name: "Pharmacy Example",
-    area: "Mytilene",
-    address: "Example Street 1",
-    phone: "+30 22510 00000",
+    name: "Pharmacy Mariolas O.E",
+    area: "Kalloni",
+    address: "Centre Square, Kalloni",
+    phone: "+30 2253022022",
     hours: [
-      "Mon–Wed–Sat: 08:00–14:30",
+      "Mon–Wed: 08:00–14:30",
       "Tue–Thu–Fri: 08:00–14:30 & 18:00–21:00",
-      "Sunday: Closed",
+      "Sat-Sun: Closed",
     ],
-    maps: "https://maps.google.com",
+    maps: "https://maps.app.goo.gl/QkQFu1yjxsVx9zYX6",
     emergency: false,
   },
 ];
@@ -37,21 +37,28 @@ const healthCenters = [
     area: "Mytilene",
     address: "8th km Mytilene-Kalloni Road",
     phone: "+30 22510 57700",
-    maps: "https://maps.google.com",
+    maps: "https://maps.app.goo.gl/39HZCU4Et7TGByNN7",
   },
   {
     name: "Kalloni Health Center",
     area: "Kalloni",
     address: "Kalloni, Lesvos",
     phone: "+30 22530 22222",
-    maps: "https://maps.google.com",
+    maps: "https://maps.app.goo.gl/5LSv2WCmTQ9gc7bW8",
   },
   {
     name: "Plomari Health Center",
     area: "Plomari",
     address: "Plomari, Lesvos",
-    phone: "+30 22520 32222",
-    maps: "https://maps.google.com",
+    phone: "+30 22523 50000",
+    maps: "https://maps.app.goo.gl/GvqWvTvQb34qF27c6",
+  },
+   {
+    name: "Polichnitos Health Center",
+    area: "Polichnitos",
+    address: "Polichnitos, Lesvos",
+    phone: "+30 22520 41111",
+    maps: "https://maps.app.goo.gl/JU1WQkRajxhN8nfW8",
   },
 ];
 
