@@ -6,7 +6,7 @@ export const metadata = {
   description:"Agios Isidoros beach in Lesvos is one of the most famous and beautiful beaches of the island, especially near Plomari."
 };
 
-export default function kolposkallonisPage() {
+export default function KolposKallonisPage() {
   return (
     <main className="bg-neutral-100 text-neutral-900">
 
