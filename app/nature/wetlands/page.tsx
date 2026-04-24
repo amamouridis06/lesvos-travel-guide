@@ -3,21 +3,27 @@ import Link from "next/link";
 export default function BeachesPage() {
   const beaches = [
     {
-      slug: "vatera",
-      name: "Βατερά",
+      slug: "achladeri-wetlands",
+      name: "Achladeri Wetlands",
       img: "/vatera.jpg",
-      desc: "Αμμώδης παραλία μήκους 8 km."
+      // desc: "Αμμώδης παραλία μήκους 8 km."
     },
     {
-      slug: "agios-isidoros",
-      name: "Άγιος Ισίδωρος",
+      slug: "kalloni-salt-pans",
+      name: "Kalloni Salt Pans",
       img: "/agios-isidoros.jpg",
-      desc: "Διάσημη παραλία με γαλάζια σημαία."
+      // desc: "Διάσημη παραλία με γαλάζια σημαία."
+    },
+    {
+      slug: "kolpos-kallonis",
+      name: "Golf of Kallonis",
+      img: "/agios-isidoros.jpg",
+      // desc: "Διάσημη παραλία με γαλάζια σημαία."
     }
   ];
 
   return (
-    <main className="min-h-screen bg-black text-white px-6 pt-32 pb-16 bg-[url('/beach.jpg')] bg-cover bg-center bg-fixed relative">
+    <main className="min-h-screen bg-black text-white px-6 pt-32 pb-16 bg-[url('/wetlands.jpg')] bg-cover bg-center bg-fixed relative">
 
       <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>
 
@@ -33,7 +39,7 @@ export default function BeachesPage() {
 
                 <div className="p-5">
                   <h2 className="text-2xl font-semibold mb-2">{b.name}</h2>
-                  <p className="text-gray-300 text-sm">{b.desc}</p>
+                  {/* <p className="text-gray-300 text-sm">{b.desc}</p> */}
                 </div>
 
               </div>
