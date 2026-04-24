@@ -51,7 +51,7 @@ return (
 
                 <div className="p-5">
                   <h2 className="text-2xl font-semibold mb-2">{b.name}</h2>
-                  <p className="text-gray-300 text-sm">{b.desc}</p>
+                  {/* <p className="text-gray-300 text-sm">{b.desc}</p> */}
                 </div>
 
               </div>
