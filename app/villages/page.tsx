@@ -7,24 +7,22 @@ export const metadata = {
 };
 
 const villages = [
-  {
-    name: "Mytilini",
-    description: "Capital, vibrant, cultural, historic",
-    image: "/placeholder.jpg",
-    href: "/villages/mytilini",
-  },
-  {
-    name: "Moria",
-    description: "Historic, traditional, local life",
-    image: "/placeholder.jpg",
-    href: "/villages/moria",
-  },
-  {
-    name: "Panagiouda",
-    description: "Seaside, peaceful, authentic",
-    image: "/placeholder.jpg",
-    href: "/villages/panagiouda",
-  },
+  { name: "Molyvos (Mithymna)", description: "Medieval, picturesque, stone-built, romantic, sunsets", image: "/molivos1.jpeg", href: "/villages/molivos", }, 
+  { name: "Plomari", description: "Coastal, ouzo, lively, maritime, authentic", image: "/plomari2.jpg", href: "/villages/plomari", }, 
+  { name: "Agiasos", description: "Mountain, traditional, crafts, cultural, vibrant", image: "/agiasos.jpg", href: "/villages/agiasos", }, 
+  { name: "Mantamados", description: "Religious, heritage, ceramics, local, traditional", image: "/mantamados.jpg", href: "/villages/mantamados", }, 
+  { name: "Skala Kallonis", description: "Wetlands, birdwatching, seaside, tranquil, authentic", image: "/skala-kallonis.jpeg", href: "/villages/skala-kallonis", }, 
+  { name: "Eresos", description: "Bohemian, relaxed, artistic, historic, authentic", image: "/eressosx.jpeg", href: "/villages/eresos", }, 
+  { name: "Skala Eresou", description: "Seaside, relaxed, beach life, authentic", image: "/eressos.jpeg", href: "/villages/skala-eresou", }, 
+  { name: "Mesotopos", description: "Traditional, peaceful, local, authentic", image: "/pallas.jpg", href: "/villages/mesotopos", }, 
+  { name: "Melinta", description: "Coastal, calm, scenic, traditional", image: "/plomari1.jpg", href: "/villages/melinta", }, 
+  { name: "Sigri", description: "Remote, volcanic, seaside, unique", image: "/ouzo.jpg", href: "/villages/sigri", }, 
+  { name: "Thermi", description: "Historic, coastal, peaceful, cultural", image: "/thermi.jpeg", href: "/villages/thermi", }, 
+  { name: "Skalohori", description: "Traditional, hillside, quiet, authentic", image: "/skaloxori.jpeg", href: "/villages/skaloxori", }, 
+  { name: "Filia", description: "Mountain, traditional, peaceful, local", image: "/filia.jpeg", href: "/villages/filia", },
+  { name: "Mytilini",description: "Capital, vibrant, cultural, historic", image: "/placeholder.jpg",href: "/villages/mytilini",},
+  {name: "Moria", description: "Historic, traditional, local life",image: "/placeholder.jpg",href: "/villages/moria",},
+  {name: "Panagiouda",description: "Seaside, peaceful, authentic",image: "/placeholder.jpg",href: "/villages/panagiouda",},
   {
     name: "Pamfila",
     description: "Quiet, traditional, local charm",
