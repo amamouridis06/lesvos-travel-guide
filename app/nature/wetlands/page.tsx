@@ -16,7 +16,7 @@ export default function WetlandsPage() {
     },
     {
       slug: "kolpos-kallonis",
-      name: "Gulf of Kallonis",
+      name: "Gulf of Kalloni",
       img: "/agios-isidoros.jpg",
       // desc: "Διάσημη παραλία με γαλάζια σημαία."
     }
