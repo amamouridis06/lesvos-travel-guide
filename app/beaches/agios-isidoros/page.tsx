@@ -113,18 +113,7 @@ export default function AgiosIsidorosPage() {
         </aside>
       </section>
 
-      {/* CTA */}
-      <section className="bg-neutral-900 text-white py-16 text-center">
-        <h2 className="text-2xl font-semibold mb-4">
-          Explore more beaches in Lesvos
-        </h2>
-        <Link
-          href="/beaches"
-          className="inline-block px-6 py-3 bg-yellow-500 text-black rounded-lg font-semibold hover:bg-yellow-400 transition"
-        >
-          View all beaches
-        </Link>
-      </section>
+      
 
     </main>
   );
