@@ -1,155 +1,158 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Pharmacies | Lesvos Travel Guide",
+  title: "Pharmacies & Emergency | Lesvos Travel Guide",
   description:
-    "Find pharmacies in Lesvos for urgent needs, useful addresses, contact details, and practical information for visitors.",
+    "Find pharmacies, emergency numbers, hospitals and health centers in Lesvos.",
 };
+
+/* -------------------- DATA -------------------- */
+
+const emergencyServices = [
+  { name: "Police", phone: "100" },
+  { name: "Fire Department", phone: "199" },
+  { name: "Ambulance (EKAV)", phone: "166" },
+  { name: "European Emergency Number", phone: "112" },
+];
 
 const pharmacies = [
   {
-    name: "Pharmacy Mariolas O.E",
-    area: "Kalloni ",
-    address: "Centre Square, Kalloni",
-    phone: "+30 2253022022",
+    name: "Pharmacy Example",
+    area: "Mytilene",
+    address: "Example Street 1",
+    phone: "+30 22510 00000",
     hours: [
-  <ul style={{ paddingLeft: "20px" }}>
-  <li>Mon–Wed–Sat: 08:00–14:30</li>
-  <li>Tue–Thu–Fri: 08:00–14:30 &amp; 18:00–21:00</li>
-  <li>Sat–Sun: Closed</li>
-</ul>
-      ],
-    maps: "https://maps.app.goo.gl/QkQFu1yjxsVx9zYX6",
+      "Mon–Wed–Sat: 08:00–14:30",
+      "Tue–Thu–Fri: 08:00–14:30 & 18:00–21:00",
+      "Sunday: Closed",
+    ],
+    maps: "https://maps.google.com",
     emergency: false,
   },
-  // {
-  //   name: "Kalloni Pharmacy",
-  //   area: "Kalloni",
-  //   address: "Kalloni Central Square",
-  //   phone: "+30 22530 12345",
-  //   hours: "Mon–Sat: 08:00–20:00",
-  //   maps: "https://maps.google.com",
-  //   emergency: false,
-  // },
-  // {
-  //   name: "Plomari Pharmacy",
-  //   area: "Plomari",
-  //   address: "Main Road, Plomari",
-  //   phone: "+30 22520 12345",
-  //   hours: "Mon–Sat: 08:00–20:00",
-  //   maps: "https://maps.google.com",
-  //   emergency: false,
-  // },
-  // {
-  //   name: "Molyvos Pharmacy",
-  //   area: "Molyvos",
-  //   address: "Molyvos Village Center",
-  //   phone: "+30 22530 67890",
-  //   hours: "Mon–Sat: 08:00–20:00",
-  //   maps: "https://maps.google.com",
-  //   emergency: false,
-  // },
 ];
+
+const healthCenters = [
+  {
+    name: "Mytilene General Hospital",
+    area: "Mytilene",
+    address: "8th km Mytilene-Kalloni Road",
+    phone: "+30 22510 57700",
+    maps: "https://maps.google.com",
+  },
+  {
+    name: "Kalloni Health Center",
+    area: "Kalloni",
+    address: "Kalloni, Lesvos",
+    phone: "+30 22530 22222",
+    maps: "https://maps.google.com",
+  },
+  {
+    name: "Plomari Health Center",
+    area: "Plomari",
+    address: "Plomari, Lesvos",
+    phone: "+30 22520 32222",
+    maps: "https://maps.google.com",
+  },
+];
+
+/* -------------------- PAGE -------------------- */
 
 export default function PharmaciesPage() {
   return (
     <main className="min-h-screen bg-neutral-100 text-neutral-900">
+      
       {/* HERO */}
-      <section className="relative h-[35vh] sm:h-[40vh] md:h-[50vh] bg-[url('/pharmacies.png')] bg-cover bg-center">
-        <div className="absolute inset-0 bg-black/35" />
+      <section className="relative h-[40vh] bg-[url('/pharmacies.png')] bg-cover bg-center">
+        <div className="absolute inset-0 bg-black/40" />
         <div className="relative z-10 h-full flex items-end">
-          <div className="max-w-6xl mx-auto w-full px-4 sm:px-6 pb-8 sm:pb-10">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
-              Pharmacies in Lesvos
+          <div className="max-w-6xl mx-auto w-full px-6 pb-10">
+            <h1 className="text-4xl md:text-5xl font-bold text-white">
+              Health & Emergency in Lesvos
             </h1>
-            <p className="mt-2 text-sm sm:text-base text-gray-200 max-w-2xl">
-              Useful pharmacy information for urgent needs during your stay on the island.
+            <p className="mt-2 text-gray-200 max-w-2xl">
+              Pharmacies, emergency numbers, hospitals and useful health information.
             </p>
           </div>
         </div>
       </section>
 
-      {/* INTRO */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
-        <div className="bg-white rounded-2xl shadow-sm p-6 sm:p-8">
-          <h2 className="text-2xl font-semibold mb-4">Useful Information</h2>
-          <p className="text-gray-700 leading-relaxed">
-            If you need medicine, first-aid products, or urgent pharmacy assistance during
-            your trip, here you can find useful pharmacies across Lesvos. Always call ahead
-            to confirm opening hours, especially during weekends, holidays, or night duty.
-          </p>
+      {/* EMERGENCY NUMBERS */}
+      <section className="max-w-6xl mx-auto px-6 py-12">
+        <h2 className="text-2xl font-semibold mb-6">Emergency Numbers</h2>
 
-          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="rounded-xl bg-red-50 border border-red-100 p-4">
-              <h3 className="font-semibold text-red-700 mb-2">Emergency Tip</h3>
-              <p className="text-sm text-gray-700">
-                For serious emergencies, contact the emergency services immediately or visit
-                the nearest hospital or health center.
-              </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+          {emergencyServices.map((service) => (
+            <div
+              key={service.name}
+              className="bg-white rounded-xl shadow-sm p-5 border text-center"
+            >
+              <h3 className="font-semibold text-lg">{service.name}</h3>
+              <a
+                href={`tel:${service.phone}`}
+                className="block mt-3 text-blue-600 text-lg font-medium hover:underline"
+              >
+                {service.phone}
+              </a>
             </div>
-
-            <div className="rounded-xl bg-blue-50 border border-blue-100 p-4">
-              <h3 className="font-semibold text-blue-700 mb-2">Good to Know</h3>
-              <p className="text-sm text-gray-700">
-                Some pharmacies may operate on a duty schedule. It is useful to check which
-                pharmacy is on call before visiting.
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
-      {/* PHARMACY LIST */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 pb-14 sm:pb-20">
+      {/* PHARMACIES */}
+      <section className="max-w-6xl mx-auto px-6 pb-14">
         <h2 className="text-2xl font-semibold mb-6">Pharmacies</h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
           {pharmacies.map((pharmacy) => (
             <div
               key={pharmacy.name}
-              className="bg-white rounded-2xl shadow-md p-5 border border-neutral-200"
+              className="bg-white rounded-2xl shadow-md p-5 border"
             >
-              <div className="flex items-start justify-between gap-3">
+              <div className="flex justify-between">
                 <div>
                   <h3 className="text-lg font-semibold">{pharmacy.name}</h3>
-                  <p className="text-sm text-gray-500 mt-1">{pharmacy.area}</p>
+                  <p className="text-sm text-gray-500">{pharmacy.area}</p>
                 </div>
 
                 {pharmacy.emergency && (
-                  <span className="text-xs font-medium bg-red-100 text-red-700 px-3 py-1 rounded-full">
+                  <span className="text-xs bg-red-100 text-red-700 px-3 py-1 rounded-full">
                     Emergency
                   </span>
                 )}
               </div>
 
-              <div className="mt-4 space-y-2 text-sm text-gray-700">
+              <div className="mt-4 text-sm space-y-2">
                 <p>
-                  <span className="font-medium">Address:</span> {pharmacy.address}
+                  <strong>Address:</strong> {pharmacy.address}
                 </p>
                 <p>
-                  <span className="font-medium">Phone:</span>{" "}
-                  <a href={`tel:${pharmacy.phone}`} className="text-blue-600 hover:underline">
+                  <strong>Phone:</strong>{" "}
+                  <a href={`tel:${pharmacy.phone}`} className="text-blue-600">
                     {pharmacy.phone}
                   </a>
                 </p>
-                <p>
-                  <span className="font-medium">Opening hours:</span> {pharmacy.hours}
-                </p>
+
+                <div>
+                  <strong>Opening hours:</strong>
+                  <ul className="list-disc pl-5 mt-1">
+                    {pharmacy.hours.map((h, i) => (
+                      <li key={i}>{h}</li>
+                    ))}
+                  </ul>
+                </div>
               </div>
 
-              <div className="mt-5 flex flex-wrap gap-3">
+              <div className="mt-5 flex gap-3">
                 <a
                   href={pharmacy.maps}
                   target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block px-4 py-2 rounded-lg bg-blue-600 text-white text-sm font-medium hover:bg-blue-700 transition"
+                  className="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm"
                 >
-                  View on map
+                  Map
                 </a>
-
                 <a
                   href={`tel:${pharmacy.phone}`}
-                  className="inline-block px-4 py-2 rounded-lg border border-neutral-300 text-sm font-medium hover:bg-neutral-50 transition"
+                  className="px-4 py-2 border rounded-lg text-sm"
                 >
                   Call
                 </a>
@@ -159,25 +162,59 @@ export default function PharmaciesPage() {
         </div>
       </section>
 
-      {/* EXTRA INFO */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 pb-16">
-        <div className="bg-white rounded-2xl shadow-sm p-6 sm:p-8">
-          <h2 className="text-2xl font-semibold mb-4">Before You Go</h2>
-          <ul className="list-disc pl-5 space-y-2 text-gray-700">
-            <li>Carry the name of the medicine you need, preferably written down.</li>
-            <li>Keep your passport or ID with you if necessary.</li>
-            <li>Ask your accommodation host for the nearest on-duty pharmacy.</li>
-            <li>Call first to confirm the pharmacy is open.</li>
-          </ul>
+      {/* HOSPITALS */}
+      <section className="max-w-6xl mx-auto px-6 pb-16">
+        <h2 className="text-2xl font-semibold mb-6">
+          Hospitals & Health Centers
+        </h2>
 
-          <div className="mt-6">
-            <Link
-              href="/"
-              className="inline-block px-5 py-3 rounded-lg bg-neutral-900 text-white font-medium hover:bg-neutral-800 transition"
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+          {healthCenters.map((center) => (
+            <div
+              key={center.name}
+              className="bg-white rounded-2xl shadow-md p-5 border"
             >
-              Back to Home
-            </Link>
-          </div>
+              <h3 className="text-lg font-semibold">{center.name}</h3>
+              <p className="text-sm text-gray-500">{center.area}</p>
+
+              <div className="mt-4 text-sm space-y-2">
+                <p>
+                  <strong>Address:</strong> {center.address}
+                </p>
+                <p>
+                  <strong>Phone:</strong>{" "}
+                  <a href={`tel:${center.phone}`} className="text-blue-600">
+                    {center.phone}
+                  </a>
+                </p>
+              </div>
+
+              <div className="mt-5 flex gap-3">
+                <a
+                  href={center.maps}
+                  target="_blank"
+                  className="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm"
+                >
+                  Map
+                </a>
+                <a
+                  href={`tel:${center.phone}`}
+                  className="px-4 py-2 border rounded-lg text-sm"
+                >
+                  Call
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-10">
+          <Link
+            href="/"
+            className="inline-block px-5 py-3 bg-neutral-900 text-white rounded-lg"
+          >
+            Back to Home
+          </Link>
         </div>
       </section>
     </main>
