@@ -15,7 +15,7 @@ export default function BeachesPage() {
       desc: "Famous beach with blue flag."
     },
     {
-  slug: "skala-eressou",
+  slug: "skala-eresou",
   name: "Skala Eressou",
   img: "/x",
   desc: "Popular sandy beach with sunset views."
