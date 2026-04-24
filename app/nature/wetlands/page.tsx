@@ -1,7 +1,7 @@
 import Link from "next/link";
 
-export default function BeachesPage() {
-  const beaches = [
+export default function WetlandsPage() {
+  const wetlands = [
     {
       slug: "achladeri-wetlands",
       name: "Achladeri Wetlands",
@@ -28,11 +28,11 @@ export default function BeachesPage() {
       <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>
 
       <div className="relative z-10">
-        <h1 className="text-4xl font-bold text-center mb-10">Παραλίες Λέσβου</h1>
+        <h1 className="text-4xl font-bold text-center mb-10">Wetlands of Lesvos</h1>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {beaches.map((b, i) => (
-            <Link href={`/beaches/${b.slug}`} key={i}>
+          {wetlands.map((b, i) => (
+            <Link href={`/wetlands/${b.slug}`} key={i}>
               <div className="bg-gray-900/80 backdrop-blur-sm rounded-xl border border-gray-700 shadow-xl overflow-hidden hover:scale-[1.03] transition-transform cursor-pointer">
                 
                 <img src={b.img} alt={b.name} className="h-48 w-full object-cover" />
