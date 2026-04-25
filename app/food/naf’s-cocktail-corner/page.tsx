@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function NafPage() {
-  const images = ["/img1.jpg", "/img2.jpg", "/img3.jpg"];
+  const images = ["/naf1.jpg", "/naf2.jpg", "/naf3.jpg", "/naf4jpg", "/naf5.jpg"];
 
   const [index, setIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
@@ -39,8 +39,8 @@ export default function NafPage() {
       {/* ================= HERO ================= */}
       <section className="relative h-[55vh] sm:h-[65vh] lg:h-[70vh] w-full">
         <Image
-          src="/hero.jpg"
-          alt="Hero image"
+          src="/naf3.jpg"
+          alt="Naf’s Cocktail Corner"
           fill
           className="object-cover"
           priority
@@ -77,8 +77,7 @@ export default function NafPage() {
             </p>
 
             <p className="text-gray-700 leading-relaxed text-base sm:text-lg mt-3">
-              Customers come, eat, relax, sing, say good night and return again and again.
-              We are always happy to treat you as family.
+              
             </p>
           </div>
 
@@ -185,8 +184,8 @@ export default function NafPage() {
           <div className="bg-white rounded-2xl shadow-md p-4 sm:p-6 border border-gray-100">
             <h3 className="font-semibold mb-4 text-lg">Location & Contact</h3>
             <ul className="text-sm space-y-3 text-gray-700">
-              <li><strong>Address:</strong> x</li>
-              <li><strong>Phone:</strong> x</li>
+              <li><strong>Address:</strong>Mytilene-Skopelos Regional Road, Plomari 812 00</li>
+              <li><strong>Phone:</strong>+30 22520 31374</li>
               <li><strong>Hours:</strong> 20:00 – 4:00</li>
             </ul>
           </div>
@@ -194,7 +193,7 @@ export default function NafPage() {
           {/* Map */}
           <div className="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden">
             <iframe
-              src="https://maps.google.com"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3526.5997857334933!2d26.39019272923644!3d38.96809704727767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14baf7f481beb643%3A0x2ff539f18c93758c!2sNaf&#39;s%20Cocktail%20Corner!5e1!3m2!1sel!2sgr!4v1777117331660!5m2!1sel!2sgr"
               className="h-52 sm:h-64 w-full"
             />
           </div>
