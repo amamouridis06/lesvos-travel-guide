@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-export default function LimanakiPamfilonPage() {
+export default function TropicanaPage() {
   const images = [
     "/tropicana1.jpg",
     "/tropicana2.jpg",
