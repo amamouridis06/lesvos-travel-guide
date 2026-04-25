@@ -5,30 +5,33 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function NafPage() {
-  const images = [
-    "/naf1.jpg",
-    "/naf2.jpg",
-    "/naf3.jpg",
-    "/naf4.jpg",
-    "/naf5.jpg",
-  ];
+  const images = ["/img1.jpg", "/img2.jpg", "/img3.jpg"];
 
   const [index, setIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
 
-  const next = () => setIndex((prev) => (prev + 1) % images.length);
-  const prev = () => setIndex((prev) => (prev - 1 + images.length) % images.length);
+  const hasImages = images.length > 0;
+
+  const next = () => {
+    if (!hasImages) return;
+    setIndex((prev) => (prev + 1) % images.length);
+  };
+
+  const prev = () => {
+    if (!hasImages) return;
+    setIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
 
   useEffect(() => {
-    if (isHovered) return;
+    if (!hasImages || isHovered) return;
 
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % images.length);
-    }, 3000);
+    }, 3500);
 
     return () => clearInterval(interval);
-  }, [isHovered]);
+  }, [isHovered, hasImages]);
 
   return (
     <main className="bg-neutral-100 text-neutral-900 min-h-screen overflow-x-hidden">
@@ -36,8 +39,8 @@ export default function NafPage() {
       {/* ================= HERO ================= */}
       <section className="relative h-[55vh] sm:h-[65vh] lg:h-[70vh] w-full">
         <Image
-          src="naf3.jpg"
-          alt="Naf’s Cocktail Corner"
+          src="/hero.jpg"
+          alt="Hero image"
           fill
           className="object-cover"
           priority
@@ -50,7 +53,7 @@ export default function NafPage() {
             Naf’s Cocktail Corner
           </h1>
           <p className="mt-2 sm:mt-3 text-sm sm:text-lg text-gray-200">
-            A fantastic corner for a coctail in south Lesvos
+            A fantastic corner for a cocktail in south Lesvos
           </p>
         </div>
       </section>
@@ -66,17 +69,25 @@ export default function NafPage() {
             <h2 className="text-xl sm:text-2xl font-semibold mb-4">
               About
             </h2>
+
             <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
-              With the idea of serving locals and visitors fresh juices, some even tropical and scrumptious homemade ice cream, the Tropicana was born in 1985, at the square of Andrea Kyriakou.
+              {/* μπορείς να βάλεις description εδώ */}
+              A cozy cocktail bar in South Lesvos with a relaxed atmosphere,
+              music, and great drinks by the sea.
             </p>
+
             <p className="text-gray-700 leading-relaxed text-base sm:text-lg mt-3">
-              Customers come, eat, relax, sing, say good night and return again and again. We are always happy to treat you as family.
+              Customers come, eat, relax, sing, say good night and return again and again.
+              We are always happy to treat you as family.
             </p>
           </div>
 
           {/* What to try */}
           <div>
-            <h2 className="text-xl sm:text-2xl font-semibold mb-4">What to try</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold mb-4">
+              What to try
+            </h2>
+
             <ul className="list-disc pl-5 space-y-2 text-sm sm:text-base text-gray-700 mb-6">
               <li>Grilled meats and traditional homemade dishes</li>
               <li>Daily cooked meals with local ingredients</li>
@@ -85,49 +96,60 @@ export default function NafPage() {
             </ul>
 
             {/* ===== CAROUSEL ===== */}
-            <div
-              className="relative h-56 sm:h-72 md:h-80 rounded-2xl overflow-hidden shadow-xl group cursor-pointer"
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
-              onClick={() => setIsOpen(true)}
-            >
-              <Image
-                src={images[index]}
-                alt="Gallery"
-                fill
-                className="object-cover transition duration-700 group-hover:scale-105"
-              />
-
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-
-              {/* arrows */}
-              <button
-                onClick={(e) => { e.stopPropagation(); prev(); }}
-                className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-white/80 px-2 sm:px-3 py-1 rounded-full"
+            {hasImages && (
+              <div
+                className="relative h-56 sm:h-72 md:h-80 rounded-2xl overflow-hidden shadow-xl group cursor-pointer"
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+                onClick={() => setIsOpen(true)}
               >
-                ‹
-              </button>
+                <Image
+                  src={images[index]}
+                  alt="Gallery"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
 
-              <button
-                onClick={(e) => { e.stopPropagation(); next(); }}
-                className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-white/80 px-2 sm:px-3 py-1 rounded-full"
-              >
-                ›
-              </button>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
 
-              {/* dots */}
-              <div className="absolute bottom-3 sm:bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-                {images.map((_, i) => (
-                  <div
-                    key={i}
-                    onClick={(e) => { e.stopPropagation(); setIndex(i); }}
-                    className={`w-2.5 h-2.5 rounded-full ${
-                      i === index ? "bg-white scale-110" : "bg-white/50"
-                    }`}
-                  />
-                ))}
+                {/* arrows */}
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    prev();
+                  }}
+                  className="absolute left-3 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-black w-8 h-8 rounded-full flex items-center justify-center"
+                >
+                  ‹
+                </button>
+
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    next();
+                  }}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-black w-8 h-8 rounded-full flex items-center justify-center"
+                >
+                  ›
+                </button>
+
+                {/* dots */}
+                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
+                  {images.map((_, i) => (
+                    <button
+                      key={i}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setIndex(i);
+                      }}
+                      className={`w-2.5 h-2.5 rounded-full transition-all ${
+                        i === index ? "bg-white scale-125" : "bg-white/50"
+                      }`}
+                    />
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
 
             {/* thumbnails */}
             <div className="flex gap-2 sm:gap-3 mt-4 overflow-x-auto pb-1">
@@ -149,76 +171,101 @@ export default function NafPage() {
         {/* ===== SIDEBAR ===== */}
         <aside className="space-y-6 lg:space-y-10">
 
-          <div className="grid gap-6">
-
-            {/* Info */}
-            <div className="bg-white rounded-2xl shadow-md p-4 sm:p-6 border border-gray-100">
-              <h3 className="font-semibold mb-4 text-lg">Informations</h3>
-              <ul className="text-sm space-y-3 text-gray-700">
-                <li><strong>Type:</strong> Coctail Bar</li>
-                <li><strong>Prices:</strong> 5-10 €</li>
-                <li><strong>Suitable for:</strong> Families & couples</li>
-              </ul>
-            </div>
-
-            {/* Contact */}
-            <div className="bg-white rounded-2xl shadow-md p-4 sm:p-6 border border-gray-100">
-              <h3 className="font-semibold mb-4 text-lg">Location & Contact</h3>
-              <ul className="text-sm space-y-3 text-gray-700">
-                <li><strong>Address:</strong> Mytilene-Skopelos Regional Road, Plomari 812 00</li>
-                <li><strong>Phone:</strong> 22530 71869</li>
-                <li><strong>Hours:</strong> 20:00 – 4:00</li>
-              </ul>
-            </div>
-
-            {/* Map */}
-            <div className="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden">
-              <iframe
-               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3526.5997857334933!2d26.39019272923644!3d38.96809704727767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14baf7f481beb643%3A0x2ff539f18c93758c!2sNaf&#39;s%20Cocktail%20Corner!5e1!3m2!1sel!2sgr!4v1777116320911!5m2!1sel!2sgr" 
-                className="h-52 sm:h-64 w-full"
-              />
-            </div>
-
-            {/* Nearby */}
-            <div className="bg-white rounded-2xl shadow-md p-4 sm:p-6 border border-gray-100">
-              <h2 className="text-lg sm:text-xl font-semibold mb-4">
-                Nearby Beaches and Villages
-              </h2>
-              <ul className="space-y-2 text-gray-700 text-sm sm:text-base">
-                <li>
-                  🏖 <Link href="/beaches/agios-isidoros" className="text-blue-600 hover:underline">Agios Isidoros Beach</Link>
-                </li>
-                <li>
-                  <Link href="/villages/melinta" className="text-blue-600 hover:underline">Melinta </Link>
-                </li>
-                <li>
-                  <Link href="/villages/plomari" className="text-blue-600 hover:underline">Plomari</Link>
-                </li>
-              </ul>
-            </div>
-
+          {/* Info */}
+          <div className="bg-white rounded-2xl shadow-md p-4 sm:p-6 border border-gray-100">
+            <h3 className="font-semibold mb-4 text-lg">Informations</h3>
+            <ul className="text-sm space-y-3 text-gray-700">
+              <li><strong>Type:</strong> Cocktail Bar</li>
+              <li><strong>Prices:</strong> 5–10 €</li>
+              <li><strong>Suitable for:</strong> Families & couples</li>
+            </ul>
           </div>
+
+          {/* Contact */}
+          <div className="bg-white rounded-2xl shadow-md p-4 sm:p-6 border border-gray-100">
+            <h3 className="font-semibold mb-4 text-lg">Location & Contact</h3>
+            <ul className="text-sm space-y-3 text-gray-700">
+              <li><strong>Address:</strong> x</li>
+              <li><strong>Phone:</strong> x</li>
+              <li><strong>Hours:</strong> 20:00 – 4:00</li>
+            </ul>
+          </div>
+
+          {/* Map */}
+          <div className="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden">
+            <iframe
+              src="https://maps.google.com"
+              className="h-52 sm:h-64 w-full"
+            />
+          </div>
+
+          {/* Nearby */}
+          <div className="bg-white rounded-2xl shadow-md p-4 sm:p-6 border border-gray-100">
+            <h2 className="text-lg sm:text-xl font-semibold mb-4">
+              Nearby Beaches and Villages
+            </h2>
+
+            <ul className="space-y-2 text-gray-700 text-sm sm:text-base">
+              <li>
+                🏖{" "}
+                <Link href="/beaches/agios-isidoros" className="text-blue-600 hover:underline">
+                  Agios Isidoros Beach
+                </Link>
+              </li>
+              <li>
+                <Link href="/villages/melinta" className="text-blue-600 hover:underline">
+                  Melinta
+                </Link>
+              </li>
+              <li>
+                <Link href="/villages/plomari" className="text-blue-600 hover:underline">
+                  Plomari
+                </Link>
+              </li>
+            </ul>
+          </div>
+
         </aside>
       </section>
 
       {/* ===== MODAL ===== */}
-      {isOpen && (
+      {isOpen && hasImages && (
         <div
           className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center"
           onClick={() => setIsOpen(false)}
         >
           <div className="relative w-full max-w-5xl h-[60vh] sm:h-[70vh] lg:h-[80vh]">
-            <Image src={images[index]} alt="" fill className="object-contain" />
+            <Image
+              src={images[index]}
+              alt="Gallery fullscreen"
+              fill
+              className="object-contain"
+            />
 
-            <button onClick={() => setIsOpen(false)} className="absolute top-4 right-4 text-white text-2xl">
+            <button
+              onClick={() => setIsOpen(false)}
+              className="absolute top-4 right-4 text-white text-2xl"
+            >
               ✕
             </button>
 
-            <button onClick={(e) => { e.stopPropagation(); prev(); }} className="absolute left-6 top-1/2 text-white text-3xl">
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                prev();
+              }}
+              className="absolute left-6 top-1/2 text-white text-3xl"
+            >
               ‹
             </button>
 
-            <button onClick={(e) => { e.stopPropagation(); next(); }} className="absolute right-6 top-1/2 text-white text-3xl">
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                next();
+              }}
+              className="absolute right-6 top-1/2 text-white text-3xl"
+            >
               ›
             </button>
           </div>
