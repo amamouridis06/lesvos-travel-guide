@@ -1,61 +1,109 @@
-import React, { useState } from "react";
+"use client";
 
-export default function TravelGuideBar() {
-  const [destination, setDestination] = useState("");
+const barPhotos = [
+  "/bar1.jpg",
+  "/bar2.jpg",
+  "/bar3.jpg",
+  "/bar4.jpg",
+];
 
+function CocktailBarSection() {
   return (
-    <section className="w-full px-4 py-10">
-      <div className="mx-auto max-w-6xl">
-        
-        {/* Container */}
-        <div className="rounded-full bg-white shadow-2xl ring-1 ring-gray-200 overflow-hidden">
-          
-          <div className="flex flex-col md:flex-row divide-y md:divide-y-0 md:divide-x divide-gray-200">
-            
-            {/* Destination */}
-            <div className="flex-1 px-6 py-4 hover:bg-gray-50 transition">
-              <p className="text-xs font-semibold text-gray-500">
-                Where
-              </p>
-              <input
-                value={destination}
-                onChange={(e) => setDestination(e.target.value)}
-                placeholder="Search destinations"
-                className="mt-1 w-full bg-transparent text-sm font-semibold text-gray-900 outline-none placeholder:text-gray-400"
-              />
-            </div>
+    <div className="overflow-hidden rounded-2xl bg-white shadow-sm">
+      {/* PHOTO CAROUSEL STYLE */}
+      <div className="flex gap-2 overflow-x-auto p-2">
+        {barPhotos.map((photo, index) => (
+          <img
+            key={index}
+            src={photo}
+            alt={`Cocktail bar photo ${index + 1}`}
+            className="h-64 min-w-[85%] rounded-xl object-cover sm:min-w-[48%] lg:min-w-[32%]"
+          />
+        ))}
+      </div>
 
-            {/* Dates */}
-            <div className="flex-1 px-6 py-4 hover:bg-gray-50 transition cursor-pointer">
-              <p className="text-xs font-semibold text-gray-500">
-                When
-              </p>
-              <p className="mt-1 text-sm font-semibold text-gray-900">
-                Add dates
-              </p>
-            </div>
+      <div className="p-6">
+        <div className="mb-3 flex items-center justify-between gap-4">
+          <div>
+            <p className="text-sm font-medium text-purple-600">
+              Cocktail Bar
+            </p>
 
-            {/* Guests */}
-            <div className="flex-1 px-6 py-4 hover:bg-gray-50 transition cursor-pointer">
-              <p className="text-xs font-semibold text-gray-500">
-                Who
-              </p>
-              <p className="mt-1 text-sm font-semibold text-gray-900">
-                Add guests
-              </p>
-            </div>
+            <h2 className="text-2xl font-semibold text-neutral-900">
+              Sunset Cocktail Bar
+            </h2>
+          </div>
 
-            {/* Button */}
-            <div className="flex items-center justify-center px-4 py-3">
-              <button className="rounded-full bg-black px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-gray-800 active:scale-95">
-                🔍 Search
-              </button>
-            </div>
+          <span className="rounded-full bg-neutral-100 px-4 py-2 text-sm font-medium text-neutral-700">
+            ⭐ 4.8
+          </span>
+        </div>
 
+        <p className="leading-relaxed text-gray-700">
+          A stylish cocktail bar in Plomari, perfect for evening drinks,
+          signature cocktails, relaxed music and a beautiful summer atmosphere.
+          It is ideal for couples, friends and visitors who want to enjoy the
+          nightlife of Lesvos in a more elegant and relaxed way.
+        </p>
+
+        <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3">
+          <div className="rounded-2xl bg-neutral-100 p-4">
+            <p className="text-sm font-semibold text-neutral-900">
+              Location
+            </p>
+            <p className="mt-1 text-sm text-gray-600">
+              Plomari, Lesvos
+            </p>
+          </div>
+
+          <div className="rounded-2xl bg-neutral-100 p-4">
+            <p className="text-sm font-semibold text-neutral-900">
+              Opening Hours
+            </p>
+            <p className="mt-1 text-sm text-gray-600">
+              18:00 - 02:00
+            </p>
+          </div>
+
+          <div className="rounded-2xl bg-neutral-100 p-4">
+            <p className="text-sm font-semibold text-neutral-900">
+              Best For
+            </p>
+            <p className="mt-1 text-sm text-gray-600">
+              Cocktails & sunset
+            </p>
           </div>
         </div>
 
+        <div className="mt-6 rounded-2xl bg-black p-5 text-white">
+          <h3 className="mb-2 text-lg font-semibold">
+            Why visit this bar?
+          </h3>
+
+          <ul className="space-y-2 text-sm text-gray-200">
+            <li>🍸 Signature cocktails with local flavors</li>
+            <li>🌅 Great atmosphere for sunset drinks</li>
+            <li>🎵 Relaxed evening music</li>
+            <li>👥 Perfect for couples and small groups</li>
+          </ul>
+        </div>
+
+        <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+          <a
+            href="#"
+            className="flex-1 rounded-2xl bg-purple-600 px-5 py-4 text-center text-sm font-semibold text-white transition hover:bg-purple-700"
+          >
+            View on Map
+          </a>
+
+          <a
+            href="#"
+            className="flex-1 rounded-2xl border border-neutral-300 px-5 py-4 text-center text-sm font-semibold text-neutral-900 transition hover:bg-neutral-100"
+          >
+            More Information
+          </a>
+        </div>
       </div>
-    </section>
+    </div>
   );
 }
