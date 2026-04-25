@@ -6,12 +6,11 @@ import { useEffect, useState } from "react";
 
 export default function NafPage() {
   const images = [
-    "/tropicana1.jpg",
-    "/tropicana2.jpg",
-    "/tropicana3.jpg",
-    "/tropicana4.jpg",
-    "/tropicana5.jpg",
-    "/tropicana6.jpg",
+    "/naf1.jpg",
+    "/naf2.jpg",
+    "/naf3.jpg",
+    "/naf4.jpg",
+    "/naf5.jpg",
   ];
 
   const [index, setIndex] = useState(0);
@@ -37,8 +36,8 @@ export default function NafPage() {
       {/* ================= HERO ================= */}
       <section className="relative h-[55vh] sm:h-[65vh] lg:h-[70vh] w-full">
         <Image
-          src="/tropicana1.jpg"
-          alt="Tropicana Platanos"
+          src="naf3.jpg"
+          alt="Naf’s Cocktail Corner"
           fill
           className="object-cover"
           priority
@@ -48,10 +47,10 @@ export default function NafPage() {
 
         <div className="absolute bottom-8 sm:bottom-10 left-1/2 -translate-x-1/2 text-center text-white px-4 sm:px-6 max-w-3xl">
           <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold drop-shadow-lg">
-            Tropicana - Platanos
+            Naf’s Cocktail Corner
           </h1>
           <p className="mt-2 sm:mt-3 text-sm sm:text-lg text-gray-200">
-            A traditional restaurant-cafe based in Molyvos
+            A fantastic corner for a coctail in south Lesvos
           </p>
         </div>
       </section>
@@ -65,7 +64,7 @@ export default function NafPage() {
           {/* Intro */}
           <div>
             <h2 className="text-xl sm:text-2xl font-semibold mb-4">
-              The history of Tropicana - Platanos
+              About
             </h2>
             <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
               With the idea of serving locals and visitors fresh juices, some even tropical and scrumptious homemade ice cream, the Tropicana was born in 1985, at the square of Andrea Kyriakou.
@@ -156,9 +155,8 @@ export default function NafPage() {
             <div className="bg-white rounded-2xl shadow-md p-4 sm:p-6 border border-gray-100">
               <h3 className="font-semibold mb-4 text-lg">Informations</h3>
               <ul className="text-sm space-y-3 text-gray-700">
-                <li><strong>Type:</strong> Restaurant & cafe</li>
-                <li><strong>Kitchen:</strong> Greek</li>
-                <li><strong>Prices:</strong> €€</li>
+                <li><strong>Type:</strong> Coctail Bar</li>
+                <li><strong>Prices:</strong> 5-10 €</li>
                 <li><strong>Suitable for:</strong> Families & couples</li>
               </ul>
             </div>
@@ -167,17 +165,16 @@ export default function NafPage() {
             <div className="bg-white rounded-2xl shadow-md p-4 sm:p-6 border border-gray-100">
               <h3 className="font-semibold mb-4 text-lg">Location & Contact</h3>
               <ul className="text-sm space-y-3 text-gray-700">
-                <li><strong>Address:</strong> Plateia Kiriakou, Mithimna 811 08</li>
+                <li><strong>Address:</strong> Mytilene-Skopelos Regional Road, Plomari 812 00</li>
                 <li><strong>Phone:</strong> 22530 71869</li>
-                <li><strong>Hours:</strong> 09:30 – 23:30</li>
+                <li><strong>Hours:</strong> 20:00 – 4:00</li>
               </ul>
             </div>
 
             {/* Map */}
             <div className="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.1282669522334!2d26.173488099999997!3d39.369439799999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ba9bad08e0eb0d%3A0x8d3cdff7c431108!2sTropicana%20Platanos!5e1!3m2!1sen!2sgr!4v1776642629570!5m2!1sen!2sgr" 
-                loading="lazy"
+               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3526.5997857334933!2d26.39019272923644!3d38.96809704727767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14baf7f481beb643%3A0x2ff539f18c93758c!2sNaf&#39;s%20Cocktail%20Corner!5e1!3m2!1sel!2sgr!4v1777116320911!5m2!1sel!2sgr" 
                 className="h-52 sm:h-64 w-full"
               />
             </div>
@@ -185,17 +182,17 @@ export default function NafPage() {
             {/* Nearby */}
             <div className="bg-white rounded-2xl shadow-md p-4 sm:p-6 border border-gray-100">
               <h2 className="text-lg sm:text-xl font-semibold mb-4">
-                Nearby Sightseeings and Villages
+                Nearby Beaches and Villages
               </h2>
               <ul className="space-y-2 text-gray-700 text-sm sm:text-base">
                 <li>
-                  🏖 <Link href="/sightseeings/molyvos-castle" className="text-blue-600 hover:underline">Molyvos Castle</Link>
+                  🏖 <Link href="/beaches/agios-isidoros" className="text-blue-600 hover:underline">Agios Isidoros Beach</Link>
                 </li>
                 <li>
-                  🏖 <Link href="/villages/petra" className="text-blue-600 hover:underline">Petra</Link>
+                  <Link href="/villages/melinta" className="text-blue-600 hover:underline">Melinta </Link>
                 </li>
                 <li>
-                  🏖 <Link href="/villages/xrousos" className="text-blue-600 hover:underline">Vafeios</Link>
+                  <Link href="/villages/plomari" className="text-blue-600 hover:underline">Plomari</Link>
                 </li>
               </ul>
             </div>
