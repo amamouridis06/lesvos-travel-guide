@@ -98,7 +98,7 @@ export default function NafPage() {
             {/* ===== CAROUSEL ===== */}
             {hasImages && (
               <div
-                className="relative h-56 sm:h-72 md:h-80 rounded-2xl overflow-hidden shadow-xl group cursor-pointer"
+                className="relative w-full aspect-[16/10] sm:aspect-[16/9] md:aspect-[21/9] rounded-2xl overflow-hidden shadow-xl group cursor-pointer"
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
                 onClick={() => setIsOpen(true)}
