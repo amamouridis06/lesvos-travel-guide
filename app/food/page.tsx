@@ -45,6 +45,17 @@ const restaurants = [
   
 ];
 
+const bar = [
+  {
+    name: "Naf's Cocktail Corner",
+    description: "A ideal place for the best coctail",
+    location: "Agios Isidoros",
+    image: "/naf3.jpg",
+    href: "/food/naf’s-cocktail-corner",
+  },
+  
+];
+
 function FoodCard({
   name,
   description,
@@ -110,7 +121,7 @@ export default function FoodPage() {
           {[
             { title: "Taverns", href: "#taverns" },
             { title: "Restaurants", href: "#restaurants" },
-            { title: "Cafe & Bar", href: "#cafes" },
+            { title: "Bar", href: "#bar" },
             { title: "Traditional Cafes - Taverns", href: "#t-cafes" },
             { title: "Local Products", href: "#local" },
           ].map((cat) => (
@@ -159,10 +170,14 @@ export default function FoodPage() {
           </div>
         </div>
 
-        {/* CAFES */}
-        <div id="cafes">
-          <h2 className="text-2xl font-semibold mb-6">Καφέ & Bar</h2>
-          <p className="text-gray-600">(soon)</p>
+        {/* BARS */}
+        <div id="bar">
+          <h2 className="text-2xl font-semibold mb-6">Bar</h2>
+           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+            {bar.map((item) => (
+              <FoodCard key={item.name} {...item} />
+            ))}
+          </div>
         </div>
 
         {/* LOCAL PRODUCTS */}
