@@ -29,6 +29,19 @@ const pharmacies = [
     maps: "https://maps.app.goo.gl/QkQFu1yjxsVx9zYX6",
     emergency: false,
   },
+  {
+    name: "VALTAS, STAVROS, & CO. E.E.",
+    area: "Kalloni",
+    address: "Centre Square, Kalloni",
+    phone: "+30 2253024119",
+    hours: [
+      "Mon–Wed: 08:00–14:30",
+      "Tue–Thu–Fri: 08:00–14:00 & 18:00–21:00",
+      "Sat-Sun: Closed",
+    ],
+    maps: "https://maps.app.goo.gl/uSHsLHtWGdzWMovP9",
+    emergency: false,
+  },
 ];
 
 const healthCenters = [
