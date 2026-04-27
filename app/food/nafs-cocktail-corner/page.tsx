@@ -123,13 +123,10 @@ export default function CocktailBarPage() {
                 The Place
               </p>
               <h2 className="font-display mt-3 text-3xl font-semibold sm:text-4xl">
-                Where the island unwinds
+                About
               </h2>
               <p className="mt-5 text-lg leading-relaxed text-stone-600">
-                Tucked into a quiet stretch of coastline in southern Lesvos, Cocktail
-                Corner is the kind of place locals tell you about quietly. Driftwood
-                tables, candlelight, and a bar that takes its craft seriously without
-                taking itself too seriously.
+                The cocktail bar is located in the southern part of the island next to Agios Isidoros. A place that looks like it came out of a fairy tale, drinking a cocktail after a swim, enjoying the sunset and the calm breeze that calms you down.
               </p>
               <p className="mt-4 text-lg leading-relaxed text-stone-600">
                 Come for the sunset, stay for the second round — the playlist gets
