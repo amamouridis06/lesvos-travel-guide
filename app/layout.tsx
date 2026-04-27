@@ -1,5 +1,5 @@
 import "./globals.css";
-import NavBar from "../../Projects/lesvos-travel-guide/components/NavBar";
+import NavBar from "../../lesvos-travel-guide/components/NavBar";
 
 export const metadata = {
   title: "Lesvos Travel & Culture Website",
