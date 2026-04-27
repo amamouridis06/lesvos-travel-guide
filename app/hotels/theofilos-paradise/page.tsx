@@ -304,9 +304,7 @@ export default function TheofilosParadise() {
                                     Book Direct
                                     <span className="transition-transform duration-500 group-hover:translate-x-1">→</span>
                                 </a>
-                                <p className="mt-4 text-[11px] leading-relaxed" style={{ color: "var(--ms-muted)" }}>
-                                    The Quiet Atlas earns no commission on this listing. Direct bookings include breakfast & an arrival amenity.
-                                </p>
+
 
                                 <div
                                     className="mt-7 border-t pt-5 text-[11px] uppercase tracking-[0.28em]"
