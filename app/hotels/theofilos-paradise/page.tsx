@@ -11,7 +11,7 @@ const IMG = {
 
 // ---------- Hotel data ----------
 const hotel = {
-    name: "Theofilos Paradise Boutique Hotel",
+    name: "Theofilos Paradise Boutique Hotel.",
     region: "Mytilene Lesvos Greece",
     country: "Greece",
     established: "1912",
