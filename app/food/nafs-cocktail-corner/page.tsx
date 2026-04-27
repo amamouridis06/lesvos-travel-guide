@@ -26,10 +26,10 @@ const GALLERY = [
 ]
 
 const COCKTAILS = [
-  { t: "Aegean Spritz", d: "Local citrus, mastiha liqueur, prosecco." },
-  { t: "Smoked Old Fashioned", d: "Greek whiskey, thyme honey, orange peel." },
-  { t: "Mediterranean Mule", d: "Vodka, fresh ginger, cucumber, lime." },
-  { t: "Sunset Negroni", d: "Gin, Campari, vermouth, rosemary smoke." },
+  { t: "Zombie", d: "rum, passion fruit, pineapple, lime, falernum." },
+  { t: "Diego", d: "tequila, mango, vanilla, lime, spicy bitters" },
+  { t: "Hanky panky", d: "Vodka, fresh ginger, cucumber, lime." },
+  { t: "Pink mule", d: "vodka, strawberry, lime, mint, ginger beer" },
 ];
 
 const INFO = [
