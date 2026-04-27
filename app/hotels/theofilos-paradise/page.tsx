@@ -3,33 +3,32 @@ import { useEffect } from "react";
 
 // ---------- Replace with your own images ----------
 const IMG = {
-    hero: "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1920&q=80",
-    pool: "https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1200&q=80",
-    dining: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=80",
-    spa: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80",
+    hero: "/theo-entry.jpg",
+    pool: "/theo-pool.jpg",
+    living: "/theo-liv.jpg",
+    sauna: "/theo-sauna.jpg",
 };
 
 // ---------- Hotel data ----------
 const hotel = {
-    name: "Maison Solène",
-    region: "Saint-Jean-Cap-Ferrat",
-    country: "France",
-    established: "1924",
-    rooms: 24,
+    name: "Theofilos Paradise Boutique Hotel",
+    region: "Mytilene Lesvos Greece",
+    country: "Greece",
+    established: "1912",
     fromPrice: "€480",
     tagline: "Where the sea meets stillness.",
     intro:
         "Twenty-four suites carved into the cliffs above the Mediterranean. A century of quiet craftsmanship, kept by the same family.",
     body: [
-        "For four generations, the Solène family has welcomed travelers to this quiet stretch of the Côte d'Azur. The house has changed little since 1924 — the limestone walls, the citrus garden, the long table where breakfast is laid each morning at nine.",
-        "What Maison Solène offers is not extravagance, but attention. A turned-down bed. A linen robe. The right glass of wine, brought without being asked. The staff outnumber guests two to one, and most have been there longer than the current owner has been alive.",
-        "The cliffside infinity pool — lit by hand each evening with a hundred candles — is reserved exclusively for guests. The subterranean spa, excavated from the bedrock in 1962, draws on Provençal botanicals and a century-old hammam tradition. And dinner is a single seven-course tasting menu, written each morning by Chef Élise Marchand from the kitchen garden and the morning catch.",
+        "Theofilos Paradise Boutique Hotel is a small «treasure » hospitality in the center of Mytilene. It combines the mansion atmosphere of a historic neoclassical building with the modern comfort of a boutique hotel, offering an authentic experience Lesmon through With a welcoming atmosphere and careful services, it is an ideal choice for those looking for quality, character and genuine Greek The hotel continues to evolve vigorously with the impending expansion and addition of new rooms, strengthening its location as",
+        "Built back in 1912, the 4-star boutique hotel’s main building is a carefully restored traditional mansion. Today it houses the reception hall, lounge with marble fireplace, as well as some of the rooms and suites.",
+        // "The cliffside infinity pool — lit by hand each evening with a hundred candles — is reserved exclusively for guests. The subterranean spa, excavated from the bedrock in 1962, draws on Provençal botanicals and a century-old hammam tradition. And dinner is a single seven-course tasting menu, written each morning by Chef Élise Marchand from the kitchen garden and the morning catch.",
     ],
     highlights: [
-        { label: "Established", value: "1924" },
-        { label: "Suites", value: "24" },
+        { label: "Established", value: "1912" },
+        { label: "Free Parking" },
         { label: "Restaurant", value: "1 Michelin Star" },
-        { label: "Best for", value: "Quiet Escapes" },
+        { label: "Spa and wellness centre" },
     ],
     pros: [
         "Staff-to-guest ratio of nearly 2:1",
@@ -44,10 +43,10 @@ const hotel = {
     ],
     gallery: [
         { src: IMG.pool, alt: "Cliffside infinity pool at dusk", caption: "The pool, lit each evening." },
-        { src: IMG.dining, alt: "Plated dish at the restaurant", caption: "Seven courses, served from seven." },
-        { src: IMG.spa, alt: "Stone soaking tub in the spa", caption: "Stone, steam, eucalyptus, salt." },
+        { src: IMG.living, alt: "Plated dish at the restaurant", caption: "Seven courses, served from seven." },
+        { src: IMG.sauna, alt: "Stone soaking tub in the spa", caption: "Stone, steam, eucalyptus, salt." },
     ],
-    bookUrl: "https://example.com/maison-solene",
+    bookUrl: "https://www.booking.com/hotel/gr/theofilos-paradise-boutique.en-gb.html?aid=2428353&label=metagha-link-MRGR-hotel-273019_dev-desktop_los-1_bw-13_dow-Sunday_defdate-1_room-0_gstadt-2_rateid-public_aud-0_gacid-21404703270_mcid-10_ppa-0_clrid-0_ad-1_gstkid-0_checkin-20260510_ppt-_lp-2300_r-12263088559701900561&sid=747f34aafbdfb5cbb28107ae025e80b0&all_sr_blocks=27301905_392699596_2_1_0&checkin=2026-05-10&checkout=2026-05-11&dest_id=273019&dest_type=hotel&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=27301905_392699596_2_1_0&hpos=1&matching_block_id=27301905_392699596_2_1_0&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=27301905_392699596_2_1_0__13100&srepoch=1777297346&srpvid=fb29605d0ced0140&type=total&ucfs=1&",
 };
 
 // ---------- Scoped styles (design tokens + animations) ----------
