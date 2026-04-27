@@ -39,7 +39,7 @@ const hotel = {
         "Friendly, attentive service",
     ],
     knowBefore: [
-        "Check-in time: 2:00PM; Check-out time: 11:00AM",
+        "Check-in time: 12.00PM; Check-out time: 11:00AM",
         "Limited on-site parking available; reservation recommended",
         "Located in the city centre — some street noise may be expected",
         "Valid ID and credit card required at check-in",
@@ -315,7 +315,7 @@ export default function TheofilosParadise() {
                                     {[
                                         ["Check-in", "14:00"],
                                         ["Check-out", "11:00"],
-                                        ["Free cancellation ", "3 days before"],
+                                        ["Cancellation ", "3 days"],
                                     ].map(([k, v]) => (
                                         <div key={k} className="flex justify-between py-1.5">
                                             <span>{k}</span>
