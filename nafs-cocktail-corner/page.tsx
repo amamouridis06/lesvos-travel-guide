@@ -14,15 +14,16 @@ import {
 } from "lucide-react";
 
 // ---- Replace with your own images ----
-const HERO =
-  "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=1920&q=80";
+// const HERO =
+//   "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=1920&q=80";
 const GALLERY = [
-  "public/naf1.jpg",
-  "public/naf2.jpg",
-  "public/naf3.jpg",
-  "public/naf4.jpg",
-  "public/naf5.jpg",
-];
+
+  "/naf1.jpg",
+  "/naf2.jpg",
+  "/naf3.jpg",
+  "/naf4.jpg",
+  "/naf5.jpg",
+]
 
 const COCKTAILS = [
   { t: "Aegean Spritz", d: "Local citrus, mastiha liqueur, prosecco." },
@@ -32,8 +33,8 @@ const COCKTAILS = [
 ];
 
 const INFO = [
-  { Icon: MapPin, label: "Address", value: "Skala Plomariou, Lesvos" },
-  { Icon: Phone, label: "Phone", value: "+30 22520 00000" },
+  { Icon: MapPin, label: "Address", value: "Epar.Od. Mitilinis-Skopelou, Plomari 812 00" },
+  { Icon: Phone, label: "Phone", value: "+30 22520 31374" },
   { Icon: Clock, label: "Hours", value: "20:00 – 04:00" },
   { Icon: Wallet, label: "Drinks", value: "5 – 10 €" },
   { Icon: Users, label: "Best for", value: "Couples & friends" },
