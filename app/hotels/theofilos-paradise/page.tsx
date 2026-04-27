@@ -256,7 +256,7 @@ export default function TheofilosParadise() {
                             style={{ color: "var(--ms-muted)" }}
                         >
                             <span className="ms-hairline" />
-                            <span>Visited Spring · The Quiet Atlas</span>
+                            <span>Theofilos Paradise Boutique Hotel</span>
                         </div>
                     </div>
 
