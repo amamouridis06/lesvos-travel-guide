@@ -40,7 +40,6 @@ const hotel = {
     ],
     knowBefore: [
         "Check-in time: 12.00PM; Check-out time: 11:00AM",
-        "Limited on-site parking available; reservation recommended",
         "Located in the city centre — some street noise may be expected",
         "Valid ID and credit card required at check-in",
     ],
@@ -160,7 +159,7 @@ export default function TheofilosParadise() {
             {/*</header>*/}
 
             {/* Hero */}
-            <section className="relative h-[92svh] min-h-[600px] w-full overflow-hidden">
+            <section className="relative min-h-[85vh] md:h-[92svh] w-full overflow-hidden">
                 <img
                     src={hotel.gallery[0] && IMG.hero}
                     alt={hotel.name}
@@ -178,10 +177,10 @@ export default function TheofilosParadise() {
                                 {hotel.region} · {hotel.country}
                             </p>
                         </div>
-                        <h1 className="ms-balance mt-6 max-w-4xl text-[3.25rem] leading-[0.95] text-white md:text-8xl">
+                        <h1 className="ms-balance mt-6 max-w-4xl text-4xl leading-[1.05] text-white sm:text-5xl md:text-8xl">
                             {hotel.name}
                         </h1>
-                        <p className="mt-6 max-w-xl text-xl italic text-white/85 ms-display md:text-3xl">
+                        <p className="mt-6 max-w-xl text-lg italic text-white/85 ms-display sm:text-xl md:text-3xl">
                             "{hotel.tagline}"
                         </p>
                         <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-[10px] uppercase tracking-[0.3em] text-white/70">
@@ -204,7 +203,7 @@ export default function TheofilosParadise() {
                 className="border-y px-6 py-12 backdrop-blur-sm md:px-12 md:py-16"
                 style={{ borderColor: "var(--ms-border)", background: "color-mix(in oklab, var(--ms-bg) 60%, transparent)" }}
             >
-                <div className="mx-auto grid max-w-6xl grid-cols-2 gap-x-6 gap-y-10 md:grid-cols-4">
+                <div className="mx-auto grid max-w-6xl grid-cols-2 gap-6 sm:grid-cols-2 md:grid-cols-4">
                     {hotel.highlights.map((h, i) => (
                         <div key={h.label} className="relative md:px-4">
                             {i > 0 && (
@@ -225,13 +224,13 @@ export default function TheofilosParadise() {
             {/* Body */}
             <section className="relative px-6 py-24 md:px-12 md:py-32">
                 <div
-                    className="ms-display pointer-events-none absolute left-6 top-12 select-none text-[12rem] leading-none md:left-12 md:text-[18rem]"
+                    className="ms-display pointer-events-none absolute left-6 top-12 select-none text-[5rem] sm:text-[7rem] leading-none md:left-12 md:text-[18rem]"
                     style={{ color: "color-mix(in oklab, var(--ms-gold) 10%, transparent)" }}
                 >
                     "
                 </div>
 
-                <div className="relative mx-auto grid max-w-6xl gap-16 md:grid-cols-12 md:gap-20">
+                <div className="relative mx-auto grid max-w-6xl gap-12 md:grid-cols-12 md:gap-20">
                     <div className="md:col-span-7">
                         <div className="flex items-center gap-4">
                             <span className="ms-hairline" />
@@ -259,7 +258,7 @@ export default function TheofilosParadise() {
                             <span>Theofilos Paradise Boutique Hotel</span>
                         </div>
                         {/* Contact */}
-                        <section className="relative px-6 py-24 md:px-12 md:py-32">
+                        <section className="relative px-6 py-16 md:px-12 md:py-32">
                             <div className="mx-auto max-w-7xl">
                                 <div className="flex items-center gap-4">
                                     <span className="ms-hairline" />
@@ -284,8 +283,8 @@ export default function TheofilosParadise() {
                     </div>
 
                     {/* Booking aside */}
-                    <aside className="space-y-10 md:col-span-4 md:col-start-9">
-                        <div className="md:sticky md:top-8">
+                    <aside className="space-y-10 mt-16 md:mt-0 md:col-span-4 md:col-start-9">
+                        <div className="md:sticky md:top-8 static">
                             <div
                                 className="relative border p-8"
                                 style={{
@@ -313,7 +312,7 @@ export default function TheofilosParadise() {
                                     href={hotel.bookUrl}
                                     target="_blank"
                                     rel="noreferrer"
-                                    className="group mt-7 flex items-center justify-center gap-3 py-4 text-[10px] uppercase tracking-[0.35em] text-white transition-all duration-500"
+                                    className="group mt-7 flex w-full md:w-auto items-center justify-center gap-3 py-4 text-[10px] uppercase tracking-[0.35em] text-white transition-all duration-500"
                                     style={{ background: "var(--ms-ink)" }}
                                     onMouseEnter={(e) => {
                                         e.currentTarget.style.background = "var(--ms-gold)";
@@ -404,7 +403,7 @@ export default function TheofilosParadise() {
 
             {/* Gallery */}
             <section className="px-6 py-24 md:px-12 md:py-32" style={{ background: "var(--ms-bg)" }}>
-                <div className="mx-auto max-w-7xl">
+                <div className="mt-16 grid gap-6 md:grid-cols-12 md:gap-8 grid-cols-1">
                     <div className="flex items-end justify-between gap-6">
                         <div>
                             <div className="flex items-center gap-4">
@@ -480,7 +479,7 @@ export default function TheofilosParadise() {
                         href={hotel.bookUrl}
                         target="_blank"
                         rel="noreferrer"
-                        className="group mt-10 inline-flex items-center gap-4 border bg-transparent px-10 py-5 text-[10px] uppercase tracking-[0.4em] text-white transition-all duration-500"
+                        className="group mt-10 flex w-full md:w-auto items-center justify-center gap-4 border bg-transparent px-10 py-5 text-[10px] uppercase tracking-[0.4em] text-white transition-all duration-500"
                         style={{ borderColor: "var(--ms-gold)" }}
                         onMouseEnter={(e) => {
                             e.currentTarget.style.background = "var(--ms-gold)";
