@@ -17,20 +17,13 @@ import {
 const HERO =
   "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=1920&q=80";
 const GALLERY = [
-<<<<<<<< HEAD:nafs-cocktail-corner/page.tsx
-  "public/naf1.jpg",
-  "public/naf2.jpg",
-  "public/naf3.jpg",
-  "public/naf4.jpg",
-  "public/naf5.jpg",
-========
+
   "/naf1.jpg",
   "/naf2.jpg",
   "/naf3.jpg",
   "/naf4.jpg",
   "/naf5.jpg",
->>>>>>>> 6af7992 (remove unwanted files):app/food/nafs-cocktail-corner/page.tsx
-];
+]
 
 const COCKTAILS = [
   { t: "Aegean Spritz", d: "Local citrus, mastiha liqueur, prosecco." },
