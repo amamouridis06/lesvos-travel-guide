@@ -264,7 +264,7 @@ export default function CocktailBarPage() {
             <div className="overflow-hidden rounded-3xl border border-stone-200 bg-white shadow-soft">
               <iframe
                   title="Map of Cocktail Corner"
-                  src="https://www.google.com/maps?q=Plomari,+Lesvos&output=embed"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3643.293689587887!2d26.391484399999996!3d38.96851480000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14baf7f481beb643%3A0x2ff539f18c93758c!2sNaf&#39;s%20Cocktail%20Corner!5e1!3m2!1sen!2sgr!4v1777289072946!5m2!1sen!2sgr"
                   className="h-56 w-full border-0"
                   loading="lazy"
               />
@@ -292,9 +292,7 @@ export default function CocktailBarPage() {
           </aside>
         </section>
 
-        <footer className="border-t border-stone-200 py-10 text-center text-sm text-stone-500">
-          © {new Date().getFullYear()} Lesvos Guide · Crafted with care
-        </footer>
+
 
         {/* MODAL */}
         {isOpen && (
