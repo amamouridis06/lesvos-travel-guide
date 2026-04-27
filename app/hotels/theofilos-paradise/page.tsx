@@ -321,6 +321,29 @@ export default function TheofilosParadise() {
                                         </div>
                                     ))}
                                 </div>
+                                {/* Contact */}
+                                <section className="px-6 py-24 md:px-12 md:py-32" style={{ background: "var(--ms-bg)" }}>
+                                    <div className="mx-auto max-w-7xl">
+                                        <div className="flex items-center gap-4">
+                                            <span className="ms-hairline" />
+                                            <p className="ms-eyebrow">Contact</p>
+                                        </div>
+
+                                        <h2 className="ms-display mt-6 text-4xl md:text-6xl">
+                                            Get in touch
+                                        </h2>
+
+                                        <p className="mt-6 text-sm leading-relaxed" style={{ color: "var(--ms-muted)" }}>
+                                            For reservations, special requests or availability inquiries, our team is available daily to assist you.
+                                        </p>
+
+                                        <div className="mt-10 space-y-4 text-sm" style={{ color: "var(--ms-muted)" }}>
+                                            <p><span className="text-[color:var(--ms-fg)]">Phone:</span> +30 22510 43300</p>
+                                            <p><span className="text-[color:var(--ms-fg)]">Email:</span> info@theofilosparadise.gr</p>
+                                            <p><span className="text-[color:var(--ms-fg)]">Address:</span> Skra 7, Mytilene 81100, Lesvos, Greece</p>
+                                        </div>
+                                    </div>
+                                </section>
                             </div>
 
                             <div className="mt-12">
@@ -396,29 +419,7 @@ export default function TheofilosParadise() {
                         </div>
 
                     </div>
-                    {/* Contact */}
-                    <section className="px-6 py-24 md:px-12 md:py-32" style={{ background: "var(--ms-bg)" }}>
-                        <div className="mx-auto max-w-7xl">
-                                <div className="flex items-center gap-4">
-                                    <span className="ms-hairline" />
-                                    <p className="ms-eyebrow">Contact</p>
-                                </div>
 
-                                <h2 className="ms-display mt-6 text-4xl md:text-6xl">
-                                    Get in touch
-                                </h2>
-
-                                <p className="mt-6 text-sm leading-relaxed" style={{ color: "var(--ms-muted)" }}>
-                                    For reservations, special requests or availability inquiries, our team is available daily to assist you.
-                                </p>
-
-                                <div className="mt-10 space-y-4 text-sm" style={{ color: "var(--ms-muted)" }}>
-                                    <p><span className="text-[color:var(--ms-fg)]">Phone:</span> +30 22510 43300</p>
-                                    <p><span className="text-[color:var(--ms-fg)]">Email:</span> info@theofilosparadise.gr</p>
-                                    <p><span className="text-[color:var(--ms-fg)]">Address:</span> Skra 7, Mytilene 81100, Lesvos, Greece</p>
-                                </div>
-                            </div>
-                    </section>
 
                     <div className="mt-16 grid gap-6 md:grid-cols-12 md:gap-8">
                         {hotel.gallery.map((g, i) => {
