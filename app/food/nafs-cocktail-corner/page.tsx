@@ -33,8 +33,8 @@ const COCKTAILS = [
 ];
 
 const INFO = [
-  { Icon: MapPin, label: "Address", value: "Skala Plomariou, Lesvos" },
-  { Icon: Phone, label: "Phone", value: "+30 22520 00000" },
+  { Icon: MapPin, label: "Address", value: "Epar.Od. Mitilinis-Skopelou, Plomari 812 00" },
+  { Icon: Phone, label: "Phone", value: "+30 22520 31374" },
   { Icon: Clock, label: "Hours", value: "20:00 – 04:00" },
   { Icon: Wallet, label: "Drinks", value: "5 – 10 €" },
   { Icon: Users, label: "Best for", value: "Couples & friends" },
@@ -90,11 +90,11 @@ export default function CocktailBarPage() {
           <span className="font-display text-lg font-semibold text-white">
             Lesvos<span style={{ color: "#e0a052" }}>.</span>Guide
           </span>
-            <nav className="hidden gap-8 text-sm text-white/85 sm:flex">
-              <a href="#about" className="hover:text-white">About</a>
-              <a href="#gallery" className="hover:text-white">Gallery</a>
-              <a href="#visit" className="hover:text-white">Visit</a>
-            </nav>
+            {/*<nav className="hidden gap-8 text-sm text-white/85 sm:flex">*/}
+            {/*  <a href="#about" className="hover:text-white">About</a>*/}
+            {/*  <a href="#gallery" className="hover:text-white">Gallery</a>*/}
+            {/*  <a href="#visit" className="hover:text-white">Visit</a>*/}
+            {/*</nav>*/}
           </div>
 
           <div className="absolute inset-x-0 bottom-0 z-10 px-6 pb-16 sm:px-10 sm:pb-20">
@@ -104,7 +104,7 @@ export default function CocktailBarPage() {
               South Lesvos · Cocktail Bar
             </span>
               <h1 className="font-display mt-5 max-w-3xl text-4xl font-semibold leading-[1.05] text-white sm:text-6xl lg:text-7xl">
-                Cocktail Corner
+                Naf's Cocktail Corner
               </h1>
               <p className="mt-4 max-w-xl text-base text-white/80 sm:text-lg">
                 A fantastic corner for a sunset cocktail by the Aegean — slow nights,
