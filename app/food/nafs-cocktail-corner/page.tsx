@@ -14,8 +14,8 @@ import {
 } from "lucide-react";
 
 // ---- Replace with your own images ----
-// const HERO =
-//     "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=1920&q=80";
+const HERO =
+   "/naf4.jpg";
 const GALLERY = [
 
   "/naf1.jpg",
@@ -79,11 +79,11 @@ export default function CocktailBarPage() {
 
         {/* HERO */}
         <section className="relative h-[80vh] min-h-[520px] w-full overflow-hidden">
-          {/*<img*/}
-          {/*    src={HERO}*/}
-          {/*    alt="Bartender pouring a cocktail at a seaside bar in Lesvos at sunset"*/}
-          {/*    className="absolute inset-0 h-full w-full object-cover"*/}
-          {/*/>*/}
+          <img
+              src={HERO}
+              alt="Bartender pouring a cocktail at a seaside bar in Lesvos at sunset"
+              className="absolute inset-0 h-full w-full object-cover"
+          />
           <div className="absolute inset-0 gradient-hero" />
 
           <div className="absolute inset-x-0 top-0 z-10 flex items-center justify-between px-6 py-6 sm:px-10">
