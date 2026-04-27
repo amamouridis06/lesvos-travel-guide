@@ -51,7 +51,7 @@ const bar = [
     description: "A ideal place for the best coctail",
     location: "Agios Isidoros",
     image: "/naf3.jpg",
-    href: "/food/naf’s-cocktail-corner",
+    href: "/food/nafs-cocktail-corner",
   },
   
 ];
