@@ -132,7 +132,7 @@ export default function CocktailBarPage() {
                 Signatures of the house
               </h2>
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
-                {COCKTAILS.map((c) => (
+                {Dishes.map((c) => (
                     <div
                         key={c.t}
                         className="rounded-2xl border border-stone-200 bg-white p-5 transition-all hover:-translate-y-0.5 hover:shadow-soft"
