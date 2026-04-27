@@ -5,7 +5,7 @@ import { useEffect } from "react";
 const IMG = {
     hero: "/theo-entry.jpg",
     pool: "/theo-pool.jpg",
-    living: "/theo-liv.jpg",
+    bed: "/theo-liv.jpg",
     sauna: "/theo-sauna.jpg",
 };
 
@@ -16,10 +16,10 @@ const hotel = {
     country: "Greece",
     established: "1912",
     rooms: "35",
-    fromPrice: "€480",
+    fromPrice: "€100",
     tagline: "Where the sea meets stillness.",
     intro:
-        "Twenty-four suites carved into the cliffs above the Mediterranean. A century of quiet craftsmanship, kept by the same family.",
+        "Comfortable rooms in the heart of the city. A long-standing tradition of hospitality, shaped by generations.",
     body: [
         "Theofilos Paradise Boutique Hotel is a small «treasure » hospitality in the center of Mytilene. It combines the mansion atmosphere of a historic neoclassical building with the modern comfort of a boutique hotel, offering an authentic experience Lesmon through With a welcoming atmosphere and careful services, it is an ideal choice for those looking for quality, character and genuine Greek The hotel continues to evolve vigorously with the impending expansion and addition of new rooms, strengthening its location as",
         "Built back in 1912, the 4-star boutique hotel’s main building is a carefully restored traditional mansion. Today it houses the reception hall, lounge with marble fireplace, as well as some of the rooms and suites.",
@@ -27,26 +27,27 @@ const hotel = {
     ],
     highlights: [
         { label: "Established", value: "1912" },
-        { label: "Free Parking" },
-        { label: "Rooms" },
-        { label: "Restaurant", value: "1 Michelin Star" },
-        { label: "Spa and wellness centre" },
+        { label: "Parking", value: "Free" },
+        { label: "Rooms", value: "35" },
+        // { label: "Restaurant", value: "Michelin-Starred" },
+        { label: "Wellness", value: "Spa & Wellness Centre" },
     ],
     pros: [
-        "Staff-to-guest ratio of nearly 2:1",
-        "Direct bookings include breakfast & arrival amenity",
-        "Adults-only, blissfully phone-free public spaces",
-        "Some of the finest cellar in Provence",
+        "Central location within walking distance of key attractions",
+        "Comfortable rooms with modern amenities",
+        "On-site restaurant and bar",
+        "Friendly, attentive service",
     ],
     knowBefore: [
-        "A two-night minimum applies in high season (Jun–Sep).",
-        "The cliff path is steep — a golf cart is offered to all guests.",
-        "No children under 14 in the main house.",
+        "Check-in time: 2:00PM; Check-out time: 11:00AM",
+        "Limited on-site parking available; reservation recommended",
+        "Located in the city centre — some street noise may be expected",
+        "Valid ID and credit card required at check-in",
     ],
     gallery: [
-        { src: IMG.pool, alt: "Cliffside infinity pool at dusk", caption: "The pool, lit each evening." },
-        { src: IMG.living, alt: "Plated dish at the restaurant", caption: "Seven courses, served from seven." },
-        { src: IMG.sauna, alt: "Stone soaking tub in the spa", caption: "Stone, steam, eucalyptus, salt." },
+        { src: IMG.pool, alt: "Cliffside infinity pool at dusk", caption: "Sun, water, repeat." },
+        { src: IMG.bed, alt: "Plated dish at the restaurant", caption: "Sleep in style, wake refreshed." },
+        { src: IMG.sauna, alt: "Stone soaking tub in the spa", caption: "Heat your body, clear your mind." },
     ],
     bookUrl: "https://www.booking.com/hotel/gr/theofilos-paradise-boutique.en-gb.html?aid=2428353&label=metagha-link-MRGR-hotel-273019_dev-desktop_los-1_bw-13_dow-Sunday_defdate-1_room-0_gstadt-2_rateid-public_aud-0_gacid-21404703270_mcid-10_ppa-0_clrid-0_ad-1_gstkid-0_checkin-20260510_ppt-_lp-2300_r-12263088559701900561&sid=747f34aafbdfb5cbb28107ae025e80b0&all_sr_blocks=27301905_392699596_2_1_0&checkin=2026-05-10&checkout=2026-05-11&dest_id=273019&dest_type=hotel&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=27301905_392699596_2_1_0&hpos=1&matching_block_id=27301905_392699596_2_1_0&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=27301905_392699596_2_1_0__13100&srepoch=1777297346&srpvid=fb29605d0ced0140&type=total&ucfs=1&",
 };
@@ -144,19 +145,19 @@ export default function TheofilosParadise() {
     return (
         <div className="ms-root min-h-screen">
             {/* Top bar */}
-            <header className="absolute left-0 right-0 top-0 z-30">
-                <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 md:px-12">
-                    <a href="#" className="ms-display text-xl text-[color:var(--ms-bg)] md:text-2xl">
-                        The Quiet <span className="italic text-[color:var(--ms-gold-soft)]">Atlas</span>
-                    </a>
-                    <a
-                        href="#"
-                        className="text-[10px] uppercase tracking-[0.3em] text-white/80 underline-offset-8 hover:text-white hover:underline md:text-xs"
-                    >
-                        ← All hotels
-                    </a>
-                </div>
-            </header>
+            {/*<header className="absolute left-0 right-0 top-0 z-30">*/}
+            {/*    <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 md:px-12">*/}
+            {/*        <a href="#" className="ms-display text-xl text-[color:var(--ms-bg)] md:text-2xl">*/}
+            {/*            The Quiet <span className="italic text-[color:var(--ms-gold-soft)]">Atlas</span>*/}
+            {/*        </a>*/}
+            {/*        <a*/}
+            {/*            href="#"*/}
+            {/*            className="text-[10px] uppercase tracking-[0.3em] text-white/80 underline-offset-8 hover:text-white hover:underline md:text-xs"*/}
+            {/*        >*/}
+            {/*            ← All hotels*/}
+            {/*        </a>*/}
+            {/*    </div>*/}
+            {/*</header>*/}
 
             {/* Hero */}
             <section className="relative h-[92svh] min-h-[600px] w-full overflow-hidden">
@@ -312,9 +313,9 @@ export default function TheofilosParadise() {
                                     style={{ borderColor: "var(--ms-border)", color: "var(--ms-muted)" }}
                                 >
                                     {[
-                                        ["Check-in", "15:00"],
-                                        ["Check-out", "12:00"],
-                                        ["Cancellation", "7 days"],
+                                        ["Check-in", "14:00"],
+                                        ["Check-out", "11:00"],
+                                        ["Free cancellation ", "3 days before"],
                                     ].map(([k, v]) => (
                                         <div key={k} className="flex justify-between py-1.5">
                                             <span>{k}</span>
@@ -372,17 +373,12 @@ export default function TheofilosParadise() {
                 style={{ background: "var(--ms-ink)" }}
             >
                 <div className="mx-auto max-w-4xl text-center">
-          <span className="ms-display text-6xl leading-none md:text-8xl" style={{ color: "var(--ms-gold)" }}>
-            "
-          </span>
+          {/*<span className="ms-display text-6xl leading-none md:text-8xl" style={{ color: "var(--ms-gold)" }}>*/}
+          {/*  "*/}
+          {/*</span>*/}
                     <blockquote className="ms-display ms-balance mt-4 text-3xl italic leading-[1.25] text-white/90 md:text-5xl">
-                        A house that whispers, never shouts. The kind of quiet you forget exists.
+                        In the heart of town, yet worlds away.
                     </blockquote>
-                    <div className="mt-10 flex items-center justify-center gap-4 text-[10px] uppercase tracking-[0.35em] text-white/60">
-                        <span className="ms-hairline" />
-                        Condé Nast Traveller
-                        <span className="ms-hairline" />
-                    </div>
                 </div>
             </section>
 
@@ -400,9 +396,7 @@ export default function TheofilosParadise() {
                                 <span className="italic" style={{ color: "var(--ms-gold)" }}>from the stay.</span>
                             </h2>
                         </div>
-                        <p className="hidden max-w-xs text-sm leading-relaxed md:block" style={{ color: "var(--ms-muted)" }}>
-                            Photographed in available light over a long weekend in May, with permission of the house.
-                        </p>
+
                     </div>
 
                     <div className="mt-16 grid gap-6 md:grid-cols-12 md:gap-8">
@@ -482,20 +476,7 @@ export default function TheofilosParadise() {
                 </div>
             </section>
 
-            <footer
-                className="border-t px-6 py-10 md:px-12"
-                style={{ background: "var(--ms-ink)", borderColor: "rgba(255,255,255,0.1)", color: "rgba(255,255,255,0.6)" }}
-            >
-                <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 text-xs md:flex-row">
-                    <a href="#" className="ms-display text-lg text-white">
-                        The Quiet <span className="italic" style={{ color: "var(--ms-gold-soft)" }}>Atlas</span>
-                    </a>
-                    <span className="text-[10px] uppercase tracking-[0.3em]">
-            Independent · Ad-free · No commissions
-          </span>
-                    <span>© {new Date().getFullYear()}</span>
-                </div>
-            </footer>
+
         </div>
     );
 }
