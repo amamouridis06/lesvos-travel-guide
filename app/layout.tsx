@@ -1,5 +1,5 @@
 import "./globals.css";
-import NavBar from "../../lesvos-travel-guide/components/NavBar";
+import NavBar from "@/components/NavBar";
 
 export const metadata = {
   title: "Lesvos Travel & Culture Website",
@@ -9,11 +9,11 @@ export const metadata = {
   openGraph: {
     title: "Lesvos Travel & Culture Website",
     description: "Explore the most beautiful places in Lesvos — beaches, villages, culture, and nature.",
-    url: "https://your-vercel-url.com",
+    url: "lesvos-travel-guide-five.vercel.app",
     siteName: "Lesvos Travel",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/logo.jpeg",
         width: 1200,
         height: 630,
         alt: "Lesvos Travel Hero Image",
