@@ -15,6 +15,7 @@ const hotel = {
     region: "Mytilene Lesvos Greece",
     country: "Greece",
     established: "1912",
+    rooms: "35",
     fromPrice: "€480",
     tagline: "Where the sea meets stillness.",
     intro:
@@ -27,6 +28,7 @@ const hotel = {
     highlights: [
         { label: "Established", value: "1912" },
         { label: "Free Parking" },
+        { label: "Rooms" },
         { label: "Restaurant", value: "1 Michelin Star" },
         { label: "Spa and wellness centre" },
     ],
@@ -127,7 +129,7 @@ const STYLES = `
   html { scroll-behavior: smooth; }
 `;
 
-export default function MaisonSolene() {
+export default function TheofilosParadise() {
     // Inject scoped styles once on mount
     useEffect(() => {
         const id = "maison-solene-styles";
