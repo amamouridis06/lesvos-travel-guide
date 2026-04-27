@@ -259,7 +259,7 @@ export default function TheofilosParadise() {
                             <span>Theofilos Paradise Boutique Hotel</span>
                         </div>
                         {/* Contact */}
-                        <section className="px-6 py-24 md:px-12 md:py-32" style={{ background: "var(--ms-bg)" }}>
+                        <section className="relative px-6 py-24 md:px-12 md:py-32">
                             <div className="mx-auto max-w-7xl">
                                 <div className="flex items-center gap-4">
                                     <span className="ms-hairline" />
@@ -275,9 +275,9 @@ export default function TheofilosParadise() {
                                 </p>
 
                                 <div className="mt-10 space-y-4 text-sm" style={{ color: "var(--ms-muted)" }}>
-                                    <p><span className="text-[color:var(--ms-fg)]">Phone:</span> +30 22510 43300</p>
-                                    <p><span className="text-[color:var(--ms-fg)]">Email:</span> info@theofilosparadise.gr</p>
-                                    <p><span className="text-[color:var(--ms-fg)]">Address:</span> Skra 7, Mytilene 81100, Lesvos, Greece</p>
+                                    <p><span className="text-[color:var(--ms-fg)]"><strong>Phone</strong>:</span> +30 22510 43300</p>
+                                    <p><span className="text-[color:var(--ms-fg)]"><strong>Email</strong>:</span> info@theofilosparadise.gr</p>
+                                    <p><span className="text-[color:var(--ms-fg)]"><strong>Address</strong></span> Skra 7, Mytilene 81100, Lesvos, Greece</p>
                                 </div>
                             </div>
                         </section>
