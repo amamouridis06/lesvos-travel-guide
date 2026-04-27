@@ -8,28 +8,142 @@ export const metadata = {
 
 const villages = [
   {
-    name: "Μόλυβος",
-    description: "Μεσαιωνικό γραφικό χωριό με κάστρο",
-    image: "/molivos.jpg",
-    href: "/villages/molivos",
+    name: "Agioi Anargyroi",
+    description: "Small, quiet, local",
+    image: "/placeholder.jpg",
+    href: "/villages/agioi-anargyroi",
   },
   {
-    name: "Πλωμάρι",
-    description: "Ούζο, θάλασσα & παράδοση",
-    image: "/plomari2.jpg",
-    href: "/villages/plomari",
+    name: "Agra",
+    description: "Traditional, peaceful, local",
+    image: "/placeholder.jpg",
+    href: "/villages/agra",
   },
   {
-    name: "Αγιάσος",
-    description: "Παραδοσιακό χωριό στο βουνό",
-    image: "/agiasos.jpg",
-    href: "/villages/agiasos",
+    name: "Anaxos",
+    description: "Beach, relaxed, tourist-friendly",
+    image: "/placeholder.jpg",
+    href: "/villages/anaxos",
   },
   {
-    name: "Μανταμάδος",
-    description: "Προστάτης της Λέσβου και παραδοσιακή ζωή",
-    image: "/mantamados.jpg",
-    href: "/villages/mantamados",
+    name: "Antissa",
+    description: "Historic, traditional, rural",
+    image: "/placeholder.jpg",
+    href: "/villages/antissa",
+  },
+  {
+    name: "Asomatos",
+    description: "Small, peaceful, authentic",
+    image: "/placeholder.jpg",
+    href: "/villages/asomatos",
+  },
+  {
+    name: "Eftalou",
+    description: "Hot springs, seaside, relaxing",
+    image: "/placeholder.jpg",
+    href: "/villages/eftalou",
+  },
+  {
+    name: "Gera",
+    description: "Olive groves, bay views, authentic",
+    image: "/placeholder.jpg",
+    href: "/villages/gera",
+  },
+  {
+    name: "Kapi",
+    description: "Traditional, rural, authentic",
+    image: "/placeholder.jpg",
+    href: "/villages/kapi",
+  },
+  {
+    name: "Kato Tritos",
+    description: "Historic, quiet, local",
+    image: "/placeholder.jpg",
+    href: "/villages/kato-tritos",
+  },
+  {
+    name: "Kleidonas",
+    description: "Small, peaceful, local",
+    image: "/placeholder.jpg",
+    href: "/villages/kleidonas",
+  },
+  {
+    name: "Lafionas",
+    description: "Panoramic views, traditional, peaceful",
+    image: "/placeholder.jpg",
+    href: "/villages/lafionas",
+  },
+  {
+    name: "Megalochori",
+    description: "Local, peaceful, traditional",
+    image: "/placeholder.jpg",
+    href: "/villages/megalochori",
+  },
+  {
+    name: "Messagros",
+    description: "Pottery, traditional, cultural",
+    image: "/placeholder.jpg",
+    href: "/villages/messagros",
+  },
+  {
+    name: "Mytilinioi",
+    description: "Traditional, central, authentic",
+    image: "/placeholder.jpg",
+    href: "/villages/mytilinioi",
+  },
+  {
+    name: "Palaiochori",
+    description: "Quiet, rural, authentic",
+    image: "/placeholder.jpg",
+    href: "/villages/palaiochori",
+  },
+  {
+    name: "Papados",
+    description: "Historic mansions, cultural, vibrant",
+    image: "/placeholder.jpg",
+    href: "/villages/papados",
+  },
+  {
+    name: "Perama",
+    description: "Seaside, relaxed, local",
+    image: "/placeholder.jpg",
+    href: "/villages/perama",
+  },
+  {
+    name: "Pigi",
+    description: "Green, traditional, calm",
+    image: "/placeholder.jpg",
+    href: "/villages/pigi",
+  },
+  {
+    name: "Plagia",
+    description: "Seaside, calm, traditional",
+    image: "/placeholder.jpg",
+    href: "/villages/plagia",
+  },
+  {
+    name: "Skala Sykamias",
+    description: "Seaside, picturesque, peaceful",
+    image: "/placeholder.jpg",
+    href: "/villages/skala-sykamias",
+  },
+  {
+    name: "Skopelos",
+    description: "Quiet, traditional, rural",
+    image: "/placeholder.jpg",
+    href: "/villages/skopelos",
+  },
+  {
+    name: "Sykamia",
+    description: "Historic, scenic, authentic",
+    image: "/placeholder.jpg",
+    href: "/villages/sykamia",
+  },
+  {
+    name: "Vafios",
+    description: "Hillside, quiet, scenic",
+    image: "/placeholder.jpg",
+    href: "/villages/vafios",
   },
 ];
 
@@ -38,7 +152,7 @@ export default function VillagesPage() {
     <main className="bg-neutral-100 text-neutral-900 min-h-screen">
 
       {/* ================= HERO ================= */}
-      <section className="relative h-[60vh] bg-[url('/villages.jpg')] bg-cover bg-center bg-fixed">
+      <section className="relative h-[60vh] bg-[url('/agiasos.jpg')] bg-cover bg-center bg-fixed">
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 h-full flex items-end">
           <div className="max-w-6xl mx-auto px-6 pb-12">
@@ -77,17 +191,6 @@ export default function VillagesPage() {
           ))}
         </div>
       </section>
-
-      {/* ================= BACK ================= */}
-      <div className="text-center pb-20">
-        <Link
-          href="/"
-          className="inline-block px-6 py-3 rounded-lg bg-yellow-600 text-white font-semibold hover:bg-yellow-700 transition"
-        >
-          ← Επιστροφή στην αρχική
-        </Link>
-      </div>
-
     </main>
   );
 }
