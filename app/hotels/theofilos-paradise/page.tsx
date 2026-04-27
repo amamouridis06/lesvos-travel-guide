@@ -1,0 +1,500 @@
+"use client";
+import { useEffect } from "react";
+
+// ---------- Replace with your own images ----------
+const IMG = {
+    hero: "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1920&q=80",
+    pool: "https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1200&q=80",
+    dining: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=80",
+    spa: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80",
+};
+
+// ---------- Hotel data ----------
+const hotel = {
+    name: "Maison Solène",
+    region: "Saint-Jean-Cap-Ferrat",
+    country: "France",
+    established: "1924",
+    rooms: 24,
+    fromPrice: "€480",
+    tagline: "Where the sea meets stillness.",
+    intro:
+        "Twenty-four suites carved into the cliffs above the Mediterranean. A century of quiet craftsmanship, kept by the same family.",
+    body: [
+        "For four generations, the Solène family has welcomed travelers to this quiet stretch of the Côte d'Azur. The house has changed little since 1924 — the limestone walls, the citrus garden, the long table where breakfast is laid each morning at nine.",
+        "What Maison Solène offers is not extravagance, but attention. A turned-down bed. A linen robe. The right glass of wine, brought without being asked. The staff outnumber guests two to one, and most have been there longer than the current owner has been alive.",
+        "The cliffside infinity pool — lit by hand each evening with a hundred candles — is reserved exclusively for guests. The subterranean spa, excavated from the bedrock in 1962, draws on Provençal botanicals and a century-old hammam tradition. And dinner is a single seven-course tasting menu, written each morning by Chef Élise Marchand from the kitchen garden and the morning catch.",
+    ],
+    highlights: [
+        { label: "Established", value: "1924" },
+        { label: "Suites", value: "24" },
+        { label: "Restaurant", value: "1 Michelin Star" },
+        { label: "Best for", value: "Quiet Escapes" },
+    ],
+    pros: [
+        "Staff-to-guest ratio of nearly 2:1",
+        "Direct bookings include breakfast & arrival amenity",
+        "Adults-only, blissfully phone-free public spaces",
+        "Some of the finest cellar in Provence",
+    ],
+    knowBefore: [
+        "A two-night minimum applies in high season (Jun–Sep).",
+        "The cliff path is steep — a golf cart is offered to all guests.",
+        "No children under 14 in the main house.",
+    ],
+    gallery: [
+        { src: IMG.pool, alt: "Cliffside infinity pool at dusk", caption: "The pool, lit each evening." },
+        { src: IMG.dining, alt: "Plated dish at the restaurant", caption: "Seven courses, served from seven." },
+        { src: IMG.spa, alt: "Stone soaking tub in the spa", caption: "Stone, steam, eucalyptus, salt." },
+    ],
+    bookUrl: "https://example.com/maison-solene",
+};
+
+// ---------- Scoped styles (design tokens + animations) ----------
+const STYLES = `
+  @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap");
+
+  .ms-root {
+    --ms-bg: oklch(0.975 0.012 80);
+    --ms-fg: oklch(0.18 0.015 60);
+    --ms-muted: oklch(0.45 0.02 60);
+    --ms-border: oklch(0.9 0.013 80);
+    --ms-card: oklch(0.985 0.008 80);
+    --ms-ink: oklch(0.14 0.012 60);
+    --ms-gold: oklch(0.68 0.11 75);
+    --ms-gold-soft: oklch(0.82 0.06 80);
+
+    --ms-display: "Cormorant Garamond", serif;
+    --ms-sans: "Inter", sans-serif;
+
+    background: var(--ms-bg);
+    color: var(--ms-fg);
+    font-family: var(--ms-sans);
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    background-image:
+      radial-gradient(circle at 20% 10%, color-mix(in oklab, var(--ms-gold) 6%, transparent) 0%, transparent 40%),
+      radial-gradient(circle at 80% 90%, color-mix(in oklab, var(--ms-ink) 5%, transparent) 0%, transparent 45%);
+  }
+
+  .ms-root h1, .ms-root h2, .ms-root h3, .ms-root h4, .ms-display {
+    font-family: var(--ms-display);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+  .ms-eyebrow {
+    font-family: var(--ms-sans);
+    text-transform: uppercase;
+    letter-spacing: 0.32em;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--ms-gold);
+  }
+  .ms-hairline {
+    display: inline-block;
+    width: 56px;
+    height: 1px;
+    background: var(--ms-gold);
+    vertical-align: middle;
+  }
+  .ms-serif-num {
+    font-family: var(--ms-display);
+    font-feature-settings: "lnum", "pnum";
+    font-style: italic;
+    font-weight: 300;
+  }
+  .ms-dropcap::first-letter {
+    font-family: var(--ms-display);
+    font-size: 4.5rem;
+    font-weight: 500;
+    float: left;
+    line-height: 0.85;
+    padding: 0.35rem 0.75rem 0 0;
+    color: var(--ms-gold);
+  }
+  .ms-balance { text-wrap: balance; }
+  .ms-pretty  { text-wrap: pretty; }
+
+  @keyframes ms-fade-up   { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes ms-slow-zoom { from { transform: scale(1.05); } to { transform: scale(1.18); } }
+  @keyframes ms-shimmer   { from { transform: scaleX(0); transform-origin: left; } to { transform: scaleX(1); transform-origin: left; } }
+  @keyframes ms-float     { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+
+  .ms-fade-up   { animation: ms-fade-up 1.1s cubic-bezier(.2,.7,.2,1) both; }
+  .ms-slow-zoom { animation: ms-slow-zoom 18s ease-in-out infinite alternate; }
+  .ms-shimmer   { animation: ms-shimmer 1.6s cubic-bezier(.2,.7,.2,1) .3s both; }
+  .ms-float     { animation: ms-float 4s ease-in-out infinite; }
+
+  html { scroll-behavior: smooth; }
+`;
+
+export default function MaisonSolene() {
+    // Inject scoped styles once on mount
+    useEffect(() => {
+        const id = "maison-solene-styles";
+        if (document.getElementById(id)) return;
+        const tag = document.createElement("style");
+        tag.id = id;
+        tag.textContent = STYLES;
+        document.head.appendChild(tag);
+        document.title = `${hotel.name}, ${hotel.region} — The Quiet Atlas`;
+    }, []);
+
+    return (
+        <div className="ms-root min-h-screen">
+            {/* Top bar */}
+            <header className="absolute left-0 right-0 top-0 z-30">
+                <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 md:px-12">
+                    <a href="#" className="ms-display text-xl text-[color:var(--ms-bg)] md:text-2xl">
+                        The Quiet <span className="italic text-[color:var(--ms-gold-soft)]">Atlas</span>
+                    </a>
+                    <a
+                        href="#"
+                        className="text-[10px] uppercase tracking-[0.3em] text-white/80 underline-offset-8 hover:text-white hover:underline md:text-xs"
+                    >
+                        ← All hotels
+                    </a>
+                </div>
+            </header>
+
+            {/* Hero */}
+            <section className="relative h-[92svh] min-h-[600px] w-full overflow-hidden">
+                <img
+                    src={hotel.gallery[0] && IMG.hero}
+                    alt={hotel.name}
+                    className="ms-slow-zoom absolute inset-0 h-full w-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/10 to-black/85" />
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,rgba(0,0,0,0.4)_100%)]" />
+                <div className="pointer-events-none absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-black/40 to-transparent" />
+
+                <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-end px-6 pb-20 md:px-12 md:pb-32">
+                    <div className="ms-fade-up">
+                        <div className="flex items-center gap-4">
+                            <span className="ms-hairline ms-shimmer" />
+                            <p className="ms-eyebrow" style={{ color: "var(--ms-gold-soft)" }}>
+                                {hotel.region} · {hotel.country}
+                            </p>
+                        </div>
+                        <h1 className="ms-balance mt-6 max-w-4xl text-[3.25rem] leading-[0.95] text-white md:text-8xl">
+                            {hotel.name}
+                        </h1>
+                        <p className="mt-6 max-w-xl text-xl italic text-white/85 ms-display md:text-3xl">
+                            "{hotel.tagline}"
+                        </p>
+                        <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-[10px] uppercase tracking-[0.3em] text-white/70">
+                            <span>Est. <span className="ms-serif-num text-base text-[color:var(--ms-gold-soft)] not-italic">{hotel.established}</span></span>
+                            <span className="hidden h-3 w-px bg-white/30 md:block" />
+                            <span><span className="ms-serif-num text-base text-[color:var(--ms-gold-soft)]">{hotel.rooms}</span> Suites</span>
+                            <span className="hidden h-3 w-px bg-white/30 md:block" />
+                            <span>From <span className="ms-serif-num text-base text-[color:var(--ms-gold-soft)] not-italic">{hotel.fromPrice}</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="ms-float absolute bottom-6 left-1/2 z-10 hidden -translate-x-1/2 text-[10px] uppercase tracking-[0.4em] text-white/60 md:block">
+                    Scroll
+                </div>
+            </section>
+
+            {/* At a glance */}
+            <section
+                className="border-y px-6 py-12 backdrop-blur-sm md:px-12 md:py-16"
+                style={{ borderColor: "var(--ms-border)", background: "color-mix(in oklab, var(--ms-bg) 60%, transparent)" }}
+            >
+                <div className="mx-auto grid max-w-6xl grid-cols-2 gap-x-6 gap-y-10 md:grid-cols-4">
+                    {hotel.highlights.map((h, i) => (
+                        <div key={h.label} className="relative md:px-4">
+                            {i > 0 && (
+                                <span
+                                    className="absolute -left-0 top-1 hidden h-12 w-px md:block"
+                                    style={{ background: "var(--ms-border)" }}
+                                />
+                            )}
+                            <div className="text-[10px] uppercase tracking-[0.32em]" style={{ color: "var(--ms-muted)" }}>
+                                {h.label}
+                            </div>
+                            <div className="ms-display mt-3 text-3xl leading-none md:text-4xl">{h.value}</div>
+                        </div>
+                    ))}
+                </div>
+            </section>
+
+            {/* Body */}
+            <section className="relative px-6 py-24 md:px-12 md:py-32">
+                <div
+                    className="ms-display pointer-events-none absolute left-6 top-12 select-none text-[12rem] leading-none md:left-12 md:text-[18rem]"
+                    style={{ color: "color-mix(in oklab, var(--ms-gold) 10%, transparent)" }}
+                >
+                    "
+                </div>
+
+                <div className="relative mx-auto grid max-w-6xl gap-16 md:grid-cols-12 md:gap-20">
+                    <div className="md:col-span-7">
+                        <div className="flex items-center gap-4">
+                            <span className="ms-hairline" />
+                            <p className="ms-eyebrow">The Entry</p>
+                        </div>
+                        <p className="ms-display ms-balance mt-8 text-3xl leading-[1.2] md:text-[2.5rem]">
+                            {hotel.intro}
+                        </p>
+                        <div
+                            className="ms-pretty mt-12 space-y-7 text-[15px] leading-[1.85] md:text-[17px]"
+                            style={{ color: "var(--ms-muted)" }}
+                        >
+                            {hotel.body.map((p, i) => (
+                                <p key={i} className={i === 0 ? "ms-dropcap" : undefined}>
+                                    {p}
+                                </p>
+                            ))}
+                        </div>
+
+                        <div
+                            className="mt-14 flex items-center gap-4 text-xs uppercase tracking-[0.3em]"
+                            style={{ color: "var(--ms-muted)" }}
+                        >
+                            <span className="ms-hairline" />
+                            <span>Visited Spring · The Quiet Atlas</span>
+                        </div>
+                    </div>
+
+                    {/* Booking aside */}
+                    <aside className="space-y-10 md:col-span-4 md:col-start-9">
+                        <div className="md:sticky md:top-8">
+                            <div
+                                className="relative border p-8"
+                                style={{
+                                    borderColor: "var(--ms-border)",
+                                    background: "var(--ms-card)",
+                                    boxShadow: "0 30px 60px -30px color-mix(in oklab, var(--ms-ink) 25%, transparent)",
+                                }}
+                            >
+                <span
+                    className="absolute -top-px left-8 right-8 h-px"
+                    style={{ background: "var(--ms-gold)" }}
+                />
+                                <div className="text-[10px] uppercase tracking-[0.32em]" style={{ color: "var(--ms-muted)" }}>
+                                    From
+                                </div>
+                                <div className="mt-2 flex items-baseline gap-2">
+                                    <span className="ms-display text-5xl">{hotel.fromPrice}</span>
+                                    <span className="text-xs" style={{ color: "var(--ms-muted)" }}>/ night</span>
+                                </div>
+                                <div className="mt-1 text-xs" style={{ color: "var(--ms-muted)" }}>
+                                    double occupancy, taxes incl.
+                                </div>
+
+                                <a
+                                    href={hotel.bookUrl}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="group mt-7 flex items-center justify-center gap-3 py-4 text-[10px] uppercase tracking-[0.35em] text-white transition-all duration-500"
+                                    style={{ background: "var(--ms-ink)" }}
+                                    onMouseEnter={(e) => {
+                                        e.currentTarget.style.background = "var(--ms-gold)";
+                                        e.currentTarget.style.color = "var(--ms-ink)";
+                                    }}
+                                    onMouseLeave={(e) => {
+                                        e.currentTarget.style.background = "var(--ms-ink)";
+                                        e.currentTarget.style.color = "white";
+                                    }}
+                                >
+                                    Book Direct
+                                    <span className="transition-transform duration-500 group-hover:translate-x-1">→</span>
+                                </a>
+                                <p className="mt-4 text-[11px] leading-relaxed" style={{ color: "var(--ms-muted)" }}>
+                                    The Quiet Atlas earns no commission on this listing. Direct bookings include breakfast & an arrival amenity.
+                                </p>
+
+                                <div
+                                    className="mt-7 border-t pt-5 text-[11px] uppercase tracking-[0.28em]"
+                                    style={{ borderColor: "var(--ms-border)", color: "var(--ms-muted)" }}
+                                >
+                                    {[
+                                        ["Check-in", "15:00"],
+                                        ["Check-out", "12:00"],
+                                        ["Cancellation", "7 days"],
+                                    ].map(([k, v]) => (
+                                        <div key={k} className="flex justify-between py-1.5">
+                                            <span>{k}</span>
+                                            <span style={{ color: "var(--ms-fg)" }}>{v}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+
+                            <div className="mt-12">
+                                <div className="flex items-center gap-4">
+                                    <span className="ms-hairline" />
+                                    <p className="ms-eyebrow">Why we love it</p>
+                                </div>
+                                <ul className="mt-6 space-y-4 text-sm" style={{ color: "var(--ms-muted)" }}>
+                                    {hotel.pros.map((p) => (
+                                        <li key={p} className="flex gap-4 leading-relaxed">
+                      <span
+                          className="mt-2 h-px w-4 shrink-0"
+                          style={{ background: "var(--ms-gold)" }}
+                      />
+                                            <span>{p}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+
+                            <div className="mt-12">
+                                <div className="flex items-center gap-4">
+                                    <span className="ms-hairline" />
+                                    <p className="ms-eyebrow">Know before you go</p>
+                                </div>
+                                <ul className="mt-6 space-y-4 text-sm" style={{ color: "var(--ms-muted)" }}>
+                                    {hotel.knowBefore.map((p, i) => (
+                                        <li key={p} className="flex gap-4 leading-relaxed">
+                      <span
+                          className="ms-serif-num shrink-0 not-italic"
+                          style={{ color: "var(--ms-gold)" }}
+                      >
+                        0{i + 1}
+                      </span>
+                                            <span>{p}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+
+            {/* Pull quote */}
+            <section
+                className="px-6 py-24 text-white md:px-12 md:py-32"
+                style={{ background: "var(--ms-ink)" }}
+            >
+                <div className="mx-auto max-w-4xl text-center">
+          <span className="ms-display text-6xl leading-none md:text-8xl" style={{ color: "var(--ms-gold)" }}>
+            "
+          </span>
+                    <blockquote className="ms-display ms-balance mt-4 text-3xl italic leading-[1.25] text-white/90 md:text-5xl">
+                        A house that whispers, never shouts. The kind of quiet you forget exists.
+                    </blockquote>
+                    <div className="mt-10 flex items-center justify-center gap-4 text-[10px] uppercase tracking-[0.35em] text-white/60">
+                        <span className="ms-hairline" />
+                        Condé Nast Traveller
+                        <span className="ms-hairline" />
+                    </div>
+                </div>
+            </section>
+
+            {/* Gallery */}
+            <section className="px-6 py-24 md:px-12 md:py-32" style={{ background: "var(--ms-bg)" }}>
+                <div className="mx-auto max-w-7xl">
+                    <div className="flex items-end justify-between gap-6">
+                        <div>
+                            <div className="flex items-center gap-4">
+                                <span className="ms-hairline" />
+                                <p className="ms-eyebrow">From the visit</p>
+                            </div>
+                            <h2 className="ms-display mt-4 text-4xl leading-tight md:text-6xl">
+                                A few moments<br />
+                                <span className="italic" style={{ color: "var(--ms-gold)" }}>from the stay.</span>
+                            </h2>
+                        </div>
+                        <p className="hidden max-w-xs text-sm leading-relaxed md:block" style={{ color: "var(--ms-muted)" }}>
+                            Photographed in available light over a long weekend in May, with permission of the house.
+                        </p>
+                    </div>
+
+                    <div className="mt-16 grid gap-6 md:grid-cols-12 md:gap-8">
+                        {hotel.gallery.map((g, i) => {
+                            const layouts = [
+                                "md:col-span-7 md:row-span-2 aspect-[4/5]",
+                                "md:col-span-5 aspect-[4/3]",
+                                "md:col-span-5 md:col-start-8 aspect-[4/3]",
+                            ];
+                            return (
+                                <figure key={g.src} className={`group ${layouts[i] ?? "md:col-span-4 aspect-[4/5]"}`}>
+                                    <div className="relative h-full overflow-hidden" style={{ background: "var(--ms-border)" }}>
+                                        <img
+                                            src={g.src}
+                                            alt={g.alt}
+                                            loading="lazy"
+                                            className="h-full w-full object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-[1.06]"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-100" />
+                                    </div>
+                                    <figcaption className="mt-4 flex items-baseline gap-3">
+                    <span className="ms-serif-num text-sm" style={{ color: "var(--ms-gold)" }}>
+                      0{i + 1}
+                    </span>
+                                        <span className="ms-display text-lg italic" style={{ color: "var(--ms-muted)" }}>
+                      {g.caption}
+                    </span>
+                                    </figcaption>
+                                </figure>
+                            );
+                        })}
+                    </div>
+                </div>
+            </section>
+
+            {/* Closing CTA */}
+            <section
+                className="relative overflow-hidden px-6 py-24 text-white md:px-12 md:py-32"
+                style={{ background: "var(--ms-ink)" }}
+            >
+                <div className="pointer-events-none absolute inset-0 opacity-30">
+                    <div
+                        className="absolute -left-24 top-1/2 h-96 w-96 -translate-y-1/2 rounded-full blur-[140px]"
+                        style={{ background: "var(--ms-gold)" }}
+                    />
+                    <div
+                        className="absolute -right-24 bottom-0 h-72 w-72 rounded-full blur-[120px]"
+                        style={{ background: "var(--ms-gold)" }}
+                    />
+                </div>
+                <div className="relative mx-auto flex max-w-5xl flex-col items-center text-center">
+                    <p className="ms-eyebrow" style={{ color: "var(--ms-gold-soft)" }}>Ready when you are</p>
+                    <h2 className="ms-display ms-balance mt-6 text-4xl leading-[1.05] md:text-7xl">
+                        Stay at <span className="italic" style={{ color: "var(--ms-gold-soft)" }}>{hotel.name}</span>.
+                    </h2>
+                    <p className="mt-6 max-w-xl text-base leading-relaxed text-white/70 md:text-lg">
+                        Rooms are limited and the season fills early. We recommend booking at least eight weeks ahead.
+                    </p>
+                    <a
+                        href={hotel.bookUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="group mt-10 inline-flex items-center gap-4 border bg-transparent px-10 py-5 text-[10px] uppercase tracking-[0.4em] text-white transition-all duration-500"
+                        style={{ borderColor: "var(--ms-gold)" }}
+                        onMouseEnter={(e) => {
+                            e.currentTarget.style.background = "var(--ms-gold)";
+                            e.currentTarget.style.color = "var(--ms-ink)";
+                        }}
+                        onMouseLeave={(e) => {
+                            e.currentTarget.style.background = "transparent";
+                            e.currentTarget.style.color = "white";
+                        }}
+                    >
+                        Reserve a Suite
+                        <span className="transition-transform duration-500 group-hover:translate-x-1">→</span>
+                    </a>
+                </div>
+            </section>
+
+            <footer
+                className="border-t px-6 py-10 md:px-12"
+                style={{ background: "var(--ms-ink)", borderColor: "rgba(255,255,255,0.1)", color: "rgba(255,255,255,0.6)" }}
+            >
+                <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 text-xs md:flex-row">
+                    <a href="#" className="ms-display text-lg text-white">
+                        The Quiet <span className="italic" style={{ color: "var(--ms-gold-soft)" }}>Atlas</span>
+                    </a>
+                    <span className="text-[10px] uppercase tracking-[0.3em]">
+            Independent · Ad-free · No commissions
+          </span>
+                    <span>© {new Date().getFullYear()}</span>
+                </div>
+            </footer>
+        </div>
+    );
+}
