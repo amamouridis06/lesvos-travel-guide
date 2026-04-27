@@ -371,9 +371,9 @@ export default function TheofilosParadise() {
                 style={{ background: "var(--ms-ink)" }}
             >
                 <div className="mx-auto max-w-4xl text-center">
-                    {/*<span className="ms-display text-6xl leading-none md:text-8xl" style={{ color: "var(--ms-gold)" }}>*/}
-                    {/*  "*/}
-                    {/*</span>*/}
+                    <span className="ms-display text-6xl leading-none md:text-8xl" style={{ color: "var(--ms-gold)" }}>
+                      "
+                    </span>
                     <blockquote className="ms-display ms-balance mt-4 text-3xl italic leading-[1.25] text-white/90 md:text-5xl">
                         In the heart of town, yet worlds away.
                     </blockquote>
@@ -396,6 +396,29 @@ export default function TheofilosParadise() {
                         </div>
 
                     </div>
+                    {/* Contact */}
+                    <section className="px-6 py-24 md:px-12 md:py-32" style={{ background: "var(--ms-bg)" }}>
+                        <div className="mx-auto max-w-7xl">
+                                <div className="flex items-center gap-4">
+                                    <span className="ms-hairline" />
+                                    <p className="ms-eyebrow">Contact</p>
+                                </div>
+
+                                <h2 className="ms-display mt-6 text-4xl md:text-6xl">
+                                    Get in touch
+                                </h2>
+
+                                <p className="mt-6 text-sm leading-relaxed" style={{ color: "var(--ms-muted)" }}>
+                                    For reservations, special requests or availability inquiries, our team is available daily to assist you.
+                                </p>
+
+                                <div className="mt-10 space-y-4 text-sm" style={{ color: "var(--ms-muted)" }}>
+                                    <p><span className="text-[color:var(--ms-fg)]">Phone:</span> +30 22510 43300</p>
+                                    <p><span className="text-[color:var(--ms-fg)]">Email:</span> info@theofilosparadise.gr</p>
+                                    <p><span className="text-[color:var(--ms-fg)]">Address:</span> Skra 7, Mytilene 81100, Lesvos, Greece</p>
+                                </div>
+                            </div>
+                    </section>
 
                     <div className="mt-16 grid gap-6 md:grid-cols-12 md:gap-8">
                         {hotel.gallery.map((g, i) => {
@@ -471,35 +494,6 @@ export default function TheofilosParadise() {
                         Reserve a Suite
                         <span className="transition-transform duration-500 group-hover:translate-x-1">→</span>
                     </a>
-                </div>
-            </section>
-            {/* Contact */}
-            <section
-                className="px-6 py-24 md:px-12 md:py-32"
-                style={{ background: "var(--ms-card)" }}
-            >
-                <div className="mx-auto grid max-w-6xl gap-16 md:grid-cols-12">
-
-                    <div className="md:col-span-6">
-                        <div className="flex items-center gap-4">
-                            <span className="ms-hairline" />
-                            <p className="ms-eyebrow">Contact</p>
-                        </div>
-
-                        <h2 className="ms-display mt-6 text-4xl md:text-6xl">
-                            Get in touch
-                        </h2>
-
-                        <p className="mt-6 text-sm leading-relaxed" style={{ color: "var(--ms-muted)" }}>
-                            For reservations, special requests or availability inquiries, our team is available daily to assist you.
-                        </p>
-
-                        <div className="mt-10 space-y-4 text-sm" style={{ color: "var(--ms-muted)" }}>
-                            <p><span className="text-[color:var(--ms-fg)]">Phone:</span> +30 22510 43300</p>
-                            <p><span className="text-[color:var(--ms-fg)]">Email:</span> info@theofilosparadise.gr</p>
-                            <p><span className="text-[color:var(--ms-fg)]">Address:</span> Skra 7, Mytilene 81100, Lesvos, Greece</p>
-                        </div>
-                    </div>
                 </div>
             </section>
 
