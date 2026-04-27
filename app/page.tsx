@@ -108,9 +108,9 @@ export default function Home() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
               {[
-                { title: "Theofilos Paradise", location: "Mytilene", img: "/theo-entry.jpg", href: "/hotels/theofilos" },
-                { title: "Eressian Hotel", location: "Eressos", img: "/eressian.jpg", href: "/hotels/eressian" },
-                { title: "Mythical Coast", location: "Thermi", img: "/mythical.jpg", href: "/hotels/mythical" },
+                { title: "Theofilos Paradise", location: "Mytilene", img: "/theo-entry.jpg", href: "/hotels/theofilos-paradise" },
+                // { title: "Eressian Hotel", location: "Eressos", img: "/eressian.jpg", href: "/hotels/eressian" },
+                // { title: "Mythical Coast", location: "Thermi", img: "/mythical.jpg", href: "/hotels/mythical" },
               ].map((hotel) => (
                   <Link key={hotel.title} href={hotel.href} className="group block bg-neutral-50 rounded-xl overflow-hidden shadow hover:shadow-xl transition">
                     <img src={hotel.img} className="h-52 w-full object-cover group-hover:scale-105 transition" />
@@ -131,9 +131,9 @@ export default function Home() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
               {[
-                { title: "Kalnterimi", location: "Molyvos", img: "/food1.jpg", href: "/food/kalnterimi" },
-                { title: "Vafios Taverna", location: "Vafios", img: "/food2.jpg", href: "/food/vafios" },
-                { title: "Captain’s Table", location: "Plomari", img: "/food3.jpg", href: "/food/captain" },
+                { title: "To Limanaki ton Pamfilon", location: "Skala Pamfilon", img: "/limanaki_pamf1.jpg", href: "/food/limanaki_pamfilon" },
+                // { title: "Vafios Taverna", location: "Vafios", img: "/food2.jpg", href: "/food/vafios" },
+                // { title: "Captain’s Table", location: "Plomari", img: "/food3.jpg", href: "/food/captain" },
               ].map((place) => (
                   <Link key={place.title} href={place.href} className="group block bg-white rounded-xl overflow-hidden shadow hover:shadow-xl transition">
                     <img src={place.img} className="h-52 w-full object-cover group-hover:scale-105 transition" />
@@ -147,10 +147,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ================= FOOTER ================= */}
-        <footer className="mt-auto py-6 text-center text-gray-500 text-sm border-t">
-          <p>© 2026 Lesvos Travel Guide</p>
-        </footer>
+
 
       </main>
   );
