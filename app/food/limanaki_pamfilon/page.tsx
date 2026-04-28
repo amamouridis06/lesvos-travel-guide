@@ -15,7 +15,7 @@ import {
 
 // ---- Replace with your own images ----
 const HERO =
-    "/naf4.jpg";
+    "/limanaki_pamf1.jpg";
 const GALLERY = [
 
   "/food.jpg",
@@ -249,7 +249,7 @@ export default function CocktailBarPage() {
 
             <div className="overflow-hidden rounded-3xl border border-stone-200 bg-white shadow-soft">
               <iframe
-                  title="Map of Cocktail Corner"
+                  title="Map of Limanaki"
                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6472.0409070934475!2d26.526286859394222!3d39.1589155024112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ba677e1a3b5845%3A0xd278dcca3b94ec29!2sTo%20limanaki%20ton%20Pamfilon!5e1!3m2!1sen!2sgr!4v1777328688869!5m2!1sen!2sgr"
                   className="h-56 w-full border-0"
                   loading="lazy"
