@@ -41,7 +41,7 @@ const INFO = [
 ];
 
 const NEARBY = [
-  { label: "Agios Isidoros Beach", emoji: "🏖" },
+  { label: "Agios Isidoro Beach", emoji: "🏖" },
   { label: "Melinta Village", emoji: "🏘" },
   { label: "Plomari", emoji: "🍶" },
 ];
