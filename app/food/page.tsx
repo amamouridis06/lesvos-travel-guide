@@ -27,7 +27,7 @@ const cafeTaverns = [
 
 ];
 
-const restaurants = [
+const Restaurants = [
   {
     title: "To Limanaki ton Pamfilon",
     category: "Traditional Greek cuisine by the sea",
@@ -93,7 +93,7 @@ export default function FoodPage() {
             {[
               { title: "Taverns", href: "#cafeTaverns" },
               { title: "Restaurants", href: "#restaurants" },
-              { title: "Cafés & Bars", href: "#bars" },
+              { title: "Bars", href: "#bars" },
               { title: "Local Products", href: "#locProdSup" },
             ].map((cat) => (
                 <a
@@ -146,31 +146,77 @@ export default function FoodPage() {
             </div>
           </div>
 
-          {/* Restaurants */}
-          <div id="restaurants">
-            <h2 className="text-2xl font-semibold mb-6">Restaurants</h2>
+            {/* Restaurants */}
+            <div id="restaurants">
+              <h2 className="text-2xl font-semibold mb-6">Restaurants</h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {restaurants.map((item) => (
-                  <div key={item.title} className="bg-white rounded-xl shadow p-6">
-                    <h3 className="font-semibold text-lg">{item.title}</h3>
-                    <p className="text-sm text-gray-600">{item.category}</p>
-                    <p className="text-sm mt-2">{item.description}</p>
-                  </div>
-              ))}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {Restaurants.map((item) => (
+                    <div
+                        key={item.title}
+                        className="bg-white rounded-xl shadow p-6 flex gap-4"
+                    >
+                      <div className="w-24 h-24 relative shrink-0">
+                        <Image
+                            src={item.image}
+                            alt={item.alt}
+                            fill
+                            className="object-cover rounded-lg"
+                        />
+                      </div>
+
+                      <div>
+                        <h3 className="font-semibold text-lg">{item.title}</h3>
+
+                        <p className="text-sm text-gray-600">{item.category}</p>
+
+                        <p className="text-sm mt-2">{item.description}</p>
+
+                        <Link
+                            href={item.href}
+                            className="inline-block mt-3 px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition"
+                        >
+                          View details
+                        </Link>
+                      </div>
+                    </div>
+                ))}
+              </div>
             </div>
-          </div>
 
-          {/* Cafés & Bars */}
-          <div id="bars">
-            <h2 className="text-2xl font-semibold mb-6">Cafés & Bars</h2>
+          {/* Bars */}
+          <div id="restaurants">
+            <h2 className="text-2xl font-semibold mb-6">Bars</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {Bars.map((item) => (
-                  <div key={item.title} className="bg-white rounded-xl shadow p-6">
-                    <h3 className="font-semibold text-lg">{item.title}</h3>
-                    <p className="text-sm text-gray-600">{item.category}</p>
-                    <p className="text-sm mt-2">{item.description}</p>
+                  <div
+                      key={item.title}
+                      className="bg-white rounded-xl shadow p-6 flex gap-4"
+                  >
+                    <div className="w-24 h-24 relative shrink-0">
+                      <Image
+                          src={item.image}
+                          alt={item.alt}
+                          fill
+                          className="object-cover rounded-lg"
+                      />
+                    </div>
+
+                    <div>
+                      <h3 className="font-semibold text-lg">{item.title}</h3>
+
+                      <p className="text-sm text-gray-600">{item.category}</p>
+
+                      <p className="text-sm mt-2">{item.description}</p>
+
+                      <Link
+                          href={item.href}
+                          className="inline-block mt-3 px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition"
+                      >
+                        View details
+                      </Link>
+                    </div>
                   </div>
               ))}
             </div>
