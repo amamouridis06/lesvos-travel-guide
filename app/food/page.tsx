@@ -45,7 +45,7 @@ const Bars = [
     description: "Enjoy cocktails, music, and vibrant nightlife near the beach.",
     image: "/naf4.jpg",
     alt: "Naf",
-    href: "/food/nafs-coctail-corner",
+    href: "/food/nafs-cocktail-corner",
   },
   // {
   //   title: "Island Bar",
