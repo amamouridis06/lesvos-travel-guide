@@ -12,7 +12,7 @@ const cafeTaverns = [
     title: "Tryfon",
     category: "Traditional Greek cuisine",
     description: "Fresh meat, local dishes.",
-    image: "/trfon6.jpg",
+    image: "/tryfon6.jpg",
     alt: "Tryfon",
     href: "/food/tryfon",
   },
@@ -43,6 +43,9 @@ const Bars = [
     title: "Naf's Coctail Corner",
     category: "Cocktails & nightlife",
     description: "Enjoy cocktails, music, and vibrant nightlife near the beach.",
+    image: "/naf4.jpg",
+    alt: "Naf",
+    href: "/food/nafs-coctail-corner",
   },
   // {
   //   title: "Island Bar",
