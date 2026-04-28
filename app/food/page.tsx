@@ -12,6 +12,7 @@ const cafeTaverns = [
     title: "Tryfon",
     category: "Traditional Greek cuisine",
     description: "Fresh meat, local dishes.",
+    location: "📍Kalloni, Lesvos",
     image: "/tryfon6.jpg",
     alt: "Tryfon",
     href: "/food/tryfon",
@@ -20,11 +21,11 @@ const cafeTaverns = [
     title: "Pallas Cafe - Grill",
     category: "Traditional Greek cuisine",
     description: "Fresh meat, local dishes in a beautiful village",
+    location: "📍Mesotopos, Lesvos",
     image: "/pallas.jpg",
     alt: "Pallas",
     href: "/food/pallas-cafe-grill",
   },
-
 ];
 
 const Restaurants = [
@@ -32,6 +33,7 @@ const Restaurants = [
     title: "To Limanaki ton Pamfilon",
     category: "Traditional Greek cuisine by the sea",
     description: "Fresh fish, local dishes, and a relaxing seaside atmosphere.",
+    location: "📍Pamfila, Lesvos",
     image: "/limanaki_pamf1.jpg",
     alt: "To Limanaki ton Pamfilon",
     href: "/food/limanaki_pamfilon",
@@ -40,20 +42,15 @@ const Restaurants = [
 
 const Bars = [
   {
-    title: "Naf's Coctail Corner",
+    title: "Naf's Cocktail Corner",
     category: "Cocktails & nightlife",
     description: "Enjoy cocktails, music, and vibrant nightlife near the beach.",
+    location: "📍Agios Isidoros, Lesvos",
     image: "/naf4.jpg",
     alt: "Naf",
     href: "/food/nafs-cocktail-corner",
   },
-  // {
-  //   title: "Island Bar",
-  //   category: "Cocktails & nightlife",
-  //   description: "Enjoy cocktails, music, and vibrant nightlife near the beach.",
-  // },
 ];
-
 const locProdSup = [
   {
     title: "Ouzo",
