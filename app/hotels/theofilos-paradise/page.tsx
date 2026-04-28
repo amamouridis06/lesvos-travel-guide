@@ -40,7 +40,6 @@ const hotel = {
     ],
     knowBefore: [
         "Check-in time: 12.00PM; Check-out time: 11:00AM",
-        "Limited on-site parking available; reservation recommended",
         "Located in the city centre — some street noise may be expected",
         "Valid ID and credit card required at check-in",
     ],
