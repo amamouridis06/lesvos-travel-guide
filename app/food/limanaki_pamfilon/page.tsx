@@ -266,7 +266,7 @@ export default function CocktailBarPage() {
                           className="flex items-center justify-between rounded-xl px-3 py-2 transition-colors hover:bg-stone-100"
                       >
                     <span className="flex items-center gap-3">
-                      <span className="text-lg">{n.emoji}</span>
+                      {/*<span className="text-lg">{n.emoji}</span>*/}
                       <span className="font-medium">{n.label}</span>
                     </span>
                         <ChevronRight className="h-4 w-4 text-stone-500" />
