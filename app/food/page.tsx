@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 
 export const metadata = {
   title: "Food in Lesvos",
@@ -8,10 +7,64 @@ export const metadata = {
       "The best places to eat in Lesvos: taverns, restaurants, cafés, bars, and local products.",
 };
 
+const cafeTaverns = [
+  {
+    title: "Tryfon",
+    category: "Traditional Greek cuisine",
+    description: "Fresh meat, local dishes.",
+    image: "/trfon6.jpg",
+    alt: "Tryfon",
+    href: "/food/tryfon",
+  },
+  {
+    title: "Pallas Cafe - Grill",
+    category: "Traditional Greek cuisine",
+    description: "Fresh meat, local dishes in a beautiful village",
+    image: "/pallas.jpg",
+    alt: "Pallas",
+    href: "/food/pallas-cafe-grill",
+  },
+
+];
+
+const restaurants = [
+  {
+    title: "To Limanaki ton Pamfilon",
+    category: "Traditional Greek cuisine by the sea",
+    description: "Fresh fish, local dishes, and a relaxing seaside atmosphere.",
+    image: "/limanaki_pamf1.jpg",
+    alt: "To Limanaki ton Pamfilon",
+    href: "/food/limanaki_pamfilon",
+  },
+];
+
+const Bars = [
+  {
+    title: "Naf's Coctail Corner",
+    category: "Cocktails & nightlife",
+    description: "Enjoy cocktails, music, and vibrant nightlife near the beach.",
+  },
+  // {
+  //   title: "Island Bar",
+  //   category: "Cocktails & nightlife",
+  //   description: "Enjoy cocktails, music, and vibrant nightlife near the beach.",
+  // },
+];
+
+const locProdSup = [
+  {
+    title: "Ouzo",
+    description: "Lesvos is famous for its ouzo, one of Greece’s most iconic drinks.",
+  },
+  {
+    title: "Olive Oil & Cheese",
+    description: "High-quality olive oil, feta, and traditional local products.",
+  },
+];
+
 export default function FoodPage() {
   return (
       <main className="bg-neutral-100 text-neutral-900">
-
         {/* HERO */}
         <section
             className="relative w-full h-[60vh] bg-cover bg-center flex items-center justify-center"
@@ -35,10 +88,10 @@ export default function FoodPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: "Taverns", href: "#taverns" },
+              { title: "Taverns", href: "#cafeTaverns" },
               { title: "Restaurants", href: "#restaurants" },
-              { title: "Cafés & Bars", href: "#cafes" },
-              { title: "Local Products", href: "#local" },
+              { title: "Cafés & Bars", href: "#bars" },
+              { title: "Local Products", href: "#locProdSup" },
             ].map((cat) => (
                 <a
                     key={cat.title}
@@ -51,49 +104,42 @@ export default function FoodPage() {
           </div>
         </section>
 
-        {/* LIST SECTION */}
         <section className="max-w-6xl mx-auto px-6 pb-24 space-y-20">
-
           {/* Taverns */}
-          <div id="taverns">
+          <div id="cafeTaverns">
             <h2 className="text-2xl font-semibold mb-6">Taverns</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-              {/* Tavern Card */}
-              <div className="bg-white rounded-xl shadow p-6 flex gap-4">
-                <div className="w-24 h-24 relative">
-                  <Image
-                      src="/limanaki_pamf1.jpg"
-                      alt="To Limanaki ton Pamfilon"
-                      fill
-                      className="object-cover rounded-lg"
-                  />
-                </div>
-
-                <div>
-                  <h3 className="font-semibold text-lg">
-                    To Limanaki ton Pamfilon
-                  </h3>
-
-                  <p className="text-sm text-gray-600">
-                    Traditional Greek cuisine by the sea
-                  </p>
-
-                  <p className="text-sm mt-2">
-                    Fresh fish, local dishes, and a relaxing seaside atmosphere.
-                  </p>
-
-                  <button
-                  onClick={() => router.push("/food/limanaki_pamfilon")}
-                  className="mt-3 px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition"
+              {cafeTaverns.map((item) => (
+                  <div
+                      key={item.title}
+                      className="bg-white rounded-xl shadow p-6 flex gap-4"
                   >
-                </button>
-                </div>
-              </div>
+                    <div className="w-24 h-24 relative shrink-0">
+                      <Image
+                          src={item.image}
+                          alt={item.alt}
+                          fill
+                          className="object-cover rounded-lg"
+                      />
+                    </div>
 
-              {/* Add more taverns easily here */}
+                    <div>
+                      <h3 className="font-semibold text-lg">{item.title}</h3>
 
+                      <p className="text-sm text-gray-600">{item.category}</p>
+
+                      <p className="text-sm mt-2">{item.description}</p>
+
+                      <Link
+                          href={item.href}
+                          className="inline-block mt-3 px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition"
+                      >
+                        View details
+                      </Link>
+                    </div>
+                  </div>
+              ))}
             </div>
           </div>
 
@@ -102,76 +148,45 @@ export default function FoodPage() {
             <h2 className="text-2xl font-semibold mb-6">Restaurants</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-              <div className="bg-white rounded-xl shadow p-6">
-                <h3 className="font-semibold text-lg">Fine Dining Example</h3>
-                <p className="text-sm text-gray-600">
-                  Modern Mediterranean cuisine
-                </p>
-                <p className="text-sm mt-2">
-                  A more refined experience with creative dishes and local ingredients.
-                </p>
-              </div>
-
+              {restaurants.map((item) => (
+                  <div key={item.title} className="bg-white rounded-xl shadow p-6">
+                    <h3 className="font-semibold text-lg">{item.title}</h3>
+                    <p className="text-sm text-gray-600">{item.category}</p>
+                    <p className="text-sm mt-2">{item.description}</p>
+                  </div>
+              ))}
             </div>
           </div>
 
           {/* Cafés & Bars */}
-          <div id="cafes">
+          <div id="bars">
             <h2 className="text-2xl font-semibold mb-6">Cafés & Bars</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-              {/* Cafe */}
-              <div className="bg-white rounded-xl shadow p-6">
-                <h3 className="font-semibold text-lg">Seaside Café</h3>
-                <p className="text-sm text-gray-600">
-                  Coffee & brunch
-                </p>
-                <p className="text-sm mt-2">
-                  Perfect spot for morning coffee, brunch, and sunset views.
-                </p>
-              </div>
-
-              {/* Bar */}
-              <div className="bg-white rounded-xl shadow p-6">
-                <h3 className="font-semibold text-lg">Island Bar</h3>
-                <p className="text-sm text-gray-600">
-                  Cocktails & nightlife
-                </p>
-                <p className="text-sm mt-2">
-                  Enjoy cocktails, music, and vibrant nightlife near the beach.
-                </p>
-              </div>
-
+              {Bars.map((item) => (
+                  <div key={item.title} className="bg-white rounded-xl shadow p-6">
+                    <h3 className="font-semibold text-lg">{item.title}</h3>
+                    <p className="text-sm text-gray-600">{item.category}</p>
+                    <p className="text-sm mt-2">{item.description}</p>
+                  </div>
+              ))}
             </div>
           </div>
 
           {/* Local Products */}
-          <div id="local">
+          <div id="locProdSup">
             <h2 className="text-2xl font-semibold mb-6">Local Products</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-              <div className="bg-white rounded-xl shadow p-6">
-                <h3 className="font-semibold text-lg">Ouzo</h3>
-                <p className="text-sm mt-2">
-                  Lesvos is famous for its ouzo, one of Greece’s most iconic drinks.
-                </p>
-              </div>
-
-              <div className="bg-white rounded-xl shadow p-6">
-                <h3 className="font-semibold text-lg">Olive Oil & Cheese</h3>
-                <p className="text-sm mt-2">
-                  High-quality olive oil, feta, and traditional local products.
-                </p>
-              </div>
-
+              {locProdSup.map((item) => (
+                  <div key={item.title} className="bg-white rounded-xl shadow p-6">
+                    <h3 className="font-semibold text-lg">{item.title}</h3>
+                    <p className="text-sm mt-2">{item.description}</p>
+                  </div>
+              ))}
             </div>
           </div>
-
         </section>
-
       </main>
   );
 }
