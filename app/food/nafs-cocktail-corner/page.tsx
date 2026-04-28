@@ -15,13 +15,15 @@ import {
 
 // ---- Replace with your own images ----
 const HERO =
-   "/naf4.jpg";
+   "/naf-chairs.jpg";
 const GALLERY = [
-
+  "/naf-ep.mp4",
   "/naf1.jpg",
   "/naf2.jpg",
+  "/naf-dj.mp4",
   "/naf3.jpg",
   "/naf4.jpg",
+  "/naf-party.mp4",
   "/naf5.jpg",
 ]
 

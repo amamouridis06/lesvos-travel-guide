@@ -46,7 +46,7 @@ const Bars = [
     category: "Cocktails & nightlife",
     description: "Enjoy cocktails, music, and vibrant nightlife near the beach.",
     location: "📍Agios Isidoros, Lesvos",
-    image: "/naf4.jpg",
+    image: "/naf-logo.jpg",
     alt: "Naf",
     href: "/food/nafs-cocktail-corner",
   },
