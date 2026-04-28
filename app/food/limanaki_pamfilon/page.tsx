@@ -24,7 +24,7 @@ const GALLERY = [
 ]
 
 const Dishes = [
-  // { t: "Zombie", d: "rum, passion fruit, pineapple, lime, falernum." },
+  { t: "Zombie", d: "rum, passion fruit, pineapple, lime, falernum." },
   // { t: "Diego", d: "tequila, mango, vanilla, lime, spicy bitters" },
   // { t: "Hanky panky", d: "Vodka, fresh ginger, cucumber, lime." },
   // { t: "Pink mule", d: "vodka, strawberry, lime, mint, ginger beer" },
