@@ -61,6 +61,9 @@ export default function HotelsPage() {
                                 <h3 className="text-lg font-semibold">{hotel.name}</h3>
                                 <p className="text-sm text-gray-600 mt-1">
                                     {hotel.description}
+
+                                </p>
+                                <p className="text-sm text-gray-600 mt-1">
                                     {hotel.location}
                                 </p>
                             </div>
