@@ -38,7 +38,6 @@ export default function RootLayout({
         <div className="pt-20">{children}</div>
 
       </body>
-      <Footer />
     </html>
   );
 }
