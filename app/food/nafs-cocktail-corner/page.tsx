@@ -15,7 +15,7 @@ import {
 
 // ---- Replace with your own images ----
 const HERO =
-   "/naf4.jpg";
+   "/naf-chairs.jpeg";
 const GALLERY = [
   "/naf1.jpg",
   "/naf2.jpg",
