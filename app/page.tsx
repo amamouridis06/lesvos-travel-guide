@@ -81,25 +81,25 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Desktop: image grid */}
-          <div className="hidden lg:grid" style={{ gridTemplateColumns: "repeat(4, 1fr)", gap: 16 }}>
-            {[
-              { label: "Beaches", sub: "32 spots", img: "/beach.jpg", href: "/beaches" },
-              { label: "Villages", sub: "18 spots", img: "/village.jpg", href: "/villages" },
-              { label: "Food", sub: "Local cuisine", img: "/food.jpg", href: "/food" },
-              { label: "Nature", sub: "Wild trails", img: "/nature.jpg", href: "/nature" },
-            ].map((cat) => (
-                <Link key={cat.label} href={cat.href}
-                      style={{ position: "relative", height: 220, borderRadius: 16, overflow: "hidden", display: "block", textDecoration: "none" }}>
-                  <img src={cat.img} alt={cat.label} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-                  <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(0,0,0,0.6), transparent)" }} />
-                  <div style={{ position: "absolute", bottom: 0, left: 0, padding: 20 }}>
-                    <p style={{ fontFamily: "Syne, sans-serif", fontSize: 16, fontWeight: 600, color: "#fff", margin: "0 0 2px" }}>{cat.label}</p>
-                    <p style={{ fontSize: 11, color: "rgba(255,255,255,0.55)", letterSpacing: "0.06em", textTransform: "uppercase", margin: 0 }}>{cat.sub}</p>
-                  </div>
-                </Link>
-            ))}
-          </div>
+          {/*/!* Desktop: image grid *!/*/}
+          {/*<div className="hidden lg:grid" style={{ gridTemplateColumns: "repeat(4, 1fr)", gap: 16 }}>*/}
+          {/*  {[*/}
+          {/*    { label: "Beaches", sub: "32 spots", img: "/beach.jpg", href: "/beaches" },*/}
+          {/*    { label: "Villages", sub: "18 spots", img: "/village.jpg", href: "/villages" },*/}
+          {/*    { label: "Food", sub: "Local cuisine", img: "/food.jpg", href: "/food" },*/}
+          {/*    { label: "Nature", sub: "Wild trails", img: "/nature.jpg", href: "/nature" },*/}
+          {/*  ].map((cat) => (*/}
+          {/*      <Link key={cat.label} href={cat.href}*/}
+          {/*            style={{ position: "relative", height: 220, borderRadius: 16, overflow: "hidden", display: "block", textDecoration: "none" }}>*/}
+          {/*        <img src={cat.img} alt={cat.label} style={{ width: "100%", height: "100%", objectFit: "cover" }} />*/}
+          {/*        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(0,0,0,0.6), transparent)" }} />*/}
+          {/*        <div style={{ position: "absolute", bottom: 0, left: 0, padding: 20 }}>*/}
+          {/*          <p style={{ fontFamily: "Syne, sans-serif", fontSize: 16, fontWeight: 600, color: "#fff", margin: "0 0 2px" }}>{cat.label}</p>*/}
+          {/*          <p style={{ fontSize: 11, color: "rgba(255,255,255,0.55)", letterSpacing: "0.06em", textTransform: "uppercase", margin: 0 }}>{cat.sub}</p>*/}
+          {/*        </div>*/}
+          {/*      </Link>*/}
+          {/*  ))}*/}
+          {/*</div>*/}
         </section>
 
         {/* TOP PLACES */}
@@ -128,27 +128,27 @@ export default function Home() {
         <Section title="Top hotels" href="/hotels">
           <div className="flex lg:hidden" style={{ flexDirection: "column" }}>
             {[
-              { num: "01", name: "Heliotopos", sub: "Boutique · Skala Eresou", tag: "Hotel", img: "/hotel1.jpg", href: "/hotels/heliotopos" },
-              { num: "02", name: "Loriet", sub: "Luxury · Mytilene", tag: "Hotel", img: "/hotel2.jpg", href: "/hotels/loriet" },
-              { num: "03", name: "Olive Press", sub: "Design · Molyvos", tag: "Hotel", img: "/hotel3.jpg", href: "/hotels/olive-press" },
+              { num: "01", name: "Theofilos Paradise Boutique Hotel", sub: "Boutique · Mytilene", tag: "Hotel", img: "/theo-entry.jpg", href: "/hotels/theofilos-paradise" },
+              // { num: "02", name: "Loriet", sub: "Luxury · Mytilene", tag: "Hotel", img: "/hotel2.jpg", href: "/hotels/loriet" },
+              // { num: "03", name: "Olive Press", sub: "Design · Molyvos", tag: "Hotel", img: "/hotel3.jpg", href: "/hotels/olive-press" },
             ].map((p, i, arr) => (
                 <MobileListItem key={p.name} {...p} last={i === arr.length - 1} />
             ))}
           </div>
           <div className="hidden lg:grid" style={{ gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
             {[
-              { num: "01", name: "Heliotopos", sub: "Boutique · Skala Eresou", tag: "Hotel", img: "/hotel1.jpg", href: "/hotels/heliotopos" },
-              { num: "02", name: "Loriet", sub: "Luxury · Mytilene", tag: "Hotel", img: "/hotel2.jpg", href: "/hotels/loriet" },
-              { num: "03", name: "Olive Press", sub: "Design · Molyvos", tag: "Hotel", img: "/hotel3.jpg", href: "/hotels/olive-press" },
+              { num: "01", name: "Theofilos Paradise Boutique Hotel", sub: "Boutique · Mytilene", tag: "Hotel", img: "/theo-entry.jpg", href: "/hotels/theofilos-paradise" },
+              // { num: "02", name: "Loriet", sub: "Luxury · Mytilene", tag: "Hotel", img: "/hotel2.jpg", href: "/hotels/loriet" },
+              // { num: "03", name: "Olive Press", sub: "Design · Molyvos", tag: "Hotel", img: "/hotel3.jpg", href: "/hotels/olive-press" },
             ].map((p) => <DesktopCard key={p.name} {...p} />)}
           </div>
         </Section>
 
         {/* TOP RESTAURANTS */}
-        <Section title="Top restaurants" href="/restaurants">
+        <Section title="Top restaurants" href="/food">
           <div className="flex lg:hidden" style={{ flexDirection: "column" }}>
             {[
-              { num: "01", name: "Averof", sub: "Seafood · Mytilene", tag: "Restaurant", img: "/rest1.jpg", href: "/restaurants/averof" },
+              { num: "01", name: "", sub: "Seafood · Mytilene", tag: "Restaurant", img: "/rest1.jpg", href: "/restaurants/averof" },
               { num: "02", name: "Vafios", sub: "Traditional · Vafios", tag: "Restaurant", img: "/rest2.jpg", href: "/restaurants/vafios" },
               { num: "03", name: "Cavo d'Oro", sub: "Mediterranean · Molyvos", tag: "Restaurant", img: "/rest3.jpg", href: "/restaurants/cavo-doro" },
             ].map((p, i, arr) => (
@@ -163,6 +163,26 @@ export default function Home() {
             ].map((p) => <DesktopCard key={p.name} {...p} />)}
           </div>
         </Section>
+        {/* TOP Bars & cafes */}
+        <Section title="Top bars & cafes" href="/food">
+          <div className="flex lg:hidden" style={{ flexDirection: "column" }}>
+            {[
+              { num: "01", name: "Naf's Cocktail Corner", sub: "Cocktail · Agios Isidoros", tag: "bar", img: "/naf-logo.jpg", href: "/food/nafs-cocktail-corner" },
+              // { num: "02", name: "Vafios", sub: "Traditional · Vafios", tag: "Restaurant", img: "/rest2.jpg", href: "/restaurants/vafios" },
+              // { num: "03", name: "Cavo d'Oro", sub: "Mediterranean · Molyvos", tag: "Restaurant", img: "/rest3.jpg", href: "/restaurants/cavo-doro" },
+            ].map((p, i, arr) => (
+                <MobileListItem key={p.name} {...p} last={i === arr.length - 1} />
+            ))}
+          </div>
+          <div className="hidden lg:grid" style={{ gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
+            {[
+              { num: "01", name: "Naf's Cocktail Corner", sub: "Cocktail · Agios Isidoros", tag: "bar", img: "/naf-logo.jpg", href: "/food/nafs-cocktail-corner" },
+              // { num: "02", name: "Vafios", sub: "Traditional · Vafios", tag: "Restaurant", img: "/rest2.jpg", href: "/restaurants/vafios" },
+              // { num: "03", name: "Cavo d'Oro", sub: "Mediterranean · Molyvos", tag: "Restaurant", img: "/rest3.jpg", href: "/restaurants/cavo-doro" },
+            ].map((p) => <DesktopCard key={p.name} {...p} />)}
+          </div>
+        </Section>
+
 
         {/* PLANNER */}
         <section style={{ padding: "40px 24px 80px" }} className="lg:px-16 lg:pt-16 lg:pb-24">
@@ -185,22 +205,22 @@ export default function Home() {
           </div>
         </section>
 
-        {/* BOTTOM NAV — mobile only */}
-        <nav className="lg:hidden" style={{ display: "flex", justifyContent: "space-around", padding: "14px 0 28px", borderTop: "1px solid #f0f0f0", position: "sticky", bottom: 0, background: "#fff" }}>
-          {[
-            { label: "Home", active: true, href: "/", icon: <path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z" /> },
-            { label: "Search", href: "/search", icon: <><circle cx="11" cy="11" r="8" /><path d="M21 21l-4.35-4.35" /></> },
-            { label: "Map", href: "/map", icon: <><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><circle cx="12" cy="11" r="3" /></> },
-            { label: "Saved", href: "/saved", icon: <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z" /> },
-          ].map((item) => (
-              <Link key={item.label} href={item.href}
-                    style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 6, fontSize: 9, letterSpacing: "0.06em", textTransform: "uppercase", color: item.active ? "#111" : "#bbb", textDecoration: "none" }}>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">{item.icon}</svg>
-                {item.label}
-                {item.active && <span style={{ width: 4, height: 4, borderRadius: "50%", background: "#111" }} />}
-              </Link>
-          ))}
-        </nav>
+        {/*/!* BOTTOM NAV — mobile only *!/*/}
+        {/*<nav className="lg:hidden" style={{ display: "flex", justifyContent: "space-around", padding: "14px 0 28px", borderTop: "1px solid #f0f0f0", position: "sticky", bottom: 0, background: "#fff" }}>*/}
+        {/*  {[*/}
+        {/*    { label: "Home", active: true, href: "/", icon: <path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z" /> },*/}
+        {/*    { label: "Search", href: "/search", icon: <><circle cx="11" cy="11" r="8" /><path d="M21 21l-4.35-4.35" /></> },*/}
+        {/*    { label: "Map", href: "/map", icon: <><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><circle cx="12" cy="11" r="3" /></> },*/}
+        {/*    { label: "Saved", href: "/saved", icon: <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z" /> },*/}
+        {/*  ].map((item) => (*/}
+        {/*      <Link key={item.label} href={item.href}*/}
+        {/*            style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 6, fontSize: 9, letterSpacing: "0.06em", textTransform: "uppercase", color: item.active ? "#111" : "#bbb", textDecoration: "none" }}>*/}
+        {/*        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">{item.icon}</svg>*/}
+        {/*        {item.label}*/}
+        {/*        {item.active && <span style={{ width: 4, height: 4, borderRadius: "50%", background: "#111" }} />}*/}
+        {/*      </Link>*/}
+        {/*  ))}*/}
+        {/*</nav>*/}
 
       </main>
   );
