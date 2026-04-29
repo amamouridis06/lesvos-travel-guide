@@ -13,10 +13,10 @@ const pharmacies = [
     address: "Aeroporou Gianarelli 28, Mitilini 811 00",
     phone: "+30 22510 40001",
     hours: [
-      "Mon,Wed: 08:00–14:00",
-      "Tue,Thur,Fri: 08:00–14:00 & 17:30-20:30",
-      "Sat: 09:30–14:00",
-      "Sun: Closed"
+      {day:"Mon,Wed:", time:"08:00–14:00"},
+      {day:"Tue,Thur,Fri:", time: "08:00–14:00 & 17:30-20:30"},
+      {day:"Sat:" , time:"09:30–14:00"},
+      {day:"Sun:", time: "Closed"}
     ],
     maps: "https://maps.app.goo.gl/56k9FJ4CgKcX6Qay8",
     emergency: false,
@@ -27,9 +27,9 @@ const pharmacies = [
     address: "Kalloni Central Square",
     phone: "+30 22530 22022",
     hours: [
-      "Mon, Wed: 08:00–14:30",
-      "Tue, Thur, Fri: 08:00–14:00 & 18:00-21:00",
-      "Sat, Sun: Closed"
+      {day:"Mon,Wed:", time:"08:00–14:00"},
+      {day:"Tue,Thur,Fri:", time: "08:00–14:00 & 18:00-21:00"},
+      {day:"Sat, Sun: Closed", time: "Closed"}
     ],
     maps: "https://maps.app.goo.gl/8ArkLUv2HaAWiexWA",
     emergency: false,
@@ -143,7 +143,14 @@ export default function PharmaciesPage() {
 
                   <ul className="text-sm text-gray-600 mt-1 space-y-1">
                     {pharmacy.hours.map((h, i) => (
-                        <li key={i}>{h}</li>
+                        <li key={i} className="flex justify-between">
+                            <span className="font-semibold text-gray-800">
+                                {h.day}
+                            </span>
+                            <span>
+                                {h.time}
+                            </span>
+                        </li>
                     ))}
                   </ul>
                 </div>
