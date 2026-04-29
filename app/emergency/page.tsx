@@ -9,7 +9,7 @@ export const metadata = {
 const pharmacies = [
   {
     name: "Pharmacy Lampousis",
-    area: "Mytilene",
+    area: "📍Mytilene",
     address: "Aeroporou Gianarelli 28, Mitilini 811 00",
     phone: "+30 22510 40001",
     hours: [
@@ -23,13 +23,13 @@ const pharmacies = [
   },
   {
     name: "Pharmacy Mariolas",
-    area: "Kalloni",
+    area: "📍Kalloni",
     address: "Kalloni Central Square",
     phone: "+30 22530 22022",
     hours: [
       {day:"Mon,Wed:", time:"08:00–14:00"},
       {day:"Tue,Thur,Fri:", time: "08:00–14:00 & 18:00-21:00"},
-      {day:"Sat, Sun: Closed", time: "Closed"}
+      {day:"Sat, Sun:", time: "Closed"}
     ],
     maps: "https://maps.app.goo.gl/8ArkLUv2HaAWiexWA",
     emergency: false,
