@@ -126,18 +126,28 @@ export default function PharmaciesPage() {
               </div>
 
               <div className="mt-4 space-y-2 text-sm text-gray-700">
+
                 <p>
                   <span className="font-medium">Address:</span> {pharmacy.address}
                 </p>
+
                 <p>
                   <span className="font-medium">Phone:</span>{" "}
                   <a href={`tel:${pharmacy.phone}`} className="text-blue-600 hover:underline">
                     {pharmacy.phone}
                   </a>
                 </p>
-                <p>
-                  <span className="font-medium">Opening hours:</span> {pharmacy.hours}
-                </p>
+
+                <div>
+                  <p className="font-medium">Opening hours:</p>
+
+                  <ul className="text-sm text-gray-600 mt-1 space-y-1">
+                    {pharmacy.hours.map((h, i) => (
+                        <li key={i}>{h}</li>
+                    ))}
+                  </ul>
+                </div>
+
               </div>
 
               <div className="mt-5 flex flex-wrap gap-3">
