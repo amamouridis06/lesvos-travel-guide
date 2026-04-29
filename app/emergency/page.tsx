@@ -8,41 +8,50 @@ export const metadata = {
 
 const pharmacies = [
   {
-    name: "Central Pharmacy Mytilene",
+    name: "Pharmacy Lampousis",
     area: "Mytilene",
-    address: "21 Ermou Street, Mytilene",
-    phone: "+30 22510 12345",
-    hours: "Mon–Sat: 08:00–21:00",
-    maps: "https://maps.google.com",
-    emergency: true,
+    address: "Aeroporou Gianarelli 28, Mitilini 811 00",
+    phone: "+30 22510 40001",
+    hours: [
+      "Mon,Wed: 08:00–14:00",
+      "Tue,Thur,Fri: 08:00–14:00 & 17:30-20:30",
+      "Sat: 09:30–14:00",
+      "Sun: Closed"
+    ],
+    maps: "https://maps.app.goo.gl/56k9FJ4CgKcX6Qay8",
+    emergency: false,
   },
   {
-    name: "Kalloni Pharmacy",
+    name: "Pharmacy Mariolas",
     area: "Kalloni",
     address: "Kalloni Central Square",
-    phone: "+30 22530 12345",
-    hours: "Mon–Sat: 08:00–20:00",
-    maps: "https://maps.google.com",
+    phone: "+30 22530 22022",
+    hours: [
+      "Mon, Wed: 08:00–14:30",
+      "Tue, Thur, Fri: 08:00–14:00 & 18:00-21:00",
+      "Sat, Sun: Closed"
+    ],
+    maps: "https://maps.app.goo.gl/8ArkLUv2HaAWiexWA",
     emergency: false,
   },
-  {
-    name: "Plomari Pharmacy",
-    area: "Plomari",
-    address: "Main Road, Plomari",
-    phone: "+30 22520 12345",
-    hours: "Mon–Sat: 08:00–20:00",
-    maps: "https://maps.google.com",
-    emergency: false,
-  },
-  {
-    name: "Molyvos Pharmacy",
-    area: "Molyvos",
-    address: "Molyvos Village Center",
-    phone: "+30 22530 67890",
-    hours: "Mon–Sat: 08:00–20:00",
-    maps: "https://maps.google.com",
-    emergency: false,
-  },
+  // {
+  //   name: "Plomari Pharmacy",
+  //   area: "Plomari",
+  //   address: "Main Road, Plomari",
+  //   phone: "+30 22520 12345",
+  //   hours: "Mon–Sat: 08:00–20:00",
+  //   maps: "https://maps.google.com",
+  //   emergency: false,
+  // },
+  // {
+  //   name: "Molyvos Pharmacy",
+  //   area: "Molyvos",
+  //   address: "Molyvos Village Center",
+  //   phone: "+30 22530 67890",
+  //   hours: "Mon–Sat: 08:00–20:00",
+  //   maps: "https://maps.google.com",
+  //   emergency: false,
+  // },
 ];
 
 export default function PharmaciesPage() {
