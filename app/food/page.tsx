@@ -53,13 +53,13 @@ const Bars = [
 ];
 const locProdSup = [
   {
-    title: "Ouzo",
-    description: "Lesvos is famous for its ouzo, one of Greece’s most iconic drinks.",
+    title: "Selachas O.E",
+    description: "Your Local Butcher, Your Daily Market",
   },
-  {
-    title: "Olive Oil & Cheese",
-    description: "High-quality olive oil, feta, and traditional local products.",
-  },
+  // {
+  //   title: "Olive Oil & Cheese",
+  //   description: "High-quality olive oil, feta, and traditional local products.",
+  // },
 ];
 
 export default function FoodPage() {
@@ -74,7 +74,7 @@ export default function FoodPage() {
 
           <div className="relative z-10 text-center px-6">
             <h1 className="text-4xl md:text-5xl font-bold text-white">
-              Food in Lesvos
+              Taste Lesvos: Food, Drinks & Local Spots
             </h1>
             <p className="mt-4 text-lg text-gray-200 max-w-2xl mx-auto">
               Taverns, restaurants, cafés & bars — handpicked places worth visiting.
@@ -91,7 +91,7 @@ export default function FoodPage() {
               { title: "Taverns", href: "#cafeTaverns" },
               { title: "Restaurants", href: "#restaurants" },
               { title: "Bars", href: "#bars" },
-              { title: "Local Products", href: "#locProdSup" },
+              { title: "Local Products & Supermarket", href: "#locProdSup" },
             ].map((cat) => (
                 <a
                     key={cat.title}
