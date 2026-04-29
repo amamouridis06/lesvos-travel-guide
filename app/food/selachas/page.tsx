@@ -12,6 +12,7 @@ import {
     ChevronRight,
     X,
 } from "lucide-react";
+import Link from "next/link";
 
 // ---- Replace with your own images ----
 const HERO =
@@ -94,7 +95,7 @@ export default function SelachasPage() {
                             Selachas
                         </h1>
                         <p className="mt-4 max-w-xl text-base text-white/80 sm:text-lg">
-                            A supermarket with many years of experience that offers everything from local products to the best meats to spend your day with your friends
+                            Your Local Butcher, Your Daily Market
                         </p>
                     </div>
                 </div>
@@ -258,16 +259,12 @@ export default function SelachasPage() {
                         <ul className="mt-4 space-y-3 text-sm">
                             {NEARBY.map((n) => (
                                 <li key={n.label}>
-                                    <a
-                                        href="#"
+                                    <Link
+                                        href={n.href}
                                         className="flex items-center justify-between rounded-xl px-3 py-2 transition-colors hover:bg-stone-100"
                                     >
-                    <span className="flex items-center gap-3">
-                      <span className="text-lg">{n.emoji}</span>
-                      <span className="font-medium">{n.label}</span>
-                    </span>
-                                        <ChevronRight className="h-4 w-4 text-stone-500" />
-                                    </a>
+                                        <span>{n.emoji} {n.label}</span>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
