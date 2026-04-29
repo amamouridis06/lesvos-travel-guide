@@ -264,6 +264,7 @@ export default function SelachasPage() {
                                         className="flex items-center justify-between rounded-xl px-3 py-2 transition-colors hover:bg-stone-100"
                                     >
                                         <span>{n.emoji} {n.label}</span>
+                                        <span className="text-gray-400">→</span>
                                     </Link>
                                 </li>
                             ))}
