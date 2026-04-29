@@ -1,147 +1,103 @@
+
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex flex-col min-h-screen bg-neutral-100 text-neutral-900">
+    <main className="bg-white text-neutral-900">
 
-      {/* ================= HERO ================= */}
-      <section className="relative w-full min-h-[70vh] md:min-h-[85vh] bg-[url('/plomari2.jpg')] bg-cover bg-center">
-        <div className="absolute inset-0 bg-black/50" />
+      {/* HERO */}
+      <section className="relative h-[75vh] w-full">
+        <img
+          src="/plomari2.jpg"
+          className="absolute inset-0 w-full h-full object-cover"
+          alt="Lesvos"
+        />
+        <div className="absolute inset-0 bg-black/30" />
 
-        <div className="relative z-10 h-full flex items-center">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6">
-            <div className="max-w-lg bg-black/50 backdrop-blur-md p-5 sm:p-8 rounded-xl shadow-xl">
+        <div className="relative z-10 h-full flex items-end">
+          <div className="p-5 sm:p-8 text-white max-w-xl">
+            <h1 className="text-3xl sm:text-5xl font-bold leading-tight">
+              Discover Lesvos
+            </h1>
 
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">
-                Discover Lesvos <br /> with the ultimate travel guide
-              </h1>
-
-              <p className="mt-3 sm:mt-4 text-base sm:text-lg text-gray-200">
-                Villages, beaches, and authentic flavors — handpicked places that truly matter
-              </p>
-
-              <Link
-                href="/beaches"
-                className="inline-block mt-5 sm:mt-6 px-5 sm:px-6 py-3 rounded-lg bg-yellow-600 text-white font-semibold hover:bg-yellow-700 transition"
-              >
-                Explore the island
-              </Link>
-
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ================= QUICK CATEGORIES ================= */}
-      <section className="w-full max-w-6xl mx-auto px-4 sm:px-6 py-14 sm:py-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-        {[
-          { title: "Beaches", desc: "The best beaches of the island", img: "/beach.jpg", href: "/beaches" },
-          { title: "Villages", desc: "The most picturesque villages", img: "/village.jpg", href: "/villages" },
-          { title: "Food", desc: "Local cuisine & tavernas", img: "/food.jpg", href: "/food" },
-          { title: "Nature", desc: "Trails & natural landscapes", img: "/nature.jpg", href: "/nature" },
-        ].map((item) => (
-          <Link key={item.title} href={item.href} className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition">
-            <img src={item.img} alt={item.title} className="h-40 w-full object-cover group-hover:scale-105 transition" />
-            <div className="p-4">
-              <h3 className="font-semibold text-lg">{item.title}</h3>
-              <p className="text-sm text-gray-600 mt-1">{item.desc}</p>
-            </div>
-          </Link>
-        ))}
-      </section>
-
-      {/* ================= TRIP PLANNER ================= */}
-      <section className="w-full bg-white py-16 sm:py-24">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-10 sm:gap-16 items-center">
-
-          <div>
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4">
-              Plan your trip
-            </h2>
-
-            <p className="text-gray-600 text-base sm:text-lg mb-6 sm:mb-8 max-w-xl">
-              Tell us where you're staying and how many days you have,
-              and we’ll suggest a realistic itinerary tailored to your time and location.
+            <p className="mt-2 text-sm sm:text-lg text-gray-200">
+              Beaches, villages & authentic food
             </p>
 
             <Link
-              href="/planner"
-              className="inline-block px-6 sm:px-8 py-3 sm:py-4 rounded-xl bg-neutral-900 text-white font-semibold text-base sm:text-lg hover:bg-neutral-800 transition"
+              href="/beaches"
+              className="inline-block mt-4 px-5 py-3 bg-yellow-500 text-black font-semibold rounded-lg"
             >
-              Start planning →
+              Explore
             </Link>
           </div>
-
-          <div className="relative h-64 sm:h-80 rounded-2xl overflow-hidden shadow-xl">
-            <img src="/map-lesvos.jpg" alt="Lesvos map" className="absolute inset-0 w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-black/30" />
-          </div>
-
         </div>
       </section>
 
-      {/* ================= FEATURED DESTINATIONS ================= */}
-      <section className="w-full max-w-6xl mx-auto px-4 sm:px-6 pb-16 sm:pb-24">
-        <h2 className="text-xl sm:text-2xl font-semibold mb-6 sm:mb-8">
-          Top Destinations in Lesvos
-        </h2>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
+      {/* CATEGORIES */}
+      <section className="px-4 py-10">
+        <div className="grid grid-cols-2 gap-4">
           {[
-            { title: "Molyvos", subtitle: "Medieval scenic village", img: "/molivos.jpg", href: "/villages/molivos" },
-            { title: "Vatera", subtitle: "Longest beach on the island", img: "/vatera.jpg", href: "/beaches/vatera" },
-            { title: "Plomari", subtitle: "Ouzo, sea & tradition", img: "/plomari2.jpg", href: "/villages/plomari" },
-          ].map((place) => (
-            <Link key={place.title} href={place.href} className="relative rounded-xl overflow-hidden group block">
-              <img src={place.img} alt={place.title} className="h-56 sm:h-64 w-full object-cover group-hover:scale-105 transition" />
-              <div className="absolute inset-0 bg-black/40 flex flex-col justify-end p-4">
-                <h3 className="text-white text-lg font-semibold">{place.title}</h3>
-                <p className="text-gray-200 text-sm">{place.subtitle}</p>
+            { title: "Beaches", img: "/beach.jpg", href: "/beaches" },
+            { title: "Villages", img: "/village.jpg", href: "/villages" },
+            { title: "Food", img: "/food.jpg", href: "/food" },
+            { title: "Nature", img: "/nature.jpg", href: "/nature" },
+          ].map((item) => (
+            <Link key={item.title} href={item.href} className="block">
+              <div className="relative rounded-xl overflow-hidden">
+                <img src={item.img} className="h-32 w-full object-cover" />
+                <div className="absolute inset-0 bg-black/30 flex items-end p-3">
+                  <h3 className="text-white font-semibold text-sm">
+                    {item.title}
+                  </h3>
+                </div>
               </div>
             </Link>
           ))}
         </div>
       </section>
 
-      {/* ================= TOP HOTELS ================= */}
-      <section className="w-full bg-white py-16 sm:py-24">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <h2 className="text-xl sm:text-2xl font-semibold mb-6 sm:mb-8">Top Hotels</h2>
+      {/* FEATURED */}
+      <section className="px-4 pb-10">
+        <h2 className="text-lg font-semibold mb-4">
+          Top places
+        </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
-            {[
-              { title: "Theofilos Paradise", location: "Mytilene", img: "/theo-entry.jpg", href: "/hotels/theofilos-paradise" },
-            ].map((hotel) => (
-              <Link key={hotel.title} href={hotel.href} className="group block bg-neutral-50 rounded-xl overflow-hidden shadow hover:shadow-xl transition">
-                <img src={hotel.img} alt={hotel.title} className="h-48 sm:h-52 w-full object-cover group-hover:scale-105 transition" />
-                <div className="p-4">
-                  <h3 className="font-semibold text-lg">{hotel.title}</h3>
-                  <p className="text-sm text-gray-500">{hotel.location}</p>
+        <div className="flex gap-4 overflow-x-auto pb-2">
+          {[
+            { title: "Molyvos", img: "/molivos.jpg", href: "/villages/molivos" },
+            { title: "Vatera", img: "/vatera.jpg", href: "/beaches/vatera" },
+            { title: "Plomari", img: "/plomari2.jpg", href: "/villages/plomari" },
+          ].map((place) => (
+            <Link key={place.title} href={place.href} className="min-w-[70%]">
+              <div className="rounded-xl overflow-hidden shadow">
+                <img src={place.img} className="h-40 w-full object-cover" />
+                <div className="p-3">
+                  <h3 className="font-semibold">{place.title}</h3>
                 </div>
-              </Link>
-            ))}
-          </div>
+              </div>
+            </Link>
+          ))}
         </div>
       </section>
 
-      {/* ================= TOP RESTAURANTS ================= */}
-      <section className="w-full py-16 sm:py-24">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <h2 className="text-xl sm:text-2xl font-semibold mb-6 sm:mb-8">Top Restaurants</h2>
+      {/* TRIP PLANNER */}
+      <section className="px-4 pb-12">
+        <div className="bg-neutral-100 rounded-xl p-5">
+          <h2 className="text-lg font-semibold">
+            Plan your trip
+          </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
-            {[
-              { title: "To Limanaki ton Pamfilon", location: "Skala Pamfilon", img: "/limanaki_pamf1.jpg", href: "/food/limanaki_pamfilon" },
-            ].map((place) => (
-              <Link key={place.title} href={place.href} className="group block bg-white rounded-xl overflow-hidden shadow hover:shadow-xl transition">
-                <img src={place.img} alt={place.title} className="h-48 sm:h-52 w-full object-cover group-hover:scale-105 transition" />
-                <div className="p-4">
-                  <h3 className="font-semibold text-lg">{place.title}</h3>
-                  <p className="text-sm text-gray-500">{place.location}</p>
-                </div>
-              </Link>
-            ))}
-          </div>
+          <p className="text-sm text-gray-600 mt-2">
+            Get a custom itinerary based on your stay
+          </p>
+
+          <Link
+            href="/planner"
+            className="inline-block mt-4 px-5 py-3 bg-black text-white rounded-lg text-sm"
+          >
+            Start planning
+          </Link>
         </div>
       </section>
 
