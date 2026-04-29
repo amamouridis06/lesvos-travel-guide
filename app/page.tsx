@@ -18,18 +18,18 @@ export default function Home() {
           <span style={{ fontFamily: "Syne, sans-serif", fontSize: 15, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#fff" }}>
             Lesvos
           </span>
-            <nav style={{ display: "flex", alignItems: "center", gap: 40 }}>
-              {["Beaches", "Villages", "Food", "Nature", "Map"].map((item) => (
-                  <Link key={item} href={`/${item.toLowerCase()}`}
-                        style={{ fontSize: 12, letterSpacing: "0.08em", textTransform: "uppercase", color: "rgba(255,255,255,0.7)", textDecoration: "none" }}>
-                    {item}
-                  </Link>
-              ))}
-            </nav>
-            <Link href="/planner"
-                  style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#fff", color: "#111", fontSize: 11, fontWeight: 500, letterSpacing: "0.08em", textTransform: "uppercase", padding: "12px 20px", borderRadius: 100, textDecoration: "none" }}>
-              Plan trip →
-            </Link>
+            {/*<nav style={{ display: "flex", alignItems: "center", gap: 40 }}>*/}
+            {/*  {["Beaches", "Villages", "Food", "Nature", "Map"].map((item) => (*/}
+            {/*      <Link key={item} href={`/${item.toLowerCase()}`}*/}
+            {/*            style={{ fontSize: 12, letterSpacing: "0.08em", textTransform: "uppercase", color: "rgba(255,255,255,0.7)", textDecoration: "none" }}>*/}
+            {/*        {item}*/}
+            {/*      </Link>*/}
+            {/*  ))}*/}
+            {/*</nav>*/}
+            {/*<Link href="/planner"*/}
+            {/*      style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#fff", color: "#111", fontSize: 11, fontWeight: 500, letterSpacing: "0.08em", textTransform: "uppercase", padding: "12px 20px", borderRadius: 100, textDecoration: "none" }}>*/}
+            {/*  Plan trip →*/}
+            {/*</Link>*/}
           </div>
 
           {/* Hero content */}
@@ -52,9 +52,9 @@ export default function Home() {
               </span>
               </Link>
             </div>
-            <p className="hidden lg:block" style={{ fontSize: 13, color: "rgba(255,255,255,0.5)", lineHeight: 1.6, textAlign: "right", maxWidth: 200 }}>
-              Beaches, villages<br />& authentic food
-            </p>
+            {/*<p className="hidden lg:block" style={{ fontSize: 13, color: "rgba(255,255,255,0.5)", lineHeight: 1.6, textAlign: "right", maxWidth: 200 }}>*/}
+            {/*  Beaches, villages<br />& authentic food*/}
+            {/*</p>*/}
           </div>
         </section>
 
@@ -148,18 +148,18 @@ export default function Home() {
         <Section title="Top restaurants" href="/food">
           <div className="flex lg:hidden" style={{ flexDirection: "column" }}>
             {[
-              { num: "01", name: "", sub: "Seafood · Mytilene", tag: "Restaurant", img: "/rest1.jpg", href: "/restaurants/averof" },
-              { num: "02", name: "Vafios", sub: "Traditional · Vafios", tag: "Restaurant", img: "/rest2.jpg", href: "/restaurants/vafios" },
-              { num: "03", name: "Cavo d'Oro", sub: "Mediterranean · Molyvos", tag: "Restaurant", img: "/rest3.jpg", href: "/restaurants/cavo-doro" },
+              { num: "01", name: "To Limanaki ton Pamfilon", sub: "Delicious dishes · Skala Pamfilon", tag: "Restaurant", img: "/limanaki_pamfilon1.jpg", href: "/restaurants/limanaki_pamfilon" },
+              { num: "02", name: "Tropicana - Platanos", sub: "Beautiful hospitality · Vafios", tag: "Restaurant", img: "/tropicana1.jpg", href: "/restaurants/tropicana" },
+              { num: "03", name: "Tryfon", sub: "Locan dishes · Kalloni", tag: "Tavern", img: "/tryfon6.jpg", href: "/restaurants/tryfon" },
             ].map((p, i, arr) => (
                 <MobileListItem key={p.name} {...p} last={i === arr.length - 1} />
             ))}
           </div>
           <div className="hidden lg:grid" style={{ gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
             {[
-              { num: "01", name: "Averof", sub: "Seafood · Mytilene", tag: "Restaurant", img: "/rest1.jpg", href: "/restaurants/averof" },
-              { num: "02", name: "Vafios", sub: "Traditional · Vafios", tag: "Restaurant", img: "/rest2.jpg", href: "/restaurants/vafios" },
-              { num: "03", name: "Cavo d'Oro", sub: "Mediterranean · Molyvos", tag: "Restaurant", img: "/rest3.jpg", href: "/restaurants/cavo-doro" },
+              { num: "01", name: "To Limanaki ton Pamfilon", sub: "Delicious dishes · Skala Pamfilon", tag: "Restaurant", img: "/limanaki_pamfilon1.jpg", href: "/restaurants/limanaki_pamfilon" },
+              { num: "02", name: "Tropicana - Platanos", sub: "Beautiful hospitality · Vafios", tag: "Restaurant", img: "/tropicana1.jpg", href: "/restaurants/tropicana" },
+              { num: "03", name: "Tryfon", sub: "Locan dishes · Kalloni", tag: "Tavern", img: "/tryfon6.jpg", href: "/restaurants/tryfon" },
             ].map((p) => <DesktopCard key={p.name} {...p} />)}
           </div>
         </Section>
@@ -189,7 +189,7 @@ export default function Home() {
           <div className="lg:flex-row lg:items-center lg:justify-between lg:px-16 lg:py-14"
                style={{ background: "#111", borderRadius: 24, padding: "32px 24px", display: "flex", flexDirection: "column", gap: 24 }}>
             <div>
-              <p style={{ fontSize: 11, letterSpacing: "0.14em", textTransform: "uppercase", color: "rgba(255,255,255,0.35)", margin: "0 0 12px" }}>AI-powered</p>
+              {/*<p style={{ fontSize: 11, letterSpacing: "0.14em", textTransform: "uppercase", color: "rgba(255,255,255,0.35)", margin: "0 0 12px" }}>AI-powered</p>*/}
               <h2 style={{ fontFamily: "Syne, sans-serif", fontSize: "clamp(22px, 4vw, 36px)", fontWeight: 700, color: "#fff", lineHeight: 1.2, margin: "0 0 10px" }}>
                 Plan your perfect trip
               </h2>
