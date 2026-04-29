@@ -23,12 +23,12 @@ const GALLERY = [
     "/sel-freez.jpg",
 ]
 
-// const COCKTAILS = [
-//     { t: "Zombie", d: "rum, passion fruit, pineapple, lime, falernum." },
-//     { t: "Diego", d: "tequila, mango, vanilla, lime, spicy bitters" },
-//     { t: "Hanky panky", d: "Vodka, fresh ginger, cucumber, lime." },
-//     { t: "Pink mule", d: "vodka, strawberry, lime, mint, ginger beer" },
-// ];
+const Products = [
+    { t: "Zombie", d: "rum, passion fruit, pineapple, lime, falernum." },
+    { t: "Diego", d: "tequila, mango, vanilla, lime, spicy bitters" },
+    { t: "Hanky panky", d: "Vodka, fresh ginger, cucumber, lime." },
+    { t: "Pink mule", d: "vodka, strawberry, lime, mint, ginger beer" },
+];
 
 const INFO = [
     { Icon: MapPin, label: "Address", value: "Kalloni 811 07" },
@@ -84,29 +84,17 @@ export default function SelachasPage() {
                 />
                 <div className="absolute inset-0 gradient-hero" />
 
-                <div className="absolute inset-x-0 top-0 z-10 flex items-center justify-between px-6 py-6 sm:px-10">
-                    {/*<span className="font-display text-lg font-semibold text-white">*/}
-                    {/*  Lesvos<span style={{ color: "#e0a052" }}>.</span>Guide*/}
-                    {/*</span>*/}
-                    {/*<nav className="hidden gap-8 text-sm text-white/85 sm:flex">*/}
-                    {/*  <a href="#about" className="hover:text-white">About</a>*/}
-                    {/*  <a href="#gallery" className="hover:text-white">Gallery</a>*/}
-                    {/*  <a href="#visit" className="hover:text-white">Visit</a>*/}
-                    {/*</nav>*/}
-                </div>
-
                 <div className="absolute inset-x-0 bottom-0 z-10 px-6 pb-16 sm:px-10 sm:pb-20">
                     <div className="mx-auto max-w-6xl">
             <span className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] text-white backdrop-blur-md">
               <span className="h-1.5 w-1.5 rounded-full" style={{ background: "#e0a052" }} />
-              South Lesvos · Cocktail Bar
+              Center Lesvos · Supermarket
             </span>
                         <h1 className="font-display mt-5 max-w-3xl text-4xl font-semibold leading-[1.05] text-white sm:text-6xl lg:text-7xl">
-                            Naf's Cocktail Corner
+                            Selachas
                         </h1>
                         <p className="mt-4 max-w-xl text-base text-white/80 sm:text-lg">
-                            A fantastic corner for a sunset cocktail by the Aegean — slow nights,
-                            warm lights, and the sea just steps away.
+                            A supermarket with many years of experience that offers everything from local products to the best meats to spend your day with your friends
                         </p>
                     </div>
                 </div>
@@ -141,7 +129,7 @@ export default function SelachasPage() {
                             Signatures of the house
                         </h2>
                         <div className="mt-8 grid gap-4 sm:grid-cols-2">
-                            {COCKTAILS.map((c) => (
+                            {Products.map((c) => (
                                 <div
                                     key={c.t}
                                     className="rounded-2xl border border-stone-200 bg-white p-5 transition-all hover:-translate-y-0.5 hover:shadow-soft"
