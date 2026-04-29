@@ -15,7 +15,7 @@ import {
 
 // ---- Replace with your own images ----
 const HERO =
-    "/sel-enty.jpg";
+    "/sel-entry.jpg";
 const GALLERY = [
     "/sel-meat1.jpg",
     "/sel-meat2.jpg",
@@ -23,12 +23,12 @@ const GALLERY = [
     "/sel-freez.jpg",
 ]
 
-const COCKTAILS = [
-    { t: "Zombie", d: "rum, passion fruit, pineapple, lime, falernum." },
-    { t: "Diego", d: "tequila, mango, vanilla, lime, spicy bitters" },
-    { t: "Hanky panky", d: "Vodka, fresh ginger, cucumber, lime." },
-    { t: "Pink mule", d: "vodka, strawberry, lime, mint, ginger beer" },
-];
+// const COCKTAILS = [
+//     { t: "Zombie", d: "rum, passion fruit, pineapple, lime, falernum." },
+//     { t: "Diego", d: "tequila, mango, vanilla, lime, spicy bitters" },
+//     { t: "Hanky panky", d: "Vodka, fresh ginger, cucumber, lime." },
+//     { t: "Pink mule", d: "vodka, strawberry, lime, mint, ginger beer" },
+// ];
 
 const INFO = [
     { Icon: MapPin, label: "Address", value: "Kalloni 811 07" },
@@ -39,9 +39,9 @@ const INFO = [
 ];
 
 const NEARBY = [
-    { label: "Agios Isidoros Beach", emoji: "🏖" },
-    { label: "Melinta Village", emoji: "🏘" },
-    { label: "Plomari", emoji: "🍶" },
+        { label: "Skala Kallonis", href: "/villages/skala-kallonis", emoji: "🛖" },
+        { label: "Agia Paraskevi", href: "/villages/agia-paraskevi", emoji: "🛖" },
+        { label: "Mantamados", href: "/villages/mantamados", emoji: "🛖" },
 ];
 
 export default function SelachasPage() {
