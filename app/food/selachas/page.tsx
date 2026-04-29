@@ -34,7 +34,7 @@ const INFO = [
     { Icon: MapPin, label: "Address", value: "Kalloni 811 07" },
     { Icon: Phone, label: "Phone", value: "+30 22530 22814" },
     { Icon: Clock, label: "Hours", value: "8:00 – 21:00" },
-    { label: "Website", value: "www.selaxas.gr/" },
+    { Icon: X,     label: "Website", value: "www.selaxas.gr/" },
     { Icon: Users, label: "Best for", value: "Couples & friends" },
 ];
 
