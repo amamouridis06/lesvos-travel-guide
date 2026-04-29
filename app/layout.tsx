@@ -1,6 +1,10 @@
-import "./globals.css";
+import type { Metadata } from "next";
+import { Syne, Inter } from "next/font/google";
 import NavBar from "@/components/NavBar";
-import Footer from "@/components/Footer";
+import "./globals.css";
+
+const syne = Syne({ subsets: ["latin"], variable: "--font-syne" });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata = {
   title: "Lesvos Travel & Culture Website",
@@ -26,18 +30,16 @@ export const metadata = {
 };
 
 
-export default function RootLayout({
-  children,
-}: {
+
+export default function RootLayout({children, }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className="bg-black text-white">
-        <NavBar />
-        <div className="pt-20">{children}</div>
-        {/*<Footer />*/}
+      <html lang="en" className={`${syne.variable} ${inter.variable}`}>
+      <body className={inter.className}>
+      <NavBar />
+      <div className="pt-20">{children}</div>
       </body>
-    </html>
+      </html>
   );
 }
