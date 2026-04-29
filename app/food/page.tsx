@@ -96,7 +96,7 @@ export default function FoodPage() {
               { title: "Taverns", href: "#cafeTaverns" },
               { title: "Restaurants", href: "#restaurants" },
               { title: "Bars", href: "#bars" },
-              { title: "Local Products & Supermarket", href: "#locProdSup" },
+              { title: "Local Products & Supermarket", href: "#locProd" },
             ].map((cat) => (
                 <a
                     key={cat.title}
@@ -226,13 +226,37 @@ export default function FoodPage() {
 
           {/* Local Products */}
           <div id="locProdSup">
-            <h2 className="text-2xl font-semibold mb-6">Local Products</h2>
+            <h2 className="text-2xl font-semibold mb-6">Local Products & Supermarket</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {locProdSup.map((item) => (
-                  <div key={item.title} className="bg-white rounded-xl shadow p-6">
-                    <h3 className="font-semibold text-lg">{item.title}</h3>
-                    <p className="text-sm mt-2">{item.description}</p>
+                  <div
+                      key={item.title}
+                      className="bg-white rounded-xl shadow p-6 flex gap-4"
+                  >
+                    <div className="w-24 h-24 relative shrink-0">
+                      <Image
+                          src={item.image}
+                          alt={item.alt}
+                          fill
+                          className="object-cover rounded-lg"
+                      />
+                    </div>
+
+                    <div>
+                      <h3 className="font-semibold text-lg">{item.title}</h3>
+
+                      <p className="text-sm text-gray-600">{item.category}</p>
+
+                      <p className="text-sm mt-2">{item.description}</p>
+
+                      <Link
+                          href={item.href}
+                          className="inline-block mt-3 px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition"
+                      >
+                        View details
+                      </Link>
+                    </div>
                   </div>
               ))}
             </div>
