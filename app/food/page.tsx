@@ -54,7 +54,12 @@ const Bars = [
 const locProdSup = [
   {
     title: "Selachas O.E",
-    description: "Your Local Butcher, Your Daily Market",
+    category: "Supermarket",
+    description: "Fresh Meat. Local Heart.",
+    location: "📍Kalloni, Lesvos",
+    image: "/sel-logo.jpg",
+    alt: "Sel",
+    href: "/food/selachas",
   },
   // {
   //   title: "Olive Oil & Cheese",
