@@ -28,7 +28,7 @@ const INFO = [
     { Icon: MapPin, label: "Address", value: "Kalloni 811 07" },
     { Icon: Phone, label: "Phone", value: "+30 22530 22814" },
     { Icon: Clock, label: "Hours", value: "8:00 – 21:00" },
-    { Icon: X,     label: "Website", value: "selaxas.gr/", href:"www.selaxas.gr" },
+    { Icon: X,     label: "Website", value: "selaxas.gr" },
     { Icon: Users, label: "Best for", value: "Couples & friends" },
 ];
 
@@ -236,7 +236,9 @@ export default function SelachasPage() {
                                         className="flex items-center justify-between rounded-xl px-3 py-2 transition-colors hover:bg-stone-100"
                                     >
                                         <span>{n.emoji} {n.label}</span>
-                                        <span className="text-gray-400">→</span>
+                                        <span className="text-gray-400">
+                                            {'>'}
+                                        </span>
                                     </Link>
                                 </li>
                             ))}
