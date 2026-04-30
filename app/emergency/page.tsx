@@ -8,7 +8,7 @@ export const metadata = {
 
 const pharmacies = [
   {
-    name: "Pharmacy Lampousis",
+    name: "Pharmacy Labousis",
     area: "📍Mytilene",
     address: "Aeroporou Gianarelli 28, Mitilini 811 00",
     phone: "+30 22510 40001",

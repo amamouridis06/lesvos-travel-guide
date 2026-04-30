@@ -13,24 +13,6 @@ export default function Home() {
           />
           <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, rgba(0,0,0,0.1), transparent 40%, rgba(0,0,0,0.7))" }} />
 
-          {/* Navbar — hidden on mobile (handled by NavBar component) */}
-          <div className="hidden lg:flex" style={{ position: "absolute", top: 0, left: 0, right: 0, justifyContent: "space-between", alignItems: "center", padding: "24px 64px" }}>
-          <span style={{ fontFamily: "Syne, sans-serif", fontSize: 15, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#fff" }}>
-            Lesvos
-          </span>
-            {/*<nav style={{ display: "flex", alignItems: "center", gap: 40 }}>*/}
-            {/*  {["Beaches", "Villages", "Food", "Nature", "Map"].map((item) => (*/}
-            {/*      <Link key={item} href={`/${item.toLowerCase()}`}*/}
-            {/*            style={{ fontSize: 12, letterSpacing: "0.08em", textTransform: "uppercase", color: "rgba(255,255,255,0.7)", textDecoration: "none" }}>*/}
-            {/*        {item}*/}
-            {/*      </Link>*/}
-            {/*  ))}*/}
-            {/*</nav>*/}
-            {/*<Link href="/planner"*/}
-            {/*      style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#fff", color: "#111", fontSize: 11, fontWeight: 500, letterSpacing: "0.08em", textTransform: "uppercase", padding: "12px 20px", borderRadius: 100, textDecoration: "none" }}>*/}
-            {/*  Plan trip →*/}
-            {/*</Link>*/}
-          </div>
 
           {/* Hero content */}
           <div className="lg:flex-row lg:items-end lg:justify-between lg:px-16 lg:pb-20"
@@ -60,10 +42,23 @@ export default function Home() {
 
         {/* CATEGORIES */}
         <section style={{ padding: "40px 24px 0" }} className="lg:px-16 lg:pt-16">
-          <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", marginBottom: 20 }}>
-            <span style={{ fontFamily: "Syne, sans-serif", fontSize: 18, fontWeight: 600 }}>Categories</span>
-            <span style={{ fontSize: 11, color: "#999", cursor: "pointer" }}>See all</span>
-          </div>
+            <div className="hidden lg:flex items-center justify-center gap-8 py-4 border-b">
+                {[
+                    { label: "All", href: "/" },
+                    { label: "Beaches", href: "/beaches" },
+                    { label: "Villages", href: "/villages" },
+                    { label: "Food", href: "/food" },
+                    { label: "Nature", href: "/nature" },
+                ].map((cat) => (
+                    <Link
+                        key={cat.label}
+                        href={cat.href}
+                        className="text-sm font-medium text-gray-600 hover:text-black transition"
+                    >
+                        {cat.label}
+                    </Link>
+                ))}
+            </div>
 
           {/* Mobile: pill scroll */}
           <div className="flex lg:hidden" style={{ gap: 10, overflowX: "auto", paddingBottom: 2, scrollbarWidth: "none" }}>
