@@ -17,12 +17,14 @@ import {
 const HERO =
    "/naf-chairs.jpeg";
 const GALLERY = [
+  { type: "video", src: "/naf-ep.mp4" },
   { type: "image", src: "/naf1.jpg" },
   { type: "image", src: "/naf2.jpg" },
+  { type: "video", src: "/naf-party.mp4" },
   { type: "image", src: "/naf3.jpg" },
   { type: "image", src: "/naf4.jpg" },
   { type: "image", src: "/naf5.jpg" },
-  { type: "video", src: "/naf-dj.mp4" }
+  { type: "video", src: "/naf-dj.mp4" },
 ]
 
 
