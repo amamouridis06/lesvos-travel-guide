@@ -1,4 +1,4 @@
-
+"use client";
 import { motion } from "framer-motion";
 import { Hammer, Sparkles, Clock, Wrench } from "lucide-react";
 
