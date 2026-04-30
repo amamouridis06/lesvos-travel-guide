@@ -4,9 +4,10 @@ import { useEffect } from "react";
 // ---------- Replace with your own images ----------
 const IMG = {
   hero: "/thanosbed.jpg",
-  bath: "/theo-pool.jpg",
+  bath: "/thanosbath.jpg",
   bed: "/thanosbed2.jpg",
   livingroom: "/thanosliv.jpg",
+  kitchen: "/thanosk.jpg",
 };
 
 // ---------- Hotel data ----------
@@ -21,34 +22,39 @@ const appartment = {
   intro:
       "Comfortable rooms in the heart of the city. A long-standing tradition of hospitality, shaped by generations.",
   body: [
-    "Theofilos Paradise Boutique Hotel is a small «treasure » hospitality in the center of Mytilene. It combines the mansion atmosphere of a historic neoclassical building with the modern comfort of a boutique hotel, offering an authentic experience Lesmon through With a welcoming atmosphere and careful services, it is an ideal choice for those looking for quality, character and genuine Greek The hotel continues to evolve vigorously with the impending expansion and addition of new rooms, strengthening its location as",
-    "Built back in 1912, the 4-star boutique hotel’s main building is a carefully restored traditional mansion. Today it houses the reception hall, lounge with marble fireplace, as well as some of the rooms and suites.",
-    // "The cliffside infinity pool — lit by hand each evening with a hundred candles — is reserved exclusively for guests. The subterranean spa, excavated from the bedrock in 1962, draws on Provençal botanicals and a century-old hammam tradition. And dinner is a single seven-course tasting menu, written each morning by Chef Élise Marchand from the kitchen garden and the morning catch.",
+    "<strong>Accommodation:</strong>Thanos Cozy Apartments in Skala Kallonis offers a sun terrace and free WiFi. Each apartment features air-conditioning, a terrace, and a balcony with sea views.",
+
+    "<strong>Modern Amenities:</strong> Guests enjoy a kitchenette, private bathroom, washing machine, and a work desk. Additional facilities include a paid shuttle service, 24-hour front desk, daily housekeeping, and luggage storage.",
+
+  "<strong>Prime Location:</strong> Skala Kallonis Beach is a 4-minute walk away. Nearby attractions include Agia Paraskevi and Olive Museum, each 10 km from the property. Mytilene International Airport is 46 km distant.",
+
   ],
   highlights: [
-    { label: "Established", value: "1912" },
+    { label: "Wi-Fi", value: "Free" },
     { label: "Parking", value: "Free" },
-    { label: "Rooms", value: "35" },
+    { label: "Appartments", value: "2" },
     // { label: "Restaurant", value: "Michelin-Starred" },
-    { label: "Wellness", value: "Spa & Wellness Centre" },
+    { label: "Location", value: "Top location: Highly rated by recent guests (9.7)" },
   ],
   pros: [
-    "Central location within walking distance of key attractions",
-    "Comfortable rooms with modern amenities",
-    "On-site restaurant and bar",
-    "Friendly, attentive service",
+    "Central location in the heart of the island",
+    "Just steps away from the sea",
+    "Beautiful sea view from the apartment",
+    "Close to shops, restaurants, and local attractions",
+    "Peaceful atmosphere despite central location",
   ],
   knowBefore: [
-    "Check-in time: 12.00PM; Check-out time: 11:00AM",
-    "Located in the city centre — some street noise may be expected",
+    "Check-in time: 15:00 to 23:00; Check-out time: 08:00 to 10:00",
+    "Some street noise may be expected",
     "Valid ID and credit card required at check-in",
   ],
   gallery: [
-    { src: IMG.pool, alt: "Cliffside infinity pool at dusk", caption: "Sun, water, repeat." },
-    { src: IMG.bed, alt: "Plated dish at the restaurant", caption: "Sleep in style, wake refreshed." },
-    { src: IMG.sauna, alt: "Stone soaking tub in the spa", caption: "Heat your body, clear your mind." },
+    { src: IMG.bath, alt: "Where Comfort Meets Clean", caption: "Where Comfort Meets Clean." },
+    { src: IMG.bed, alt: "Where Every Night Feels Better", caption: "Where Every Night Feels Better" },
+    { src: IMG.livingroom, alt: "Your Space, Your Story", caption: "Your Space, Your Story" },
+    { src: IMG.kitchen, alt: "Designed for Delicious Moments", caption: "Designed for Delicious Moments" },
   ],
-  bookUrl: "https://www.booking.com/hotel/gr/theofilos-paradise-boutique.en-gb.html?aid=2428353&label=metagha-link-MRGR-hotel-273019_dev-desktop_los-1_bw-13_dow-Sunday_defdate-1_room-0_gstadt-2_rateid-public_aud-0_gacid-21404703270_mcid-10_ppa-0_clrid-0_ad-1_gstkid-0_checkin-20260510_ppt-_lp-2300_r-12263088559701900561&sid=747f34aafbdfb5cbb28107ae025e80b0&all_sr_blocks=27301905_392699596_2_1_0&checkin=2026-05-10&checkout=2026-05-11&dest_id=273019&dest_type=hotel&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=27301905_392699596_2_1_0&hpos=1&matching_block_id=27301905_392699596_2_1_0&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=27301905_392699596_2_1_0__13100&srepoch=1777297346&srpvid=fb29605d0ced0140&type=total&ucfs=1&",
+  bookUrl: "https://www.booking.com/hotel/gr/thanos-cozy-apartments.en-gb.html?aid=397594&label=gog235jc-10CAEoggI46AdIM1gDaFyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AuPcyc8GwAIB0gIkNjVjMzhiNTEtNmU0My00MjRjLThiMDItZTYwMGRlZTcyNTgx2AIB4AIB&sid=747f34aafbdfb5cbb28107ae025e80b0&dest_id=14571543&dest_type=hotel&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1777533098&srpvid=cc27924072e3031b&type=total&ucfs=1&",
 };
 
 // ---------- Scoped styles (design tokens + animations) ----------
@@ -129,7 +135,7 @@ const STYLES = `
   html { scroll-behavior: smooth; }
 `;
 
-export default function TheofilosParadise() {
+export default function ThanosCozy() {
   // Inject scoped styles once on mount
   useEffect(() => {
     const id = "maison-solene-styles";
@@ -223,13 +229,6 @@ export default function TheofilosParadise() {
 
         {/* Body */}
         <section className="relative px-6 py-24 md:px-12 md:py-32">
-          <div
-              className="ms-display pointer-events-none absolute left-6 top-12 select-none text-[12rem] leading-none md:left-12 md:text-[18rem]"
-              style={{ color: "color-mix(in oklab, var(--ms-gold) 10%, transparent)" }}
-          >
-            "
-          </div>
-
           <div className="relative mx-auto grid max-w-6xl gap-16 md:grid-cols-12 md:gap-20">
             <div className="md:col-span-7">
               <div className="flex items-center gap-4">
@@ -255,7 +254,7 @@ export default function TheofilosParadise() {
                   style={{ color: "var(--ms-muted)" }}
               >
                 <span className="ms-hairline" />
-                <span>Theofilos Paradise Boutique Hotel</span>
+                <span>Thanos Cozy Appartments</span>
               </div>
               {/* Contact */}
               <section className="relative px-6 py-24 md:px-12 md:py-32">
@@ -274,9 +273,9 @@ export default function TheofilosParadise() {
                   </p>
 
                   <div className="mt-10 space-y-4 text-sm" style={{ color: "var(--ms-muted)" }}>
-                    <p><span className="text-[color:var(--ms-fg)]"><strong>Phone</strong>:</span> +30 22510 43300</p>
-                    <p><span className="text-[color:var(--ms-fg)]"><strong>Email</strong>:</span> info@theofilosparadise.gr</p>
-                    <p><span className="text-[color:var(--ms-fg)]"><strong>Address</strong></span> Skra 7, Mytilene 81100, Lesvos, Greece</p>
+                    <p><span className="text-[color:var(--ms-fg)]"><strong>Phone</strong>:</span> +30 6974603592</p>
+                    <p><span className="text-[color:var(--ms-fg)]"><strong>Email</strong>:</span> tcanancy@gmail.com</p>
+                    <p><span className="text-[color:var(--ms-fg)]"><strong>Address</strong></span> Skala Kallonis 811 07, Lesvos, Greece</p>
                   </div>
                 </div>
               </section>
