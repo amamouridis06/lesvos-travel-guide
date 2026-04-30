@@ -174,7 +174,7 @@ export default function ThanosCozy() {
                 "{appartment.tagline}"
               </p>
               <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-[10px] uppercase tracking-[0.3em] text-white/70">
-                <span>Est. <span className="ms-serif-num text-base text-[color:var(--ms-gold-soft)] not-italic">{appartment.established}</span></span>
+                {/*<span>Est. <span className="ms-serif-num text-base text-[color:var(--ms-gold-soft)] not-italic">{appartment.established}</span></span>*/}
                 <span className="hidden h-3 w-px bg-white/30 md:block" />
                 <span><span className="ms-serif-num text-base text-[color:var(--ms-gold-soft)]">{appartment.appartments}</span> Appartments</span>
                 <span className="hidden h-3 w-px bg-white/30 md:block" />
