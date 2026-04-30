@@ -67,7 +67,7 @@ export default function Home() {
               { label: "Beaches", href: "/beaches" },
               { label: "Villages", href: "/villages" },
               { label: "Food", href: "/food" },
-              { label: "Nature", href: "/updates/under-construction" },
+              { label: "Nature", href: "/nature" },
             ].map((cat) => (
                 <Link key={cat.label} href={cat.href}
                       style={{ flexShrink: 0, padding: "9px 16px", borderRadius: 100, border: `1px solid ${cat.active ? "#111" : "#e8e8e8"}`, background: cat.active ? "#111" : "#fff", color: cat.active ? "#fff" : "#444", fontSize: 12, whiteSpace: "nowrap", textDecoration: "none" }}>
@@ -102,7 +102,7 @@ export default function Home() {
           {/* Mobile: list */}
           <div className="flex lg:hidden" style={{ flexDirection: "column" }}>
             {[
-              { num: "01", name: "Molyvos", sub: "Medieval village · North", tag: "Village", img: "/molivos.jpg", href: "/villages/molivos" },
+              { num: "01", name: "Molyvos", sub: "Medieval village · North", tag: "Village", img: "/molivos.jpg", href: "/updates/under-constructions" },
               { num: "02", name: "Vatera", sub: "Blue flag beach · South", tag: "Beach", img: "/vatera.jpg", href: "/beaches/vatera" },
               { num: "03", name: "Plomari", sub: "Ouzo capital · South", tag: "Village", img: "/plomari2.jpg", href: "/villages/plomari" },
             ].map((p, i, arr) => (
