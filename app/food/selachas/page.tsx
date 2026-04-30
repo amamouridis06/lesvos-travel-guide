@@ -29,7 +29,8 @@ const INFO = [
     { Icon: Phone, label: "Phone", value: "+30 22530 22814" },
     { Icon: Clock, label: "Hours", value: "8:00 – 21:00" },
     { Icon: X,     label: "Website", value: "selaxas.gr" },
-    { Icon: Users, label: "Best for", value: "Couples & friends" },
+    { Icon: X,     label: "Instagram", value: "selachas_sa" },
+    { Icon: Users, label: "Best for", value: "All people" },
 ];
 
 const NEARBY = [
