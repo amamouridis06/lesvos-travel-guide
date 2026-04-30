@@ -102,7 +102,7 @@ export default function Home() {
           {/* Mobile: list */}
           <div className="flex lg:hidden" style={{ flexDirection: "column" }}>
             {[
-              { num: "01", name: "Molyvos", sub: "Medieval village · North", tag: "Village", img: "/molivos.jpg", href: "/updates/under-constructions" },
+              { num: "01", name: "Molyvos", sub: "Medieval village · North", tag: "Village", img: "/molivos.jpg", href: "/villages/molivos" },
               { num: "02", name: "Vatera", sub: "Blue flag beach · South", tag: "Beach", img: "/vatera.jpg", href: "/beaches/vatera" },
               { num: "03", name: "Plomari", sub: "Ouzo capital · South", tag: "Village", img: "/plomari2.jpg", href: "/villages/plomari" },
             ].map((p, i, arr) => (
@@ -112,7 +112,7 @@ export default function Home() {
           {/* Desktop: cards */}
           <div className="hidden lg:grid" style={{ gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
             {[
-              { num: "01", name: "Molyvos", sub: "Medieval village · North", tag: "Village", img: "/molivos.jpg", href: "/villages/molivos" },
+              { num: "01", name: "Molyvos", sub: "Medieval village · North", tag: "Village", img: "/molivos.jpg", href: "/under-construction" },
               { num: "02", name: "Vatera", sub: "Blue flag beach · South", tag: "Beach", img: "/vatera.jpg", href: "/beaches/vatera" },
               { num: "03", name: "Plomari", sub: "Ouzo capital · South", tag: "Village", img: "/plomari2.jpg", href: "/villages/plomari" },
             ].map((p) => <DesktopCard key={p.name} {...p} />)}
