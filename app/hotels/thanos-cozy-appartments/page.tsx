@@ -15,9 +15,8 @@ const appartment = {
   name: "Thanos Cozy Apartments",
   region: "Kalloni Lesvos Greece",
   country: "Greece",
-  established: "1912",
-  rooms: "",
-  fromPrice: "€100",
+  appartments: "2",
+  fromPrice: "€82",
   tagline: "Where the sea meets stillness.",
   intro:
       "Comfortable rooms in the heart of the city. A long-standing tradition of hospitality, shaped by generations.",
@@ -177,7 +176,7 @@ export default function ThanosCozy() {
               <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-[10px] uppercase tracking-[0.3em] text-white/70">
                 <span>Est. <span className="ms-serif-num text-base text-[color:var(--ms-gold-soft)] not-italic">{appartment.established}</span></span>
                 <span className="hidden h-3 w-px bg-white/30 md:block" />
-                <span><span className="ms-serif-num text-base text-[color:var(--ms-gold-soft)]">{appartment.rooms}</span> Suites</span>
+                <span><span className="ms-serif-num text-base text-[color:var(--ms-gold-soft)]">{appartment.appartments}</span> Appartments</span>
                 <span className="hidden h-3 w-px bg-white/30 md:block" />
                 <span>From <span className="ms-serif-num text-base text-[color:var(--ms-gold-soft)] not-italic">{appartment.fromPrice}</span></span>
               </div>
@@ -443,7 +442,7 @@ export default function ThanosCozy() {
               Stay at <span className="italic" style={{ color: "var(--ms-gold-soft)" }}>{appartment.name}</span>.
             </h2>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-white/70 md:text-lg">
-              Rooms are limited and the season fills early. We recommend booking at least eight weeks ahead.
+              Rooms are limited and the season fills early. We recommend booking at least four weeks ahead.
             </p>
             <a
                 href={appartment.bookUrl}

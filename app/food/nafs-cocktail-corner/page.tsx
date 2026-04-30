@@ -17,12 +17,14 @@ import {
 const HERO =
    "/naf-chairs.jpeg";
 const GALLERY = [
-  "/naf1.jpg",
-  "/naf2.jpg",
-  "/naf3.jpg",
-  "/naf4.jpg",
-  "/naf5.jpg",
+  { type: "image", src: "/naf1.jpg" },
+  { type: "image", src: "/naf2.jpg" },
+  { type: "image", src: "/naf3.jpg" },
+  { type: "image", src: "/naf4.jpg" },
+  { type: "image", src: "/naf5.jpg" },
+  { type: "video", src: "/naf-dj.mp4" }
 ]
+
 
 const COCKTAILS = [
   { t: "Zombie", d: "rum, passion fruit, pineapple, lime, falernum." },
@@ -156,79 +158,132 @@ export default function CocktailBarPage() {
 
             {/* GALLERY */}
             <div id="gallery">
+              {/* HEADER */}
               <p className="text-xs font-semibold uppercase tracking-[0.25em]" style={{ color: "#b85c3a" }}>
                 Atmosphere
               </p>
-              <h2 className="font-display mt-3 text-3xl font-semibold sm:text-4xl">
+
+              <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
                 A look inside
               </h2>
 
+              {/* MAIN SLIDER */}
               <div
-                  className="group relative mt-8 aspect-[16/10] w-full cursor-zoom-in overflow-hidden rounded-3xl shadow-elevated"
+                  className="group relative mt-8 aspect-[16/10] w-full cursor-zoom-in overflow-hidden rounded-3xl shadow-lg"
                   onMouseEnter={() => setIsHovered(true)}
                   onMouseLeave={() => setIsHovered(false)}
                   onClick={() => setIsOpen(true)}
               >
-                {GALLERY.map((src, i) => (
-                    <img
-                        key={src}
-                        src={src}
-                        alt=""
-                        loading="lazy"
-                        className={`absolute inset-0 h-full w-full object-cover transition-all duration-1000 ${
-                            i === index ? "scale-100 opacity-100" : "scale-105 opacity-0"
-                        }`}
-                    />
-                ))}
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+                {GALLERY.map((item, i) =>
+                    item.type === "image" ? (
+                        <img
+                            key={item.src}
+                            src={item.src}
+                            alt=""
+                            className={`absolute inset-0 h-full w-full object-cover transition-all duration-700 ${
+                                i === index ? "opacity-100 scale-100" : "opacity-0 scale-105"
+                            }`}
+                        />
+                    ) : (
+                        <video
+                            key={item.src}
+                            className={`absolute inset-0 h-full w-full object-cover transition-all duration-700 ${
+                                i === index ? "opacity-100" : "opacity-0"
+                            }`}
+                            autoPlay
+                            muted
+                            loop
+                        >
+                          <source src={item.src} type="video/mp4" />
+                        </video>
+                    )
+                )}
 
+                {/* overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+
+                {/* arrows */}
                 <button
                     onClick={(e) => { e.stopPropagation(); prev(); }}
-                    aria-label="Previous"
-                    className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-white/90 p-2.5 text-stone-900 opacity-0 shadow-md backdrop-blur transition-opacity hover:bg-white group-hover:opacity-100"
+                    className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-white/90 p-2 opacity-0 group-hover:opacity-100"
                 >
-                  <ChevronLeft className="h-5 w-5" />
-                </button>
-                <button
-                    onClick={(e) => { e.stopPropagation(); next(); }}
-                    aria-label="Next"
-                    className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-white/90 p-2.5 text-stone-900 opacity-0 shadow-md backdrop-blur transition-opacity hover:bg-white group-hover:opacity-100"
-                >
-                  <ChevronRight className="h-5 w-5" />
+                  <ChevronLeft />
                 </button>
 
-                <div className="absolute bottom-5 left-1/2 flex -translate-x-1/2 gap-1.5">
+                <button
+                    onClick={(e) => { e.stopPropagation(); next(); }}
+                    className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-white/90 p-2 opacity-0 group-hover:opacity-100"
+                >
+                  <ChevronRight />
+                </button>
+
+                {/* dots */}
+                <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2">
                   {GALLERY.map((_, i) => (
                       <button
                           key={i}
                           onClick={(e) => { e.stopPropagation(); setIndex(i); }}
-                          aria-label={`Slide ${i + 1}`}
-                          className={`h-1.5 rounded-full bg-white transition-all ${
-                              i === index ? "w-8 opacity-100" : "w-1.5 opacity-50"
+                          className={`h-2 rounded-full bg-white ${
+                              i === index ? "w-6" : "w-2 opacity-50"
                           }`}
                       />
                   ))}
                 </div>
               </div>
 
+              {/* THUMBNAILS */}
               <div className="mt-4 grid grid-cols-4 gap-3">
-                {GALLERY.map((img, i) => (
+                {GALLERY.map((item, i) => (
                     <button
-                        key={img}
+                        key={item.src}
                         onClick={() => setIndex(i)}
-                        className={`relative aspect-[4/3] overflow-hidden rounded-xl transition-all ${
-                            i === index
-                                ? "ring-2 ring-offset-2"
-                                : "opacity-70 hover:opacity-100"
+                        className={`relative aspect-[4/3] overflow-hidden rounded-xl ${
+                            i === index ? "ring-2 ring-offset-2" : "opacity-70 hover:opacity-100"
                         }`}
-                        style={i === index ? { boxShadow: "0 0 0 2px #b85c3a" } : undefined}
                     >
-                      <img src={img} alt="" loading="lazy" className="h-full w-full object-cover" />
+                      {item.type === "image" ? (
+                          <img src={item.src} className="h-full w-full object-cover" />
+                      ) : (
+                          <div className="flex h-full w-full items-center justify-center bg-black text-white text-xs">
+                            ▶
+                          </div>
+                      )}
                     </button>
                 ))}
               </div>
+
+              {/* MODAL */}
+              {isOpen && (
+                  <div
+                      className="fixed inset-0 z-50 flex items-center justify-center bg-black/90"
+                      onClick={() => setIsOpen(false)}
+                  >
+                    <button
+                        onClick={(e) => { e.stopPropagation(); prev(); }}
+                        className="absolute left-6 text-white"
+                    >
+                      <ChevronLeft size={40} />
+                    </button>
+
+                    {GALLERY[index].type === "image" ? (
+                        <img src={GALLERY[index].src} className="max-h-[90%] max-w-[90%]" />
+                    ) : (
+                        <video controls autoPlay className="max-h-[90%] max-w-[90%]">
+                          <source src={GALLERY[index].src} type="video/mp4" />
+                        </video>
+                    )}
+
+                    <button
+                        onClick={(e) => { e.stopPropagation(); next(); }}
+                        className="absolute right-6 text-white"
+                    >
+                      <ChevronRight size={40} />
+                    </button>
+                  </div>
+              )}
             </div>
-          </div>
+            </div>
+
 
           {/* SIDEBAR */}
           <aside id="visit" className="space-y-6 lg:sticky lg:top-8 lg:self-start">
