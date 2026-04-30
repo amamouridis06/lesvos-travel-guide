@@ -10,7 +10,7 @@ const IMG = {
   kitchen: "/thanosk.jpg",
 };
 
-// ---------- Hotel data ----------
+// ---------- Appartment data ----------
 const appartment = {
   name: "Thanos Cozy Apartments",
   region: "Kalloni Lesvos Greece",
@@ -149,21 +149,6 @@ export default function ThanosCozy() {
 
   return (
       <div className="ms-root min-h-screen">
-        {/* Top bar */}
-        {/*<header className="absolute left-0 right-0 top-0 z-30">*/}
-        {/*    <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 md:px-12">*/}
-        {/*        <a href="#" className="ms-display text-xl text-[color:var(--ms-bg)] md:text-2xl">*/}
-        {/*            The Quiet <span className="italic text-[color:var(--ms-gold-soft)]">Atlas</span>*/}
-        {/*        </a>*/}
-        {/*        <a*/}
-        {/*            href="#"*/}
-        {/*            className="text-[10px] uppercase tracking-[0.3em] text-white/80 underline-offset-8 hover:text-white hover:underline md:text-xs"*/}
-        {/*        >*/}
-        {/*            ← All hotels*/}
-        {/*        </a>*/}
-        {/*    </div>*/}
-        {/*</header>*/}
-
         {/* Hero */}
         <section className="relative min-h-[85vh] md:h-[92svh] w-full overflow-hidden">
           <img
@@ -455,7 +440,7 @@ export default function ThanosCozy() {
           <div className="relative mx-auto flex max-w-5xl flex-col items-center text-center">
             <p className="ms-eyebrow" style={{ color: "var(--ms-gold-soft)" }}>Ready when you are</p>
             <h2 className="ms-display ms-balance mt-6 text-4xl leading-[1.05] md:text-7xl">
-              Stay at <span className="italic" style={{ color: "var(--ms-gold-soft)" }}>{hotel.name}</span>.
+              Stay at <span className="italic" style={{ color: "var(--ms-gold-soft)" }}>{appartment.name}</span>.
             </h2>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-white/70 md:text-lg">
               Rooms are limited and the season fills early. We recommend booking at least eight weeks ahead.

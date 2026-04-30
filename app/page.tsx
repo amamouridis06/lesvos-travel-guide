@@ -143,7 +143,7 @@ export default function Home() {
         <Section title="Top restaurants" href="/food#cafeTaverns">
           <div className="flex lg:hidden" style={{ flexDirection: "column" }}>
             {[
-              { num: "01", name: "To Limanaki ton Pamfilon", sub: "Delicious dishes · Skala Pamfilon", tag: "Restaurant", img: "/limanaki_pamfilon1.jpg", href: "/restaurants/limanaki_pamfilon" },
+              { num: "01", name: "To Limanaki ton Pamfilon", sub: "Delicious dishes · Skala Pamfilon", tag: "Restaurant", img: "/food1lim.jpg", href: "/restaurants/limanaki_pamfilon" },
               { num: "02", name: "Tropicana - Platanos", sub: "Beautiful hospitality · Vafios", tag: "Restaurant", img: "/tropicana1.jpg", href: "/restaurants/tropicana" },
               { num: "03", name: "Tryfon", sub: "Locan dishes · Kalloni", tag: "Tavern", img: "/tryfon6.jpg", href: "/restaurants/tryfon" },
             ].map((p, i, arr) => (
