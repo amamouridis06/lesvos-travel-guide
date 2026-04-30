@@ -1,194 +1,346 @@
 "use client";
 
+import Link from "next/link";
 import { useMemo, useState } from "react";
 
 const itineraries = {
   molivos: {
     label: "Molyvos",
-    description: "Charming north base with views.",
-    highlights: [
-      "Molyvos Castle",
-      "Petra village",
-      "Anaxos beach",
-      "Eftalou hot springs (nearby)",
+    description:
+        "Perfect base for exploring the north: traditional villages, scenic beaches, and sunset views.",
+    nearby: [
+      {
+        place: "Molyvos",
+        area: "North Lesvos",
+        see: ["Molyvos Castle", "Stone alleys", "Harbor sunset"],
+        eat: ["Seafood by the port", "Traditional meze tavern"],
+        tip: "Best in the evening when the village glows with lights.",
+      },
+      {
+        place: "Petra",
+        area: "North Lesvos",
+        see: ["Panagia Church (steps view)", "Beach", "Village square"],
+        eat: ["Seafront cafés", "Local bakeries"],
+        tip: "Climb the church early to avoid heat.",
+      },
+      {
+        place: "Anaxos",
+        area: "North Lesvos",
+        see: ["Sandy beach", "Relaxed promenade"],
+        eat: ["Beach bars", "Casual tavernas"],
+        tip: "Ideal for a slow beach day.",
+      },
+      {
+        place: "Eftalou",
+        area: "Near Molyvos",
+        see: ["Hot springs", "Rocky beach"],
+        eat: ["Simple seaside taverna"],
+        tip: "Bring water shoes for the stones.",
+      },
     ],
-    hotSprings: [
-      { name: "Eftalou Hot Springs", note: "5 min from Molyvos" },
+    extended: [
+      {
+        place: "Sigri",
+        area: "West Lesvos",
+        see: ["Petrified Forest", "Natural History Museum"],
+        eat: ["Fresh fish taverns"],
+        tip: "Feels like a different island—worth the drive.",
+      },
+      {
+        place: "Agiasos",
+        area: "Central Lesvos",
+        see: ["Traditional village", "Local crafts", "Panagia Church"],
+        eat: ["Mountain tavernas"],
+        tip: "Cooler climate—great midday escape.",
+      },
+      {
+        place: "Skala Kallonis",
+        area: "Central Lesvos",
+        see: ["Wetlands", "Salt pans (birdwatching)"],
+        eat: ["Famous sardine taverns"],
+        tip: "Best for food lovers.",
+      },
     ],
   },
+
   plomari: {
     label: "Plomari",
-    description: "Ouzo, beaches, and local life.",
-    highlights: [
-      "Ouzo Museum",
-      "Agios Isidoros beach",
-      "Melinda beach",
+    description:
+        "Best for ouzo culture, beaches, and authentic seaside life in the south.",
+    nearby: [
+      {
+        place: "Plomari",
+        area: "South Lesvos",
+        see: ["Ouzo Museum", "Harbor", "Old mansions"],
+        eat: ["Ouzeri with meze", "Seafood taverns"],
+        tip: "Try multiple small dishes with ouzo.",
+      },
+      {
+        place: "Agios Isidoros",
+        area: "South Lesvos",
+        see: ["Organized beach", "Clear waters"],
+        eat: ["Beach bars", "Fish taverns"],
+        tip: "One of the cleanest beaches on the island.",
+      },
+      {
+        place: "Melinda",
+        area: "Near Plomari",
+        see: ["Quiet beach", "Relaxed vibe"],
+        eat: ["Seaside tavern"],
+        tip: "Perfect for unplugging.",
+      },
     ],
-    hotSprings: [
-      { name: "Gera Thermal Baths", note: "40 min drive" },
+    extended: [
+      {
+        place: "Vatera",
+        area: "South Lesvos",
+        see: ["Endless sandy beach"],
+        eat: ["Beach tavernas"],
+        tip: "Great for a full beach day.",
+      },
+      {
+        place: "Agiasos",
+        area: "Central Lesvos",
+        see: ["Mountain village", "Local shops"],
+        eat: ["Traditional food"],
+        tip: "Nice contrast to the coast.",
+      },
     ],
   },
+
   mytilini: {
     label: "Mytilene",
-    description: "City vibes and culture.",
-    highlights: [
-      "Mytilene Castle",
-      "Ermou street",
-      "Therma hot springs",
+    description:
+        "The island’s capital—ideal for culture, nightlife, and easy access everywhere.",
+    nearby: [
+      {
+        place: "Mytilene Town",
+        area: "East Lesvos",
+        see: ["Castle", "Ermou street", "Museums", "Port"],
+        eat: ["Modern restaurants", "Meze spots", "Cafés"],
+        tip: "Best explored afternoon into night.",
+      },
+      {
+        place: "Therma",
+        area: "Near Mytilene",
+        see: ["Hot springs", "Seaside road"],
+        eat: ["Simple tavern"],
+        tip: "Relaxing short escape from the city.",
+      },
+      {
+        place: "Moria / Panagiouda",
+        area: "Near Mytilene",
+        see: ["Roman aqueduct", "Village life"],
+        eat: ["Local taverns"],
+        tip: "Less touristy, more authentic.",
+      },
     ],
-    hotSprings: [
-      { name: "Therma Hot Springs", note: "10 min from city" },
+    extended: [
+      {
+        place: "Plomari",
+        area: "South Lesvos",
+        see: ["Ouzo culture", "Harbor"],
+        eat: ["Ouzeri"],
+        tip: "Perfect day trip.",
+      },
+      {
+        place: "Molyvos",
+        area: "North Lesvos",
+        see: ["Castle village", "Sunsets"],
+        eat: ["Romantic dinners"],
+        tip: "Long drive but worth it.",
+      },
     ],
   },
+
   kalloni: {
     label: "Skala Kallonis",
-    description: "Central food hub.",
-    highlights: [
-      "Salt pans (flamingos)",
-      "Sardine taverns",
+    description:
+        "Great central base—perfect for exploring the whole island and amazing food.",
+    nearby: [
+      {
+        place: "Skala Kallonis",
+        area: "Central Lesvos",
+        see: ["Wetlands", "Beach"],
+        eat: ["Sardine taverns"],
+        tip: "Famous for the best sardines in Greece.",
+      },
+      {
+        place: "Kalloni Salt Pans",
+        area: "Central Lesvos",
+        see: ["Flamingos", "Birdwatching"],
+        eat: ["Local taverns nearby"],
+        tip: "Go early morning.",
+      },
     ],
-    hotSprings: [
-      { name: "Polichnitos Hot Springs", note: "20–25 min drive" },
+    extended: [
+      {
+        place: "Sigri",
+        area: "West Lesvos",
+        see: ["Petrified Forest"],
+        eat: ["Fish taverns"],
+        tip: "Unique landscape.",
+      },
+      {
+        place: "Plomari",
+        area: "South Lesvos",
+        see: ["Ouzo culture"],
+        eat: ["Ouzeri"],
+        tip: "Food-focused day trip.",
+      },
     ],
   },
+
   sigri: {
     label: "Sigri",
-    description: "Wild and remote.",
-    highlights: [
-      "Petrified Forest",
-      "Sigri village",
+    description:
+        "Remote, wild, and unique—perfect for nature lovers and quiet travel.",
+    nearby: [
+      {
+        place: "Sigri Village",
+        area: "West Lesvos",
+        see: ["Castle", "Port", "Sunset"],
+        eat: ["Seafood taverns"],
+        tip: "Very peaceful compared to the rest of the island.",
+      },
+      {
+        place: "Petrified Forest",
+        area: "West Lesvos",
+        see: ["Fossilized trees", "Geopark"],
+        eat: ["Café at museum"],
+        tip: "UNESCO-level natural site.",
+      },
     ],
-    hotSprings: [
-      { name: "Polichnitos Hot Springs", note: "1h 15min drive" },
+    extended: [
+      {
+        place: "Eressos",
+        area: "West Lesvos",
+        see: ["Beach", "Alternative vibe"],
+        eat: ["Vegan cafés", "Beach bars"],
+        tip: "Very different atmosphere.",
+      },
     ],
   },
+} as const;
+
+type LocationKey = keyof typeof itineraries;
+
+type DayPlan = {
+  day: number;
+  place: string;
+  area: string;
+  see: readonly string[];
+  eat: readonly string[];
+  tip: string;
 };
 
 export default function PlannerPage() {
-  const [location, setLocation] = useState("");
-  const [days, setDays] = useState(3);
+  const [location, setLocation] = useState<LocationKey | "">("");
+  const [days, setDays] = useState<number>(3);
 
-  const plan = useMemo(() => {
+  const selectedLocation = location ? itineraries[location] : null;
+
+  const plan = useMemo<DayPlan[]>(() => {
     if (!location) return [];
+
+    const base = itineraries[location];
+    const pool = days <= 3 ? base.nearby : [...base.nearby, ...base.extended];
+
     return Array.from({ length: days }, (_, i) => ({
       day: i + 1,
-      title: "Explore & Relax",
-      desc: "Beach, food, and local exploration.",
+      ...pool[i % pool.length],
     }));
   }, [location, days]);
 
   return (
-      <main className="min-h-screen bg-gradient-to-b from-slate-950 to-slate-900 text-white">
-        {/* HERO */}
-        <section className="max-w-6xl mx-auto px-6 py-20">
-          <h1 className="text-5xl font-bold leading-tight">
-            Plan your perfect Lesvos trip
-          </h1>
-          <p className="mt-4 text-white/70 text-lg max-w-2xl">
-            Build a personalized itinerary in seconds. Choose your base and days.
+      <main className="min-h-screen bg-slate-50 text-slate-900">
+        {/* HEADER */}
+        <section className="bg-slate-950 text-white py-20 text-center">
+          <h1 className="text-4xl font-bold">Plan your perfect trip to Lesvos</h1>
+          <p className="mt-4 text-lg text-white/70">
+            Choose your base and duration to generate a smart itinerary.
           </p>
         </section>
 
         {/* CONTROLS */}
-        <section className="max-w-4xl mx-auto px-6">
-          <div className="bg-white/5 backdrop-blur rounded-3xl p-6 border border-white/10 shadow-xl">
-            <div className="grid gap-6 md:grid-cols-2">
-              <div>
-                <label className="block mb-2 text-sm text-white/70">
-                  Where will you stay?
-                </label>
-                <select
-                    value={location}
-                    onChange={(e) => setLocation(e.target.value)}
-                    className="w-full p-3 rounded-xl bg-slate-800 border border-white/10"
-                >
-                  <option value="">Choose location</option>
-                  {Object.entries(itineraries).map(([key, val]) => (
-                      <option key={key} value={key}>
-                        {val.label}
-                      </option>
-                  ))}
-                </select>
-              </div>
+        <section className="max-w-4xl mx-auto p-6">
+          <label className="block mb-2 font-semibold">
+            Where will you stay?
+          </label>
+          <select
+              value={location}
+              onChange={(e) => setLocation(e.target.value as LocationKey)}
+              className="w-full p-3 border rounded-xl"
+          >
+            <option value="">Choose region</option>
+            <option value="molivos">Molyvos</option>
+            <option value="plomari">Plomari</option>
+            <option value="mytilini">Mytilene</option>
+            <option value="kalloni">Skala Kallonis</option>
+            <option value="sigri">Sigri</option>
+          </select>
 
-              <div>
-                <label className="block mb-2 text-sm text-white/70">
-                  Days: {days}
-                </label>
-                <input
-                    type="range"
-                    min="1"
-                    max="10"
-                    value={days}
-                    onChange={(e) => setDays(Number(e.target.value))}
-                    className="w-full"
-                />
-              </div>
-            </div>
+          <div className="mt-6">
+            <label className="block font-semibold">
+              How many days will you stay?
+            </label>
+            <input
+                type="range"
+                min="1"
+                max="10"
+                value={days}
+                onChange={(e) => setDays(Number(e.target.value))}
+                className="w-full mt-2"
+            />
+            <p className="mt-2">{days} days</p>
           </div>
         </section>
 
         {/* RESULTS */}
-        <section className="max-w-5xl mx-auto px-6 py-16">
-          {location ? (
-              <div className="space-y-6">
-                <h2 className="text-3xl font-bold">
-                  Your itinerary ({days} days)
-                </h2>
+        {location && (
+            <section className="max-w-5xl mx-auto p-6 space-y-6">
+              <h2 className="text-2xl font-bold">
+                Suggested itinerary for {selectedLocation?.label}
+              </h2>
 
-                {plan.map((day) => (
-                    <div
-                        key={day.day}
-                        className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition"
-                    >
-                      <div className="flex justify-between items-center">
-                        <h3 className="text-xl font-semibold">Day {day.day}</h3>
-                        <span className="text-xs bg-white/10 px-3 py-1 rounded-full">
-                    {itineraries[location].label}
-                  </span>
-                      </div>
+              {plan.map((day) => (
+                  <div key={day.day} className="border p-4 rounded-xl bg-white">
+                    <h3 className="font-bold text-lg">
+                      Day {day.day}: {day.place}
+                    </h3>
+                    <p className="text-sm text-gray-500">{day.area}</p>
 
-                      <p className="mt-3 text-white/70">{day.title}</p>
-                      <p className="text-sm text-white/50">{day.desc}</p>
-
-                      {/* Highlights */}
-                      <div className="mt-4">
-                        <p className="text-sm text-white/60 mb-1">Top spots</p>
-                        <ul className="text-sm text-white/80 space-y-1">
-                          {itineraries[location].highlights.map((h) => (
-                              <li key={h}>• {h}</li>
-                          ))}
-                        </ul>
-                      </div>
-
-                      {/* Hot springs */}
-                      <div className="mt-4">
-                        <p className="text-sm text-amber-400 mb-1">Hot springs nearby</p>
-                        <ul className="text-sm text-white/80 space-y-1">
-                          {itineraries[location].hotSprings.map((s) => (
-                              <li key={s.name}>
-                                • {s.name} <span className="text-white/50">({s.note})</span>
-                              </li>
-                          ))}
-                        </ul>
-                      </div>
-
-                      <div className="mt-4 flex gap-3">
-                        <button className="px-4 py-2 rounded-xl bg-amber-500 text-black text-sm font-semibold">
-                          View details
-                        </button>
-                        <button className="px-4 py-2 rounded-xl border border-white/20 text-sm">
-                          Open map
-                        </button>
-                      </div>
+                    <div className="mt-3">
+                      <strong>What to see:</strong>
+                      <ul>
+                        {day.see.map((s) => (
+                            <li key={s}>• {s}</li>
+                        ))}
+                      </ul>
                     </div>
-                ))}
-              </div>
-          ) : (
-              <div className="text-center text-white/50">
-                Select a location to generate your plan.
-              </div>
-          )}
+
+                    <div className="mt-3">
+                      <strong>Where to eat:</strong>
+                      <ul>
+                        {day.eat.map((e) => (
+                            <li key={e}>• {e}</li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <p className="mt-3 text-amber-700">
+                      <strong>Tip:</strong> {day.tip}
+                    </p>
+                  </div>
+              ))}
+            </section>
+        )}
+
+        {/* FOOTER */}
+        <section className="text-center py-12">
+          <Link href="/" className="underline">
+            Back to homepage
+          </Link>
         </section>
       </main>
   );
