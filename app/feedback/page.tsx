@@ -72,12 +72,22 @@ export default function CustomerReviewPage() {
     }));
   };
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     if (!rating || !form.name.trim() || !form.comment.trim()) return;
 
-    console.log({ rating, ...form });
+    await fetch("/api/reviews", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        rating,
+        ...form,
+      }),
+    });
+
     setSubmitted(true);
   };
 
