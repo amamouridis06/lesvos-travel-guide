@@ -67,7 +67,7 @@ export default function Home() {
               { label: "Beaches", href: "/beaches" },
               { label: "Villages", href: "/villages" },
               { label: "Food", href: "/food" },
-              { label: "Nature", href: "/nature" },
+              { label: "Nature", href: "/under-constructions" },
             ].map((cat) => (
                 <Link key={cat.label} href={cat.href}
                       style={{ flexShrink: 0, padding: "9px 16px", borderRadius: 100, border: `1px solid ${cat.active ? "#111" : "#e8e8e8"}`, background: cat.active ? "#111" : "#fff", color: cat.active ? "#fff" : "#444", fontSize: 12, whiteSpace: "nowrap", textDecoration: "none" }}>
