@@ -366,11 +366,20 @@ export default function CocktailBarPage() {
                 <ChevronLeft className="h-6 w-6" />
               </button>
               <img
-                  src={GALLERY[index]}
+                  src={GALLERY[index].src}
                   alt="Gallery fullscreen"
                   className="max-h-[85vh] max-w-[90vw] object-contain"
                   onClick={(e) => e.stopPropagation()}
               />
+              : (
+              <video
+                  controls
+                  autoPlay
+                  className="max-h-[85vh] max-w-[90vw]"
+                  onClick={(e) => e.stopPropagation()}
+              >
+                <source src={GALLERY[index].src} type="video/mp4" />
+              </video>
               <button
                   onClick={(e) => { e.stopPropagation(); next(); }}
                   aria-label="Next"
