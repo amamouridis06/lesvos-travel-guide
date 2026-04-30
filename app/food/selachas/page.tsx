@@ -24,13 +24,6 @@ const GALLERY = [
     "/sel-freez.jpg",
 ]
 
-const Products = [
-    { t: "Zombie", d: "rum, passion fruit, pineapple, lime, falernum." },
-    { t: "Diego", d: "tequila, mango, vanilla, lime, spicy bitters" },
-    { t: "Hanky panky", d: "Vodka, fresh ginger, cucumber, lime." },
-    { t: "Pink mule", d: "vodka, strawberry, lime, mint, ginger beer" },
-];
-
 const INFO = [
     { Icon: MapPin, label: "Address", value: "Kalloni 811 07" },
     { Icon: Phone, label: "Phone", value: "+30 22530 22814" },
@@ -119,27 +112,6 @@ export default function SelachasPage() {
                         {/*    Come for the sunset, stay for the second round — the playlist gets*/}
                         {/*    better after midnight.*/}
                         {/*</p>*/}
-                    </div>
-
-                    {/* Signatures */}
-                    <div>
-                        <p className="text-xs font-semibold uppercase tracking-[0.25em]" style={{ color: "#b85c3a" }}>
-                            What to try
-                        </p>
-                        <h2 className="font-display mt-3 text-3xl font-semibold sm:text-4xl">
-                            Signatures of the house
-                        </h2>
-                        <div className="mt-8 grid gap-4 sm:grid-cols-2">
-                            {Products.map((c) => (
-                                <div
-                                    key={c.t}
-                                    className="rounded-2xl border border-stone-200 bg-white p-5 transition-all hover:-translate-y-0.5 hover:shadow-soft"
-                                >
-                                    <h3 className="font-display text-xl font-semibold">{c.t}</h3>
-                                    <p className="mt-1 text-sm text-stone-600">{c.d}</p>
-                                </div>
-                            ))}
-                        </div>
                     </div>
 
                     {/* GALLERY */}
