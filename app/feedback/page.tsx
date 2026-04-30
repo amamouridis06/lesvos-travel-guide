@@ -117,8 +117,7 @@ export default function CustomerReviewPage() {
                     μας.
                   </p>
 
-                <button className="bg-black text-white px-4 py-2 rounded">
-                      className="mt-8 rounded-2xl px-6"
+                <button className="bg-black text-white px-4 py-2 rounded"
                       onClick={() => setSubmitted(false)}
                   >
                     Υποβολή νέας αξιολόγησης
@@ -342,16 +341,16 @@ export default function CustomerReviewPage() {
                     όνομα.
                   </label>
 
-                  <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-                    <button className="bg-black text-white px-4 py-2 rounded">
-                        type="submit"
-                        className="w-full rounded-2xl py-6 text-base font-semibold"
-                        disabled={!rating || !form.name.trim() || !form.comment.trim()}
-                    >
-                      <Send className="mr-2 h-5 w-5" />
-                      Υποβολή αξιολόγησης
-                    </button>
-                  </motion.div>
+                  <motion.button
+                      type="submit"
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                      disabled={!rating || !form.name.trim() || !form.comment.trim()}
+                      className="bg-black text-white px-4 py-2 rounded w-full disabled:opacity-50"
+                  >
+                    <Send className="mr-2 h-5 w-5 inline" />
+                    Υποβολή αξιολόγησης
+                  </motion.button>
                 </form>
             </div>
           </motion.div>
