@@ -1,108 +1,232 @@
-"use client";
+import React, { useMemo, useState } from "react";
+import { motion } from "framer-motion";
+import { Star, Send, CheckCircle2, MessageSquareText } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
-import { useEffect, useState } from "react";
+export default function CustomerReviewPage() {
+  const [rating, setRating] = useState(0);
+  const [hoverRating, setHoverRating] = useState(0);
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    service: "",
+    comment: "",
+    permission: false,
+  });
+  const [submitted, setSubmitted] = useState(false);
 
-type Feedback = {
-  id: number;
-  name: string;
-  rating: string;
-  comment: string;
-  date: string;
-};
+  const activeRating = hoverRating || rating;
 
-export default function Page() {
-  const [name, setName] = useState("");
-  const [rating, setRating] = useState("");
-  const [comment, setComment] = useState("");
-  const [feedbacks, setFeedbacks] = useState<Feedback[]>([]);
+  const ratingText = useMemo(() => {
+    const labels: Record<number, string> = {
+      1: "Χρειάζεται βελτίωση",
+      2: "Μέτρια εμπειρία",
+      3: "Καλή εμπειρία",
+      4: "Πολύ καλή εμπειρία",
+      5: "Εξαιρετική εμπειρία",
+    };
 
-  useEffect(() => {
-    fetch("/api/feedback")
-      .then((res) => res.json())
-      .then(setFeedbacks);
-  }, []);
+    return activeRating ? labels[activeRating] : "Επιλέξτε βαθμολογία";
+  }, [activeRating]);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleChange = (
+      event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    const { name, value, type } = event.target;
+    const checked = type === "checkbox" ? (event.target as HTMLInputElement).checked : undefined;
 
-    const res = await fetch("/api/feedback", {
-      method: "POST",
-      body: JSON.stringify({ name, rating, comment }),
-    });
-
-    const newFeedback = await res.json();
-
-    setFeedbacks((prev) => [newFeedback, ...prev]);
-
-    setName("");
-    setRating("");
-    setComment("");
+    setForm((previous) => ({
+      ...previous,
+      [name]: type === "checkbox" ? checked : value,
+    }));
   };
 
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    if (!rating || !form.name.trim() || !form.comment.trim()) return;
+
+    // Εδώ μπορεί να συνδεθεί API call, π.χ. POST /api/reviews
+    console.log({ rating, ...form });
+    setSubmitted(true);
+  };
+
+  if (submitted) {
+    return (
+        <main className="min-h-screen bg-slate-50 px-4 py-10 text-slate-900">
+          <section className="mx-auto flex min-h-[70vh] max-w-3xl items-center justify-center">
+            <motion.div
+                initial={{ opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.35 }}
+                className="w-full"
+            >
+              <Card className="rounded-2xl border-0 shadow-xl">
+                <CardContent className="p-8 text-center sm:p-12">
+                  <CheckCircle2 className="mx-auto mb-5 h-16 w-16 text-emerald-500" />
+                  <h1 className="text-3xl font-bold tracking-tight">Ευχαριστούμε για την αξιολόγηση!</h1>
+                  <p className="mx-auto mt-4 max-w-xl text-base leading-7 text-slate-600">
+                    Η γνώμη σας μας βοηθά να βελτιώνουμε συνεχώς τις υπηρεσίες μας.
+                  </p>
+                  <Button className="mt-8 rounded-2xl px-6" onClick={() => setSubmitted(false)}>
+                    Υποβολή νέας αξιολόγησης
+                  </Button>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </section>
+        </main>
+    );
+  }
+
   return (
-    <div className="min-h-screen bg-gray-50 p-6 flex flex-col items-center">
-      <div className="w-full max-w-xl bg-white p-6 rounded-2xl shadow-md">
-        <h1 className="text-2xl font-bold mb-4 text-center">
-          Αξιολογήσεις Πελατών
-        </h1>
-
-        <form onSubmit={handleSubmit} className="space-y-3">
-          <input
-            type="text"
-            placeholder="Όνομα (προαιρετικό)"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            className="w-full border p-2 rounded"
-          />
-
-          <select
-            value={rating}
-            onChange={(e) => setRating(e.target.value)}
-            required
-            className="w-full border p-2 rounded"
+      <main className="min-h-screen bg-slate-50 px-4 py-10 text-slate-900">
+        <section className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+          <motion.div
+              initial={{ opacity: 0, x: -24 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.4 }}
+              className="space-y-6"
           >
-            <option value="">Βαθμολογία</option>
-            <option value="5">⭐⭐⭐⭐⭐</option>
-            <option value="4">⭐⭐⭐⭐</option>
-            <option value="3">⭐⭐⭐</option>
-            <option value="2">⭐⭐</option>
-            <option value="1">⭐</option>
-          </select>
-
-          <textarea
-            placeholder="Γράψε τη γνώμη σου..."
-            value={comment}
-            onChange={(e) => setComment(e.target.value)}
-            required
-            className="w-full border p-2 rounded"
-          />
-
-          <button className="w-full bg-black text-white p-2 rounded hover:opacity-90">
-            Αποστολή
-          </button>
-        </form>
-      </div>
-
-      {/* LIST */}
-      <div className="w-full max-w-xl mt-6 space-y-4">
-        {feedbacks.map((f) => (
-          <div
-            key={f.id}
-            className="bg-white p-4 rounded-xl shadow-sm border"
-          >
-            <div className="flex justify-between items-center mb-1">
-              <h2 className="font-semibold">{f.name}</h2>
-              <span className="text-sm text-gray-400">{f.date}</span>
+            <div className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-medium shadow-sm">
+              <MessageSquareText className="h-4 w-4" />
+              Αξιολόγηση πελατών
             </div>
 
-            <div className="text-yellow-500 mb-2">
-              {"⭐".repeat(Number(f.rating))}
+            <div>
+              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
+                Πείτε μας πώς ήταν η εμπειρία σας
+              </h1>
+              <p className="mt-5 max-w-xl text-lg leading-8 text-slate-600">
+                Η αξιολόγησή σας είναι πολύτιμη. Συμπληρώστε τη φόρμα και βοηθήστε μας να γίνουμε καλύτεροι.
+              </p>
             </div>
 
-            <p className="text-gray-700">{f.comment}</p>
-          </div>
-        ))}
-      </div>
-    </div>
+            <div className="grid gap-4 sm:grid-cols-3">
+              {["Γρήγορη εξυπηρέτηση", "Ποιότητα υπηρεσιών", "Υποστήριξη πελατών"].map((item) => (
+                  <div key={item} className="rounded-2xl bg-white p-4 text-sm font-medium shadow-sm">
+                    {item}
+                  </div>
+              ))}
+            </div>
+          </motion.div>
+
+          <motion.div
+              initial={{ opacity: 0, x: 24 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.4, delay: 0.1 }}
+          >
+            <Card className="rounded-2xl border-0 shadow-xl">
+              <CardContent className="p-6 sm:p-8">
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div>
+                    <label className="text-sm font-semibold">Η βαθμολογία σας *</label>
+                    <div className="mt-3 flex items-center gap-2">
+                      {[1, 2, 3, 4, 5].map((star) => (
+                          <button
+                              key={star}
+                              type="button"
+                              aria-label={`Βαθμολογία ${star}`}
+                              onMouseEnter={() => setHoverRating(star)}
+                              onMouseLeave={() => setHoverRating(0)}
+                              onClick={() => setRating(star)}
+                              className="rounded-xl p-1 transition hover:scale-110 focus:outline-none focus:ring-2 focus:ring-slate-400"
+                          >
+                            <Star
+                                className={`h-9 w-9 ${
+                                    star <= activeRating ? "fill-amber-400 text-amber-400" : "text-slate-300"
+                                }`}
+                            />
+                          </button>
+                      ))}
+                      <span className="ml-2 text-sm font-medium text-slate-600">{ratingText}</span>
+                    </div>
+                  </div>
+
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    <div>
+                      <label htmlFor="name" className="text-sm font-semibold">Ονοματεπώνυμο *</label>
+                      <input
+                          id="name"
+                          name="name"
+                          value={form.name}
+                          onChange={handleChange}
+                          placeholder="π.χ. Μαρία Παπαδοπούλου"
+                          className="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none transition focus:border-slate-400 focus:ring-2 focus:ring-slate-100"
+                          required
+                      />
+                    </div>
+
+                    <div>
+                      <label htmlFor="email" className="text-sm font-semibold">Email</label>
+                      <input
+                          id="email"
+                          name="email"
+                          type="email"
+                          value={form.email}
+                          onChange={handleChange}
+                          placeholder="name@example.com"
+                          className="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none transition focus:border-slate-400 focus:ring-2 focus:ring-slate-100"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label htmlFor="service" className="text-sm font-semibold">Υπηρεσία που αξιολογείτε</label>
+                    <select
+                        id="service"
+                        name="service"
+                        value={form.service}
+                        onChange={handleChange}
+                        className="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none transition focus:border-slate-400 focus:ring-2 focus:ring-slate-100"
+                    >
+                      <option value="">Επιλέξτε υπηρεσία</option>
+                      <option value="support">Υποστήριξη πελατών</option>
+                      <option value="delivery">Παράδοση / εξυπηρέτηση</option>
+                      <option value="product">Προϊόν / υπηρεσία</option>
+                      <option value="general">Γενική εμπειρία</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label htmlFor="comment" className="text-sm font-semibold">Σχόλιο *</label>
+                    <textarea
+                        id="comment"
+                        name="comment"
+                        value={form.comment}
+                        onChange={handleChange}
+                        placeholder="Γράψτε εδώ την εμπειρία σας..."
+                        rows={5}
+                        className="mt-2 w-full resize-none rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none transition focus:border-slate-400 focus:ring-2 focus:ring-slate-100"
+                        required
+                    />
+                  </div>
+
+                  <label className="flex items-start gap-3 text-sm leading-6 text-slate-600">
+                    <input
+                        name="permission"
+                        type="checkbox"
+                        checked={form.permission}
+                        onChange={handleChange}
+                        className="mt-1 h-4 w-4 rounded border-slate-300"
+                    />
+                    Επιτρέπω τη δημοσίευση της αξιολόγησής μου με το μικρό μου όνομα.
+                  </label>
+
+                  <Button
+                      type="submit"
+                      className="w-full rounded-2xl py-6 text-base font-semibold"
+                      disabled={!rating || !form.name.trim() || !form.comment.trim()}
+                  >
+                    <Send className="mr-2 h-5 w-5" />
+                    Υποβολή αξιολόγησης
+                  </Button>
+                </form>
+              </CardContent>
+            </Card>
+          </motion.div>
+        </section>
+      </main>
   );
 }
