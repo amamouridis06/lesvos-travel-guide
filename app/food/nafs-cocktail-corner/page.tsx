@@ -438,8 +438,8 @@ const NEARBY = [
 ];
 
 const INFO = [
-  { Icon: MapPin, label: "Location", value: "Agios Isidoros, South Lesvos" },
-  { Icon: Phone, label: "Phone", value: "+30 000 000 0000" },
+  { Icon: MapPin, label: "Location", value: "Mytilene-Skopelos Regional Road, Plomari 812 00" },
+  { Icon: Phone, label: "Phone", value: "2252031374" },
   { Icon: Clock, label: "Hours", value: "Daily · Sunset till late" },
   { Icon: Wallet, label: "Price", value: "Cocktails from €8" },
   { Icon: Users, label: "Best for", value: "Couples, friends, sunset drinks" },
@@ -697,9 +697,16 @@ export default function CocktailBarPage() {
                               className="h-full w-full object-cover"
                           />
                       ) : (
-                          <div className="flex h-full w-full items-center justify-center bg-black text-white text-xs">
-                            ▶
-                          </div>
+                          <>
+                            <img
+                                src={item.poster}
+                                alt=""
+                                className="h-full w-full object-cover"
+                            />
+                            <div className="absolute inset-0 flex items-center justify-center bg-black/30 text-white text-xl">
+                              ▶
+                            </div>
+                          </>
                       )}
                     </button>
                 ))}
