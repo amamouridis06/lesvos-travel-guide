@@ -6,6 +6,11 @@ const IMG = {
     pool: "/theo-pool.jpg",
     bed: "/theo-liv.jpg",
     sauna: "/theo-sauna.jpg",
+    hamam: "/theo-hamam.jpg",
+    samp: "/theo-samp.jpg",
+    bed2: "/theo-bed2.jpg.jpg",
+    entry: "theo-drone.jpg",
+    recept: "/theo-recept.jpg"
 };
 
 const hotel = {
@@ -40,8 +45,13 @@ const hotel = {
         "Valid ID and credit card required at check-in",
     ],
     gallery: [
+        { src: IMG.entry, alt: "entry", caption: "Step Inside, Leave the Ordinary Behind" },
+        { src: IMG.recept, alt: "Reception", caption: "Where Every Stay Starts with a Smile" },
         { src: IMG.pool, alt: "Pool area", caption: "Sun, water, repeat." },
         { src: IMG.bed, alt: "Hotel room", caption: "Sleep in style, wake refreshed." },
+        { src: IMG.samp, alt: "samp", caption: "Celebrate the Moment”" },
+        { src: IMG.bed2, alt: "BEd room2", caption: "Sleep, Perfected" },
+        { src: IMG.hamam, alt: "Hamam", caption: "Steam, Serenity, Renewal" },
         { src: IMG.sauna, alt: "Sauna and wellness area", caption: "Heat your body, clear your mind." },
     ],
     bookUrl:
