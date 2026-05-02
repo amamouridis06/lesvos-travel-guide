@@ -7,11 +7,10 @@ const IMG = {
     bed: "/theo-liv.jpg",
     sauna: "/theo-sauna.jpg",
     hamam: "/theo-hamam.jpg",
-    recept: "/theo-recept.jpg",
     samp: "/theo-samp.jpg",
     bed2: "/theo-bed2.jpg",
     entry: "/theo-drone.jpg",
-    recept: "/theo-recept.jpg"
+    recept: "/theo.recept.jpg"
 };
 
 const hotel = {
@@ -50,7 +49,7 @@ const hotel = {
         { src: IMG.recept, alt: "Reception", caption: "Where Every Stay Starts with a Smile" },
         { src: IMG.pool, alt: "Pool area", caption: "Sun, water, repeat." },
         { src: IMG.bed, alt: "Hotel room", caption: "Sleep in style, wake refreshed." },
-        { src: IMG.samp, alt: "samp", caption: "Celebrate the Moment”" },
+        { src: IMG.samp, alt: "samp", caption: "Celebrate the Moment" },
         { src: IMG.bed2, alt: "BEd room2", caption: "Sleep, Perfected" },
         { src: IMG.hamam, alt: "Hamam", caption: "Steam, Serenity, Renewal" },
         { src: IMG.sauna, alt: "Sauna and wellness area", caption: "Heat your body, clear your mind." },
