@@ -7,9 +7,10 @@ const IMG = {
     bed: "/theo-liv.jpg",
     sauna: "/theo-sauna.jpg",
     hamam: "/theo-hamam.jpg",
+    recept: "/theo-recept.jpg",
     samp: "/theo-samp.jpg",
-    bed2: "/theo-bed2.jpg.jpg",
-    entry: "theo-drone.jpg",
+    bed2: "/theo-bed2.jpg",
+    entry: "/theo-drone.jpg",
     recept: "/theo-recept.jpg"
 };
 
