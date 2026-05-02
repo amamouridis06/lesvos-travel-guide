@@ -339,9 +339,10 @@ export default function TheofilosParadise() {
                             For reservations, special requests or availability inquiries, our team is available daily to assist you.
                         </p>
                         <div className="mt-8 space-y-4 text-sm" style={{ color: "var(--ms-muted)" }}>
-                            <p><strong className="text-[color:var(--ms-fg)]">Phone:</strong> x</p>
-                            <p><strong className="text-[color:var(--ms-fg)]">Email:</strong> ixr</p>
-                            <p><strong className="text-[color:var(--ms-fg)]">Address:</strong> x</p>
+                            <p><strong className="text-[color:var(--ms-fg)]">Phone:</strong> 22510 43300</p>
+                            <p><strong className="text-[color:var(--ms-fg)]">Email:</strong> info@theofilosparadise.gr</p>
+                            <p><strong className="text-[color:var(--ms-fg)]">Address:</strong> Skra 7, Mytilini 81100</p>
+                            <p><strong className="text-[color:var(--ms-fg)]">Website:</strong> theofilosparadise.gr</p>
                         </div>
                     </div>
                 </div>
