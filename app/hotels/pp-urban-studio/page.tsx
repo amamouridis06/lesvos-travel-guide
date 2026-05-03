@@ -5,9 +5,9 @@ const IMG = {
     hero: "/pp.beds.jpg",
     entry: "/pp.entry.jpg",
     diadr: "/pp.diadr.jpg",
-    liv1: "/pp.liv1.jpg",
+    liv1: "/pp.liv1.png",
     liv2: "/pp.liv2.jpg",
-    kitchen: "/pp.kithcen.jpg",
+    kitchen: "/pp.kitchen.jpg",
     bed: "/pp.beds.jpg",
     balcon: "/pp.balcon.jpg",
     bath:"/pp.bath.jpg"
@@ -29,7 +29,7 @@ const hotel = {
         "The studio has a double bed and a sofa bed, as well as modern facilities: fast Wi-Fi, air conditioning, smart TV and a fully equipped kitchen. Quality white items, towels and toiletries are provided, along with hairdryer, iron and basic items for a comfortable and premium accommodation.",
     ],
     highlights: [
-        { label: "Check In ", value: "from 15:00 to 22:00" },
+        { label: "Check In ", value: "15:00 to 22:00" },
         { label: "Check Out ", value: "Until 11:00" },
         { label: "Wi-Fi", value: "Free" },
         { label: "Parking", value: "No" },
@@ -52,11 +52,11 @@ const hotel = {
         { src: IMG.entry, alt: "entry", caption: "Entry: A first impression that stays." },
         { src: IMG.diadr, alt: "Reception", caption: "Route: Where Every Stay Starts with a Smile" },
         { src: IMG.liv1, alt: "Pool area", caption: "Living room: Where style meets relaxation" },
-        { src: IMG.liv2, alt: "Hotel room"},
+        { src: IMG.liv2, alt: "Hotel room", caption: "Living room: Where style meets relaxation" },
         { src: IMG.kitchen, alt: "samp", caption: "Kitchen: Cook. Enjoy. Repeat." },
-        { src: IMG.bed, alt: "BEd room2", caption: "Bedroom: Calm in the heart of the city."},
-        { src: IMG.balcon, alt: "Βαλψον", caption: "Balcon: Your green escape in the city." },
-        { src: IMG.bath, alt: "Βαλψον", caption: "Bathroom: Simple, clean, essential." }
+        { src: IMG.bed, alt: "bed room", caption: "Bedroom: Calm in the heart of the city."},
+        { src: IMG.balcon, alt: "balcon", caption: "Balcon: Your green escape in the city." },
+        { src: IMG.bath, alt: "bath", caption: "Bathroom: Simple, clean, essential." }
     ],
     bookUrl:
         "https://www.booking.com/Share-WK9K1bo",
