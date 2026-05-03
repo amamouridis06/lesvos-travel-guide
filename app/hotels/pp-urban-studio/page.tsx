@@ -416,9 +416,9 @@ export default function PPUrban() {
                     <h2 className="ms-display ms-balance mt-6 text-4xl leading-[1.05] md:text-7xl">
                         Stay at <span className="italic" style={{ color: "var(--ms-gold-soft)" }}>{hotel.name}</span>.
                     </h2>
-                    <p className="mt-6 max-w-xl text-base leading-relaxed text-white/70 md:text-lg">
-                        Rooms are limited and the season fills early. We recommend booking at least eight weeks ahead.
-                    </p>
+                    {/*<p className="mt-6 max-w-xl text-base leading-relaxed text-white/70 md:text-lg">*/}
+                    {/*    Rooms are limited and the season fills early. We recommend booking at least eight weeks ahead.*/}
+                    {/*</p>*/}
                     <a
                         href={hotel.bookUrl}
                         target="_blank"
@@ -426,7 +426,7 @@ export default function PPUrban() {
                         className="group mt-10 inline-flex max-w-full items-center gap-4 border bg-transparent px-8 py-5 text-center text-[10px] uppercase tracking-[0.28em] text-white transition-all duration-500 sm:px-10 sm:tracking-[0.4em]"
                         style={{ borderColor: "var(--ms-gold)" }}
                     >
-                        Reserve a Suite
+                        Book Now
                         <span className="transition-transform duration-500 group-hover:translate-x-1">→</span>
                     </a>
                 </div>

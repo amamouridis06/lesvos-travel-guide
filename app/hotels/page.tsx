@@ -24,7 +24,7 @@ const hotels = [
     {
         name: "PP Urban Studio",
         description: "In the heart of the city centre",
-        location: "📍Mytilene, Lesvos, 81107",
+        location: "📍Mytilene, Lesvos, 81100",
         image: "/pp.beds.jpg",
         href: "/hotels/pp-urban-studio",
     },
@@ -35,7 +35,7 @@ export default function HotelsPage() {
         <main className="bg-neutral-100 text-neutral-900 min-h-screen">
 
             {/* ================= HERO ================= */}
-            <section className="relative h-[60vh] bg-[url('/theo-entry.jpg')] bg-cover bg-center bg-fixed">
+            <section className="relative h-[60vh] bg-[url('/hotels-logo.png')] bg-cover bg-center bg-fixed">
                 <div className="absolute inset-0 bg-black/60" />
                 <div className="relative z-10 h-full flex items-end">
                     <div className="max-w-6xl mx-auto px-6 pb-12">
