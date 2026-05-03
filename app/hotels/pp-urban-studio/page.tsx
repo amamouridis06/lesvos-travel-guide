@@ -4,7 +4,7 @@ import { useEffect } from "react";
 const IMG = {
     hero: "/pp.beds.jpg",
     entry: "/pp.entry.jpg",
-    diadr: "/pp.diadr.jpg",
+    // diadr: "/pp.diadr.jpg",
     liv1: "/pp.liv1.png",
     liv2: "/pp.liv2.jpg",
     kitchen: "/pp.kitchen.jpg",
@@ -22,7 +22,7 @@ const hotel = {
     fromPrice: "€108",
     tagline: "Where modern living meets the city’s heartbeat..",
     intro:
-        "Welcome to Double Pip in Mytilene Urban Studio, a sophisticated shelter in the heart of Mytilene.",
+        "Welcome to PP Urban Studio in Mytilene",
     body: [
         "Fully renovated with modern design and careful details, it offers comfort, elegance and privacy.",
         "It is located just 2 minutes from Ermou Street, with direct access to shops, cafes and restaurants, while the quiet location ensures joy. The main attractions and the port are accessible on foot, as is the Church of St. Theraponta.",
@@ -50,7 +50,7 @@ const hotel = {
     ],
     gallery: [
         { src: IMG.entry, alt: "entry", caption: "Entry: A first impression that stays." },
-        { src: IMG.diadr, alt: "Reception", caption: "Route: Where Every Stay Starts with a Smile" },
+        // { src: IMG.diadr, alt: "Reception", caption: "Route: Where Every Stay Starts with a Smile" },
         { src: IMG.liv1, alt: "Pool area", caption: "Living room: Where style meets relaxation" },
         { src: IMG.liv2, alt: "Hotel room", caption: "Living room: Where style meets relaxation" },
         { src: IMG.kitchen, alt: "samp", caption: "Kitchen: Cook. Enjoy. Repeat." },

@@ -25,7 +25,7 @@ const hotels = [
         name: "PP Urban Studio",
         description: "In the heart of the city centre",
         location: "📍Mytilene, Lesvos, 81107",
-        image: "/pp.logo.png",
+        image: "/pp.beds.png",
         href: "/hotels/pp-urban-studio",
     },
 ];
