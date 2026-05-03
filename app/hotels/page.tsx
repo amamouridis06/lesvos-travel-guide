@@ -9,7 +9,7 @@ export const metadata = {
 const hotels = [
     {
         name: "Theofilos Paradise Boutique Hotel",
-        description: "Small, quiet, local",
+        description: "Luxury hotel",
         location: "📍Mytilene, Lesvos, 81100",
         image: "/theo-entry.jpg",
         href: "/hotels/theofilos-paradise",
@@ -20,6 +20,13 @@ const hotels = [
         location: "📍Skalla Kallonis, Lesvos, 81107",
         image: "/thanosbed.jpg",
         href: "/hotels/thanos-cozy-appartments",
+    },
+    {
+        name: "PP Urban Studio",
+        description: "In the heart of the city centre",
+        location: "📍Mytilene, Lesvos, 81107",
+        image: "/pp.logo.jpg",
+        href: "/hotels/pp-urban-studio",
     },
 ];
 
