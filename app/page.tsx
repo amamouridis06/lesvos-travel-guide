@@ -124,7 +124,7 @@ export default function Home() {
           <div className="flex lg:hidden" style={{ flexDirection: "column" }}>
             {[
               { num: "01", name: "Theofilos Paradise Boutique Hotel", sub: "Boutique · Mytilene", tag: "Hotel", img: "/theo-entry.jpg", href: "/hotels/theofilos-paradise" },
-               { num: "02", name: "PP Urban Studio", sub: "Renovated studio · Mytilene", tag: "Hotel", img: "/pp.logo.jpg", href: "/hotels/pp-urban-studio" },
+               { num: "02", name: "PP Urban Studio", sub: "Renovated studio · Mytilene", tag: "Hotel", img: "/pp.beds.jpg", href: "/hotels/pp-urban-studio" },
               // { num: "03", name: "Olive Press", sub: "Design · Molyvos", tag: "Hotel", img: "/hotel3.jpg", href: "/hotels/olive-press" },
             ].map((p, i, arr) => (
                 <MobileListItem key={p.name} {...p} last={i === arr.length - 1} />
@@ -133,7 +133,7 @@ export default function Home() {
           <div className="hidden lg:grid" style={{ gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
             {[
               { num: "01", name: "Theofilos Paradise Boutique Hotel", sub: "Boutique · Mytilene", tag: "Hotel", img: "/theo-entry.jpg", href: "/hotels/theofilos-paradise" },
-                { num: "02", name: "PP Urban Studio", sub: "Renovated studio · Mytilene", tag: "Hotel", img: "/pp.logo.png", href: "/hotels/pp-urban-studio" },
+                { num: "02", name: "PP Urban Studio", sub: "Renovated studio · Mytilene", tag: "Hotel", img: "/pp.beds.jpg", href: "/hotels/pp-urban-studio" },
               // { num: "03", name: "Olive Press", sub: "Design · Molyvos", tag: "Hotel", img: "/hotel3.jpg", href: "/hotels/olive-press" },
             ].map((p) => <DesktopCard key={p.name} {...p} />)}
           </div>
