@@ -156,7 +156,7 @@ const STYLES = `
   html { scroll-behavior: smooth; }
 `;
 
-export default function TheofilosParadise() {
+export default function PPUrban() {
     useEffect(() => {
         const id = "maison-solene-styles";
         if (document.getElementById(id)) return;
@@ -251,7 +251,7 @@ export default function TheofilosParadise() {
 
                         <div className="mt-12 flex items-center gap-4 text-xs uppercase tracking-[0.24em] md:tracking-[0.3em]" style={{ color: "var(--ms-muted)" }}>
                             <span className="ms-hairline" />
-                            <span>Theofilos Paradise Boutique Hotel</span>
+                            <span>PP Urban Studio</span>
                         </div>
                     </main>
 
