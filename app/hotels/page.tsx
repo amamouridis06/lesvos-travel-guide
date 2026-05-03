@@ -3,7 +3,7 @@ import Link from "next/link";
 export const metadata = {
     title: "Hotels & Appartments| Lesvos Travel Guide",
     description:
-        "Set",
+        "Hotels, Appartments & Studios",
 };
 
 const hotels = [
@@ -43,7 +43,7 @@ export default function HotelsPage() {
                             Hotels in Lesvos
                         </h1>
                         <p className="text-gray-200 mt-2 max-w-xl">
-                            Hotels, appartments
+                            Choose Your Perfect Hotel
                         </p>
                     </div>
                 </div>

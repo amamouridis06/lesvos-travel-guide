@@ -27,22 +27,26 @@ const pharmacies = [
     address: "Kalloni Central Square",
     phone: "+30 22530 22022",
     hours: [
-      {day:"Mon,Wed:", time:"08:00–14:00"},
+      {day:"Mon,Wed:", time:"08:00–14:30"},
       {day:"Tue,Thur,Fri:", time: "08:00–14:00 & 18:00-21:00"},
       {day:"Sat, Sun:", time: "Closed"}
     ],
     maps: "https://maps.app.goo.gl/8ArkLUv2HaAWiexWA",
     emergency: false,
   },
-  // {
-  //   name: "Plomari Pharmacy",
-  //   area: "Plomari",
-  //   address: "Main Road, Plomari",
-  //   phone: "+30 22520 12345",
-  //   hours: "Mon–Sat: 08:00–20:00",
-  //   maps: "https://maps.google.com",
-  //   emergency: false,
-  // },
+  {
+    name: "Pharmacy Baltas Stavros",
+    area: "Kalloni",
+    address: "Kalloni",
+    phone: "+30 22530 24119",
+    hours: [
+      {day:"Mon,Wed:", time:"08:00–14:00"},
+      {day:"Tue,Thur,Fri:", time: "08:00–14:00 & 18:00-21:00"},
+      {day:"Sat, Sun:", time: "Closed"}
+    ],
+    maps: "https://maps.app.goo.gl/4sfVgXz9uxsp42nm9",
+    emergency: false,
+  },
   // {
   //   name: "Molyvos Pharmacy",
   //   area: "Molyvos",
