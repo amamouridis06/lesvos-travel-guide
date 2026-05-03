@@ -192,13 +192,6 @@ export default function TheofilosParadise() {
                         <p className="ms-display mt-5 max-w-2xl text-xl italic text-white/85 sm:text-2xl md:text-3xl">
                             “{hotel.tagline}”
                         </p>
-                        <div className="mt-8 flex flex-col gap-3 text-[10px] uppercase tracking-[0.26em] text-white/75 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-8 md:tracking-[0.3em]">
-                            {/*<span>Est. <span className="ms-serif-num text-base text-[color:var(--ms-gold-soft)] not-italic">{hotel.established}</span></span>*/}
-                            <span className="hidden h-3 w-px bg-white/30 sm:block" />
-                            {/*<span><span className="ms-serif-num text-base text-[color:var(--ms-gold-soft)]">{hotel.rooms}</span> Rooms</span>*/}
-                            <span className="hidden h-3 w-px bg-white/30 sm:block" />
-                            <span>From <span className="ms-serif-num text-base text-[color:var(--ms-gold-soft)] not-italic">{hotel.fromPrice}</span></span>
-                        </div>
                     </div>
                 </div>
 
