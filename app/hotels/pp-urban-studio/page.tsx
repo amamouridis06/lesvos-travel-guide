@@ -385,7 +385,7 @@ export default function PPUrban() {
                                     className={`group ${layouts[i] ?? "md:col-span-4"}`}
                                 >
                                     <div
-                                        className="relative aspect-[4/5] overflow-hidden rounded-2xl"
+                                        className="relative aspect-[4/3] overflow-hidden rounded-2xl"
                                         style={{ background: "var(--ms-border)" }}
                                     >
                                         <img
@@ -399,19 +399,19 @@ export default function PPUrban() {
                                     </div>
 
                                     <figcaption className="mt-4 flex items-baseline gap-3 px-1">
-    <span
-        className="ms-serif-num text-sm"
-        style={{ color: "var(--ms-gold)" }}
-    >
-      {String(i + 1).padStart(2, "0")}
-    </span>
+                                        <span
+                                            className="ms-serif-num text-sm"
+                                             style={{ color: "var(--ms-gold)" }}
+                                        >
+                                            {String(i + 1).padStart(2, "0")}
+                                        </span>
 
                                         <span
                                             className="ms-display text-lg italic"
                                             style={{ color: "var(--ms-muted)" }}
                                         >
-      {g.caption}
-    </span>
+                                            {g.caption}
+                                         </span>
                                     </figcaption>
                                 </figure>
                             );
