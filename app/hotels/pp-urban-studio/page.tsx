@@ -350,14 +350,14 @@ export default function PPUrban() {
                 </div>
             </section>
 
-            <section className="px-5 py-20 text-white sm:px-8 md:px-12 md:py-28" style={{ background: "var(--ms-ink)" }}>
-                <div className="mx-auto max-w-4xl text-center">
-                    <span className="ms-display text-6xl leading-none md:text-8xl" style={{ color: "var(--ms-gold)" }}>“</span>
-                    <blockquote className="ms-display ms-balance mt-4 text-3xl italic leading-[1.25] text-white/90 md:text-5xl">
-                        In the heart of town
-                    </blockquote>
-                </div>
-            </section>
+            {/*<section className="px-5 py-20 text-white sm:px-8 md:px-12 md:py-28" style={{ background: "var(--ms-ink)" }}>*/}
+            {/*    <div className="mx-auto max-w-4xl text-center">*/}
+            {/*        <span className="ms-display text-6xl leading-none md:text-8xl" style={{ color: "var(--ms-gold)" }}>“</span>*/}
+            {/*        <blockquote className="ms-display ms-balance mt-4 text-3xl italic leading-[1.25] text-white/90 md:text-5xl">*/}
+            {/*            In the heart of town*/}
+            {/*        </blockquote>*/}
+            {/*    </div>*/}
+            {/*</section>*/}
 
             <section className="px-5 py-20 sm:px-8 md:px-12 md:py-28" style={{ background: "var(--ms-bg)" }}>
                 <div className="mx-auto max-w-7xl">
