@@ -9,7 +9,7 @@ const IMG = {
     liv2: "/pp.liv2.jpg",
     kitchen: "/pp.kitchen.jpg",
     bed: "/pp.beds.jpg",
-    balcon: "/pp.balcon.jpg",
+    balcony: "/pp.balcon.jpg",
     bath:"/pp.bath.jpg"
 };
 
@@ -17,8 +17,6 @@ const hotel = {
     name: "PP Urban Studio",
     region: "Mytilene Lesvos Greece",
     country: "Greece",
-    // established: "1912",
-    // rooms: "35",
     fromPrice: "€108",
     tagline: "Where modern living meets the city’s heartbeat..",
     intro:
@@ -29,11 +27,10 @@ const hotel = {
         "The studio has a double bed and a sofa bed, as well as modern facilities: fast Wi-Fi, air conditioning, smart TV and a fully equipped kitchen. Quality white items, towels and toiletries are provided, along with hairdryer, iron and basic items for a comfortable and premium accommodation.",
     ],
     highlights: [
-        { label: "Check In ", value: "15:00 to 22:00" },
-        { label: "Check Out ", value: "Until 11:00" },
+        { label: "Balcony with view ", value: "Yes" },
+        { label: "Transport from / to the airport", value: "No"  },
         { label: "Wi-Fi", value: "Free" },
         { label: "Parking", value: "No" },
-        { label: "Transport from / to the airport", value: "No" },
     ],
     pros: [
         "Prime central location within walking distance of key attractions",
@@ -43,8 +40,6 @@ const hotel = {
         "Friendly, attentive service",
     ],
     knowBefore: [
-        "Check-in time: from 15:00 to 22:00",
-        "Check-out time: Until 11:00 ",
         "Located in the city centre",
         "Valid ID and credit card required at check-in",
     ],
@@ -55,7 +50,7 @@ const hotel = {
         { src: IMG.liv2, alt: "Hotel room", caption: "Living room: Where style meets relaxation" },
         { src: IMG.kitchen, alt: "samp", caption: "Kitchen: Cook. Enjoy. Repeat." },
         { src: IMG.bed, alt: "bed room", caption: "Bedroom: Calm in the heart of the city."},
-        { src: IMG.balcon, alt: "balcon", caption: "Balcon: Your green escape in the city." },
+        { src: IMG.balcony, alt: "balcony", caption: "Balcony: Your green escape in the city." },
         { src: IMG.bath, alt: "bath", caption: "Bathroom: Simple, clean, essential." }
     ],
     bookUrl:
@@ -286,9 +281,9 @@ export default function PPUrban() {
 
                                 <div className="mt-7 border-t pt-5 text-[11px] uppercase tracking-[0.22em] sm:tracking-[0.28em]" style={{ borderColor: "var(--ms-border)", color: "var(--ms-muted)" }}>
                                     {[
-                                        ["Check-in", "14:00"],
-                                        ["Check-out", "11:00"],
-                                        ["Cancellation", "3 days"],
+                                        ["Check-in", "From 15:00 to 22:00"],
+                                        ["Check-out", "From 07:00 to 11:00"],
+                                        ["Cancellation", "Free"],
                                     ].map(([k, v]) => (
                                         <div key={k} className="flex justify-between gap-4 py-1.5">
                                             <span>{k}</span>
