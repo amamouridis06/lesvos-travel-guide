@@ -392,7 +392,7 @@ export default function PPUrban() {
                                             src={g.src}
                                             alt={g.alt}
                                             loading="lazy"
-                                            className="w-full h-full object-cover object-center transition-transform duration-[1400ms] ease-out group-hover:scale-[1.06]"
+                                            className="w-full h-full object-cover object-[30%_center] transition-transform duration-[1400ms] ease-out group-hover:scale-[1.06]"
                                         />
 
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-100" />
