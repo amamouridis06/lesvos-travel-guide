@@ -195,10 +195,10 @@ export default function Home() {
                         <MapPin size={18} /> Skala Kallonis 81107,Lesvos island Greece
                     </p>
                     <p className="flex justify-center items-center gap-2">
-                        <Email size={18} /> 5unitedcarrental@gmail.com
+                        <Mail size={18} /> 5unitedcarrental@gmail.com
                     </p>
                     <p className="flex justify-center items-center gap-2">
-                        <Hours size={18} /> Opening Hours: Mon - Fri: 7am - 10pm
+                        <Clock size={18} /> Opening Hours: Mon - Fri: 7am - 10pm
                     </p>
                 </div>
 
