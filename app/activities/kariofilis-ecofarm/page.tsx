@@ -64,17 +64,6 @@ export default function FarmPage() {
         .value-row:last-child { border-bottom: none; }
       `}</style>
 
-            {/* NAV */}
-            <header style={{ background: "#f5f0e8", borderBottom: "1px solid #e0d8c8", padding: "0 56px", height: 60, display: "flex", alignItems: "center", justifyContent: "space-between", position: "sticky", top: 0, zIndex: 10 }}>
-                <span className="display" style={{ fontSize: 20, color: "#2a2218" }}>Stonemill Farm</span>
-                <nav style={{ display: "flex", gap: 40 }}>
-                    {["About", "Shop", "CSA", "Visit"].map(l => <a key={l} href="#" className="nav-link">{l}</a>)}
-                </nav>
-                <button className="btn" style={{ background: "#3d2e10", color: "#f5f0e8", padding: "10px 24px", borderRadius: 3 }}>
-                    Order Now
-                </button>
-            </header>
-
             {/* HERO */}
             <section style={{ display: "grid", gridTemplateColumns: "1fr 1fr", minHeight: "88vh" }}>
                 <div style={{ padding: "80px 56px", display: "flex", flexDirection: "column", justifyContent: "center" }}>
