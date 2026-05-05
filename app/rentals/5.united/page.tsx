@@ -22,7 +22,7 @@ type CarType = {
 const cars: CarType[] = [
     {
         name: "OPEL KARL",
-        image: "/open_carl.jpg",
+        image: "/opencarl.jpg",
         description: "Perfect for city driving, low fuel consumption",
         specs: {
             class: "A",
