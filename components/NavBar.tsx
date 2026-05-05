@@ -114,6 +114,13 @@ export default function NavBar() {
                 >
                   Hotels
                 </Link>
+                <Link
+                    href="/activities/kariofilis-ecofarm"
+                    onClick={closeMenu}
+                    className="py-3 border-b border-white/10 hover:text-yellow-300 transition"
+                >
+                  Hotels
+                </Link>
 
                 <Link
                     href="/about"
