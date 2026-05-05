@@ -1,6 +1,6 @@
 "use client";
 
-import { Car as CarIcon, Phone, MapPin, Star, Mail, Clock } from "lucide-react";
+import { Car as CarIcon, Phone, MapPin, Mail, Clock } from "lucide-react";
 import { motion } from "framer-motion";
 
 type CarType = {
@@ -22,7 +22,7 @@ type CarType = {
 const cars: CarType[] = [
     {
         name: "OPEL KARL",
-        image: "5openkarl.jpg",
+        image: "opencarl.jpg",
         description: "Perfect for city driving, low fuel consumption",
         specs: {
             class: "A",
@@ -37,7 +37,7 @@ const cars: CarType[] = [
     },
     {
         name: "CITROEN C3",
-        image: "5citroenc3.jpg",
+        image: "citroenc3.jpg",
         description: "Perfect for city driving, low fuel consumption",
         specs: {
             class: "B",
@@ -52,7 +52,7 @@ const cars: CarType[] = [
     },
     {
         name: "NISSAN MICRA",
-        image: "5nissanmicra.jpg",
+        image: "nissanmicra.jpg",
         description: "Perfect for city driving, low fuel consumption",
         specs: {
             class: "K",
@@ -72,11 +72,7 @@ export default function Home() {
         <main className="bg-slate-50 text-gray-800">
             {/* HERO */}
             <section className="relative h-[80vh] flex items-center justify-center text-center text-white">
-                <img
-                    src="/5hero.jpg"
-                    className="absolute inset-0 w-full h-full object-cover"
-                    alt="car rental"
-                />
+                <img src="/5hero.jpg" className="absolute inset-0 w-full h-full object-cover" alt="car rental" />
                 <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/30"></div>
 
                 <motion.div
@@ -85,12 +81,8 @@ export default function Home() {
                     transition={{ duration: 0.8 }}
                     className="relative z-10 px-4"
                 >
-                    <h1 className="text-4xl md:text-6xl font-bold mb-4">
-                        5 UNITED CAR RENTAL
-                    </h1>
-                    <p className="text-lg md:text-xl mb-6">
-                        Comfort, reliability and the best prices on the market
-                    </p>
+                    <h1 className="text-4xl md:text-6xl font-bold mb-4">5 UNITED CAR RENTAL</h1>
+                    <p className="text-lg md:text-xl mb-6">Comfort, reliability and the best prices on the market</p>
 
                     <button className="bg-yellow-400 text-black px-6 py-3 rounded-full font-semibold hover:bg-yellow-300 transition shadow-lg">
                         Book Now
@@ -104,9 +96,7 @@ export default function Home() {
                     <h2 className="text-3xl font-bold text-gray-900 mb-2">About Us</h2>
                     <div className="w-16 h-1 bg-yellow-400 mx-auto mb-6 rounded"></div>
                     <p className="text-gray-600 leading-relaxed">
-                        We provide a wide range of vehicles for rent, suitable for all your travel needs.
-                        Whether you need a compact car for city exploration or a spacious car for your vacation,
-                        we have the perfect option for you.
+                        We provide a wide range of vehicles for rent, suitable for all your travel needs. Whether you need a compact car for city exploration or a spacious car for your vacation, we have the perfect option for you.
                     </p>
                 </motion.div>
             </section>
@@ -126,9 +116,43 @@ export default function Home() {
                             className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 hover:-translate-y-2"
                         >
                             <img src={car.image} alt={car.name} className="w-full h-52 object-cover" />
+
                             <div className="p-5 border-t-4 border-yellow-400">
                                 <h3 className="text-xl font-semibold">{car.name}</h3>
                                 <p className="text-sm mt-2 text-gray-600">{car.description}</p>
+
+                                {/* SPECS */}
+                                <div className="mt-4 border-t pt-4 grid grid-cols-2 gap-3 text-sm">
+                                    <div className="flex justify-between">
+                                        <span className="text-gray-500">Passengers</span>
+                                        <span className="font-medium">{car.specs.passengers}</span>
+                                    </div>
+
+                                    <div className="flex justify-between">
+                                        <span className="text-gray-500">Doors</span>
+                                        <span className="font-medium">{car.specs.doors}</span>
+                                    </div>
+
+                                    <div className="flex justify-between">
+                                        <span className="text-gray-500">Luggage</span>
+                                        <span className="font-medium">{car.specs.luggage}</span>
+                                    </div>
+
+                                    <div className="flex justify-between">
+                                        <span className="text-gray-500">Fuel</span>
+                                        <span className="font-medium">{car.specs.fuel}</span>
+                                    </div>
+
+                                    <div className="flex justify-between">
+                                        <span className="text-gray-500">Transmission</span>
+                                        <span className="font-medium">{car.specs.transmission}</span>
+                                    </div>
+
+                                    <div className="flex justify-between">
+                                        <span className="text-gray-500">A/C</span>
+                                        <span className="font-medium">{car.specs.ac ? "Yes" : "No"}</span>
+                                    </div>
+                                </div>
                             </div>
                         </motion.div>
                     ))}
@@ -158,9 +182,7 @@ export default function Home() {
 
             {/* TESTIMONIALS */}
             <section className="bg-gray-100 py-20 px-6">
-                <h2 className="text-3xl font-bold text-center text-gray-900 mb-2">
-                    What Our Customers Say
-                </h2>
+                <h2 className="text-3xl font-bold text-center text-gray-900 mb-2">What Our Customers Say</h2>
                 <div className="w-16 h-1 bg-yellow-400 mx-auto mb-10 rounded"></div>
 
                 <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
