@@ -18,7 +18,6 @@ const hotel = {
     region: "Mytilene Lesvos Greece",
     country: "Greece",
     established: "1912",
-    rooms: "35",
     fromPrice: "€100",
     tagline: "Where the sea meets stillness.",
     intro:
@@ -28,16 +27,20 @@ const hotel = {
         "Built back in 1912, the 4-star boutique hotel’s main building is a carefully restored traditional mansion. Today it houses the reception hall, lounge with marble fireplace, as well as some of the rooms and suites.",
     ],
     highlights: [
-        { label: "Established", value: "1912" },
+        { label: "Room service", value: "Yes" },
+        {label : "Exceptional breakfast", value: "Yes"},
         { label: "Parking", value: "Free (depend on availability)" },
-        { label: "Rooms", value: "35" },
         { label: "Wellness", value: "Spa & Wellness Centre" },
+        { label: "Airport shuttle", value: "Yes" },
+
     ],
     pros: [
         "Central location within walking distance of key attractions",
         "Comfortable rooms with modern amenities",
         "On-site restaurant and bar",
         "Friendly, attentive service",
+        "Outdoor swimming pool",
+        "Traditional Greek breakfast highlights local products from Lesvos, offering an authentic taste from the start of the day."
     ],
     knowBefore: [
         "Check-in time: 14:00; Check-out time: until 11:00",
@@ -193,8 +196,6 @@ export default function TheofilosParadise() {
                         </p>
                         <div className="mt-8 flex flex-col gap-3 text-[10px] uppercase tracking-[0.26em] text-white/75 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-8 md:tracking-[0.3em]">
                             <span>Est. <span className="ms-serif-num text-base text-[color:var(--ms-gold-soft)] not-italic">{hotel.established}</span></span>
-                            <span className="hidden h-3 w-px bg-white/30 sm:block" />
-                            <span><span className="ms-serif-num text-base text-[color:var(--ms-gold-soft)]">{hotel.rooms}</span> Rooms</span>
                             <span className="hidden h-3 w-px bg-white/30 sm:block" />
                             <span>From <span className="ms-serif-num text-base text-[color:var(--ms-gold-soft)] not-italic">{hotel.fromPrice}</span></span>
                         </div>

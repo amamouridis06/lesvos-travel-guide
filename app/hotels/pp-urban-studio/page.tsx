@@ -281,8 +281,8 @@ export default function PPUrban() {
 
                                 <div className="mt-7 border-t pt-5 text-[11px] uppercase tracking-[0.22em] sm:tracking-[0.28em]" style={{ borderColor: "var(--ms-border)", color: "var(--ms-muted)" }}>
                                     {[
-                                        ["Check-in", "From 15:00 to 22:00"],
-                                        ["Check-out", "From 07:00 to 11:00"],
+                                        ["Check-in", "15:00 to 22:00"],
+                                        ["Check-out", "07:00 to 11:00"],
                                         ["Cancellation", "Free"],
                                     ].map(([k, v]) => (
                                         <div key={k} className="flex justify-between gap-4 py-1.5">
