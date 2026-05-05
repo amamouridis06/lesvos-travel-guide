@@ -36,6 +36,156 @@ const cars: CarType[] = [
         },
     },
     {
+        name: "OPEL CORSA",
+        image: "/corsa.jpg",
+        description: "Perfect for city driving, low fuel consumption",
+        specs: {
+            class: "B",
+            passengers: 5,
+            doors: 5,
+            luggage: 2,
+            fuel: "Petrol",
+            transmission: "Manual",
+            speed: "Max 180",
+            ac: false,
+        },
+    },
+    {
+        name: "VW POLO",
+        image: "/polo.jpg",
+        description: "Perfect for city driving, low fuel consumption",
+        specs: {
+            class: "B",
+            passengers: 5,
+            doors: 5,
+            luggage: 2,
+            fuel: "Petrol",
+            transmission: "Manual",
+            speed: "Max 170",
+            ac: true,
+        },
+    },
+    {
+    name: "HYUNDAI I20",
+    image: "/i20.jpg",
+    description: "Perfect for city driving, low fuel consumption",
+    specs: {
+    class: "B",
+        passengers: 5,
+        doors: 5,
+        luggage: 2,
+        fuel: "Petrol",
+        transmission: "Manual",
+        speed: "Max 180",
+        ac: true,
+   },
+},
+    {
+        name: "SKODA FABIA",
+        image: "/fabia.jpg",
+        description: "Perfect for city driving, low fuel consumption",
+        specs: {
+            class: "C",
+            passengers: 5,
+            doors: 5,
+            luggage: 3,
+            fuel: "Petrol",
+            transmission: "Manual",
+            speed: "Max 190",
+            ac: false,
+        },
+    },
+    {
+        name: "RENAULT CLIO",
+        image: "/clio.jpg",
+        description: "Perfect for city driving, low fuel consumption",
+        specs: {
+            class: "C",
+            passengers: 5,
+            doors: 5,
+            luggage: 2,
+            fuel: "Diesel",
+            transmission: "Manual",
+            speed: "Max 180",
+            ac: true,
+        },
+    },
+    {
+        name: "OPEL ASTRA",
+        image: "/astra.jpg",
+        description: "Perfect for city driving, low fuel consumption",
+        specs: {
+            class: "D",
+            passengers: 5,
+            doors: 5,
+            luggage: 4,
+            fuel: "Diesel",
+            transmission: "Manual",
+            speed: "Max 200",
+            ac: false,
+        },
+    },
+    {
+        name: "SKODA YETI",
+        image: "/yeti.jpg",
+        description: "Perfect for city driving, low fuel consumption",
+        specs: {
+            class: "E",
+            passengers: 5,
+            doors: 5,
+            luggage: 4,
+            fuel: "Petrol",
+            transmission: "Automatic",
+            speed: "Max 200",
+            ac: true,
+        },
+    },
+    {
+        name: "PEUGEOT 2008",
+        image: "/peugeot.jpg",
+        description: "Perfect for city driving, low fuel consumption",
+        specs: {
+            class: "E",
+            passengers: 5,
+            doors: 5,
+            luggage: 3,
+            fuel: "Petrol",
+            transmission: "Automatic",
+            speed: "Max 200",
+            ac: false,
+        },
+    },
+    {
+        name: "FIAT PANDA 4X4",
+        image: "/panda4.jpg",
+        description: "Perfect for city driving, low fuel consumption",
+        specs: {
+            class: "E",
+            passengers: 5,
+            doors: 5,
+            luggage: 2,
+            fuel: "Petrol",
+            transmission: "Manual",
+            speed: "Max 170",
+            ac: true,
+        },
+    },
+    {
+        name: "SUZUKI ALTO",
+        image: "/alto.jpg",
+        description: "Perfect for city driving, low fuel consumption",
+        specs: {
+            class: "A",
+            passengers: 5,
+            doors: 5,
+            luggage: 2,
+            fuel: "Petrol",
+            transmission: "Manual",
+            speed: "Max 160",
+            ac: true,
+        },
+    },
+    {
         name: "NISSAN NOTE",
         image: "/nnote.jpg",
         description: "Perfect for city driving, low fuel consumption",
@@ -171,7 +321,7 @@ export default function Home() {
                     <h2 className="text-3xl font-bold text-gray-900 mb-2">About Us</h2>
                     <div className="w-16 h-1 bg-yellow-400 mx-auto mb-6 rounded"></div>
                     <p className="text-gray-600 leading-relaxed">
-                        We provide a wide range of vehicles for rent, suitable for all your travel needs. Whether you need a compact car for city exploration or a spacious car for your vacation, we have the perfect option for you.
+                        5 United is a car rental company, located in Skala Kallonis, Lesvos island, Greece. We provide a wide range of vehicles for rent, suitable for all your travel needs. Whether you need a compact car for city exploration or a spacious SUV for a family adventure, we have the perfect car for you.
                     </p>
                 </motion.div>
             </section>
@@ -274,6 +424,9 @@ export default function Home() {
                         </motion.div>
                     ))}
                 </div>
+                <button className="mt-6 bg-yellow-400 text-black px-6 py-3 rounded-full font-semibold hover:bg-yellow-300 transition shadow-md">
+                    Call Now
+                </button>
             </section>
 
             {/* CONTACT */}
