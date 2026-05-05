@@ -29,7 +29,7 @@ const hotel = {
     ],
     highlights: [
         { label: "Established", value: "1912" },
-        { label: "Parking", value: "Free" },
+        { label: "Parking", value: "Free (based on availability)" },
         { label: "Rooms", value: "35" },
         { label: "Wellness", value: "Spa & Wellness Centre" },
     ],
@@ -40,9 +40,12 @@ const hotel = {
         "Friendly, attentive service",
     ],
     knowBefore: [
-        "Check-in time: 12:00 PM; Check-out time: 11:00 AM",
+        "Check-in time: 14:00; Check-out time: until 11:00",
         "Located in the city centre — some street noise may be expected",
         "Valid ID and credit card required at check-in",
+        "We are in the heart of Mytilene, at a distance of breathing from the port and the main attractions.",
+        "Pet Policy: Our hotel is friendly to pets (upon appointment) so that visitors don't leave the four-legged friends. ",
+        "Accessibility: There are infrastructure and rooms specially designed for people with mobility difficulties"
     ],
     gallery: [
         { src: IMG.entry, alt: "entry", caption: "Step Inside, Leave the Ordinary Behind" },
