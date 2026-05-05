@@ -1,9 +1,9 @@
 "use client";
 
-import { Car, Phone, MapPin, Star, Mail, Clock } from "lucide-react";
+import { Car as CarIcon, Phone, MapPin, Star, Mail, Clock } from "lucide-react";
 import { motion } from "framer-motion";
 
-type Car = {
+type CarType = {
     name: string;
     image: string;
     description: string;
@@ -19,12 +19,11 @@ type Car = {
     };
 };
 
-
-const cars: Car[] = [
+const cars: CarType[] = [
     {
         name: "OPEL KARL",
         image: "5openkarl.jpg",
-        description: "Ιδανικό για πόλη, χαμηλή κατανάλωση",
+        description: "Perfect for city driving, low fuel consumption",
         specs: {
             class: "A",
             passengers: 4,
@@ -32,14 +31,14 @@ const cars: Car[] = [
             luggage: 2,
             fuel: "Petrol",
             transmission: "Manual",
-            speed:"Max 170",
+            speed: "Max 170",
             ac: true,
         },
     },
     {
         name: "CITROEN C3",
         image: "5citroenc3.jpg",
-        description: "Ιδανικό για πόλη, χαμηλή κατανάλωση",
+        description: "Perfect for city driving, low fuel consumption",
         specs: {
             class: "B",
             passengers: 5,
@@ -47,14 +46,14 @@ const cars: Car[] = [
             luggage: 3,
             fuel: "Petrol",
             transmission: "Manual",
-            speed:"Max 180",
+            speed: "Max 180",
             ac: true,
         },
     },
     {
         name: "NISSAN MICRA",
         image: "5nissanmicra.jpg",
-        description: "Ιδανικό για πόλη, χαμηλή κατανάλωση",
+        description: "Perfect for city driving, low fuel consumption",
         specs: {
             class: "K",
             passengers: 5,
@@ -62,7 +61,7 @@ const cars: Car[] = [
             luggage: 2,
             fuel: "Petrol",
             transmission: "Manual",
-            speed:"Max 180",
+            speed: "Max 180",
             ac: true,
         },
     },
@@ -70,7 +69,7 @@ const cars: Car[] = [
 
 export default function Home() {
     return (
-        <main className="bg-gray-50 text-gray-800">
+        <main className="bg-slate-50 text-gray-800">
             {/* HERO */}
             <section className="relative h-[80vh] flex items-center justify-center text-center text-white">
                 <img
@@ -78,7 +77,7 @@ export default function Home() {
                     className="absolute inset-0 w-full h-full object-cover"
                     alt="car rental"
                 />
-                <div className="absolute inset-0 bg-black/60"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/30"></div>
 
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
@@ -87,35 +86,35 @@ export default function Home() {
                     className="relative z-10 px-4"
                 >
                     <h1 className="text-4xl md:text-6xl font-bold mb-4">
-                       5 UNITED CAR RENTAL
+                        5 UNITED CAR RENTAL
                     </h1>
                     <p className="text-lg md:text-xl mb-6">
-                        Άνεση, αξιοπιστία και οι καλύτερες τιμές
+                        Comfort, reliability and the best prices on the market
                     </p>
 
-                    <button className="bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition">
-                        Κλείσε τώρα
+                    <button className="bg-yellow-400 text-black px-6 py-3 rounded-full font-semibold hover:bg-yellow-300 transition shadow-lg">
+                        Book Now
                     </button>
                 </motion.div>
             </section>
 
             {/* ABOUT */}
             <section className="py-20 px-6 max-w-5xl mx-auto text-center">
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ duration: 0.8 }}
-                >
-                    <h2 className="text-3xl font-bold mb-6">About us</h2>
+                <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.8 }}>
+                    <h2 className="text-3xl font-bold text-gray-900 mb-2">About Us</h2>
+                    <div className="w-16 h-1 bg-yellow-400 mx-auto mb-6 rounded"></div>
                     <p className="text-gray-600 leading-relaxed">
-                        5 United is a car rental company, located in Skala Kallonis, Lesvos island, Greece. We provide a wide range of vehicles for rent, suitable for all your travel needs. Whether you need a compact car for city exploration or a spacious SUV for a family adventure, we have the perfect car for you.
+                        We provide a wide range of vehicles for rent, suitable for all your travel needs.
+                        Whether you need a compact car for city exploration or a spacious car for your vacation,
+                        we have the perfect option for you.
                     </p>
                 </motion.div>
             </section>
 
             {/* CARS */}
             <section className="py-20 px-6 bg-white">
-                <h2 className="text-3xl font-bold text-center mb-10">Our Fleet</h2>
+                <h2 className="text-3xl font-bold text-center text-gray-900 mb-2">Our Fleet</h2>
+                <div className="w-16 h-1 bg-yellow-400 mx-auto mb-10 rounded"></div>
 
                 <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                     {cars.map((car, index) => (
@@ -124,14 +123,10 @@ export default function Home() {
                             initial={{ opacity: 0, y: 50 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.2 }}
-                            className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition hover:-translate-y-2"
+                            className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 hover:-translate-y-2"
                         >
-                            <img
-                                src={car.image}
-                                alt={car.name}
-                                className="w-full h-52 object-cover"
-                            />
-                            <div className="p-5">
+                            <img src={car.image} alt={car.name} className="w-full h-52 object-cover" />
+                            <div className="p-5 border-t-4 border-yellow-400">
                                 <h3 className="text-xl font-semibold">{car.name}</h3>
                                 <p className="text-sm mt-2 text-gray-600">{car.description}</p>
                             </div>
@@ -142,18 +137,19 @@ export default function Home() {
 
             {/* SERVICES */}
             <section className="py-20 px-6 max-w-5xl mx-auto">
-                <h2 className="text-3xl font-bold text-center mb-10">Services</h2>
+                <h2 className="text-3xl font-bold text-center text-gray-900 mb-2">Services</h2>
+                <div className="w-16 h-1 bg-yellow-400 mx-auto mb-10 rounded"></div>
 
                 <div className="grid md:grid-cols-3 gap-6 text-center">
-                    {["24/7 CUSTOMER SUPPORT", "FLEXIBLE RENTAL OPTIONS", "EASY ONLINE BOOKING", "ROADSIDE ASSISTANCE", "Free Baby Seat"].map((service, i) => (
+                    {["24/7 Customer Support", "Flexible Rental Options", "Easy Online Booking", "Roadside Assistance", "Free Baby Seat"].map((service, i) => (
                         <motion.div
                             key={i}
                             initial={{ opacity: 0, scale: 0.8 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ delay: i * 0.1 }}
-                            className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition"
+                            className="bg-white p-6 rounded-xl shadow hover:shadow-xl hover:-translate-y-1 transition duration-300"
                         >
-                            <Car className="mx-auto mb-3 text-blue-600" size={40} />
+                            <CarIcon className="mx-auto mb-3 text-yellow-400" size={40} />
                             <p className="font-medium">{service}</p>
                         </motion.div>
                     ))}
@@ -162,12 +158,13 @@ export default function Home() {
 
             {/* TESTIMONIALS */}
             <section className="bg-gray-100 py-20 px-6">
-                <h2 className="text-3xl font-bold text-center mb-10">
-                    Τι λένε οι πελάτες μας
+                <h2 className="text-3xl font-bold text-center text-gray-900 mb-2">
+                    What Our Customers Say
                 </h2>
+                <div className="w-16 h-1 bg-yellow-400 mx-auto mb-10 rounded"></div>
 
                 <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
-                    {["Άψογη εξυπηρέτηση και πολύ καλές τιμές!", "Το αυτοκίνητο ήταν σε άριστη κατάσταση."].map((text, i) => (
+                    {["Excellent service and great prices!", "The car was in perfect condition."].map((text, i) => (
                         <motion.div
                             key={i}
                             initial={{ opacity: 0, y: 40 }}
@@ -184,28 +181,33 @@ export default function Home() {
 
             {/* CONTACT */}
             <section className="py-20 px-6 text-center">
-                <h2 className="text-3xl font-bold mb-6">Επικοινωνία</h2>
+                <h2 className="text-3xl font-bold text-gray-900 mb-2">Contact</h2>
+                <div className="w-16 h-1 bg-yellow-400 mx-auto mb-6 rounded"></div>
 
                 <div className="space-y-4">
-                    <p className="flex justify-center items-center gap-2">
-                        <Phone size={18} /> +30 698 17 222 15
+                    <p className="flex justify-center items-center gap-2 text-gray-700">
+                        <Phone size={18} className="text-yellow-400" /> +30 6900000000
                     </p>
 
-                    <p className="flex justify-center items-center gap-2">
-                        <MapPin size={18} /> Skala Kallonis 81107,Lesvos island Greece
+                    <p className="flex justify-center items-center gap-2 text-gray-700">
+                        <MapPin size={18} className="text-yellow-400" /> Athens, Greece
                     </p>
-                    <p className="flex justify-center items-center gap-2">
-                        <Mail size={18} /> 5unitedcarrental@gmail.com
+
+                    <p className="flex justify-center items-center gap-2 text-gray-700">
+                        <Mail size={18} className="text-yellow-400" /> info@carrental.gr
                     </p>
-                    <p className="flex justify-center items-center gap-2">
-                        <Clock size={18} /> Opening Hours: Mon - Fri: 7am - 10pm
+
+                    <p className="flex justify-center items-center gap-2 text-gray-700">
+                        <Clock size={18} className="text-yellow-400" /> Mon - Fri: 7am - 10pm
                     </p>
                 </div>
 
-                <button className="mt-6 bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800 transition">
+                <button className="mt-6 bg-yellow-400 text-black px-6 py-3 rounded-full font-semibold hover:bg-yellow-300 transition shadow-md">
                     Call Now
                 </button>
             </section>
+
+
         </main>
     );
 }
