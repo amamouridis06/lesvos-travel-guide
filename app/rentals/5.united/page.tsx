@@ -1,6 +1,6 @@
 "use client";
 
-import { Car, Phone, MapPin, Star, Email, Hours } from "lucide-react";
+import { Car, Phone, MapPin, Star, Mail, Clock } from "lucide-react";
 import { motion } from "framer-motion";
 
 type Car = {
@@ -20,7 +20,7 @@ type Car = {
 };
 
 
-const cars = [
+const cars: CarType[] = [
     {
         name: "OPEL KARL",
         image: "5openkarl.jpg",
