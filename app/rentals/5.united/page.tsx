@@ -1,6 +1,7 @@
 "use client";
 
 import { Car, Phone, MapPin, Star } from "lucide-react";
+import { motion } from "framer-motion";
 
 const cars = [
     {
@@ -24,89 +25,120 @@ export default function Home() {
     return (
         <main className="bg-gray-50 text-gray-800">
             {/* HERO */}
-            <section className="bg-black text-white py-20 text-center">
-                <h1 className="text-4xl md:text-6xl font-bold mb-4">
-                    Ενοικίαση Αυτοκινήτων
-                </h1>
-                <p className="text-lg md:text-xl">
-                    Άνεση, αξιοπιστία και οι καλύτερες τιμές στην αγορά
-                </p>
+            <section className="relative h-[80vh] flex items-center justify-center text-center text-white">
+                <img
+                    src="/cars/hero.jpg"
+                    className="absolute inset-0 w-full h-full object-cover"
+                    alt="car rental"
+                />
+                <div className="absolute inset-0 bg-black/60"></div>
+
+                <motion.div
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="relative z-10 px-4"
+                >
+                    <h1 className="text-4xl md:text-6xl font-bold mb-4">
+                        Ενοικίαση Αυτοκινήτων
+                    </h1>
+                    <p className="text-lg md:text-xl mb-6">
+                        Άνεση, αξιοπιστία και οι καλύτερες τιμές
+                    </p>
+
+                    <button className="bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition">
+                        Κλείσε τώρα
+                    </button>
+                </motion.div>
             </section>
 
             {/* ABOUT */}
-            <section className="py-16 px-6 max-w-5xl mx-auto text-center">
-                <h2 className="text-3xl font-bold mb-6">Σχετικά με εμάς</h2>
-                <p>
-                    Είμαστε μια σύγχρονη εταιρεία ενοικίασης αυτοκινήτων με στόχο την
-                    άριστη εξυπηρέτηση και την παροχή αξιόπιστων οχημάτων για κάθε ανάγκη.
-                </p>
+            <section className="py-20 px-6 max-w-5xl mx-auto text-center">
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 0.8 }}
+                >
+                    <h2 className="text-3xl font-bold mb-6">About us</h2>
+                    <p className="text-gray-600 leading-relaxed">
+                        Είμαστε μια αξιόπιστη εταιρεία ενοικίασης αυτοκινήτων στην Αθήνα,
+                        προσφέροντας σύγχρονα οχήματα, ανταγωνιστικές τιμές και άριστη εξυπηρέτηση.
+                        Στόχος μας είναι να κάνουμε τη μετακίνησή σας εύκολη και άνετη.
+                    </p>
+                </motion.div>
             </section>
 
             {/* CARS */}
-            <section className="py-16 px-6 bg-white">
-                <h2 className="text-3xl font-bold text-center mb-10">
-                    Ο Στόλος μας
-                </h2>
+            <section className="py-20 px-6 bg-white">
+                <h2 className="text-3xl font-bold text-center mb-10">Our Cars</h2>
 
                 <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                     {cars.map((car, index) => (
-                        <div
+                        <motion.div
                             key={index}
-                            className="bg-gray-100 rounded-2xl shadow-md overflow-hidden"
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ delay: index * 0.2 }}
+                            className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition hover:-translate-y-2"
                         >
-                            <img src={car.image} alt={car.name} className="w-full h-48 object-cover" />
+                            <img
+                                src={car.image}
+                                alt={car.name}
+                                className="w-full h-52 object-cover"
+                            />
                             <div className="p-5">
                                 <h3 className="text-xl font-semibold">{car.name}</h3>
-                                <p className="text-sm mt-2">{car.description}</p>
+                                <p className="text-sm mt-2 text-gray-600">{car.description}</p>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </section>
 
             {/* SERVICES */}
-            <section className="py-16 px-6 max-w-5xl mx-auto">
-                <h2 className="text-3xl font-bold text-center mb-10">Υπηρεσίες</h2>
+            <section className="py-20 px-6 max-w-5xl mx-auto">
+                <h2 className="text-3xl font-bold text-center mb-10">Services</h2>
 
                 <div className="grid md:grid-cols-3 gap-6 text-center">
-                    <div>
-                        <Car className="mx-auto mb-3" size={40} />
-                        <p>Μεγάλη ποικιλία αυτοκινήτων</p>
-                    </div>
-
-                    <div>
-                        <Star className="mx-auto mb-3" size={40} />
-                        <p>Ασφάλεια & αξιοπιστία</p>
-                    </div>
-
-                    <div>
-                        <MapPin className="mx-auto mb-3" size={40} />
-                        <p>Παράδοση & παραλαβή</p>
-                    </div>
+                    {["Airport / Port Deliveries", "Road Assistance", "Unlimited Kilometers", "Free Extra Driver", "Free Baby Seat"].map((service, i) => (
+                        <motion.div
+                            key={i}
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            transition={{ delay: i * 0.1 }}
+                            className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition"
+                        >
+                            <Car className="mx-auto mb-3 text-blue-600" size={40} />
+                            <p className="font-medium">{service}</p>
+                        </motion.div>
+                    ))}
                 </div>
             </section>
 
             {/* TESTIMONIALS */}
-            <section className="bg-gray-100 py-16 px-6">
+            <section className="bg-gray-100 py-20 px-6">
                 <h2 className="text-3xl font-bold text-center mb-10">
                     Τι λένε οι πελάτες μας
                 </h2>
 
                 <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
-                    <div className="bg-white p-5 rounded-xl shadow">
-                        <p>"Άψογη εξυπηρέτηση και πολύ καλές τιμές!"</p>
-                        <span className="text-sm mt-2 block">- Γιώργος</span>
-                    </div>
-
-                    <div className="bg-white p-5 rounded-xl shadow">
-                        <p>"Το αυτοκίνητο ήταν σε άριστη κατάσταση."</p>
-                        <span className="text-sm mt-2 block">- Μαρία</span>
-                    </div>
+                    {["Άψογη εξυπηρέτηση και πολύ καλές τιμές!", "Το αυτοκίνητο ήταν σε άριστη κατάσταση."].map((text, i) => (
+                        <motion.div
+                            key={i}
+                            initial={{ opacity: 0, y: 40 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ delay: i * 0.2 }}
+                            className="bg-white p-5 rounded-xl shadow"
+                        >
+                            <div className="text-yellow-400 mb-2">★★★★★</div>
+                            <p>"{text}"</p>
+                        </motion.div>
+                    ))}
                 </div>
             </section>
 
             {/* CONTACT */}
-            <section className="py-16 px-6 text-center">
+            <section className="py-20 px-6 text-center">
                 <h2 className="text-3xl font-bold mb-6">Επικοινωνία</h2>
 
                 <div className="space-y-4">
@@ -118,6 +150,10 @@ export default function Home() {
                         <MapPin size={18} /> Αθήνα, Ελλάδα
                     </p>
                 </div>
+
+                <button className="mt-6 bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800 transition">
+                    Καλέστε τώρα
+                </button>
             </section>
 
             {/* FOOTER */}
