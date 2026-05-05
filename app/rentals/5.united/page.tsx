@@ -27,7 +27,7 @@ export default function Home() {
             {/* HERO */}
             <section className="relative h-[80vh] flex items-center justify-center text-center text-white">
                 <img
-                    src="/cars/hero.jpg"
+                    src="/5.united.jpg"
                     className="absolute inset-0 w-full h-full object-cover"
                     alt="car rental"
                 />
