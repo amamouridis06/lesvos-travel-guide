@@ -42,6 +42,12 @@ export default function NavBar() {
               <Link href="/hotels" className="hover:text-yellow-300 transition">
                 Hotels
               </Link>
+              <Link href="/activities/kariofilis-ecofarm" className="hover:text-yellow-300 transition">
+                Activities
+              </Link>
+              <Link href="/rentals/5.united" className="hover:text-yellow-300 transition">
+                Rentals
+              </Link>
               <Link href="/about" className="hover:text-yellow-300 transition">
                 About
               </Link>
@@ -67,22 +73,12 @@ export default function NavBar() {
         {mobileOpen && (
             <div className="md:hidden bg-emerald-900/95 border-t border-emerald-800 shadow-lg text-white">
               <div className="max-w-6xl mx-auto px-4 py-4 flex flex-col">
-                <Link
-                    href="/"
-                    onClick={closeMenu}
-                    className="py-3 border-b border-white/10 hover:text-yellow-300 transition"
-                >
+                <Link href="/" onClick={closeMenu} className="py-3 border-b border-white/10 hover:text-yellow-300 transition" >
                   Home
                 </Link>
-
-                <Link
-                    href="/villages"
-                    onClick={closeMenu}
-                    className="py-3 border-b border-white/10 hover:text-yellow-300 transition"
-                >
+                <Link href="/villages" onClick={closeMenu} className="py-3 border-b border-white/10 hover:text-yellow-300 transition" >
                   Villages
                 </Link>
-
                 <Link
                     href="/beaches"
                     onClick={closeMenu}
@@ -119,7 +115,14 @@ export default function NavBar() {
                     onClick={closeMenu}
                     className="py-3 border-b border-white/10 hover:text-yellow-300 transition"
                 >
-                  Hotels
+                  Activities
+                </Link>
+                <Link
+                    href="/rentals/5.united"
+                    onClick={closeMenu}
+                    className="py-3 border-b border-white/10 hover:text-yellow-300 transition"
+                >
+                  Activities
                 </Link>
 
                 <Link
