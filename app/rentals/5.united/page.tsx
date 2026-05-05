@@ -22,7 +22,7 @@ type CarType = {
 const cars: CarType[] = [
     {
         name: "OPEL KARL",
-        image: "opencarl.jpg",
+        image: "/open_carl.jpg",
         description: "Perfect for city driving, low fuel consumption",
         specs: {
             class: "A",
@@ -37,7 +37,7 @@ const cars: CarType[] = [
     },
     {
         name: "CITROEN C3",
-        image: "citroenc3.jpg",
+        image: "/citroen_c3.jpg",
         description: "Perfect for city driving, low fuel consumption",
         specs: {
             class: "B",
@@ -52,7 +52,7 @@ const cars: CarType[] = [
     },
     {
         name: "NISSAN MICRA",
-        image: "nissanmicra.jpg",
+        image: "/nissan_micra.jpg",
         description: "Perfect for city driving, low fuel consumption",
         specs: {
             class: "K",
