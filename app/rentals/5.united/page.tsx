@@ -20,7 +20,7 @@ type Car = {
 };
 
 
-const cars: CarType[] = [
+const cars: Car[] = [
     {
         name: "OPEL KARL",
         image: "5openkarl.jpg",
