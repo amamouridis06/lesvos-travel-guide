@@ -29,7 +29,7 @@ const hotel = {
     ],
     highlights: [
         { label: "Established", value: "1912" },
-        { label: "Parking", value: "Free (based on availability)" },
+        { label: "Parking", value: "Free (depend on availability)" },
         { label: "Rooms", value: "35" },
         { label: "Wellness", value: "Spa & Wellness Centre" },
     ],

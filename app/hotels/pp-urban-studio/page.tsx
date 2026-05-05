@@ -380,38 +380,19 @@ export default function PPUrban() {
                                 "md:col-span-5 md:col-start-8 aspect-[4/3]",
                             ];
                             return (
-                                <figure
-                                    key={g.src}
-                                    className={`group ${layouts[i] ?? "md:col-span-4"}`}
-                                >
-                                    <div
-                                        className="relative aspect-[4/3] overflow-hidden rounded-2xl"
-                                        style={{ background: "var(--ms-border)" }}
-                                    >
+                                <figure key={g.src} className={`group ${layouts[i] ?? "md:col-span-4 aspect-[4/5]"}`}>
+                                    <div className="relative h-full min-h-[260px] overflow-hidden md:min-h-0" style={{ background: "var(--ms-border)" }}>
                                         <img
                                             src={g.src}
                                             alt={g.alt}
                                             loading="lazy"
-                                            className="w-full h-full object-cover object-[30%_center] transition-transform duration-[1400ms] ease-out group-hover:scale-[1.06]"
+                                            className="h-full w-full object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-[1.06]"
                                         />
-
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-100" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-100" />
                                     </div>
-
-                                    <figcaption className="mt-4 flex items-baseline gap-3 px-1">
-                                        <span
-                                            className="ms-serif-num text-sm"
-                                             style={{ color: "var(--ms-gold)" }}
-                                        >
-                                            {String(i + 1).padStart(2, "0")}
-                                        </span>
-
-                                        <span
-                                            className="ms-display text-lg italic"
-                                            style={{ color: "var(--ms-muted)" }}
-                                        >
-                                            {g.caption}
-                                         </span>
+                                    <figcaption className="mt-4 flex items-baseline gap-3">
+                                        <span className="ms-serif-num text-sm" style={{ color: "var(--ms-gold)" }}>0{i + 1}</span>
+                                        <span className="ms-display text-lg italic" style={{ color: "var(--ms-muted)" }}>{g.caption}</span>
                                     </figcaption>
                                 </figure>
                             );
