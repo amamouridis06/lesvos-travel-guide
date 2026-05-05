@@ -1,23 +1,70 @@
 "use client";
 
-import { Car, Phone, MapPin, Star } from "lucide-react";
+import { Car, Phone, MapPin, Star, Email, Hours } from "lucide-react";
 import { motion } from "framer-motion";
+
+type Car = {
+    name: string;
+    image: string;
+    description: string;
+    specs: {
+        class: string;
+        passengers: number;
+        doors: number;
+        luggage: number;
+        fuel: string;
+        transmission: string;
+        speed: string;
+        ac: boolean;
+    };
+};
+
 
 const cars = [
     {
-        name: "Economy Car",
-        image: "/cars/economy.jpg",
+        name: "OPEL KARL",
+        image: "5openkarl.jpg",
         description: "Ιδανικό για πόλη, χαμηλή κατανάλωση",
+        specs: {
+            class: "A",
+            passengers: 4,
+            doors: 5,
+            luggage: 2,
+            fuel: "Petrol",
+            transmission: "Manual",
+            speed:"Max 170",
+            ac: true,
+        },
     },
     {
-        name: "SUV",
-        image: "/cars/suv.jpg",
-        description: "Άνεση και χώρος για οικογένειες",
+        name: "CITROEN C3",
+        image: "5citroenc3.jpg",
+        description: "Ιδανικό για πόλη, χαμηλή κατανάλωση",
+        specs: {
+            class: "B",
+            passengers: 5,
+            doors: 5,
+            luggage: 3,
+            fuel: "Petrol",
+            transmission: "Manual",
+            speed:"Max 180",
+            ac: true,
+        },
     },
     {
-        name: "Luxury",
-        image: "/cars/luxury.jpg",
-        description: "Premium εμπειρία οδήγησης",
+        name: "NISSAN MICRA",
+        image: "5nissanmicra.jpg",
+        description: "Ιδανικό για πόλη, χαμηλή κατανάλωση",
+        specs: {
+            class: "K",
+            passengers: 5,
+            doors: 5,
+            luggage: 2,
+            fuel: "Petrol",
+            transmission: "Manual",
+            speed:"Max 180",
+            ac: true,
+        },
     },
 ];
 
@@ -40,7 +87,7 @@ export default function Home() {
                     className="relative z-10 px-4"
                 >
                     <h1 className="text-4xl md:text-6xl font-bold mb-4">
-                        Ενοικίαση Αυτοκινήτων
+                       5 UNITED CAR RENTAL
                     </h1>
                     <p className="text-lg md:text-xl mb-6">
                         Άνεση, αξιοπιστία και οι καλύτερες τιμές
@@ -61,16 +108,14 @@ export default function Home() {
                 >
                     <h2 className="text-3xl font-bold mb-6">About us</h2>
                     <p className="text-gray-600 leading-relaxed">
-                        Είμαστε μια αξιόπιστη εταιρεία ενοικίασης αυτοκινήτων στην Αθήνα,
-                        προσφέροντας σύγχρονα οχήματα, ανταγωνιστικές τιμές και άριστη εξυπηρέτηση.
-                        Στόχος μας είναι να κάνουμε τη μετακίνησή σας εύκολη και άνετη.
+                        5 United is a car rental company, located in Skala Kallonis, Lesvos island, Greece. We provide a wide range of vehicles for rent, suitable for all your travel needs. Whether you need a compact car for city exploration or a spacious SUV for a family adventure, we have the perfect car for you.
                     </p>
                 </motion.div>
             </section>
 
             {/* CARS */}
             <section className="py-20 px-6 bg-white">
-                <h2 className="text-3xl font-bold text-center mb-10">Our Cars</h2>
+                <h2 className="text-3xl font-bold text-center mb-10">Our Fleet</h2>
 
                 <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                     {cars.map((car, index) => (
@@ -100,7 +145,7 @@ export default function Home() {
                 <h2 className="text-3xl font-bold text-center mb-10">Services</h2>
 
                 <div className="grid md:grid-cols-3 gap-6 text-center">
-                    {["Airport / Port Deliveries", "Road Assistance", "Unlimited Kilometers", "Free Extra Driver", "Free Baby Seat"].map((service, i) => (
+                    {["24/7 CUSTOMER SUPPORT", "FLEXIBLE RENTAL OPTIONS", "EASY ONLINE BOOKING", "ROADSIDE ASSISTANCE", "Free Baby Seat"].map((service, i) => (
                         <motion.div
                             key={i}
                             initial={{ opacity: 0, scale: 0.8 }}
@@ -143,23 +188,24 @@ export default function Home() {
 
                 <div className="space-y-4">
                     <p className="flex justify-center items-center gap-2">
-                        <Phone size={18} /> +30 6900000000
+                        <Phone size={18} /> +30 698 17 222 15
                     </p>
 
                     <p className="flex justify-center items-center gap-2">
-                        <MapPin size={18} /> Αθήνα, Ελλάδα
+                        <MapPin size={18} /> Skala Kallonis 81107,Lesvos island Greece
+                    </p>
+                    <p className="flex justify-center items-center gap-2">
+                        <Email size={18} /> 5unitedcarrental@gmail.com
+                    </p>
+                    <p className="flex justify-center items-center gap-2">
+                        <Hours size={18} /> Opening Hours: Mon - Fri: 7am - 10pm
                     </p>
                 </div>
 
                 <button className="mt-6 bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800 transition">
-                    Καλέστε τώρα
+                    Call Now
                 </button>
             </section>
-
-            {/* FOOTER */}
-            <footer className="bg-black text-white text-center py-6">
-                © 2026 Car Rental. All rights reserved.
-            </footer>
         </main>
     );
 }
