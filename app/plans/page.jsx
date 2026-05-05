@@ -7,27 +7,29 @@ export default function LesvosSubscriptionPlans() {
     {
       id: "starter",
       name: "Starter Listing",
-      price: 18,
+      price: 19,
       period: "/month",
       description:
         "Για μικρές επιχειρήσεις που θέλουν μια καθαρή και αξιόπιστη παρουσία στον ταξιδιωτικό οδηγό.",
       features: [
         "Καταχώριση στον οδηγό επιχειρήσεων",
+        "Εμφάνιση στη σχετική κατηγορία",
         "1 κύρια φωτογραφία",
         "Βασικά στοιχεία επικοινωνίας",
-        "Σύνδεσμος προς website ή social media",
-        "Περιγραφή μικρής έκτασης",
+        "Σύνδεσμος προς Instagram, website ή Google Maps",
+        "Βασική υποστήριξη συνεργατών",
+        "Δυνατότητα επικοινωνίας μέσω email ή φόρμας υποστήριξης",
       ],
       cta: "Επιλογή πακέτου",
       highlighted: false,
     },
     {
       id: "professional",
-      name: "Professional",
-      price: 23,
+      name: "Recommended Partner",
+      price: 35,
       period: "/month",
       description:
-        "Η ιδανική επιλογή για ξενοδοχεία, εστιατόρια και καταστήματα που θέλουν αυξημένη προβολή.",
+        "Για επιχειρήσεις που θέλουν αυξημένη προβολή και να εμφανίζονται ως προτεινόμενη επιλογή στους επισκέπτες",
       features: [
         "Όλα όσα περιλαμβάνει το Starter",
         "Έως 10 φωτογραφίες",
@@ -35,6 +37,9 @@ export default function LesvosSubscriptionPlans() {
         "Προτεραιότητα στα αποτελέσματα αναζήτησης",
         "Προβολή ως προτεινόμενη επιχείρηση",
         "1 promotional story ή post τον μήνα",
+        "Δυνατότητα μικρών αλλαγών στην καταχώρηση",
+        "Προτεραιότητα στην υποστήριξη συνεργατών",
+        "Δυνατότητα επικοινωνίας 24/7 μέσω email"
       ],
       cta: "Ξεκίνα με το Professional",
       highlighted: true,
@@ -42,17 +47,19 @@ export default function LesvosSubscriptionPlans() {
     {
       id: "featured",
       name: "Featured Partner",
-      price: 45,
+      price: 54,
       period: "/month",
       description:
         "Για επιχειρήσεις που επιθυμούν premium τοποθέτηση, ενισχυμένη προβολή και σταθερή προώθηση.",
       features: [
         "Όλα όσα περιλαμβάνει το Professional",
-        "Featured badge στην καταχώριση",
         "Προτεραιότητα στην αρχική σελίδα",
         "2 promotional posts ή reels τον μήνα",
         "Extra προβολή μέσω stories",
-        "Προτεραιότητα σε ειδικά αφιερώματα και καμπάνιες",
+        "Ένταξη σε seasonal guides, όπως summer guide, nightlife guide ή food guide",
+        "Extra προβολή μέσω stories",
+        "Ταχύτερη εξυπηρέτηση για αλλαγές και ενημερώσεις",
+        "Δυνατότητα επικοινωνίας 24/7 μέσω email ή τηλεφωνικής υποστήριξης αλλα και μεσω intagram"
       ],
       cta: "Γίνε Featured Partner",
       highlighted: false,
@@ -63,38 +70,38 @@ export default function LesvosSubscriptionPlans() {
     {
       id: "extraPhotos",
       name: "Επιπλέον φωτογραφίες",
-      description: "Προσθήκη περισσότερου φωτογραφικού υλικού στην καταχώριση.",
+      description: "Προσθήκη έως 5 επιπλέον φωτογραφιών στην καταχώριση.",
       price: 5,
     },
     {
       id: "homepagePriority",
       name: "Προτεραιότητα στην αρχική",
-      description: "Καλύτερη τοποθέτηση στην homepage για μεγαλύτερη ορατότητα.",
+      description: "Καλύτερη τοποθέτηση στην αρχική σελίδα για αυξημένη ορατότητα.",
       price: 10,
     },
     {
       id: "instagramStory",
       name: "Instagram story",
       description: "1 επιπλέον story προβολής στα social media.",
-      price: 4,
+      price: 5,
     },
     {
       id: "instagramPost",
       name: "Instagram post",
-      description: "1 επιπλέον post για ενίσχυση της επιχείρησής σας.",
-      price: 9,
+      description: "1 επιπλέον post προβολής στα social media.",
+      price: 10,
     },
     {
       id: "featuredBadge",
       name: "Featured badge",
-      description: "Ειδική σήμανση για πιο premium παρουσίαση.",
+      description: "Ειδική σήμανση στην καταχώριση για πιο premium παρουσίαση.",
       price: 7,
     },
     {
-      id: "seoPage",
-      name: "24/7 υποστήριξη",
-      description: "Υποστήριξη όλο το 24ωρο",
-      price: 25,
+      id: "priorityUpdates",
+      name: "Γρήγορες αλλαγές καταχώρισης",
+      description: "Προτεραιότητα σε μικρές αλλαγές, ενημερώσεις και διορθώσεις στην καταχώριση.",
+      price: 8,
     },
   ];
 
