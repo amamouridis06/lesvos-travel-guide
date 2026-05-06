@@ -274,6 +274,7 @@ export default function Home() {
 
 return (
     <main className="bg-slate-50 text-gray-800">
+    <div className="bg-slate-50 text-gray-800">
         <section className="py-24 px-6 bg-gradient-to-b from-white to-slate-50">
             <div className="max-w-5xl mx-auto text-center">
 
@@ -463,7 +464,9 @@ return (
                     </a>
 
                 </motion.div>
-
+            </div>
+        </section>
+    </div>
     </main>
 );
 }
