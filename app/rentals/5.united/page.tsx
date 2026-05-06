@@ -263,6 +263,50 @@ export default function Home() {
 
 return (
     <main className="bg-slate-50 text-gray-800">
+        <section className="py-20 px-6 max-w-5xl mx-auto text-center">
+            <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7 }}
+                viewport={{ once: true }}
+            >
+                <h2 className="text-3xl font-bold text-gray-900 mb-2">About Us</h2>
+                <div className="w-16 h-1 bg-yellow-400 mx-auto mb-6 rounded"></div>
+
+                <p className="text-gray-600 leading-relaxed">
+                    5 United is a car rental company, located in Skala Kallonis, Lesvos island, Greece.
+                    We provide a wide range of vehicles for rent, suitable for all your travel needs.
+                </p>
+            </motion.div>
+        </section>
+        <section className="py-20 px-6 bg-white">
+            <h2 className="text-3xl font-bold text-center mb-10">Services</h2>
+
+            <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+
+                {[
+                    "24/7 Support",
+                    "Flexible Rental Options",
+                    "Easy Online Booking",
+                    "Roadside Assistance",
+                    "Free Baby Seat",
+                    "Full Insurance Options"
+                ].map((service, i) => (
+                    <motion.div
+                        key={i}
+                        initial={{ opacity: 0, y: 40, scale: 0.9 }}
+                        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                        transition={{ duration: 0.4, delay: i * 0.1 }}
+                        viewport={{ once: true }}
+                        whileHover={{ scale: 1.05 }}
+                        className="bg-slate-50 p-6 rounded-xl shadow hover:shadow-xl transition text-center"
+                    >
+                        <div className="text-yellow-400 text-3xl mb-3">🚗</div>
+                        <p className="font-medium">{service}</p>
+                    </motion.div>
+                ))}
+            </div>
+        </section>
 
         <section className="py-20 px-6 bg-white">
             <h2 className="text-3xl font-bold text-center mb-10">Our Fleet</h2>
