@@ -2,6 +2,17 @@
 
 import { motion } from "framer-motion";
 
+import { Car, Shield, Clock, MapPin, Baby, KeyRound, Phone, Mail} from "lucide-react";
+
+const services = [
+    { icon: <Clock />, title: "24/7 Support", desc: "We are always available for you" },
+    { icon: <KeyRound />, title: "Easy Pickup", desc: "Fast and simple car delivery" },
+    { icon: <Car />, title: "Modern Fleet", desc: "New and well maintained cars" },
+    { icon: <Shield />, title: "Full Insurance", desc: "Drive with total safety" },
+    { icon: <Baby />, title: "Free Baby Seat", desc: "Safety for your family" },
+    { icon: <MapPin />, title: "Island Coverage", desc: "We deliver anywhere in Lesvos" },
+];
+
 /* ---------------- SEASONS ---------------- */
 const seasons = [
     { name: "Low Season", start: "2026-01-01", end: "2026-04-15" },
@@ -263,46 +274,63 @@ export default function Home() {
 
 return (
     <main className="bg-slate-50 text-gray-800">
-        <section className="py-20 px-6 max-w-5xl mx-auto text-center">
-            <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7 }}
-                viewport={{ once: true }}
-            >
-                <h2 className="text-3xl font-bold text-gray-900 mb-2">About Us</h2>
-                <div className="w-16 h-1 bg-yellow-400 mx-auto mb-6 rounded"></div>
+        <section className="py-24 px-6 bg-gradient-to-b from-white to-slate-50">
+            <div className="max-w-5xl mx-auto text-center">
 
-                <p className="text-gray-600 leading-relaxed">
-                    5 United is a car rental company, located in Skala Kallonis, Lesvos island, Greece.
-                    We provide a wide range of vehicles for rent, suitable for all your travel needs.
-                </p>
-            </motion.div>
+                <motion.div
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    viewport={{ once: true }}
+                >
+            <span className="text-yellow-500 font-semibold tracking-widest text-sm">
+                ABOUT US
+            </span>
+
+                    <h2 className="text-4xl md:text-5xl font-bold mt-3 text-gray-900">
+                        Reliable Car Rental in Lesvos
+                    </h2>
+
+                    <div className="w-20 h-1 bg-yellow-400 mx-auto my-6 rounded-full"></div>
+
+                    <p className="text-gray-600 leading-relaxed text-lg max-w-3xl mx-auto">
+                        5 United Car Rental offers high-quality vehicles, transparent pricing and
+                        premium service in Skala Kallonis, Lesvos. Whether you need a compact city car
+                        or an SUV for island exploration, we guarantee comfort and reliability.
+                    </p>
+                </motion.div>
+
+            </div>
         </section>
-        <section className="py-20 px-6 bg-white">
-            <h2 className="text-3xl font-bold text-center mb-10">Services</h2>
+        <section className="py-24 px-6 bg-white">
+            <div className="text-center mb-12">
+                <h2 className="text-4xl font-bold text-gray-900">Our Services</h2>
+                <div className="w-20 h-1 bg-yellow-400 mx-auto mt-4 rounded-full"></div>
+            </div>
 
-            <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
 
-                {[
-                    "24/7 Support",
-                    "Flexible Rental Options",
-                    "Easy Online Booking",
-                    "Roadside Assistance",
-                    "Free Baby Seat",
-                    "Full Insurance Options"
-                ].map((service, i) => (
+                {services.map((s, i) => (
                     <motion.div
                         key={i}
-                        initial={{ opacity: 0, y: 40, scale: 0.9 }}
-                        whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                        transition={{ duration: 0.4, delay: i * 0.1 }}
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: i * 0.1 }}
                         viewport={{ once: true }}
                         whileHover={{ scale: 1.05 }}
-                        className="bg-slate-50 p-6 rounded-xl shadow hover:shadow-xl transition text-center"
+                        className="group bg-slate-50 p-8 rounded-2xl shadow-sm hover:shadow-xl transition border border-transparent hover:border-yellow-300"
                     >
-                        <div className="text-yellow-400 text-3xl mb-3">🚗</div>
-                        <p className="font-medium">{service}</p>
+                        <div className="text-yellow-500 mb-4 group-hover:scale-110 transition">
+                            {s.icon}
+                        </div>
+
+                        <h3 className="text-xl font-semibold mb-2 text-gray-900">
+                            {s.title}
+                        </h3>
+
+                        <p className="text-gray-600 text-sm">
+                            {s.desc}
+                        </p>
                     </motion.div>
                 ))}
             </div>
@@ -380,45 +408,61 @@ return (
                 ))}
             </div>
         </section>
-        {/* CONTACT */}
-        <section className="py-20 px-6 bg-slate-50">
-            <h2 className="text-3xl font-bold text-center mb-10">Contact Us</h2>
+        <section className="py-24 px-6 bg-gradient-to-b from-slate-50 to-white">
 
-            <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+            <div className="text-center mb-12">
+                <h2 className="text-4xl font-bold text-gray-900">Contact Us</h2>
+                <div className="w-20 h-1 bg-yellow-400 mx-auto mt-4 rounded-full"></div>
+            </div>
 
-                {/* INFO */}
+            <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-start">
+
+                {/* LEFT INFO */}
                 <motion.div
-                    initial={{ opacity: 0, x: -50 }}
+                    initial={{ opacity: 0, x: -40 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6 }}
+                    transition={{ duration: 0.7 }}
+                    viewport={{ once: true }}
                     className="space-y-6"
                 >
-                    <div>
-                        <h3 className="text-xl font-semibold">5 United Car Rental</h3>
-                        <p className="text-gray-600 mt-2">
-                            Skala Kallonis, Lesvos Island, Greece
-                        </p>
+
+                    <div className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition">
+                        <h3 className="text-xl font-semibold mb-4">5 United Car Rental</h3>
+
+                        <div className="space-y-4 text-gray-700">
+
+                            <div className="flex items-center gap-3">
+                                <MapPin className="text-yellow-500" size={18} />
+                                Skala Kallonis, Lesvos Island, Greece
+                            </div>
+
+                            <div className="flex items-center gap-3">
+                                <Phone className="text-yellow-500" size={18} />
+                                +30 698 17 222 15
+                            </div>
+
+                            <div className="flex items-center gap-3">
+                                <Mail className="text-yellow-500" size={18} />
+                                5unitedcarrental@gmail.com
+                            </div>
+
+                            <div className="flex items-center gap-3">
+                                <Clock className="text-yellow-500" size={18} />
+                                Mon - Fri: 07:00 - 22:00
+                            </div>
+
+                        </div>
                     </div>
 
-                    <div className="space-y-3 text-gray-700">
+                    {/* CALL BUTTON */}
+                    <a
+                        href="tel:+306981722215"
+                        className="inline-block bg-yellow-400 text-black px-6 py-3 rounded-full font-semibold hover:bg-yellow-300 transition shadow-md"
+                    >
+                        Call Now
+                    </a>
 
-                        <p>📞 0030 698 17 222 15</p>
-                        <p>📧 5unitedcarrental@gmail.com</p>
-                        <p>🕒 Mon - Sun: 07:00 - 22:00</p>
-
-                    </div>
-
-                    <div className="pt-4">
-                        <a
-                            href="tel:+30698 17 222 15"
-                            className="inline-block bg-yellow-400 text-black px-6 py-3 rounded-full font-semibold hover:bg-yellow-300 transition shadow-md"
-                        >
-                            Call Now
-                        </a>
-                    </div>
                 </motion.div>
-            </div>
-        </section>
 
     </main>
 );
