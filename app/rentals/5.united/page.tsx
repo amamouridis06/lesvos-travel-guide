@@ -199,12 +199,18 @@ const cars: CarType[] = [
 export default function Home() {
     const season = getCurrentSeason();
 
-function getPrice(car: CarType) {
-    if (!season) return "";
-    if (season.name === "Low Season") return car.prices.low;
-    if (season.name === "Mid Season") return car.prices.mid;
-    if (season.name === "High Season") return car.prices.high;
-}
+    function getPrice(car: CarType) {
+        if (!season) return "—";
+
+        const price =
+            season.name === "Low Season"
+                ? car.prices.low
+                : season.name === "Mid Season"
+                    ? car.prices.mid
+                    : car.prices.high;
+
+        return `${price.min} - ${price.max}`;
+    }
 
 return (
     <main className="bg-slate-50 text-gray-800">
