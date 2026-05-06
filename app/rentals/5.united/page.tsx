@@ -44,24 +44,155 @@ type CarType = {
 
 /* ---------------- CARS ---------------- */
 const cars: CarType[] = [
-    { name: "OPEL KARL", image: "/opencarl.jpg", description: "City car", prices: { low: 18 - 25, mid: 25 - 30, high: 40 - 50 }, specs: { class: "A", passengers: 4, doors: 5, luggage: 2, fuel: "Petrol", transmission: "Manual", speed: "Max 170", ac: true } },
-    { name: "FIAT PANDA", image: "/panda.jpg", description: "City", prices: { low: 22, mid: 30, high: 45 }, specs: { class: "A", passengers: 5, doors: 5, luggage: 2, fuel: "Petrol", transmission: "Manual", speed: "Max 170", ac: true } },
-    { name: "HYUNDAI I10", image: "/i10.jpg", description: "City", prices: { low: 20, mid: 28, high: 40 }, specs: { class: "A", passengers: 5, doors: 5, luggage: 2, fuel: "Petrol", transmission: "Manual", speed: "Max 160", ac: true } },
-    { name: "TOYOTA AYGO", image: "/aygo.jpg", description: "City", prices: { low: 20, mid: 28, high: 40 }, specs: { class: "A", passengers: 4, doors: 5, luggage: 2, fuel: "Petrol", transmission: "Manual", speed: "Max 160", ac: true } },
-    { name: "OPEL CORSA", image: "/corsa.jpg", description: "City car", prices: { low: 25, mid: 35, high: 50 }, specs: { class: "B", passengers: 5, doors: 5, luggage: 2, fuel: "Petrol", transmission: "Manual", speed: "Max 180", ac: false } },
-    { name: "HYUNDAI I20", image: "/i20.jpg", description: "City car", prices: { low: 28, mid: 38, high: 55 }, specs: { class: "B", passengers: 5, doors: 5, luggage: 2, fuel: "Petrol", transmission: "Manual", speed: "Max 180", ac: true } },
-    { name: "SKODA FABIA", image: "/fabia.jpg", description: "Comfort", prices: { low: 30, mid: 40, high: 60 }, specs: { class: "C", passengers: 5, doors: 5, luggage: 3, fuel: "Petrol", transmission: "Manual", speed: "Max 190", ac: false } },
-    { name: "RENAULT CLIO", image: "/clio.jpg", description: "Reliable", prices: { low: 30, mid: 42, high: 60 }, specs: { class: "C", passengers: 5, doors: 5, luggage: 2, fuel: "Diesel", transmission: "Manual", speed: "Max 180", ac: true } },
-    { name: "OPEL ASTRA", image: "/astra.jpg", description: "Family car", prices: { low: 35, mid: 50, high: 70 }, specs: { class: "D", passengers: 5, doors: 5, luggage: 4, fuel: "Diesel", transmission: "Manual", speed: "Max 200", ac: false } },
-    { name: "SKODA YETI", image: "/yeti.jpg", description: "SUV", prices: { low: 45, mid: 60, high: 85 }, specs: { class: "E", passengers: 5, doors: 5, luggage: 4, fuel: "Petrol", transmission: "Automatic", speed: "Max 200", ac: true } },
-    { name: "PEUGEOT 2008", image: "/peugeot.jpg", description: "SUV", prices: { low: 45, mid: 60, high: 85 }, specs: { class: "E", passengers: 5, doors: 5, luggage: 3, fuel: "Petrol", transmission: "Automatic", speed: "Max 200", ac: false } },
-    { name: "FIAT PANDA 4X4", image: "/panda4.jpg", description: "4x4", prices: { low: 40, mid: 55, high: 75 }, specs: { class: "E", passengers: 5, doors: 5, luggage: 2, fuel: "Petrol", transmission: "Manual", speed: "Max 170", ac: true } },
-    { name: "SUZUKI ALTO", image: "/alto.jpg", description: "Small", prices: { low: 18, mid: 25, high: 35 }, specs: { class: "A", passengers: 5, doors: 5, luggage: 2, fuel: "Petrol", transmission: "Manual", speed: "Max 160", ac: true } },
-    { name: "NISSAN NOTE", image: "/nnote.jpg", description: "Compact", prices: { low: 28, mid: 38, high: 55 }, specs: { class: "C", passengers: 4, doors: 5, luggage: 3, fuel: "Diesel", transmission: "Manual", speed: "Max 200", ac: false } },
-    { name: "FIAT PANDA II", image: "/pantaii.png", description: "Small", prices: { low: 20, mid: 28, high: 40 }, specs: { class: "A", passengers: 4, doors: 5, luggage: 2, fuel: "Diesel", transmission: "Manual", speed: "Max 200", ac: true } },
-    { name: "VW POLO", image: "/polo.jpg", description: "Comfort", prices: { low: 28, mid: 38, high: 55 }, specs: { class: "B", passengers: 5, doors: 5, luggage: 2, fuel: "Petrol", transmission: "Manual", speed: "Max 170", ac: true } },
-    { name: "CITROEN C3", image: "/citroen_c3.jpg", description: "Comfort", prices: { low: 28, mid: 38, high: 55 }, specs: { class: "B", passengers: 5, doors: 5, luggage: 3, fuel: "Petrol", transmission: "Manual", speed: "Max 180", ac: true } },
-    { name: "NISSAN MICRA", image: "/nissan_micra.jpg", description: "City", prices: { low: 28, mid: 38, high: 55 }, specs: { class: "K", passengers: 5, doors: 5, luggage: 2, fuel: "Petrol", transmission: "Manual", speed: "Max 180", ac: true } },
+    {
+        name: "OPEL KARL",
+        image: "/opencarl.jpg",
+        description: "City car",
+        prices: {
+            low: { min: 18, max: 25 },
+            mid: { min: 25, max: 30 },
+            high: { min: 40, max: 50 },
+        },
+        specs: { class: "A", passengers: 4, doors: 5, luggage: 2, fuel: "Petrol", transmission: "Manual", speed: "Max 170", ac: true }
+    },
+    {
+        name: "FIAT PANDA",
+        image: "/panda.jpg",
+        description: "City",
+        prices: {
+            low: { min: 18, max: 25 },
+            mid: { min: 25, max: 30 },
+            high: { min: 40, max: 50 },
+        },
+        specs: { class: "A", passengers: 5, doors: 5, luggage: 2, fuel: "Petrol", transmission: "Manual", speed: "Max 170", ac: true }
+    },
+    {
+        name: "HYUNDAI I10",
+        image: "/i10.jpg",
+        description: "City",
+        prices: {
+            low: { min: 18, max: 25 },
+            mid: { min: 25, max: 30 },
+            high: { min: 40, max: 50 },
+        },
+        specs: { class: "A", passengers: 5, doors: 5, luggage: 2, fuel: "Petrol", transmission: "Manual", speed: "Max 160", ac: true }
+    },
+    {
+        name: "TOYOTA AYGO",
+        image: "/aygo.jpg",
+        description: "City",
+        prices: {
+            low: { min: 18, max: 25 },
+            mid: { min: 25, max: 30 },
+            high: { min: 40, max: 50 },
+        },
+        specs: { class: "A", passengers: 4, doors: 5, luggage: 2, fuel: "Petrol", transmission: "Manual", speed: "Max 160", ac: true }
+    },
+    {
+        name: "OPEL CORSA",
+        image: "/corsa.jpg",
+        description: "City car",
+        prices: {
+            low: { min: 20, max: 28 },
+            mid: { min: 30, max: 35 },
+            high: { min: 45, max: 55 },
+        },
+        specs: { class: "B", passengers: 5, doors: 5, luggage: 2, fuel: "Petrol", transmission: "Manual", speed: "Max 180", ac: false }
+    },
+    {
+        name: "HYUNDAI I20",
+        image: "/i20.jpg",
+        description: "City car",
+        prices: {
+            low: { min: 18, max: 25 },
+            mid: { min: 25, max: 30 },
+            high: { min: 40, max: 50 },
+        }, specs: { class: "B", passengers: 5, doors: 5, luggage: 2, fuel: "Petrol", transmission: "Manual", speed: "Max 180", ac: true }
+    },
+    {
+        name: "SKODA FABIA",
+        image: "/fabia.jpg",
+        description: "Comfort",
+        prices: { low: 30, mid: 40, high: 60 },
+        specs: { class: "C", passengers: 5, doors: 5, luggage: 3, fuel: "Petrol", transmission: "Manual", speed: "Max 190", ac: false }
+    },
+    {
+        name: "RENAULT CLIO",
+        image: "/clio.jpg",
+        description: "Reliable",
+        prices: { low: 30, mid: 42, high: 60 },
+        specs: { class: "C", passengers: 5, doors: 5, luggage: 2, fuel: "Diesel", transmission: "Manual", speed: "Max 180", ac: true }
+    },
+    {
+        name: "OPEL ASTRA",
+        image: "/astra.jpg",
+        description: "Family car",
+        prices: { low: 35, mid: 50, high: 70 },
+        specs: { class: "D", passengers: 5, doors: 5, luggage: 4, fuel: "Diesel", transmission: "Manual", speed: "Max 200", ac: false }
+    },
+    {
+        name: "SKODA YETI",
+        image: "/yeti.jpg",
+        description: "SUV",
+        prices: { low: 45, mid: 60, high: 85 },
+        specs: { class: "E", passengers: 5, doors: 5, luggage: 4, fuel: "Petrol", transmission: "Automatic", speed: "Max 200", ac: true }
+    },
+    {
+        name: "PEUGEOT 2008",
+        image: "/peugeot.jpg",
+        description: "SUV", prices: { low: 45, mid: 60, high: 85 },
+        specs: { class: "E", passengers: 5, doors: 5, luggage: 3, fuel: "Petrol", transmission: "Automatic", speed: "Max 200", ac: false }
+    },
+    {
+        name: "FIAT PANDA 4X4",
+        image: "/panda4.jpg",
+        description: "4x4",
+        prices: { low: 40, mid: 55, high: 75 },
+        specs: { class: "E", passengers: 5, doors: 5, luggage: 2, fuel: "Petrol", transmission: "Manual", speed: "Max 170", ac: true }
+    },
+    {
+        name: "SUZUKI ALTO",
+        image: "/alto.jpg",
+        description: "Small",
+        prices: { low: 18, mid: 25, high: 35 },
+        specs: { class: "A", passengers: 5, doors: 5, luggage: 2, fuel: "Petrol", transmission: "Manual", speed: "Max 160", ac: true }
+    },
+    {
+        name: "NISSAN NOTE",
+        image: "/nnote.jpg",
+        description: "Compact", prices: { low: 28, mid: 38, high: 55 },
+        specs: { class: "C", passengers: 4, doors: 5, luggage: 3, fuel: "Diesel", transmission: "Manual", speed: "Max 200", ac: false }
+    },
+    {
+        name: "FIAT PANDA II",
+        image: "/pantaii.png",
+        description: "Small",
+        prices: { low: 20, mid: 28, high: 40 },
+        specs: { class: "A", passengers: 4, doors: 5, luggage: 2, fuel: "Diesel", transmission: "Manual", speed: "Max 200", ac: true }
+    },
+    {
+        name: "VW POLO",
+        image: "/polo.jpg",
+        description: "Comfort",
+        prices: { low: 28, mid: 38, high: 55 }, specs: { class: "B", passengers: 5, doors: 5, luggage: 2, fuel: "Petrol", transmission: "Manual", speed: "Max 170", ac: true }
+    },
+    {
+        name: "CITROEN C3",
+        image: "/citroen_c3.jpg",
+        description: "Comfort",
+        prices: { low: 28, mid: 38, high: 55 },
+        specs: { class: "B", passengers: 5, doors: 5, luggage: 3, fuel: "Petrol", transmission: "Manual", speed: "Max 180", ac: true }
+    },
+    {
+        name: "NISSAN MICRA",
+        image: "/nissan_micra.jpg",
+        description: "City",
+        prices: {
+            low: { min: 18, max: 25 },
+            mid: { min: 25, max: 30 },
+            high: { min: 40, max: 50 },
+        }, specs: { class: "K", passengers: 5, doors: 5, luggage: 2, fuel: "Petrol", transmission: "Manual", speed: "Max 180", ac: true }
+    },
 ];
 
 /* ---------------- COMPONENT ---------------- */
