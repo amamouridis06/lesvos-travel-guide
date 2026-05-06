@@ -26,9 +26,9 @@ type CarType = {
     image: string;
     description: string;
     prices: {
-        low: number;
-        mid: number;
-        high: number;
+        low: { min: number; max: number };
+        mid: { min: number; max: number };
+        high: { min: number; max: number };
     };
     specs: {
         class: string;
