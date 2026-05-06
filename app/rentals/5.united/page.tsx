@@ -340,7 +340,7 @@ return (
         <section className="py-20 px-6 bg-white">
             <h2 className="text-3xl font-bold text-center mb-10">Our Fleet</h2>
 
-            <div className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transform hover:-translate-y-2 hover:scale-105 transition duration-300 ease-in-out flex items-center justify-center text-center">
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 {cars.map((car, index) => (
                     <motion.div key={index} className="bg-white rounded-2xl shadow-lg overflow-hidden">
 
