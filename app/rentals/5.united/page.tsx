@@ -82,63 +82,66 @@ export default function Home() {
     const season = getCurrentSeason();
 
 
-function getPrice(car: CarType) {
-    if (!season) return "";
+    function getPrice(car: CarType) {
+        if (!season) return "";
 
-    if (season.name === "Low Season") return car.prices.low;
-    if (season.name === "Mid Season") return car.prices.mid;
-    if (season.name === "High Season") return car.prices.high;
+        if (season.name === "Low Season") return car.prices.low;
+        if (season.name === "Mid Season") return car.prices.mid;
+        if (season.name === "High Season") return car.prices.high;
+    }
+
+    return (
+        <main className="bg-slate-50 text-gray-800">
+
+            {/* HERO */}
+            <section className="relative h-[80vh] flex items-center justify-center text-center text-white">
+                <img src="/5hero.jpg" className="absolute inset-0 w-full h-full object-cover"/>
+                <div className="absolute inset-0 bg-black/60"></div>
+
+                <div className="relative z-10">
+                    <h1 className="text-5xl font-bold">5 UNITED CAR RENTAL</h1>
+                </div>
+            </section>
+
+            {/* CARS */}
+            <section className="py-20 px-6 bg-white">
+                <h2 className="text-3xl font-bold text-center mb-10">Our Fleet</h2>
+
+                <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    {cars.map((car, index) => (
+                        <motion.div
+                            key={index}
+                            initial={{opacity: 0, y: 50}}
+                            whileInView={{opacity: 1, y: 0}}
+                            className="bg-white rounded-2xl shadow-lg overflow-hidden"
+                        >
+                            {/* IMAGE + BADGES */}
+                            <div className="relative">
+                                <img src={car.image} className="w-full h-52 object-cover"/>
+
+                                {/* PRICE */}
+                                <div
+                                    className="absolute top-3 left-3 bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-bold">
+                                    €{getPrice(car)} / day
+                                </div>
+
+                                {/* SEASON */}
+                                <div
+                                    className="absolute top-3 right-3 bg-black/70 text-white px-3 py-1 rounded-full text-xs">
+                                    {season?.name}
+                                </div>
+                            </div>
+
+                            {/* INFO */}
+                            <div className="p-5">
+                                <h3 className="text-xl font-semibold">{car.name}</h3>
+                                <p className="text-sm text-gray-600">{car.description}</p>
+                            </div>
+                        </motion.div>
+                    ))}
+                </div>
+            </section>
+
+        </main>
+    );
 }
-
-return (
-    <main className="bg-slate-50 text-gray-800">
-
-        {/* HERO */}
-        <section className="relative h-[80vh] flex items-center justify-center text-center text-white">
-            <img src="/5hero.jpg" className="absolute inset-0 w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-black/60"></div>
-
-            <div className="relative z-10">
-                <h1 className="text-5xl font-bold">5 UNITED CAR RENTAL</h1>
-            </div>
-        </section>
-
-        {/* CARS */}
-        <section className="py-20 px-6 bg-white">
-            <h2 className="text-3xl font-bold text-center mb-10">Our Fleet</h2>
-
-            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                {cars.map((car, index) => (
-                    <motion.div
-                        key={index}
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        className="bg-white rounded-2xl shadow-lg overflow-hidden"
-                    >
-                        {/* IMAGE + BADGES */}
-                        <div className="relative">
-                            <img src={car.image} className="w-full h-52 object-cover" />
-
-                            {/* PRICE */}
-                            <div className="absolute top-3 left-3 bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-bold">
-                                €{getPrice(car)} / day
-                            </div>
-
-                            {/* SEASON */}
-                            <div className="absolute top-3 right-3 bg-black/70 text-white px-3 py-1 rounded-full text-xs">
-                                {season?.name}
-                            </div>
-                        </div>
-
-                        {/* INFO */}
-                        <div className="p-5">
-                            <h3 className="text-xl font-semibold">{car.name}</h3>
-                            <p className="text-sm text-gray-600">{car.description}</p>
-                        </div>
-                    </motion.div>
-                ))}
-            </div>
-        </section>
-
-    </main>
-);
