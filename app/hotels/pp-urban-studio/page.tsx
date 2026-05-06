@@ -281,8 +281,6 @@ export default function PPUrban() {
 
                                 <div className="mt-7 border-t pt-5 text-[11px] uppercase tracking-[0.22em] sm:tracking-[0.28em]" style={{ borderColor: "var(--ms-border)", color: "var(--ms-muted)" }}>
                                     {[
-                                        ["Check-in", "15:00 to 22:00"],
-                                        ["Check-out", "07:00 to 11:00"],
                                         ["Cancellation", "Free"],
                                     ].map(([k, v]) => (
                                         <div key={k} className="flex justify-between gap-4 py-1.5">
@@ -407,7 +405,6 @@ export default function PPUrban() {
                     <div className="absolute -right-24 bottom-0 h-72 w-72 rounded-full blur-[120px]" style={{ background: "var(--ms-gold)" }} />
                 </div>
                 <div className="relative mx-auto flex max-w-5xl flex-col items-center text-center">
-                    <p className="ms-eyebrow" style={{ color: "var(--ms-gold-soft)" }}>Ready when you are</p>
                     <h2 className="ms-display ms-balance mt-6 text-4xl leading-[1.05] md:text-7xl">
                         Stay at <span className="italic" style={{ color: "var(--ms-gold-soft)" }}>{hotel.name}</span>.
                     </h2>
