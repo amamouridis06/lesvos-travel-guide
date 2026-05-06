@@ -107,91 +107,140 @@ const cars: CarType[] = [
             low: { min: 18, max: 25 },
             mid: { min: 25, max: 30 },
             high: { min: 40, max: 50 },
-        }, specs: { class: "B", passengers: 5, doors: 5, luggage: 2, fuel: "Petrol", transmission: "Manual", speed: "Max 180", ac: true }
+        },
+        specs: { class: "B", passengers: 5, doors: 5, luggage: 2, fuel: "Petrol", transmission: "Manual", speed: "Max 180", ac: true }
     },
-    // {
-    //     name: "SKODA FABIA",
-    //     image: "/fabia.jpg",
-    //     description: "Comfort",
-    //     prices: { low: 30, mid: 40, high: 60 },
-    //     specs: { class: "C", passengers: 5, doors: 5, luggage: 3, fuel: "Petrol", transmission: "Manual", speed: "Max 190", ac: false }
-    // },
-    // {
-    //     name: "RENAULT CLIO",
-    //     image: "/clio.jpg",
-    //     description: "Reliable",
-    //     prices: { low: 30, mid: 42, high: 60 },
-    //     specs: { class: "C", passengers: 5, doors: 5, luggage: 2, fuel: "Diesel", transmission: "Manual", speed: "Max 180", ac: true }
-    // },
-    // {
-    //     name: "OPEL ASTRA",
-    //     image: "/astra.jpg",
-    //     description: "Family car",
-    //     prices: { low: 35, mid: 50, high: 70 },
-    //     specs: { class: "D", passengers: 5, doors: 5, luggage: 4, fuel: "Diesel", transmission: "Manual", speed: "Max 200", ac: false }
-    // },
-    // {
-    //     name: "SKODA YETI",
-    //     image: "/yeti.jpg",
-    //     description: "SUV",
-    //     prices: { low: 45, mid: 60, high: 85 },
-    //     specs: { class: "E", passengers: 5, doors: 5, luggage: 4, fuel: "Petrol", transmission: "Automatic", speed: "Max 200", ac: true }
-    // },
-    // {
-    //     name: "PEUGEOT 2008",
-    //     image: "/peugeot.jpg",
-    //     description: "SUV", prices: { low: 45, mid: 60, high: 85 },
-    //     specs: { class: "E", passengers: 5, doors: 5, luggage: 3, fuel: "Petrol", transmission: "Automatic", speed: "Max 200", ac: false }
-    // },
-    // {
-    //     name: "FIAT PANDA 4X4",
-    //     image: "/panda4.jpg",
-    //     description: "4x4",
-    //     prices: { low: 40, mid: 55, high: 75 },
-    //     specs: { class: "E", passengers: 5, doors: 5, luggage: 2, fuel: "Petrol", transmission: "Manual", speed: "Max 170", ac: true }
-    // },
-    // {
-    //     name: "SUZUKI ALTO",
-    //     image: "/alto.jpg",
-    //     description: "Small",
-    //     prices: { low: 18, mid: 25, high: 35 },
-    //     specs: { class: "A", passengers: 5, doors: 5, luggage: 2, fuel: "Petrol", transmission: "Manual", speed: "Max 160", ac: true }
-    // },
-    // {
-    //     name: "NISSAN NOTE",
-    //     image: "/nnote.jpg",
-    //     description: "Compact", prices: { low: 28, mid: 38, high: 55 },
-    //     specs: { class: "C", passengers: 4, doors: 5, luggage: 3, fuel: "Diesel", transmission: "Manual", speed: "Max 200", ac: false }
-    // },
-    // {
-    //     name: "FIAT PANDA II",
-    //     image: "/pantaii.png",
-    //     description: "Small",
-    //     prices: { low: 20, mid: 28, high: 40 },
-    //     specs: { class: "A", passengers: 4, doors: 5, luggage: 2, fuel: "Diesel", transmission: "Manual", speed: "Max 200", ac: true }
-    // },
-    // {
-    //     name: "VW POLO",
-    //     image: "/polo.jpg",
-    //     description: "Comfort",
-    //     prices: { low: 28, mid: 38, high: 55 }, specs: { class: "B", passengers: 5, doors: 5, luggage: 2, fuel: "Petrol", transmission: "Manual", speed: "Max 170", ac: true }
-    // },
-    // {
-    //     name: "CITROEN C3",
-    //     image: "/citroen_c3.jpg",
-    //     description: "Comfort",
-    //     prices: { low: 28, mid: 38, high: 55 },
-    //     specs: { class: "B", passengers: 5, doors: 5, luggage: 3, fuel: "Petrol", transmission: "Manual", speed: "Max 180", ac: true }
-    // },
+    {
+        name: "SKODA FABIA",
+        image: "/fabia.jpg",
+        description: "Comfort",
+        prices: {
+            low: { min: 23, max: 30 },
+            mid: { min: 35, max: 40 },
+            high: { min: 50, max: 65 },
+        },
+        specs: { class: "C", passengers: 5, doors: 5, luggage: 3, fuel: "Petrol", transmission: "Manual", speed: "Max 190", ac: false }
+    },
+    {
+        name: "RENAULT CLIO",
+        image: "/clio.jpg",
+        description: "Reliable",
+        prices: {
+            low: { min: 23, max: 30 },
+            mid: { min: 35, max: 40 },
+            high: { min: 50, max: 65 },
+        },
+        specs: { class: "C", passengers: 5, doors: 5, luggage: 2, fuel: "Diesel", transmission: "Manual", speed: "Max 180", ac: true }
+    },
+    {
+        name: "OPEL ASTRA",
+        image: "/astra.jpg",
+        description: "Family car",
+        prices: {
+            low: { min: 30, max: 40 },
+            mid: { min: 40, max: 50 },
+            high: { min: 55, max: 80 },
+        },
+        specs: { class: "D", passengers: 5, doors: 5, luggage: 4, fuel: "Diesel", transmission: "Manual", speed: "Max 200", ac: false }
+    },
+    {
+        name: "SKODA YETI",
+        image: "/yeti.jpg",
+        description: "SUV",
+        prices: {
+            low: { min: 30, max: 45 },
+            mid: { min: 32, max: 40 },
+            high: { min: 50, max: 60 },
+        },
+        specs: { class: "E", passengers: 5, doors: 5, luggage: 4, fuel: "Petrol", transmission: "Automatic", speed: "Max 200", ac: true }
+    },
+    {
+        name: "PEUGEOT 2008",
+        image: "/peugeot.jpg",
+        description: "SUV",
+        prices: {
+            low: { min: 30, max: 45 },
+            mid: { min: 32, max: 40 },
+            high: { min: 50, max: 60 },
+        },
+        specs: { class: "E", passengers: 5, doors: 5, luggage: 3, fuel: "Petrol", transmission: "Automatic", speed: "Max 200", ac: false }
+    },
+    {
+        name: "FIAT PANDA 4X4",
+        image: "/panda4.jpg",
+        description: "4x4",
+        prices: {
+            low: { min: 30, max: 45 },
+            mid: { min: 32, max: 40 },
+            high: { min: 50, max: 60 },
+        },
+        specs: { class: "E", passengers: 5, doors: 5, luggage: 2, fuel: "Petrol", transmission: "Manual", speed: "Max 170", ac: true }
+    },
+    {
+        name: "SUZUKI ALTO",
+        image: "/alto.jpg",
+        description: "Small",
+        prices: {
+            low: { min: 18, max: 25 },
+            mid: { min: 25, max: 30 },
+            high: { min: 40, max: 50 },
+        },
+        specs: { class: "A", passengers: 5, doors: 5, luggage: 2, fuel: "Petrol", transmission: "Manual", speed: "Max 160", ac: true }
+    },
+    {
+        name: "NISSAN NOTE",
+        image: "/nnote.jpg",
+        description: "Compact",
+        prices: {
+            low: { min: 23, max: 30 },
+            mid: { min: 35, max: 40 },
+            high: { min: 50, max: 65 },
+        },
+        specs: { class: "C", passengers: 4, doors: 5, luggage: 3, fuel: "Diesel", transmission: "Manual", speed: "Max 200", ac: false }
+    },
+    {
+        name: "FIAT PANDA II",
+        image: "/pantaii.png",
+        description: "Small",
+        prices: {
+            low: { min: 30, max: 45 },
+            mid: { min: 32, max: 40 },
+            high: { min: 50, max: 60 },
+        },
+        specs: { class: "A", passengers: 4, doors: 5, luggage: 2, fuel: "Diesel", transmission: "Manual", speed: "Max 200", ac: true }
+    },
+    {
+        name: "VW POLO",
+        image: "/polo.jpg",
+        description: "Comfort",
+        prices: {
+            low: { min: 20, max: 28 },
+            mid: { min: 30, max: 35 },
+            high: { min: 45, max: 55 },
+        },
+        specs: { class: "B", passengers: 5, doors: 5, luggage: 2, fuel: "Petrol", transmission: "Manual", speed: "Max 170", ac: true }
+    },
+    {
+        name: "CITROEN C3",
+        image: "/citroen_c3.jpg",
+        description: "Comfort",
+        prices: {
+            low: { min: 20, max: 28 },
+            mid: { min: 30, max: 35 },
+            high: { min: 45, max: 55 },
+        },
+        specs: { class: "B", passengers: 5, doors: 5, luggage: 3, fuel: "Petrol", transmission: "Manual", speed: "Max 180", ac: true }
+    },
     {
         name: "NISSAN MICRA",
         image: "/nissan_micra.jpg",
         description: "City",
         prices: {
-            low: { min: 18, max: 25 },
-            mid: { min: 25, max: 30 },
-            high: { min: 40, max: 50 },
-        }, specs: { class: "K", passengers: 5, doors: 5, luggage: 2, fuel: "Petrol", transmission: "Manual", speed: "Max 180", ac: true }
+            low: { min: 25, max: 30 },
+            mid: { min: 45, max: 60 },
+            high: { min: 60, max: 80 },
+        },
+        specs: { class: "K", passengers: 5, doors: 5, luggage: 2, fuel: "Petrol", transmission: "Manual", speed: "Max 180", ac: true }
     },
 ];
 
@@ -285,6 +334,45 @@ return (
 
                     </motion.div>
                 ))}
+            </div>
+        </section>
+        {/* CONTACT */}
+        <section className="py-20 px-6 bg-slate-50">
+            <h2 className="text-3xl font-bold text-center mb-10">Contact Us</h2>
+
+            <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+
+                {/* INFO */}
+                <motion.div
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6 }}
+                    className="space-y-6"
+                >
+                    <div>
+                        <h3 className="text-xl font-semibold">5 United Car Rental</h3>
+                        <p className="text-gray-600 mt-2">
+                            Skala Kallonis, Lesvos Island, Greece
+                        </p>
+                    </div>
+
+                    <div className="space-y-3 text-gray-700">
+
+                        <p>📞 0030 698 17 222 15</p>
+                        <p>📧 5unitedcarrental@gmail.com</p>
+                        <p>🕒 Mon - Sun: 07:00 - 22:00</p>
+
+                    </div>
+
+                    <div className="pt-4">
+                        <a
+                            href="tel:+30698 17 222 15"
+                            className="inline-block bg-yellow-400 text-black px-6 py-3 rounded-full font-semibold hover:bg-yellow-300 transition shadow-md"
+                        >
+                            Call Now
+                        </a>
+                    </div>
+                </motion.div>
             </div>
         </section>
 
