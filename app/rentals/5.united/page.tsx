@@ -5,12 +5,18 @@ import { motion } from "framer-motion";
 import { Car, Shield, Clock, MapPin, Baby, KeyRound, Phone, Mail} from "lucide-react";
 
 const services = [
-    { icon: <Clock />, title: "24/7 Support", desc: "We are always available for you" },
-    { icon: <KeyRound />, title: "Easy Pickup", desc: "Fast and simple car delivery" },
-    { icon: <Car />, title: "Modern Fleet", desc: "New and well maintained cars" },
-    { icon: <Shield />, title: "Full Insurance", desc: "Drive with total safety" },
-    { icon: <Baby />, title: "Free Baby Seat", desc: "Safety for your family" },
-    { icon: <MapPin />, title: "Island Coverage", desc: "We deliver anywhere in Lesvos" },
+    { icon: <Clock />, title: "24/7 Support",
+        desc: "At 5 United, we are dedicated to providing exceptional customer support round the clock. Our team is available 24/7 to assist you with any inquiries, reservations, or emergency situations. You can rely on us to deliver prompt and reliable assistance whenever you need it." },
+    { icon: <KeyRound />, title: "Flexible Rental Options",
+        desc: "At 5 United, we understand that travel plans can change. That's why we offer flexible rental options to accommodate your evolving needs. Whether you require a short-term rental, a long-term lease, or custom rental packages, we provide tailored solutions to suit your schedule and preferences." },
+    { icon: <Car />, title: "Car Care Tips",
+        desc: "Explore our helpful car care tips to maintain your rental vehicle in top condition throughout your rental period. We provide valuable insights and recommendations on basic vehicle maintenance, fuel efficiency, and safe driving practices, empowering you to make the most of your car rental experience." },
+    { icon: <Shield />, title: "Roadside Assistance",
+        desc: "All of our vehicles undergo a thorough inspection before each rental to ensure safety and reliability. You can have peace of mind knowing that you're driving a fully checked and maintained vehicle. Enjoy your journey with confidence!" },
+    { icon: <Car />, title: "Easy Online Booking",
+        desc: "Rest assured knowing that 5 United provides comprehensive roadside assistance to ensure a smooth and worry-free journey. In the event of unexpected vehicle issues, our team will swiftly respond to your location, offering professional support and solutions to get you back on the road safely." },
+    { icon: <Shield />, title: "Reliable Partnerships",
+        desc: "5 United has established trusted partnerships with leading car manufacturers and service providers to deliver high-quality rental experiences. Our commitment to excellence extends to our network of partners, ensuring that you receive reliable vehicles and support services for your journey. Book your car rental with confidence, knowing that you're in good hands." },
 ];
 
 /* ---------------- SEASONS ---------------- */
@@ -338,7 +344,7 @@ return (
         </section>
 
         <section className="py-20 px-6 bg-white">
-            <h2 className="text-3xl font-bold text-center mb-10">Our Fleet</h2>
+            <h2 className="text-3xl font-bold text-center mb-10">The Fleet</h2>
 
             <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 {cars.map((car, index) => (
