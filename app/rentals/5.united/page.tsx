@@ -1,13 +1,14 @@
 "use client";
 
-import { Car as CarIcon, Phone, MapPin, Mail, Clock } from "lucide-react";
 import { motion } from "framer-motion";
 
 /* ---------------- SEASONS ---------------- */
 const seasons = [
-    { name: "Low Season", start: "2026-01-01", end: "2026-05-31" },
-    { name: "High Season", start: "2026-06-01", end: "2026-09-30" },
-    { name: "Mid Season", start: "2026-10-01", end: "2026-12-31" },
+    { name: "Low Season", start: "2026-01-01", end: "2026-04-15" },
+    { name: "Mid Season", start: "2026-04-16", end: "2026-06-20" },
+    { name: "High Season", start: "2026-06-21", end: "2026-09-14" },
+    { name: "Mid Season", start: "2026-09-15", end: "2026-10-31" },
+
 ];
 
 function getCurrentSeason() {
@@ -43,7 +44,10 @@ type CarType = {
 
 /* ---------------- CARS ---------------- */
 const cars: CarType[] = [
-    { name: "OPEL KARL", image: "/opencarl.jpg", description: "City car", prices: { low: 20, mid: 30, high: 45 }, specs: { class: "A", passengers: 4, doors: 5, luggage: 2, fuel: "Petrol", transmission: "Manual", speed: "Max 170", ac: true } },
+    { name: "OPEL KARL", image: "/opencarl.jpg", description: "City car", prices: { low: 18 - 25, mid: 25 - 30, high: 40 - 50 }, specs: { class: "A", passengers: 4, doors: 5, luggage: 2, fuel: "Petrol", transmission: "Manual", speed: "Max 170", ac: true } },
+    { name: "FIAT PANDA", image: "/panda.jpg", description: "City", prices: { low: 22, mid: 30, high: 45 }, specs: { class: "A", passengers: 5, doors: 5, luggage: 2, fuel: "Petrol", transmission: "Manual", speed: "Max 170", ac: true } },
+    { name: "HYUNDAI I10", image: "/i10.jpg", description: "City", prices: { low: 20, mid: 28, high: 40 }, specs: { class: "A", passengers: 5, doors: 5, luggage: 2, fuel: "Petrol", transmission: "Manual", speed: "Max 160", ac: true } },
+    { name: "TOYOTA AYGO", image: "/aygo.jpg", description: "City", prices: { low: 20, mid: 28, high: 40 }, specs: { class: "A", passengers: 4, doors: 5, luggage: 2, fuel: "Petrol", transmission: "Manual", speed: "Max 160", ac: true } },
     { name: "OPEL CORSA", image: "/corsa.jpg", description: "City car", prices: { low: 25, mid: 35, high: 50 }, specs: { class: "B", passengers: 5, doors: 5, luggage: 2, fuel: "Petrol", transmission: "Manual", speed: "Max 180", ac: false } },
     { name: "HYUNDAI I20", image: "/i20.jpg", description: "City car", prices: { low: 28, mid: 38, high: 55 }, specs: { class: "B", passengers: 5, doors: 5, luggage: 2, fuel: "Petrol", transmission: "Manual", speed: "Max 180", ac: true } },
     { name: "SKODA FABIA", image: "/fabia.jpg", description: "Comfort", prices: { low: 30, mid: 40, high: 60 }, specs: { class: "C", passengers: 5, doors: 5, luggage: 3, fuel: "Petrol", transmission: "Manual", speed: "Max 190", ac: false } },
@@ -55,9 +59,6 @@ const cars: CarType[] = [
     { name: "SUZUKI ALTO", image: "/alto.jpg", description: "Small", prices: { low: 18, mid: 25, high: 35 }, specs: { class: "A", passengers: 5, doors: 5, luggage: 2, fuel: "Petrol", transmission: "Manual", speed: "Max 160", ac: true } },
     { name: "NISSAN NOTE", image: "/nnote.jpg", description: "Compact", prices: { low: 28, mid: 38, high: 55 }, specs: { class: "C", passengers: 4, doors: 5, luggage: 3, fuel: "Diesel", transmission: "Manual", speed: "Max 200", ac: false } },
     { name: "FIAT PANDA II", image: "/pantaii.png", description: "Small", prices: { low: 20, mid: 28, high: 40 }, specs: { class: "A", passengers: 4, doors: 5, luggage: 2, fuel: "Diesel", transmission: "Manual", speed: "Max 200", ac: true } },
-    { name: "FIAT PANDA", image: "/panda.jpg", description: "City", prices: { low: 22, mid: 30, high: 45 }, specs: { class: "A", passengers: 5, doors: 5, luggage: 2, fuel: "Petrol", transmission: "Manual", speed: "Max 170", ac: true } },
-    { name: "HYUNDAI I10", image: "/i10.jpg", description: "City", prices: { low: 20, mid: 28, high: 40 }, specs: { class: "A", passengers: 5, doors: 5, luggage: 2, fuel: "Petrol", transmission: "Manual", speed: "Max 160", ac: true } },
-    { name: "TOYOTA AYGO", image: "/aygo.jpg", description: "City", prices: { low: 20, mid: 28, high: 40 }, specs: { class: "A", passengers: 4, doors: 5, luggage: 2, fuel: "Petrol", transmission: "Manual", speed: "Max 160", ac: true } },
     { name: "VW POLO", image: "/polo.jpg", description: "Comfort", prices: { low: 28, mid: 38, high: 55 }, specs: { class: "B", passengers: 5, doors: 5, luggage: 2, fuel: "Petrol", transmission: "Manual", speed: "Max 170", ac: true } },
     { name: "CITROEN C3", image: "/citroen_c3.jpg", description: "Comfort", prices: { low: 28, mid: 38, high: 55 }, specs: { class: "B", passengers: 5, doors: 5, luggage: 3, fuel: "Petrol", transmission: "Manual", speed: "Max 180", ac: true } },
     { name: "NISSAN MICRA", image: "/nissan_micra.jpg", description: "City", prices: { low: 28, mid: 38, high: 55 }, specs: { class: "K", passengers: 5, doors: 5, luggage: 2, fuel: "Petrol", transmission: "Manual", speed: "Max 180", ac: true } },
@@ -66,7 +67,6 @@ const cars: CarType[] = [
 /* ---------------- COMPONENT ---------------- */
 export default function Home() {
     const season = getCurrentSeason();
-
 
 function getPrice(car: CarType) {
     if (!season) return "";
@@ -97,9 +97,53 @@ return (
                             </div>
                         </div>
 
-                        <div className="p-5">
+                        <div className="p-5 border-t-4 border-yellow-400">
                             <h3 className="text-xl font-semibold">{car.name}</h3>
-                            <p className="text-sm text-gray-600">{car.description}</p>
+                            <p className="text-sm mt-2 text-gray-600">{car.description}</p>
+
+                            <div className="mt-4 border-t pt-4 grid grid-cols-2 gap-3 text-sm">
+
+                                <div className="flex justify-between">
+                                    <span className="text-gray-500">Class</span>
+                                    <span>{car.specs.class}</span>
+                                </div>
+
+                                <div className="flex justify-between">
+                                    <span className="text-gray-500">Passengers</span>
+                                    <span>{car.specs.passengers}</span>
+                                </div>
+
+                                <div className="flex justify-between">
+                                    <span className="text-gray-500">Doors</span>
+                                    <span>{car.specs.doors}</span>
+                                </div>
+
+                                <div className="flex justify-between">
+                                    <span className="text-gray-500">Luggage</span>
+                                    <span>{car.specs.luggage}</span>
+                                </div>
+
+                                <div className="flex justify-between">
+                                    <span className="text-gray-500">Fuel</span>
+                                    <span>{car.specs.fuel}</span>
+                                </div>
+
+                                <div className="flex justify-between">
+                                    <span className="text-gray-500">Transmission</span>
+                                    <span>{car.specs.transmission}</span>
+                                </div>
+
+                                <div className="flex justify-between">
+                                    <span className="text-gray-500">Speed</span>
+                                    <span>{car.specs.speed}</span>
+                                </div>
+
+                                <div className="flex justify-between">
+                                    <span className="text-gray-500">A/C</span>
+                                    <span>{car.specs.ac ? "Yes" : "No"}</span>
+                                </div>
+
+                            </div>
                         </div>
 
                     </motion.div>
