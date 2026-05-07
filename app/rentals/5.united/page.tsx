@@ -280,199 +280,262 @@ export default function Home() {
 
 return (
     <main className="bg-slate-50 text-gray-800">
-    <div className="bg-slate-50 text-gray-800">
-        <section className="py-24 px-6 bg-gradient-to-b from-white to-slate-50">
-            <div className="max-w-5xl mx-auto text-center">
+        <div className="bg-slate-50 text-gray-800">
+            <section className="py-24 px-6 bg-gradient-to-b from-white to-slate-50">
+                <div className="max-w-5xl mx-auto text-center">
 
-                <motion.div
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                    viewport={{ once: true }}
-                >
+                    <motion.div
+                        initial={{opacity: 0, y: 40}}
+                        whileInView={{opacity: 1, y: 0}}
+                        transition={{duration: 0.8}}
+                        viewport={{once: true}}
+                    >
             <span className="text-yellow-500 font-semibold tracking-widest text-sm">
                 ABOUT US
             </span>
 
-                    <h2 className="text-4xl md:text-5xl font-bold mt-3 text-gray-900">
-                        5 UNITED CAR RENTALS
-                    </h2>
+                        <h2 className="text-4xl md:text-5xl font-bold mt-3 text-gray-900">
+                            5 UNITED CAR RENTALS
+                        </h2>
 
-                    <div className="w-20 h-1 bg-yellow-400 mx-auto my-6 rounded-full"></div>
+                        <div className="w-20 h-1 bg-yellow-400 mx-auto my-6 rounded-full"></div>
 
-                    <p className="text-gray-600 leading-relaxed text-lg max-w-3xl mx-auto">
-                        5 United Car Rental offers high-quality vehicles, transparent pricing and
-                        premium service in Skala Kallonis, Lesvos. Whether you need a compact city car
-                        or an SUV for island exploration, we guarantee comfort and reliability.
-                    </p>
-                </motion.div>
-
-            </div>
-        </section>
-        <section className="py-24 px-6 bg-white">
-            <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold text-gray-900">Our Services</h2>
-                <div className="w-20 h-1 bg-yellow-400 mx-auto mt-4 rounded-full"></div>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-
-                {services.map((s, i) => (
-                    <motion.div
-                        key={i}
-                        initial={{ opacity: 0, y: 40 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: i * 0.1 }}
-                        viewport={{ once: true }}
-                        whileHover={{ scale: 1.05 }}
-                        className="group bg-slate-50 p-8 rounded-2xl shadow-sm hover:shadow-xl transition border border-transparent hover:border-yellow-300"
-                    >
-                        <div className="text-yellow-500 mb-4 group-hover:scale-110 transition">
-                            {s.icon}
-                        </div>
-
-                        <h3 className="text-xl font-semibold mb-2 text-gray-900">
-                            {s.title}
-                        </h3>
-
-                        <p className="text-gray-600 text-sm">
-                            {s.desc}
+                        <p className="text-gray-600 leading-relaxed text-lg max-w-3xl mx-auto">
+                            5 United Car Rental offers high-quality vehicles, transparent pricing and
+                            premium service in Skala Kallonis, Lesvos. Whether you need a compact city car
+                            or an SUV for island exploration, we guarantee comfort and reliability.
                         </p>
                     </motion.div>
-                ))}
-            </div>
-        </section>
 
-        <section className="py-20 px-6 bg-white">
-            <h2 className="text-3xl font-bold text-center mb-10">The Fleet</h2>
+                </div>
+            </section>
+            <section className="py-24 px-6 bg-white">
+                <div className="text-center mb-12">
+                    <h2 className="text-4xl font-bold text-gray-900">Our Services</h2>
+                    <div className="w-20 h-1 bg-yellow-400 mx-auto mt-4 rounded-full"></div>
+                </div>
 
-            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                {cars.map((car, index) => (
-                    <motion.div key={index} className="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
 
-                        <div className="relative">
-                            <img src={car.image} className="w-full h-52 object-cover" />
-
-                            <div className="absolute top-3 left-3 bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-bold">
-                                €{getPrice(car)} / day
+                    {services.map((s, i) => (
+                        <motion.div
+                            key={i}
+                            initial={{opacity: 0, y: 40}}
+                            whileInView={{opacity: 1, y: 0}}
+                            transition={{duration: 0.5, delay: i * 0.1}}
+                            viewport={{once: true}}
+                            whileHover={{scale: 1.05}}
+                            className="group bg-slate-50 p-8 rounded-2xl shadow-sm hover:shadow-xl transition border border-transparent hover:border-yellow-300"
+                        >
+                            <div className="text-yellow-500 mb-4 group-hover:scale-110 transition">
+                                {s.icon}
                             </div>
 
-                            <div className="absolute top-3 right-3 bg-black/70 text-white px-3 py-1 rounded-full text-xs">
-                                {season?.name}
-                            </div>
-                        </div>
+                            <h3 className="text-xl font-semibold mb-2 text-gray-900">
+                                {s.title}
+                            </h3>
 
-                        <div className="p-5 border-t-4 border-yellow-400">
-                            <h3 className="text-xl font-semibold">{car.name}</h3>
-                            <p className="text-sm mt-2 text-gray-600">{car.description}</p>
+                            <p className="text-gray-600 text-sm">
+                                {s.desc}
+                            </p>
+                        </motion.div>
+                    ))}
+                </div>
+            </section>
 
-                            <div className="mt-4 border-t pt-4 grid grid-cols-2 gap-3 text-sm">
+            <section className="py-20 px-6 bg-white">
+                <h2 className="text-3xl font-bold text-center mb-10">The Fleet</h2>
 
-                                <div className="flex justify-between">
-                                    <span className="text-gray-500">Class</span>
-                                    <span>{car.specs.class}</span>
+                <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    {cars.map((car, index) => (
+                        <motion.div key={index} className="bg-white rounded-2xl shadow-lg overflow-hidden">
+
+                            <div className="relative">
+                                <img src={car.image} className="w-full h-52 object-cover"/>
+
+                                <div
+                                    className="absolute top-3 left-3 bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-bold">
+                                    €{getPrice(car)} / day
                                 </div>
 
-                                <div className="flex justify-between">
-                                    <span className="text-gray-500">Passengers</span>
-                                    <span>{car.specs.passengers}</span>
+                                <div
+                                    className="absolute top-3 right-3 bg-black/70 text-white px-3 py-1 rounded-full text-xs">
+                                    {season?.name}
                                 </div>
-
-                                <div className="flex justify-between">
-                                    <span className="text-gray-500">Doors</span>
-                                    <span>{car.specs.doors}</span>
-                                </div>
-
-                                <div className="flex justify-between">
-                                    <span className="text-gray-500">Luggage</span>
-                                    <span>{car.specs.luggage}</span>
-                                </div>
-
-                                <div className="flex justify-between">
-                                    <span className="text-gray-500">Fuel</span>
-                                    <span>{car.specs.fuel}</span>
-                                </div>
-
-                                <div className="flex justify-between">
-                                    <span className="text-gray-500">Transmission</span>
-                                    <span>{car.specs.transmission}</span>
-                                </div>
-
-                                <div className="flex justify-between">
-                                    <span className="text-gray-500">Speed</span>
-                                    <span>{car.specs.speed}</span>
-                                </div>
-
-                                <div className="flex justify-between">
-                                    <span className="text-gray-500">A/C</span>
-                                    <span>{car.specs.ac ? "Yes" : "No"}</span>
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </motion.div>
-                ))}
-            </div>
-        </section>
-        <section className="py-24 px-6 bg-gradient-to-b from-slate-50 to-white">
-
-            <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold text-gray-900">Contact Us</h2>
-                <div className="w-20 h-1 bg-yellow-400 mx-auto mt-4 rounded-full"></div>
-            </div>
-
-            <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-start">
-
-                {/* LEFT INFO */}
-                <motion.div
-                    initial={{ opacity: 0, x: -40 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.7 }}
-                    viewport={{ once: true }}
-                    className="space-y-6"
-                >
-
-                    <div className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition">
-                        <h3 className="text-xl font-semibold mb-4">5 United Car Rental</h3>
-
-                        <div className="space-y-4 text-gray-700">
-
-                            <div className="flex items-center gap-3">
-                                <MapPin className="text-yellow-500" size={18} />
-                                Skala Kallonis, Lesvos Island, Greece
                             </div>
 
-                            <div className="flex items-center gap-3">
-                                <Phone className="text-yellow-500" size={18} />
-                                +30 698 17 222 15
+                            <div className="p-5 border-t-4 border-yellow-400">
+                                <h3 className="text-xl font-semibold">{car.name}</h3>
+                                <p className="text-sm mt-2 text-gray-600">{car.description}</p>
+
+                                <div className="mt-4 border-t pt-4 grid grid-cols-2 gap-3 text-sm">
+
+                                    <div className="flex justify-between">
+                                        <span className="text-gray-500">Class</span>
+                                        <span>{car.specs.class}</span>
+                                    </div>
+
+                                    <div className="flex justify-between">
+                                        <span className="text-gray-500">Passengers</span>
+                                        <span>{car.specs.passengers}</span>
+                                    </div>
+
+                                    <div className="flex justify-between">
+                                        <span className="text-gray-500">Doors</span>
+                                        <span>{car.specs.doors}</span>
+                                    </div>
+
+                                    <div className="flex justify-between">
+                                        <span className="text-gray-500">Luggage</span>
+                                        <span>{car.specs.luggage}</span>
+                                    </div>
+
+                                    <div className="flex justify-between">
+                                        <span className="text-gray-500">Fuel</span>
+                                        <span>{car.specs.fuel}</span>
+                                    </div>
+
+                                    <div className="flex justify-between">
+                                        <span className="text-gray-500">Transmission</span>
+                                        <span>{car.specs.transmission}</span>
+                                    </div>
+
+                                    <div className="flex justify-between">
+                                        <span className="text-gray-500">Speed</span>
+                                        <span>{car.specs.speed}</span>
+                                    </div>
+
+                                    <div className="flex justify-between">
+                                        <span className="text-gray-500">A/C</span>
+                                        <span>{car.specs.ac ? "Yes" : "No"}</span>
+                                    </div>
+
+                                </div>
                             </div>
 
-                            <div className="flex items-center gap-3">
-                                <Mail className="text-yellow-500" size={18} />
-                                5unitedcarrental@gmail.com
-                            </div>
+                        </motion.div>
+                    ))}
+                </div>
+            </section>
+            <section className="price-section">
+                <div className="container">
+                    <h2 className="price-title">PRICE LIST</h2>
 
-                            <div className="flex items-center gap-3">
-                                <Clock className="text-yellow-500" size={18} />
-                                Mon - Fri: 07:00 - 22:00
-                            </div>
+                    <div className="table-wrapper">
+                        <table className="price-table">
+                            <thead>
+                            <tr>
+                                <th>SEASON</th>
+                                <th>CLASS A</th>
+                                <th>CLASS B</th>
+                                <th>CLASS C</th>
+                                <th>CLASS D</th>
+                                <th>CLASS E</th>
+                                <th>CLASS K</th>
+                                <th>CLASS K (4X4)</th>
+                            </tr>
+                            </thead>
 
-                        </div>
+                            <tbody>
+                            <tr>
+                                <td>Low season 1/11 - 15/4</td>
+                                <td>18€ - 25€</td>
+                                <td>20€ - 28€</td>
+                                <td>23€ - 30€</td>
+                                <td>30€ - 40€</td>
+                                <td>30€ - 45€</td>
+                                <td>25€ - 30€</td>
+                                <td>25€ - 35€</td>
+                            </tr>
+
+                            <tr>
+                                <td>Med season 16/4 - 20/6 & 15/9 - 31/10</td>
+                                <td>25€ - 30€</td>
+                                <td>30€ - 35€</td>
+                                <td>35€ - 40€</td>
+                                <td>40€ - 50€</td>
+                                <td>32€ - 40€</td>
+                                <td>45€ - 60€</td>
+                                <td>32€ - 45€</td>
+                            </tr>
+
+                            <tr>
+                                <td>High season 21/6 - 14/9</td>
+                                <td>40€ - 50€</td>
+                                <td>45€ - 55€</td>
+                                <td>50€ - 65€</td>
+                                <td>55€ - 80€</td>
+                                <td>50€ - 60€</td>
+                                <td>60€ - 80€</td>
+                                <td>45€ - 55€</td>
+                            </tr>
+                            </tbody>
+                        </table>
                     </div>
 
-                    {/* CALL BUTTON */}
-                    <a
-                        href="tel:+306981722215"
-                        className="inline-block bg-yellow-400 text-black px-6 py-3 rounded-full font-semibold hover:bg-yellow-300 transition shadow-md"
-                    >
-                        Call Now
-                    </a>
+                    <p className="price-note">
+                        SECOND DRIVER AND CHILD SEAT, NO CHARGE
+                    </p>
+                </div>
+            </section>
+            <section className="py-24 px-6 bg-gradient-to-b from-slate-50 to-white">
 
-                </motion.div>
-            </div>
-        </section>
-    </div>
+                <div className="text-center mb-12">
+                    <h2 className="text-4xl font-bold text-gray-900">Contact Us</h2>
+                    <div className="w-20 h-1 bg-yellow-400 mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-start">
+
+                    {/* LEFT INFO */}
+                    <motion.div
+                        initial={{opacity: 0, x: -40}}
+                        whileInView={{opacity: 1, x: 0}}
+                        transition={{duration: 0.7}}
+                        viewport={{once: true}}
+                        className="space-y-6"
+                    >
+
+                        <div className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition">
+                            <h3 className="text-xl font-semibold mb-4">5 United Car Rental</h3>
+
+                            <div className="space-y-4 text-gray-700">
+
+                                <div className="flex items-center gap-3">
+                                    <MapPin className="text-yellow-500" size={18}/>
+                                    Skala Kallonis, Lesvos Island, Greece
+                                </div>
+
+                                <div className="flex items-center gap-3">
+                                    <Phone className="text-yellow-500" size={18}/>
+                                    +30 698 17 222 15
+                                </div>
+
+                                <div className="flex items-center gap-3">
+                                    <Mail className="text-yellow-500" size={18}/>
+                                    5unitedcarrental@gmail.com
+                                </div>
+
+                                <div className="flex items-center gap-3">
+                                    <Clock className="text-yellow-500" size={18}/>
+                                    Mon - Fri: 07:00 - 22:00
+                                </div>
+
+                            </div>
+                        </div>
+
+                        {/* CALL BUTTON */}
+                        <a
+                            href="tel:+306981722215"
+                            className="inline-block bg-yellow-400 text-black px-6 py-3 rounded-full font-semibold hover:bg-yellow-300 transition shadow-md"
+                        >
+                            Call Now
+                        </a>
+
+                    </motion.div>
+                </div>
+            </section>
+        </div>
     </main>
 );
 }
