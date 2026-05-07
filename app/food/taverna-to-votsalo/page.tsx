@@ -287,7 +287,7 @@ export default function CocktailBarPage() {
               </ul>
             </div>
           </aside>
-        </section>
+
 
         {/* MODAL */}
         {isOpen && (
