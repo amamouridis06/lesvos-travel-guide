@@ -682,38 +682,39 @@ export default function CocktailBarPage() {
               </div>
 
               {/* THUMBNAILS */}
-              <div className="mt-4 grid grid-cols-4 gap-3">
-                {GALLERY.map((item, i) => (
-                    <button
-                        key={item.src}
-                        onClick={() => setIndex(i)}
-                        className={`relative aspect-[4/3] overflow-hidden rounded-xl ${
-                            i === index
-                                ? "ring-2 ring-offset-2"
-                                : "opacity-70 hover:opacity-100"
-                        }`}
-                    >
-                      {item.type === "image" ? (
-                          <img
-                              src={item.src}
-                              alt=""
-                              className="h-full w-full object-cover"
-                          />
-                      ) : (
-                          <>
-                            <img
-                                src={item.poster}
-                                alt=""
-                                className="h-full w-full object-cover"
-                            />
-                            <div className="absolute inset-0 flex items-center justify-center bg-black/30 text-white text-xl">
-                              ▶
-                            </div>
-                          </>
-                      )}
-                    </button>
-                ))}
-              </div>
+              {/*<div className="mt-4 grid grid-cols-4 gap-3">*/}
+              {/*  {GALLERY.map((item, i) => (*/}
+              {/*      <button*/}
+              {/*          key={item.src}*/}
+              {/*          onClick={() => setIndex(i)}*/}
+              {/*          className={`relative aspect-[4/3] overflow-hidden rounded-xl ${*/}
+              {/*              i === index*/}
+              {/*                  ? "ring-2 ring-offset-2"*/}
+              {/*                  : "opacity-70 hover:opacity-100"*/}
+              {/*          }`}*/}
+              {/*      >*/}
+              {/*        {item.type === "image" ? (*/}
+              {/*            <img*/}
+              {/*                src={item.src}*/}
+              {/*                alt=""*/}
+              {/*                className="h-full w-full object-cover"*/}
+              {/*            />*/}
+              {/*        ) */}
+              {/*            // : (*/}
+              {/*        //     <>*/}
+              {/*        //       <img*/}
+              {/*        //           src={item.poster}*/}
+              {/*        //           alt=""*/}
+              {/*        //           className="h-full w-full object-cover"*/}
+              {/*        //       />*/}
+              {/*        //       <div className="absolute inset-0 flex items-center justify-center bg-black/30 text-white text-xl">*/}
+              {/*        //         ▶*/}
+              {/*        //       </div>*/}
+              {/*        //     </>*/}
+              {/*        )}*/}
+              {/*      </button>*/}
+              {/*  ))}*/}
+              {/*</div>*/}
             </div>
           </div>
 
