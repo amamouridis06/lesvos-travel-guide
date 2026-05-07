@@ -1,353 +1,327 @@
 "use client";
+import { useEffect } from "react";
 
-import { useEffect, useRef, useState } from "react";
-import {
-  MapPin,
-  Phone,
-  Clock,
-  Wallet,
-  Users,
-  ChevronLeft,
-  ChevronRight,
-  X,
-} from "lucide-react";
+const IMG = {
+  hero: "/votsalo3.jpg",
+  votsalo1: "/votsalo1.jpg",
+  votsalo2: "/votsalo2.png",
+  votsalo3: "/votsalo3.jpg",
+  votsalo4: "/votsalo4.jpg",
+  votsalo5: "/votsalo5.jpg",
+  votsalo6: "/votsalo6.jpg",
+  votsalo7:"/votsalo7.jpg",
+  votsalo8:"/votsalo8.jpg",
+};
 
-// ---- Replace with your own images ----
-const HERO = "/votsalo3.jpg";
+const votsalo = {
+  name: "Taverna To Votsalo",
+  region: "Eftalou Lesvos Greece",
+  country: "Greece",
+  tagline: "",
+  intro:
+      "Welcome to Taverna To Votsalo in Eftalou",
+  body: [
+    "Fully renovated with modern design and careful details, it offers comfort, elegance and privacy.",
+    "It is located just 2 minutes from Ermou Street, with direct access to shops, cafes and restaurants, while the quiet location ensures joy. The main attractions and the port are accessible on foot, as is the Church of St. Theraponta.",
+    "The studio has a double bed and a sofa bed, as well as modern facilities: fast Wi-Fi, air conditioning, smart TV and a fully equipped kitchen. Quality white items, towels and toiletries are provided, along with hairdryer, iron and basic items for a comfortable and premium accommodation.",
+  ],
+  highlights: [
+    { label: "View ", value: "Yes" },
+    // { label: "Transport from / to the airport", value: "No"  },
+    // { label: "Wi-Fi", value: "Free" },
+    { label: "Parking", value: "Yes" },
+  ],
+  pros: [
+    "Near the sea",
+    "Beautiful view",
+    "The best hospitality"
+  ],
+  knowBefore: [
+    "Reserve a table",
+    "The best time is in afternoon",
+  ],
+  gallery: [
+    { src: IMG.votsalo1, alt: "Cocktail", caption: "Cocktail: Where Every Sip Tastes Like Summer" },
+    { src: IMG.votsalo2, alt: "Eggplants", caption: "Eggplants: From Garden to Tablen" },
+    { src: IMG.votsalo3, alt: "Seafood", caption: "Seafood: Fresh from the Aegean" },
+    { src: IMG.votsalo4, alt: "Kritharaki", caption: "Kritharaki: Slow-Cooked Memories" },
+    { src: IMG.votsalo5, alt: "Shrimps", caption: "Shrimps: Calm in the heart of the city."},
+    { src: IMG.votsalo6, alt: "balcony", caption: "" },
+    { src: IMG.votsalo7, alt: "bath", caption: "" },
+    { src: IMG.votsalo8, alt: "bath", caption: "" }
+  ],
+  bookUrl:
+      "https://www.booking.com/Share-WK9K1bo",
+};
 
-const votsalo = [
-  // { type: "video", src: "/naf-ep.mp4", poster: "/naf-ep-thumb.jpg" },
-  { type: "image", src: "/votsalo1.jpg" },
-  { type: "image", src: "/votsalo2.jpg" },
-  { type: "image", src: "/votsalo3.jpg" },
-  { type: "image", src: "/votsalo4.jpg" },
-  { type: "image", src: "/votsalo5.jpg" },
-  { type: "image", src: "/votsalo6.jpg" },
-  { type: "image", src: "/votsalo7.jpg" },
-  { type: "image", src: "/votsalo8.jpg" },
-  // { type: "video", src: "/naf-dj.mp4", poster: "/naf-dj-thumb.jpg" },
-  // { type: "video", src: "/naf-party.mp4", poster: "/naf-party-thumb.jpg" },
-];
+const STYLES = `
+  @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap");
 
-const COCKTAILS = [
-  { t: "Zombie", d: "rum, passion fruit, pineapple, lime" },
-  { t: "Diego", d: "tequila, mango, vanilla, lime, spicy bitters" },
-  { t: "Hanky panky", d: "Vodka, fresh ginger, cucumber, lime." },
-  { t: "Pink mule", d: "vodka, strawberry, lime, mint, ginger beer" },
-];
+  .ms-root {
+    --ms-bg: oklch(0.975 0.012 80);
+    --ms-fg: oklch(0.18 0.015 60);
+    --ms-muted: oklch(0.45 0.02 60);
+    --ms-border: oklch(0.9 0.013 80);
+    --ms-card: oklch(0.985 0.008 80);
+    --ms-ink: oklch(0.14 0.012 60);
+    --ms-gold: oklch(0.68 0.11 75);
+    --ms-gold-soft: oklch(0.82 0.06 80);
+    --ms-display: "Cormorant Garamond", serif;
+    --ms-sans: "Inter", sans-serif;
+    background: var(--ms-bg);
+    color: var(--ms-fg);
+    font-family: var(--ms-sans);
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    background-image:
+      radial-gradient(circle at 20% 10%, color-mix(in oklab, var(--ms-gold) 6%, transparent) 0%, transparent 40%),
+      radial-gradient(circle at 80% 90%, color-mix(in oklab, var(--ms-ink) 5%, transparent) 0%, transparent 45%);
+  }
 
-const NEARBY = [
-  { label: "Eftalou Beach", emoji: "🏖" },
-  { label: "Molivos", emoji: "🏘" },
-  { label: "Petra ", emoji: "🏘" },
-];
+  .ms-root h1, .ms-root h2, .ms-root h3, .ms-root h4, .ms-display {
+    font-family: var(--ms-display);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
 
-const INFO = [
-  { Icon: MapPin, label: "Location", value: "Eftalou 81108" },
-  { Icon: Phone, label: "Phone", value: "2252031374" },
-  { Icon: Clock, label: "Hours", value: "Daily · 12:00 - 21:30" },
-  { Icon: Users, label: "Best for", value: "Couples, friends, sunset drinks" },
-];
+  .ms-eyebrow {
+    font-family: var(--ms-sans);
+    text-transform: uppercase;
+    letter-spacing: 0.24em;
+    font-size: 0.65rem;
+    font-weight: 500;
+    color: var(--ms-gold);
+  }
 
-export default function CocktailBarPage() {
-  const [index, setIndex] = useState(0);
-  const [isOpen, setIsOpen] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
-  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+  @media (min-width: 768px) {
+    .ms-eyebrow { letter-spacing: 0.32em; font-size: 0.7rem; }
+  }
 
-  const next = () => setIndex((p) => (p + 1) % votsalo.length);
-  const prev = () => setIndex((p) => (p - 1 + votsalo.length) % votsalo.length);
+  .ms-hairline {
+    display: inline-block;
+    width: 40px;
+    height: 1px;
+    background: var(--ms-gold);
+    vertical-align: middle;
+    flex-shrink: 0;
+  }
 
+  @media (min-width: 768px) {
+    .ms-hairline { width: 56px; }
+  }
+
+  .ms-serif-num {
+    font-family: var(--ms-display);
+    font-feature-settings: "lnum", "pnum";
+    font-style: italic;
+    font-weight: 300;
+  }
+
+  .ms-dropcap::first-letter {
+    font-family: var(--ms-display);
+    font-size: 3.5rem;
+    font-weight: 500;
+    float: left;
+    line-height: 0.85;
+    padding: 0.35rem 0.65rem 0 0;
+    color: var(--ms-gold);
+  }
+
+  @media (min-width: 768px) {
+    .ms-dropcap::first-letter { font-size: 4.5rem; padding-right: 0.75rem; }
+  }
+
+  .ms-balance { text-wrap: balance; }
+  .ms-pretty  { text-wrap: pretty; }
+
+  @keyframes ms-fade-up { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes ms-slow-zoom { from { transform: scale(1.04); } to { transform: scale(1.12); } }
+  @keyframes ms-shimmer { from { transform: scaleX(0); transform-origin: left; } to { transform: scaleX(1); transform-origin: left; } }
+  @keyframes ms-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+
+  .ms-fade-up { animation: ms-fade-up 1.1s cubic-bezier(.2,.7,.2,1) both; }
+  .ms-slow-zoom { animation: ms-slow-zoom 18s ease-in-out infinite alternate; }
+  .ms-shimmer { animation: ms-shimmer 1.6s cubic-bezier(.2,.7,.2,1) .3s both; }
+  .ms-float { animation: ms-float 4s ease-in-out infinite; }
+
+  html { scroll-behavior: smooth; }
+`;
+
+export default function PPUrban() {
   useEffect(() => {
-    videoRefs.current.forEach((video, i) => {
-      if (!video) return;
-
-      if (i === index && !isOpen) {
-        video.play().catch(() => {});
-      } else {
-        video.pause();
-        video.currentTime = 0;
-      }
-    });
-  }, [index, isOpen]);
+    const id = "maison-solene-styles";
+    if (document.getElementById(id)) return;
+    const tag = document.createElement("style");
+    tag.id = id;
+    tag.textContent = STYLES;
+    document.head.appendChild(tag);
+    document.title = `${votsalo.name}, ${votsalo.region} — The Quiet Atlas`;
+  }, []);
 
   return (
-      <main
-          className="min-h-screen text-stone-900"
-          style={{
-            backgroundColor: "#fbf8f3",
-            fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif",
-          }}
-      >
-        <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
-        .font-display { font-family: 'Fraunces', Georgia, serif; letter-spacing: -0.02em; }
-        .gradient-warm { background: linear-gradient(135deg, #b85c3a, #e0a052); }
-        .gradient-hero { background: linear-gradient(180deg, transparent 0%, rgba(20,15,10,.3) 50%, rgba(20,15,10,.85) 100%); }
-        .shadow-soft { box-shadow: 0 10px 40px -15px rgba(60,40,30,.25); }
-        .shadow-elevated { box-shadow: 0 20px 60px -20px rgba(60,40,30,.35); }
-      `}</style>
-
-        {/* HERO */}
-        <section className="relative h-[80vh] min-h-[520px] w-full overflow-hidden">
+      <div className="ms-root min-h-screen">
+        <section className="relative flex min-h-[760px] w-full overflow-hidden sm:min-h-[820px] lg:h-screen lg:min-h-[720px]">
           <img
-              src={HERO}
-              alt="Bartender pouring a cocktail at a seaside bar in Lesvos at sunset"
-              className="absolute inset-0 h-full w-full object-cover"
+              src={IMG.hero}
+              alt={votsalo.name}
+              className="ms-slow-zoom absolute inset-0 h-full w-full object-cover"
           />
-          <div className="absolute inset-0 gradient-hero" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/85" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_28%,rgba(0,0,0,0.45)_100%)]" />
 
-          {/*<div className="absolute inset-x-0 top-0 z-10 flex items-center justify-between px-6 py-6 sm:px-10">*/}
-          {/*  /!*<span className="font-display text-lg font-semibold text-white">*!/*/}
-          {/*  /!*  Lesvos<span style={{ color: "#e0a052" }}>.</span>Guide*!/*/}
-          {/*  /!*</span>*!/*/}
-          {/*  /!*<nav className="hidden gap-8 text-sm text-white/85 sm:flex">*!/*/}
-          {/*  /!*  <a href="#about" className="hover:text-white">About</a>*!/*/}
-          {/*  /!*  <a href="#gallery" className="hover:text-white">Gallery</a>*!/*/}
-          {/*  /!*  <a href="#visit" className="hover:text-white">Visit</a>*!/*/}
-          {/*  /!*</nav>*!/*/}
-          {/*</div>*/}
-
-          <div className="absolute inset-x-0 bottom-0 z-10 px-6 pb-16 sm:px-10 sm:pb-20">
-            <div className="mx-auto max-w-6xl">
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] text-white backdrop-blur-md">
-              <span
-                  className="h-1.5 w-1.5 rounded-full"
-                  style={{ background: "#e0a052" }}
-              />
-              North Lesvos · Restaurant
-            </span>
-
-              <h1 className="font-display mt-5 max-w-3xl text-4xl font-semibold leading-[1.05] text-white sm:text-6xl lg:text-7xl">
-                Taverna To Votsalo
-              </h1>
-
-              <p className="mt-4 max-w-xl text-base text-white/80 sm:text-lg">
-                A fantastic place to eat nearby the sea This place is ideal for afternoon and night
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* CONTENT */}
-        <section className="mx-auto grid max-w-6xl grid-cols-1 gap-12 px-6 py-16 sm:px-10 sm:py-24 lg:grid-cols-3 lg:gap-16">
-          {/* MAIN */}
-          <div className="space-y-16 lg:col-span-2">
-            <div id="about">
-              <p
-                  className="text-xs font-semibold uppercase tracking-[0.25em]"
-                  style={{ color: "#b85c3a" }}
-              >
-                The Place
-              </p>
-
-              <h2 className="font-display mt-3 text-3xl font-semibold sm:text-4xl">
-                About
-              </h2>
-
-              <p className="mt-5 text-lg leading-relaxed text-stone-600">
-                In the heart of Eftalou, just steps from the sea and the renowned thermal springs,
-                “Votsalo” brings together authentic flavors, traditional hospitality, and the
-                laid-back spirit of the Greek summer in Taverna to Votsalo. Rooted in local culinary traditions and
-                committed to fresh, high-quality ingredients, it offers dishes that evoke the warmth
-                of a family table by the water.
-              </p>
-
-              <p className="mt-4 text-lg leading-relaxed text-stone-600">
-                Fresh fish, seafood meze, homemade cooked dishes, and beloved Greek
-                specialties are served in a setting defined by simplicity, authenticity,
-                and coastal charm. Whether you are stopping by for a relaxed lunch after
-                a swim or enjoying dinner with views of the sunset, “Votsalo” is a welcoming
-                gathering place for those seeking delicious food, beautiful scenery, and the timeless
-                feeling of a classic Greek summer.
-              </p>
-              <p className="mt-4 text-lg leading-relaxed text-stone-600">
-                Come for the sunset, stay for the second round — the playlist gets
-                better after midnight.
-              </p>
-            </div>
-
-            {/* Signatures */}
-            <div>
-              <p
-                  className="text-xs font-semibold uppercase tracking-[0.25em]"
-                  style={{ color: "#b85c3a" }}
-              >
-                What to try
-              </p>
-
-              <h2 className="font-display mt-3 text-3xl font-semibold sm:text-4xl">
-                Signatures of the house
-              </h2>
-
-              <div className="mt-8 grid gap-4 sm:grid-cols-2">
-                {COCKTAILS.map((c) => (
-                    <div
-                        key={c.t}
-                        className="rounded-2xl border border-stone-200 bg-white p-5 transition-all hover:-translate-y-0.5 hover:shadow-soft"
-                    >
-                      <h3 className="font-display text-xl font-semibold">{c.t}</h3>
-                      <p className="mt-1 text-sm text-stone-600">{c.d}</p>
-                    </div>
-                ))}
-              </div>
-            </div>
-
-
-            <div className="mt-12 grid gap-6 md:mt-16 md:grid-cols-12 md:gap-8">
-              {votsalo.map((g, i) => {
-                const layouts = [
-                  "md:col-span-7 md:row-span-2 aspect-[4/5]",
-                  "md:col-span-5 aspect-[4/3]",
-                  "md:col-span-5 md:col-start-8 aspect-[4/3]",
-                ];
-                return (
-                    <figure key={g.src} className={`group ${layouts[i] ?? "md:col-span-4 aspect-[4/5]"}`}>
-                      <div className="relative h-full min-h-[260px] overflow-hidden md:min-h-0" style={{ background: "var(--ms-border)" }}>
-                        <img
-                            src={g.src}
-                            alt={g.alt}
-                            loading="lazy"
-                            className="h-full w-full object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-[1.06]"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-100" />
-                      </div>
-                      <figcaption className="mt-4 flex items-baseline gap-3">
-                        <span className="ms-serif-num text-sm" style={{ color: "var(--ms-gold)" }}>0{i + 1}</span>
-                        <span className="ms-display text-lg italic" style={{ color: "var(--ms-muted)" }}>{g.caption}</span>
-                      </figcaption>
-                    </figure>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-
-          {/* SIDEBAR */}
-          <aside id="visit" className="space-y-6 lg:sticky lg:top-8 lg:self-start">
-            <div className="overflow-hidden rounded-3xl border border-stone-200 bg-white shadow-soft">
-              <div className="gradient-warm px-6 py-5 text-white">
-                <h3 className="font-display text-2xl font-semibold">
-                  Plan your visit
-                </h3>
-                <p className="mt-1 text-sm text-white/85">
-                  Reservations recommended on weekends.
+          <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col justify-end px-5 pb-16 sm:px-8 md:px-12 md:pb-24 lg:pb-32">
+            <div className="ms-fade-up max-w-5xl">
+              <div className="flex items-center gap-3 sm:gap-4">
+                <span className="ms-hairline ms-shimmer" />
+                <p className="ms-eyebrow" style={{ color: "var(--ms-gold-soft)" }}>
+                  {votsalo.region} · {votsalo.country}
                 </p>
               </div>
+              <h1 className="ms-balance mt-5 text-5xl leading-[0.98] text-white sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl">
+                {votsalo.name}
+              </h1>
+              <p className="ms-display mt-5 max-w-2xl text-xl italic text-white/85 sm:text-2xl md:text-3xl">
+                “{votsalo.tagline}”
+              </p>
+            </div>
+          </div>
 
-              <ul className="divide-y divide-stone-200">
-                {INFO.map(({ Icon, label, value }) => (
-                    <li key={label} className="flex items-start gap-4 px-6 py-4">
-                      <div
-                          className="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-stone-100"
-                          style={{ color: "#b85c3a" }}
-                      >
-                        <Icon className="h-4 w-4" />
-                      </div>
+          <div className="ms-float absolute bottom-6 left-1/2 z-10 hidden -translate-x-1/2 text-[10px] uppercase tracking-[0.4em] text-white/60 lg:block">
+            Scroll
+          </div>
+        </section>
 
-                      <div>
-                        <p className="text-xs uppercase tracking-wider text-stone-500">
-                          {label}
-                        </p>
-                        <p className="text-sm font-medium text-stone-900">{value}</p>
-                      </div>
-                    </li>
+        <section
+            className="border-y px-5 py-10 backdrop-blur-sm sm:px-8 md:px-12 md:py-16"
+            style={{ borderColor: "var(--ms-border)", background: "color-mix(in oklab, var(--ms-bg) 60%, transparent)" }}
+        >
+          <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {votsalo.highlights.map((h, i) => (
+                <div key={h.label} className="relative lg:px-4">
+                  {i > 0 && (
+                      <span
+                          className="absolute -left-0 top-1 hidden h-12 w-px lg:block"
+                          style={{ background: "var(--ms-border)" }}
+                      />
+                  )}
+                  <div className="text-[10px] uppercase tracking-[0.28em]" style={{ color: "var(--ms-muted)" }}>
+                    {h.label}
+                  </div>
+                  <div className="ms-display mt-2 text-3xl leading-tight md:mt-3 md:text-4xl">{h.value}</div>
+                </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="relative px-5 py-20 sm:px-8 md:px-12 md:py-28 lg:py-32">
+          <div
+              className="ms-display pointer-events-none absolute left-5 top-10 select-none text-[8rem] leading-none sm:left-8 md:left-12 md:text-[16rem]"
+              style={{ color: "color-mix(in oklab, var(--ms-gold) 10%, transparent)" }}
+          >
+            ”
+          </div>
+
+          <div className="relative mx-auto grid max-w-6xl gap-14 lg:grid-cols-12 lg:gap-20">
+            <main className="lg:col-span-7">
+              <div className="flex items-center gap-4">
+                <span className="ms-hairline" />
+                <p className="ms-eyebrow">The Entry</p>
+              </div>
+
+              <p className="ms-display ms-balance mt-7 text-3xl leading-[1.15] sm:text-4xl md:text-5xl lg:text-[2.75rem]">
+                {votsalo.intro}
+              </p>
+
+              <div className="ms-pretty mt-10 space-y-6 text-[15px] leading-[1.8] sm:text-base md:mt-12 md:text-[17px]" style={{ color: "var(--ms-muted)" }}>
+                {votsalo.body.map((p, i) => (
+                    <p key={i} className={i === 0 ? "ms-dropcap" : undefined}>
+                      {p}
+                    </p>
                 ))}
-              </ul>
+              </div>
+
+              <div className="mt-12 flex items-center gap-4 text-xs uppercase tracking-[0.24em] md:tracking-[0.3em]" style={{ color: "var(--ms-muted)" }}>
+                <span className="ms-hairline" />
+                <span>PP Urban Studio</span>
+              </div>
+            </main>
+
+            <aside className="lg:col-span-4 lg:col-start-9">
+
+                <div>
+                  <div className="flex items-center gap-4">
+                    <span className="ms-hairline" />
+                    <p className="ms-eyebrow">Why we love it</p>
+                  </div>
+                  <ul className="mt-6 space-y-4 text-sm" style={{ color: "var(--ms-muted)" }}>
+                    {votsalo.pros.map((p) => (
+                        <li key={p} className="flex gap-4 leading-relaxed">
+                          <span className="mt-2 h-px w-4 shrink-0" style={{ background: "var(--ms-gold)" }} />
+                          <span>{p}</span>
+                        </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div>
+                  <div className="flex items-center gap-4">
+                    <span className="ms-hairline" />
+                    <p className="ms-eyebrow">Know before you go</p>
+                  </div>
+                  <ul className="mt-6 space-y-4 text-sm" style={{ color: "var(--ms-muted)" }}>
+                    {votsalo.knowBefore.map((p, i) => (
+                        <li key={p} className="flex gap-4 leading-relaxed">
+                          <span className="ms-serif-num shrink-0 not-italic" style={{ color: "var(--ms-gold)" }}>0{i + 1}</span>
+                          <span>{p}</span>
+                        </li>
+                    ))}
+                  </ul>
+                </div>
+            </aside>
+          </div>
+        </section>
+
+        <section className="px-5 py-18 sm:px-8 md:px-12 md:py-24">
+          <div className="mx-auto grid max-w-6xl gap-10 border-y py-12 md:grid-cols-12 md:py-16" style={{ borderColor: "var(--ms-border)" }}>
+            <div className="md:col-span-5">
+              <div className="flex items-center gap-4">
+                <span className="ms-hairline" />
+                <p className="ms-eyebrow">Contact</p>
+              </div>
+              <h2 className="ms-display mt-5 text-4xl md:text-6xl">Get in touch</h2>
+            </div>
+            <div className="md:col-span-6 md:col-start-7">
+              <p className="text-sm leading-relaxed md:text-base" style={{ color: "var(--ms-muted)" }}>
+                For reservations, special requests or availability inquiries, our team is available daily to assist you.
+              </p>
+              <div className="mt-8 space-y-4 text-sm" style={{ color: "var(--ms-muted)" }}>
+                <p><strong className="text-[color:var(--ms-fg)]">Phone:</strong> +30 2253 072680</p>
+                <p><strong className="text-[color:var(--ms-fg)]">Email:</strong>  tavernatovotsalo@gmail.comm </p>
+                <p><strong className="text-[color:var(--ms-fg)]">Address:</strong> Eftalou Lesvos </p>
+                <p><strong className="text-[color:var(--ms-fg)]">Instagram:</strong> @tovotsalo_eftalou</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <section className="px-5 py-20 sm:px-8 md:px-12 md:py-28" style={{ background: "var(--ms-bg)" }}>
+          <div className="mx-auto max-w-7xl">
+            <div>
+              <div className="flex items-center gap-4">
+                <span className="ms-hairline" />
+                <p className="ms-eyebrow">From the visit</p>
+              </div>
+              <h2 className="ms-display mt-4 text-4xl leading-tight md:text-6xl">
+                A few moments<br />
+                <span className="italic" style={{ color: "var(--ms-gold)" }}>from the perfect dishes.</span>
+              </h2>
             </div>
 
-            <div className="overflow-hidden rounded-3xl border border-stone-200 bg-white shadow-soft">
-              <iframe
-                  title="Map of Taverna to votsalo"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1454.4014408392081!2d26.212242236387354!3d39.3779559155215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ba858a49ac0e27%3A0x487fac2fd8d63957!2sTaverna%20To%20Votsalo!5e1!3m2!1sen!2sgr!4v1778182112095!5m2!1sen!2sgr"
-                  className="h-56 w-full border-0"
-                  loading="lazy"
-              />
-            </div>
+          </div>
+        </section>
 
-            <div className="rounded-3xl border border-stone-200 bg-white p-6 shadow-soft">
-              <h3 className="font-display text-xl font-semibold">Nearby</h3>
-
-              <ul className="mt-4 space-y-3 text-sm">
-                {NEARBY.map((n) => (
-                    <li key={n.label}>
-                      <a
-                          href="#"
-                          className="flex items-center justify-between rounded-xl px-3 py-2 transition-colors hover:bg-stone-100"
-                      >
-                    <span className="flex items-center gap-3">
-                      <span className="text-lg">{n.emoji}</span>
-                      <span className="font-medium">{n.label}</span>
-                    </span>
-                        <ChevronRight className="h-4 w-4 text-stone-500" />
-                      </a>
-                    </li>
-                ))}
-              </ul>
-            </div>
-          </aside>
-
-
-        {/* MODAL */}
-        {isOpen && (
-            <div
-                className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 p-4 backdrop-blur-sm"
-                onClick={() => setIsOpen(false)}
-            >
-              <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setIsOpen(false);
-                  }}
-                  aria-label="Close"
-                  className="absolute right-6 top-6 rounded-full bg-white/10 p-2 text-white hover:bg-white/20"
-              >
-                <X className="h-5 w-5" />
-              </button>
-
-              <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    prev();
-                  }}
-                  aria-label="Previous"
-                  className="absolute left-6 top-1/2 -translate-y-1/2 rounded-full bg-white/10 p-3 text-white hover:bg-white/20"
-              >
-                <ChevronLeft className="h-6 w-6" />
-              </button>
-
-              {votsalo[index].type === "image" ? (
-                  <img
-                      src={votsalo[index].src}
-                      alt="Gallery fullscreen"
-                      className="max-h-[85vh] max-w-[90vw] object-contain"
-                      onClick={(e) => e.stopPropagation()}
-                  />
-              ) : (
-                  <video
-                      key={votsalo[index].src}
-                      controls
-                      autoPlay
-                      className="max-h-[85vh] max-w-[90vw]"
-                      onClick={(e) => e.stopPropagation()}
-                  >
-                    <source src={votsalo[index].src} type="video/mp4" />
-                  </video>
-              )}
-
-              <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    next();
-                  }}
-                  aria-label="Next"
-                  className="absolute right-6 top-1/2 -translate-y-1/2 rounded-full bg-white/10 p-3 text-white hover:bg-white/20"
-              >
-                <ChevronRight className="h-6 w-6" />
-              </button>
-            </div>
-        )}
-      </main>
+      </div>
   );
 }
