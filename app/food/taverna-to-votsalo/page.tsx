@@ -55,8 +55,8 @@ export default function CocktailBarPage() {
   const [isHovered, setIsHovered] = useState(false);
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
-  const next = () => setIndex((p) => (p + 1) % GALLERY.length);
-  const prev = () => setIndex((p) => (p - 1 + GALLERY.length) % GALLERY.length);
+  const next = () => setIndex((p) => (p + 1) % votsalo.length);
+  const prev = () => setIndex((p) => (p - 1 + votsalo.length) % votsalo.length);
 
   useEffect(() => {
     videoRefs.current.forEach((video, i) => {
@@ -317,22 +317,22 @@ export default function CocktailBarPage() {
                 <ChevronLeft className="h-6 w-6" />
               </button>
 
-              {GALLERY[index].type === "image" ? (
+              {votsalo[index].type === "image" ? (
                   <img
-                      src={GALLERY[index].src}
+                      src={votsalo[index].src}
                       alt="Gallery fullscreen"
                       className="max-h-[85vh] max-w-[90vw] object-contain"
                       onClick={(e) => e.stopPropagation()}
                   />
               ) : (
                   <video
-                      key={GALLERY[index].src}
+                      key={votsalo[index].src}
                       controls
                       autoPlay
                       className="max-h-[85vh] max-w-[90vw]"
                       onClick={(e) => e.stopPropagation()}
                   >
-                    <source src={GALLERY[index].src} type="video/mp4" />
+                    <source src={votsalo[index].src} type="video/mp4" />
                   </video>
               )}
 
