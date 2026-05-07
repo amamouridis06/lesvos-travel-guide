@@ -421,9 +421,7 @@ export default function ThanosCozy() {
                     <span className="ms-serif-num text-sm" style={{ color: "var(--ms-gold)" }}>
                       0{i + 1}
                     </span>
-                        <span className="ms-display text-lg italic" style={{ color: "var(--ms-muted)" }}>
-                      {g.caption}
-                    </span>
+
                       </figcaption>
                     </figure>
                 );
