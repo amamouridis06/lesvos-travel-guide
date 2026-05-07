@@ -295,7 +295,7 @@ return (
             </span>
 
                     <h2 className="text-4xl md:text-5xl font-bold mt-3 text-gray-900">
-                        Reliable Car Rental in Lesvos
+                        5 UNITED CAR RENTALS
                     </h2>
 
                     <div className="w-20 h-1 bg-yellow-400 mx-auto my-6 rounded-full"></div>
