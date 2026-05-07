@@ -15,7 +15,7 @@ import {
 // ---- Replace with your own images ----
 const HERO = "/votsalo3.jpg";
 
-const GALLERY = [
+const votsalo = [
   // { type: "video", src: "/naf-ep.mp4", poster: "/naf-ep-thumb.jpg" },
   { type: "image", src: "/votsalo1.jpg" },
   { type: "image", src: "/votsalo2.jpg" },
@@ -195,7 +195,7 @@ export default function CocktailBarPage() {
 
 
             <div className="mt-12 grid gap-6 md:mt-16 md:grid-cols-12 md:gap-8">
-              {hotel.gallery.map((g, i) => {
+              {votsalo.gallery.map((g, i) => {
                 const layouts = [
                   "md:col-span-7 md:row-span-2 aspect-[4/5]",
                   "md:col-span-5 aspect-[4/3]",
