@@ -38,6 +38,15 @@ const Restaurants = [
     alt: "To Limanaki ton Pamfilon",
     href: "/food/limanaki_pamfilon",
   },
+  {
+    title: "Taverna To Votsalo",
+    category: "Where Sea, Flavor & Tradition Meet",
+    description: "Authentic Greek flavors, seaside sunsets, fresh seafood, and  hospitality.",
+    location: "📍Eftalou, Lesvos",
+    image: "/votsalo3.jpg",
+    alt: "Taverna To Votsalo",
+    href: "/food/taverna-to-votsalo",
+  },
 ];
 
 const Bars = [
