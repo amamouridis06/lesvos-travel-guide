@@ -37,7 +37,7 @@ const pharmacies = [
   {
     name: "Pharmacy Baltas Stavros",
     area: "Kalloni",
-    address: "📍Kalloni",
+    address: "Kalloni",
     phone: "+30 22530 24119",
     hours: [
       {day:"Mon,Wed:", time:"08:00–14:00"},
@@ -61,6 +61,7 @@ const pharmacies = [
     maps: "https://maps.app.goo.gl/rCih45m5DGXXoM9F7",
     emergency: false,
   },
+];
 
 export default function PharmaciesPage() {
   return (
