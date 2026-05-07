@@ -53,11 +53,11 @@ const appartment = {
   gallery: [
     { src: IMG.house, alt: "Where Comfort Meets Clean" },
     { src: IMG.bed1, alt: "Where Every Night Feels Better" },
-    { src: IMG.bed2, alt: "Where Every Night Feels Better" },
+    { src: IMG.table, alt: "Designed for Delicious Moments"},
     { src: IMG.livingroom, alt: "Your Space, Your Story" },
     { src: IMG.kitchen, alt: "Designed for Delicious Moments"},
     { src: IMG.bath, alt: "Where Comfort Meets Clean" },
-    { src: IMG.table, alt: "Designed for Delicious Moments"},
+    { src: IMG.bed2, alt: "Where Every Night Feels Better" },
     { src: IMG.ntou, alt: "Designed for Delicious Moments"},
   ],
 
