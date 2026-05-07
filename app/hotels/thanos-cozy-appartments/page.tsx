@@ -319,8 +319,8 @@ export default function ThanosCozy() {
                       style={{ borderColor: "var(--ms-border)", color: "var(--ms-muted)" }}
                   >
                     {[
-                      ["Check-in", "14:00"],
-                      ["Check-out", "11:00"],
+                      ["Check-in", "15:00 to 23:00"],
+                      ["Check-out", "08:00 to 10:00"],
                       ["Cancellation ", "3 days"],
                     ].map(([k, v]) => (
                         <div key={k} className="flex justify-between py-1.5">
