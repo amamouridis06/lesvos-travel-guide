@@ -195,7 +195,7 @@ export default function CocktailBarPage() {
 
 
             <div className="mt-12 grid gap-6 md:mt-16 md:grid-cols-12 md:gap-8">
-              {votsalo.gallery.map((g, i) => {
+              {votsalo.map((g, i) => {
                 const layouts = [
                   "md:col-span-7 md:row-span-2 aspect-[4/5]",
                   "md:col-span-5 aspect-[4/3]",
