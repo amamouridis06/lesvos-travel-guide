@@ -35,9 +35,8 @@ const appartment = {
   highlights: [
     { label: "Wi-Fi", value: "Free" },
     { label: "Parking", value: "Free" },
-    { label: "Appartments", value: "2" },
-    // { label: "Restaurant", value: "Michelin-Starred" },
-    { label: "Location", value: "Top location: Highly rated by recent guests (9.7)" },
+    { label: "Air condition", value: "Yes" },
+    { label: "Balcony", value: "Yes" },
   ],
   pros: [
     "Central location in the heart of the island",
@@ -182,13 +181,6 @@ export default function ThanosCozy() {
               <p className="mt-6 max-w-xl text-lg italic text-white/85 ms-display sm:text-xl md:text-3xl">
                 "{appartment.tagline}"
               </p>
-              <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-[10px] uppercase tracking-[0.3em] text-white/70">
-                {/*<span>Est. <span className="ms-serif-num text-base text-[color:var(--ms-gold-soft)] not-italic">{appartment.established}</span></span>*/}
-                <span className="hidden h-3 w-px bg-white/30 md:block" />
-                <span><span className="ms-serif-num text-base text-[color:var(--ms-gold-soft)]">{appartment.appartments}</span> Appartments</span>
-                <span className="hidden h-3 w-px bg-white/30 md:block" />
-                <span>From <span className="ms-serif-num text-base text-[color:var(--ms-gold-soft)] not-italic">{appartment.fromPrice}</span></span>
-              </div>
             </div>
           </div>
 
