@@ -122,7 +122,7 @@ export default function NavBar() {
                     onClick={closeMenu}
                     className="py-3 border-b border-white/10 hover:text-yellow-300 transition"
                 >
-                  Activities
+                  Rentals
                 </Link>
 
                 <Link
