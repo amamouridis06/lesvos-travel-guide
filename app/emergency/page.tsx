@@ -37,7 +37,7 @@ const pharmacies = [
   {
     name: "Pharmacy Baltas Stavros",
     area: "Kalloni",
-    address: "Kalloni",
+    address: "📍Kalloni",
     phone: "+30 22530 24119",
     hours: [
       {day:"Mon,Wed:", time:"08:00–14:00"},
@@ -47,16 +47,20 @@ const pharmacies = [
     maps: "https://maps.app.goo.gl/4sfVgXz9uxsp42nm9",
     emergency: false,
   },
-  // {
-  //   name: "Molyvos Pharmacy",
-  //   area: "Molyvos",
-  //   address: "Molyvos Village Center",
-  //   phone: "+30 22530 67890",
-  //   hours: "Mon–Sat: 08:00–20:00",
-  //   maps: "https://maps.google.com",
-  //   emergency: false,
-  // },
-];
+  {
+    name: "Pharmacy Arist. Sifaki",
+    area: "📍Mytilene",
+    address: "14 Lesvonaktos Street, Mytilene, Greece, 81131",
+    phone: "+30 698 615 4200",
+    hours: [
+      {day:"Mon,Wed:", time:"08:00–14:00"},
+      {day:"Tue,Thur,Fri:", time: "08:00–14:00 & 17:30-20:30"},
+      {day:"Sat:", time:"09:30–14:00"},
+      {day:"Sun:", time: "Closed"}
+    ],
+    maps: "https://maps.app.goo.gl/rCih45m5DGXXoM9F7",
+    emergency: false,
+  },
 
 export default function PharmaciesPage() {
   return (
