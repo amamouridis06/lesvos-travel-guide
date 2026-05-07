@@ -5,13 +5,13 @@ import { useEffect } from "react";
 const IMG = {
   hero: "/thanosbed.jpg",
   bath: "/thanosbath.jpg",
-  bed2: "/thanosbed2.jpg",
+  table:"/thanostable.jpg",
   ntou: "/thanosb.jpg",
   bed1: "/thanosbed.jpg",
+  bed2: "/thanosbed2.jpg",
   livingroom: "/thanosliv.jpg",
   kitchen: "/thanosk.jpg",
   house: "/thanoshouse.jpg",
-  table:"/thanostable.jpg"
 };
 
 // ---------- Appartment data ----------
@@ -410,10 +410,6 @@ export default function ThanosCozy() {
                         <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-100" />
                       </div>
                       <figcaption className="mt-4 flex items-baseline gap-3">
-                    <span className="ms-serif-num text-sm" style={{ color: "var(--ms-gold)" }}>
-                      0{i + 1}
-                    </span>
-
                       </figcaption>
                     </figure>
                 );
@@ -438,7 +434,7 @@ export default function ThanosCozy() {
             />
           </div>
           <div className="relative mx-auto flex max-w-5xl flex-col items-center text-center">
-            <p className="ms-eyebrow" style={{ color: "var(--ms-gold-soft)" }}>Ready when you are</p>
+
             <h2 className="ms-display ms-balance mt-6 text-4xl leading-[1.05] md:text-7xl">
               Stay at <span className="italic" style={{ color: "var(--ms-gold-soft)" }}>{appartment.name}</span>.
             </h2>
@@ -460,7 +456,7 @@ export default function ThanosCozy() {
                   e.currentTarget.style.color = "white";
                 }}
             >
-              Reserve a Suite
+              Book Now
               <span className="transition-transform duration-500 group-hover:translate-x-1">→</span>
             </a>
           </div>
