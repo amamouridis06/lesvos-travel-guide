@@ -5,9 +5,13 @@ import { useEffect } from "react";
 const IMG = {
   hero: "/thanosbed.jpg",
   bath: "/thanosbath.jpg",
-  bed: "/thanosbed2.jpg",
+  bed2: "/thanosbed2.jpg",
+  ntou: "/thanosb.jpg",
+  bed1: "/thanosbed.jpg",
   livingroom: "/thanosliv.jpg",
   kitchen: "/thanosk.jpg",
+  house: "/thanoshouse.jpg",
+  table:"/thanostable.jpg"
 };
 
 // ---------- Appartment data ----------
@@ -19,7 +23,7 @@ const appartment = {
   fromPrice: "€82",
   tagline: "Where the sea meets stillness.",
   intro:
-      "Comfortable rooms in the heart of the city. A long-standing tradition of hospitality, shaped by generations.",
+      "Nice Appartment to stay in Skalla Kallonis",
   body: [
     "<strong>Accommodation:</strong>Thanos Cozy Apartments in Skala Kallonis offers a sun terrace and free WiFi. Each apartment features air-conditioning, a terrace, and a balcony with sea views.",
 
@@ -48,11 +52,17 @@ const appartment = {
     "Valid ID and credit card required at check-in",
   ],
   gallery: [
-    { src: IMG.bath, alt: "Where Comfort Meets Clean", caption: "Where Comfort Meets Clean." },
-    { src: IMG.bed, alt: "Where Every Night Feels Better", caption: "Where Every Night Feels Better" },
-    { src: IMG.livingroom, alt: "Your Space, Your Story", caption: "Your Space, Your Story" },
-    { src: IMG.kitchen, alt: "Designed for Delicious Moments", caption: "Designed for Delicious Moments" },
+    { src: IMG.house, alt: "Where Comfort Meets Clean" },
+    { src: IMG.bed1, alt: "Where Every Night Feels Better" },
+    { src: IMG.bed2, alt: "Where Every Night Feels Better" },
+    { src: IMG.livingroom, alt: "Your Space, Your Story" },
+    { src: IMG.kitchen, alt: "Designed for Delicious Moments"},
+    { src: IMG.bath, alt: "Where Comfort Meets Clean" },
+    { src: IMG.table, alt: "Designed for Delicious Moments"},
+    { src: IMG.ntou, alt: "Designed for Delicious Moments"},
   ],
+
+};
   bookUrl: "https://www.booking.com/hotel/gr/thanos-cozy-apartments.en-gb.html?aid=397594&label=gog235jc-10CAEoggI46AdIM1gDaFyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AuPcyc8GwAIB0gIkNjVjMzhiNTEtNmU0My00MjRjLThiMDItZTYwMGRlZTcyNTgx2AIB4AIB&sid=747f34aafbdfb5cbb28107ae025e80b0&dest_id=14571543&dest_type=hotel&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1777533098&srpvid=cc27924072e3031b&type=total&ucfs=1&",
 };
 
@@ -227,9 +237,11 @@ export default function ThanosCozy() {
                   style={{ color: "var(--ms-muted)" }}
               >
                 {appartment.body.map((p, i) => (
-                    <p key={i} className={i === 0 ? "ms-dropcap" : undefined}>
-                      {p}
-                    </p>
+                    <p
+                        key={i}
+                        className={i === 0 ? "ms-dropcap" : undefined}
+                        dangerouslySetInnerHTML={{ __html: p }}
+                    />
                 ))}
               </div>
 
