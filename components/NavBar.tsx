@@ -48,6 +48,9 @@ export default function NavBar() {
               <Link href="/rentals/5.united" className="hover:text-yellow-300 transition">
                 Rentals
               </Link>
+              <Link href="/taxi-services/" className="hover:text-yellow-300 transition">
+                Taxi-Services
+              </Link>
               <Link href="/about" className="hover:text-yellow-300 transition">
                 About
               </Link>
@@ -123,6 +126,13 @@ export default function NavBar() {
                     className="py-3 border-b border-white/10 hover:text-yellow-300 transition"
                 >
                   Rentals
+                </Link>
+                <Link
+                    href="/taxi-services/"
+                    onClick={closeMenu}
+                    className="py-3 border-b border-white/10 hover:text-yellow-300 transition"
+                >
+                  Taxi-Services
                 </Link>
 
                 <Link
