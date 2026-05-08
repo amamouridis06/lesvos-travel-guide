@@ -43,28 +43,28 @@ export default function TaxiServicesTravelGuidePage() {
                 image:
                     "/tryfon-taxi.jpg",
             },
-            {
-                name: "Maria Private Transfers",
-                area: "Molyvos · Petra · North Lesvos",
-                phone: "+30 22510 11111",
-                whatsapp: "+30 690 111 1111",
-                vehicle: "Comfort vehicle",
-                languages: "Greek, English",
-                availability: "Pre-booking recommended",
-                image:
-                    "https://images.unsplash.com/photo-1550355291-bbee04a92027?q=80&w=900&auto=format&fit=crop",
-            },
-            {
-                name: "George Island Rides",
-                area: "Plomari · Vatera · South Lesvos",
-                phone: "+30 22510 22222",
-                whatsapp: "+30 690 222 2222",
-                vehicle: "Taxi & private routes",
-                languages: "Greek, English",
-                availability: "Flexible routes",
-                image:
-                    "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=900&auto=format&fit=crop",
-            },
+            // {
+            //     name: "Maria Private Transfers",
+            //     area: "Molyvos · Petra · North Lesvos",
+            //     phone: "+30 22510 11111",
+            //     whatsapp: "+30 690 111 1111",
+            //     vehicle: "Comfort vehicle",
+            //     languages: "Greek, English",
+            //     availability: "Pre-booking recommended",
+            //     image:
+            //         "https://images.unsplash.com/photo-1550355291-bbee04a92027?q=80&w=900&auto=format&fit=crop",
+            // },
+            // {
+            //     name: "George Island Rides",
+            //     area: "Plomari · Vatera · South Lesvos",
+            //     phone: "+30 22510 22222",
+            //     whatsapp: "+30 690 222 2222",
+            //     vehicle: "Taxi & private routes",
+            //     languages: "Greek, English",
+            //     availability: "Flexible routes",
+            //     image:
+            //         "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=900&auto=format&fit=crop",
+            // },
         ],
         highlights: [
             "Direct contact with drivers",
