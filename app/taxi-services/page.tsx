@@ -33,15 +33,15 @@ export default function TaxiServicesTravelGuidePage() {
         ],
         drivers: [
             {
-                name: "Nikos Taxi",
-                area: "Mytilene · Airport · Port",
-                phone: "+30 22510 00000",
-                whatsapp: "+30 690 000 0000",
+                name: "Tryfon Parmakellis",
+                area: "Kalloni · Airport · Port",
+                phone: "+30 22530 23238",
+                whatsapp: "+30 6976683130",
                 vehicle: "Standard taxi",
                 languages: "Greek, English",
                 availability: "Available daily",
                 image:
-                    "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=900&auto=format&fit=crop",
+                    "/tryfon-taxi.jpg",
             },
             {
                 name: "Maria Private Transfers",
@@ -76,9 +76,9 @@ export default function TaxiServicesTravelGuidePage() {
         ],
         popularRoutes: [
             "Airport → Mytilene Center",
-            "Port → Molyvos",
+            "Mytilene Port → Molyvos",
             "Mytilene → Plomari",
-            "Petra → Eressos",
+            "Petra → Kalloni",
         ],
     };
 
