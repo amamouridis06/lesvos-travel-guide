@@ -413,31 +413,31 @@ export default function TheofilosParadise() {
                 </div>
             </section>
 
-            <section className="relative overflow-hidden px-5 py-20 text-white sm:px-8 md:px-12 md:py-28" style={{ background: "var(--ms-ink)" }}>
-                <div className="pointer-events-none absolute inset-0 opacity-30">
-                    <div className="absolute -left-24 top-1/2 h-96 w-96 -translate-y-1/2 rounded-full blur-[140px]" style={{ background: "var(--ms-gold)" }} />
-                    <div className="absolute -right-24 bottom-0 h-72 w-72 rounded-full blur-[120px]" style={{ background: "var(--ms-gold)" }} />
-                </div>
-                <div className="relative mx-auto flex max-w-5xl flex-col items-center text-center">
-                    <p className="ms-eyebrow" style={{ color: "var(--ms-gold-soft)" }}>Ready when you are</p>
-                    <h2 className="ms-display ms-balance mt-6 text-4xl leading-[1.05] md:text-7xl">
-                        Stay at <span className="italic" style={{ color: "var(--ms-gold-soft)" }}>{hotel.name}</span>.
-                    </h2>
-                    <p className="mt-6 max-w-xl text-base leading-relaxed text-white/70 md:text-lg">
-                        Rooms are limited and the season fills early. We recommend booking at least eight weeks ahead.
-                    </p>
-                    <a
-                        href={hotel.bookUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="group mt-10 inline-flex max-w-full items-center gap-4 border bg-transparent px-8 py-5 text-center text-[10px] uppercase tracking-[0.28em] text-white transition-all duration-500 sm:px-10 sm:tracking-[0.4em]"
-                        style={{ borderColor: "var(--ms-gold)" }}
-                    >
-                        Reserve a Suite
-                        <span className="transition-transform duration-500 group-hover:translate-x-1">→</span>
-                    </a>
-                </div>
-            </section>
+            {/*<section className="relative overflow-hidden px-5 py-20 text-white sm:px-8 md:px-12 md:py-28" style={{ background: "var(--ms-ink)" }}>*/}
+            {/*    <div className="pointer-events-none absolute inset-0 opacity-30">*/}
+            {/*        <div className="absolute -left-24 top-1/2 h-96 w-96 -translate-y-1/2 rounded-full blur-[140px]" style={{ background: "var(--ms-gold)" }} />*/}
+            {/*        <div className="absolute -right-24 bottom-0 h-72 w-72 rounded-full blur-[120px]" style={{ background: "var(--ms-gold)" }} />*/}
+            {/*    </div>*/}
+            {/*    <div className="relative mx-auto flex max-w-5xl flex-col items-center text-center">*/}
+            {/*        <p className="ms-eyebrow" style={{ color: "var(--ms-gold-soft)" }}>Ready when you are</p>*/}
+            {/*        <h2 className="ms-display ms-balance mt-6 text-4xl leading-[1.05] md:text-7xl">*/}
+            {/*            Stay at <span className="italic" style={{ color: "var(--ms-gold-soft)" }}>{hotel.name}</span>.*/}
+            {/*        </h2>*/}
+            {/*        <p className="mt-6 max-w-xl text-base leading-relaxed text-white/70 md:text-lg">*/}
+            {/*            Rooms are limited and the season fills early. We recommend booking at least eight weeks ahead.*/}
+            {/*        </p>*/}
+            {/*        <a*/}
+            {/*            href={hotel.bookUrl}*/}
+            {/*            target="_blank"*/}
+            {/*            rel="noreferrer"*/}
+            {/*            className="group mt-10 inline-flex max-w-full items-center gap-4 border bg-transparent px-8 py-5 text-center text-[10px] uppercase tracking-[0.28em] text-white transition-all duration-500 sm:px-10 sm:tracking-[0.4em]"*/}
+            {/*            style={{ borderColor: "var(--ms-gold)" }}*/}
+            {/*        >*/}
+            {/*            Reserve a Suite*/}
+            {/*            <span className="transition-transform duration-500 group-hover:translate-x-1">→</span>*/}
+            {/*        </a>*/}
+            {/*    </div>*/}
+            {/*</section>*/}
         </div>
     );
 }
