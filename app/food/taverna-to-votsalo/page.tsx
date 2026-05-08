@@ -75,6 +75,7 @@ export default function RestaurantTravelGuideListing() {
         <section className="mx-auto grid max-w-6xl gap-8 px-5 py-12 lg:grid-cols-[1.4fr_0.8fr]">
           <div className="space-y-8">
             <div className="rounded-2xl bg-white p-7 shadow-sm">
+              <h2 className="text-2xl font-semibold">ABOUT</h2>
               <p className="text-lg leading-8 text-stone-700">
                 {restaurant.description}
               </p>
