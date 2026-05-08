@@ -1,17 +1,18 @@
 import React from "react";
+import Link from "next/link";
 
 export default function RestaurantTravelGuideListing() {
   const restaurant = {
     name: "Taverna To Votsalo",
     category: "Traditional Greek Taverm",
-    location: "Eftalou",
+    location: "Eftalou, Lesvos",
     rating: 5.0,
     reviews: 18,
-    description:
-        "In the heart of Eftalou, just steps from the sea and the renowned thermal springs, The Taverna To Votsalo blends authentic flavors, traditional hospitality, and the relaxed spirit of summer in x. Rooted in local culinary tradition and focused on fresh, high-quality ingredients, it offers dishes that evoke the warmth of a family table by the water.\n" +
-        "\n" +
+    description: [
+        "In the heart of Eftalou, just steps from the sea and the renowned thermal springs, The Taverna To Votsalo blends authentic flavors, traditional hospitality, and the relaxed spirit of summer in x. Rooted in local culinary tradition and focused on fresh, high-quality ingredients, it offers dishes that evoke the warmth of a family table by the water.",
         "Fresh fish, seafood meze, homemade specialties, and beloved Greek classics are served in a setting defined by simplicity, authenticity, and seaside charm. Whether you’re enjoying a leisurely lunch after a swim or a sunset dinner overlooking the sea, “Votsalo” is a welcoming destination for those seeking delicious food, beautiful views, and the timeless feeling of a Greek summer.",
-    heroImage:
+    ],
+      heroImage:
         "/votsalo1.jpg",
     gallery: [
       "/votsalo1.jpg",
@@ -20,7 +21,7 @@ export default function RestaurantTravelGuideListing() {
       "/votsalo4.jpg",
       "/votsalo5.jpg",
       "/votsalo6.jpg",
-      "/votsalo.8jpg",
+      "/votsalo8.jpg",
     ],
     highlights: [
       "Fresh seafood",
@@ -134,13 +135,16 @@ export default function RestaurantTravelGuideListing() {
               </div>
 
               <div className="mt-6 grid gap-3">
-                <button className="rounded-xl bg-stone-900 px-5 py-4 text-base font-medium text-white transition hover:bg-stone-700">
-                  Book a table
-                </button>
-
-                <button className="rounded-xl border border-stone-300 bg-white px-5 py-4 text-base font-medium text-stone-900 transition hover:bg-stone-100">
+                {/*<button className="rounded-xl bg-stone-900 px-5 py-4 text-base font-medium text-white transition hover:bg-stone-700">*/}
+                  {/*  Book a table*/}
+                  {/*</button></>*/}
+                <Link
+                    href="https://maps.app.goo.gl/8YfmkHVaHJr539hn8"
+                    target="_blank"
+                    className="inline-block rounded-xl border border-stone-300 bg-white px-5 py-4 text-base font-medium text-stone-900 transition hover:bg-stone-100"
+                >
                   View location ↗
-                </button>
+                </Link>
               </div>
             </div>
 
