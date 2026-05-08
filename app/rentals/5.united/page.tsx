@@ -417,67 +417,7 @@ return (
                     ))}
                 </div>
             </section>
-            <section className="price-section">
-                <div className="container">
-                    <h2 className="price-title">PRICE LIST</h2>
 
-                    <div className="table-wrapper">
-                        <table className="price-table">
-                            <thead>
-                            <tr>
-                                <th>SEASON</th>
-                                <th>CLASS A</th>
-                                <th>CLASS B</th>
-                                <th>CLASS C</th>
-                                <th>CLASS D</th>
-                                <th>CLASS E</th>
-                                <th>CLASS K</th>
-                                <th>CLASS K (4X4)</th>
-                            </tr>
-                            </thead>
-
-                            <tbody>
-                            <tr>
-                                <td>Low season 1/11 - 15/4</td>
-                                <td>18€ - 25€</td>
-                                <td>20€ - 28€</td>
-                                <td>23€ - 30€</td>
-                                <td>30€ - 40€</td>
-                                <td>30€ - 45€</td>
-                                <td>25€ - 30€</td>
-                                <td>25€ - 35€</td>
-                            </tr>
-
-                            <tr>
-                                <td>Med season 16/4 - 20/6 & 15/9 - 31/10</td>
-                                <td>25€ - 30€</td>
-                                <td>30€ - 35€</td>
-                                <td>35€ - 40€</td>
-                                <td>40€ - 50€</td>
-                                <td>32€ - 40€</td>
-                                <td>45€ - 60€</td>
-                                <td>32€ - 45€</td>
-                            </tr>
-
-                            <tr>
-                                <td>High season 21/6 - 14/9</td>
-                                <td>40€ - 50€</td>
-                                <td>45€ - 55€</td>
-                                <td>50€ - 65€</td>
-                                <td>55€ - 80€</td>
-                                <td>50€ - 60€</td>
-                                <td>60€ - 80€</td>
-                                <td>45€ - 55€</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <p className="price-note">
-                        SECOND DRIVER AND CHILD SEAT, NO CHARGE
-                    </p>
-                </div>
-            </section>
             <section className="py-24 px-6 bg-gradient-to-b from-slate-50 to-white">
 
                 <div className="text-center mb-12">
