@@ -42,14 +42,11 @@ export default function NavBar() {
               <Link href="/hotels" className="hover:text-yellow-300 transition">
                 Hotels
               </Link>
-              <Link href="/activities/kariofilis-ecofarm" className="hover:text-yellow-300 transition">
-                Activities
-              </Link>
               <Link href="/rentals/5.united" className="hover:text-yellow-300 transition">
                 Rentals
               </Link>
               <Link href="/taxi-services/" className="hover:text-yellow-300 transition">
-                Taxi-Services
+                Taxi
               </Link>
               <Link href="/about" className="hover:text-yellow-300 transition">
                 About
@@ -113,13 +110,13 @@ export default function NavBar() {
                 >
                   Hotels
                 </Link>
-                <Link
-                    href="/activities/kariofilis-ecofarm"
-                    onClick={closeMenu}
-                    className="py-3 border-b border-white/10 hover:text-yellow-300 transition"
-                >
-                  Activities
-                </Link>
+                {/*<Link*/}
+                {/*    href="/activities/kariofilis-ecofarm"*/}
+                {/*    onClick={closeMenu}*/}
+                {/*    className="py-3 border-b border-white/10 hover:text-yellow-300 transition"*/}
+                {/*>*/}
+                {/*  Activities*/}
+                {/*</Link>*/}
                 <Link
                     href="/rentals/"
                     onClick={closeMenu}
@@ -132,7 +129,7 @@ export default function NavBar() {
                     onClick={closeMenu}
                     className="py-3 border-b border-white/10 hover:text-yellow-300 transition"
                 >
-                  Taxi-Services
+                  Taxi
                 </Link>
 
                 <Link
