@@ -29,7 +29,6 @@ export default function RestaurantTravelGuideListing() {
       "Local products",
       "Romantic atmosphere",
       "Family friendly",
-      "The best hospitality"
     ],
     facilities: [
       "Free Wi-Fi",
