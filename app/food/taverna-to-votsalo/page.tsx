@@ -36,6 +36,13 @@ export default function RestaurantTravelGuideListing() {
       "Vegetarian options",
       "Local favourites",
     ],
+    important: [
+      "Gluten-free dishes available for guests with gluten intolerance",
+      "Lactose-free and dairy-free options available",
+      "Vegetarian-friendly dishes",
+      "Vegan options available",
+      "Options suitable for common food intolerances and dietary preferences"
+    ],
     openingHours: "Daily: 12:00 – 21:30",
     phone: "+30 2253 072680",
     instagram: "@tovotsalo_eftalou",
@@ -160,6 +167,20 @@ export default function RestaurantTravelGuideListing() {
                         className="rounded-xl bg-stone-100 px-4 py-3 text-stone-700"
                     >
                       ✓ {facility}
+                    </div>
+                ))}
+              </div>
+            </div>
+            <div className="rounded-2xl bg-white p-7 shadow-sm">
+              <h3 className="text-xl font-semibold">Important Informations</h3>
+
+              <div className="mt-5 grid gap-3">
+                {restaurant.important.map((important) => (
+                    <div
+                        key={important}
+                        className="rounded-xl bg-stone-100 px-4 py-3 text-stone-700"
+                    >
+                      ✓ {important}
                     </div>
                 ))}
               </div>
