@@ -9,8 +9,9 @@ export default function RestaurantTravelGuideListing() {
     rating: 5.0,
     reviews: 18,
     description: [
-      <p>"In the heart of Eftalou, just steps from the sea and the renowned thermal springs, The Taverna To Votsalo blends authentic flavors, traditional hospitality, and the relaxed spirit of summer in x. Rooted in local culinary tradition and focused on fresh, high-quality ingredients, it offers dishes that evoke the warmth of a family table by the water."</p>,
-      <p> "Fresh fish, seafood meze, homemade specialties, and beloved Greek classics are served in a setting defined by simplicity, authenticity, and seaside charm. Whether you’re enjoying a leisurely lunch after a swim or a sunset dinner overlooking the sea, “Votsalo” is a welcoming destination for those seeking delicious food, beautiful views, and the timeless feeling of a Greek summer."</p>,
+      <p>In the heart of Eftalou, just steps from the sea and the renowned thermal springs, The Taverna To Votsalo blends authentic flavors, traditional hospitality, and the relaxed spirit of summer in x. Rooted in local culinary tradition and focused on fresh, high-quality ingredients, it offers dishes that evoke the warmth of a family table by the water.</p>,
+      <p>      </p>,
+      <p>Fresh fish, seafood meze, homemade specialties, and beloved Greek classics are served in a setting defined by simplicity, authenticity, and seaside charm. Whether you’re enjoying a leisurely lunch after a swim or a sunset dinner overlooking the sea, “Votsalo” is a welcoming destination for those seeking delicious food, beautiful views, and the timeless feeling of a Greek summer.</p>,
     ],
       heroImage:
         "/votsalo1.jpg",
