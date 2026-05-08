@@ -34,7 +34,7 @@ const Restaurants = [
     category: "Traditional Greek cuisine by the sea",
     description: "Fresh fish, local dishes, and a relaxing seaside atmosphere.",
     location: "📍Pamfila, Lesvos",
-    image: "/limanaki_pamf1.jpg",
+    image: "/limanaki_pamf.jpg",
     alt: "To Limanaki ton Pamfilon",
     href: "/food/limanaki_pamfilon",
   },
