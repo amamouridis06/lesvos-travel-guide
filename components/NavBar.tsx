@@ -54,6 +54,9 @@ export default function NavBar() {
               <Link href="/emergency" className="hover:text-yellow-300 transition">
                 Emergency
               </Link>
+              <Link href="/activities/kariofilis-ecofarm" className="hover:text-yellow-300 transition">
+                Activities
+              </Link>
             </div>
 
             {/* Mobile button */}
@@ -110,13 +113,6 @@ export default function NavBar() {
                 >
                   Hotels
                 </Link>
-                {/*<Link*/}
-                {/*    href="/activities/kariofilis-ecofarm"*/}
-                {/*    onClick={closeMenu}*/}
-                {/*    className="py-3 border-b border-white/10 hover:text-yellow-300 transition"*/}
-                {/*>*/}
-                {/*  Activities*/}
-                {/*</Link>*/}
                 <Link
                     href="/rentals/"
                     onClick={closeMenu}
@@ -146,6 +142,13 @@ export default function NavBar() {
                     className="py-3 border-b border-white/10 hover:text-yellow-300 transition"
                 >
                   Emergency
+                </Link>
+                <Link
+                    href="/activities/kariofilis-ecofarm"
+                    onClick={closeMenu}
+                    className="py-3 border-b border-white/10 hover:text-yellow-300 transition"
+                >
+                  Activities
                 </Link>
               </div>
             </div>
