@@ -2,19 +2,25 @@ import React from "react";
 
 export default function RestaurantTravelGuideListing() {
   const restaurant = {
-    name: "Aegean Table",
-    category: "Traditional Greek Restaurant",
-    location: "Mytilene, Lesvos",
-    rating: 4.8,
-    reviews: 126,
+    name: "Taverna To Votsalo",
+    category: "Traditional Greek Taverm",
+    location: "Eftalou",
+    rating: 5.0,
+    reviews: 18,
     description:
-        "A warm, authentic restaurant experience inspired by the flavours of Lesvos. Enjoy fresh seafood, local products, traditional recipes, and a relaxed island atmosphere just a few steps from the sea.",
+        "In the heart of Eftalou, just steps from the sea and the renowned thermal springs, The Taverna To Votsalo blends authentic flavors, traditional hospitality, and the relaxed spirit of summer in x. Rooted in local culinary tradition and focused on fresh, high-quality ingredients, it offers dishes that evoke the warmth of a family table by the water.\n" +
+        "\n" +
+        "Fresh fish, seafood meze, homemade specialties, and beloved Greek classics are served in a setting defined by simplicity, authenticity, and seaside charm. Whether you’re enjoying a leisurely lunch after a swim or a sunset dinner overlooking the sea, “Votsalo” is a welcoming destination for those seeking delicious food, beautiful views, and the timeless feeling of a Greek summer.",
     heroImage:
-        "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1600&auto=format&fit=crop",
+        "/votsalo1.jpg",
     gallery: [
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800&auto=format&fit=crop",
+      "/votsalo1.jpg",
+      "/votsalo2.jpg",
+      "/votsalo7.jpg",
+      "/votsalo4.jpg",
+      "/votsalo5.jpg",
+      "/votsalo6.jpg",
+      "/votsalo.8jpg",
     ],
     highlights: [
       "Fresh seafood",
@@ -28,9 +34,9 @@ export default function RestaurantTravelGuideListing() {
       "Vegetarian options",
       "Local favourites",
     ],
-    openingHours: "Daily: 12:00 – 00:00",
-    phone: "+30 22510 00000",
-    instagram: "@aegeantable",
+    openingHours: "Daily: 12:00 – 21:30",
+    phone: "+30 2253 072680",
+    instagram: "@tovotsalo_eftalou",
   };
 
   return (
