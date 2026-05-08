@@ -29,19 +29,17 @@ export default function RestaurantTravelGuideListing() {
       "Local products",
       "Romantic atmosphere",
       "Family friendly",
+      "The best hospitality"
     ],
     facilities: [
       "Free Wi-Fi",
-      "Nearby parking",
+      "Parking",
       "Vegetarian options",
-      "Local favourites",
     ],
     important: [
       "Gluten-free dishes available for guests with gluten intolerance",
       "Lactose-free and dairy-free options available",
-      "Vegetarian-friendly dishes",
-      "Vegan options available",
-      "Options suitable for common food intolerances and dietary preferences"
+      "Vegetarian dishes",
     ],
     openingHours: "Daily: 12:00 – 21:30",
     phone: "+30 2253 072680",
