@@ -43,7 +43,7 @@ const Restaurants = [
     category: "Where Sea, Flavor & Tradition Meet",
     description: "Authentic Greek flavors, seaside sunsets, fresh seafood, and  hospitality.",
     location: "📍Eftalou, Lesvos",
-    image: "/votsalo3.jpg",
+    image: "/votsalo-logo.jpg",
     alt: "Taverna To Votsalo",
     href: "/food/taverna-to-votsalo",
   },
