@@ -5,7 +5,7 @@ const IMG = {
     hero: "/er_pool1.jpg",
     entry: "/er_entrance.jpg",
     pool: "/er_pool.jpg",
-    massage: "/per_massage.jpg",
+    massage: "/er_massage.jpg",
     hammam: "/er_ham.jpg",
     room: "/er_room.jpg",
     room1: "/er_room1.jpg",
@@ -16,10 +16,10 @@ const hotel = {
     name: "Eressian Hotel & Hammam Spa",
     region: "Eresos",
     country: "Greece",
-    // fromPrice: "€108",
+    fromPrice: "€140",
     tagline: "Where modern living meets the city’s heartbeat..",
     intro:
-        "Welcome to PP Urban Studio in Mytilene",
+        "Welcome to Eressian Hotel & Hammam Spa in Eressos",
     body: [
         "In the heart of the village of Eressos, birthplace of Sappho, on the enchanting island of Lesvos, we lovingly renovated the family mansion from 1850 and transformed it into the Eressian Hotel: a unique, award-winning Villa Hotel concept with two suites, two rooms and a beautiful living room in a recognized heritage building.",
         "Right next door, we built the Eressian Hammam & Spa, a wellness haven where the virtues of traditional baths (Hammam) form the basis for a variety of hammam and spa treatments.",
@@ -42,13 +42,13 @@ const hotel = {
         "Valid ID and credit card required at check-in",
     ],
     gallery: [
-        { src: IMG.entry, alt: "entry", caption: "Entry: A first impression that stays." },
-        { src: IMG.pool, alt: "Pool area", caption: "Living room: Where style meets relaxation" },
-        { src: IMG.massage, alt: "Hotel room", caption: "Living room: Where style meets relaxation" },
-        { src: IMG.hammam, alt: "samp", caption: "Kitchen: Cook. Enjoy. Repeat." },
-        { src: IMG.room, alt: "bed room", caption: "Bedroom: Calm in the heart of the city."},
-        { src: IMG.room1, alt: "balcony", caption: "Balcony: Your green escape in the city." },
-        { src: IMG.room2, alt: "bath", caption: "Bathroom: Simple, clean, essential." }
+        { src: IMG.entry, alt: "entry", caption: "Entry: Where Luxury Begins”" },
+        { src: IMG.pool, alt: "Pool area", caption: "Pool: Dive Into Serenity" },
+        { src: IMG.massage, alt: "Massage", caption: "Massage: Relax. Restore. Renew.”" },
+        { src: IMG.hammam, alt: "Hammam", caption: "Hammam: A Timeless Ritual of Wellness" },
+        { src: IMG.room, alt: "bed room", caption: "Room: Your Private Escape"},
+        { src: IMG.room1, alt: "broom" },
+        { src: IMG.room2, alt: "room" }
     ],
 
     bookUrl:
@@ -261,7 +261,7 @@ export default function PPUrban() {
                                 <span className="absolute -top-px left-6 right-6 h-px sm:left-8 sm:right-8" style={{ background: "var(--ms-gold)" }} />
                                 <div className="text-[10px] uppercase tracking-[0.32em]" style={{ color: "var(--ms-muted)" }}>From</div>
                                 <div className="mt-2 flex items-baseline gap-2">
-                                    {/*<span className="ms-display text-5xl">{hotel.fromPrice}</span>*/}
+                                    <span className="ms-display text-5xl">{hotel.fromPrice}</span>
                                     <span className="text-xs" style={{ color: "var(--ms-muted)" }}>/ night</span>
                                 </div>
                                 <div className="mt-1 text-xs" style={{ color: "var(--ms-muted)" }}>double occupancy, taxes incl.</div>
