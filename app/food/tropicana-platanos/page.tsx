@@ -293,24 +293,25 @@ export default function TropicanaPage() {
                                 : "opacity-70 hover:opacity-100"
                         }`}
                     >
-                      {item.type === "image" ? (
+                      {item.type === "image" && (
                           <img
                               src={item.src}
                               alt=""
                               className="h-full w-full object-cover"
                           />
-                      ) : (
-                          <>
-                            <img
-                                src={item.poster}
-                                alt=""
-                                className="h-full w-full object-cover"
-                            />
-                            <div className="absolute inset-0 flex items-center justify-center bg-black/30 text-white text-xl">
-                              ▶
-                            </div>
-                          </>
-                      )}
+
+                        //: (
+                      //     <>
+                      //       <img
+                      //           src={item.poster}
+                      //           alt=""
+                      //           className="h-full w-full object-cover"
+                      //       />
+                      //       <div className="absolute inset-0 flex items-center justify-center bg-black/30 text-white text-xl">
+                      //         ▶
+                      //       </div>
+                      //     </>
+                       )}
                     </button>
                 ))}
               </div>
