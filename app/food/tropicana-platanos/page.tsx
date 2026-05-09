@@ -185,7 +185,7 @@ export default function TropicanaPage() {
                         className="rounded-2xl border border-stone-200 bg-white p-5 transition-all hover:-translate-y-0.5 hover:shadow-soft"
                     >
                       <h3 className="font-display text-xl font-semibold">{c.t}</h3>
-                      <p className="mt-1 text-sm text-stone-600">{c.d}</p>
+                      {/*<p className="mt-1 text-sm text-stone-600">{c.d}</p>*/}
                     </div>
                 ))}
               </div>
