@@ -1,261 +1,446 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import {
+  MapPin,
+  Phone,
+  Clock,
+  Wallet,
+  Users,
+  ChevronLeft,
+  ChevronRight,
+  X,
+} from "lucide-react";
 
-export default function LimanakiPamfilonPage() {
+// ---- Replace with your own images ----
+const HERO = "/tropicana1.jpg";
 
-  const images = [
-    "/tropicana1.jpg",
-    "/tropicana2.jpg",
-    "/tropicana3.jpg",
-    "/tropicana4.jpg",
-    "/tropicana5.jpg",
-    "/tropicana6.jpg",
-  ];
+const GALLERY = [
+  { type: "image", src: "/tropicana11.jpeg" },
+  { type: "image", src: "/tropicana13.jpeg" },
+  { type: "image", src: "/tropicana12.jpeg" },
+  { type: "image", src: "/tropicana14.jpeg" },
+  { type: "image", src: "/tropicana15.jpeg" },
+  { type: "image", src: "/tropicana16.jpeg" },
+  { type: "image", src: "/tropicana17.jpeg" },
+  { type: "image", src: "/tropicana6.jpg" },
+];
 
+const DISHES = [
+  { t: "Lamb with plums" },
+  { t: "The stuffed mushroom "},
+  { t: "The Ntolmadakia"},
+  { t: "Ladotyri with honey and arons"},
+  {t:  "Pastrourmadopita"}
+];
+
+const NEARBY = [
+  { label: "Eftalou Beach", emoji: "🏖" },
+  { label: "Petra ", emoji: "🏘" },
+  { label: "Anaxos", emoji: "🍶" },
+];
+
+const INFO = [
+  { Icon: MapPin, label: "Location", value: "Mytilene-Skopelos Regional Road, Plomari 812 00" },
+  { Icon: Phone, label: "Phone", value: "2252031374" },
+  { Icon: Clock, label: "Hours", value: "Daily · Sunset till late" },
+  { Icon: Wallet, label: "Price", value: "Cocktails from €8" },
+  { Icon: Users, label: "Best for", value: "Couples, friends, sunset drinks" },
+];
+
+export default function CocktailBarPage() {
   const [index, setIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
-  const next = () => setIndex((prev) => (prev + 1) % images.length);
-  const prev = () => setIndex((prev) => (prev - 1 + images.length) % images.length);
+  const next = () => setIndex((p) => (p + 1) % GALLERY.length);
+  const prev = () => setIndex((p) => (p - 1 + GALLERY.length) % GALLERY.length);
 
-  // autoplay (pause on hover)
+  // useEffect(() => {
+  //   if (isHovered || isOpen) return;
+  //
+  //   const id = setInterval(next, 4500);
+  //   return () => clearInterval(id);
+  // }, [isHovered, isOpen]);
+
   useEffect(() => {
-    if (isHovered) return;
+    videoRefs.current.forEach((video, i) => {
+      if (!video) return;
 
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % images.length);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, [isHovered]);
+      if (i === index && !isOpen) {
+        video.play().catch(() => {});
+      } else {
+        video.pause();
+        video.currentTime = 0;
+      }
+    });
+  }, [index, isOpen]);
 
   return (
-    <main className="bg-neutral-100 text-neutral-900 min-h-screen">
+      <main
+          className="min-h-screen text-stone-900"
+          style={{
+            backgroundColor: "#fbf8f3",
+            fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif",
+          }}
+      >
+        <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+        .font-display { font-family: 'Fraunces', Georgia, serif; letter-spacing: -0.02em; }
+        .gradient-warm { background: linear-gradient(135deg, #b85c3a, #e0a052); }
+        .gradient-hero { background: linear-gradient(180deg, transparent 0%, rgba(20,15,10,.3) 50%, rgba(20,15,10,.85) 100%); }
+        .shadow-soft { box-shadow: 0 10px 40px -15px rgba(60,40,30,.25); }
+        .shadow-elevated { box-shadow: 0 20px 60px -20px rgba(60,40,30,.35); }
+      `}</style>
 
-      {/* ================= HERO ================= */}
-      <section className="relative h-[70vh] w-full">
-        <Image
-          src="/tryfon6.jpg"
-          alt="Tryfon cafe - tavern "
-          fill
-          className="object-cover"
-          priority
-        />
+        {/* HERO */}
+        <section className="relative h-[80vh] min-h-[520px] w-full overflow-hidden">
+          <img
+              src={HERO}
+              alt="Bartender pouring a cocktail at a seaside bar in Lesvos at sunset"
+              className="absolute inset-0 h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 gradient-hero" />
 
-        <div className="absolute inset-0 bg-black/50" />
-
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 text-center text-white px-6 max-w-3xl">
-          <h1 className="text-4xl md:text-5xl font-bold drop-shadow-lg">
-            Tropicana - Platanos
-          </h1>
-          <p className="mt-3 text-lg text-gray-200">
-            A tranditioan restaurant- cafe based in Molivos
-          </p>
-        </div>
-      </section>
-
-      {/* ================= CONTENT ================= */}
-      <section className="max-w-6xl mx-auto px-6 py-20 grid grid-cols-1 lg:grid-cols-3 gap-14">
-
-        {/* ===== MAIN ===== */}
-        <div className="lg:col-span-2 space-y-14">
-
-          {/* Intro */}
-          <div>
-            <h2 className="text-2xl font-semibold mb-4">The history of Tropicana - Platanos</h2>
-            <p className="text-gray-700 leading-relaxed text-lg">
-              With the idea of serving locals and visitors fresh juices, some even tropical and scrumptious homemade ice cream, the Tropican was born in 1985, at the square of Andrea Kyriakou, in between backyards, tight next to an old stone fountain and under the shase of two mafnificient plane trees.
-              So tables were laid under the tree, flowers were plantes around it, the first few guests became regularsand it all went on from there. As time passed by, good friends required good meze.
-            </p>
-            <p className="text-gray-700 leading-relaxed text-lg">
-               Custumers  come, eat, relax sing, say good night and come again and again. So here you are too. We are always happy to treat you as family. We are waiting to come..
-               </p>
+          <div className="absolute inset-x-0 top-0 z-10 flex items-center justify-between px-6 py-6 sm:px-10">
+            {/*<span className="font-display text-lg font-semibold text-white">*/}
+            {/*  Lesvos<span style={{ color: "#e0a052" }}>.</span>Guide*/}
+            {/*</span>*/}
+            {/*<nav className="hidden gap-8 text-sm text-white/85 sm:flex">*/}
+            {/*  <a href="#about" className="hover:text-white">About</a>*/}
+            {/*  <a href="#gallery" className="hover:text-white">Gallery</a>*/}
+            {/*  <a href="#visit" className="hover:text-white">Visit</a>*/}
+            {/*</nav>*/}
           </div>
-    <p className="text-gray-700 mb-4">
-  The menu focuses on traditional homemade cuisine, with an emphasis on grilled meats,
-  local recipes, and a variety of meze, perfectly paired with ouzo or tsipouro.
-</p>
-          {/* Highlights */}
-         <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-6">
-  <li>🍖 Grilled meats and traditional homemade dishes</li>
-  <li>🍲 Daily cooked meals prepared with local ingredients</li>
-  <li> A variety of meze, perfect to share</li>
-  <li> The best ice cream </li>
-  <li> Fantastic Aubergine and delicius dolmadakia stuffed Wine Leaves</li>
-</ul>
-          {/* What to try + CAROUSEL */}
-          <div>
-            <h2 className="text-2xl font-semibold mb-4">What to try</h2>
 
-            
-            {/* ===== CAROUSEL ===== */}
-            <div
-              className="relative h-80 rounded-2xl overflow-hidden shadow-xl group cursor-pointer"
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
-              onClick={() => setIsOpen(true)}
-            >
-              <Image
-                src={images[index]}
-                alt="Food gallery"
-                fill
-                className="object-cover transition duration-700 group-hover:scale-105"
+          <div className="absolute inset-x-0 bottom-0 z-10 px-6 pb-16 sm:px-10 sm:pb-20">
+            <div className="mx-auto max-w-6xl">
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] text-white backdrop-blur-md">
+              <span
+                  className="h-1.5 w-1.5 rounded-full"
+                  style={{ background: "#e0a052" }}
               />
+              South Lesvos · Cocktail Bar
+            </span>
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+              <h1 className="font-display mt-5 max-w-3xl text-4xl font-semibold leading-[1.05] text-white sm:text-6xl lg:text-7xl">
+                Naf&apos;s Cocktail Corner
+              </h1>
 
-              {/* arrows */}
-              <button
-                onClick={(e) => { e.stopPropagation(); prev(); }}
-                className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transition"
+              <p className="mt-4 max-w-xl text-base text-white/80 sm:text-lg">
+                A fantastic corner for a sunset cocktail by the Aegean — slow
+                nights, warm lights, and the sea just steps away.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* CONTENT */}
+        <section className="mx-auto grid max-w-6xl grid-cols-1 gap-12 px-6 py-16 sm:px-10 sm:py-24 lg:grid-cols-3 lg:gap-16">
+          {/* MAIN */}
+          <div className="space-y-16 lg:col-span-2">
+            <div id="about">
+              <p
+                  className="text-xs font-semibold uppercase tracking-[0.25em]"
+                  style={{ color: "#b85c3a" }}
               >
-                ‹
-              </button>
+                The Place
+              </p>
 
-              <button
-                onClick={(e) => { e.stopPropagation(); next(); }}
-                className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transition"
+              <h2 className="font-display mt-3 text-3xl font-semibold sm:text-4xl">
+                About
+              </h2>
+
+              <p className="mt-5 text-lg leading-relaxed text-stone-600">
+                The cocktail bar is located in the southern part of the island
+                next to Agios Isidoros. A place that looks like it came out of a
+                fairy tale, drinking a cocktail after a swim, enjoying the sunset
+                and the calm breeze that calms you down.
+              </p>
+
+              <p className="mt-4 text-lg leading-relaxed text-stone-600">
+                Come for the sunset, stay for the second round — the playlist gets
+                better after midnight.
+              </p>
+            </div>
+
+            {/* Signatures */}
+            <div>
+              <p
+                  className="text-xs font-semibold uppercase tracking-[0.25em]"
+                  style={{ color: "#b85c3a" }}
               >
-                ›
-              </button>
+                What to try
+              </p>
 
-              {/* dots */}
-              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-                {images.map((_, i) => (
-                  <div
-                    key={i}
-                    onClick={(e) => { e.stopPropagation(); setIndex(i); }}
-                    className={`w-2.5 h-2.5 rounded-full cursor-pointer transition ${
-                      i === index ? "bg-white scale-110" : "bg-white/50"
-                    }`}
-                  />
+              <h2 className="font-display mt-3 text-3xl font-semibold sm:text-4xl">
+                Signatures of the house
+              </h2>
+
+              <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                {COCKTAILS.map((c) => (
+                    <div
+                        key={c.t}
+                        className="rounded-2xl border border-stone-200 bg-white p-5 transition-all hover:-translate-y-0.5 hover:shadow-soft"
+                    >
+                      <h3 className="font-display text-xl font-semibold">{c.t}</h3>
+                      <p className="mt-1 text-sm text-stone-600">{c.d}</p>
+                    </div>
                 ))}
               </div>
             </div>
 
-            {/* thumbnails */}
-            <div className="flex gap-3 mt-4 overflow-x-auto">
-              {images.map((img, i) => (
-                <div
-                  key={i}
-                  onClick={() => setIndex(i)}
-                  className={`relative w-24 h-16 rounded-lg overflow-hidden cursor-pointer border-2 ${
-                    i === index ? "border-black" : "border-transparent"
-                  }`}
+            {/* GALLERY */}
+            <div id="gallery">
+              <p
+                  className="text-xs font-semibold uppercase tracking-[0.25em]"
+                  style={{ color: "#b85c3a" }}
+              >
+                Atmosphere
+              </p>
+
+              <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
+                A look inside
+              </h2>
+
+              {/* MAIN SLIDER */}
+              <div
+                  className="group relative mt-8 aspect-[16/10] w-full cursor-zoom-in overflow-hidden rounded-3xl shadow-lg"
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => setIsHovered(false)}
+                  onClick={() => setIsOpen(true)}
+              >
+                {GALLERY.map((item, i) =>
+                    item.type === "image" ? (
+                        <img
+                            key={item.src}
+                            src={item.src}
+                            alt=""
+                            className={`absolute inset-0 h-full w-full object-cover transition-all duration-700 ${
+                                i === index ? "opacity-100 scale-100" : "opacity-0 scale-105"
+                            }`}
+                        />
+                    ) : (
+                        <video
+                            ref={(el) => {
+                              videoRefs.current[i] = el;
+                            }}
+                            key={item.src}
+                            className={`absolute inset-0 h-full w-full object-cover transition-all duration-700 ${
+                                i === index ? "opacity-100" : "opacity-0"
+                            }`}
+                            autoPlay={i === index}
+                            muted
+                            loop
+                            playsInline
+                        >
+                          <source src={item.src} type="video/mp4" />
+                        </video>
+                    )
+                )}
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+
+                <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      prev();
+                    }}
+                    aria-label="Previous slide"
+                    className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-white/90 p-2 opacity-0 transition-opacity group-hover:opacity-100"
                 >
-                  <Image src={img} alt="" fill className="object-cover" />
+                  <ChevronLeft />
+                </button>
+
+                <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      next();
+                    }}
+                    aria-label="Next slide"
+                    className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-white/90 p-2 opacity-0 transition-opacity group-hover:opacity-100"
+                >
+                  <ChevronRight />
+                </button>
+
+                <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2">
+                  {GALLERY.map((_, i) => (
+                      <button
+                          key={i}
+                          aria-label={`Go to slide ${i + 1}`}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setIndex(i);
+                          }}
+                          className={`h-2 rounded-full bg-white transition-all ${
+                              i === index ? "w-6" : "w-2 opacity-50"
+                          }`}
+                      />
+                  ))}
                 </div>
-              ))}
+              </div>
+
+              {/* THUMBNAILS */}
+              <div className="mt-4 grid grid-cols-4 gap-3">
+                {GALLERY.map((item, i) => (
+                    <button
+                        key={item.src}
+                        onClick={() => setIndex(i)}
+                        className={`relative aspect-[4/3] overflow-hidden rounded-xl ${
+                            i === index
+                                ? "ring-2 ring-offset-2"
+                                : "opacity-70 hover:opacity-100"
+                        }`}
+                    >
+                      {item.type === "image" ? (
+                          <img
+                              src={item.src}
+                              alt=""
+                              className="h-full w-full object-cover"
+                          />
+                      ) : (
+                          <>
+                            <img
+                                src={item.poster}
+                                alt=""
+                                className="h-full w-full object-cover"
+                            />
+                            <div className="absolute inset-0 flex items-center justify-center bg-black/30 text-white text-xl">
+                              ▶
+                            </div>
+                          </>
+                      )}
+                    </button>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* SIDEBAR */}
+          <aside id="visit" className="space-y-6 lg:sticky lg:top-8 lg:self-start">
+            <div className="overflow-hidden rounded-3xl border border-stone-200 bg-white shadow-soft">
+              <div className="gradient-warm px-6 py-5 text-white">
+                <h3 className="font-display text-2xl font-semibold">
+                  Plan your visit
+                </h3>
+                <p className="mt-1 text-sm text-white/85">
+                  Reservations recommended on weekends.
+                </p>
+              </div>
+
+              <ul className="divide-y divide-stone-200">
+                {INFO.map(({ Icon, label, value }) => (
+                    <li key={label} className="flex items-start gap-4 px-6 py-4">
+                      <div
+                          className="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-stone-100"
+                          style={{ color: "#b85c3a" }}
+                      >
+                        <Icon className="h-4 w-4" />
+                      </div>
+
+                      <div>
+                        <p className="text-xs uppercase tracking-wider text-stone-500">
+                          {label}
+                        </p>
+                        <p className="text-sm font-medium text-stone-900">{value}</p>
+                      </div>
+                    </li>
+                ))}
+              </ul>
             </div>
 
-          </div>
-        </div>
+            <div className="overflow-hidden rounded-3xl border border-stone-200 bg-white shadow-soft">
+              <iframe
+                  title="Map of Cocktail Corner"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3643.293689587887!2d26.391484399999996!3d38.96851480000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14baf7f481beb643%3A0x2ff539f18c93758c!2sNaf&#39;s%20Cocktail%20Corner!5e1!3m2!1sen!2sgr!4v1777289072946!5m2!1sen!2sgr"
+                  className="h-56 w-full border-0"
+                  loading="lazy"
+              />
+            </div>
 
-        {/* ===== SIDEBAR ===== */}
-        <aside className="space-y-10">
+            <div className="rounded-3xl border border-stone-200 bg-white p-6 shadow-soft">
+              <h3 className="font-display text-xl font-semibold">Nearby</h3>
 
-          <div className="bg-white rounded-xl shadow p-6">
-            <h3 className="font-semibold mb-4 text-lg">Informations</h3>
-            <ul className="text-sm space-y-3 text-gray-700">
-              <li><strong>Type:</strong> Restaurant & cafe</li>
-              <li><strong>Kitchen:</strong> Greek</li>
-              <li><strong>Prices:</strong> €€</li>
-              <li><strong>Suitable for:</strong> Families, couples, kids and for relax</li>
-            </ul>
-          </div>
+              <ul className="mt-4 space-y-3 text-sm">
+                {NEARBY.map((n) => (
+                    <li key={n.label}>
+                      <a
+                          href="#"
+                          className="flex items-center justify-between rounded-xl px-3 py-2 transition-colors hover:bg-stone-100"
+                      >
+                    <span className="flex items-center gap-3">
+                      <span className="text-lg">{n.emoji}</span>
+                      <span className="font-medium">{n.label}</span>
+                    </span>
+                        <ChevronRight className="h-4 w-4 text-stone-500" />
+                      </a>
+                    </li>
+                ))}
+              </ul>
+            </div>
+          </aside>
+        </section>
 
-          <div className="w-full h-48 rounded-lg overflow-hidden">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.1282669522334!2d26.173488099999997!3d39.369439799999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ba9bad08e0eb0d%3A0x8d3cdff7c431108!2sTropicana%20Platanos!5e1!3m2!1sen!2sgr!4v1776640998988!5m2!1sen!2sgr"
-              style={{ border: 0 }}
-              loading="lazy"
-            />
-          </div>
-
-          <div>
-  <h2 className="text-2xl font-semibold mb-3">Nearby Villages</h2>
-  <ul className="space-y-2 text-gray-700">
-    <li>
-      🏖{" "}
-      <Link href="/villages/eftalou" className="text-blue-600 hover:underline">
-        Eftalou
-      </Link>
-    </li>
-    <li>
-      🏖{" "}
-      <Link href="/villages/petra" className="text-blue-600 hover:underline">
-        Ppetra
-      </Link>
-    </li>
-    <li>
-      🏖{" "}
-      <Link href="/villages/xrousos" className="text-blue-600 hover:underline">
-        Vafeios
-      </Link>
-    </li>
-  </ul>
-</div>
-
-        </aside>
-      </section>
-
-      {/* ===== FULLSCREEN MODAL ===== */}
-      {isOpen && (
-        <div
-          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center"
-          onClick={() => setIsOpen(false)}
-        >
-          <div className="relative w-full max-w-5xl h-[80vh]">
-
-            <Image
-              src={images[index]}
-              alt=""
-              fill
-              className="object-contain"
-            />
-
-            <button
-              onClick={() => setIsOpen(false)}
-              className="absolute top-4 right-4 text-white text-2xl"
+        {/* MODAL */}
+        {isOpen && (
+            <div
+                className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 p-4 backdrop-blur-sm"
+                onClick={() => setIsOpen(false)}
             >
-              ✕
-            </button>
+              <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setIsOpen(false);
+                  }}
+                  aria-label="Close"
+                  className="absolute right-6 top-6 rounded-full bg-white/10 p-2 text-white hover:bg-white/20"
+              >
+                <X className="h-5 w-5" />
+              </button>
 
-            <button
-              onClick={(e) => { e.stopPropagation(); prev(); }}
-              className="absolute left-6 top-1/2 text-white text-3xl"
-            >
-              ‹
-            </button>
+              <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    prev();
+                  }}
+                  aria-label="Previous"
+                  className="absolute left-6 top-1/2 -translate-y-1/2 rounded-full bg-white/10 p-3 text-white hover:bg-white/20"
+              >
+                <ChevronLeft className="h-6 w-6" />
+              </button>
 
-            <button
-              onClick={(e) => { e.stopPropagation(); next(); }}
-              className="absolute right-6 top-1/2 text-white text-3xl"
-            >
-              ›
-            </button>
+              {GALLERY[index].type === "image" ? (
+                  <img
+                      src={GALLERY[index].src}
+                      alt="Gallery fullscreen"
+                      className="max-h-[85vh] max-w-[90vw] object-contain"
+                      onClick={(e) => e.stopPropagation()}
+                  />
+              ) : (
+                  <video
+                      key={GALLERY[index].src}
+                      controls
+                      autoPlay
+                      className="max-h-[85vh] max-w-[90vw]"
+                      onClick={(e) => e.stopPropagation()}
+                  >
+                    <source src={GALLERY[index].src} type="video/mp4" />
+                  </video>
+              )}
 
-          </div>
-        </div>
-      )}
-
-      {/* ================= CTA ================= */}
-      {/* <section className="bg-neutral-900 text-white py-20 text-center">
-        <h2 className="text-2xl md:text-3xl font-semibold mb-6">
-          See other places to eat in Lesvos
-        </h2>
-        <Link
-          href="/food"
-          className="inline-block px-8 py-3 bg-yellow-600 text-black rounded-lg font-semibold hover:bg-yellow-500 transition"
-        >
-          Other places
-        </Link>
-      </section> */}
-
-    </main>
+              <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    next();
+                  }}
+                  aria-label="Next"
+                  className="absolute right-6 top-1/2 -translate-y-1/2 rounded-full bg-white/10 p-3 text-white hover:bg-white/20"
+              >
+                <ChevronRight className="h-6 w-6" />
+              </button>
+            </div>
+        )}
+      </main>
   );
 }

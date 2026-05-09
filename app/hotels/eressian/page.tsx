@@ -2,32 +2,30 @@
 import { useEffect } from "react";
 
 const IMG = {
-    hero: "/pp.beds.jpg",
-    entry: "/pp.entry.jpg",
-    // diadr: "/pp.diadr.jpg",
-    liv1: "/pp.liv1.png",
-    liv2: "/pp.liv2.jpg",
-    kitchen: "/pp.kitchen.jpg",
-    bed: "/pp.beds.jpg",
-    balcony: "/pp.balcon.jpg",
-    bath:"/pp.bath.jpg"
+    hero: "/er_pool1.jpg",
+    entry: "/er_entrance.jpg",
+    pool: "/er_pool.jpg",
+    massage: "/per_massage.jpg",
+    hammam: "/er_ham.jpg",
+    room: "/er_room.jpg",
+    room1: "/er_room1.jpg",
+    room2:"/er_room2.jpg"
 };
 
 const hotel = {
-    name: "PP Urban Studio",
-    region: "Mytilene Lesvos Greece",
+    name: "Eressian Hotel & Hammam Spa",
+    region: "Eresos",
     country: "Greece",
-    fromPrice: "€108",
+    // fromPrice: "€108",
     tagline: "Where modern living meets the city’s heartbeat..",
     intro:
         "Welcome to PP Urban Studio in Mytilene",
     body: [
-        "Fully renovated with modern design and careful details, it offers comfort, elegance and privacy.",
-        "It is located just 2 minutes from Ermou Street, with direct access to shops, cafes and restaurants, while the quiet location ensures joy. The main attractions and the port are accessible on foot, as is the Church of St. Theraponta.",
-        "The studio has a double bed and a sofa bed, as well as modern facilities: fast Wi-Fi, air conditioning, smart TV and a fully equipped kitchen. Quality white items, towels and toiletries are provided, along with hairdryer, iron and basic items for a comfortable and premium accommodation.",
+        "In the heart of the village of Eressos, birthplace of Sappho, on the enchanting island of Lesvos, we lovingly renovated the family mansion from 1850 and transformed it into the Eressian Hotel: a unique, award-winning Villa Hotel concept with two suites, two rooms and a beautiful living room in a recognized heritage building.",
+        "Right next door, we built the Eressian Hammam & Spa, a wellness haven where the virtues of traditional baths (Hammam) form the basis for a variety of hammam and spa treatments.",
     ],
     highlights: [
-        { label: "Balcony with view ", value: "Yes" },
+        { label: "Room service", value: "Yes" },
         { label: "Transport from / to the airport", value: "No"  },
         { label: "Wi-Fi", value: "Free" },
         { label: "Parking", value: "No" },
@@ -45,16 +43,16 @@ const hotel = {
     ],
     gallery: [
         { src: IMG.entry, alt: "entry", caption: "Entry: A first impression that stays." },
-        // { src: IMG.diadr, alt: "Reception", caption: "Route: Where Every Stay Starts with a Smile" },
-        { src: IMG.liv1, alt: "Pool area", caption: "Living room: Where style meets relaxation" },
-        { src: IMG.liv2, alt: "Hotel room", caption: "Living room: Where style meets relaxation" },
-        { src: IMG.kitchen, alt: "samp", caption: "Kitchen: Cook. Enjoy. Repeat." },
-        { src: IMG.bed, alt: "bed room", caption: "Bedroom: Calm in the heart of the city."},
-        { src: IMG.balcony, alt: "balcony", caption: "Balcony: Your green escape in the city." },
-        { src: IMG.bath, alt: "bath", caption: "Bathroom: Simple, clean, essential." }
+        { src: IMG.pool, alt: "Pool area", caption: "Living room: Where style meets relaxation" },
+        { src: IMG.massage, alt: "Hotel room", caption: "Living room: Where style meets relaxation" },
+        { src: IMG.hammam, alt: "samp", caption: "Kitchen: Cook. Enjoy. Repeat." },
+        { src: IMG.room, alt: "bed room", caption: "Bedroom: Calm in the heart of the city."},
+        { src: IMG.room1, alt: "balcony", caption: "Balcony: Your green escape in the city." },
+        { src: IMG.room2, alt: "bath", caption: "Bathroom: Simple, clean, essential." }
     ],
+
     bookUrl:
-        "https://www.booking.com/Share-WK9K1bo",
+        "https://www.booking.com/Share-E64f2T",
 };
 
 const STYLES = `
@@ -246,7 +244,7 @@ export default function PPUrban() {
 
                         <div className="mt-12 flex items-center gap-4 text-xs uppercase tracking-[0.24em] md:tracking-[0.3em]" style={{ color: "var(--ms-muted)" }}>
                             <span className="ms-hairline" />
-                            <span>PP Urban Studio</span>
+                            <span>Eressian Hotel & Hammam Spa</span>
                         </div>
                     </main>
 
@@ -263,7 +261,7 @@ export default function PPUrban() {
                                 <span className="absolute -top-px left-6 right-6 h-px sm:left-8 sm:right-8" style={{ background: "var(--ms-gold)" }} />
                                 <div className="text-[10px] uppercase tracking-[0.32em]" style={{ color: "var(--ms-muted)" }}>From</div>
                                 <div className="mt-2 flex items-baseline gap-2">
-                                    <span className="ms-display text-5xl">{hotel.fromPrice}</span>
+                                    {/*<span className="ms-display text-5xl">{hotel.fromPrice}</span>*/}
                                     <span className="text-xs" style={{ color: "var(--ms-muted)" }}>/ night</span>
                                 </div>
                                 <div className="mt-1 text-xs" style={{ color: "var(--ms-muted)" }}>double occupancy, taxes incl.</div>
@@ -339,23 +337,15 @@ export default function PPUrban() {
                             For reservations, special requests or availability inquiries, our team is available daily to assist you.
                         </p>
                         <div className="mt-8 space-y-4 text-sm" style={{ color: "var(--ms-muted)" }}>
-                            <p><strong className="text-[color:var(--ms-fg)]">Phone:</strong> +306988714502 / +306998383951</p>
-                            <p><strong className="text-[color:var(--ms-fg)]">Email:</strong> ppurbanapartment@gmail.com </p>
-                            <p><strong className="text-[color:var(--ms-fg)]">Address:</strong> Xarilaou Trikoupi 9 Mytilini </p>
-                            <p><strong className="text-[color:var(--ms-fg)]">Instagram:</strong> ppurbanstudio</p>
+                            <p><strong className="text-[color:var(--ms-fg)]">Phone:</strong> +30 6987003086</p>
+                            <p><strong className="text-[color:var(--ms-fg)]">Email:</strong> hotel@eressian.com </p>
+                            <p><strong className="text-[color:var(--ms-fg)]">Address:</strong> Eresos, Lesvos </p>
+                            <p><strong className="text-[color:var(--ms-fg)]">Instagram:</strong> @eressian</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/*<section className="px-5 py-20 text-white sm:px-8 md:px-12 md:py-28" style={{ background: "var(--ms-ink)" }}>*/}
-            {/*    <div className="mx-auto max-w-4xl text-center">*/}
-            {/*        <span className="ms-display text-6xl leading-none md:text-8xl" style={{ color: "var(--ms-gold)" }}>“</span>*/}
-            {/*        <blockquote className="ms-display ms-balance mt-4 text-3xl italic leading-[1.25] text-white/90 md:text-5xl">*/}
-            {/*            In the heart of town*/}
-            {/*        </blockquote>*/}
-            {/*    </div>*/}
-            {/*</section>*/}
 
             <section className="px-5 py-20 sm:px-8 md:px-12 md:py-28" style={{ background: "var(--ms-bg)" }}>
                 <div className="mx-auto max-w-7xl">

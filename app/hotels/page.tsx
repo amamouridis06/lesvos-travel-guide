@@ -28,6 +28,14 @@ const hotels = [
         image: "/pp.beds.jpg",
         href: "/hotels/pp-urban-studio",
     },
+    {
+        name: "Eressian Hotel & Hammam Spa",
+        description: "In west of Lesvos",
+        location: "📍Eresos, Lesvos",
+        image: "/er_pool1.jpg
+        href: "/hotels/eressian",
+    },
+
 ];
 
 export default function HotelsPage() {
