@@ -10,7 +10,7 @@ export const metadata = {
   title: "Lesvos Travel & Culture Website",
   description: "Discover the natural beauty, history, and culture of Lesvos through a modern, custom-built travel website.",
   keywords: ["Lesvos", "Travel", "Guide", "Culture", "Greece", "Beaches", "Villages"],
-  authors: [{ name: "Your Name" }],
+  authors: [{ name: "Angelos Mamouridis" }],
   openGraph: {
     title: "Lesvos Travel & Culture Website",
     description: "Explore the most beautiful places in Lesvos — beaches, villages, culture, and nature.",
