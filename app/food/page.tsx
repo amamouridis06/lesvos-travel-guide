@@ -47,6 +47,15 @@ const Restaurants = [
     alt: "Taverna To Votsalo",
     href: "/food/taverna-to-votsalo",
   },
+  {
+    title: "Tropicana - Platanos",
+    category: "Beautiful place",
+    description: "Authentic Greek flavors, and fantastic hospitality.",
+    location: "📍Molyvos, Lesvos",
+    image: "/tropicana1.jpg",
+    alt: "Tropicana ",
+    href: "/food/tropicana-platanos",
+  },
 ];
 
 const Bars = [

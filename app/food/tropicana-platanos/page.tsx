@@ -48,7 +48,7 @@ const INFO = [
   { Icon: Users, label: "Best for", value: "Couples, friends, sunset drinks" },
 ];
 
-export default function CocktailBarPage() {
+export default function TropicanaPage() {
   const [index, setIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
@@ -121,11 +121,11 @@ export default function CocktailBarPage() {
                   className="h-1.5 w-1.5 rounded-full"
                   style={{ background: "#e0a052" }}
               />
-              South Lesvos · Cocktail Bar
+              North Lesvos · Restaurant
             </span>
 
               <h1 className="font-display mt-5 max-w-3xl text-4xl font-semibold leading-[1.05] text-white sm:text-6xl lg:text-7xl">
-                Naf&apos;s Cocktail Corner
+                Tropicana- Platanos
               </h1>
 
               <p className="mt-4 max-w-xl text-base text-white/80 sm:text-lg">
@@ -179,7 +179,7 @@ export default function CocktailBarPage() {
               </h2>
 
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
-                {COCKTAILS.map((c) => (
+                {DISHES.map((c) => (
                     <div
                         key={c.t}
                         className="rounded-2xl border border-stone-200 bg-white p-5 transition-all hover:-translate-y-0.5 hover:shadow-soft"
