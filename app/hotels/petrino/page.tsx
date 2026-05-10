@@ -2,16 +2,16 @@
 import { useEffect } from "react";
 
 const IMG = {
-    hero: "/petrino3.png",
-    balcony: "/petrino1.png",
-    pool: "/petrino4.png",
-    cocktails: "/petrino5.png",
-    liv: "/petrino6.png",
-    pool1: "/petrino7.png",
-    outdoor: "/petrino8.png",
-    bed1:"/petrino9.png",
-    bed2: "/petrino10.png",
-    view: "/petrino11.jpg",
+    hero: "/petrino/petrino3.png",
+    balcony: "/petrino/petrino1.png",
+    pool: "/petrino/petrino4.png",
+    cocktails: "/petrino/petrino5.png",
+    liv: "/petrino/petrino6.png",
+    pool1: "/petrino/petrino7.png",
+    outdoor: "/petrino/petrino8.png",
+    bed1:"/petrino/petrino9.png",
+    bed2: "/petrino/petrino10.png",
+    view: "/petrino/petrino11.jpg",
 };
 
 const hotel = {
@@ -52,7 +52,7 @@ const hotel = {
         { src: IMG.bed1, alt: "bed room", caption: "Bedroom: Calm in the heart of the city."},
         { src: IMG.balcony, alt: "balcony", caption: "Balcony: Your green escape in the city." },
         { src: IMG.bed2, alt: "bath", caption: "Bathroom: Simple, clean, essential." },
-        { src: IMG.bed2, alt: "bath", caption: "Bathroom: Simple, clean, essential." }
+        { src: IMG.bed2, alt: "bath", caption: "Bathroom: Simple, clean, essential." },
         { src: IMG.pool, alt: "bath", caption: "Bathroom: Simple, clean, essential." }
     ],
 
