@@ -15,23 +15,23 @@ const IMG = {
 };
 
 const hotel = {
-    name: "PETRINO Hotel",
+    name: "Hotel Petrino ",
     region: "Molyvos Lesvos Greece",
     country: "Greece",
     fromPrice: "€70",
-    tagline: "Where modern living meets the city’s heartbeat..",
+    tagline: "A luxury hotel in a fanastic village in North Lesvos",
     intro:
-        "Welcome to PETRINO Hotel in Molyvos",
+        "Welcome to Hotel Petrino in Molyvos",
     body: [
-        "Fully renovated with modern design and careful details, it offers comfort, elegance and privacy.",
-        "It is located just 2 minutes from Ermou Street, with direct access to shops, cafes and restaurants, while the quiet location ensures joy. The main attractions and the port are accessible on foot, as is the Church of St. Theraponta.",
-        "The studio has a double bed and a sofa bed, as well as modern facilities: fast Wi-Fi, air conditioning, smart TV and a fully equipped kitchen. Quality white items, towels and toiletries are provided, along with hairdryer, iron and basic items for a comfortable and premium accommodation.",
+        "We are four friends who turned our dream into reality, and we’re excited to welcome you to our hotel. Surrounded by lush greenery and offering stunning views of the castle, our hotel provides the perfect setting to relax, recharge, and enjoy a peaceful atmosphere. Whether you prefer unwinding by the pool or simply soaking in the calm surroundings, you’ll feel right at home.",
+        "Our spacious, non-smoking rooms are designed to offer the perfect blend of comfort and relaxation. Each room includes a cozy bedroom and a comfortable living area with fully equipped kitchen to cover all your daily needs. You’ll also find a private bathroom with a shower, hairdryer, and complimentary toiletries. Free Wi-Fi and air conditioning are included to ensure a comfortable and enjoyable stay.",
+
     ],
     highlights: [
-        { label: "Balcony with view ", value: "Yes" },
+        { label: "Breakfast and Bar ", value: "Yes" },
         { label: "Transport from / to the airport", value: "No"  },
         { label: "Wi-Fi", value: "Free" },
-        { label: "Parking", value: "No" },
+        { label: "Parking", value: "Free" },
     ],
     pros: [
         "Prime central location within walking distance of key attractions",
@@ -41,8 +41,10 @@ const hotel = {
         "Friendly, attentive service",
     ],
     knowBefore: [
-        "Located in the city centre",
+        "Located in the North Lesvos",
         "Valid ID and credit card required at check-in",
+        "Just a little steps far for the village of Molyvos, perfect for walking",
+        "View in castle of Molyvos"
     ],
     gallery: [
         { src: IMG.view, alt: "entry", caption: "Entry: A first impression that stays." },
@@ -52,8 +54,6 @@ const hotel = {
         { src: IMG.bed1, alt: "bed room", caption: "Bedroom: Calm in the heart of the city."},
         { src: IMG.balcony, alt: "balcony", caption: "Balcony: Your green escape in the city." },
         { src: IMG.bed2, alt: "bath", caption: "Bathroom: Simple, clean, essential." },
-        { src: IMG.bed2, alt: "bath", caption: "Bathroom: Simple, clean, essential." },
-        { src: IMG.pool, alt: "bath", caption: "Bathroom: Simple, clean, essential." }
     ],
 
     bookUrl:
@@ -342,23 +342,15 @@ export default function PPUrban() {
                             For reservations, special requests or availability inquiries, our team is available daily to assist you.
                         </p>
                         <div className="mt-8 space-y-4 text-sm" style={{ color: "var(--ms-muted)" }}>
-                            <p><strong className="text-[color:var(--ms-fg)]">Phone:</strong> +306988714502 / +306998383951</p>
-                            <p><strong className="text-[color:var(--ms-fg)]">Email:</strong> ppurbanapartment@gmail.com </p>
-                            <p><strong className="text-[color:var(--ms-fg)]">Address:</strong> Xarilaou Trikoupi 9 Mytilini </p>
-                            <p><strong className="text-[color:var(--ms-fg)]">Instagram:</strong> ppurbanstudio</p>
+                            <p><strong className="text-[color:var(--ms-fg)]">Phone:</strong> +30 698 506 5704 </p>
+                            <p><strong className="text-[color:var(--ms-fg)]">Email:</strong> petrino.molyvos@gmail.com </p>
+                            <p><strong className="text-[color:var(--ms-fg)]">Address:</strong> Molyvos, Lesvos </p>
+                            <p><strong className="text-[color:var(--ms-fg)]">Instagram:</strong> petrino.hotel</p>
+                            <p><strong className="text-[color:var(--ms-fg)]">Facebook:</strong> hotelpetrino</p>
                         </div>
                     </div>
                 </div>
             </section>
-
-            {/*<section className="px-5 py-20 text-white sm:px-8 md:px-12 md:py-28" style={{ background: "var(--ms-ink)" }}>*/}
-            {/*    <div className="mx-auto max-w-4xl text-center">*/}
-            {/*        <span className="ms-display text-6xl leading-none md:text-8xl" style={{ color: "var(--ms-gold)" }}>“</span>*/}
-            {/*        <blockquote className="ms-display ms-balance mt-4 text-3xl italic leading-[1.25] text-white/90 md:text-5xl">*/}
-            {/*            In the heart of town*/}
-            {/*        </blockquote>*/}
-            {/*    </div>*/}
-            {/*</section>*/}
 
             <section className="px-5 py-20 sm:px-8 md:px-12 md:py-28" style={{ background: "var(--ms-bg)" }}>
                 <div className="mx-auto max-w-7xl">
