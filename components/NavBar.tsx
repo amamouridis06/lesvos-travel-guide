@@ -27,7 +27,7 @@ export default function NavBar() {
               <Link href="/" className="hover:text-yellow-300 transition">
                 Home
               </Link>
-              <Link href="/villages" className="hover:text-yellow-300 transition">
+              <Link href="/under-construction" className="hover:text-yellow-300 transition">
                 Villages
               </Link>
               <Link href="/beaches" className="hover:text-yellow-300 transition">
@@ -36,16 +36,16 @@ export default function NavBar() {
               <Link href="/food" className="hover:text-yellow-300 transition">
                 Food & Drinks
               </Link>
-              <Link href="/nature" className="hover:text-yellow-300 transition">
+              <Link href="/under-construction" className="hover:text-yellow-300 transition">
                 Nature
               </Link>
               <Link href="/hotels" className="hover:text-yellow-300 transition">
                 Hotels
               </Link>
-              <Link href="/rentals/5.united" className="hover:text-yellow-300 transition">
+              <Link href="/rentals" className="hover:text-yellow-300 transition">
                 Rentals
               </Link>
-              <Link href="/taxi-services/" className="hover:text-yellow-300 transition">
+              <Link href="/taxi-services" className="hover:text-yellow-300 transition">
                 Taxi
               </Link>
               <Link href="/about" className="hover:text-yellow-300 transition">
@@ -54,7 +54,7 @@ export default function NavBar() {
               <Link href="/emergency" className="hover:text-yellow-300 transition">
                 Emergency
               </Link>
-              <Link href="/activities/kariofilis-ecofarm" className="hover:text-yellow-300 transition">
+              <Link href="/under-construction" className="hover:text-yellow-300 transition">
                 Activities
               </Link>
             </div>
@@ -79,11 +79,11 @@ export default function NavBar() {
                 <Link href="/" onClick={closeMenu} className="py-3 border-b border-white/10 hover:text-yellow-300 transition" >
                   Home
                 </Link>
-                <Link href="/villages" onClick={closeMenu} className="py-3 border-b border-white/10 hover:text-yellow-300 transition" >
+                <Link href="/under-construction" onClick={closeMenu} className="py-3 border-b border-white/10 hover:text-yellow-300 transition" >
                   Villages
                 </Link>
                 <Link
-                    href="/beaches"
+                    href="/under-construction"
                     onClick={closeMenu}
                     className="py-3 border-b border-white/10 hover:text-yellow-300 transition"
                 >
@@ -99,7 +99,7 @@ export default function NavBar() {
                 </Link>
 
                 <Link
-                    href="/nature"
+                    href="/under-construction"
                     onClick={closeMenu}
                     className="py-3 border-b border-white/10 hover:text-yellow-300 transition"
                 >
@@ -144,7 +144,7 @@ export default function NavBar() {
                   Emergency
                 </Link>
                 <Link
-                    href="/activities/kariofilis-ecofarm"
+                    href="under-construction"
                     onClick={closeMenu}
                     className="py-3 border-b border-white/10 hover:text-yellow-300 transition"
                 >
