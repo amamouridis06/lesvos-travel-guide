@@ -373,12 +373,12 @@ export default function PPUrban() {
                     <div className="mt-12 grid gap-6 md:mt-16 md:grid-cols-12 md:gap-8">
                         {hotel.gallery.map((g, i) => {
                             const layouts = [
-                                "md:col-span-7 md:row-span-2 aspect-[4/5]",
-                                "md:col-span-5 aspect-[4/3]",
-                                "md:col-span-5 md:col-start-8 aspect-[4/3]",
+                                "w-full aspect-[4/5] md:col-span-7 md:row-span-2 md:aspect-[4/5]",
+                                "w-full aspect-[4/5] md:col-span-5 md:aspect-[4/3]",
+                                "w-full aspect-[4/5] md:col-span-5 md:col-start-8 md:aspect-[4/3]",
                             ];
                             return (
-                                <figure key={g.src} className={`group ${layouts[i] ?? "md:col-span-4 aspect-[4/5]"}`}>
+                                <figure key={g.src} className={`group ${layouts[i] ?? "aspect-[4/5] md:col-span-4 md:aspect-[4/5]]"}`}>
                                     <div className="relative h-full min-h-[260px] overflow-hidden md:min-h-0 md:aspect-auto aspect-[4/5]" style={{ background: "var(--ms-border)" }}>
                                         <img
                                             src={g.src}
