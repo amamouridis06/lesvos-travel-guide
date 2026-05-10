@@ -243,7 +243,7 @@ export default function FoodPage() {
           </div>
 
           {/* Local Products */}
-          <div id="locProdSup">
+          <div id="locProd">
             <h2 className="text-2xl font-semibold mb-6">Local Products & Supermarket</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

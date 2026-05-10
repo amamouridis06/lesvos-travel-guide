@@ -344,7 +344,7 @@ export default function PPUrban() {
                         <div className="mt-8 space-y-4 text-sm" style={{ color: "var(--ms-muted)" }}>
                             <p><strong className="text-[color:var(--ms-fg)]">Phone:</strong> +30 698 506 5704 </p>
                             <p><strong className="text-[color:var(--ms-fg)]">Email:</strong> petrino.molyvos@gmail.com </p>
-                            <p><strong className="text-[color:var(--ms-fg)]">Address:</strong> Molyvos, Lesvos </p>
+                            <p><strong className="text-[color:var(--ms-fg)]">Region:</strong> Molyvos, Lesvos </p>
                             <p><strong className="text-[color:var(--ms-fg)]">Instagram:</strong> petrino.hotel</p>
                             <p><strong className="text-[color:var(--ms-fg)]">Facebook:</strong> hotelpetrino</p>
                         </div>

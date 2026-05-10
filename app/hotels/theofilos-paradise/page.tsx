@@ -61,7 +61,7 @@ const hotel = {
         { src: IMG.sauna, alt: "Sauna and wellness area", caption: "Heat your body, clear your mind." },
     ],
     bookUrl:
-        "https://www.booking.com/hotel/gr/theofilos-paradise-boutique.en-gb.html",
+        "https://www.booking.com/Share-myFitF",
 };
 
 const STYLES = `

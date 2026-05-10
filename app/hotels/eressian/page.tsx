@@ -52,7 +52,7 @@ const hotel = {
     ],
 
     bookUrl:
-        "https://www.booking.com/Share-E64f2T",
+        "https://www.booking.com/Share-NhJHHn",
 };
 
 const STYLES = `
