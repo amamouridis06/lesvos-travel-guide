@@ -7,7 +7,7 @@ export default function Home() {
         {/* HERO */}
         <section style={{ position: "relative", height: "100svh", minHeight: 500 }}>
           <img
-              src="/plomari2.jpg"
+              src="/villages/plomari2.jpg"
               alt="Lesvos"
               style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
           />
@@ -75,26 +75,6 @@ export default function Home() {
                 </Link>
             ))}
           </div>
-
-          {/*/!* Desktop: image grid *!/*/}
-          {/*<div className="hidden lg:grid" style={{ gridTemplateColumns: "repeat(4, 1fr)", gap: 16 }}>*/}
-          {/*  {[*/}
-          {/*    { label: "Beaches", sub: "32 spots", img: "/beach.jpg", href: "/beaches" },*/}
-          {/*    { label: "Villages", sub: "18 spots", img: "/village.jpg", href: "/villages" },*/}
-          {/*    { label: "Food", sub: "Local cuisine", img: "/food.jpg", href: "/food" },*/}
-          {/*    { label: "Nature", sub: "Wild trails", img: "/nature.jpg", href: "/nature" },*/}
-          {/*  ].map((cat) => (*/}
-          {/*      <Link key={cat.label} href={cat.href}*/}
-          {/*            style={{ position: "relative", height: 220, borderRadius: 16, overflow: "hidden", display: "block", textDecoration: "none" }}>*/}
-          {/*        <img src={cat.img} alt={cat.label} style={{ width: "100%", height: "100%", objectFit: "cover" }} />*/}
-          {/*        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(0,0,0,0.6), transparent)" }} />*/}
-          {/*        <div style={{ position: "absolute", bottom: 0, left: 0, padding: 20 }}>*/}
-          {/*          <p style={{ fontFamily: "Syne, sans-serif", fontSize: 16, fontWeight: 600, color: "#fff", margin: "0 0 2px" }}>{cat.label}</p>*/}
-          {/*          <p style={{ fontSize: 11, color: "rgba(255,255,255,0.55)", letterSpacing: "0.06em", textTransform: "uppercase", margin: 0 }}>{cat.sub}</p>*/}
-          {/*        </div>*/}
-          {/*      </Link>*/}
-          {/*  ))}*/}
-          {/*</div>*/}
         </section>
 
         {/* TOP PLACES */}
@@ -102,9 +82,9 @@ export default function Home() {
           {/* Mobile: list */}
           <div className="flex lg:hidden" style={{ flexDirection: "column" }}>
             {[
-              { num: "01", name: "Molyvos", sub: "Medieval village · North", tag: "Village", img: "/molivos.jpg", href: "/villages/molivos" },
-              { num: "02", name: "Vatera", sub: "Blue flag beach · South", tag: "Beach", img: "/vatera.jpg", href: "/beaches/vatera" },
-              { num: "03", name: "Plomari", sub: "Ouzo capital · South", tag: "Village", img: "/plomari2.jpg", href: "/villages/plomari" },
+              { num: "01", name: "Molyvos", sub: "Medieval village · North", tag: "Village", img: "/villages/molivos.jpg", href: "/villages/molivos" },
+              { num: "02", name: "Vatera", sub: "Blue flag beach · South", tag: "Beach", img: "/villages/vatera.jpg", href: "/beaches/vatera" },
+              { num: "03", name: "Plomari", sub: "Ouzo capital · South", tag: "Village", img: "/villages/plomari2.jpg", href: "/villages/plomari" },
             ].map((p, i, arr) => (
                 <MobileListItem key={p.name} {...p} last={i === arr.length - 1} />
             ))}
@@ -112,9 +92,9 @@ export default function Home() {
           {/* Desktop: cards */}
           <div className="hidden lg:grid" style={{ gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
             {[
-              { num: "01", name: "Molyvos", sub: "Medieval village · North", tag: "Village", img: "/molivos.jpg", href: "/villages/molivos" },
-              { num: "02", name: "Vatera", sub: "Blue flag beach · South", tag: "Beach", img: "/vatera.jpg", href: "/beaches/vatera" },
-              { num: "03", name: "Plomari", sub: "Ouzo capital · South", tag: "Village", img: "/plomari2.jpg", href: "/villages/plomari" },
+              { num: "01", name: "Molyvos", sub: "Medieval village · North", tag: "Village", img: "/villages/molivos.jpg", href: "/villages/molivos" },
+              { num: "02", name: "Vatera", sub: "Blue flag beach · South", tag: "Beach", img: "/villages/vatera.jpg", href: "/beaches/vatera" },
+              { num: "03", name: "Plomari", sub: "Ouzo capital · South", tag: "Village", img: "/villages/plomari2.jpg", href: "/villages/plomari" },
             ].map((p) => <DesktopCard key={p.name} {...p} />)}
           </div>
         </Section>
@@ -123,9 +103,9 @@ export default function Home() {
         <Section title="Top hotels" href="/hotels">
           <div className="flex lg:hidden" style={{ flexDirection: "column" }}>
             {[
-              { num: "01", name: "Theofilos Paradise Boutique Hotel", sub: "Boutique · Mytilene", tag: "Hotel", img: "/theo-entry.jpg", href: "/hotels/theofilos-paradise" },
-               { num: "02", name: "PP Urban Studio", sub: "Renovated studio · Mytilene", tag: "Hotel", img: "/pp.beds.jpg", href: "/hotels/pp-urban-studio" },
-              // { num: "03", name: "Olive Press", sub: "Design · Molyvos", tag: "Hotel", img: "/hotel3.jpg", href: "/hotels/olive-press" },
+              { num: "01", name: "Theofilos Paradise Boutique Hotel", sub: "Boutique · Mytilene", tag: "Hotel", img: "/theofilos/theo-entry.jpg", href: "/hotels/theofilos-paradise" },
+               { num: "02", name: "PP Urban Studio", sub: "Renovated studio · Mytilene", tag: "Hotel", img: "/pp/pp.beds.jpg", href: "/hotels/pp-urban-studio" },
+              { num: "03", name: "Hotel Petrino", sub: "Luxury · Molyvos", tag: "Hotel", img: "/petrino/petrino4.png", href: "/hotels/petrino" },
             ].map((p, i, arr) => (
                 <MobileListItem key={p.name} {...p} last={i === arr.length - 1} />
             ))}
@@ -134,7 +114,7 @@ export default function Home() {
             {[
               { num: "01", name: "Theofilos Paradise Boutique Hotel", sub: "Boutique · Mytilene", tag: "Hotel", img: "/theo-entry.jpg", href: "/hotels/theofilos-paradise" },
                 { num: "02", name: "PP Urban Studio", sub: "Renovated studio · Mytilene", tag: "Hotel", img: "/pp.beds.jpg", href: "/hotels/pp-urban-studio" },
-              // { num: "03", name: "Olive Press", sub: "Design · Molyvos", tag: "Hotel", img: "/hotel3.jpg", href: "/hotels/olive-press" },
+                { num: "03", name: "Hotel Petrino", sub: "Luxury · Molyvos", tag: "Hotel", img: "/petrino/petrino4.png", href: "/hotels/petrino" },
             ].map((p) => <DesktopCard key={p.name} {...p} />)}
           </div>
         </Section>
@@ -143,18 +123,18 @@ export default function Home() {
         <Section title="Top restaurants" href="/food#cafeTaverns">
           <div className="flex lg:hidden" style={{ flexDirection: "column" }}>
             {[
-              { num: "01", name: "To Limanaki ton Pamfilon", sub: "Delicious dishes · Skala Pamfilon", tag: "Restaurant", img: "/limanaki_pamf1.jpg", href: "/food/limanaki_pamfilon" },
-              { num: "02", name: "Tropicana - Platanos", sub: "Beautiful hospitality · Vafios", tag: "Restaurant", img: "/tropicana1.jpg", href: "/food/tropicana" },
-              { num: "03", name: "Tryfon", sub: "Locan dishes · Kalloni", tag: "Tavern", img: "/tryfon6.jpg", href: "/food/tryfon" },
+              { num: "01", name: "To Limanaki ton Pamfilon", sub: "Delicious dishes · Skala Pamfilon", tag: "Restaurant", img: "/limanaki/limanaki_pamf1.jpg", href: "/food/limanaki_pamfilon" },
+              { num: "02", name: "Tropicana - Platanos", sub: "Beautiful hospitality · Vafios", tag: "Restaurant", img: "/tropicana/tropicana1.jpg", href: "/food/tropicana" },
+              { num: "03", name: "Tryfon", sub: "Locan dishes · Kalloni", tag: "Tavern", img: "/tryfon/tryfon6.jpg", href: "/food/tryfon" },
             ].map((p, i, arr) => (
                 <MobileListItem key={p.name} {...p} last={i === arr.length - 1} />
             ))}
           </div>
           <div className="hidden lg:grid" style={{ gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
             {[
-              { num: "01", name: "To Limanaki ton Pamfilon", sub: "Delicious dishes · Skala Pamfilon", tag: "Restaurant", img: "/limanaki_pamf1.jpg", href: "/food/limanaki_pamfilon" },
-              { num: "02", name: "Tropicana - Platanos", sub: "Beautiful hospitality · Molivos", tag: "Restaurant", img: "/tropicana1.jpg", href: "/food/tropicana" },
-              { num: "03", name: "Tryfon", sub: "Locan dishes · Kalloni", tag: "Tavern", img: "/tryfon6.jpg", href: "/food/tryfon" },
+              { num: "01", name: "To Limanaki ton Pamfilon", sub: "Delicious dishes · Skala Pamfilon", tag: "Restaurant", img: "/limanaki/limanaki_pamf1.jpg", href: "/food/limanaki_pamfilon" },
+              { num: "02", name: "Tropicana - Platanos", sub: "Beautiful hospitality · Molivos", tag: "Restaurant", img: "/tropicana/tropicana1.jpg", href: "/food/tropicana" },
+              { num: "03", name: "Tryfon", sub: "Locan dishes · Kalloni", tag: "Tavern", img: "/tryfon/tryfon6.jpg", href: "/food/tryfon" },
             ].map((p) => <DesktopCard key={p.name} {...p} />)}
           </div>
         </Section>
@@ -162,7 +142,7 @@ export default function Home() {
         <Section title="Top bars" href="/food#bars">
           <div className="flex lg:hidden" style={{ flexDirection: "column" }}>
             {[
-              { num: "01", name: "Naf's Cocktail Corner", sub: "Cocktail · Agios Isidoros", tag: "bar", img: "/naf-logo.jpg", href: "/food/nafs-cocktail-corner" },
+              { num: "01", name: "Naf's Cocktail Corner", sub: "Cocktail · Agios Isidoros", tag: "bar", img: "/naf/naf-logo.jpg", href: "/food/nafs-cocktail-corner" },
               // { num: "02", name: "Vafios", sub: "Traditional · Vafios", tag: "Restaurant", img: "/rest2.jpg", href: "/restaurants/vafios" },
               // { num: "03", name: "Cavo d'Oro", sub: "Mediterranean · Molyvos", tag: "Restaurant", img: "/rest3.jpg", href: "/restaurants/cavo-doro" },
             ].map((p, i, arr) => (
@@ -171,7 +151,7 @@ export default function Home() {
           </div>
           <div className="hidden lg:grid" style={{ gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
             {[
-              { num: "01", name: "Naf's Cocktail Corner", sub: "Cocktail · Agios Isidoros", tag: "bar", img: "/naf-logo.jpg", href: "/food/nafs-cocktail-corner" },
+              { num: "01", name: "Naf's Cocktail Corner", sub: "Cocktail · Agios Isidoros", tag: "bar", img: "/naf/naf-logo.jpg", href: "/food/nafs-cocktail-corner" },
               // { num: "02", name: "Vafios", sub: "Traditional · Vafios", tag: "Restaurant", img: "/rest2.jpg", href: "/restaurants/vafios" },
               // { num: "03", name: "Cavo d'Oro", sub: "Mediterranean · Molyvos", tag: "Restaurant", img: "/rest3.jpg", href: "/restaurants/cavo-doro" },
             ].map((p) => <DesktopCard key={p.name} {...p} />)}

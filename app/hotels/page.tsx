@@ -36,7 +36,7 @@ const hotels = [
         href: "/hotels/eressian",
     },
     {
-        name: "PETRINO Hotel",
+        name: "Hotel Petrino ",
         description: "A luxury hotel with view the castle",
         location: "📍Molyvos, Lesvos",
         image: "/petrino/petrino4.png",
