@@ -16,7 +16,7 @@ const IMG = {
 
 const hotel = {
     name: "Hotel Petrino ",
-    region: "Molyvos Lesvos Greece",
+    region: "Molyvos Lesvos",
     country: "Greece",
     fromPrice: "€70",
     tagline: "A luxury hotel in a fanastic village in North Lesvos",
@@ -47,13 +47,13 @@ const hotel = {
         "View in castle of Molyvos"
     ],
     gallery: [
-        { src: IMG.view, alt: "entry", caption: "Entry: A first impression that stays." },
-        { src: IMG.outdoor, alt: "Pool area", caption: "Living room: Where style meets relaxation" },
-        { src: IMG.cocktails, alt: "Hotel room", caption: "Living room: Where style meets relaxation" },
-        { src: IMG.pool1, alt: "samp", caption: "Kitchen: Cook. Enjoy. Repeat." },
-        { src: IMG.bed1, alt: "bed room", caption: "Bedroom: Calm in the heart of the city."},
-        { src: IMG.balcony, alt: "balcony", caption: "Balcony: Your green escape in the city." },
-        { src: IMG.bed2, alt: "bath", caption: "Bathroom: Simple, clean, essential." },
+        { src: IMG.view, alt: "entry"},
+        { src: IMG.outdoor, alt: "Pool area" },
+        { src: IMG.cocktails, alt: "Hotel room" },
+        { src: IMG.pool1, alt: "samp" },
+        { src: IMG.bed1, alt: "bed room"},
+        { src: IMG.balcony, alt: "balcony" },
+        { src: IMG.bed2, alt: "bath" },
     ],
 
     bookUrl:
@@ -249,7 +249,7 @@ export default function PPUrban() {
 
                         <div className="mt-12 flex items-center gap-4 text-xs uppercase tracking-[0.24em] md:tracking-[0.3em]" style={{ color: "var(--ms-muted)" }}>
                             <span className="ms-hairline" />
-                            <span>PP Urban Studio</span>
+                            <span>Hotel Petrino</span>
                         </div>
                     </main>
 
@@ -383,10 +383,7 @@ export default function PPUrban() {
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-100" />
                                     </div>
-                                    <figcaption className="mt-4 flex items-baseline gap-3">
-                                        <span className="ms-serif-num text-sm" style={{ color: "var(--ms-gold)" }}>0{i + 1}</span>
-                                        <span className="ms-display text-lg italic" style={{ color: "var(--ms-muted)" }}>{g.caption}</span>
-                                    </figcaption>
+
                                 </figure>
                             );
                         })}
