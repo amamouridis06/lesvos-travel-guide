@@ -414,14 +414,14 @@ import {
 const HERO = "/naf-chairs.jpeg";
 
 const GALLERY = [
-  { type: "video", src: "/naf-ep.mp4", poster: "/naf-ep-thumb.jpg" },
-  { type: "image", src: "/naf1.jpg" },
-  { type: "image", src: "/naf2.jpg" },
-  { type: "image", src: "/naf3.jpg" },
-  { type: "image", src: "/naf4.jpg" },
-  { type: "image", src: "/naf5.jpg" },
-  { type: "video", src: "/naf-dj.mp4", poster: "/naf-dj-thumb.jpg" },
-  { type: "video", src: "/naf-party.mp4", poster: "/naf-party-thumb.jpg" },
+  { type: "video", src: "/naf/naf-ep.mp4", poster: "/naf/naf-ep-thumb.jpg" },
+  { type: "image", src: "/naf/naf1.jpg" },
+  { type: "image", src: "/naf/naf2.jpg" },
+  { type: "image", src: "/naf/naf3.jpg" },
+  { type: "image", src: "/naf/naf4.jpg" },
+  { type: "image", src: "/naf/naf5.jpg" },
+  { type: "video", src: "/naf/naf-dj.mp4", poster: "/naf/naf-dj-thumb.jpg" },
+  { type: "video", src: "/naf/naf-party.mp4", poster: "/naf/naf-party-thumb.jpg" },
 ];
 
 const COCKTAILS = [
