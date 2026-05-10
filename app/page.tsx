@@ -24,7 +24,7 @@ export default function Home() {
               <h1 style={{ fontFamily: "Syne, sans-serif", fontSize: "clamp(38px, 8vw, 96px)", fontWeight: 700, color: "#fff", lineHeight: 1.02, margin: "0 0 24px" }}>
                 The island<br />of Lesvos
               </h1>
-              <Link href="/explore"
+              <Link href="/under-construction"
                     style={{ display: "inline-flex", alignItems: "center", gap: 10, background: "#fff", color: "#111", fontSize: 12, fontWeight: 500, letterSpacing: "0.08em", textTransform: "uppercase", padding: "14px 24px", borderRadius: 100, textDecoration: "none" }}>
                 Explore
                 <span style={{ width: 20, height: 20, background: "#111", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center" }}>
@@ -34,32 +34,11 @@ export default function Home() {
               </span>
               </Link>
             </div>
-            {/*<p className="hidden lg:block" style={{ fontSize: 13, color: "rgba(255,255,255,0.5)", lineHeight: 1.6, textAlign: "right", maxWidth: 200 }}>*/}
-            {/*  Beaches, villages<br />& authentic food*/}
-            {/*</p>*/}
           </div>
         </section>
 
         {/* CATEGORIES */}
         <section style={{ padding: "40px 24px 0" }} className="lg:px-16 lg:pt-16">
-            <div className="hidden lg:flex items-center justify-center gap-8 py-4 border-b">
-                {[
-                    { label: "All", href: "/" },
-                    { label: "Beaches", href: "/beaches" },
-                    { label: "Villages", href: "/villages" },
-                    { label: "Food", href: "/food" },
-                    { label: "Nature", href: "/nature" },
-                ].map((cat) => (
-                    <Link
-                        key={cat.label}
-                        href={cat.href}
-                        className="text-sm font-medium text-gray-600 hover:text-black transition"
-                    >
-                        {cat.label}
-                    </Link>
-                ))}
-            </div>
-
           {/* Mobile: pill scroll */}
           <div className="flex lg:hidden" style={{ gap: 10, overflowX: "auto", paddingBottom: 2, scrollbarWidth: "none" }}>
             {[
@@ -172,7 +151,7 @@ export default function Home() {
                 Tell us how long you're staying and we'll build a custom itinerary just for you.
               </p>
             </div>
-            <Link href="/planner"
+            <Link href="/under-construction"
                   style={{ alignSelf: "flex-start", flexShrink: 0, background: "#fff", color: "#111", fontSize: 12, fontWeight: 500, letterSpacing: "0.08em", textTransform: "uppercase", padding: "14px 28px", borderRadius: 100, textDecoration: "none" }}
                   className="lg:self-auto">
               Start planning →
@@ -180,22 +159,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/*/!* BOTTOM NAV — mobile only *!/*/}
-        {/*<nav className="lg:hidden" style={{ display: "flex", justifyContent: "space-around", padding: "14px 0 28px", borderTop: "1px solid #f0f0f0", position: "sticky", bottom: 0, background: "#fff" }}>*/}
-        {/*  {[*/}
-        {/*    { label: "Home", active: true, href: "/", icon: <path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z" /> },*/}
-        {/*    { label: "Search", href: "/search", icon: <><circle cx="11" cy="11" r="8" /><path d="M21 21l-4.35-4.35" /></> },*/}
-        {/*    { label: "Map", href: "/map", icon: <><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><circle cx="12" cy="11" r="3" /></> },*/}
-        {/*    { label: "Saved", href: "/saved", icon: <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z" /> },*/}
-        {/*  ].map((item) => (*/}
-        {/*      <Link key={item.label} href={item.href}*/}
-        {/*            style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 6, fontSize: 9, letterSpacing: "0.06em", textTransform: "uppercase", color: item.active ? "#111" : "#bbb", textDecoration: "none" }}>*/}
-        {/*        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">{item.icon}</svg>*/}
-        {/*        {item.label}*/}
-        {/*        {item.active && <span style={{ width: 4, height: 4, borderRadius: "50%", background: "#111" }} />}*/}
-        {/*      </Link>*/}
-        {/*  ))}*/}
-        {/*</nav>*/}
+
 
       </main>
   );
