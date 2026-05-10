@@ -34,7 +34,7 @@ export default function NavBar() {
                 Beaches
               </Link>
               <Link href="/food" className="hover:text-yellow-300 transition">
-                Food
+                Food & Drinks
               </Link>
               <Link href="/nature" className="hover:text-yellow-300 transition">
                 Nature
@@ -95,7 +95,7 @@ export default function NavBar() {
                     onClick={closeMenu}
                     className="py-3 border-b border-white/10 hover:text-yellow-300 transition"
                 >
-                  Food
+                  Food & Drinks
                 </Link>
 
                 <Link
