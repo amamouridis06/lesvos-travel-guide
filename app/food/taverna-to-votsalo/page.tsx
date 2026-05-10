@@ -14,15 +14,15 @@ export default function RestaurantTravelGuideListing() {
       <p>Fresh fish, seafood meze, homemade specialties, and beloved Greek classics are served in a setting defined by simplicity, authenticity, and seaside charm.   Whether you’re enjoying a leisurely lunch after a swim or a sunset dinner overlooking the sea, “Votsalo” is a welcoming destination for those seeking delicious food, beautiful views, and the timeless feeling of a Greek summer.</p>,
     ],
       heroImage:
-        "/votsalo1.jpg",
+        "/votsalo/votsalo1.jpg",
     gallery: [
-      "/votsalo1.jpg",
-      "/votsalo2.jpg",
-      "/votsalo7.jpg",
-      "/votsalo4.jpg",
-      "/votsalo5.jpg",
-      "/votsalo6.jpg",
-      "/votsalo8.jpg",
+      "/votsalo/votsalo1.jpg",
+      "/votsalo/votsalo2.jpg",
+      "/votsalo/votsalo7.jpg",
+      "/votsalo/votsalo4.jpg",
+      "/votsalo/votsalo5.jpg",
+      "/votsalo/votsalo6.jpg",
+      "/votsalo/votsalo8.jpg",
     ],
     highlights: [
       "Fresh seafood",

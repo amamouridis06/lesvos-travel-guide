@@ -7,12 +7,12 @@ import { useEffect, useState } from "react";
 export default function LimanakiPamfilonPage() {
 
   const images = [
-    "/tryfon6.jpg",
-    "/tryfon1.jpeg",
-    "/tryfon2.jpeg",
-    "/tryfon3.jpeg",
-    "/tryfon4.jpeg",
-    "/tryfon5.jpeg",
+    "/tryfon/tryfon6.jpg",
+    "/tryfon/tryfon1.jpeg",
+    "/tryfon/tryfon2.jpeg",
+    "/tryfon/tryfon3.jpeg",
+    "/tryfon/tryfon4.jpeg",
+    "/tryfon/tryfon5.jpeg",
   ];
 
   const [index, setIndex] = useState(0);
@@ -39,7 +39,7 @@ export default function LimanakiPamfilonPage() {
       {/* ================= HERO ================= */}
       <section className="relative h-[70vh] w-full">
         <Image
-          src="/tryfon6.jpg"
+          src="/tryfon/tryfon6.jpg"
           alt="Tryfon cafe - tavern "
           fill
           className="object-cover"

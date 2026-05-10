@@ -7,9 +7,7 @@ import { useEffect, useState } from "react";
 export default function LimanakiPamfilonPage() {
 
   const images = [
-    "/pallas.jpg",
-    "/dessert-limanaki.jpg",
-    "/limanaki_pamf1.jpg",
+    "/pallas/pallas.jpg",
   ];
 
   const [index, setIndex] = useState(0);

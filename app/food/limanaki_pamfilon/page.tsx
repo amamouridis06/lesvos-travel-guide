@@ -15,12 +15,12 @@ import {
 
 // ---- Replace with your own images ----
 const HERO =
-    "/limanaki_pamf1.jpg";
+    "/limanaki/limanaki_pamf1.jpg";
 const GALLERY = [
 
-  "/food.jpg",
-  "/limanaki_pamf1.jpg",
-  "/limanaki_pamf.jpg",
+  "/limanaki/food.jpg",
+  "/limanaki/limanaki_pamf1.jpg",
+  "/limanaki/limanaki_pamf.jpg",
 ]
 
 const Dishes = [

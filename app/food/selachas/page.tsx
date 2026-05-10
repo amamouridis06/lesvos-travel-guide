@@ -16,12 +16,12 @@ import Link from "next/link";
 
 // ---- Replace with your own images ----
 const HERO =
-    "/sel-entry.jpg";
+    "/selaxas/sel-entry.jpg";
 const GALLERY = [
-    "/sel-meat1.jpg",
-    "/sel-meat2.jpg",
-    "/sel-c.jpg",
-    "/sel-freez.jpg",
+    "/selaxas/sel-meat1.jpg",
+    "/selaxas/sel-meat2.jpg",
+    "/selaxas/sel-c.jpg",
+    "/selaxas/sel-freez.jpg",
 ]
 
 const INFO = [

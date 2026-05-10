@@ -13,17 +13,17 @@ import {
 } from "lucide-react";
 
 // ---- Replace with your own images ----
-const HERO = "/tropicana1.jpg";
+const HERO = "/tropicana/tropicana1.jpg";
 
 const GALLERY = [
-  { type: "image", src: "/tropicana11.jpeg" },
-  { type: "image", src: "/tropicana13.jpeg" },
-  { type: "image", src: "/tropicana12.jpeg" },
-  { type: "image", src: "/tropicana14.jpeg" },
-  { type: "image", src: "/tropicana15.jpeg" },
-  { type: "image", src: "/tropicana16.jpeg" },
-  { type: "image", src: "/tropicana17.jpeg" },
-  { type: "image", src: "/tropicana6.jpg" },
+  { type: "image", src: "/tropicana/tropicana11.jpeg" },
+  { type: "image", src: "/tropicana/tropicana13.jpeg" },
+  { type: "image", src: "/tropicana/tropicana12.jpeg" },
+  { type: "image", src: "/tropicana/tropicana14.jpeg" },
+  { type: "image", src: "/tropicana/tropicana15.jpeg" },
+  { type: "image", src: "/tropicana/tropicana16.jpeg" },
+  { type: "image", src: "/tropicana/tropicana17.jpeg" },
+  { type: "image", src: "/tropicana/tropicana6.jpg" },
 ];
 
 const DISHES = [
