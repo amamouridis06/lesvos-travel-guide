@@ -35,6 +35,13 @@ const hotels = [
         image: "/eressian/er_pool1.jpg",
         href: "/hotels/eressian",
     },
+    {
+        name: "PETRINO Hotel",
+        description: "A luxury hotel with view the castle",
+        location: "📍Molyvos, Lesvos",
+        image: "/petrino/petrino4.png",
+        href: "/hotels/petrino",
+    },
 
 ];
 
