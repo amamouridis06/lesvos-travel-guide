@@ -350,7 +350,7 @@ export default function TheofilosParadise() {
                     </div>
                     <div className="md:col-span-6 md:col-start-7">
                         <p className="text-sm leading-relaxed md:text-base" style={{ color: "var(--ms-muted)" }}>
-                            For reservations, special requests or availability inquiries, our team is available daily to assist you.
+                            For reservations, special requests or availability inquiries, the team is available daily to assist you.
                         </p>
                         <div className="mt-8 space-y-4 text-sm" style={{ color: "var(--ms-muted)" }}>
                             <p><strong className="text-[color:var(--ms-fg)]">Phone:</strong> 22510 43300</p>
