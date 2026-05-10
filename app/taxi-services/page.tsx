@@ -41,7 +41,7 @@ export default function TaxiServicesTravelGuidePage() {
                 languages: "Greek, English",
                 availability: "Available daily",
                 image:
-                    "/tryfon-taxi.jpg",
+                    "/taxi/tryfon-taxi.jpg",
             },
             // {
             //     name: "Maria Private Transfers",

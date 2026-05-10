@@ -411,7 +411,7 @@ import {
 } from "lucide-react";
 
 // ---- Replace with your own images ----
-const HERO = "/naf-chairs.jpeg";
+const HERO = "/naf/naf-chairs.jpeg";
 
 const GALLERY = [
   { type: "video", src: "/naf/naf-ep.mp4", poster: "/naf/naf-ep-thumb.jpg" },
