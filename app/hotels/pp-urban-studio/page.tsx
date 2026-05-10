@@ -379,12 +379,12 @@ export default function PPUrban() {
                             ];
                             return (
                                 <figure key={g.src} className={`group ${layouts[i] ?? "md:col-span-4 aspect-[4/5]"}`}>
-                                    <div className="relative h-full min-h-[260px] overflow-hidden md:min-h-0" style={{ background: "var(--ms-border)" }}>
+                                    <div className="relative h-full min-h-[260px] overflow-hidden md:min-h-0 md:aspect-auto aspect-[4/5]" style={{ background: "var(--ms-border)" }}>
                                         <img
                                             src={g.src}
                                             alt={g.alt}
                                             loading="lazy"
-                                            className="h-full w-full object-cover -translate-x-2 md:translate-x-0 transition-transform duration-[1400ms] ease-out group-hover:scale-[1.06]"
+                                            className="h-full w-full object-cover object-[35%_center] transition-transform duration-[1400ms] ease-out group-hover:scale-[1.06]"
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-100" />
                                     </div>
