@@ -2,15 +2,15 @@
 import { useEffect } from "react";
 
 const IMG = {
-    hero: "/theo-entry.jpg",
-    pool: "/theo-pool.jpg",
-    bed: "/theo-liv.jpg",
-    sauna: "/theo-sauna.jpg",
-    hamam: "/theo-hamam.jpg",
-    samp: "/theo-samp.jpg",
-    bed2: "/theo-bed2.jpg",
-    entry: "/theo-drone.jpg",
-    recept: "/theo.recept.jpg"
+    hero: "/theofilos/theo-entry.jpg",
+    pool: "/theofilos/theo-pool.jpg",
+    bed: "/theofilos/theo-liv.jpg",
+    sauna: "/theofilos/theo-sauna.jpg",
+    hamam: "/theofilos/theo-hamam.jpg",
+    samp: "/theofilos/theo-samp.jpg",
+    bed2: "/theofilos/theo-bed2.jpg",
+    entry: "/theofilos/theo-drone.jpg",
+    recept: "/theofilos/theo.recept.jpg"
 };
 
 const hotel = {
