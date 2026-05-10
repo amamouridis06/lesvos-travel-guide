@@ -44,7 +44,8 @@ const hotel = {
         "Located in the North Lesvos",
         "Valid ID and credit card required at check-in",
         "Just a little steps far for the village of Molyvos, perfect for walking",
-        "View in castle of Molyvos"
+        "View in castle of Molyvos",
+        "The price is for double Room per night in low season. The price includes breakfast."
     ],
     gallery: [
         { src: IMG.view, alt: "entry"},

@@ -31,22 +31,21 @@ const hotel = {
         { label: "Parking", value: "No" },
     ],
     pros: [
-        "Prime central location within walking distance of key attractions",
-        "Surrounded by shops, right next to a church, and just steps from the port",
+        "Outdoor pool",
         "Comfortable rooms with modern amenities",
-        "On-site restaurant and bar",
+        "Hammam and Massage",
         "Friendly, attentive service",
     ],
     knowBefore: [
-        "Located in the city centre",
+        "Located in the west Lesvos in village Eresos",
         "Valid ID and credit card required at check-in",
     ],
     gallery: [
-        { src: IMG.entry, alt: "entry", caption: "Entry: Where Luxury Begins”" },
-        { src: IMG.pool, alt: "Pool area", caption: "Pool: Dive Into Serenity" },
-        { src: IMG.massage, alt: "Massage", caption: "Massage: Relax. Restore. Renew.”" },
-        { src: IMG.hammam, alt: "Hammam", caption: "Hammam: A Timeless Ritual of Wellness" },
-        { src: IMG.room, alt: "bed room", caption: "Room: Your Private Escape"},
+        { src: IMG.entry, alt: "entry" },
+        { src: IMG.pool, alt: "Pool area" },
+        { src: IMG.massage, alt: "Massage"},
+        { src: IMG.hammam, alt: "Hammam" },
+        { src: IMG.room, alt: "bed room"},
         { src: IMG.room1, alt: "broom" },
         { src: IMG.room2, alt: "room" }
     ],
@@ -264,7 +263,7 @@ export default function PPUrban() {
                                     <span className="ms-display text-5xl">{hotel.fromPrice}</span>
                                     <span className="text-xs" style={{ color: "var(--ms-muted)" }}>/ night</span>
                                 </div>
-                                <div className="mt-1 text-xs" style={{ color: "var(--ms-muted)" }}>double occupancy, taxes incl. <p>Double Room per night in low season. The price includes breakfast. </p></div>
+                                <div className="mt-1 text-xs" style={{ color: "var(--ms-muted)" }}>double occupancy, taxes incl. </div>
 
                                 <a
                                     href={hotel.bookUrl}
