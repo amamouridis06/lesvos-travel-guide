@@ -4,10 +4,10 @@ import Link from "next/link";
 export default function RestaurantTravelGuideListing() {
   const restaurant = {
     name: "Taverna To Votsalo",
-    category: "Traditional Greek Taverm",
+    category: "Traditional Greek Tavern",
     location: "Eftalou, Lesvos",
     rating: 5.0,
-    reviews: 18,
+    reviews: 17,
     description: [
       <p>In the heart of Eftalou, just steps from the sea and the renowned thermal springs, The Taverna To Votsalo blends authentic flavors, traditional hospitality, and the relaxed spirit of summer in Eftalou. Rooted in local culinary tradition and focused on fresh, high-quality ingredients, it offers dishes that evoke the warmth of a family table by the water.</p>,
       <p>      </p>,
