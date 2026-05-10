@@ -1,3 +1,5 @@
+"use client";
+
 const categoryPlans = {
   hotels: {
     title: "Ξενοδοχεία & Διαμονή",
@@ -347,3 +349,77 @@ const categoryPlans = {
     ],
   },
 };
+
+export default function PlansPage() {
+  return (
+      <div className="min-h-screen bg-slate-50 p-10">
+        <div className="max-w-7xl mx-auto space-y-20">
+          {Object.values(categoryPlans).map((category) => (
+              <section key={category.title}>
+                <h2 className="text-4xl font-bold mb-10">
+                  {category.title}
+                </h2>
+
+                <div className="grid md:grid-cols-3 gap-6">
+                  {category.plans.map((plan) => (
+                      <div
+                          key={plan.id}
+                          className={`rounded-3xl border bg-white p-8 shadow-sm ${
+                              plan.highlighted
+                                  ? "border-blue-500 ring-2 ring-blue-100"
+                                  : "border-slate-200"
+                          }`}
+                      >
+                        {plan.highlighted && (
+                            <div className="mb-4 inline-flex rounded-full bg-blue-600 px-3 py-1 text-xs font-semibold text-white">
+                              Most Popular
+                            </div>
+                        )}
+
+                        <h3 className="text-2xl font-bold mb-4">
+                          {plan.name}
+                        </h3>
+
+                        <div className="flex items-end gap-1 mb-4">
+                    <span className="text-5xl font-bold">
+                      €{plan.price}
+                    </span>
+                          <span className="text-slate-500 pb-1">
+                      {plan.period}
+                    </span>
+                        </div>
+
+                        <p className="text-slate-600 mb-6 leading-relaxed">
+                          {plan.description}
+                        </p>
+
+                        <ul className="space-y-3 mb-8">
+                          {plan.features.map((feature) => (
+                              <li
+                                  key={feature}
+                                  className="flex items-start gap-3 text-slate-700"
+                              >
+                                <span className="mt-2 h-2.5 w-2.5 rounded-full bg-blue-600 shrink-0" />
+                                <span>{feature}</span>
+                              </li>
+                          ))}
+                        </ul>
+
+                        <button
+                            className={`w-full rounded-2xl px-5 py-3.5 font-semibold transition ${
+                                plan.highlighted
+                                    ? "bg-blue-600 text-white hover:bg-blue-700"
+                                    : "bg-slate-100 text-slate-900 hover:bg-slate-200"
+                            }`}
+                        >
+                          {plan.cta}
+                        </button>
+                      </div>
+                  ))}
+                </div>
+              </section>
+          ))}
+        </div>
+      </div>
+  );
+}
