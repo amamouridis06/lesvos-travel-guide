@@ -56,6 +56,15 @@ const Restaurants = [
     alt: "Tropicana ",
     href: "/food/tropicana-platanos",
   },
+  {
+    title: "Nisi Restaurant",
+    category: "Authentic Restaurant",
+    description: "Authentic Greek flavors, and fantastic hospitality.",
+    location: "📍Molyvos, Lesvos",
+    image: "/nisi/nisi3.jpg",
+    alt: "Nisi ",
+    href: "/food/nisi-restaurant",
+  },
 ];
 
 const Bars = [
