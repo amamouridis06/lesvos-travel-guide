@@ -63,7 +63,7 @@ type CarType = {
 const cars: CarType[] = [
     {
         name: "OPEL KARL",
-        image: "/opencarl.jpg",
+        image: "/5.united/opencarl.jpg",
         description: "City car",
         prices: {
             low: { min: 18, max: 25 },
@@ -74,7 +74,7 @@ const cars: CarType[] = [
     },
     {
         name: "FIAT PANDA",
-        image: "/panda.jpg",
+        image: "/5.united/panda.jpg",
         description: "City",
         prices: {
             low: { min: 18, max: 25 },
@@ -85,7 +85,7 @@ const cars: CarType[] = [
     },
     {
         name: "HYUNDAI I10",
-        image: "/i10.jpg",
+        image: "/5.united/i10.jpg",
         description: "City",
         prices: {
             low: { min: 18, max: 25 },
@@ -96,7 +96,7 @@ const cars: CarType[] = [
     },
     {
         name: "TOYOTA AYGO",
-        image: "/aygo.jpg",
+        image: "/5.united/aygo.jpg",
         description: "City",
         prices: {
             low: { min: 18, max: 25 },
@@ -107,7 +107,7 @@ const cars: CarType[] = [
     },
     {
         name: "OPEL CORSA",
-        image: "/corsa.jpg",
+        image: "/5.united/corsa.jpg",
         description: "City car",
         prices: {
             low: { min: 20, max: 28 },
@@ -118,7 +118,7 @@ const cars: CarType[] = [
     },
     {
         name: "HYUNDAI I20",
-        image: "/i20.jpg",
+        image: "/5.united/i20.jpg",
         description: "City car",
         prices: {
             low: { min: 18, max: 25 },
@@ -129,7 +129,7 @@ const cars: CarType[] = [
     },
     {
         name: "SKODA FABIA",
-        image: "/fabia.jpg",
+        image: "/5.united/fabia.jpg",
         description: "Comfort",
         prices: {
             low: { min: 23, max: 30 },
@@ -140,7 +140,7 @@ const cars: CarType[] = [
     },
     {
         name: "RENAULT CLIO",
-        image: "/clio.jpg",
+        image: "/5.united/clio.jpg",
         description: "Reliable",
         prices: {
             low: { min: 23, max: 30 },
@@ -151,7 +151,7 @@ const cars: CarType[] = [
     },
     {
         name: "OPEL ASTRA",
-        image: "/astra.jpg",
+        image: "/5.united/astra.jpg",
         description: "Family car",
         prices: {
             low: { min: 30, max: 40 },
@@ -162,7 +162,7 @@ const cars: CarType[] = [
     },
     {
         name: "SKODA YETI",
-        image: "/yeti.jpg",
+        image: "/5.united/yeti.jpg",
         description: "SUV",
         prices: {
             low: { min: 30, max: 45 },
@@ -173,7 +173,7 @@ const cars: CarType[] = [
     },
     {
         name: "PEUGEOT 2008",
-        image: "/peugeot.jpg",
+        image: "/5.united/peugeot.jpg",
         description: "SUV",
         prices: {
             low: { min: 30, max: 45 },
@@ -184,7 +184,7 @@ const cars: CarType[] = [
     },
     {
         name: "FIAT PANDA 4X4",
-        image: "/panda4.jpg",
+        image: "/5.united/panda4.jpg",
         description: "4x4",
         prices: {
             low: { min: 30, max: 45 },
@@ -195,7 +195,7 @@ const cars: CarType[] = [
     },
     {
         name: "SUZUKI ALTO",
-        image: "/alto.jpg",
+        image: "/5.united/alto.jpg",
         description: "Small",
         prices: {
             low: { min: 18, max: 25 },
@@ -206,7 +206,7 @@ const cars: CarType[] = [
     },
     {
         name: "NISSAN NOTE",
-        image: "/nnote.jpg",
+        image: "/5.united/nnote.jpg",
         description: "Compact",
         prices: {
             low: { min: 23, max: 30 },
@@ -217,7 +217,7 @@ const cars: CarType[] = [
     },
     {
         name: "FIAT PANDA II",
-        image: "/pantaii.png",
+        image: "/5.united/pantaii.png",
         description: "Small",
         prices: {
             low: { min: 30, max: 45 },
@@ -228,7 +228,7 @@ const cars: CarType[] = [
     },
     {
         name: "VW POLO",
-        image: "/polo.jpg",
+        image: "/5.united/polo.jpg",
         description: "Comfort",
         prices: {
             low: { min: 20, max: 28 },
@@ -239,7 +239,7 @@ const cars: CarType[] = [
     },
     {
         name: "CITROEN C3",
-        image: "/citroen_c3.jpg",
+        image: "/5.united/citroen_c3.jpg",
         description: "Comfort",
         prices: {
             low: { min: 20, max: 28 },
@@ -250,7 +250,7 @@ const cars: CarType[] = [
     },
     {
         name: "NISSAN MICRA",
-        image: "/nissan_micra.jpg",
+        image: "/5.united/nissan_micra.jpg",
         description: "City",
         prices: {
             low: { min: 25, max: 30 },

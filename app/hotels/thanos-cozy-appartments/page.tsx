@@ -4,14 +4,14 @@ import { useEffect } from "react";
 // ---------- Replace with your own images ----------
 const IMG = {
   hero: "/thanos/thanosbed.jpg",
-  bath: "/hanos/thanosbath.jpg",
-  table:"/hanos/thanostable.jpg",
-  ntou: "/hanos/thanosb.jpg",
-  bed1: "/hanos/thanosbed.jpg",
-  bed2: "/hanos/thanosbed2.jpg",
-  livingroom: "/hanos/thanosliv.jpg",
-  kitchen: "/hanos/thanosk.jpg",
-  house: "/hanos/thanoshouse.jpg",
+  bath: "/thanos/thanosbath.jpg",
+  table:"/thanos/thanostable.jpg",
+  ntou: "/thanos/thanosb.jpg",
+  bed1: "/thanos/thanosbed.jpg",
+  bed2: "/thanos/thanosbed2.jpg",
+  livingroom: "/thanos/thanosliv.jpg",
+  kitchen: "/thanos/thanosk.jpg",
+  house: "/thanos/thanoshouse.jpg",
 };
 
 // ---------- Appartment data ----------

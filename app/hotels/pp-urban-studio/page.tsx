@@ -4,7 +4,6 @@ import { useEffect } from "react";
 const IMG = {
     hero: "/pp.beds.jpg",
     entry: "/pp.entry.jpg",
-    // diadr: "/pp.diadr.jpg",
     liv1: "/pp.liv1.png",
     liv2: "/pp.liv2.jpg",
     kitchen: "/pp.kitchen.jpg",
