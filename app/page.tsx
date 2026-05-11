@@ -106,6 +106,8 @@ export default function Home() {
                 { num: "01", name: "Eressian Hotel & Hammam Spa", sub: "Villa Hotel · Mytilene", tag: "Hotel", img: "/eressian/er_pool1.jpg", href: "/hotels/eressian" },
                 { num: "02", name: "PP Urban Studio", sub: "Renovated studio · Mytilene", tag: "Hotel", img: "/pp/pp.beds.jpg", href: "/hotels/pp-urban-studio" },
                 { num: "03", name: "Hotel Petrino", sub: "Luxury · Molyvos", tag: "Hotel", img: "/petrino/petrino3.png", href: "/hotels/petrino" },
+                { num: "04", name: "Theofilos Paradise Boutique Hotel", sub: "Luxury · Mytilene", tag: "Hotel", img: "/theofilos/theo-entry.jpg", href: "/hotels/theofilos-paradise" },
+
             ].map((p) => <DesktopCard key={p.name} {...p} />)}
           </div>
         </Section>
