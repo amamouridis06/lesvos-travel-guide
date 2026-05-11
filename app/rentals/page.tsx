@@ -11,23 +11,9 @@ const rentals = [
         name: "5 United Car Rental",
         description: "One choice to rent a car",
         location: "📍Skala Kallonis, Lesvos, 81100",
-        image: "/5.united.jpg",
+        image: "/5.united/5.united.jpg",
         href: "/rentals/5.united",
     },
-    // {
-    //     name: "Thanos Cozy Appartments",
-    //     description: "Traditional, peaceful, local",
-    //     location: "📍Skalla Kallonis, Lesvos, 81107",
-    //     image: "/thanosbed.jpg",
-    //     href: "/hotels/thanos-cozy-appartments",
-    // },
-    // {
-    //     name: "PP Urban Studio",
-    //     description: "In the heart of the city centre",
-    //     location: "📍Mytilene, Lesvos, 81100",
-    //     image: "/pp.beds.jpg",
-    //     href: "/hotels/pp-urban-studio",
-    // },
 ];
 
 export default function RentalsPage() {
@@ -35,7 +21,7 @@ export default function RentalsPage() {
         <main className="bg-neutral-100 text-neutral-900 min-h-screen">
 
             {/* ================= HERO ================= */}
-            <section className="relative h-[60vh] bg-[url('/5hero.jpg')] bg-cover bg-center bg-fixed">
+            <section className="relative h-[60vh] bg-[url('/5.united/5hero.jpg')] bg-cover bg-center bg-fixed">
                 <div className="absolute inset-0 bg-black/60" />
                 <div className="relative z-10 h-full flex items-end">
                     <div className="max-w-6xl mx-auto px-6 pb-12">
