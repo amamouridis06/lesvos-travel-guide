@@ -2,14 +2,14 @@
 import { useEffect } from "react";
 
 const IMG = {
-    hero: "/pp.beds.jpg",
-    entry: "/pp.entry.jpg",
-    liv1: "/pp.liv1.png",
-    liv2: "/pp.liv2.jpg",
-    kitchen: "/pp.kitchen.jpg",
-    bed: "/pp.beds.jpg",
-    balcony: "/pp.balcon.jpg",
-    bath:"/pp.bath.jpg"
+    hero: "/pp/pp.beds.jpg",
+    entry: "/pp/pp.entry.jpg",
+    liv1: "/pp/pp.liv1.png",
+    liv2: "/pp/pp.liv2.jpg",
+    kitchen: "/pp/pp.kitchen.jpg",
+    bed: "/pp/pp.beds.jpg",
+    balcony: "/pp/pp.balcon.jpg",
+    bath:"/pp/pp.bath.jpg"
 };
 
 const hotel = {
