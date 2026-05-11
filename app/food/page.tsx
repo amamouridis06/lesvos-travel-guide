@@ -61,7 +61,7 @@ const Restaurants = [
     category: "Authentic Restaurant",
     description: "Authentic Greek flavors, and fantastic hospitality.",
     location: "📍Molyvos, Lesvos",
-    image: "/nisi/nisi3.jpg",
+    image: "/nisi/nisi_hero.jpg",
     alt: "Nisi ",
     href: "/food/nisi-restaurant",
   },

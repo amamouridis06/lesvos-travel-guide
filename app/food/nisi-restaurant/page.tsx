@@ -9,15 +9,15 @@ export default function RestaurantTravelGuideListing() {
         rating: 4.8,
         reviews: 323,
         description: [
-            <p>The A was created by two brothers who traveled abroad, worked in different kitchens, and discovered new flavors, cultures, and experiences along the way. Inspired by everything we encountered on our journey, we created a warm, relaxed, and authentic space where good food, fine wine, and great company come together to create memorable experiences.</p>,
-            <p>Through the images, tastes, and hospitality that shaped us, The A became more than just a restaurant — it became part of our story. For us, every dish served and every table shared truly matters.</p>,
+            <p>The Nisi Restaurant was created by two brothers who traveled abroad, worked in different kitchens, and discovered new flavors, cultures, and experiences along the way. Inspired by everything we encountered on our journey, we created a warm, relaxed, and authentic space where good food, fine wine, and great company come together to create memorable experiences.</p>,
+            <p>Through the images, tastes, and hospitality that shaped us, The Nisi Restaurant became more than just a restaurant — it became part of our story. For us, every dish served and every table shared truly matters.</p>,
         ],
         heroImage:
             "/nisi/nisi_hero.jpg",
         gallery: [
             "/nisi/nisi1.jpg",
             "/nisi/nisi2.jpg",
-            "/nisi/nisi7.jpg",
+            "/nisi/nisi3.jpg",
             "/nisi/nisi4.jpg",
             "/nisi//nisi5.jpg",
             ],
@@ -29,15 +29,14 @@ export default function RestaurantTravelGuideListing() {
         ],
         facilities: [
             "Free Wi-Fi",
-            "Parking",
             "Vegetarian options",
         ],
-        important: [
-            "Gluten-free dishes available for guests with gluten intolerance",
-            "Lactose-free and dairy-free options available",
-            "Vegetarian dishes",
-        ],
-        openingHours: "Daily: 12:00 – 21:30",
+        // important: [
+        //     "Gluten-free dishes available for guests with gluten intolerance",
+        //     "Lactose-free and dairy-free options available",
+        //     "Vegetarian dishes",
+        // ],
+        openingHours: " ",
         phone: "+30 22530 72172",
         instagram: "@restaurant_nisi",
     };
@@ -165,20 +164,20 @@ export default function RestaurantTravelGuideListing() {
                             ))}
                         </div>
                     </div>
-                    <div className="rounded-2xl bg-white p-7 shadow-sm">
-                        <h3 className="text-xl font-semibold">Important Informations</h3>
+                    {/*<div className="rounded-2xl bg-white p-7 shadow-sm">*/}
+                    {/*    <h3 className="text-xl font-semibold">Important Informations</h3>*/}
 
-                        <div className="mt-5 grid gap-3">
-                            {restaurant.important.map((important) => (
-                                <div
-                                    key={important}
-                                    className="rounded-xl bg-stone-100 px-4 py-3 text-stone-700"
-                                >
-                                    ✓ {important}
-                                </div>
-                            ))}
-                        </div>
-                    </div>
+                    {/*    <div className="mt-5 grid gap-3">*/}
+                    {/*        {restaurant.important.map((important) => (*/}
+                    {/*            <div*/}
+                    {/*                key={important}*/}
+                    {/*                className="rounded-xl bg-stone-100 px-4 py-3 text-stone-700"*/}
+                    {/*            >*/}
+                    {/*                ✓ {important}*/}
+                    {/*            </div>*/}
+                    {/*        ))}*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
                 </aside>
             </section>
         </main>
