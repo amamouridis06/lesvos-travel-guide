@@ -15,7 +15,7 @@ const cafeTaverns = [
     location: "📍Kalloni, Lesvos",
     image: "/tryfon/tryfon6.jpg",
     alt: "Tryfon",
-    href: "/food/tryfon",
+    href: "/under-construction",
   },
   {
     title: "Pallas Cafe - Grill",
@@ -24,7 +24,7 @@ const cafeTaverns = [
     location: "📍Mesotopos, Lesvos",
     image: "/pallas/pallas.jpg",
     alt: "Pallas",
-    href: "/food/pallas-cafe-grill",
+    href: "/under-construction",
   },
 ];
 
@@ -36,7 +36,7 @@ const Restaurants = [
     location: "📍Pamfila, Lesvos",
     image: "/limanaki/limanaki_pamf.jpg",
     alt: "To Limanaki ton Pamfilon",
-    href: "/food/limanaki_pamfilon",
+    href: "/under-construction",
   },
   {
     title: "Taverna To Votsalo",
