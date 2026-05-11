@@ -91,6 +91,7 @@ export default function Home() {
               { num: "01", name: "Eressian Hotel & Hammam Spa", sub: "Villa Hotel · Mytilene", tag: "Hotel", img: "/eressian/er_pool1.jpg", href: "/hotels/eressian" },
                { num: "02", name: "PP Urban Studio", sub: "Renovated studio · Mytilene", tag: "Hotel", img: "/pp/pp.beds.jpg", href: "/hotels/pp-urban-studio" },
               { num: "03", name: "Hotel Petrino", sub: "Luxury · Molyvos", tag: "Hotel", img: "/petrino/petrino3.png", href: "/hotels/petrino" },
+                { num: "04", name: "Theofilos Paradise Boutique Hotel", sub: "Luxury · Mytilene", tag: "Hotel", img: "/theofilos/theo-entry.jpg", href: "/hotels/theofilos-paradise" }
             ].map((p, i, arr) => (
                 <MobileListItem key={p.name} {...p} last={i === arr.length - 1} />
             ))}
@@ -119,6 +120,7 @@ export default function Home() {
               { num: "01", name: "To Limanaki ton Pamfilon", sub: "Delicious dishes · Skala Pamfilon", tag: "Restaurant", img: "/limanaki/limanaki_pamf1.jpg", href: "/food/limanaki_pamfilon" },
               { num: "02", name: "Tropicana - Platanos", sub: "Beautiful hospitality · Vafios", tag: "Restaurant", img: "/tropicana/tropicana1.jpg", href: "/food/tropicana" },
               { num: "03", name: "Tryfon", sub: "Locan dishes · Kalloni", tag: "Tavern", img: "/tryfon/tryfon6.jpg", href: "/food/tryfon" },
+                { num: "04", name: "Nisi Restaurant", sub: "Restaurant · Molyvos", tag: "Restaurant", img: "/nisi/nisi_logo.png", href: "/food/nisi-restaurant" }
             ].map((p, i, arr) => (
                 <MobileListItem key={p.name} {...p} last={i === arr.length - 1} />
             ))}
@@ -149,13 +151,7 @@ export default function Home() {
                 <MobileListItem key={p.name} {...p} last={i === arr.length - 1} />
             ))}
           </div>
-            <div
-                className="hidden lg:grid"
-                style={{
-                    gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-                    gap: 20,
-                }}
-            >
+            <div className="hidden lg:grid" style={{ gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
             {[
               { num: "01", name: "Naf's Cocktail Corner", sub: "Cocktail · Agios Isidoros", tag: "bar", img: "/naf/naf-logo.jpg", href: "/food/nafs-cocktail-corner" },
               // { num: "02", name: "Vafios", sub: "Traditional · Vafios", tag: "Restaurant", img: "/rest2.jpg", href: "/restaurants/vafios" },
