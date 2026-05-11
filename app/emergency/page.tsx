@@ -54,7 +54,7 @@ const pharmacies = [
     phone: "+30 698 615 4200",
     hours: [
       {day:"Mon,Wed:", time:"08:00–14:00"},
-      {day:"Tue,Thur,Fri:", time: "08:00–14:00 & 17:30-20:30"},
+      {day:"Tue,Thur,Fri:", time: "08:00–14:00 & 18:00-21:00"},
       {day:"Sat:", time:"09:30–14:00"},
       {day:"Sun:", time: "Closed"}
     ],

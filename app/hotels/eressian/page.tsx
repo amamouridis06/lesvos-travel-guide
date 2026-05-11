@@ -377,10 +377,10 @@ export default function PPUrban() {
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-100" />
                                     </div>
-                                    <figcaption className="mt-4 flex items-baseline gap-3">
-                                        <span className="ms-serif-num text-sm" style={{ color: "var(--ms-gold)" }}>0{i + 1}</span>
-                                        <span className="ms-display text-lg italic" style={{ color: "var(--ms-muted)" }}>{g.caption}</span>
-                                    </figcaption>
+                                    {/*<figcaption className="mt-4 flex items-baseline gap-3">*/}
+                                    {/*    <span className="ms-serif-num text-sm" style={{ color: "var(--ms-gold)" }}>0{i + 1}</span>*/}
+                                    {/*    <span className="ms-display text-lg italic" style={{ color: "var(--ms-muted)" }}>{g.caption}</span>*/}
+                                    {/*</figcaption>*/}
                                 </figure>
                             );
                         })}
