@@ -69,7 +69,13 @@ export default function Home() {
             ))}
           </div>
           {/* Desktop: cards */}
-          <div className="hidden lg:grid" style={{ gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
+            <div
+                className="hidden lg:grid"
+                style={{
+                    gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+                    gap: 20,
+                }}
+            >
             {[
               { num: "01", name: "Molyvos", sub: "Medieval village · North", tag: "Village", img: "/villages/molivos.jpg", href: "/under-construction" },
               { num: "02", name: "Vatera", sub: "Blue flag beach · South", tag: "Beach", img: "/villages/vatera.jpg", href: "/under-construction" },
@@ -89,7 +95,13 @@ export default function Home() {
                 <MobileListItem key={p.name} {...p} last={i === arr.length - 1} />
             ))}
           </div>
-          <div className="hidden lg:grid" style={{ gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
+            <div
+                className="hidden lg:grid"
+                style={{
+                    gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+                    gap: 20,
+                }}
+            >
             {[
                 { num: "01", name: "Eressian Hotel & Hammam Spa", sub: "Villa Hotel · Mytilene", tag: "Hotel", img: "/eressian/er_pool1.jpg", href: "/hotels/eressian" },
                 { num: "02", name: "PP Urban Studio", sub: "Renovated studio · Mytilene", tag: "Hotel", img: "/pp/pp.beds.jpg", href: "/hotels/pp-urban-studio" },
@@ -109,7 +121,13 @@ export default function Home() {
                 <MobileListItem key={p.name} {...p} last={i === arr.length - 1} />
             ))}
           </div>
-          <div className="hidden lg:grid" style={{ gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
+            <div
+                className="hidden lg:grid"
+                style={{
+                    gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+                    gap: 20,
+                }}
+            >
             {[
               { num: "01", name: "To Limanaki ton Pamfilon", sub: "Delicious dishes · Skala Pamfilon", tag: "Restaurant", img: "/limanaki/limanaki_pamf1.jpg", href: "/food/limanaki_pamfilon" },
               { num: "02", name: "Tropicana - Platanos", sub: "Beautiful hospitality · Molivos", tag: "Restaurant", img: "/tropicana/tropicana1.jpg", href: "/food/tropicana" },
@@ -128,7 +146,13 @@ export default function Home() {
                 <MobileListItem key={p.name} {...p} last={i === arr.length - 1} />
             ))}
           </div>
-          <div className="hidden lg:grid" style={{ gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
+            <div
+                className="hidden lg:grid"
+                style={{
+                    gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+                    gap: 20,
+                }}
+            >
             {[
               { num: "01", name: "Naf's Cocktail Corner", sub: "Cocktail · Agios Isidoros", tag: "bar", img: "/naf/naf-logo.jpg", href: "/food/nafs-cocktail-corner" },
               // { num: "02", name: "Vafios", sub: "Traditional · Vafios", tag: "Restaurant", img: "/rest2.jpg", href: "/restaurants/vafios" },
