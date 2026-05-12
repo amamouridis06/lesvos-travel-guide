@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-export default function RestaurantTravelGuideListing() {
+export default function NisiPage() {
     const restaurant = {
         name: "Nisi Restaurant",
         category: " Restaurant",
@@ -33,14 +33,12 @@ export default function RestaurantTravelGuideListing() {
         ],
         facilities: [
             "Free Wi-Fi",
-            "Vegetarian options",
+            "Vegetarian options"
         ],
-        // important: [
-        //     "Gluten-free dishes available for guests with gluten intolerance",
-        //     "Lactose-free and dairy-free options available",
-        //     "Vegetarian dishes",
-        // ],
-        openingHours: " ",
+        facilities: [
+            "Τhere is no accessibility for people with disabilities"
+        ],
+        openingHours: "10:00 - 00:00",
         phone: "+30 22530 72172",
         instagram: "@restaurant_nisi",
     };
@@ -168,20 +166,20 @@ export default function RestaurantTravelGuideListing() {
                             ))}
                         </div>
                     </div>
-                    {/*<div className="rounded-2xl bg-white p-7 shadow-sm">*/}
-                    {/*    <h3 className="text-xl font-semibold">Important Informations</h3>*/}
+                    <div className="rounded-2xl bg-white p-7 shadow-sm">
+                        <h3 className="text-xl font-semibold">Important Informations</h3>
 
-                    {/*    <div className="mt-5 grid gap-3">*/}
-                    {/*        {restaurant.important.map((important) => (*/}
-                    {/*            <div*/}
-                    {/*                key={important}*/}
-                    {/*                className="rounded-xl bg-stone-100 px-4 py-3 text-stone-700"*/}
-                    {/*            >*/}
-                    {/*                ✓ {important}*/}
-                    {/*            </div>*/}
-                    {/*        ))}*/}
-                    {/*    </div>*/}
-                    {/*</div>*/}
+                        <div className="mt-5 grid gap-3">
+                            {restaurant.important.map((important) => (
+                                <div
+                                    key={important}
+                                    className="rounded-xl bg-stone-100 px-4 py-3 text-stone-700"
+                                >
+                                    ✓ {important}
+                                </div>
+                            ))}
+                        </div>
+                    </div>
                 </aside>
             </section>
         </main>
