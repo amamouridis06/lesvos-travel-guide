@@ -37,7 +37,7 @@ const hotels = [
     },
     {
         name: "Hotel Petrino ",
-        description: "A luxury hotel with view the castle",
+        description: "A hotel with view the castle",
         location: "📍Molyvos, Lesvos",
         image: "/petrino/petrino4.png",
         href: "/hotels/petrino",
