@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 
 const IMG = {
-    hero: "/petrino/petrino3.png",
+    hero: "//petrino/petrino11.jpg",
     balcony: "/petrino/petrino1.png",
     pool: "/petrino/petrino4.png",
     cocktails: "/petrino/petrino5.png",
@@ -11,7 +11,7 @@ const IMG = {
     outdoor: "/petrino/petrino8.png",
     bed1:"/petrino/petrino9.png",
     bed2: "/petrino/petrino10.png",
-    view: "/petrino/petrino11.jpg",
+    view: "/petrino/petrino3.png",
 };
 
 const hotel = {
@@ -19,7 +19,7 @@ const hotel = {
     region: "Molyvos Lesvos",
     country: "Greece",
     fromPrice: "€70",
-    tagline: "A luxury hotel in a fanastic village in North Lesvos",
+    tagline: "A hotel in a fanastic village in North Lesvos",
     intro:
         "Welcome to Hotel Petrino in Molyvos",
     body: [
