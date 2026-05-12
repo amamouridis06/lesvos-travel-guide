@@ -195,12 +195,20 @@ export default function FarmRestaurantGuidePage() {
                                 <li> • Activities for children </li>
                                 <li> • Activities with animals </li>
                                 <li> • School visits </li>
-                                <li> • Seasonal events </li>
-                                <li> • Guided tour </li>
-                                <li> • Pagos with products </li>
-                                <li> • Farm with animals </li>
                             </ul>
                         </div>
+                        <div className="rounded-3xl bg-white p-8 shadow-lg">
+                        <h3 className="mb-5 text-2xl font-semibold">
+                            Services
+                        </h3>
+
+                        <ul className="space-y-4 text-stone-600 leading-7">
+                            <li> • Seasonal events </li>
+                            <li> • Guided tour </li>
+                            <li> • Table with products </li>
+                            <li> • Farm with animals </li>
+                        </ul>
+                    </div>
                     </div>
                 </div>
             </section>
