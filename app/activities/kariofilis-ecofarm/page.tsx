@@ -332,11 +332,11 @@ export default function FarmRestaurantGuidePage() {
                 <div className="relative z-10 flex h-full items-center justify-center px-6 text-center">
                     <div className="max-w-3xl text-white">
                         <p className="mb-4 text-sm uppercase tracking-[0.3em] text-stone-200">
-                            Travel Guide Experience
+                            Kariofyllis Eco Farm
                         </p>
 
                         <h1 className="mb-6 text-5xl font-bold leading-tight md:text-7xl">
-                            Green Valley Farm & Restaurant
+                            Farm
                         </h1>
 
                         <p className="mx-auto max-w-2xl text-lg text-stone-200 md:text-xl">
@@ -364,22 +364,30 @@ export default function FarmRestaurantGuidePage() {
                         </h2>
 
                         <p className="mb-5 text-lg leading-8 text-stone-600">
-                            Το Green Valley Farm & Restaurant αποτελεί έναν μοναδικό
-                            προορισμό για ταξιδιώτες που αναζητούν αυθεντικές εμπειρίες,
-                            τοπικές γεύσεις και επαφή με τη φύση.
+                            The Kariofyllis Eco Farm is located in the mountainous village of Lepetymnos in Lesvos.
+                            The owner and visionary behind this entire idea is George Kariofyllis .
+                            After completing his studies in T, he decided to return to
+                            his ancestral land and pursue what had been his dream since childhood:
+                            creating a farm with various kinds of animals, such as deer, mouflons (wild sheep),
+                            pygmy goats, peacocks, pheasants, and more.
                         </p>
 
                         <p className="text-lg leading-8 text-stone-600">
-                            Μέσα σε ένα καταπράσινο φυσικό περιβάλλον, οι επισκέπτες
-                            μπορούν να περιηγηθούν στη φάρμα, να γνωρίσουν τα προϊόντα
-                            παραγωγής και να απολαύσουν πιάτα βασισμένα σε φρέσκα,
-                            εποχικά υλικά.
+                            His vision began in 2013, when the first facilities were built,
+                            the first animals were purchased, and the cultivation of aronia berries also started.
+                            Aronia is considered one of the most nutritious plants, known as a “superfood,” and holds
+                            the top position on the international scale of medicinal plants.
+                        </p>
+                        <p className="text-lg leading-8 text-stone-600">
+                            The aronia fruit is processed on the farm and is available in the form of jam, dried berries,
+                            fresh or frozen fruit (depending on the season), and tea. For now, at least, since every year
+                            the farm expands its range with an additional product made from aronia berries.
                         </p>
                     </div>
 
                     <div>
                         <img
-                            src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=1400&auto=format&fit=crop"
+                            src="kariofyllis/kariofyllis1.png"
                             alt="Farm"
                             className="h-[500px] w-full rounded-3xl object-cover shadow-2xl"
                         />
@@ -396,7 +404,7 @@ export default function FarmRestaurantGuidePage() {
                         </p>
 
                         <h2 className="text-4xl font-bold">
-                            Τι θα ανακαλύψετε
+                           What to you explore
                         </h2>
                     </div>
 
@@ -606,15 +614,16 @@ export default function FarmRestaurantGuidePage() {
                 </h2>
 
                 <div className="space-y-4 text-lg text-stone-600">
-                    <p>📍 Περιοχή / Τοποθεσία</p>
-                    <p>📞 +30 210 0000000</p>
+                    <p>📍 Lepetymnos, Lesvos</p>
+                    <p>📞 +30 6979 458991</p>
                     <p>🌐 www.example.com</p>
-                    <p>🕒 Καθημερινά 10:00 - 23:00</p>
+                    <p>📩 giwrgos.kariofyllis@gmail.com</p>
+                    <p>🕒  He accepts visits, following an agreement</p>
                 </div>
 
-                <button className="mt-10 rounded-2xl bg-emerald-700 px-10 py-4 text-sm font-semibold text-white shadow-xl transition hover:scale-105">
-                    Κάντε κράτηση
-                </button>
+                {/*<button className="mt-10 rounded-2xl bg-emerald-700 px-10 py-4 text-sm font-semibold text-white shadow-xl transition hover:scale-105">*/}
+                {/*    Book*/}
+                {/*</button>*/}
             </section>
         </div>
     );
