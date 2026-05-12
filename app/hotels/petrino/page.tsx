@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 
 const IMG = {
-    hero: "//petrino/petrino11.jpg",
+    hero: "/petrino/petrino1.jpg",
     balcony: "/petrino/petrino1.png",
     pool: "/petrino/petrino4.png",
     cocktails: "/petrino/petrino5.png",
