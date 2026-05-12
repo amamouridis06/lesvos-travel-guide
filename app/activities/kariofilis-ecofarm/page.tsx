@@ -65,7 +65,7 @@ export default function FarmRestaurantGuidePage() {
 
                     <div>
                         <img
-                            src="kariofyllis/kariofyllis1.png"
+                            src="/kariofyllis/kariofyllis1.png"
                             alt="Farm"
                             className="h-[500px] w-full rounded-3xl object-cover shadow-2xl"
                         />
@@ -299,9 +299,14 @@ export default function FarmRestaurantGuidePage() {
                     <p>🕒  He accepts visits, following an agreement</p>
                 </div>
 
-                {/*<button className="mt-10 rounded-2xl bg-emerald-700 px-10 py-4 text-sm font-semibold text-white shadow-xl transition hover:scale-105">*/}
-                {/*    Book*/}
-                {/*</button>*/}
+                <a
+                    href="+30 6979 458991"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-10 inline-block rounded-2xl bg-emerald-700 px-10 py-4 text-sm font-semibold text-white shadow-xl transition hover:scale-105"
+                >
+                   Book your visit
+                </a>
             </section>
         </div>
     );
