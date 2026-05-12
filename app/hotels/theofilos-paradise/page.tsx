@@ -43,7 +43,6 @@ const hotel = {
         "Traditional Greek breakfast highlights local products from Lesvos, offering an authentic taste from the start of the day."
     ],
     knowBefore: [
-        "Check-in time: 14:00; Check-out time: until 11:00",
         "Located in the city centre — some street noise may be expected",
         "Valid ID and credit card required at check-in",
         "We are in the heart of Mytilene, at a distance of breathing from the port and the main attractions.",
@@ -293,8 +292,6 @@ export default function TheofilosParadise() {
 
                                 <div className="mt-7 border-t pt-5 text-[11px] uppercase tracking-[0.22em] sm:tracking-[0.28em]" style={{ borderColor: "var(--ms-border)", color: "var(--ms-muted)" }}>
                                     {[
-                                        ["Check-in", "14:00"],
-                                        ["Check-out", "11:00"],
                                         ["Cancellation", "3 days"],
                                     ].map(([k, v]) => (
                                         <div key={k} className="flex justify-between gap-4 py-1.5">
