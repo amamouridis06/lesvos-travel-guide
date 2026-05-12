@@ -20,12 +20,11 @@ export default function RestaurantTravelGuideListing() {
             "/nisi/nisi3.jpg",
             "/nisi/nisi4.jpg",
             "/nisi/nisi5.jpg",
-            "/nisi/nisi6.jpg",
-            "/nisi/nisi7.jpg",
-            "/nisi/nisi8.jpg",
-            "/nisi/nisi9.jpg",
-
-            ],
+            "/nisi/nisi6.jpeg",
+            "/nisi/nisi7.jpeg",
+            "/nisi/nisi8.jpeg",
+            "/nisi/nisi9.jpeg",
+        ],
         highlights: [
             "Fresh seafood",
             "Local products",
