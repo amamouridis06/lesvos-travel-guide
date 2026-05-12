@@ -35,7 +35,7 @@ export default function NisiPage() {
             "Free Wi-Fi",
             "Vegetarian options"
         ],
-        facilities: [
+        important: [
             "Τhere is no accessibility for people with disabilities"
         ],
         openingHours: "10:00 - 00:00",
