@@ -461,6 +461,64 @@ export default function FarmRestaurantGuidePage() {
                 </div>
             </section>
 
+            {/* Production & Certifications */}
+            <section className="bg-stone-100 py-20">
+                <div className="mx-auto max-w-6xl px-6">
+                    <div className="mb-14 text-center">
+                        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-emerald-700">
+                            Farm Details
+                        </p>
+
+                        <h2 className="text-4xl font-bold">
+                            Παραγωγή, Πιστοποιήσεις & Εμπειρίες
+                        </h2>
+                    </div>
+
+                    <div className="grid gap-8 md:grid-cols-3">
+                        <div className="rounded-3xl bg-white p-8 shadow-lg">
+                            <h3 className="mb-5 text-2xl font-semibold">
+                                Παραγωγική Κατεύθυνση & Προϊόντα
+                            </h3>
+
+                            <ul className="space-y-4 text-stone-600 leading-7">
+                                <li>• Ελαιώνες</li>
+                                <li>• Μαρμελάδες - Γλυκά</li>
+                                <li>• Μέλι</li>
+                                <li>• Μελισσοκομία</li>
+                                <li>• Φαρμακευτικά & Αρωματικά φυτά</li>
+                            </ul>
+                        </div>
+
+                        <div className="rounded-3xl bg-white p-8 shadow-lg">
+                            <h3 className="mb-5 text-2xl font-semibold">
+                                Πιστοποιήσεις & Πρακτικές
+                            </h3>
+
+                            <ul className="space-y-4 text-stone-600 leading-7">
+                                <li>• Βιολογική Γεωργία</li>
+                                <li>• Οικοτεχνεία</li>
+                            </ul>
+                        </div>
+
+                        <div className="rounded-3xl bg-white p-8 shadow-lg">
+                            <h3 className="mb-5 text-2xl font-semibold">
+                                Υπηρεσίες & Δραστηριότητες
+                            </h3>
+
+                            <ul className="space-y-4 text-stone-600 leading-7">
+                                <li>• Δραστηριότητες για παιδιά</li>
+                                <li>• Δραστηριότητες με ζώα</li>
+                                <li>• Επισκέψεις σχολείων</li>
+                                <li>• Εποχιακές εκδηλώσεις</li>
+                                <li>• Ξενάγηση</li>
+                                <li>• Πάγκος με προϊόντα</li>
+                                <li>• Φάρμα με ζώα</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* Why Visit */}
             <section className="mx-auto max-w-6xl px-6 py-20">
                 <div className="grid gap-12 md:grid-cols-2 md:items-center">
