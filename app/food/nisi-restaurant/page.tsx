@@ -9,8 +9,9 @@ export default function NisiPage() {
         rating: 4.8,
         reviews: 323,
         description: [
-            <p>The Nisi Restaurant was created by two brothers who traveled abroad, worked in different kitchens, and discovered new flavors, cultures, and experiences along the way. Inspired by everything we encountered on our journey, we created a warm, relaxed, and authentic space where good food, fine wine, and great company come together to create memorable experiences.</p>,
-            <p>Through the images, tastes, and hospitality that shaped us, The Nisi Restaurant became more than just a restaurant — it became part of our story. For us, every dish served and every table shared truly matters.</p>,
+            <p>The Nisi Restaurant was founded by two brothers whose journey took them across borders, through different kitchens, and into the heart of new flavors, cultures, and experiences.</p>,
+            <p>Inspired by the places we visited, the people we met, and the hospitality that shaped us, we created a warm, relaxed, and authentic space where good food, fine wine, and great company come together.</p>,
+            <p>The Nisi Restaurant is more than just a place to eat. It is part of our story — a place where every dish is prepared with care, every table is welcomed with warmth, and every shared moment truly matters.</p>
         ],
         heroImage:
             "/nisi/nisi_hero.jpg",
@@ -77,7 +78,7 @@ export default function NisiPage() {
             <section className="mx-auto grid max-w-6xl gap-8 px-5 py-12 lg:grid-cols-[1.4fr_0.8fr]">
                 <div className="space-y-8">
                     <div className="rounded-2xl bg-white p-7 shadow-sm">
-                        <h2 className="text-2xl font-semibold">About</h2>
+                        <h2 className="text-2xl font-semibold">Our Story</h2>
                         <p className="text-lg leading-8 text-stone-700">
                             {restaurant.description}
                         </p>
