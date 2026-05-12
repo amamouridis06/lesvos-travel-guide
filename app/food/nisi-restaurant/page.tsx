@@ -19,7 +19,12 @@ export default function RestaurantTravelGuideListing() {
             "/nisi/nisi2.jpg",
             "/nisi/nisi3.jpg",
             "/nisi/nisi4.jpg",
-            "/nisi//nisi5.jpg",
+            "/nisi/nisi5.jpg",
+            "/nisi/nisi6.jpg",
+            "/nisi/nisi7.jpg",
+            "/nisi/nisi8.jpg",
+            "/nisi/nisi9.jpg",
+
             ],
         highlights: [
             "Fresh seafood",
@@ -75,7 +80,7 @@ export default function RestaurantTravelGuideListing() {
             <section className="mx-auto grid max-w-6xl gap-8 px-5 py-12 lg:grid-cols-[1.4fr_0.8fr]">
                 <div className="space-y-8">
                     <div className="rounded-2xl bg-white p-7 shadow-sm">
-                        <h2 className="text-2xl font-semibold">ABOUT</h2>
+                        <h2 className="text-2xl font-semibold">About</h2>
                         <p className="text-lg leading-8 text-stone-700">
                             {restaurant.description}
                         </p>
