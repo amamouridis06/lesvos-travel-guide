@@ -34,18 +34,19 @@ const hotel = {
         { label: "Parking", value: "Free" },
     ],
     pros: [
-        "Prime central location within walking distance of key attractions",
-        "Surrounded by shops, right next to a church, and just steps from the port",
-        "Comfortable rooms with modern amenities",
-        "On-site restaurant and bar",
-        "Friendly, attentive service",
+        "Beautiful stone-built hotel with authentic character and a warm atmosphere",
+        "Excellent location next to a charming medieval village and historic castle",
+        "Relaxing swimming pool with scenic countryside views",
+        "Stylish on-site bar perfect for evening drinks and relaxation",
+        "Peaceful setting ideal for romantic getaways and restful stays",
+        "A perfect blend of traditional charm and modern comforts",
     ],
     knowBefore: [
         "Located in the North Lesvos",
         "Valid ID and credit card required at check-in",
         "Just a little steps far for the village of Molyvos, perfect for walking",
         "View in castle of Molyvos",
-        "The price is for double Room per night in low season. The price includes breakfast."
+        "The price is for a <strong>Double Room per night during the low season</strong>. Breakfast is included."
     ],
     gallery: [
         { src: IMG.view, alt: "entry"},
