@@ -90,7 +90,7 @@ export default function FarmRestaurantGuidePage() {
                         <div className="rounded-3xl bg-stone-50 p-8 shadow-lg">
                             <div className="mb-5 overflow-hidden rounded-2xl">
                                 <img
-                                    src="/kariofyllis/kariofyllis2"
+                                    src="/kariofyllis/kariofyllis2.png"
                                     alt="Farm"
                                     className="h-56 w-full object-cover"
                                 />
@@ -128,7 +128,7 @@ export default function FarmRestaurantGuidePage() {
                         <div className="rounded-3xl bg-stone-50 p-8 shadow-lg">
                             <div className="mb-5 overflow-hidden rounded-2xl">
                                 <img
-                                    src="/kariofyllis/kariofyllis3"
+                                    src="/kariofyllis/kariofyllis3.png"
                                     alt="Activities"
                                     className="h-56 w-full object-cover"
                                 />
