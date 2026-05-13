@@ -7,6 +7,15 @@ export const metadata = {
       "The best places to eat in Lesvos: taverns, restaurants, cafés, bars, and local products.",
 };
 
+type FoodItem = {
+  title: string;
+  image: string;
+  alt: string;
+  category: string;
+  description: string;
+  href: string;
+};
+
 const cafeTaverns = [
   {
     title: "Tryfon",
@@ -94,7 +103,7 @@ const locProdSup = [
   // },
 ];
 
-function FoodCard({ item }) {
+function FoodCard({ item }: { item: FoodItem }) {
   return (
       <div className="bg-white rounded-xl shadow p-6 flex gap-4">
         <div className="w-24 h-24 relative shrink-0">
