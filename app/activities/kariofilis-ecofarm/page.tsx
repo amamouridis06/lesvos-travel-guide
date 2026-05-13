@@ -6,7 +6,7 @@ export default function FarmRestaurantGuidePage() {
                 className="relative h-[70vh] bg-cover bg-center"
                 style={{
                     backgroundImage:
-                        "url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop')",
+                        "url('/kariofyllis/kariofyllis3.jpg')",
                 }}
             >
                 <div className="absolute inset-0 bg-black/45" />
@@ -218,7 +218,7 @@ export default function FarmRestaurantGuidePage() {
                 <div className="grid gap-12 md:grid-cols-2 md:items-center">
                     <div>
                         <img
-                            src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=1400&auto=format&fit=crop"
+                            src="/kariofyllis/kariofyllis5.jpeg"
                             alt="Food"
                             className="h-[500px] w-full rounded-3xl object-cover shadow-2xl"
                         />
@@ -272,17 +272,24 @@ export default function FarmRestaurantGuidePage() {
 
                     <div className="grid gap-6 md:grid-cols-3">
                         <img
-                            src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?q=80&w=1200&auto=format&fit=crop"
+                            src="/kariofyllis/kariofyllis5.jpeg"
+                            className="h-80 w-full rounded-3xl object-cover"
+                        />
+                        <img
+                            src="/kariofyllis/kariofyllis2.jpg"
+                            className="h-80 w-full rounded-3xl object-cover"
+                        />
+                        <img
+                            src="/kariofyllis/kariofyllis4.jpeg"
+                            className="h-80 w-full rounded-3xl object-cover"
+                        />
+                        <img
+                            src="/kariofyllis/kariofyllis6.jpeg"
                             className="h-80 w-full rounded-3xl object-cover"
                         />
 
                         <img
-                            src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200&auto=format&fit=crop"
-                            className="h-80 w-full rounded-3xl object-cover"
-                        />
-
-                        <img
-                            src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop"
+                            src="/kariofyllis/kariofyllis7.jpeg"
                             className="h-80 w-full rounded-3xl object-cover"
                         />
                     </div>
