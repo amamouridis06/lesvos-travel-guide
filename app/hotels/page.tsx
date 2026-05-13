@@ -25,19 +25,19 @@ const hotels = [
         stars: 4
     },
     {
-        name: "Thanos Cozy Appartments",
-        description: "Traditional, peaceful, local",
-        location: "📍Skalla Kallonis, Lesvos, 81107",
-        image: "/thanos/thanosbed.jpg",
-        href: "/hotels/thanos-cozy-appartments",
-        stars: 4
-    },
-    {
         name: "PP Urban Studio",
         description: "A renovated studio in the heart of the city centre",
         location: "📍Mytilene, Lesvos, 81100",
         image: "/pp/pp.beds.jpg",
         href: "/hotels/pp-urban-studio",
+        stars: 4
+    },
+    {
+        name: "Thanos Cozy Appartments",
+        description: "Traditional, peaceful, local",
+        location: "📍Skalla Kallonis, Lesvos, 81107",
+        image: "/thanos/thanosbed.jpg",
+        href: "/hotels/thanos-cozy-appartments",
         stars: 4
     },
     {

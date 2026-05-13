@@ -94,9 +94,40 @@ const locProdSup = [
   // },
 ];
 
+function FoodCard({ item }) {
+  return (
+      <div className="bg-white rounded-xl shadow p-6 flex gap-4">
+        <div className="w-24 h-24 relative shrink-0">
+          <Image
+              src={item.image}
+              alt={item.alt}
+              fill
+              className="object-cover rounded-lg"
+          />
+        </div>
+
+        <div>
+          <h3 className="font-semibold text-lg">{item.title}</h3>
+
+          <p className="text-sm text-gray-600">{item.category}</p>
+
+          <p className="text-sm mt-2">{item.description}</p>
+
+          <Link
+              href={item.href}
+              className="inline-block mt-3 px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition"
+          >
+            View details
+          </Link>
+        </div>
+      </div>
+  );
+}
+
 export default function FoodPage() {
   return (
       <main className="bg-neutral-100 text-neutral-900">
+
         {/* HERO */}
         <section
             className="relative w-full h-[60vh] bg-cover bg-center flex items-center justify-center"
@@ -114,20 +145,15 @@ export default function FoodPage() {
           </div>
         </section>
 
-        {/* CATEGORIES */}
+        {/* CATEGORIES NAV */}
         <section className="max-w-6xl mx-auto px-6 py-16">
           <h2 className="text-2xl font-semibold mb-8">Categories</h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { title: "Taverns", href: "#cafeTaverns" },
-              { title: "Restaurants", href: "#restaurants" },
-              { title: "Bars", href: "#bars" },
-              { title: "Local Products & Supermarket", href: "#locProd" },
-            ].map((cat) => (
+            {categories.map((cat) => (
                 <a
-                    key={cat.title}
-                    href={cat.href}
+                    key={cat.id}
+                    href={`#${cat.id}`}
                     className="bg-white rounded-xl shadow hover:shadow-lg transition p-6 text-center font-medium"
                 >
                   {cat.title}
@@ -136,158 +162,23 @@ export default function FoodPage() {
           </div>
         </section>
 
+        {/* LIST */}
         <section className="max-w-6xl mx-auto px-6 pb-24 space-y-20">
-          {/* Taverns */}
-          <div id="cafeTaverns">
-            <h2 className="text-2xl font-semibold mb-6">Taverns</h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {cafeTaverns.map((item) => (
-                  <div
-                      key={item.title}
-                      className="bg-white rounded-xl shadow p-6 flex gap-4"
-                  >
-                    <div className="w-24 h-24 relative shrink-0">
-                      <Image
-                          src={item.image}
-                          alt={item.alt}
-                          fill
-                          className="object-cover rounded-lg"
-                      />
-                    </div>
+          {categories.map((cat) => (
+              <div key={cat.id} id={cat.id}>
+                <h2 className="text-2xl font-semibold mb-6">
+                  {cat.title}
+                </h2>
 
-                    <div>
-                      <h3 className="font-semibold text-lg">{item.title}</h3>
-
-                      <p className="text-sm text-gray-600">{item.category}</p>
-
-                      <p className="text-sm mt-2">{item.description}</p>
-
-                      <Link
-                          href={item.href}
-                          className="inline-block mt-3 px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition"
-                      >
-                        View details
-                      </Link>
-                    </div>
-                  </div>
-              ))}
-            </div>
-          </div>
-
-            {/* Restaurants */}
-            <div id="restaurants">
-              <h2 className="text-2xl font-semibold mb-6">Restaurants</h2>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {Restaurants.map((item) => (
-                    <div
-                        key={item.title}
-                        className="bg-white rounded-xl shadow p-6 flex gap-4"
-                    >
-                      <div className="w-24 h-24 relative shrink-0">
-                        <Image
-                            src={item.image}
-                            alt={item.alt}
-                            fill
-                            className="object-cover rounded-lg"
-                        />
-                      </div>
-
-                      <div>
-                        <h3 className="font-semibold text-lg">{item.title}</h3>
-
-                        <p className="text-sm text-gray-600">{item.category}</p>
-
-                        <p className="text-sm mt-2">{item.description}</p>
-
-                        <Link
-                            href={item.href}
-                            className="inline-block mt-3 px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition"
-                        >
-                          View details
-                        </Link>
-                      </div>
-                    </div>
-                ))}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  {cat.data.map((item) => (
+                      <FoodCard key={item.title} item={item} />
+                  ))}
+                </div>
               </div>
-            </div>
+          ))}
 
-          {/* Bars */}
-          <div id="bars">
-            <h2 className="text-2xl font-semibold mb-6">Bars</h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {Bars.map((item) => (
-                  <div
-                      key={item.title}
-                      className="bg-white rounded-xl shadow p-6 flex gap-4"
-                  >
-                    <div className="w-24 h-24 relative shrink-0">
-                      <Image
-                          src={item.image}
-                          alt={item.alt}
-                          fill
-                          className="object-cover rounded-lg"
-                      />
-                    </div>
-
-                    <div>
-                      <h3 className="font-semibold text-lg">{item.title}</h3>
-
-                      <p className="text-sm text-gray-600">{item.category}</p>
-
-                      <p className="text-sm mt-2">{item.description}</p>
-
-                      <Link
-                          href={item.href}
-                          className="inline-block mt-3 px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition"
-                      >
-                        View details
-                      </Link>
-                    </div>
-                  </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Local Products */}
-          <div id="locProd">
-            <h2 className="text-2xl font-semibold mb-6">Local Products & Supermarket</h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {locProdSup.map((item) => (
-                  <div
-                      key={item.title}
-                      className="bg-white rounded-xl shadow p-6 flex gap-4"
-                  >
-                    <div className="w-24 h-24 relative shrink-0">
-                      <Image
-                          src={item.image}
-                          alt={item.alt}
-                          fill
-                          className="object-cover rounded-lg"
-                      />
-                    </div>
-
-                    <div>
-                      <h3 className="font-semibold text-lg">{item.title}</h3>
-
-                      <p className="text-sm text-gray-600">{item.category}</p>
-
-                      <p className="text-sm mt-2">{item.description}</p>
-
-                      <Link
-                          href={item.href}
-                          className="inline-block mt-3 px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition"
-                      >
-                        View details
-                      </Link>
-                    </div>
-                  </div>
-              ))}
-            </div>
-          </div>
         </section>
       </main>
   );
