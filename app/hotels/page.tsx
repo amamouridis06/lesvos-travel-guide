@@ -51,15 +51,20 @@ const hotels = [
 ];
 
 export default function HotelsPage() {
-    // 1. Ομαδοποίηση
+    // grouping by stars (safe JS version)
     const groupedHotels = hotels.reduce((acc, hotel) => {
-        const stars = hotel.stars; // π.χ. 5, 4, 3
-        if (!acc[stars]) acc[stars] = [];
+        const stars = hotel.stars;
+
+        if (!acc[stars]) {
+            acc[stars] = [];
+        }
+
         acc[stars].push(hotel);
+
         return acc;
     }, {});
 
-    // 2. Ταξινόμηση αστεριών (5 → 1)
+    // sort stars descending (5 -> 1)
     const sortedStars = Object.keys(groupedHotels)
         .map(Number)
         .sort((a, b) => b - a);
@@ -82,7 +87,7 @@ export default function HotelsPage() {
                 </div>
             </section>
 
-            {/* LIST BY STARS */}
+            {/* LIST */}
             <section className="max-w-6xl mx-auto px-6 py-20 space-y-16">
 
                 {sortedStars.map((stars) => (
@@ -92,6 +97,7 @@ export default function HotelsPage() {
                         </h2>
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
                             {groupedHotels[stars].map((hotel) => (
                                 <Link
                                     key={hotel.name}
@@ -116,9 +122,14 @@ export default function HotelsPage() {
                                         <p className="text-sm text-gray-600 mt-1">
                                             {hotel.location}
                                         </p>
+
+                                        <p className="text-sm mt-2">
+                                            {"⭐".repeat(hotel.stars)}
+                                        </p>
                                     </div>
                                 </Link>
                             ))}
+
                         </div>
                     </div>
                 ))}
