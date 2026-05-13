@@ -6,6 +6,15 @@ export const metadata = {
         "Hotels, Appartments & Studios",
 };
 
+type Hotel = {
+    name: string;
+    href: string;
+    image: string;
+    description: string;
+    location: string;
+    stars: number;
+};
+
 const hotels = [
     {
         name: "Theofilos Paradise Boutique Hotel",
@@ -52,17 +61,17 @@ const hotels = [
 
 export default function HotelsPage() {
     // grouping by stars (safe JS version)
-    const groupedHotels = hotels.reduce((acc, hotel) => {
-        const stars = hotel.stars;
+    const groupedHotels = hotels.reduce<Record<number, Hotel[]>>(
+        (acc, hotel) => {
+            const stars = hotel.stars;
 
-        if (!acc[stars]) {
-            acc[stars] = [];
-        }
+            acc[stars] = acc[stars] ?? [];
+            acc[stars].push(hotel);
 
-        acc[stars].push(hotel);
-
-        return acc;
-    }, {});
+            return acc;
+        },
+        {} as Record<number, Hotel[]>
+    );
 
     // sort stars descending (5 -> 1)
     const sortedStars = Object.keys(groupedHotels)
