@@ -131,10 +131,6 @@ export default function HotelsPage() {
                                         <p className="text-sm text-gray-600 mt-1">
                                             {hotel.location}
                                         </p>
-
-                                        <p className="text-sm mt-2">
-                                            {"⭐".repeat(hotel.stars)}
-                                        </p>
                                     </div>
                                 </Link>
                             ))}
