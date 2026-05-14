@@ -46,13 +46,10 @@ const hotel = {
         "There are a lot of restaurants and cafes nearby"
     ],
     gallery: [
-        { src: IMG.view, alt: "entry"},
         { src: IMG.outdoor, alt: "Pool area" },
-        { src: IMG.cocktails, alt: "Hotel room" },
         { src: IMG.pool1, alt: "samp" },
         { src: IMG.bed1, alt: "bed room"},
         { src: IMG.balcony, alt: "balcony" },
-        { src: IMG.bed2, alt: "bath" },
     ],
 
     bookUrl:
