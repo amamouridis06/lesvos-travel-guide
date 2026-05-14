@@ -17,6 +17,14 @@ type Hotel = {
 
 const hotels = [
     {
+        name: "Presidential Beach Villa ",
+        description: "A fantastic villa with view the sea",
+        location: "📍Pyrgi, Lesvos",
+        image: "/villa/hero.jpg",
+        href: "/hotels/presidential-beach-villa",
+        stars: 4
+    },
+    {
         name: "Theofilos Paradise Boutique Hotel",
         description: "Luxury hotel in the heart of the city centre",
         location: "📍Mytilene, Lesvos, 81100",
@@ -26,7 +34,7 @@ const hotels = [
     },
     {
         name: "PP Urban Studio",
-        description: "A renovated studio in the heart of the city centre",
+        description: "A renovated studio in the heart of the city",
         location: "📍Mytilene, Lesvos, 81100",
         image: "/pp/pp.beds.jpg",
         href: "/hotels/pp-urban-studio",
@@ -63,14 +71,6 @@ const hotels = [
         image: "/petrino/petrino4.png",
         href: "/hotels/petrino",
         stars:2
-    },
-    {
-        name: "Presidential Beach Villa ",
-        description: "A fantastic villa with view the sea",
-        location: "📍Pyrgi, Lesvos",
-        image: "/villa/hero.jpg",
-        href: "/hotels/presidential-beach-villa",
-        stars: 4
     },
 
 ];
