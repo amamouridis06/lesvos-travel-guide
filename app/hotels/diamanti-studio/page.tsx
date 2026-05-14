@@ -7,7 +7,6 @@ const IMG = {
     view:"/diamanti/view.jpg",
     view1: "/diamanti/view1.jpg",
     bed: "/diamanti/bed.jpg",
-    bed1: "/diamanti/bed1.jpg",
     bed2:"/diamanti/bed2.jpg",
     outdoor: "/diamanti/house1.jpg",
     kitch:"diamanti/kitch.jpg",
