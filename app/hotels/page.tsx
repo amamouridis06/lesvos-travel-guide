@@ -41,6 +41,14 @@ const hotels = [
         stars: 4
     },
     {
+        name: "Diamanti Studio",
+        description: "A modern studio in heart of centre lesvos nearby the sea",
+        location: "📍Skala Kallonis, Lesvos",
+        image: "/diamantis/diamantis1.jpg",
+        href: "/hotels/diamanti-studio",
+        stars: 3
+    },
+    {
         name: "Eressian Hotel & Hammam Spa",
         description: "Luxury, Hammam, Serenity, Cocktails, Dreams, Aegean",
         location: "📍Eresos, Lesvos",
