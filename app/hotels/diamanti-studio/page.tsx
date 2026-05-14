@@ -5,7 +5,7 @@ const IMG = {
     hero: "/diamanti/house.jpg",
     bed1:"/diamanti/bed1.jpg",
     view:"/diamanti/view.jpg",
-    view: "/diamanti/view1.jpg",
+    view1: "/diamanti/view1.jpg",
     bed: "/diamanti/bed.jpg",
     bed1: "/diamanti/bed1.jpg",
     bed2:"/diamanti/bed2.jpg",
@@ -53,7 +53,7 @@ const hotel = {
     gallery: [
         { src: IMG.bed1, alt: "bed" },
         { src: IMG.view, alt: "view" },
-        { src: IMG.view, alt: "view"},
+        { src: IMG.view1, alt: "view"},
         { src: IMG.kitch, alt: "kitch" },
         { src: IMG.liv, alt: "bed" },
         { src: IMG.bed, alt: "bed" },
