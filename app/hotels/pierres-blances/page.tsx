@@ -14,7 +14,7 @@ const IMG = {
     kitch1:"/pierres/kitch1.jpeg",
     bath:"/pierres/bath.jpeg",
     bath2:"/pierres/bath2.jpeg",
-    bed1:"/pierres/bed1.jpeg",
+    bed1:"/pierres/bed.jpeg",
     bed2: "/pierres/bed2.jpeg",
     bed3: "/pierres/bed3.jpeg",
     drone:"/pierres/drone.jpeg",
@@ -42,7 +42,8 @@ const hotel = {
         { label: "Wi-Fi", value: "Free" },
         { label: "Parking", value: "Free" },
         { label: "Facilities for disabled guests", value: "No" },
-        {label:"Free cot always available", value:"YES"}
+        {label:"Free cot always available", value:"Yes"},
+        {label:"Pets", value:"Yes"}
     ],
     pros: [
         "Beautiful stone-built luxury residences with authentic character and elegant design",
@@ -69,10 +70,10 @@ const hotel = {
         { src: IMG.kitch, alt: "bath" },
         { src: IMG.kitch1, alt: "bath" },
         { src: IMG.bath, alt: "bath" },
-        { src: IMG.bed1, alt: "bath" },
-        { src: IMG.bed2, alt: "bath" },
-        { src: IMG.bed3, alt: "bath" },
-        { src: IMG.drone, alt: "bath" },
+        { src: IMG.bed1, alt: "bed" },
+        { src: IMG.bed2, alt: "bed" },
+        { src: IMG.bed3, alt: "bed" },
+        { src: IMG.drone, alt: "drone" },
     ],
     bookUrl:
         "https://www.booking.com/hotel/gr/pierres-blanches",
