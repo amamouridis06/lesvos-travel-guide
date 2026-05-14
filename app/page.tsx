@@ -117,7 +117,7 @@ export default function Home() {
         <Section title="Top restaurants" href="/food#cafeTaverns">
           <div className="flex lg:hidden" style={{ flexDirection: "column" }}>
             {[
-              { num: "01", name: "To Limanaki ton Pamfilon", sub: "Delicious dishes · Skala Pamfilon", tag: "Restaurant", img: "/limanaki/limanaki_pamf1.jpg", href: "/food/limanaki_pamfilon" },
+              { num: "01", name: "To Limanaki ton Pamfilon", sub: "Delicious dishes · Skala Pamfilon", tag: "Restaurant", img: "/limanaki/limanaki_pamf.jpg", href: "/food/limanaki_pamfilon" },
               { num: "02", name: "Tropicana - Platanos", sub: "Beautiful hospitality · Vafios", tag: "Restaurant", img: "/tropicana/tropicana1.jpg", href: "/food/tropicana" },
               { num: "03", name: "Tryfon", sub: "Locan dishes · Kalloni", tag: "Tavern", img: "/tryfon/tryfon6.jpg", href: "/food/tryfon" },
               { num: "04", name: "Nisi Restaurant", sub: "Restaurant · Molyvos", tag: "Restaurant", img: "/nisi/nisi_logo.png", href: "/food/nisi-restaurant" }
@@ -133,7 +133,7 @@ export default function Home() {
                 }}
             >
             {[
-              { num: "01", name: "To Limanaki ton Pamfilon", sub: "Delicious dishes · Skala Pamfilon", tag: "Restaurant", img: "/limanaki/limanaki_pamf1.jpg", href: "/food/limanaki_pamfilon" },
+              { num: "01", name: "To Limanaki ton Pamfilon", sub: "Delicious dishes · Skala Pamfilon", tag: "Restaurant", img: "/limanaki/limanaki_pamf.jpg", href: "/food/limanaki_pamfilon" },
               { num: "02", name: "Tropicana - Platanos", sub: "Beautiful hospitality · Molivos", tag: "Restaurant", img: "/tropicana/tropicana1.jpg", href: "/food/tropicana" },
               { num: "03", name: "Tryfon", sub: "Locan dishes · Kalloni", tag: "Tavern", img: "/tryfon/tryfon6.jpg", href: "/food/tryfon" },
               { num: "04", name: "Nisi Restaurant", sub: "Restaurant · Molyvos", tag: "Restaurant", img: "/nisi/nisi_logo.png", href: "/food/nisi-restaurant" },

@@ -226,13 +226,6 @@ export default function FoodPage() {
                   <h2 className="text-3xl font-bold">
                     {cat.title}
                   </h2>
-
-                  <a
-                      href="#top"
-                      className="text-sm text-blue-600 hover:underline"
-                  >
-                    Back to top
-                  </a>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
