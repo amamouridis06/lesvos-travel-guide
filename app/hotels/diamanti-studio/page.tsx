@@ -9,9 +9,9 @@ const IMG = {
     bed: "/diamanti/bed.jpg",
     bed2:"/diamanti/bed2.jpg",
     outdoor: "/diamanti/house1.jpg",
-    kitch:"diamanti/kitch.jpg",
+    kitch:"/diamanti/kitch.jpg",
     liv:"/diamanti/liv.jpg",
-    bath:"diamanti/bath.jpg",
+    bath:"/diamanti/bath.jpg",
 };
 
 const hotel = {
