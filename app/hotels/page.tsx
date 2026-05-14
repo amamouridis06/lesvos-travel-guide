@@ -65,12 +65,20 @@ const hotels = [
         stars: 3
     },
     {
-        name: "Hotel Petrino ",
+        name: "Hotel Petrino",
         description: "A hotel with view the castle",
         location: "📍Molyvos, Lesvos",
         image: "/petrino/petrino4.png",
         href: "/hotels/petrino",
         stars:2
+    },
+    {
+        name: "Pierres Blanches Residences",
+        description: "Homes with privates pools",
+        location: "📍Mytilene, Lesvos",
+        image: "/pierres/hero.jpeg",
+        href: "/hotels/pierres-blances",
+        stars:4
     },
 
 ];
