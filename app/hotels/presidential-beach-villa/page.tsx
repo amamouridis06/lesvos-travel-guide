@@ -13,7 +13,7 @@ const IMG = {
     bed2: "/villa/bed2.jpg",
     bed3: "/villa/bed3.jpg",
     bath: "/villa/bath.jpg",
-    view:"/villa/villa11.jpg",
+    view:"/villa/view.jpg",
 };
 
 const hotel = {
@@ -40,16 +40,11 @@ const hotel = {
         { label: "Private beach area", value: "Yes" },
     ],
     pros: [
-        "Spectacular infinity pool with panoramic views over the Gulf of Gera",
-        "Exclusive access to a pristine private beach with crystal-clear turquoise waters",
-        "Luxurious 200 sq.m. private villa offering complete privacy and tranquility",
-        "Three elegant en-suite bedrooms designed for premium comfort and relaxation",
-        "Floor-to-ceiling glass interiors filled with natural light and breathtaking sea views",
-        "Beautifully landscaped private garden surrounded by lush greenery",
-        "Contemporary architecture combining refined luxury with Mediterranean elegance",
-        "Prime location just 7 minutes from Mytilene town, offering both convenience and seclusion",
-        "Ideal for luxury family holidays, romantic escapes, or exclusive group stays",
-        "Peaceful seaside setting perfect for unforgettable sunset moments and total relaxation",
+        "Spectacular infinity pool with panoramic sea views",
+        "Exclusive access to a pristine private beach",
+        "Elegant villa with luxurious modern interiors",
+        "Peaceful private setting surrounded by lush greenery",
+        "Prime location just 7 minutes from Mytilene town",
     ],
     knowBefore: [
         "Located in the east Lesvos",
@@ -358,11 +353,9 @@ export default function PPUrban() {
                             For reservations, special requests or availability inquiries, the team is available daily to assist you.
                         </p>
                         <div className="mt-8 space-y-4 text-sm" style={{ color: "var(--ms-muted)" }}>
-                            <p><strong className="text-[color:var(--ms-fg)]">Phone:</strong> +30 698 506 5704 </p>
-                            <p><strong className="text-[color:var(--ms-fg)]">Email:</strong> petrino.molyvos@gmail.com </p>
-                            <p><strong className="text-[color:var(--ms-fg)]">Region:</strong> Molyvos, Lesvos </p>
-                            <p><strong className="text-[color:var(--ms-fg)]">Instagram:</strong> petrino.hotel</p>
-                            <p><strong className="text-[color:var(--ms-fg)]">Facebook:</strong> hotelpetrino</p>
+                            <p><strong className="text-[color:var(--ms-fg)]">Phone:</strong> +30 690 948 4988</p>
+                            <p><strong className="text-[color:var(--ms-fg)]">Region:</strong> Pyrgi, Lesvos </p>
+                            <p><strong className="text-[color:var(--ms-fg)]">Instagram:</strong> @presidential_beach_villa</p>
                         </div>
                     </div>
                 </div>

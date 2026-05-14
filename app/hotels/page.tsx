@@ -68,7 +68,7 @@ const hotels = [
         name: "Presidential Beach Villa ",
         description: "A fantastic villa with view the sea",
         location: "📍Pyrgi, Lesvos",
-        image: "/villa/villa8.jpg",
+        image: "/villa/hero.jpg",
         href: "/hotels/presidential-beach-villa",
         stars: 4
     },
