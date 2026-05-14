@@ -1,5 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 
 export const metadata = {
   title: "Food in Lesvos",
@@ -16,10 +16,18 @@ type FoodItem = {
   href: string;
 };
 
-const cafeTaverns = [
+type Category = {
+  id: string;
+  title: string;
+  data: FoodItem[];
+};
+
+/* ================= DATA ================= */
+
+const cafeTaverns: FoodItem[] = [
   {
     title: "Tryfon",
-    category: "Traditional Greek cuisine",
+    category: "Tavern",
     description: "Fresh meat, local dishes.",
     location: "📍Kalloni, Lesvos",
     image: "/tryfon/tryfon6.jpg",
@@ -28,7 +36,7 @@ const cafeTaverns = [
   },
   {
     title: "Pallas Cafe - Grill",
-    category: "Traditional Greek cuisine",
+    category: "Tavern",
     description: "Fresh meat, local dishes in a beautiful village",
     location: "📍Mesotopos, Lesvos",
     image: "/pallas/pallas.jpg",
@@ -37,10 +45,10 @@ const cafeTaverns = [
   },
 ];
 
-const Restaurants = [
+const Restaurants: FoodItem[] = [
   {
     title: "To Limanaki ton Pamfilon",
-    category: "Traditional Greek cuisine by the sea",
+    category: "Restaurants",
     description: "Fresh fish, local dishes, and a relaxing seaside atmosphere.",
     location: "📍Pamfila, Lesvos",
     image: "/limanaki/limanaki_pamf.jpg",
@@ -49,7 +57,7 @@ const Restaurants = [
   },
   {
     title: "Taverna To Votsalo",
-    category: "Where Sea, Flavor & Tradition Meet",
+    category: "Restaurant",
     description: "Authentic Greek flavors, seaside sunsets, fresh seafood, and  hospitality.",
     location: "📍Eftalou, Lesvos",
     image: "/votsalo/votsalo-logo.jpg",
@@ -58,7 +66,7 @@ const Restaurants = [
   },
   {
     title: "Tropicana - Platanos",
-    category: "Beautiful place",
+    category: "Restaurant",
     description: "Authentic Greek flavors, and fantastic hospitality.",
     location: "📍Molyvos, Lesvos",
     image: "/tropicana/tropicana1.jpg",
@@ -67,7 +75,7 @@ const Restaurants = [
   },
   {
     title: "Nisi Restaurant",
-    category: "Authentic Restaurant",
+    category: "Restaurant",
     description: "Authentic Greek flavors, and fantastic hospitality.",
     location: "📍Molyvos, Lesvos",
     image: "/nisi/nisi_logo.png",
@@ -76,10 +84,10 @@ const Restaurants = [
   },
 ];
 
-const Bars = [
+const Bars: FoodItem[] = [
   {
     title: "Naf's Cocktail Corner",
-    category: "Cocktails & nightlife",
+    category: "Bars",
     description: "Enjoy cocktails, music, and vibrant nightlife near the beach.",
     location: "📍Agios Isidoros, Lesvos",
     image: "/naf/naf-logo.jpg",
@@ -87,7 +95,8 @@ const Bars = [
     href: "/food/nafs-cocktail-corner",
   },
 ];
-const locProdSup = [
+
+const locProdSup: FoodItem[] = [
   {
     title: "Selachas O.E",
     category: "Supermarket",
@@ -97,34 +106,63 @@ const locProdSup = [
     alt: "Sel",
     href: "/food/selachas",
   },
-  // {
-  //   title: "Olive Oil & Cheese",
-  //   description: "High-quality olive oil, feta, and traditional local products.",
-  // },
 ];
+
+/* ================= CATEGORIES ================= */
+
+const categories: Category[] = [
+  {
+    id: "cafeTaverns",
+    title: "Taverns",
+    data: cafeTaverns
+  },
+  {
+    id: "restaurants",
+    title: "Restaurants",
+    data: Restaurants
+  },
+  {
+    id: "bars",
+    title: "Bars",
+    data: Bars
+  },
+  {
+    id: "locProd",
+    title: "Local Products & Supermarket",
+    data: locProdSup
+  }
+];
+
+/* ================= CARD ================= */
 
 function FoodCard({ item }: { item: FoodItem }) {
   return (
-      <div className="bg-white rounded-xl shadow p-6 flex gap-4">
-        <div className="w-24 h-24 relative shrink-0">
+      <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition overflow-hidden group">
+        <div className="relative w-full h-56">
           <Image
               src={item.image}
               alt={item.alt}
               fill
-              className="object-cover rounded-lg"
+              className="object-cover group-hover:scale-105 transition duration-300"
           />
         </div>
 
-        <div>
-          <h3 className="font-semibold text-lg">{item.title}</h3>
+        <div className="p-6">
+          <p className="text-sm text-blue-600 font-medium mb-2">
+            {item.category}
+          </p>
 
-          <p className="text-sm text-gray-600">{item.category}</p>
+          <h3 className="text-xl font-semibold">
+            {item.title}
+          </h3>
 
-          <p className="text-sm mt-2">{item.description}</p>
+          <p className="text-gray-600 text-sm mt-3">
+            {item.description}
+          </p>
 
           <Link
               href={item.href}
-              className="inline-block mt-3 px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition"
+              className="inline-block mt-5 px-5 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
           >
             View details
           </Link>
@@ -133,37 +171,42 @@ function FoodCard({ item }: { item: FoodItem }) {
   );
 }
 
+/* ================= PAGE ================= */
+
 export default function FoodPage() {
   return (
-      <main className="bg-neutral-100 text-neutral-900">
+      <main className="bg-neutral-100 text-neutral-900 min-h-screen">
 
         {/* HERO */}
         <section
-            className="relative w-full h-[60vh] bg-cover bg-center flex items-center justify-center"
+            className="relative w-full h-[65vh] bg-cover bg-center flex items-center justify-center"
             style={{ backgroundImage: "url('/food1.jpg')" }}
         >
-          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-black/55" />
 
           <div className="relative z-10 text-center px-6">
-            <h1 className="text-4xl md:text-5xl font-bold text-white">
+            <h1 className="text-4xl md:text-6xl font-bold text-white max-w-4xl">
               Taste Lesvos: Food, Drinks & Local Spots
             </h1>
-            <p className="mt-4 text-lg text-gray-200 max-w-2xl mx-auto">
-              Taverns, restaurants, cafés & bars — handpicked places worth visiting.
+
+            <p className="mt-6 text-lg text-gray-200 max-w-2xl mx-auto">
+              Discover taverns, restaurants, cafés, bars and local products across Lesvos.
             </p>
           </div>
         </section>
 
-        {/* CATEGORIES NAV */}
+        {/* CATEGORY NAV */}
         <section className="max-w-6xl mx-auto px-6 py-16">
-          <h2 className="text-2xl font-semibold mb-8">Categories</h2>
+          <h2 className="text-3xl font-bold mb-10">
+            Explore Categories
+          </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {categories.map((cat) => (
                 <a
                     key={cat.id}
                     href={`#${cat.id}`}
-                    className="bg-white rounded-xl shadow hover:shadow-lg transition p-6 text-center font-medium"
+                    className="bg-white rounded-2xl shadow-md hover:shadow-xl transition p-8 text-center font-semibold text-lg"
                 >
                   {cat.title}
                 </a>
@@ -171,18 +214,30 @@ export default function FoodPage() {
           </div>
         </section>
 
-        {/* LIST */}
-        <section className="max-w-6xl mx-auto px-6 pb-24 space-y-20">
+        {/* CATEGORY SECTIONS */}
+        <section className="max-w-6xl mx-auto px-6 pb-24 space-y-24">
 
           {categories.map((cat) => (
               <div key={cat.id} id={cat.id}>
-                <h2 className="text-2xl font-semibold mb-6">
-                  {cat.title}
-                </h2>
+                <div className="flex items-center justify-between mb-8">
+                  <h2 className="text-3xl font-bold">
+                    {cat.title}
+                  </h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <a
+                      href="#top"
+                      className="text-sm text-blue-600 hover:underline"
+                  >
+                    Back to top
+                  </a>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {cat.data.map((item) => (
-                      <FoodCard key={item.title} item={item} />
+                      <FoodCard
+                          key={item.title}
+                          item={item}
+                      />
                   ))}
                 </div>
               </div>
