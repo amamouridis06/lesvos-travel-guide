@@ -97,7 +97,7 @@ const Bars: FoodItem[] = [
   },
 ];
 
-const locProdSup: FoodItem[] = [
+const locProd: FoodItem[] = [
   {
     title: "Selachas O.E",
     category: "Supermarket",
@@ -129,8 +129,8 @@ const categories: Category[] = [
   },
   {
     id: "locProd",
-    title: "Local Products & Supermarket",
-    data: locProdSup
+    title: "Local Products",
+    data: locProd
   }
 ];
 
