@@ -2,32 +2,42 @@
 import { useEffect } from "react";
 
 const IMG = {
-    hero: "/diamantis/diamantis1.jpg",
-    balcony: "/diamantis/diamantis2.jpg",
-    liv: "/diamantis/diamantis3.jpg",
-    pool1: "/diamantis/diamantis4.jpg",
-    outdoor: "/diamantis/diamantis5.jpg",
-    bed1:"/diamantis/diamantis6.jpg",
+    hero: "/villa/hero.jpg",
+    pool: "/villa/pool.jpg",
+    outdoor1: "/villa/outdoor1.jpg",
+    outdoor2: "/villa/outdoor2.jpg",
+    liv1: "/villa/liv1.jpg",
+    liv1: "/villa/liv2.jpg",
+    kitch: "/villa/kitch.jpg",
+    bed1:"/villa/bed1.jpg",
+    bed2: "/villa/bed2.jpg",
+    bed3: "/villa/bed3.jpg",
+    bath: "/villa/bath.jpg",
+    view:"/villa/villa11.jpg",
 };
 
 const hotel = {
-    name: "Diamanti Studios ",
-    region: "Skala Kallonis Lesvos",
+    name: "Presidential Beach Villa",
+    region: "Pyrgi Lesvos",
     country: "Greece",
-    fromPrice: "€73",
-    tagline: "A studio in a fanastic village in Centre Lesvos",
+    fromPrice: "Reserve",
+    tagline: "A luxury villa in a fanastic village in East Lesvos",
     intro:
-        "Welcome to Diamanti Studios in Skala Kallonis",
+        "Welcome to Presidential Beach Villa in Pyrgi",
     body: [
-        "Diamanti Studios in Skala Kallonis offers direct beachfront access, a sun terrace, and a lush garden. Guests enjoy sea views and a relaxing outdoor space.",
-        "The apartment features air-conditioning, a kitchenette, balcony, and private bathroom. Additional amenities include free WiFi, a work desk, and a TV.",
-        "Skala Kallonis Beach is a 4-minute walk away. Other points of interest include Agia Paraskevi (10 km) and Mytilene International Airport (46 km)."
-    ],
+        "Discover the ultimate expression of luxury living in this stunning 200 sq.m. private villa, ideally located just 7 minutes from the town of Mytilene. Overlooking the breathtaking Gulf of Gera with uninterrupted panoramic sea views, the villa offers a rare blend of privacy, elegance, and tranquility.",
+        "At the heart of the experience lies the spectacular private infinity pool, seamlessly merging with the horizon and creating a captivating connection between sky, sea, and landscape.",
+        "The villa features three elegant en-suite bedrooms, a refined office space, and an impressive open-plan living and dining area designed with contemporary sophistication and understated luxury. Expansive floor-to-ceiling glass openings flood the interiors with natural light while offering direct access to the pool and uninterrupted views of the Aegean blue.",
+        "Surrounded by a lush, spacious private garden, the property offers an exceptional privilege: exclusive access to a pristine private beach with crystal-clear turquoise waters.",
+        "A true seaside sanctuary, crafted for discerning guests seeking absolute comfort, privacy, and an unforgettable luxury escape in Lesvos."
+     ],
     highlights: [
-        { label: "Sea view & Non-smoking rooms ", value: "Yes" },
-        { label: "Transport from / to the airport", value: "Yes for an additional fee"  },
+        { label: "Outdoor swimming pool ", value: "Yes" },
+        { label: "Transport from / to the airport", value: "No"  },
         { label: "Wi-Fi", value: "Free" },
         { label: "Parking", value: "Free" },
+        { label: "Fitness centre & Breakfast", value: "Yes" },
+        { label: "Private beach area", value: "Yes" },
     ],
     pros: [
         "Beautiful stone-built hotel with authentic character and a warm atmosphere",
@@ -38,23 +48,24 @@ const hotel = {
         "A perfect blend of traditional charm and modern comforts",
     ],
     knowBefore: [
-        "Located in the Centre Lesvos",
+        "Located in the North Lesvos",
         "Valid ID and credit card required at check-in",
-        "Just a little steps far for the beach of Skala Kallonis, perfect for walking",
-        "View in sea",
-        "The Skala Kallonis square is just 4 minutes far",
-        "There are a lot of restaurants and cafes nearby"
+        "Just a little steps far for the village of Molyvos, perfect for walking",
+        "View in castle of Molyvos",
+        "The price is for a (Double Room per night during the low season). Breakfast is included."
     ],
     gallery: [
+        { src: IMG.view, alt: "entry"},
         { src: IMG.outdoor, alt: "Pool area" },
+        { src: IMG.cocktails, alt: "Hotel room" },
         { src: IMG.pool1, alt: "samp" },
         { src: IMG.bed1, alt: "bed room"},
         { src: IMG.balcony, alt: "balcony" },
-        { src: IMG.liv, alt: "balcony" },
+        { src: IMG.bed2, alt: "bath" },
     ],
 
     bookUrl:
-        "https://www.booking.com/Share-h66fAA",
+        "https://www.booking.com/Share-ZVSkK0",
 };
 
 const STYLES = `
@@ -246,7 +257,7 @@ export default function PPUrban() {
 
                         <div className="mt-12 flex items-center gap-4 text-xs uppercase tracking-[0.24em] md:tracking-[0.3em]" style={{ color: "var(--ms-muted)" }}>
                             <span className="ms-hairline" />
-                            <span>Diamanti Studio</span>
+                            <span>Presidential Beach Villa</span>
                         </div>
                     </main>
 
@@ -339,9 +350,11 @@ export default function PPUrban() {
                             For reservations, special requests or availability inquiries, the team is available daily to assist you.
                         </p>
                         <div className="mt-8 space-y-4 text-sm" style={{ color: "var(--ms-muted)" }}>
-                            <p><strong className="text-[color:var(--ms-fg)]">Phone:</strong> +30 6933242006 </p>
-                            <p><strong className="text-[color:var(--ms-fg)]">Region:</strong> Skala Kallonis, Lesvos </p>
-                            <p><strong className="text-[color:var(--ms-fg)]">Instagram:</strong> @diamantistudio</p>
+                            <p><strong className="text-[color:var(--ms-fg)]">Phone:</strong> +30 698 506 5704 </p>
+                            <p><strong className="text-[color:var(--ms-fg)]">Email:</strong> petrino.molyvos@gmail.com </p>
+                            <p><strong className="text-[color:var(--ms-fg)]">Region:</strong> Molyvos, Lesvos </p>
+                            <p><strong className="text-[color:var(--ms-fg)]">Instagram:</strong> petrino.hotel</p>
+                            <p><strong className="text-[color:var(--ms-fg)]">Facebook:</strong> hotelpetrino</p>
                         </div>
                     </div>
                 </div>
