@@ -45,7 +45,7 @@ export default function RootLayout({
       <NavBar />
 
       {/* global components */}
-      <WelcomePopup />
+      {/*<WelcomePopup />*/}
       <ScrollToTop />
 
       <div className="pt-20">

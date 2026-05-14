@@ -2,12 +2,17 @@
 import { useEffect } from "react";
 
 const IMG = {
-    hero: "/diamantis/diamantis1.jpg",
-    balcony: "/diamantis/diamantis2.jpg",
-    liv: "/diamantis/diamantis3.jpg",
-    pool1: "/diamantis/diamantis4.jpg",
-    outdoor: "/diamantis/diamantis5.jpg",
-    bed1:"/diamantis/diamantis6.jpg",
+    hero: "/diamanti/house.jpg",
+    bed1:"/diamanti/bed1.jpg",
+    view:"/diamanti/view.jpg",
+    view: "/diamanti/view1.jpg",
+    bed: "/diamanti/bed.jpg",
+    bed1: "/diamanti/bed1.jpg",
+    bed2:"/diamanti/bed2.jpg",
+    outdoor: "/diamanti/house1.jpg",
+    kitch:"diamanti/kitch.jpg",
+    liv:"/diamanti/liv.jpg",
+    bath:"diamanti/bath.jpg",
 };
 
 const hotel = {
@@ -46,11 +51,15 @@ const hotel = {
         "There are a lot of restaurants and cafes nearby"
     ],
     gallery: [
-        { src: IMG.outdoor, alt: "Pool area" },
-        { src: IMG.pool1, alt: "samp" },
-        { src: IMG.bed1, alt: "bed room"},
-        { src: IMG.balcony, alt: "balcony" },
-        { src: IMG.liv, alt: "balcony" },
+        { src: IMG.bed1, alt: "bed" },
+        { src: IMG.view, alt: "view" },
+        { src: IMG.view, alt: "view"},
+        { src: IMG.kitch, alt: "kitch" },
+        { src: IMG.liv, alt: "bed" },
+        { src: IMG.bed, alt: "bed" },
+        { src: IMG.bed1, alt: "bed" },
+        { src: IMG.bed2, alt: "bed" },
+        { src: IMG.bath, alt: "bath" },
     ],
 
     bookUrl:
