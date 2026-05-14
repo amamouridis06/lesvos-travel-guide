@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Syne, Inter } from "next/font/google";
 import NavBar from "@/components/NavBar";
+import WelcomePopup from "@/components/WelcomePopup";
+import ScrollToTop from "@/components/ScrollToTop";
 import "./globals.css";
 
 const syne = Syne({ subsets: ["latin"], variable: "--font-syne" });
@@ -31,14 +33,25 @@ export const metadata = {
 
 
 
-export default function RootLayout({children, }: {
+export default function RootLayout({
+                                     children,
+                                   }: {
   children: React.ReactNode;
 }) {
   return (
       <html lang="en" className={`${syne.variable} ${inter.variable}`}>
       <body className={inter.className}>
+
       <NavBar />
-      <div className="pt-20">{children}</div>
+
+      {/* global components */}
+      <WelcomePopup />
+      <ScrollToTop />
+
+      <div className="pt-20">
+        {children}
+      </div>
+
       </body>
       </html>
   );
