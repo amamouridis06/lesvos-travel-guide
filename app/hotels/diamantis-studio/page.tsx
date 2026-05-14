@@ -50,6 +50,7 @@ const hotel = {
         { src: IMG.pool1, alt: "samp" },
         { src: IMG.bed1, alt: "bed room"},
         { src: IMG.balcony, alt: "balcony" },
+        { src: IMG.liv, alt: "balcony" },
     ],
 
     bookUrl:
