@@ -12,6 +12,7 @@ type FoodItem = {
   image: string;
   alt: string;
   category: string;
+  location: string
   description: string;
   href: string;
 };
@@ -151,7 +152,9 @@ function FoodCard({ item }: { item: FoodItem }) {
           <p className="text-sm text-blue-600 font-medium mb-2">
             {item.category}
           </p>
-
+          <p className="text-sm text-gray-500 mt-1">
+            📍 {item.location}
+          </p>
           <h3 className="text-xl font-semibold">
             {item.title}
           </h3>
