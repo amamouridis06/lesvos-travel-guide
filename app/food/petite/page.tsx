@@ -168,10 +168,9 @@ export default function DessertShopGuidePage() {
             <section className="max-w-6xl mx-auto px-6 py-32">
                 <motion.div
                     animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
-                    transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
+                    transition={{ duration: 0.8, repeat: Infinity, ease: "linear" }}
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
                     className="text-center mb-20"
                 >
