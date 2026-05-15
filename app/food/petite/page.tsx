@@ -39,7 +39,7 @@ export default function DessertShopGuidePage() {
                         initial={{ scale: 1.2, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
                         transition={{ duration: 1.8, ease: "easeOut" }}
-                        src="https://images.unsplash.com/photo-1519869325930-281384150729?q=80&w=2000&auto=format&fit=crop"
+                        src="petite/petite10.jpg"
                         alt="Luxury Desserts"
                         className="w-full h-full object-cover"
                     />
@@ -184,18 +184,29 @@ export default function DessertShopGuidePage() {
                     </h2>
 
                     <p className="max-w-4xl mx-auto text-xl text-slate-700 leading-relaxed">
-                        Εδώ μπορείς να προσθέσεις μεγάλη περιγραφή για το μαγαζί,
-                        την ιστορία του, τις σπεσιαλιτέ, την ατμόσφαιρα, τις viral γεύσεις
-                        και γιατί αξίζει να το επισκεφτούν οι τουρίστες. Το section είναι
-                        πλήρως editable ώστε να βάζεις όσο content θέλεις.
+                        Petite in the port of Molyvos is the new must-visit destination for take-away pleasure,
+                        having closed just a month of operation. the experience starts from our characteristic window:
+                        order at the entrance, you receive in the hand and enjoy the create.  We are famous for our fluffy pancakes,
+                        our waffle bites and our sweet crepes, but the real game starts with the infinite combinations you can create.
+                        With a huge variety of rich beaches, fine chocolates and any kind of toppings, every order is unique.
+                        For those looking for something even cooler, our proposals are complemented by our enjoyable ice cream, which accompanies
+                        perfectly each In Petite, quality meets creativity, offering the sweetest attitude in the heart of Molyvos!
                     </p>
                 </motion.div>
 
                 <div className="grid md:grid-cols-3 gap-6">
                     {[
-                        "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200&auto=format&fit=crop",
-                        "https://images.unsplash.com/photo-1488477181946-6428a0291777?q=80&w=1200&auto=format&fit=crop",
-                        "https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=1200&auto=format&fit=crop",
+                        "petite/petite2.jpg",
+                        "petite/petite3.jpg",
+                        "petite/petite4.jpg",
+                        "petite/petite5.jpg",
+                        "petite/petite6.jpg",
+                        "petite/petite7.jpg",
+                        "petite/petite8.jpg",
+                        "petite/petite9.jpg",
+                        "petite/petite10.jpg",
+                        "petite/petite11.jpg",
+                        "petite/petite12.jpg",
                     ].map((img, i) => (
                         <motion.div
                             key={i}
