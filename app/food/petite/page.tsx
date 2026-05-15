@@ -72,9 +72,9 @@ export default function DessertShopGuidePage() {
                         transition={{ delay: 0.4, duration: 1 }}
                         className="text-6xl md:text-8xl font-black leading-none mb-8"
                     >
-                        Sweet
+
                         <span className="block bg-gradient-to-r from-cyan-500 via-sky-400 to-orange-300 bg-clip-text text-transparent">
-              Athens
+              Petite
             </span>
                     </motion.h1>
 
@@ -89,29 +89,29 @@ export default function DessertShopGuidePage() {
                         ταξιδιώτες που ψάχνουν κάτι πραγματικά μοναδικό.
                     </motion.p>
 
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 1, duration: 0.8 }}
-                        className="flex flex-wrap justify-center gap-5"
-                    >
-                        <button className="px-10 py-5 rounded-3xl bg-white text-black font-bold text-lg shadow-[0_20px_60px_rgba(255,255,255,0.25)] hover:scale-105 transition-all duration-300">
-                            Explore Menu
-                        </button>
+                    {/*<motion.div*/}
+                    {/*    initial={{ opacity: 0, y: 20 }}*/}
+                    {/*    animate={{ opacity: 1, y: 0 }}*/}
+                    {/*    transition={{ delay: 1, duration: 0.8 }}*/}
+                    {/*    className="flex flex-wrap justify-center gap-5"*/}
+                    {/*>*/}
+                    {/*    <button className="px-10 py-5 rounded-3xl bg-white text-black font-bold text-lg shadow-[0_20px_60px_rgba(255,255,255,0.25)] hover:scale-105 transition-all duration-300">*/}
+                    {/*        Explore Menu*/}
+                    {/*    </button>*/}
 
-                        <button className="px-10 py-5 rounded-3xl border border-white/20 bg-white/10 backdrop-blur-xl text-slate-800 font-semibold text-lg hover:bg-white/20 transition-all duration-300">
-                            Book a Table
-                        </button>
-                    </motion.div>
+                    {/*    <button className="px-10 py-5 rounded-3xl border border-white/20 bg-white/10 backdrop-blur-xl text-slate-800 font-semibold text-lg hover:bg-white/20 transition-all duration-300">*/}
+                    {/*        Book a Table*/}
+                    {/*    </button>*/}
+                    {/*</motion.div>*/}
                 </motion.div>
 
-                <motion.div
-                    animate={{ y: [0, 15, 0] }}
-                    transition={{ repeat: Infinity, duration: 2.5 }}
-                    className="absolute bottom-10 text-cyan-600 text-sm tracking-[0.3em] uppercase font-semibold"
-                >
-                    Scroll
-                </motion.div>
+                {/*<motion.div*/}
+                {/*    animate={{ y: [0, 15, 0] }}*/}
+                {/*    transition={{ repeat: Infinity, duration: 2.5 }}*/}
+                {/*    className="absolute bottom-10 text-cyan-600 text-sm tracking-[0.3em] uppercase font-semibold"*/}
+                {/*>*/}
+                {/*    Scroll*/}
+                {/*</motion.div>*/}
             </section>
 
             {/* GLASS INFO CARDS */}
