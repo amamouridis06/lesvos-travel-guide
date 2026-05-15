@@ -83,6 +83,15 @@ const Restaurants: FoodItem[] = [
     alt: "Nisi ",
     href: "/food/nisi-restaurant",
   },
+  {
+    title: "Petite",
+    category: "Restaurant",
+    description: "Delicius pancaked and wafles",
+    location: "Molyvos, Lesvos",
+    image: "/petite/petite7.jpg",
+    alt: "Petite",
+    href: "/food/petite",
+  },
 ];
 
 const Bars: FoodItem[] = [
