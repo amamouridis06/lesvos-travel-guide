@@ -228,7 +228,7 @@ export default function DessertShopGuidePage() {
                         className="relative"
                     >
                         <img
-                            src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?q=80&w=1600&auto=format&fit=crop"
+                            src="/petite/petite6.jpg"
                             alt="Dessert"
                             className="rounded-[40px] h-[700px] w-full object-cover shadow-[0_40px_120px_rgba(0,0,0,0.6)]"
                         />
@@ -309,14 +309,15 @@ export default function DessertShopGuidePage() {
                             "/petite/petite2.jpg",
                             "/petite/petite3.jpg",
                             "/petite/petite4.jpg",
-                            "/petite/petite5.jpg",
+                            "/petite/petite12.jpg",
                             "/petite/petite6.jpg",
                             "/petite/petite7.jpg",
                             "/petite/petite8.jpg",
                             "/petite/petite9.jpg",
                             "/petite/petite10.jpg",
                             "/petite/petite11.jpg",
-                            "/petite/petite12.jpg",
+                            "/petite/petite5.jpg",
+
                         ].map((img, i) => (
                             <motion.div
                                 key={i}
