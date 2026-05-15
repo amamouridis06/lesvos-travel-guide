@@ -82,14 +82,14 @@ export default function DessertShopGuidePage() {
                 <motion.div
                     animate={{ y: [0, 15, 0] }}
                     transition={{ repeat: Infinity, duration: 2.5 }}
-                    className="absolute bottom-10 text-cyan-600 text-sm tracking-[0.3em] uppercase font-semibold
-        >
-          Scroll
-        </motion.div>
-      </section>
+                    className="absolute bottom-10 text-cyan-600 text-sm tracking-[0.3em] uppercase font-semibold"
+                >
+                    Scroll
+                </motion.div>
+            </section>
 
-      {/* GLASS INFO CARDS */}
-      <section className="relative z-20 -mt-24 px-6 pb-28">
+            {/* GLASS INFO CARDS */}
+            <section className="relative z-20 -mt-24 px-6 pb-28">
                 <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-6">
                     {[
                         {
@@ -145,7 +145,6 @@ export default function DessertShopGuidePage() {
                     transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
                     className="text-center mb-20"
                 >
