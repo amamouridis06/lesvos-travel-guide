@@ -52,7 +52,7 @@ const hotels = [
         name: "Diamanti Studio",
         description: "A modern studio in heart of centre lesvos nearby the sea",
         location: "📍Skala Kallonis, Lesvos",
-        image: "/diamantis/house.jpg",
+        image: "/diamanti/house.jpg",
         href: "/hotels/diamanti-studio",
         stars: 3
     },
