@@ -5,7 +5,33 @@ import { MapPin, Clock3, CakeSlice, Euro, Star } from "lucide-react";
 
 export default function DessertShopGuidePage() {
     return (
-        <main className="bg-gradient-to-b from-white via-sky-50 to-cyan-100 text-slate-800 overflow-hidden scroll-smooth">
+        <main className="bg-gradient-to-b from-white via-sky-50 to-cyan-100 text-slate-800 overflow-hidden scroll-smooth relative">
+            {/* Animated Background Blobs */}
+            <motion.div
+                animate={{
+                    x: [0, 40, 0],
+                    y: [0, -30, 0],
+                }}
+                transition={{
+                    duration: 10,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                }}
+                className="absolute top-20 left-10 w-72 h-72 bg-cyan-300/30 blur-3xl rounded-full"
+            />
+
+            <motion.div
+                animate={{
+                    x: [0, -50, 0],
+                    y: [0, 40, 0],
+                }}
+                transition={{
+                    duration: 14,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                }}
+                className="absolute bottom-20 right-10 w-96 h-96 bg-orange-200/30 blur-3xl rounded-full"
+            />
             {/* HERO */}
             <section className="relative min-h-screen flex items-center justify-center px-6">
                 <div className="absolute inset-0 overflow-hidden">
@@ -145,6 +171,7 @@ export default function DessertShopGuidePage() {
                     transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
                     className="text-center mb-20"
                 >
