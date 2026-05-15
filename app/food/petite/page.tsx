@@ -121,17 +121,17 @@ export default function DessertShopGuidePage() {
                         {
                             icon: <MapPin className="w-7 h-7" />,
                             title: "Location",
-                            value: "Athens Center",
+                            value: "📍Molyvos",
                         },
                         {
                             icon: <Clock3 className="w-7 h-7" />,
                             title: "Open Daily",
-                            value: "09:00 — 00:00",
+                            value: "17:00 — 23:00",
                         },
                         {
                             icon: <CakeSlice className="w-7 h-7" />,
                             title: "Signature",
-                            value: "Baklava Pancakes",
+                            value: "Pancakes, Wafles",
                         },
                         {
                             icon: <Euro className="w-7 h-7" />,
@@ -168,7 +168,7 @@ export default function DessertShopGuidePage() {
             <section className="max-w-6xl mx-auto px-6 py-32">
                 <motion.div
                     animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
-                    transition={{ duration: 0.8, repeat: Infinity, ease: "linear" }}
+                    transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -196,17 +196,7 @@ export default function DessertShopGuidePage() {
 
                 <div className="grid md:grid-cols-3 gap-6">
                     {[
-                        "/petite/petite2.jpg",
-                        "/petite/petite3.jpg",
-                        "/petite/petite4.jpg",
-                        "/petite/petite5.jpg",
-                        "/petite/petite6.jpg",
-                        "/petite/petite7.jpg",
-                        "/petite/petite8.jpg",
-                        "/petite/petite9.jpg",
-                        "/petite/petite10.jpg",
-                        "/petite/petite11.jpg",
-                        "/petite/petite12.jpg",
+                        "/petite/petite1.jpg",
                     ].map((img, i) => (
                         <motion.div
                             key={i}
@@ -312,21 +302,21 @@ export default function DessertShopGuidePage() {
                                 More Photos
                             </h2>
                         </div>
-
-                        <p className="text-slate-600 max-w-xl text-lg">
-                            Πρόσθεσε όσες φωτογραφίες θέλεις από desserts, brunch, εσωτερικό
-                            χώρο, cocktails ή customer experience.
-                        </p>
                     </div>
 
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-5 auto-rows-[250px]">
                         {[
-                            "https://images.unsplash.com/photo-1519869325930-281384150729?q=80&w=1200&auto=format&fit=crop",
-                            "https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=1200&auto=format&fit=crop",
-                            "https://images.unsplash.com/photo-1488477181946-6428a0291777?q=80&w=1200&auto=format&fit=crop",
-                            "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?q=80&w=1200&auto=format&fit=crop",
-                            "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200&auto=format&fit=crop",
-                            "https://images.unsplash.com/photo-1464306076886-da185f6a9d05?q=80&w=1200&auto=format&fit=crop",
+                            "/petite/petite2.jpg",
+                            "/petite/petite3.jpg",
+                            "/petite/petite4.jpg",
+                            "/petite/petite5.jpg",
+                            "/petite/petite6.jpg",
+                            "/petite/petite7.jpg",
+                            "/petite/petite8.jpg",
+                            "/petite/petite9.jpg",
+                            "/petite/petite10.jpg",
+                            "/petite/petite11.jpg",
+                            "/petite/petite12.jpg",
                         ].map((img, i) => (
                             <motion.div
                                 key={i}
