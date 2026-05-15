@@ -5,14 +5,14 @@ import { MapPin, Clock3, CakeSlice, Euro, Star } from "lucide-react";
 
 export default function DessertShopGuidePage() {
     return (
-        <main className="bg-gradient-to-b from-white via-sky-50 to-cyan-100 text-slate-800 overflow-hidden">
+        <main className="bg-gradient-to-b from-white via-sky-50 to-cyan-100 text-slate-800 overflow-hidden scroll-smooth">
             {/* HERO */}
             <section className="relative min-h-screen flex items-center justify-center px-6">
                 <div className="absolute inset-0 overflow-hidden">
                     <motion.img
                         initial={{ scale: 1.2, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
-                        transition={{ duration: 1.8 }}
+                        transition={{ duration: 1.8, ease: "easeOut" }}
                         src="https://images.unsplash.com/photo-1519869325930-281384150729?q=80&w=2000&auto=format&fit=crop"
                         alt="Luxury Desserts"
                         className="w-full h-full object-cover"
@@ -35,7 +35,7 @@ export default function DessertShopGuidePage() {
                         className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white/10 backdrop-blur-xl border border-white/20 mb-8"
                     >
                         <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                        <span className="uppercase tracking-[0.25em] text-sm font-semibold text-white/90">
+                        <span className="uppercase tracking-[0.25em] text-sm font-semibold text-slate-800">
               Luxury Dessert Experience
             </span>
                     </motion.div>
@@ -56,7 +56,7 @@ export default function DessertShopGuidePage() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.8, duration: 1 }}
-                        className="max-w-3xl mx-auto text-lg md:text-2xl text-white/75 leading-relaxed mb-12"
+                        className="max-w-3xl mx-auto text-lg md:text-2xl text-slate-700 leading-relaxed mb-12"
                     >
                         Ένας premium dessert προορισμός στην καρδιά της Αθήνας με artisan
                         γλυκά, viral pancakes, luxury brunch και cinematic ατμόσφαιρα για
@@ -73,7 +73,7 @@ export default function DessertShopGuidePage() {
                             Explore Menu
                         </button>
 
-                        <button className="px-10 py-5 rounded-3xl border border-white/20 bg-white/10 backdrop-blur-xl text-white font-semibold text-lg hover:bg-white/20 transition-all duration-300">
+                        <button className="px-10 py-5 rounded-3xl border border-white/20 bg-white/10 backdrop-blur-xl text-slate-800 font-semibold text-lg hover:bg-white/20 transition-all duration-300">
                             Book a Table
                         </button>
                     </motion.div>
@@ -82,14 +82,14 @@ export default function DessertShopGuidePage() {
                 <motion.div
                     animate={{ y: [0, 15, 0] }}
                     transition={{ repeat: Infinity, duration: 2.5 }}
-                    className="absolute bottom-10 text-white/60 text-sm tracking-[0.3em] uppercase"
-                >
-                    Scroll
-                </motion.div>
-            </section>
+                    className="absolute bottom-10 text-cyan-600 text-sm tracking-[0.3em] uppercase font-semibold
+        >
+          Scroll
+        </motion.div>
+      </section>
 
-            {/* GLASS INFO CARDS */}
-            <section className="relative z-20 -mt-24 px-6 pb-28">
+      {/* GLASS INFO CARDS */}
+      <section className="relative z-20 -mt-24 px-6 pb-28">
                 <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-6">
                     {[
                         {
@@ -120,17 +120,17 @@ export default function DessertShopGuidePage() {
                             transition={{ delay: i * 0.1, duration: 0.7 }}
                             viewport={{ once: true }}
                             whileHover={{ y: -12, scale: 1.03 }}
-                            className="backdrop-blur-2xl bg-white/10 border border-white/10 rounded-[32px] p-8 shadow-2xl"
+                            className="backdrop-blur-2xl bg-white/10 border border-cyan-100 rounded-[32px] p-8 shadow-2xl"
                         >
                             <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-pink-400 to-orange-300 text-black flex items-center justify-center mb-6 shadow-xl">
                                 {item.icon}
                             </div>
 
-                            <p className="text-white/60 text-sm uppercase tracking-widest mb-2">
+                            <p className="text-slate-600 text-sm uppercase tracking-widest mb-2">
                                 {item.title}
                             </p>
 
-                            <h3 className="text-2xl font-bold text-white">
+                            <h3 className="text-2xl font-bold text-slate-800">
                                 {item.value}
                             </h3>
                         </motion.div>
@@ -141,6 +141,8 @@ export default function DessertShopGuidePage() {
             {/* STORY SECTION */}
             <section className="max-w-6xl mx-auto px-6 py-32">
                 <motion.div
+                    animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
+                    transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
@@ -153,10 +155,10 @@ export default function DessertShopGuidePage() {
 
                     <h2 className="text-5xl md:text-7xl font-black mt-6 mb-8">
                         A Dessert Experience
-                        <span className="block text-white/40">Beyond Taste</span>
+                        <span className="block text-slate-500">Beyond Taste</span>
                     </h2>
 
-                    <p className="max-w-4xl mx-auto text-xl text-white/70 leading-relaxed">
+                    <p className="max-w-4xl mx-auto text-xl text-slate-700 leading-relaxed">
                         Εδώ μπορείς να προσθέσεις μεγάλη περιγραφή για το μαγαζί,
                         την ιστορία του, τις σπεσιαλιτέ, την ατμόσφαιρα, τις viral γεύσεις
                         και γιατί αξίζει να το επισκεφτούν οι τουρίστες. Το section είναι
@@ -176,7 +178,7 @@ export default function DessertShopGuidePage() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: i * 0.15, duration: 0.7 }}
                             viewport={{ once: true }}
-                            whileHover={{ scale: 1.03 }}
+                            whileHover={{ scale: 1.03, rotate: 1 }}
                             className="overflow-hidden rounded-[32px]"
                         >
                             <img
@@ -206,7 +208,7 @@ export default function DessertShopGuidePage() {
                         />
 
                         <div className="absolute -bottom-10 -right-10 bg-gradient-to-r from-cyan-400 to-orange-300 rounded-[30px] p-8 shadow-2xl max-w-xs">
-                            <p className="text-sm uppercase tracking-[0.2em] text-black/70 font-semibold mb-2">
+                            <p className="text-sm uppercase tracking-[0.2em] text-slate-700 font-semibold mb-2">
                                 Most Popular
                             </p>
 
@@ -214,7 +216,7 @@ export default function DessertShopGuidePage() {
                                 Dubai Chocolate Waffles
                             </h3>
 
-                            <p className="text-black/80">
+                            <p className="text-slate-700">
                                 Viral dessert experience loved by tourists.
                             </p>
                         </div>
@@ -232,10 +234,10 @@ export default function DessertShopGuidePage() {
 
                         <h2 className="text-5xl md:text-7xl font-black leading-tight mt-5 mb-8">
                             Dessert Meets
-                            <span className="block text-white/40">Luxury.</span>
+                            <span className="block text-slate-500">Luxury.</span>
                         </h2>
 
-                        <p className="text-white/70 text-xl leading-relaxed mb-10">
+                        <p className="text-slate-700 text-xl leading-relaxed mb-10">
                             Συνδυάζοντας luxury αισθητική, premium υλικά και cinematic design,
                             το Sweet Athens είναι το απόλυτο σημείο για dessert lovers,
                             creators και ταξιδιώτες που θέλουν unforgettable εμπειρία.
@@ -251,7 +253,7 @@ export default function DessertShopGuidePage() {
                                 <motion.div
                                     key={i}
                                     whileHover={{ scale: 1.05 }}
-                                    className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl px-6 py-5 text-lg font-medium text-white/90"
+                                    className="rounded-2xl border border-cyan-100 bg-white/80 backdrop-blur-xl px-6 py-5 text-lg font-medium text-slate-800"
                                 >
                                     {item}
                                 </motion.div>
@@ -275,7 +277,7 @@ export default function DessertShopGuidePage() {
                             </h2>
                         </div>
 
-                        <p className="text-white/60 max-w-xl text-lg">
+                        <p className="text-slate-600 max-w-xl text-lg">
                             Πρόσθεσε όσες φωτογραφίες θέλεις από desserts, brunch, εσωτερικό
                             χώρο, cocktails ή customer experience.
                         </p>
@@ -296,7 +298,7 @@ export default function DessertShopGuidePage() {
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 transition={{ delay: i * 0.08, duration: 0.5 }}
                                 viewport={{ once: true }}
-                                whileHover={{ scale: 1.04 }}
+                                whileHover={{ scale: 1.04, y: -8 }}
                                 className={`overflow-hidden rounded-[28px] group relative ${
                                     i === 0 || i === 3 ? "md:col-span-2 md:row-span-2" : ""
                                 }`}
@@ -304,7 +306,7 @@ export default function DessertShopGuidePage() {
                                 <img
                                     src={img}
                                     alt="Gallery"
-                                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                    className="w-full h-full object-cover group-hover:scale-110 group-hover:rotate-1 transition-transform duration-700"
                                 />
 
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
