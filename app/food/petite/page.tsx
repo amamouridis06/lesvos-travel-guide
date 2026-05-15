@@ -39,7 +39,7 @@ export default function DessertShopGuidePage() {
                         initial={{ scale: 1.2, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
                         transition={{ duration: 1.8, ease: "easeOut" }}
-                        src="petite/petite10.jpg"
+                        src="/petite/petite10.jpg"
                         alt="Luxury Desserts"
                         className="w-full h-full object-cover"
                     />
@@ -196,17 +196,17 @@ export default function DessertShopGuidePage() {
 
                 <div className="grid md:grid-cols-3 gap-6">
                     {[
-                        "petite/petite2.jpg",
-                        "petite/petite3.jpg",
-                        "petite/petite4.jpg",
-                        "petite/petite5.jpg",
-                        "petite/petite6.jpg",
-                        "petite/petite7.jpg",
-                        "petite/petite8.jpg",
-                        "petite/petite9.jpg",
-                        "petite/petite10.jpg",
-                        "petite/petite11.jpg",
-                        "petite/petite12.jpg",
+                        "/petite/petite2.jpg",
+                        "/petite/petite3.jpg",
+                        "/petite/petite4.jpg",
+                        "/petite/petite5.jpg",
+                        "/petite/petite6.jpg",
+                        "/petite/petite7.jpg",
+                        "/petite/petite8.jpg",
+                        "/petite/petite9.jpg",
+                        "/petite/petite10.jpg",
+                        "/petite/petite11.jpg",
+                        "/petite/petite12.jpg",
                     ].map((img, i) => (
                         <motion.div
                             key={i}
