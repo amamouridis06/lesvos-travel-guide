@@ -5,7 +5,7 @@ import { MapPin, Clock3, CakeSlice, Euro, Star } from "lucide-react";
 
 export default function DessertShopGuidePage() {
     return (
-        <main className="bg-black text-white overflow-hidden">
+        <main className="bg-gradient-to-b from-white via-sky-50 to-cyan-100 text-slate-800 overflow-hidden">
             {/* HERO */}
             <section className="relative min-h-screen flex items-center justify-center px-6">
                 <div className="absolute inset-0 overflow-hidden">
@@ -18,7 +18,7 @@ export default function DessertShopGuidePage() {
                         className="w-full h-full object-cover"
                     />
 
-                    <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/60 to-black" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-sky-300/40 via-cyan-200/30 to-white/95" />
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.15),transparent_40%)]" />
                 </div>
 
@@ -47,7 +47,7 @@ export default function DessertShopGuidePage() {
                         className="text-6xl md:text-8xl font-black leading-none mb-8"
                     >
                         Sweet
-                        <span className="block bg-gradient-to-r from-pink-400 via-orange-300 to-yellow-200 bg-clip-text text-transparent">
+                        <span className="block bg-gradient-to-r from-cyan-500 via-sky-400 to-orange-300 bg-clip-text text-transparent">
               Athens
             </span>
                     </motion.h1>
@@ -147,7 +147,7 @@ export default function DessertShopGuidePage() {
                     viewport={{ once: true }}
                     className="text-center mb-20"
                 >
-          <span className="text-pink-400 uppercase tracking-[0.3em] text-sm font-bold">
+          <span className="text-cyan-500 uppercase tracking-[0.3em] text-sm font-bold">
             About The Place
           </span>
 
@@ -205,7 +205,7 @@ export default function DessertShopGuidePage() {
                             className="rounded-[40px] h-[700px] w-full object-cover shadow-[0_40px_120px_rgba(0,0,0,0.6)]"
                         />
 
-                        <div className="absolute -bottom-10 -right-10 bg-gradient-to-r from-pink-500 to-orange-400 rounded-[30px] p-8 shadow-2xl max-w-xs">
+                        <div className="absolute -bottom-10 -right-10 bg-gradient-to-r from-cyan-400 to-orange-300 rounded-[30px] p-8 shadow-2xl max-w-xs">
                             <p className="text-sm uppercase tracking-[0.2em] text-black/70 font-semibold mb-2">
                                 Most Popular
                             </p>
@@ -226,7 +226,7 @@ export default function DessertShopGuidePage() {
                         transition={{ duration: 0.9 }}
                         viewport={{ once: true }}
                     >
-            <span className="text-pink-400 uppercase tracking-[0.3em] text-sm font-bold">
+            <span className="text-cyan-500 uppercase tracking-[0.3em] text-sm font-bold">
               Premium Experience
             </span>
 
@@ -266,7 +266,7 @@ export default function DessertShopGuidePage() {
                 <div className="max-w-7xl mx-auto">
                     <div className="flex items-end justify-between mb-14 flex-wrap gap-6">
                         <div>
-              <span className="text-pink-400 uppercase tracking-[0.3em] text-sm font-bold">
+              <span className="text-cyan-500 uppercase tracking-[0.3em] text-sm font-bold">
                 Photo Gallery
               </span>
 
