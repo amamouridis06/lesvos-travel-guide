@@ -57,9 +57,6 @@ export default function NavBar() {
               <Link href="/under-construction" className="hover:text-yellow-300 transition">
                 Activities
               </Link>
-              <Link href="/member" className="hover:text-yellow-300 transition">
-                Community
-              </Link>
             </div>
 
             {/* Mobile button */}
