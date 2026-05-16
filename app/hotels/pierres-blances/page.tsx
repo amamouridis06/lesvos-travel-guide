@@ -38,8 +38,8 @@ const hotel = {
     ],
     highlights: [
         { label: "Outdoor swimming pool", value: "Yes" },
-        { label: "Transport from / to the airport", value: "No"  },
         { label: "Wi-Fi", value: "Free" },
+        { label: "Transport from / to the airport", value: "No"  },
         { label: "Facilities for disabled guests", value: "No" },
         { label: "Parking", value: "Free" },
         {label:"Free cot always available", value:"Yes"},
