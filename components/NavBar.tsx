@@ -57,6 +57,9 @@ export default function NavBar() {
               <Link href="/under-construction" className="hover:text-yellow-300 transition">
                 Activities
               </Link>
+              <Link href="/member" className="hover:text-yellow-300 transition">
+                Community
+              </Link>
             </div>
 
             {/* Mobile button */}
@@ -144,11 +147,18 @@ export default function NavBar() {
                   Emergency
                 </Link>
                 <Link
-                    href="under-construction"
+                    href="/under-construction"
                     onClick={closeMenu}
                     className="py-3 border-b border-white/10 hover:text-yellow-300 transition"
                 >
                   Activities
+                </Link>
+                <Link
+                    href="/member"
+                    onClick={closeMenu}
+                    className="py-3 border-b border-white/10 hover:text-yellow-300 transition"
+                >
+                  Community
                 </Link>
               </div>
             </div>
