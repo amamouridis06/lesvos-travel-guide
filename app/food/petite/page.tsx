@@ -17,7 +17,7 @@ export default function DessertShopGuidePage() {
                     repeat: Infinity,
                     ease: "easeInOut",
                 }}
-                className="absolute top-20 left-10 w-72 h-72 bg-cyan-300/30 blur-3xl rounded-full"
+                className="absolute top-10 sm:top-20 left-0 sm:left-10 w-52 h-52 sm:w-72 sm:h-72 bg-cyan-300/30 blur-3xl rounded-full"
             />
 
             <motion.div
@@ -30,7 +30,7 @@ export default function DessertShopGuidePage() {
                     repeat: Infinity,
                     ease: "easeInOut",
                 }}
-                className="absolute bottom-20 right-10 w-96 h-96 bg-orange-200/30 blur-3xl rounded-full"
+                className="absolute bottom-10 sm:bottom-20 right-0 sm:right-10 w-64 h-64 sm:w-96 sm:h-96 bg-orange-200/30 blur-3xl rounded-full"
             />
             {/* HERO */}
             <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 py-24 sm:py-0">
@@ -52,16 +52,16 @@ export default function DessertShopGuidePage() {
                     initial={{ opacity: 0, y: 80 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
-                    className="relative z-10 max-w-6xl text-center"
+                    className="relative z-10 max-w-6xl text-center px-2 sm:px-0"
                 >
                     <motion.div
                         initial={{ opacity: 0, scale: 0.8 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ delay: 0.2, duration: 0.6 }}
-                        className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white/10 backdrop-blur-xl border border-white/20 mb-8"
+                        className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 rounded-full bg-white/60 backdrop-blur-xl border border-cyan-100 mb-6 sm:mb-8 shadow-lg"
                     >
                         <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                        <span className="uppercase tracking-[0.25em] text-sm font-semibold text-slate-800">
+                        <span className="uppercase tracking-[0.18em] sm:tracking-[0.25em] text-[11px] sm:text-sm font-semibold text-slate-800">
               Luxury Dessert Experience
             </span>
                     </motion.div>
@@ -115,8 +115,8 @@ export default function DessertShopGuidePage() {
             </section>
 
             {/* GLASS INFO CARDS */}
-            <section className="relative z-20 -mt-24 px-6 pb-28">
-                <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-6">
+            <section className="relative z-20 -mt-10 sm:-mt-24 px-4 sm:px-6 pb-20 sm:pb-28">
+                <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
                     {[
                         {
                             icon: <MapPin className="w-7 h-7" />,
@@ -146,9 +146,9 @@ export default function DessertShopGuidePage() {
                             transition={{ delay: i * 0.1, duration: 0.7 }}
                             viewport={{ once: true }}
                             whileHover={{ y: -12, scale: 1.03 }}
-                            className="backdrop-blur-2xl bg-white/10 border border-cyan-100 rounded-[32px] p-8 shadow-2xl"
+                            className="backdrop-blur-2xl bg-white/70 border border-cyan-100 rounded-[28px] sm:rounded-[32px] p-5 sm:p-8 shadow-2xl"
                         >
-                            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-pink-400 to-orange-300 text-black flex items-center justify-center mb-6 shadow-xl">
+                            <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br from-cyan-400 to-orange-300 text-black flex items-center justify-center mb-4 sm:mb-6 shadow-xl">
                                 {item.icon}
                             </div>
 
@@ -156,7 +156,7 @@ export default function DessertShopGuidePage() {
                                 {item.title}
                             </p>
 
-                            <h3 className="text-2xl font-bold text-slate-800">
+                            <h3 className="text-xl sm:text-2xl font-bold text-slate-800">
                                 {item.value}
                             </h3>
                         </motion.div>
@@ -303,15 +303,15 @@ export default function DessertShopGuidePage() {
             </section>
 
             {/* FULL GALLERY */}
-            <section className="px-6 pb-32">
+            <section className="px-4 sm:px-6 pb-20 sm:pb-32">
                 <div className="max-w-7xl mx-auto">
-                    <div className="flex items-end justify-between mb-14 flex-wrap gap-6">
+                    <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 sm:mb-14 gap-5 sm:gap-6">
                         <div>
               <span className="text-cyan-500 uppercase tracking-[0.3em] text-sm font-bold">
                 Photo Gallery
               </span>
 
-                            <h2 className="text-5xl font-black mt-4">
+                            <h2 className="text-3xl sm:text-5xl font-black mt-3 sm:mt-4 leading-tight">
                                 More Photos
                             </h2>
                         </div>
