@@ -25,14 +25,14 @@ const hotel = {
     region: "Mytilene Lesvos 81100",
     country: "Greece",
     fromPrice: "€129",
-    tagline: "X in East Lesvos",
+    tagline: "Residences in East Lesvos",
     intro:
-        "Welcome to Hotel Pierres Blanches Residences  in Mytilene",
+        "Welcome to Pierres Blanches Residences in Mytilene",
     body: [
         "Just a short drive from Mytilene, Pierres Blanches Residences offers a refined hospitality experience that redefines modern travel.",
         "Designed for today’s traveler, it goes beyond accommodation, providing comfort, privacy, and a true sense of home. Ideal for families and groups, each residence combines shared living with personal space, ensuring both connection and independence.",
         "Set within a beautifully integrated natural landscape, the stone-built villas feature elegant design and private pools, reflecting understated luxury and attention to detail.",
-        "Founded by Michalis Tsezmetzis, the project is driven by a passion for hospitality and genuine human connection. Guests are welcomed into a warm, personal environment that often inspires return visits.",
+        "Founded by Michalis Tsizmetzis, the project is driven by a passion for hospitality and genuine human connection. Guests are welcomed into a warm, personal environment that often inspires return visits.",
         "Pierres Blanches Residences is not just a place to stay, but an experience of belonging, relaxation, and authentic island living."
 
     ],
@@ -40,8 +40,8 @@ const hotel = {
         { label: "Outdoor swimming pool", value: "Yes" },
         { label: "Transport from / to the airport", value: "No"  },
         { label: "Wi-Fi", value: "Free" },
-        { label: "Parking", value: "Free" },
         { label: "Facilities for disabled guests", value: "No" },
+        { label: "Parking", value: "Free" },
         {label:"Free cot always available", value:"Yes"},
         {label:"Pets", value:"Yes"}
     ],
@@ -268,7 +268,7 @@ export default function PPUrban() {
 
                         <div className="mt-12 flex items-center gap-4 text-xs uppercase tracking-[0.24em] md:tracking-[0.3em]" style={{ color: "var(--ms-muted)" }}>
                             <span className="ms-hairline" />
-                            <span>Hotel Petrino</span>
+                            <span>Pierres Blanches Residences</span>
                         </div>
                     </main>
 
