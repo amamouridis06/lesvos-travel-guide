@@ -221,6 +221,7 @@ export default function DessertShopGuidePage() {
                         <div className="absolute bottom-4 right-4 sm:-bottom-10 sm:-right-10 bg-gradient-to-r from-cyan-400 to-orange-300 rounded-[24px] sm:rounded-[30px] p-5 sm:p-8 shadow-2xl max-w-[220px] sm:max-w-xs">
                             <p className="text-sm uppercase tracking-[0.2em] text-slate-800 font-semibold mb-2">
                                 Most Popular
+                                Waffle bites
                             </p>
                         </div>
                     </motion.div>
