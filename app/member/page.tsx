@@ -1,6 +1,13 @@
+import { motion } from "framer-motion";
+
 export default function JoinCommunityPage() {
     return (
-        <main className="bg-neutral-100 text-neutral-900 min-h-screen">
+        <motion.main
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            className="bg-neutral-100 text-neutral-900 min-h-screen"
+        >
 
             {/* HERO */}
             <section
@@ -9,7 +16,12 @@ export default function JoinCommunityPage() {
             >
                 <div className="absolute inset-0 bg-black/60" />
 
-                <div className="relative z-10 text-center px-6 max-w-4xl">
+                <motion.div
+                    initial={{ opacity: 0, y: 40 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.9 }}
+                    className="relative z-10 text-center px-6 max-w-4xl"
+                >
                     <p className="uppercase tracking-[0.3em] text-sm text-gray-300 mb-4">
                         Explore • Discover • Experience
                     </p>
@@ -38,7 +50,7 @@ export default function JoinCommunityPage() {
                             Explore Lesvos
                         </a>
                     </div>
-                </div>
+                </motion.div>
             </section>
 
             {/* WHY JOIN */}
@@ -226,6 +238,6 @@ export default function JoinCommunityPage() {
                     </a>
                 </div>
             </section>
-        </main>
+        </motion.main>
     );
 }
