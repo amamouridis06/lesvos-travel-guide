@@ -39,7 +39,7 @@ export default function DessertShopGuidePage() {
                         initial={{ scale: 1.2, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
                         transition={{ duration: 1.8, ease: "easeOut" }}
-                        src="https://images.unsplash.com/photo-1519869325930-281384150729?q=80&w=2000&auto=format&fit=crop"
+                        src="/petite/petite10.jpg"
                         alt="Luxury Desserts"
                         className="w-full h-full object-cover"
                     />
@@ -72,9 +72,9 @@ export default function DessertShopGuidePage() {
                         transition={{ delay: 0.4, duration: 1 }}
                         className="text-5xl sm:text-6xl md:text-8xl font-black leading-none mb-6 sm:mb-8 px-2"
                     >
-                        Sweet
+                        Petite
                         <span className="block bg-gradient-to-r from-cyan-500 via-sky-400 to-orange-300 bg-clip-text text-transparent">
-              Athens
+
             </span>
                     </motion.h1>
 
@@ -84,9 +84,8 @@ export default function DessertShopGuidePage() {
                         transition={{ delay: 0.2, duration: 0.4 }}
                         className="max-w-3xl mx-auto text-base sm:text-lg md:text-2xl text-slate-900 leading-relaxed mb-10 sm:mb-12 px-2"
                     >
-                        Ένας premium dessert προορισμός στην καρδιά της Αθήνας με artisan
-                        γλυκά, viral pancakes, luxury brunch και cinematic ατμόσφαιρα για
-                        ταξιδιώτες που ψάχνουν κάτι πραγματικά μοναδικό.
+                        A premium dessert destination in the port of Molyvos with pancakes, waffles and xaps for
+                        travelers looking for something really unique.
                     </motion.p>
 
                     <motion.div
@@ -95,13 +94,13 @@ export default function DessertShopGuidePage() {
                         transition={{ delay: 1, duration: 0.8 }}
                         className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 sm:gap-5 w-full sm:w-auto px-4"
                     >
-                        <button className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 rounded-3xl bg-white text-black font-bold text-base sm:text-lg shadow-[0_20px_60px_rgba(255,255,255,0.25)] hover:scale-105 transition-all duration-300">
-                            Explore Menu
-                        </button>
+                        {/*<button className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 rounded-3xl bg-white text-black font-bold text-base sm:text-lg shadow-[0_20px_60px_rgba(255,255,255,0.25)] hover:scale-105 transition-all duration-300">*/}
+                        {/*    Explore Menu*/}
+                        {/*</button>*/}
 
-                        <button className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 rounded-3xl border border-white/20 bg-white/10 backdrop-blur-xl text-slate-800 font-semibold text-base sm:text-lg hover:bg-white/20 transition-all duration-300">
-                            Book a Table
-                        </button>
+                        {/*<button className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 rounded-3xl border border-white/20 bg-white/10 backdrop-blur-xl text-slate-800 font-semibold text-base sm:text-lg hover:bg-white/20 transition-all duration-300">*/}
+                        {/*    Book a Table*/}
+                        {/*</button>*/}
                     </motion.div>
                 </motion.div>
 
@@ -121,17 +120,17 @@ export default function DessertShopGuidePage() {
                         {
                             icon: <MapPin className="w-7 h-7" />,
                             title: "Location",
-                            value: "Athens Center",
+                            value: "In port of Molyvos",
                         },
                         {
                             icon: <Clock3 className="w-7 h-7" />,
                             title: "Open Daily",
-                            value: "09:00 — 00:00",
+                            value: "17:00 — 23:00",
                         },
                         {
                             icon: <CakeSlice className="w-7 h-7" />,
                             title: "Signature",
-                            value: "Baklava Pancakes",
+                            value: "Pancakes & Wafles",
                         },
                         {
                             icon: <Euro className="w-7 h-7" />,
@@ -198,10 +197,12 @@ export default function DessertShopGuidePage() {
                     </h2>
 
                     <p className="max-w-4xl mx-auto text-base sm:text-lg md:text-xl text-slate-900 font-medium leading-relaxed px-2">
-                        Εδώ μπορείς να προσθέσεις μεγάλη περιγραφή για το μαγαζί,
-                        την ιστορία του, τις σπεσιαλιτέ, την ατμόσφαιρα, τις viral γεύσεις
-                        και γιατί αξίζει να το επισκεφτούν οι τουρίστες. Το section είναι
-                        πλήρως editable ώστε να βάζεις όσο content θέλεις.
+                        Petite in the port of Molyvos is the new must-visit destination for take-away pleasure, having closed just a month
+                        of operation. the experience starts from our characteristic window: order at the entrance, you receive in the hand and
+                        enjoy the create. We are famous for our fluffy pancakes, our waffle bites and our sweet crepes, but the real game starts
+                        with the infinite combinations you can create. With a huge variety of rich beaches, fine chocolates and any kind of toppings,
+                        every order is unique. For those looking for something even cooler, our proposals are complemented by our enjoyable ice cream,
+                        which accompanies perfectly each In Petite, quality meets creativity, offering the sweetest attitude in the heart of Molyvos!
                     </p>
                 </motion.div>
 
@@ -315,21 +316,22 @@ export default function DessertShopGuidePage() {
                                 More Photos
                             </h2>
                         </div>
-
-                        <p className="text-slate-600 max-w-xl text-lg">
-                            Πρόσθεσε όσες φωτογραφίες θέλεις από desserts, brunch, εσωτερικό
-                            χώρο, cocktails ή customer experience.
-                        </p>
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-5 auto-rows-[220px] sm:auto-rows-[250px]">
                         {[
-                            "https://images.unsplash.com/photo-1519869325930-281384150729?q=80&w=1200&auto=format&fit=crop",
-                            "https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=1200&auto=format&fit=crop",
-                            "https://images.unsplash.com/photo-1488477181946-6428a0291777?q=80&w=1200&auto=format&fit=crop",
-                            "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?q=80&w=1200&auto=format&fit=crop",
-                            "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200&auto=format&fit=crop",
-                            "https://images.unsplash.com/photo-1464306076886-da185f6a9d05?q=80&w=1200&auto=format&fit=crop",
+                            "/petite/petite2.jpg",
+                            "/petite/petite3.jpg",
+                            "/petite/petite4.jpg",
+                            "/petite/petite5.jpg",
+                            "/petite/petite6.jpg",
+                            "/petite/petite7.jpg",
+                            "/petite/petite8.jpg",
+                            "/petite/petite9.jpg",
+                            "/petite/petite10.jpg",
+                            "/petite/petite11.jpg",
+                            "/petite/petite12.jpg",
+                            "/petite/petite1.jpg",
                         ].map((img, i) => (
                             <motion.div
                                 key={i}
