@@ -33,13 +33,13 @@ export default function DessertShopGuidePage() {
                 className="absolute bottom-20 right-10 w-96 h-96 bg-orange-200/30 blur-3xl rounded-full"
             />
             {/* HERO */}
-            <section className="relative min-h-screen flex items-center justify-center px-6">
+            <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 py-24 sm:py-0">
                 <div className="absolute inset-0 overflow-hidden">
                     <motion.img
                         initial={{ scale: 1.2, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
                         transition={{ duration: 1.8, ease: "easeOut" }}
-                        src="/petite/petite10.jpg"
+                        src="https://images.unsplash.com/photo-1519869325930-281384150729?q=80&w=2000&auto=format&fit=crop"
                         alt="Luxury Desserts"
                         className="w-full h-full object-cover"
                     />
@@ -70,48 +70,48 @@ export default function DessertShopGuidePage() {
                         initial={{ opacity: 0, y: 40 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4, duration: 1 }}
-                        className="text-6xl md:text-8xl font-black leading-none mb-8"
+                        className="text-5xl sm:text-6xl md:text-8xl font-black leading-none mb-6 sm:mb-8 px-2"
                     >
-
+                        Sweet
                         <span className="block bg-gradient-to-r from-cyan-500 via-sky-400 to-orange-300 bg-clip-text text-transparent">
-              Petite
+              Athens
             </span>
                     </motion.h1>
 
                     <motion.p
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ delay: 0.8, duration: 1 }}
-                        className="max-w-3xl mx-auto text-lg md:text-2xl text-slate-700 leading-relaxed mb-12"
+                        transition={{ delay: 0.2, duration: 0.4 }}
+                        className="max-w-3xl mx-auto text-base sm:text-lg md:text-2xl text-slate-900 leading-relaxed mb-10 sm:mb-12 px-2"
                     >
                         Ένας premium dessert προορισμός στην καρδιά της Αθήνας με artisan
                         γλυκά, viral pancakes, luxury brunch και cinematic ατμόσφαιρα για
                         ταξιδιώτες που ψάχνουν κάτι πραγματικά μοναδικό.
                     </motion.p>
 
-                    {/*<motion.div*/}
-                    {/*    initial={{ opacity: 0, y: 20 }}*/}
-                    {/*    animate={{ opacity: 1, y: 0 }}*/}
-                    {/*    transition={{ delay: 1, duration: 0.8 }}*/}
-                    {/*    className="flex flex-wrap justify-center gap-5"*/}
-                    {/*>*/}
-                    {/*    <button className="px-10 py-5 rounded-3xl bg-white text-black font-bold text-lg shadow-[0_20px_60px_rgba(255,255,255,0.25)] hover:scale-105 transition-all duration-300">*/}
-                    {/*        Explore Menu*/}
-                    {/*    </button>*/}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 1, duration: 0.8 }}
+                        className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 sm:gap-5 w-full sm:w-auto px-4"
+                    >
+                        <button className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 rounded-3xl bg-white text-black font-bold text-base sm:text-lg shadow-[0_20px_60px_rgba(255,255,255,0.25)] hover:scale-105 transition-all duration-300">
+                            Explore Menu
+                        </button>
 
-                    {/*    <button className="px-10 py-5 rounded-3xl border border-white/20 bg-white/10 backdrop-blur-xl text-slate-800 font-semibold text-lg hover:bg-white/20 transition-all duration-300">*/}
-                    {/*        Book a Table*/}
-                    {/*    </button>*/}
-                    {/*</motion.div>*/}
+                        <button className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 rounded-3xl border border-white/20 bg-white/10 backdrop-blur-xl text-slate-800 font-semibold text-base sm:text-lg hover:bg-white/20 transition-all duration-300">
+                            Book a Table
+                        </button>
+                    </motion.div>
                 </motion.div>
 
-                {/*<motion.div*/}
-                {/*    animate={{ y: [0, 15, 0] }}*/}
-                {/*    transition={{ repeat: Infinity, duration: 2.5 }}*/}
-                {/*    className="absolute bottom-10 text-cyan-600 text-sm tracking-[0.3em] uppercase font-semibold"*/}
-                {/*>*/}
-                {/*    Scroll*/}
-                {/*</motion.div>*/}
+                <motion.div
+                    animate={{ y: [0, 15, 0] }}
+                    transition={{ repeat: Infinity, duration: 2.5 }}
+                    className="absolute bottom-10 text-cyan-600 text-sm tracking-[0.3em] uppercase font-semibold"
+                >
+                    Scroll
+                </motion.div>
             </section>
 
             {/* GLASS INFO CARDS */}
@@ -121,17 +121,17 @@ export default function DessertShopGuidePage() {
                         {
                             icon: <MapPin className="w-7 h-7" />,
                             title: "Location",
-                            value: "📍Molyvos",
+                            value: "Athens Center",
                         },
                         {
                             icon: <Clock3 className="w-7 h-7" />,
                             title: "Open Daily",
-                            value: "17:00 — 23:00",
+                            value: "09:00 — 00:00",
                         },
                         {
                             icon: <CakeSlice className="w-7 h-7" />,
                             title: "Signature",
-                            value: "Pancakes, Wafles",
+                            value: "Baklava Pancakes",
                         },
                         {
                             icon: <Euro className="w-7 h-7" />,
@@ -165,12 +165,13 @@ export default function DessertShopGuidePage() {
             </section>
 
             {/* STORY SECTION */}
-            <section className="max-w-6xl mx-auto px-6 py-32">
+            <section className="max-w-6xl mx-auto px-4 sm:px-6 py-20 sm:py-32">
                 <motion.div
                     animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
                     transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
                     className="text-center mb-20"
                 >
@@ -178,25 +179,24 @@ export default function DessertShopGuidePage() {
             About The Place
           </span>
 
-                    <h2 className="text-5xl md:text-7xl font-black mt-6 mb-8">
+                    <h2 className="text-4xl sm:text-5xl md:text-7xl font-black mt-6 mb-6 sm:mb-8 leading-tight">
                         A Dessert Experience
                         <span className="block text-slate-500">Beyond Taste</span>
                     </h2>
 
-                    <p className="max-w-4xl mx-auto text-xl text-slate-700 leading-relaxed">
-                        Petite in the port of Molyvos is the new must-visit destination for take-away pleasure,
-                        having closed just a month of operation. the experience starts from our characteristic window:
-                        order at the entrance, you receive in the hand and enjoy the create.  We are famous for our fluffy pancakes,
-                        our waffle bites and our sweet crepes, but the real game starts with the infinite combinations you can create.
-                        With a huge variety of rich beaches, fine chocolates and any kind of toppings, every order is unique.
-                        For those looking for something even cooler, our proposals are complemented by our enjoyable ice cream, which accompanies
-                        perfectly each In Petite, quality meets creativity, offering the sweetest attitude in the heart of Molyvos!
+                    <p className="max-w-4xl mx-auto text-base sm:text-lg md:text-xl text-slate-900 font-medium leading-relaxed px-2">
+                        Εδώ μπορείς να προσθέσεις μεγάλη περιγραφή για το μαγαζί,
+                        την ιστορία του, τις σπεσιαλιτέ, την ατμόσφαιρα, τις viral γεύσεις
+                        και γιατί αξίζει να το επισκεφτούν οι τουρίστες. Το section είναι
+                        πλήρως editable ώστε να βάζεις όσο content θέλεις.
                     </p>
                 </motion.div>
 
-                <div className="grid md:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6">
                     {[
-                        "/petite/petite1.jpg",
+                        "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200&auto=format&fit=crop",
+                        "https://images.unsplash.com/photo-1488477181946-6428a0291777?q=80&w=1200&auto=format&fit=crop",
+                        "https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=1200&auto=format&fit=crop",
                     ].map((img, i) => (
                         <motion.div
                             key={i}
@@ -210,7 +210,7 @@ export default function DessertShopGuidePage() {
                             <img
                                 src={img}
                                 alt="Dessert Gallery"
-                                className="h-[420px] w-full object-cover hover:scale-110 transition-transform duration-700"
+                                className="h-[320px] sm:h-[420px] w-full object-cover hover:scale-110 transition-transform duration-700"
                             />
                         </motion.div>
                     ))}
@@ -219,7 +219,7 @@ export default function DessertShopGuidePage() {
 
             {/* FEATURE SECTION */}
             <section className="max-w-7xl mx-auto px-6 pb-32">
-                <div className="grid lg:grid-cols-2 gap-16 items-center">
+                <div className="grid lg:grid-cols-2 gap-10 sm:gap-16 items-center">
                     <motion.div
                         initial={{ opacity: 0, x: -60 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -228,13 +228,13 @@ export default function DessertShopGuidePage() {
                         className="relative"
                     >
                         <img
-                            src="/petite/petite6.jpg"
+                            src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?q=80&w=1600&auto=format&fit=crop"
                             alt="Dessert"
-                            className="rounded-[40px] h-[700px] w-full object-cover shadow-[0_40px_120px_rgba(0,0,0,0.6)]"
+                            className="rounded-[32px] sm:rounded-[40px] h-[420px] sm:h-[700px] w-full object-cover shadow-[0_40px_120px_rgba(0,0,0,0.6)]"
                         />
 
-                        <div className="absolute -bottom-10 -right-10 bg-gradient-to-r from-cyan-400 to-orange-300 rounded-[30px] p-8 shadow-2xl max-w-xs">
-                            <p className="text-sm uppercase tracking-[0.2em] text-slate-700 font-semibold mb-2">
+                        <div className="absolute bottom-4 right-4 sm:-bottom-10 sm:-right-10 bg-gradient-to-r from-cyan-400 to-orange-300 rounded-[24px] sm:rounded-[30px] p-5 sm:p-8 shadow-2xl max-w-[220px] sm:max-w-xs">
+                            <p className="text-sm uppercase tracking-[0.2em] text-slate-800 font-semibold mb-2">
                                 Most Popular
                             </p>
 
@@ -242,7 +242,7 @@ export default function DessertShopGuidePage() {
                                 Dubai Chocolate Waffles
                             </h3>
 
-                            <p className="text-slate-700">
+                            <p className="text-slate-800">
                                 Viral dessert experience loved by tourists.
                             </p>
                         </div>
@@ -258,18 +258,18 @@ export default function DessertShopGuidePage() {
               Premium Experience
             </span>
 
-                        <h2 className="text-5xl md:text-7xl font-black leading-tight mt-5 mb-8">
+                        <h2 className="text-4xl sm:text-5xl md:text-7xl font-black leading-tight mt-5 mb-6 sm:mb-8">
                             Dessert Meets
                             <span className="block text-slate-500">Luxury.</span>
                         </h2>
 
-                        <p className="text-slate-700 text-xl leading-relaxed mb-10">
+                        <p className="text-slate-900 text-base sm:text-lg md:text-xl leading-relaxed mb-8 sm:mb-10">
                             Συνδυάζοντας luxury αισθητική, premium υλικά και cinematic design,
                             το Sweet Athens είναι το απόλυτο σημείο για dessert lovers,
                             creators και ταξιδιώτες που θέλουν unforgettable εμπειρία.
                         </p>
 
-                        <div className="grid grid-cols-2 gap-5">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
                             {[
                                 "Instagram Worthy",
                                 "Luxury Brunch",
@@ -302,22 +302,21 @@ export default function DessertShopGuidePage() {
                                 More Photos
                             </h2>
                         </div>
+
+                        <p className="text-slate-600 max-w-xl text-lg">
+                            Πρόσθεσε όσες φωτογραφίες θέλεις από desserts, brunch, εσωτερικό
+                            χώρο, cocktails ή customer experience.
+                        </p>
                     </div>
 
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-5 auto-rows-[250px]">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-5 auto-rows-[220px] sm:auto-rows-[250px]">
                         {[
-                            "/petite/petite2.jpg",
-                            "/petite/petite3.jpg",
-                            "/petite/petite4.jpg",
-                            "/petite/petite12.jpg",
-                            "/petite/petite6.jpg",
-                            "/petite/petite7.jpg",
-                            "/petite/petite8.jpg",
-                            "/petite/petite9.jpg",
-                            "/petite/petite10.jpg",
-                            "/petite/petite11.jpg",
-                            "/petite/petite5.jpg",
-
+                            "https://images.unsplash.com/photo-1519869325930-281384150729?q=80&w=1200&auto=format&fit=crop",
+                            "https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=1200&auto=format&fit=crop",
+                            "https://images.unsplash.com/photo-1488477181946-6428a0291777?q=80&w=1200&auto=format&fit=crop",
+                            "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?q=80&w=1200&auto=format&fit=crop",
+                            "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200&auto=format&fit=crop",
+                            "https://images.unsplash.com/photo-1464306076886-da185f6a9d05?q=80&w=1200&auto=format&fit=crop",
                         ].map((img, i) => (
                             <motion.div
                                 key={i}
