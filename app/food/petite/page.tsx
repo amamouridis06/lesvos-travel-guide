@@ -208,9 +208,7 @@ export default function DessertShopGuidePage() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6">
                     {[
-                        "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200&auto=format&fit=crop",
-                        "https://images.unsplash.com/photo-1488477181946-6428a0291777?q=80&w=1200&auto=format&fit=crop",
-                        "https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=1200&auto=format&fit=crop",
+                        "/petite/petite1.jpg",
                     ].map((img, i) => (
                         <motion.div
                             key={i}
@@ -242,7 +240,7 @@ export default function DessertShopGuidePage() {
                         className="relative"
                     >
                         <img
-                            src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?q=80&w=1600&auto=format&fit=crop"
+                            src="/petite/petite7.jpg"
                             alt="Dessert"
                             className="rounded-[32px] sm:rounded-[40px] h-[420px] sm:h-[700px] w-full object-cover shadow-[0_40px_120px_rgba(0,0,0,0.6)]"
                         />
@@ -250,14 +248,6 @@ export default function DessertShopGuidePage() {
                         <div className="absolute bottom-4 right-4 sm:-bottom-10 sm:-right-10 bg-gradient-to-r from-cyan-400 to-orange-300 rounded-[24px] sm:rounded-[30px] p-5 sm:p-8 shadow-2xl max-w-[220px] sm:max-w-xs">
                             <p className="text-sm uppercase tracking-[0.2em] text-slate-800 font-semibold mb-2">
                                 Most Popular
-                            </p>
-
-                            <h3 className="text-3xl font-black text-black mb-2">
-                                Dubai Chocolate Waffles
-                            </h3>
-
-                            <p className="text-slate-800">
-                                Viral dessert experience loved by tourists.
                             </p>
                         </div>
                     </motion.div>
@@ -278,15 +268,12 @@ export default function DessertShopGuidePage() {
                         </h2>
 
                         <p className="text-slate-900 text-base sm:text-lg md:text-xl leading-relaxed mb-8 sm:mb-10">
-                            Συνδυάζοντας luxury αισθητική, premium υλικά και cinematic design,
-                            το Sweet Athens είναι το απόλυτο σημείο για dessert lovers,
-                            creators και ταξιδιώτες που θέλουν unforgettable εμπειρία.
+                            In the picturesque village of Molyvos, Lesvos, Sweet Athens offers a unique tasting experience with fluffy pancakes, delicious waffles, and handmade desserts by the sea. Featuring island-inspired aesthetics, premium ingredients, and a cozy atmosphere, it is the perfect spot for brunch, sweets, and photos that capture the feeling of summer in the Aegean.
+
                         </p>
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
                             {[
-                                "Instagram Worthy",
-                                "Luxury Brunch",
                                 "Artisan Desserts",
                                 "Tourist Favorite",
                             ].map((item, i) => (
@@ -323,6 +310,7 @@ export default function DessertShopGuidePage() {
                             "/petite/petite2.jpg",
                             "/petite/petite3.jpg",
                             "/petite/petite4.jpg",
+                            "/petite/petite12.jpg",
                             "/petite/petite5.jpg",
                             "/petite/petite6.jpg",
                             "/petite/petite7.jpg",
@@ -330,8 +318,7 @@ export default function DessertShopGuidePage() {
                             "/petite/petite9.jpg",
                             "/petite/petite10.jpg",
                             "/petite/petite11.jpg",
-                            "/petite/petite12.jpg",
-                            "/petite/petite1.jpg",
+
                         ].map((img, i) => (
                             <motion.div
                                 key={i}
