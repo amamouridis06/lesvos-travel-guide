@@ -167,11 +167,24 @@ export default function DessertShopGuidePage() {
             {/* STORY SECTION */}
             <section className="max-w-6xl mx-auto px-4 sm:px-6 py-20 sm:py-32">
                 <motion.div
-                    animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
-                    transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
+                    animate={{
+                        backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+                    }}
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
+                    transition={{
+                        backgroundPosition: {
+                            duration: 12,
+                            repeat: Infinity,
+                            ease: "linear",
+                        },
+                        opacity: {
+                            duration: 0.8,
+                        },
+                        y: {
+                            duration: 0.8,
+                        },
+                    }}
                     viewport={{ once: true }}
                     className="text-center mb-20"
                 >
