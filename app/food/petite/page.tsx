@@ -54,18 +54,6 @@ export default function DessertShopGuidePage() {
                     transition={{ duration: 1 }}
                     className="relative z-10 max-w-6xl text-center px-2 sm:px-0"
                 >
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ delay: 0.2, duration: 0.6 }}
-                        className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 rounded-full bg-white/60 backdrop-blur-xl border border-cyan-100 mb-6 sm:mb-8 shadow-lg"
-                    >
-                        <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                        <span className="uppercase tracking-[0.18em] sm:tracking-[0.25em] text-[11px] sm:text-sm font-semibold text-slate-800">
-              Luxury Dessert Experience
-            </span>
-                    </motion.div>
-
                     <motion.h1
                         initial={{ opacity: 0, y: 40 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -84,7 +72,7 @@ export default function DessertShopGuidePage() {
                         transition={{ delay: 0.2, duration: 0.4 }}
                         className="max-w-3xl mx-auto text-base sm:text-lg md:text-2xl text-slate-900 leading-relaxed mb-10 sm:mb-12 px-2"
                     >
-                        A premium dessert destination in the port of Molyvos with pancakes, waffles and xaps for
+                        A premium dessert destination in the port of Molyvos with pancakes, waffles and crepes for
                         travelers looking for something really unique.
                     </motion.p>
 
@@ -94,22 +82,7 @@ export default function DessertShopGuidePage() {
                         transition={{ delay: 1, duration: 0.8 }}
                         className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 sm:gap-5 w-full sm:w-auto px-4"
                     >
-                        {/*<button className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 rounded-3xl bg-white text-black font-bold text-base sm:text-lg shadow-[0_20px_60px_rgba(255,255,255,0.25)] hover:scale-105 transition-all duration-300">*/}
-                        {/*    Explore Menu*/}
-                        {/*</button>*/}
-
-                        {/*<button className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 rounded-3xl border border-white/20 bg-white/10 backdrop-blur-xl text-slate-800 font-semibold text-base sm:text-lg hover:bg-white/20 transition-all duration-300">*/}
-                        {/*    Book a Table*/}
-                        {/*</button>*/}
                     </motion.div>
-                </motion.div>
-
-                <motion.div
-                    animate={{ y: [0, 15, 0] }}
-                    transition={{ repeat: Infinity, duration: 2.5 }}
-                    className="absolute bottom-10 text-cyan-600 text-sm tracking-[0.3em] uppercase font-semibold"
-                >
-                    Scroll
                 </motion.div>
             </section>
 
