@@ -7,7 +7,6 @@ import {
   Clock3,
   MapPin,
   Phone,
-  Instagram,
   ChevronRight,
 } from "lucide-react";
 
