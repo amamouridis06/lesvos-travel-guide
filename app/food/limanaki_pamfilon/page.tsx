@@ -28,12 +28,12 @@ const menuItems = [
   //   price: "14€",
   //   desc: "Φρέσκα λαχανικά, ελιές, φέτα και olive oil dressing.",
   // },
-  // {
-  //   title: "Premium Steak",
-  //   price: "28€",
-  //   desc: "Dry aged steak με πατάτες φούρνου και sauce κρασιού.",
-  //   image: "/tryfon/tryfon5.jpeg",
-  // },
+  {
+    title: "Premium Steak",
+    price: "28€",
+    desc: "Dry aged steak με πατάτες φούρνου και sauce κρασιού.",
+    image: "/tryfon/tryfon5.jpeg",
+  },
 ];
 
 export default function OliveRestaurantPage() {
