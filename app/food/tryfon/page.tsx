@@ -34,6 +34,7 @@ const menuItems = [
     title: "Premium Steak",
     price: "28€",
     desc: "Dry aged steak με πατάτες φούρνου και sauce κρασιού.",
+    image: "/tryfon/tryfon5.jp5g",
   },
 ];
 
@@ -156,7 +157,7 @@ export default function OliveRestaurantPage() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 1 }}
               viewport={{ once: true }}
-              src="tryfon/tryfon6.jpg"
+              src="/tryfon/tryfon6.jpg"
               className="rounded-[3rem] h-[650px] object-cover w-full shadow-2xl"
           />
 
@@ -178,11 +179,6 @@ export default function OliveRestaurantPage() {
             <p className="text-[#5b614e] text-lg mt-8 leading-relaxed">
               Εδώ μπορείς να προσθέσεις μεγάλη περιγραφή για το εστιατόριο,
               την ιστορία του, το concept, τις γεύσεις και την premium εμπειρία.
-            </p>
-
-            <p className="text-[#707763] mt-6 leading-relaxed">
-              Το design βασίζεται σε olive luxury χρωματολογία με φυσικές
-              αποχρώσεις, warm φωτισμό και elegant αισθητική.
             </p>
           </motion.div>
         </section>
@@ -208,8 +204,9 @@ export default function OliveRestaurantPage() {
                       className="bg-white border border-[#ddd7c4] rounded-[2rem] overflow-hidden shadow-lg"
                   >
                     <img
-                        src={`${galleryImages[index]}?auto=format&fit=crop&w=1200&q=80`}
-                        className="h-72 w-full object-cover"
+                        src={item.image}
+                        alt={item.title}
+                        className="h-72 w-full object-cover hover:scale-110 transition duration-700"
                     />
 
                     <div className="p-8">
