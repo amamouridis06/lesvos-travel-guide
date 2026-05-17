@@ -39,11 +39,9 @@ const hotel = {
     highlights: [
         { label: "Outdoor swimming pool", value: "Yes" },
         {label:"Free cot always available", value:"Yes"},
-        { label: "Transport from / to the airport", value: "No"  },
         { label: "Facilities for disabled guests", value: "Yes" },
-        { label: "Parking", value: "Free" },
-        { label: "Wi-Fi", value: "Free" },
-        {label:"Pets", value:"No"}
+        { label: "Parking & Wi-Fi", value: "Free" },
+        {label:" Pets", value:"No"}
     ],
     pros: [
         "Beautiful stone-built luxury residences with authentic character and elegant design",
