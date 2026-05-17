@@ -15,7 +15,7 @@ const IMG = {
 };
 
 // ---------- Appartment data ----------
-const hotel = {
+const appartment = {
   name: "Thanos Cozy Apartments",
   region: "Kalloni Lesvos",
   country: "Greece",
@@ -387,7 +387,7 @@ export default function ThanosCozy() {
             </div>
 
             <div className="mt-12 grid gap-6 md:mt-16 md:grid-cols-12 md:gap-8">
-              {hotel.gallery.map((g, i) => {
+              {appartment.gallery.map((g, i) => {
                 const layouts = [
                   "w-full aspect-[4/5] md:col-span-7 md:row-span-2 md:aspect-[4/5]",
                   "w-full aspect-[4/5] md:col-span-5 md:aspect-[4/3]",
