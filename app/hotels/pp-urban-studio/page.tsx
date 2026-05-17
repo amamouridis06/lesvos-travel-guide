@@ -357,46 +357,43 @@ export default function PPUrban() {
             {/*</section>*/}
 
             <section className="px-5 py-20 sm:px-8 md:px-12 md:py-28" style={{ background: "var(--ms-bg)" }}>
-                <div className="mx-auto max-w-7xl">
-                    <div>
-                        <div className="flex items-center gap-4">
-                            <span className="ms-hairline" />
-                            <p className="ms-eyebrow">From the visit</p>
-                        </div>
-                        <h2 className="ms-display mt-4 text-4xl leading-tight md:text-6xl">
-                            A few moments<br />
-                            <span className="italic" style={{ color: "var(--ms-gold)" }}>from the stay.</span>
-                        </h2>
+            <div className="mx-auto max-w-7xl">
+                <div>
+                    <div className="flex items-center gap-4">
+                        <span className="ms-hairline" />
+                        <p className="ms-eyebrow">From the visit</p>
                     </div>
-
-                    <div className="mt-12 grid gap-6 md:mt-16 md:grid-cols-12 md:gap-8">
-                        {hotel.gallery.map((g, i) => {
-                            const layouts = [
-                                "w-full aspect-[4/5] md:col-span-7 md:row-span-2 md:aspect-[4/5]",
-                                "w-full aspect-[4/5] md:col-span-5 md:aspect-[4/3]",
-                                "w-full aspect-[4/5] md:col-span-5 md:col-start-8 md:aspect-[4/3]",
-                            ];
-                            return (
-                                <figure key={g.src} className={`group ${layouts[i] ?? "aspect-[4/5] md:col-span-4 md:aspect-[4/5]]"}`}>
-                                    <div className="relative h-full min-h-[260px] overflow-hidden md:min-h-0 md:aspect-auto aspect-[4/5]" style={{ background: "var(--ms-border)" }}>
-                                        <img
-                                            src={g.src}
-                                            alt={g.alt}
-                                            loading="lazy"
-                                            className="h-full w-full object-cover object-center transition-transform duration-[1400ms] ease-out group-hover:scale-[1.06]"
-                                        />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-100" />
-                                    </div>
-                                    <figcaption className="mt-4 flex items-baseline gap-3">
-                                        <span className="ms-serif-num text-sm" style={{ color: "var(--ms-gold)" }}>0{i + 1}</span>
-                                        <span className="ms-display text-lg italic" style={{ color: "var(--ms-muted)" }}>{g.caption}</span>
-                                    </figcaption>
-                                </figure>
-                            );
-                        })}
-                    </div>
+                    <h2 className="ms-display mt-4 text-4xl leading-tight md:text-6xl">
+                        A few moments<br />
+                        <span className="italic" style={{ color: "var(--ms-gold)" }}>from the stay.</span>
+                    </h2>
                 </div>
-            </section>
+
+                <div className="mt-12 grid gap-6 md:mt-16 md:grid-cols-12 md:gap-8">
+                    {hotel.gallery.map((g, i) => {
+                        const layouts = [
+                            "w-full aspect-[4/5] md:col-span-7 md:row-span-2 md:aspect-[4/5]",
+                            "w-full aspect-[4/5] md:col-span-5 md:aspect-[4/3]",
+                            "w-full aspect-[4/5] md:col-span-5 md:col-start-8 md:aspect-[4/3]",
+                        ];
+                        return (
+                            <figure key={g.src} className={`group ${layouts[i] ?? "aspect-[4/5] md:col-span-4 md:aspect-[4/5]]"}`}>
+                                <div className="relative h-full min-h-[260px] overflow-hidden md:min-h-0 md:aspect-auto aspect-[4/5]" style={{ background: "var(--ms-border)" }}>
+                                    <img
+                                        src={g.src}
+                                        alt={g.alt}
+                                        loading="lazy"
+                                        className="h-full w-full object-cover object-center transition-transform duration-[1400ms] ease-out group-hover:scale-[1.06]"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-100" />
+                                </div>
+
+                            </figure>
+                        );
+                    })}
+                </div>
+            </div>
+        </section>
         </div>
     );
 }

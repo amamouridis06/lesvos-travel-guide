@@ -43,7 +43,7 @@ const hotel = {
         { label: "Facilities for disabled guests", value: "Yes" },
         { label: "Parking", value: "Free" },
         { label: "Wi-Fi", value: "Free" },
-        {label:"Pets", value:"Yes"}
+        {label:"Pets", value:"No"}
     ],
     pros: [
         "Beautiful stone-built luxury residences with authentic character and elegant design",
@@ -53,7 +53,7 @@ const hotel = {
         "Thoughtfully designed interiors combining modern comfort with warm, home-like atmosphere",
     ],
     knowBefore: [
-        "Located in the East Lesvos",
+        "Located in the Mytilene Lesvos",
         "Valid ID and credit card required at check-in",
         "The property is located a short drive from Mytilene, so a car is recommended for easier access and exploring the island",
         "Private pools may be seasonal and subject to weather conditions",
