@@ -12,10 +12,10 @@ import {
 } from "lucide-react";
 
 const galleryImages = [
-  "tryfon/tryfon3.jpeg",
-  "tryfon/tryfon4.jpeg",
-  "tryfon/tryfon5.jpeg",
-  "tryfon/tryfon1.jpeg",
+  "/tryfon/tryfon3.jpeg",
+  "/tryfon/tryfon4.jpeg",
+  "/tryfon/tryfon5.jpeg",
+  "/tryfon/tryfon1.jpeg",
 
 ];
 
@@ -112,7 +112,7 @@ export default function OliveRestaurantPage() {
               <div className="absolute -inset-5 bg-[#6b8e23]/20 blur-3xl rounded-full" />
 
               <img
-                  src="tryfon/tryfon3.jpeg"
+                  src="/tryfon/tryfon3.jpeg"
                   alt="restaurant"
                   className="relative rounded-[3rem] h-[760px] w-full object-cover border border-white/40 shadow-2xl"
               />
