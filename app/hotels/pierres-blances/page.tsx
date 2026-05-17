@@ -40,7 +40,7 @@ const hotel = {
         { label: "Outdoor swimming pool", value: "Yes" },
         {label:"Free cot always available", value:"Yes"},
         { label: "Transport from / to the airport", value: "No"  },
-        { label: "Facilities for disabled guests", value: "No" },
+        { label: "Facilities for disabled guests", value: "Yes" },
         { label: "Parking", value: "Free" },
         { label: "Wi-Fi", value: "Free" },
         {label:"Pets", value:"Yes"}
@@ -51,7 +51,6 @@ const hotel = {
         "Private swimming pools with relaxing views of the surrounding natural landscape",
         "Ideal for families and groups, offering a perfect balance of shared spaces and privacy",
         "Thoughtfully designed interiors combining modern comfort with warm, home-like atmosphere",
-        "A serene setting perfect for relaxation, slow living, and authentic island stays",
     ],
     knowBefore: [
         "Located in the East Lesvos",

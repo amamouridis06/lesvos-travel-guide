@@ -34,12 +34,12 @@ const hotel = {
         { label: "Parking", value: "Free" },
     ],
     pros: [
-        "Beautiful stone-built hotel with authentic character and a warm atmosphere",
-        "Excellent location next to a charming medieval village and historic castle",
-        "Relaxing swimming pool with scenic countryside views",
-        "Stylish on-site bar perfect for evening drinks and relaxation",
-        "Peaceful setting ideal for romantic getaways and restful stays",
-        "A perfect blend of traditional charm and modern comforts",
+        "Excellent central location in the heart of the island",
+        "Only a short walk from the beach",
+        "Located next to the village square with cafés, taverns and restaurants",
+        "Modern and comfortable accommodation with bright outdoor balconies",
+        "Quiet and relaxing atmosphere ideal for couples",
+        "Perfect base for exploring beaches, villages and local attractions across Lesvos",
     ],
     knowBefore: [
         "Located in the Centre Lesvos",

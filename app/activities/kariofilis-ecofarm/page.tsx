@@ -6,7 +6,7 @@ export default function FarmRestaurantGuidePage() {
                 className="relative h-[70vh] bg-cover bg-center"
                 style={{
                     backgroundImage:
-                        "url('/kariofyllis/kariofyllis3.png')",
+                        "url('/kariofyllis/kariofyllis2.png')",
                 }}
             >
                 <div className="absolute inset-0 bg-black/45" />
