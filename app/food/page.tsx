@@ -33,7 +33,7 @@ const cafeTaverns: FoodItem[] = [
     location: "Kalloni, Lesvos",
     image: "/tryfon/tryfon6.jpg",
     alt: "Tryfon",
-    href: "/under-construction",
+    href: "/tryfon",
   },
   {
     title: "Pallas Cafe - Grill",
@@ -54,7 +54,7 @@ const Restaurants: FoodItem[] = [
     location: "Pamfila, Lesvos",
     image: "/limanaki/limanaki_pamf.jpg",
     alt: "To Limanaki ton Pamfilon",
-    href: "/under-construction",
+    href: "/limanaki_pamfilon",
   },
   {
     title: "Taverna To Votsalo",
