@@ -12,25 +12,24 @@ import {
 } from "lucide-react";
 
 const galleryImages = [
-  "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4",
-  "https://images.unsplash.com/photo-1559339352-11d035aa65de",
-  "https://images.unsplash.com/photo-1552566626-52f8b828add9",
-  "https://images.unsplash.com/photo-1544025162-d76694265947",
-  "https://images.unsplash.com/photo-1528605248644-14dd04022da1",
-  "https://images.unsplash.com/photo-1414235077428-338989a2e8c0",
+  "tryfon/tryfon3.jpeg",
+  "tryfon/tryfon4.jpeg",
+  "tryfon/tryfon5.jpeg",
+  "tryfon/tryfon1.jpeg",
+
 ];
 
 const menuItems = [
-  {
-    title: "Mediterranean Pasta",
-    price: "18€",
-    desc: "Χειροποίητα ζυμαρικά με φρέσκα μυρωδικά και premium sauce.",
-  },
-  {
-    title: "Olive Signature Salad",
-    price: "14€",
-    desc: "Φρέσκα λαχανικά, ελιές, φέτα και olive oil dressing.",
-  },
+  // {
+  //   title: "Mediterranean Pasta",
+  //   price: "18€",
+  //   desc: "Χειροποίητα ζυμαρικά με φρέσκα μυρωδικά και premium sauce.",
+  // },
+  // {
+  //   title: "Olive Signature Salad",
+  //   price: "14€",
+  //   desc: "Φρέσκα λαχανικά, ελιές, φέτα και olive oil dressing.",
+  // },
   {
     title: "Premium Steak",
     price: "28€",
@@ -44,41 +43,6 @@ export default function OliveRestaurantPage() {
         {/* BACKGROUND */}
         <div className="fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,rgba(107,142,35,0.18),transparent_25%),radial-gradient(circle_at_bottom_left,rgba(181,101,29,0.12),transparent_20%)]" />
 
-        {/* NAVBAR */}
-        <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-xl bg-[#f6f3ea]/70 border-b border-[#d6d0bd]">
-          <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-            <motion.h1
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                className="text-3xl font-black tracking-widest text-[#556b2f]"
-            >
-              OLIVA
-            </motion.h1>
-
-            <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
-              <a href="#about" className="hover:text-[#6b8e23] transition">
-                About
-              </a>
-
-              <a href="#menu" className="hover:text-[#6b8e23] transition">
-                Menu
-              </a>
-
-              <a href="#gallery" className="hover:text-[#6b8e23] transition">
-                Gallery
-              </a>
-
-              <a href="#contact" className="hover:text-[#6b8e23] transition">
-                Contact
-              </a>
-            </nav>
-
-            <button className="md:hidden">
-              <Menu />
-            </button>
-          </div>
-        </header>
-
         {/* HERO */}
         <section className="min-h-screen flex items-center pt-24">
           <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
@@ -90,12 +54,12 @@ export default function OliveRestaurantPage() {
             >
               <div className="inline-flex items-center gap-2 bg-[#6b8e23]/10 border border-[#6b8e23]/20 px-5 py-2 rounded-full text-[#6b8e23] mb-8">
                 <Star size={16} fill="currentColor" />
-                Mediterranean Experience
+                Tranditional dishes
               </div>
 
               <h1 className="text-6xl md:text-8xl font-black leading-none">
-                OLIVA
-                <span className="block text-[#6b8e23]">RESTAURANT</span>
+                TRYFON
+                <span className="block text-[#6b8e23]">CAFE - TAVERN</span>
               </h1>
 
               <p className="text-[#5b614e] text-lg leading-relaxed mt-8 max-w-xl">
@@ -103,23 +67,6 @@ export default function OliveRestaurantPage() {
                 olive luxury design, φυσικά χρώματα και μοναδικές γεύσεις.
               </p>
 
-              <div className="flex gap-5 mt-10 flex-wrap">
-                <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="bg-[#6b8e23] hover:bg-[#5f7d1f] text-white px-8 py-4 rounded-2xl font-semibold flex items-center gap-2 shadow-xl"
-                >
-                  Κράτηση
-                  <ChevronRight size={18} />
-                </motion.button>
-
-                <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    className="border border-[#c7c1aa] bg-white/50 hover:bg-white px-8 py-4 rounded-2xl"
-                >
-                  Explore Menu
-                </motion.button>
-              </div>
 
               {/* INFO */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-14">
@@ -127,17 +74,17 @@ export default function OliveRestaurantPage() {
                   {
                     icon: Clock3,
                     title: "Ωράριο",
-                    text: "12:00 - 00:00",
+                    text: "7:30 - 23:30",
                   },
                   {
                     icon: MapPin,
                     title: "Location",
-                    text: "Athens",
+                    text: "Kalloni",
                   },
                   {
                     icon: Phone,
                     title: "Phone",
-                    text: "+30 2100000000",
+                    text: "+30 22530 22619",
                   },
                 ].map((item, index) => (
                     <motion.div
@@ -165,7 +112,7 @@ export default function OliveRestaurantPage() {
               <div className="absolute -inset-5 bg-[#6b8e23]/20 blur-3xl rounded-full" />
 
               <img
-                  src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=80"
+                  src="tryfon/tryfon3.jpeg"
                   alt="restaurant"
                   className="relative rounded-[3rem] h-[760px] w-full object-cover border border-white/40 shadow-2xl"
               />
@@ -185,11 +132,14 @@ export default function OliveRestaurantPage() {
                 </div>
 
                 <h3 className="text-xl font-bold mt-3">
-                  Award Winning Experience
+                  Michael
                 </h3>
 
                 <p className="text-[#6b705f] text-sm mt-2">
-                  Luxury mediterranean dining με olive αισθητική.
+                  Authentic Greek cafe /restaurant that offers
+                  fantastic food, all at a reasonable price.
+                  Recommended by a local taxi driver and on a Thursday
+                  night has fantastic ribs which were delicious. Thoroughly recommended
                 </p>
               </motion.div>
             </motion.div>
@@ -206,7 +156,7 @@ export default function OliveRestaurantPage() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 1 }}
               viewport={{ once: true }}
-              src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1200&q=80"
+              src="tryfon/tryfon6.jpg"
               className="rounded-[3rem] h-[650px] object-cover w-full shadow-2xl"
           />
 
@@ -310,47 +260,6 @@ export default function OliveRestaurantPage() {
             ))}
           </div>
         </section>
-
-        {/* CONTACT */}
-        <section
-            id="contact"
-            className="py-32 bg-[#ebe5d3]/40 border-t border-[#d8d2bd]"
-        >
-          <div className="max-w-4xl mx-auto px-6 text-center">
-          <span className="text-[#6b8e23] uppercase tracking-[0.3em] text-sm">
-            Reservation
-          </span>
-
-            <h2 className="text-5xl md:text-6xl font-black mt-4">
-              Book Your Table
-            </h2>
-
-            <p className="text-[#6c715f] mt-8 text-lg">
-              Κλείσε το τραπέζι σου και απόλαυσε μια μοναδική mediterranean εμπειρία.
-            </p>
-
-            <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="mt-10 bg-[#6b8e23] hover:bg-[#5f7d1f] text-white px-10 py-5 rounded-2xl font-semibold text-lg shadow-xl"
-            >
-              Make Reservation
-            </motion.button>
-          </div>
-        </section>
-
-        {/* FOOTER */}
-        <footer className="border-t border-[#d8d2bd] bg-[#f6f3ea]">
-          <div className="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4">
-            <h2 className="text-2xl font-black tracking-widest text-[#556b2f]">
-              OLIVA
-            </h2>
-
-            <p className="text-[#7b806f] text-sm">
-              © 2026 Oliva Restaurant — Mediterranean Luxury Experience
-            </p>
-          </div>
-        </footer>
       </div>
   );
 }
