@@ -34,7 +34,7 @@ const menuItems = [
     title: "Premium Steak",
     price: "28€",
     desc: "Dry aged steak με πατάτες φούρνου και sauce κρασιού.",
-    image: "/tryfon/tryfon5.jp5g",
+    image: "/tryfon/tryfon5.jpeg",
   },
 ];
 

@@ -1,321 +1,257 @@
-
 "use client";
 
-import { useEffect, useState } from "react";
+import React from "react";
+import { motion } from "framer-motion";
 import {
+  Star,
+  Clock3,
   MapPin,
   Phone,
-  Clock,
-  Wallet,
-  Users,
-  ChevronLeft,
   ChevronRight,
-  X,
+  Menu,
 } from "lucide-react";
 
-// ---- Replace with your own images ----
-const HERO =
-    "/limanaki/limanaki_pamf1.jpg";
-const GALLERY = [
-
-  "/limanaki/food.jpg",
+const galleryImages = [
   "/limanaki/limanaki_pamf1.jpg",
-  "/limanaki/limanaki_pamf.jpg",
-]
-
-const Dishes = [
-  { t: "Zombie", d: "rum, passion fruit, pineapple, lime, falernum." },
-  // { t: "Diego", d: "tequila, mango, vanilla, lime, spicy bitters" },
-  // { t: "Hanky panky", d: "Vodka, fresh ginger, cucumber, lime." },
-  // { t: "Pink mule", d: "vodka, strawberry, lime, mint, ginger beer" },
+  "/limanaki/food.jpg",
+  "/limanaki/food1lim.jpg",
 ];
 
-const INFO = [
-  { Icon: MapPin, label: "Address", value: "Skalla Pamfilon, Mitilini 811 00" },
-  { Icon: Phone, label: "Phone", value: "+30 6946835163" },
-  { Icon: Clock, label: "Hours", value: "Mon-Tue-Wed-Thu: Closed; Fri: 19:00 - 00:30;Sat:13:00 - 00:30; Sun: 13:00-18:00" },
-  { Icon: Wallet, label: "Drinks", value: "€€" },
-  { Icon: Users, label: "Best for", value: "Couples & friends" },
+const menuItems = [
+  // {
+  //   title: "Mediterranean Pasta",
+  //   price: "18€",
+  //   desc: "Χειροποίητα ζυμαρικά με φρέσκα μυρωδικά και premium sauce.",
+  // },
+  // {
+  //   title: "Olive Signature Salad",
+  //   price: "14€",
+  //   desc: "Φρέσκα λαχανικά, ελιές, φέτα και olive oil dressing.",
+  // },
+  // {
+  //   title: "Premium Steak",
+  //   price: "28€",
+  //   desc: "Dry aged steak με πατάτες φούρνου και sauce κρασιού.",
+  //   image: "/tryfon/tryfon5.jpeg",
+  // },
 ];
 
-const NEARBY = [
-  { label: "Mytiline"},
-  { label: "Panagiouda"},
-  { label: "Thermi" },
-];
-
-export default function CocktailBarPage() {
-  const [index, setIndex] = useState(0);
-  const [isOpen, setIsOpen] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
-
-  const next = () => setIndex((p) => (p + 1) % GALLERY.length);
-  const prev = () => setIndex((p) => (p - 1 + GALLERY.length) % GALLERY.length);
-
-  useEffect(() => {
-    if (isHovered || isOpen) return;
-    const id = setInterval(next, 4500);
-    return () => clearInterval(id);
-  }, [isHovered, isOpen]);
-
+export default function OliveRestaurantPage() {
   return (
-      <main
-          className="min-h-screen text-stone-900"
-          style={{
-            backgroundColor: "#fbf8f3",
-            fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif",
-          }}
-      >
-        <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
-        .font-display { font-family: 'Fraunces', Georgia, serif; letter-spacing: -0.02em; }
-        .gradient-warm { background: linear-gradient(135deg, #b85c3a, #e0a052); }
-        .gradient-hero { background: linear-gradient(180deg, transparent 0%, rgba(20,15,10,.3) 50%, rgba(20,15,10,.85) 100%); }
-        .shadow-soft { box-shadow: 0 10px 40px -15px rgba(60,40,30,.25); }
-        .shadow-elevated { box-shadow: 0 20px 60px -20px rgba(60,40,30,.35); }
-      `}</style>
+      <div className="bg-[#f6f3ea] text-[#2f3526] overflow-hidden">
+        {/* BACKGROUND */}
+        <div className="fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,rgba(107,142,35,0.18),transparent_25%),radial-gradient(circle_at_bottom_left,rgba(181,101,29,0.12),transparent_20%)]" />
 
         {/* HERO */}
-        <section className="relative h-[80vh] min-h-[520px] w-full overflow-hidden">
-          <img
-              src={HERO}
-              alt="Bartender pouring a cocktail at a seaside bar in Lesvos at sunset"
-              className="absolute inset-0 h-full w-full object-cover"
-          />
-          <div className="absolute inset-0 gradient-hero" />
-
-          <div className="absolute inset-x-0 top-0 z-10 flex items-center justify-between px-6 py-6 sm:px-10">
-          </div>
-
-          <div className="absolute inset-x-0 bottom-0 z-10 px-6 pb-16 sm:px-10 sm:pb-20">
-            <div className="mx-auto max-w-6xl">
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] text-white backdrop-blur-md">
-              <span className="h-1.5 w-1.5 rounded-full" style={{ background: "#e0a052" }} />
-              South Lesvos · Cocktail Bar
-            </span>
-              <h1 className="font-display mt-5 max-w-3xl text-4xl font-semibold leading-[1.05] text-white sm:text-6xl lg:text-7xl">
-                To limanaki ton Pamfilon
-              </h1>
-              <p className="mt-4 max-w-xl text-base text-white/80 sm:text-lg">
-                A fantastic corner for a sunset cocktail by the Aegean — slow nights,
-                warm lights, and the sea just steps away.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* CONTENT */}
-        <section className="mx-auto grid max-w-6xl grid-cols-1 gap-12 px-6 py-16 sm:px-10 sm:py-24 lg:grid-cols-3 lg:gap-16">
-          {/* MAIN */}
-          <div className="space-y-16 lg:col-span-2">
-            <div id="about">
-              <p className="text-xs font-semibold uppercase tracking-[0.25em]" style={{ color: "#b85c3a" }}>
-                The Place
-              </p>
-              <h2 className="font-display mt-3 text-3xl font-semibold sm:text-4xl">
-                About
-              </h2>
-              <p className="mt-5 text-lg leading-relaxed text-stone-600">
-                υεσ
-              </p>
-              <p className="mt-4 text-lg leading-relaxed text-stone-600">
-                The best food ever
-              </p>
-            </div>
-
-            {/* Signatures */}
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.25em]" style={{ color: "#b85c3a" }}>
-                What to try
-              </p>
-              <h2 className="font-display mt-3 text-3xl font-semibold sm:text-4xl">
-                Signatures of the house
-              </h2>
-              <div className="mt-8 grid gap-4 sm:grid-cols-2">
-                {Dishes.map((c) => (
-                    <div
-                        key={c.t}
-                        className="rounded-2xl border border-stone-200 bg-white p-5 transition-all hover:-translate-y-0.5 hover:shadow-soft"
-                    >
-                      <h3 className="font-display text-xl font-semibold">{c.t}</h3>
-                      <p className="mt-1 text-sm text-stone-600">{c.d}</p>
-                    </div>
-                ))}
-              </div>
-            </div>
-
-            {/* GALLERY */}
-            <div id="gallery">
-              <p className="text-xs font-semibold uppercase tracking-[0.25em]" style={{ color: "#b85c3a" }}>
-                Atmosphere
-              </p>
-              <h2 className="font-display mt-3 text-3xl font-semibold sm:text-4xl">
-                A look inside
-              </h2>
-
-              <div
-                  className="group relative mt-8 aspect-[16/10] w-full cursor-zoom-in overflow-hidden rounded-3xl shadow-elevated"
-                  onMouseEnter={() => setIsHovered(true)}
-                  onMouseLeave={() => setIsHovered(false)}
-                  onClick={() => setIsOpen(true)}
-              >
-                {GALLERY.map((src, i) => (
-                    <img
-                        key={src}
-                        src={src}
-                        alt=""
-                        loading="lazy"
-                        className={`absolute inset-0 h-full w-full object-cover transition-all duration-1000 ${
-                            i === index ? "scale-100 opacity-100" : "scale-105 opacity-0"
-                        }`}
-                    />
-                ))}
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-
-                <button
-                    onClick={(e) => { e.stopPropagation(); prev(); }}
-                    aria-label="Previous"
-                    className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-white/90 p-2.5 text-stone-900 opacity-0 shadow-md backdrop-blur transition-opacity hover:bg-white group-hover:opacity-100"
-                >
-                  <ChevronLeft className="h-5 w-5" />
-                </button>
-                <button
-                    onClick={(e) => { e.stopPropagation(); next(); }}
-                    aria-label="Next"
-                    className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-white/90 p-2.5 text-stone-900 opacity-0 shadow-md backdrop-blur transition-opacity hover:bg-white group-hover:opacity-100"
-                >
-                  <ChevronRight className="h-5 w-5" />
-                </button>
-
-                <div className="absolute bottom-5 left-1/2 flex -translate-x-1/2 gap-1.5">
-                  {GALLERY.map((_, i) => (
-                      <button
-                          key={i}
-                          onClick={(e) => { e.stopPropagation(); setIndex(i); }}
-                          aria-label={`Slide ${i + 1}`}
-                          className={`h-1.5 rounded-full bg-white transition-all ${
-                              i === index ? "w-8 opacity-100" : "w-1.5 opacity-50"
-                          }`}
-                      />
-                  ))}
-                </div>
-              </div>
-
-              <div className="mt-4 grid grid-cols-4 gap-3">
-                {GALLERY.map((img, i) => (
-                    <button
-                        key={img}
-                        onClick={() => setIndex(i)}
-                        className={`relative aspect-[4/3] overflow-hidden rounded-xl transition-all ${
-                            i === index
-                                ? "ring-2 ring-offset-2"
-                                : "opacity-70 hover:opacity-100"
-                        }`}
-                        style={i === index ? { boxShadow: "0 0 0 2px #b85c3a" } : undefined}
-                    >
-                      <img src={img} alt="" loading="lazy" className="h-full w-full object-cover" />
-                    </button>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* SIDEBAR */}
-          <aside id="visit" className="space-y-6 lg:sticky lg:top-8 lg:self-start">
-            <div className="overflow-hidden rounded-3xl border border-stone-200 bg-white shadow-soft">
-              <div className="gradient-warm px-6 py-5 text-white">
-                <h3 className="font-display text-2xl font-semibold">Plan your visit</h3>
-                <p className="mt-1 text-sm text-white/85">
-                  Reservations recommended on weekends.
-                </p>
-              </div>
-              <ul className="divide-y divide-stone-200">
-                {INFO.map(({ Icon, label, value }) => (
-                    <li key={label} className="flex items-start gap-4 px-6 py-4">
-                      <div
-                          className="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-stone-100"
-                          style={{ color: "#b85c3a" }}
-                      >
-                        <Icon className="h-4 w-4" />
-                      </div>
-                      <div>
-                        <p className="text-xs uppercase tracking-wider text-stone-500">{label}</p>
-                        <p className="text-sm font-medium text-stone-900">{value}</p>
-                      </div>
-                    </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="overflow-hidden rounded-3xl border border-stone-200 bg-white shadow-soft">
-              <iframe
-                  title="Map of Limanaki"
-                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6472.0409070934475!2d26.526286859394222!3d39.1589155024112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ba677e1a3b5845%3A0xd278dcca3b94ec29!2sTo%20limanaki%20ton%20Pamfilon!5e1!3m2!1sen!2sgr!4v1777328688869!5m2!1sen!2sgr"
-                  className="h-56 w-full border-0"
-                  loading="lazy"
-              />
-            </div>
-
-            <div className="rounded-3xl border border-stone-200 bg-white p-6 shadow-soft">
-              <h3 className="font-display text-xl font-semibold">Nearby</h3>
-              <ul className="mt-4 space-y-3 text-sm">
-                {NEARBY.map((n) => (
-                    <li key={n.label}>
-                      <a
-                          href="#"
-                          className="flex items-center justify-between rounded-xl px-3 py-2 transition-colors hover:bg-stone-100"
-                      >
-                    <span className="flex items-center gap-3">
-                      {/*<span className="text-lg">{n.emoji}</span>*/}
-                      <span className="font-medium">{n.label}</span>
-                    </span>
-                        <ChevronRight className="h-4 w-4 text-stone-500" />
-                      </a>
-                    </li>
-                ))}
-              </ul>
-            </div>
-          </aside>
-        </section>
-
-
-
-        {/* MODAL */}
-        {isOpen && (
-            <div
-                className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 p-4 backdrop-blur-sm"
-                onClick={() => setIsOpen(false)}
+        <section className="min-h-screen flex items-center pt-24">
+          <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+            {/* LEFT */}
+            <motion.div
+                initial={{ opacity: 0, y: 70 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
             >
-              <button
-                  onClick={() => setIsOpen(false)}
-                  aria-label="Close"
-                  className="absolute right-6 top-6 rounded-full bg-white/10 p-2 text-white hover:bg-white/20"
-              >
-                <X className="h-5 w-5" />
-              </button>
-              <button
-                  onClick={(e) => { e.stopPropagation(); prev(); }}
-                  aria-label="Previous"
-                  className="absolute left-6 top-1/2 -translate-y-1/2 rounded-full bg-white/10 p-3 text-white hover:bg-white/20"
-              >
-                <ChevronLeft className="h-6 w-6" />
-              </button>
+              <div className="inline-flex items-center gap-2 bg-[#6b8e23]/10 border border-[#6b8e23]/20 px-5 py-2 rounded-full text-[#6b8e23] mb-8">
+                <Star size={16} fill="currentColor" />
+                Tranditional dishes
+              </div>
+
+              <h1 className="text-6xl md:text-8xl font-black leading-none">
+                  To Limanaki Ton Pamfilon
+                <span className="block text-[#6b8e23]">CAFE - TAVERN</span>
+              </h1>
+
+              <p className="text-[#5b614e] text-lg leading-relaxed mt-8 max-w-xl">
+                Ένα φωτεινό premium restaurant με μεσογειακή αισθητική,
+                olive luxury design, φυσικά χρώματα και μοναδικές γεύσεις.
+              </p>
+
+
+              {/* INFO */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-14">
+                {[
+                  {
+                    icon: Clock3,
+                    title: "Ωράριο",
+                    text: ["7:30 - 23:30"],
+                  },
+                  {
+                    icon: MapPin,
+                    title: "Location",
+                    text: "Skala Pamfilon",
+                  },
+                  {
+                    icon: Phone,
+                    title: "Phone",
+                    text: "+30 6946835163",
+                  },
+                ].map((item, index) => (
+                    <motion.div
+                        key={index}
+                        whileHover={{ y: -5 }}
+                        className="bg-white/60 border border-[#d8d2bd] backdrop-blur-xl p-5 rounded-3xl shadow-sm"
+                    >
+                      <item.icon className="text-[#6b8e23] mb-3" />
+
+                      <h3 className="font-semibold">{item.title}</h3>
+
+                      <p className="text-[#6c715f] text-sm mt-1">{item.text}</p>
+                    </motion.div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* RIGHT IMAGE */}
+            <motion.div
+                initial={{ opacity: 0, scale: 0.92 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1 }}
+                className="relative"
+            >
+              <div className="absolute -inset-5 bg-[#6b8e23]/20 blur-3xl rounded-full" />
+
               <img
-                  src={GALLERY[index]}
-                  alt="Gallery fullscreen"
-                  className="max-h-[85vh] max-w-[90vw] object-contain"
-                  onClick={(e) => e.stopPropagation()}
+                  src="/limanaki/limanaki_pamf.jpg"
+                  alt="restaurant"
+                  className="relative rounded-[3rem] h-[760px] w-full object-cover border border-white/40 shadow-2xl"
               />
-              <button
-                  onClick={(e) => { e.stopPropagation(); next(); }}
-                  aria-label="Next"
-                  className="absolute right-6 top-1/2 -translate-y-1/2 rounded-full bg-white/10 p-3 text-white hover:bg-white/20"
+
+              {/* FLOATING CARD */}
+              <motion.div
+                  animate={{ y: [0, -10, 0] }}
+                  transition={{ repeat: Infinity, duration: 4 }}
+                  className="absolute bottom-8 left-8 bg-white/80 backdrop-blur-xl border border-[#d8d2bd] rounded-3xl p-6 shadow-xl"
               >
-                <ChevronRight className="h-6 w-6" />
-              </button>
+                <div className="flex gap-1 text-[#6b8e23]">
+                  <Star fill="currentColor" size={18} />
+                  <Star fill="currentColor" size={18} />
+                  <Star fill="currentColor" size={18} />
+                  <Star fill="currentColor" size={18} />
+                  <Star fill="currentColor" size={18} />
+                </div>
+
+                <h3 className="text-xl font-bold mt-3">
+                  Katerina
+                </h3>
+
+                <p className="text-[#6b705f] text-sm mt-2">
+                  Exquisite tastes and aromas. Excellent service. Warm and friendly atmosphere
+                </p>
+              </motion.div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* ABOUT */}
+        <section
+            id="about"
+            className="max-w-7xl mx-auto px-6 py-32 grid lg:grid-cols-2 gap-20 items-center"
+        >
+          <motion.img
+              initial={{ opacity: 0, x: -60 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: true }}
+              src="/tryfon/tryfon6.jpg"
+              className="rounded-[3rem] h-[650px] object-cover w-full shadow-2xl"
+          />
+
+          <motion.div
+              initial={{ opacity: 0, x: 60 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: true }}
+          >
+          <span className="text-[#6b8e23] uppercase tracking-[0.3em] text-sm">
+            Our Story
+          </span>
+
+            <h2 className="text-5xl font-black mt-4 leading-tight">
+              Mediterranean
+              <span className="block text-[#6b8e23]">Luxury Experience</span>
+            </h2>
+
+            <p className="text-[#5b614e] text-lg mt-8 leading-relaxed">
+              Εδώ μπορείς να προσθέσεις μεγάλη περιγραφή για το εστιατόριο,
+              την ιστορία του, το concept, τις γεύσεις και την premium εμπειρία.
+            </p>
+          </motion.div>
+        </section>
+
+        {/* MENU */}
+        <section id="menu" className="py-32 bg-[#ebe5d3]/40">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center">
+            <span className="text-[#6b8e23] uppercase tracking-[0.3em] text-sm">
+              Signature Menu
+            </span>
+
+              <h2 className="text-5xl md:text-6xl font-black mt-4">
+                Featured Dishes
+              </h2>
             </div>
-        )}
-      </main>
+
+            <div className="grid md:grid-cols-3 gap-8 mt-20">
+              {menuItems.map((item, index) => (
+                  <motion.div
+                      key={index}
+                      whileHover={{ y: -10 }}
+                      className="bg-white border border-[#ddd7c4] rounded-[2rem] overflow-hidden shadow-lg"
+                  >
+                    <img
+                        src={item.image}
+                        alt={item.title}
+                        className="h-72 w-full object-cover hover:scale-110 transition duration-700"
+                    />
+
+                    <div className="p-8">
+                      <div className="flex items-center justify-between">
+                        <h3 className="text-2xl font-bold">{item.title}</h3>
+
+                        <span className="text-[#6b8e23] font-bold">
+                      {item.price}
+                    </span>
+                      </div>
+
+                      <p className="text-[#6b705f] mt-4">{item.desc}</p>
+                    </div>
+                  </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* GALLERY */}
+        <section id="gallery" className="max-w-7xl mx-auto px-6 py-32">
+          <div className="text-center">
+          <span className="text-[#6b8e23] uppercase tracking-[0.3em] text-sm">
+            Gallery
+          </span>
+
+            <h2 className="text-5xl md:text-6xl font-black mt-4">
+              Restaurant Moments
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-20">
+            {galleryImages.map((image, index) => (
+                <motion.div
+                    key={index}
+                    whileHover={{ scale: 1.03 }}
+                    className={`overflow-hidden rounded-[2rem] shadow-xl ${
+                        index === 0 || index === 3
+                            ? "md:col-span-2 h-[500px]"
+                            : "h-[500px]"
+                    }`}
+                >
+                  <img
+                      src={`${image}?auto=format&fit=crop&w=1400&q=80`}
+                      className="w-full h-full object-cover hover:scale-110 transition duration-700"
+                  />
+                </motion.div>
+            ))}
+          </div>
+        </section>
+      </div>
   );
 }
-
