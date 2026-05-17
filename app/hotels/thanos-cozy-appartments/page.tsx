@@ -1,7 +1,7 @@
 "use client";
 import { useEffect } from "react";
 
-// ---------- Replace with your own images ----------
+
 const IMG = {
   hero: "/thanos/thanosbed.jpg",
   bath: "/thanos/thanosbath.jpg",
@@ -15,7 +15,7 @@ const IMG = {
 };
 
 // ---------- Appartment data ----------
-const appartment = {
+const hotel = {
   name: "Thanos Cozy Apartments",
   region: "Kalloni Lesvos",
   country: "Greece",
@@ -24,11 +24,11 @@ const appartment = {
   intro:
       "Nice Appartment to stay in Skalla Kallonis",
   body: [
-    "<strong>Accommodation:</strong>Thanos Cozy Apartments in Skala Kallonis offers a sun terrace and free WiFi. Each apartment features air-conditioning, a terrace, and a balcony with sea views.",
+    "Accommodation: Thanos Cozy Apartments in Skala Kallonis offers a sun terrace and free WiFi. Each apartment features air-conditioning, a terrace, and a balcony with sea views.",
 
-    "<strong>Modern Amenities:</strong> Guests enjoy a kitchenette, private bathroom, washing machine, and a work desk. Additional facilities include a paid shuttle service, 24-hour front desk, daily housekeeping, and luggage storage.",
+    "Modern Amenities: Guests enjoy a kitchenette, private bathroom, washing machine, and a work desk. Additional facilities include a paid shuttle service, 24-hour front desk, daily housekeeping, and luggage storage.",
 
-  "<strong>Prime Location:</strong> Skala Kallonis Beach is a 4-minute walk away. Nearby attractions include Agia Paraskevi and Olive Museum, each 10 km from the property. Mytilene International Airport is 46 km distant.",
+  " Prime Location: Skala Kallonis Beach is a 4-minute walk away. Nearby attractions include Agia Paraskevi and Olive Museum, each 10 km from the property. Mytilene International Airport is 46 km distant.",
 
   ],
   highlights: [
