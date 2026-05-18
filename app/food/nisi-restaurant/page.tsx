@@ -501,7 +501,7 @@ export default function DessertShopGuidePage() {
                             >
                                 <img
                                     src={img}
-                                    alt="Gallery"
+                                    alt="Galle"
                                     className="w-full h-full object-cover group-hover:scale-110 group-hover:rotate-1 transition-transform duration-700"
                                 />
 
