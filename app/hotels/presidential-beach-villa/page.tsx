@@ -20,7 +20,7 @@ const hotel = {
     name: "Presidential Beach Villa",
     region: "Pyrgi Lesvos",
     country: "Greece",
-    fromPrice: "Reserve",
+    reserve: "Reserve",
     tagline: "A luxury villa in a fanastic village in East Lesvos",
     intro:
         "Welcome to the Presidential Beach Villa in Pyrgi",
@@ -274,12 +274,9 @@ export default function PPUrban() {
                                 }}
                             >
                                 <span className="absolute -top-px left-6 right-6 h-px sm:left-8 sm:right-8" style={{ background: "var(--ms-gold)" }} />
-                                <div className="text-[10px] uppercase tracking-[0.32em]" style={{ color: "var(--ms-muted)" }}>From</div>
                                 <div className="mt-2 flex items-baseline gap-2">
-                                    <span className="ms-display text-5xl">{hotel.fromPrice}</span>
-                                    {/*<span className="text-xs" style={{ color: "var(--ms-muted)" }}>/ night</span>*/}
+                                    <span className="ms-display text-5xl">{hotel.reserve}</span>
                                 </div>
-                                {/*<div className="mt-1 text-xs" style={{ color: "var(--ms-muted)" }}>double occupancy, taxes incl.</div>*/}
 
                                 <a
                                     href={hotel.bookUrl}
