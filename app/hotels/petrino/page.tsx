@@ -271,7 +271,7 @@ export default function PPUrban() {
                                     <span className="ms-display text-5xl">{hotel.fromPrice}</span>
                                     <span className="text-xs" style={{ color: "var(--ms-muted)" }}>/ night</span>
                                 </div>
-                                <div className="mt-1 text-xs" style={{ color: "var(--ms-muted)" }}>double occupancy, taxes incl.</div>
+                                {/*<div className="mt-1 text-xs" style={{ color: "var(--ms-muted)" }}>double occupancy, taxes incl.</div>*/}
 
                                 <a
                                     href={hotel.bookUrl}

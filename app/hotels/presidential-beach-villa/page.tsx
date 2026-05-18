@@ -23,7 +23,7 @@ const hotel = {
     fromPrice: "Reserve",
     tagline: "A luxury villa in a fanastic village in East Lesvos",
     intro:
-        "Welcome to Presidential Beach Villa in Pyrgi",
+        "Welcome to the Presidential Beach Villa in Pyrgi",
     body: [
         "Discover the ultimate expression of luxury living in this stunning 200 sq.m. private villa, ideally located just 7 minutes from the town of Mytilene. Overlooking the breathtaking Gulf of Gera with uninterrupted panoramic sea views, the villa offers a rare blend of privacy, elegance, and tranquility.",
         "At the heart of the experience lies the spectacular private infinity pool, seamlessly merging with the horizon and creating a captivating connection between sky, sea, and landscape.",
@@ -277,9 +277,9 @@ export default function PPUrban() {
                                 <div className="text-[10px] uppercase tracking-[0.32em]" style={{ color: "var(--ms-muted)" }}>From</div>
                                 <div className="mt-2 flex items-baseline gap-2">
                                     <span className="ms-display text-5xl">{hotel.fromPrice}</span>
-                                    <span className="text-xs" style={{ color: "var(--ms-muted)" }}>/ night</span>
+                                    {/*<span className="text-xs" style={{ color: "var(--ms-muted)" }}>/ night</span>*/}
                                 </div>
-                                <div className="mt-1 text-xs" style={{ color: "var(--ms-muted)" }}>double occupancy, taxes incl.</div>
+                                {/*<div className="mt-1 text-xs" style={{ color: "var(--ms-muted)" }}>double occupancy, taxes incl.</div>*/}
 
                                 <a
                                     href={hotel.bookUrl}
@@ -368,8 +368,8 @@ export default function PPUrban() {
                             <p className="ms-eyebrow">From the visit</p>
                         </div>
                         <h2 className="ms-display mt-4 text-4xl leading-tight md:text-6xl">
-                            A few moments<br />
-                            <span className="italic" style={{ color: "var(--ms-gold)" }}>from the stay.</span>
+                            Discover the beauty<br />
+                            <span className="italic" style={{ color: "var(--ms-gold)" }}>of the villas</span>
                         </h2>
                     </div>
 
