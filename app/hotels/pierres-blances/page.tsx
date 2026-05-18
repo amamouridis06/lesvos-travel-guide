@@ -294,7 +294,7 @@ export default function PPUrban() {
                                     className="group mt-7 flex items-center justify-center gap-3 py-4 text-[10px] uppercase tracking-[0.28em] text-white transition-all duration-500 sm:tracking-[0.35em]"
                                     style={{ background: "var(--ms-ink)" }}
                                 >
-                                    Book Direct
+                                    Book Now
                                     <span className="transition-transform duration-500 group-hover:translate-x-1">→</span>
                                 </a>
 
