@@ -474,12 +474,12 @@ export default function DessertShopGuidePage() {
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-5 auto-rows-[220px] sm:auto-rows-[250px]">
                         {[
+                            "/nisi/nisi5.jpg",
                             "/nisi/nisi1.jpg",
                             "/nisi/nisi2.jpg",
                             "/nisi/nisi3.jpg",
-                            "/nisi/nisi4.jpg",
-                            "/nisi/nisi5.jpg",
                             "/nisi/nisi6.jpeg",
+                            "/nisi/nisi4.jpg",
                             "/nisi/nisi7.jpeg",
                             "/nisi/nisi8.jpeg",
                             "/nisi/nisi9.jpeg",

@@ -27,7 +27,7 @@ const hotel = {
     fromPrice: "€129",
     tagline: "Residences in East Lesvos",
     intro:
-        "Welcome to Pierres Blanches Residences in Mytilene",
+        "Welcome to the Pierres Blanches Residences in Mytilene",
     body: [
         "Just a short drive from Mytilene, Pierres Blanches Residences offers a refined hospitality experience that redefines modern travel.",
         "Designed for today’s traveler, it goes beyond accommodation, providing comfort, privacy, and a true sense of home. Ideal for families and groups, each residence combines shared living with personal space, ensuring both connection and independence.",
@@ -376,8 +376,8 @@ export default function PPUrban() {
                             <p className="ms-eyebrow">From the houses</p>
                         </div>
                         <h2 className="ms-display mt-4 text-4xl leading-tight md:text-6xl">
-                            A few photos<br />
-                            <span className="italic" style={{ color: "var(--ms-gold)" }}>from the houses.</span>
+                            "A glimpse <br />
+                            <span className="italic" style={{ color: "var(--ms-gold)" }}>of the houses.</span>
                         </h2>
                     </div>
 
