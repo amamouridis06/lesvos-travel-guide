@@ -229,7 +229,7 @@ export default function DessertShopGuidePage() {
                         initial={{ scale: 1.2, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
                         transition={{ duration: 1.8, ease: "easeOut" }}
-                        src="/nisi/nisi10.jpeg"
+                        src="/nisi/nisi10.jpg"
                         alt="Chef"
                         className="w-full h-full object-cover"
                     />
@@ -250,7 +250,7 @@ export default function DessertShopGuidePage() {
                         transition={{ delay: 0.4, duration: 1 }}
                         className="text-5xl sm:text-6xl md:text-8xl font-black leading-none mb-6 sm:mb-8 px-2"
                     >
-                        Petite
+                        Nisi Restaurant
                         <span className="block bg-gradient-to-r from-cyan-500 via-sky-400 to-orange-300 bg-clip-text text-transparent">
 
             </span>
@@ -295,10 +295,10 @@ export default function DessertShopGuidePage() {
                             title: "Average",
                             value: "€10 — €20",
                         },
-                        {
-                            title: "Instagram",
-                            value: "restaurant_nisi",
-                        },
+                        // {
+                        //     title: "Instagram",
+                        //     value: "restaurant_nisi",
+                        // },
                         {
                             icon: <Phone className="w-7 h-7" />,
                             title: "Average",
@@ -364,8 +364,8 @@ export default function DessertShopGuidePage() {
                     </h2>
 
                     <p className="max-w-4xl mx-auto text-base sm:text-lg md:text-xl text-slate-900 font-medium leading-relaxed px-2">
-                        <p>The Nisi Restaurant was founded by two brothers whose journey took them across borders, through different kitchens, and into the heart of new flavors, cultures, and experiences.</p>,
-                        <p>Inspired by the places we visited, the people we met, and the hospitality that shaped us, we created a warm, relaxed, and authentic space where good food, fine wine, and great company come together.</p>,
+                        <p>The Nisi Restaurant was founded by two brothers whose journey took them across borders, through different kitchens, and into the heart of new flavors, cultures, and experiences.</p>
+                        <p>Inspired by the places we visited, the people we met, and the hospitality that shaped us, we created a warm, relaxed, and authentic space where good food, fine wine, and great company come together.</p>
                         <p>The Nisi Restaurant is more than just a place to eat. It is part of our story — a place where every dish is prepared with care, every table is welcomed with warmth, and every shared moment truly matters.</p>
                     </p>
                 </motion.div>
@@ -409,11 +409,11 @@ export default function DessertShopGuidePage() {
                             className="rounded-[32px] sm:rounded-[40px] h-[420px] sm:h-[700px] w-full object-cover shadow-[0_40px_120px_rgba(0,0,0,0.6)]"
                         />
 
-                        <div className="absolute bottom-4 right-4 sm:-bottom-10 sm:-right-10 bg-gradient-to-r from-cyan-400 to-orange-300 rounded-[24px] sm:rounded-[30px] p-5 sm:p-8 shadow-2xl max-w-[220px] sm:max-w-xs">
-                            <p className="text-sm uppercase tracking-[0.2em] text-slate-800 font-semibold mb-2">
-                                Waffle bites
-                            </p>
-                        </div>
+                        {/*<div className="absolute bottom-4 right-4 sm:-bottom-10 sm:-right-10 bg-gradient-to-r from-cyan-400 to-orange-300 rounded-[24px] sm:rounded-[30px] p-5 sm:p-8 shadow-2xl max-w-[220px] sm:max-w-xs">*/}
+                        {/*    <p className="text-sm uppercase tracking-[0.2em] text-slate-800 font-semibold mb-2">*/}
+                        {/*        Waffle bites*/}
+                        {/*    </p>*/}
+                        {/*</div>*/}
                     </motion.div>
 
                     <motion.div
@@ -441,7 +441,7 @@ export default function DessertShopGuidePage() {
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
                             {[
-                                "Artisan Desserts",
+                                "Artisan Dishes",
                                 "Tourist Favorite",
                             ].map((item, i) => (
                                 <motion.div
@@ -474,7 +474,6 @@ export default function DessertShopGuidePage() {
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-5 auto-rows-[220px] sm:auto-rows-[250px]">
                         {[
-                            "/nisi/nisi_hero.jpg",
                             "/nisi/nisi1.jpg",
                             "/nisi/nisi2.jpg",
                             "/nisi/nisi3.jpg",
