@@ -170,12 +170,14 @@ export default function DessertShopGuidePage() {
                     </h2>
 
                     <p className="max-w-4xl mx-auto text-base sm:text-lg md:text-xl text-slate-900 font-medium leading-relaxed px-2">
-                        Petite in the port of Molyvos is the new must-visit destination for take-away pleasure, having closed just a month
-                        of operation. the experience starts from our characteristic window: order at the entrance, you receive in the hand and
+                        <p>Petite in the port of Molyvos is the new must-visit destination for take-away pleasure, having closed just a month
+                        of operation. </p>
+                        <p>The experience starts from our characteristic window: order at the entrance, you receive in the hand and
                         enjoy the create. We are famous for our fluffy pancakes, our waffle bites and our sweet crepes, but the real game starts
-                        with the infinite combinations you can create. With a huge variety of rich beaches, fine chocolates and any kind of toppings,
+                        with the infinite combinations you can create. </p>
+                        <p>With a huge variety of rich beaches, fine chocolates and any kind of toppings,
                         every order is unique. For those looking for something even cooler, our proposals are complemented by our enjoyable ice cream,
-                        which accompanies perfectly each In Petite, quality meets creativity, offering the sweetest attitude in the heart of Molyvos!
+                            which accompanies perfectly each In Petite, quality meets creativity, offering the sweetest attitude in the heart of Molyvos!</p>
                     </p>
                 </motion.div>
 
@@ -241,7 +243,7 @@ export default function DessertShopGuidePage() {
                         </h2>
 
                         <p className="text-slate-900 text-base sm:text-lg md:text-xl leading-relaxed mb-8 sm:mb-10">
-                            In the picturesque village of Molyvos, Lesvos, Sweet Athens offers a unique tasting experience with fluffy pancakes, delicious waffles, and handmade desserts by the sea. Featuring island-inspired aesthetics, premium ingredients, and a cozy atmosphere, it is the perfect spot for brunch, sweets, and photos that capture the feeling of summer in the Aegean.
+                            In the picturesque village of Molyvos, Lesvos, Petite offers a unique tasting experience with fluffy pancakes, delicious waffles, and handmade desserts by the sea. Featuring island-inspired aesthetics, premium ingredients, and a cozy atmosphere, it is the perfect spot for brunch, sweets, and photos that capture the feeling of summer in the Aegean.
 
                         </p>
 

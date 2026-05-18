@@ -229,7 +229,7 @@ export default function DessertShopGuidePage() {
                         initial={{ scale: 1.2, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
                         transition={{ duration: 1.8, ease: "easeOut" }}
-                        src="/nisi/nisi5.jpg"
+                        src="/nisi/nisi10.jpeg"
                         alt="Chef"
                         className="w-full h-full object-cover"
                     />
@@ -289,11 +289,6 @@ export default function DessertShopGuidePage() {
                             icon: <Clock3 className="w-7 h-7" />,
                             title: "Open Daily",
                             value: "10:00 - 00:00",
-                        },
-                        {
-                            icon: <CakeSlice className="w-7 h-7" />,
-                            title: "Signature",
-                            value: "Pancakes & Wafles",
                         },
                         {
                             icon: <Euro className="w-7 h-7" />,
@@ -437,7 +432,10 @@ export default function DessertShopGuidePage() {
                         </h2>
 
                         <p className="text-slate-900 text-base sm:text-lg md:text-xl leading-relaxed mb-8 sm:mb-10">
-                            In the picturesque village of Molyvos, Lesvos, Sweet Athens offers a unique tasting experience with fluffy pancakes, delicious waffles, and handmade desserts by the sea. Featuring island-inspired aesthetics, premium ingredients, and a cozy atmosphere, it is the perfect spot for brunch, sweets, and photos that capture the feeling of summer in the Aegean.
+                            Located in the picturesque village of Molyvos, Lesvos, Nisi Restaurant offers a relaxed dining
+                            experience by the sea, combining Mediterranean flavors, fresh local ingredients, and an elegant
+                            island atmosphere. With beautiful views, carefully crafted dishes, and a warm summer ambiance,
+                            it is the perfect spot for lunch, dinner, and unforgettable evenings in the Aegean.
 
                         </p>
 
