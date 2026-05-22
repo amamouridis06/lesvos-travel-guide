@@ -194,6 +194,14 @@ import { motion } from "framer-motion";
 import { MapPin, Clock3, CakeSlice, Euro, Star, Phone } from "lucide-react";
 
 export default function DessertShopGuidePage() {
+    const [screenWidth, setScreenWidth] = useState(0);
+
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            setScreenWidth(window.innerWidth);
+        }
+    }, []);
+
     return (
         <main className="bg-gradient-to-b from-white via-sky-50 to-cyan-100 text-slate-800 overflow-hidden scroll-smooth relative">
             {/* Animated Background Blobs */}
