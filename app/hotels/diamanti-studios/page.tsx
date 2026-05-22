@@ -18,8 +18,8 @@ const hotel = {
     name: "Diamanti Studios ",
     region: "Skala Kallonis Lesvos",
     country: "Greece",
-    fromPrice: "€73",
-    tagline: "A studio in a fanastic village in Centre Lesvos",
+    fromPrice: "€62",
+    tagline: "Studios in a fanastic village in Centre Lesvos",
     intro:
         "Welcome to Diamanti Studios in Skala Kallonis",
     body: [
@@ -43,7 +43,7 @@ const hotel = {
     ],
     knowBefore: [
         "Located in the Centre Lesvos",
-        "Valid ID and credit card required at check-in",
+        "Located in the Centre Lesvos",
         "Just a little steps far for the beach of Skala Kallonis, perfect for walking",
         "View in sea",
         "The Skala Kallonis square is just 4 minutes far",
@@ -254,7 +254,7 @@ export default function PPUrban() {
 
                         <div className="mt-12 flex items-center gap-4 text-xs uppercase tracking-[0.24em] md:tracking-[0.3em]" style={{ color: "var(--ms-muted)" }}>
                             <span className="ms-hairline" />
-                            <span>Diamanti Studio</span>
+                            <span>Diamanti Studios</span>
                         </div>
                     </main>
 
@@ -349,7 +349,8 @@ export default function PPUrban() {
                         <div className="mt-8 space-y-4 text-sm" style={{ color: "var(--ms-muted)" }}>
                             <p><strong className="text-[color:var(--ms-fg)]">Phone:</strong> +30 6933242006 </p>
                             <p><strong className="text-[color:var(--ms-fg)]">Region:</strong> Skala Kallonis, Lesvos </p>
-                            <p><strong className="text-[color:var(--ms-fg)]">Instagram:</strong> @diamantistudio</p>
+                            <p><strong className="text-[color:var(--ms-fg)]">Email:</strong> nanidisst@yahoo.gr </p>
+                            <p><strong className="text-[color:var(--ms-fg)]">Instagram:</strong> @diamantistudios</p>
                         </div>
                     </div>
                 </div>
