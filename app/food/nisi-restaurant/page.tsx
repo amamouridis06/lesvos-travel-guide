@@ -271,8 +271,8 @@ export default function DessertShopGuidePage() {
                         transition={{ delay: 0.2, duration: 0.4 }}
                         className="max-w-3xl mx-auto text-base sm:text-lg md:text-2xl text-slate-900 leading-relaxed mb-10 sm:mb-12 px-2"
                     >
-                        A premium dessert destination in the port of Molyvos with pancakes, waffles and crepes for
-                        travelers looking for something really unique.
+                        A sophisticated dining destination in Molyvos, offering premium meats, fresh fish, and an exceptional wine selection in an elegant atmosphere
+                        designed for guests seeking authentic flavors and a truly memorable culinary experience.
                     </motion.p>
 
                     <motion.div
