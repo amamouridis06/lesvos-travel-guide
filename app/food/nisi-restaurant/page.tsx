@@ -190,6 +190,7 @@
 
 "use client";
 
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { MapPin, Clock3, CakeSlice, Euro, Star, Phone } from "lucide-react";
 
