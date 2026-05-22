@@ -405,15 +405,15 @@ export default function DessertShopGuidePage() {
                     >
                         <img
                             src="/nisi/nisi6.jpeg"
-                            alt="Dessert"
+                            alt="food"
+                            className="rounded-[32px] sm:rounded-[40px] h-[420px] sm:h-[700px] w-full object-cover shadow-[0_40px_120px_rgba(0,0,0,0.6)]"
+                        />
+                        <img
+                            src="/nisi/nisi5.jpeg"
+                            alt="food"
                             className="rounded-[32px] sm:rounded-[40px] h-[420px] sm:h-[700px] w-full object-cover shadow-[0_40px_120px_rgba(0,0,0,0.6)]"
                         />
 
-                        {/*<div className="absolute bottom-4 right-4 sm:-bottom-10 sm:-right-10 bg-gradient-to-r from-cyan-400 to-orange-300 rounded-[24px] sm:rounded-[30px] p-5 sm:p-8 shadow-2xl max-w-[220px] sm:max-w-xs">*/}
-                        {/*    <p className="text-sm uppercase tracking-[0.2em] text-slate-800 font-semibold mb-2">*/}
-                        {/*        Waffle bites*/}
-                        {/*    </p>*/}
-                        {/*</div>*/}
                     </motion.div>
 
                     <motion.div
@@ -475,7 +475,7 @@ export default function DessertShopGuidePage() {
                     {/* MOBILE = 2 COLS / TABLET+ = 4 COLS */}
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-5 auto-rows-[150px] sm:auto-rows-[220px] md:auto-rows-[250px]">
                         {[
-                            "/nisi/nisi5.jpg",
+
                             "/nisi/nisi8.jpeg",
                             "/nisi/nisi2.jpg",
                             "/nisi/nisi6.jpeg",
