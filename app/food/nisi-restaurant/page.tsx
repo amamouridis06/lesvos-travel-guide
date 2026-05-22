@@ -401,19 +401,32 @@ export default function DessertShopGuidePage() {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.9 }}
                         viewport={{ once: true }}
-                        className="relative"
+                        className="relative grid grid-cols-2 gap-4 sm:gap-6"
                     >
                         <img
                             src="/nisi/nisi6.jpeg"
                             alt="food"
-                            className="rounded-[32px] sm:rounded-[40px] h-[420px] sm:h-[700px] w-full object-cover shadow-[0_40px_120px_rgba(0,0,0,0.6)]"
+                            className="
+          rounded-3xl sm:rounded-[40px]
+          h-[240px] sm:h-[700px]
+          w-full
+          object-cover
+          shadow-[0_20px_60px_rgba(0,0,0,0.35)]
+        "
                         />
+
                         <img
                             src="/nisi/nisi5.jpeg"
                             alt="food"
-                            className="rounded-[32px] sm:rounded-[40px] h-[420px] sm:h-[700px] w-full object-cover shadow-[0_40px_120px_rgba(0,0,0,0.6)]"
+                            className="
+          rounded-3xl sm:rounded-[40px]
+          h-[240px] sm:h-[700px]
+          w-full
+          object-cover
+          shadow-[0_20px_60px_rgba(0,0,0,0.35)]
+          mt-8 sm:mt-16
+        "
                         />
-
                     </motion.div>
 
                     <motion.div
