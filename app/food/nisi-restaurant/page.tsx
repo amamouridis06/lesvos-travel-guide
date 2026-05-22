@@ -514,8 +514,8 @@ export default function DessertShopGuidePage() {
                                 transition={{ delay: i * 0.08, duration: 0.5 }}
                                 viewport={{ once: true }}
                                 whileHover={{
-                                    scale: window > 768 ? 1.04 : 1,
-                                    y: window > 768 ? -8 : 0,
+                                    scale:screenWidth > 768 ? 1.04 : 1,
+                                    y: screenWidth> 768 ? -8 : 0,
                                 }}
                                 className={`overflow-hidden rounded-2xl sm:rounded-[28px] group relative
             
