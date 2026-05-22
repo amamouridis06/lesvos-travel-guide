@@ -104,6 +104,15 @@ const Bars: FoodItem[] = [
     alt: "Naf",
     href: "/food/nafs-cocktail-corner",
   },
+  {
+    title: "Rhino",
+    category: "Bars",
+    description: "Enjoy cocktails, music, and nightlife in the city ",
+    location: "Mytilene, Lesvos",
+    image: "/rhino/rhino-logo.jpg",
+    alt: "Rhino",
+    href: "/food/rhino",
+  },
 ];
 
 const locProd: FoodItem[] = [

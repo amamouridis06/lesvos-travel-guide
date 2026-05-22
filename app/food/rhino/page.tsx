@@ -39,8 +39,8 @@ export default function DessertShopGuidePage() {
                         initial={{ scale: 1.2, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
                         transition={{ duration: 1.8, ease: "easeOut" }}
-                        src="/petite/petite9.jpg"
-                        alt="Luxury Desserts"
+                        src="/rhino/rhino1.jpg"
+                        alt="Coctail"
                         className="w-full h-full object-cover"
                     />
 
@@ -60,7 +60,7 @@ export default function DessertShopGuidePage() {
                         transition={{ delay: 0.4, duration: 1 }}
                         className="text-5xl sm:text-6xl md:text-8xl font-black leading-none mb-6 sm:mb-8 px-2"
                     >
-                        Petite
+                        Rhino
                         <span className="block bg-gradient-to-r from-cyan-500 via-sky-400 to-orange-300 bg-clip-text text-transparent">
 
             </span>
@@ -93,22 +93,22 @@ export default function DessertShopGuidePage() {
                         {
                             icon: <MapPin className="w-7 h-7" />,
                             title: "Location",
-                            value: "In port of Molyvos",
+                            value: "Aigaiou 5, Mytilene, 81100 ",
                         },
                         {
                             icon: <Clock3 className="w-7 h-7" />,
                             title: "Open Daily",
-                            value: "17:00 — 23:00",
+                            value: "8:30 — 3:00",
                         },
                         {
                             icon: <CakeSlice className="w-7 h-7" />,
                             title: "Signature",
-                            value: "Pancakes & Wafles",
+                            value: "Cocktails",
                         },
                         {
                             icon: <Euro className="w-7 h-7" />,
                             title: "Average",
-                            value: "€10 — €20",
+                            value: "€5 — €10",
                         },
                     ].map((item, i) => (
                         <motion.div
@@ -170,20 +170,19 @@ export default function DessertShopGuidePage() {
                     </h2>
 
                     <p className="max-w-4xl mx-auto text-base sm:text-lg md:text-xl text-slate-900 font-medium leading-relaxed px-2">
-                        <p>Petite in the port of Molyvos is the new must-visit destination for take-away pleasure, having closed just a month
-                            of operation. </p>
-                        <p>The experience starts from our characteristic window: order at the entrance, you receive in the hand and
-                            enjoy the create. We are famous for our fluffy pancakes, our waffle bites and our sweet crepes, but the real game starts
-                            with the infinite combinations you can create. </p>
-                        <p>With a huge variety of rich beaches, fine chocolates and any kind of toppings,
-                            every order is unique. For those looking for something even cooler, our proposals are complemented by our enjoyable ice cream,
-                            which accompanies perfectly each In Petite, quality meets creativity, offering the sweetest attitude in the heart of Molyvos!</p>
+                        <p>Rhino Bar in Mytilene is a destination of its own, offering a unique blend of simplicity, quality, and atmosphere.
+                            From the very first hours of the day, it welcomes guests with exceptional coffee, crafted from carefully selected blends
+                            and prepared with technical precision for the perfect start to your morning. </p>
+                        <p>As the day unfolds, the space transforms into an inviting evening spot, where a curated selection of drinks and creative cocktails
+                            takes center stage. The warm hospitality, smiling staff, and relaxed ambiance — especially on its cool balcony — create an experience
+                            that feels both effortless and memorable. </p>
+                        <p>Whether you are seeking an energizing coffee break or a refreshing night out, Rhino is a place that effortlessly wins you over.</p>
                     </p>
                 </motion.div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6">
                     {[
-                        "/petite/petite1.jpg",
+                        "/rhino/rhino4.jpg",
                     ].map((img, i) => (
                         <motion.div
                             key={i}
@@ -196,7 +195,7 @@ export default function DessertShopGuidePage() {
                         >
                             <img
                                 src={img}
-                                alt="Dessert Gallery"
+                                alt="bar"
                                 className="h-[320px] sm:h-[420px] w-full object-cover hover:scale-110 transition-transform duration-700"
                             />
                         </motion.div>
@@ -282,16 +281,12 @@ export default function DessertShopGuidePage() {
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-5 auto-rows-[220px] sm:auto-rows-[250px]">
                         {[
-                            "/petite/petite2.jpg",
-                            "/petite/petite3.jpg",
-                            "/petite/petite4.jpg",
-                            "/petite/petite12.jpg",
-                            "/petite/petite5.jpg",
-                            "/petite/petite6.jpg",
-                            "/petite/petite7.jpg",
-                            "/petite/petite8.jpg",
-                            "/petite/petite9.jpg",
-                            "/petite/petite10.jpg",
+                            "/rhino/rhino2.jpg",
+                            "/rhino/rhino3.jpg",
+                            "/rhino/rhino4.jpg",
+                            "/rhino/rhino6.jpg",
+                            "/rhino/rhino5.jpg",
+                            "/rhino/rhino1.jpg"
 
                         ].map((img, i) => (
                             <motion.div
