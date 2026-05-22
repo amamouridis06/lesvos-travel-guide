@@ -425,7 +425,7 @@ export default function DessertShopGuidePage() {
                         />
 
                         <img
-                            src="/nisi/nisi5.jpeg"
+                            src="/nisi/nisi5.jpg"
                             alt="food"
                             className="
           rounded-3xl sm:rounded-[40px]
