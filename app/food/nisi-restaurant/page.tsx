@@ -458,32 +458,32 @@ export default function DessertShopGuidePage() {
             </section>
 
             {/* FULL GALLERY */}
-            <section className="px-4 sm:px-6 pb-20 sm:pb-32">
+            <section className="px-3 sm:px-6 pb-16 sm:pb-32">
                 <div className="max-w-7xl mx-auto">
-                    <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 sm:mb-14 gap-5 sm:gap-6">
+                    <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 sm:mb-14 gap-4 sm:gap-6">
                         <div>
-              <span className="text-cyan-500 uppercase tracking-[0.3em] text-sm font-bold">
-                Photo Gallery
-              </span>
+        <span className="text-cyan-500 uppercase tracking-[0.25em] text-xs sm:text-sm font-bold">
+          Photo Gallery
+        </span>
 
-                            <h2 className="text-3xl sm:text-5xl font-black mt-3 sm:mt-4 leading-tight">
+                            <h2 className="text-2xl sm:text-5xl font-black mt-2 sm:mt-4 leading-tight">
                                 More Photos
                             </h2>
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-5 auto-rows-[220px] sm:auto-rows-[250px]">
+                    {/* MOBILE = 2 COLS / TABLET+ = 4 COLS */}
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-5 auto-rows-[150px] sm:auto-rows-[220px] md:auto-rows-[250px]">
                         {[
                             "/nisi/nisi5.jpg",
-                            "/nisi/nisi1.jpg",
+                            "/nisi/nisi8.jpeg",
                             "/nisi/nisi2.jpg",
                             "/nisi/nisi6.jpeg",
                             "/nisi/nisi3.jpg",
                             "/nisi/nisi4.jpg",
                             "/nisi/nisi7.jpeg",
-                            "/nisi/nisi8.jpeg",
                             "/nisi/nisi9.jpeg",
-
+                            "/nisi/nisi1.jpg",
                         ].map((img, i) => (
                             <motion.div
                                 key={i}
@@ -491,18 +491,27 @@ export default function DessertShopGuidePage() {
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 transition={{ delay: i * 0.08, duration: 0.5 }}
                                 viewport={{ once: true }}
-                                whileHover={{ scale: 1.04, y: -8 }}
-                                className={`overflow-hidden rounded-[28px] group relative ${
-                                    i === 0 || i === 3 ? "md:col-span-2 md:row-span-2" : ""
-                                }`}
+                                whileHover={{
+                                    scale: window.innerWidth > 768 ? 1.04 : 1,
+                                    y: window.innerWidth > 768 ? -8 : 0,
+                                }}
+                                className={`overflow-hidden rounded-2xl sm:rounded-[28px] group relative
+            
+                                ${
+                                    i === 0 || i === 3
+                                        ? "col-span-2 row-span-2 md:col-span-2 md:row-span-2"
+                                        : ""
+                                }
+                               `}
                             >
                                 <img
                                     src={img}
                                     alt="Galle"
-                                    className="w-full h-full object-cover group-hover:scale-110 group-hover:rotate-1 transition-transform duration-700"
+                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 md:group-hover:scale-110"
                                 />
 
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
+                                {/* DARK OVERLAY */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-70 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-400" />
                             </motion.div>
                         ))}
                     </div>
