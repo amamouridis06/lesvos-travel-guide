@@ -26,35 +26,71 @@ export default function VateraPage() {
 
           {/* Floating content */}
           <div className="absolute inset-0 flex items-center justify-center px-6">
-            <div className="text-center text-white max-w-3xl">
-              <p className="uppercase tracking-[0.3em] text-sm text-yellow-400 mb-4">
-                Lesvos Island • Greece
-              </p>
+            <div className="max-w-7xl w-full grid lg:grid-cols-2 gap-14 items-center">
 
-              <h1 className="text-5xl md:text-7xl font-extrabold leading-tight drop-shadow-2xl">
-                Vatera Beach
-              </h1>
+              {/* LEFT CONTENT */}
+              <div className="text-white text-center lg:text-left">
+                <p className="uppercase tracking-[0.3em] text-sm text-yellow-400 mb-4">
+                  Lesvos Island • Greece
+                </p>
 
-              <p className="mt-6 text-lg md:text-2xl text-gray-200 leading-relaxed">
-                Endless golden sand, crystal-clear waters, unforgettable sunsets,
-                and authentic Greek summer vibes.
-              </p>
+                <h1 className="text-5xl md:text-7xl font-extrabold leading-tight drop-shadow-2xl">
+                  Vatera Beach
+                </h1>
 
-              <div className="mt-10 flex flex-wrap justify-center gap-4">
-                <Link
-                    href="/beaches"
-                    className="px-8 py-4 rounded-full bg-yellow-500 text-black font-semibold hover:bg-yellow-400 transition-all duration-300 shadow-2xl"
-                >
-                  Explore Beaches
-                </Link>
+                <p className="mt-6 text-lg md:text-2xl text-gray-200 leading-relaxed max-w-2xl">
+                  Endless golden sand, crystal-clear waters, unforgettable sunsets,
+                  and authentic Greek summer vibes.
+                </p>
 
-                <a
-                    href="#discover"
-                    className="px-8 py-4 rounded-full border border-white/50 backdrop-blur-md bg-white/10 hover:bg-white/20 transition-all duration-300"
-                >
-                  Discover More
-                </a>
+                <div className="mt-10 flex flex-wrap justify-center lg:justify-start gap-4">
+                  <Link
+                      href="/beaches"
+                      className="px-8 py-4 rounded-full bg-yellow-500 text-black font-semibold hover:bg-yellow-400 transition-all duration-300 shadow-2xl"
+                  >
+                    Explore Beaches
+                  </Link>
+
+                  <a
+                      href="#discover"
+                      className="px-8 py-4 rounded-full border border-white/50 backdrop-blur-md bg-white/10 hover:bg-white/20 transition-all duration-300"
+                  >
+                    Discover More
+                  </a>
+                </div>
               </div>
+
+              {/* RIGHT IMAGE CARD */}
+              <div className="hidden lg:flex justify-center">
+                <div className="relative w-[420px] h-[520px] rounded-[2rem] overflow-hidden shadow-[0_20px_80px_rgba(0,0,0,0.5)] border border-white/20 backdrop-blur-md">
+
+                  <Image
+                      src="/wetlands.jpg"
+                      alt="Vatera Beach"
+                      fill
+                      className="object-cover hover:scale-105 transition duration-700"
+                  />
+
+                  {/* Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+
+                  {/* Bottom content */}
+                  <div className="absolute bottom-0 left-0 p-8 text-white">
+                    <p className="text-sm uppercase tracking-[0.25em] text-yellow-400">
+                      Southern Lesvos
+                    </p>
+
+                    <h3 className="text-3xl font-bold mt-2">
+                      Pure Summer Escape
+                    </h3>
+
+                    <p className="mt-3 text-gray-200 leading-relaxed">
+                      Relax on one of the longest and most beautiful beaches in Greece.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
 
@@ -94,7 +130,7 @@ export default function VateraPage() {
           {/* Image Card */}
           <div className="relative h-[500px] rounded-[2rem] overflow-hidden shadow-2xl group">
             <Image
-                src="/vatera.jpg"
+                src="/vatera1.jpg"
                 alt="Sunset at Vatera Beach"
                 fill
                 className="object-cover group-hover:scale-105 transition duration-700"
@@ -226,7 +262,7 @@ export default function VateraPage() {
           <div className="lg:col-span-2">
             <div className="rounded-[2rem] overflow-hidden shadow-2xl h-[500px] border border-neutral-200">
               <iframe
-                  src="https://www.google.com/maps/place/%CE%92%CE%B1%CF%84%CE%B5%CF%81%CE%AC+813+00,+%CE%95%CE%BB%CE%BB%CE%AC%CE%B4%CE%B1/@39.0205683,26.1787428,4538m/data=!3m2!1e3!4b1!4m6!3m5!1s0x14baef8e3ce47107:0xa00bd2f74c274e0!8m2!3d39.0195659!4d26.1978707!16zL20vMDJsOG43?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16050.937127984585!2d26.19954211889825!3d39.01992357368257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14baef8e3ce47107%3A0xa00bd2f74c274e0!2sVatera%20813%2000!5e1!3m2!1sen!2sgr!4v1779542490198!5m2!1sen!2sgr"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -295,7 +331,7 @@ export default function VateraPage() {
         <section className="relative py-28 overflow-hidden">
           <div className="absolute inset-0">
             <Image
-                src="/vatera.jpg"
+                src="/ouzo.jpg"
                 alt="Vatera background"
                 fill
                 className="object-cover"
