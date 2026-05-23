@@ -12,90 +12,118 @@ export default function VateraPage() {
   return (
       <main className="bg-white text-neutral-900 overflow-hidden">
         {/* HERO */}
-        <section className="relative h-screen w-full">
+        <section className="relative min-h-screen w-full overflow-hidden">
+
+          {/* BACKGROUND IMAGE */}
           <Image
               src="/vatera.jpg"
-              alt="Vatera Beach Lesvos"
+              alt="Vatera Beach"
               fill
               priority
-              className="object-cover scale-105"
+              className="object-cover"
           />
 
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/20" />
+          {/* DARK CINEMATIC OVERLAY */}
+          <div className="absolute inset-0 bg-black/50" />
 
-          {/* Floating content */}
-          <div className="absolute inset-0 flex items-center justify-center px-6">
-            <div className="max-w-7xl w-full grid lg:grid-cols-2 gap-14 items-center">
+          {/* GOLDEN LIGHT EFFECT */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent" />
 
-              {/* LEFT CONTENT */}
-              <div className="text-white text-center lg:text-left">
-                <p className="uppercase tracking-[0.3em] text-sm text-yellow-400 mb-4">
+          {/* BLUR LIGHT */}
+          <div className="absolute top-1/2 left-1/3 w-[500px] h-[500px] bg-yellow-400/10 blur-[120px] rounded-full" />
+
+          {/* CONTENT */}
+          <div className="relative z-10 max-w-7xl mx-auto px-6 min-h-screen flex items-center">
+
+            <div className="grid lg:grid-cols-2 gap-20 items-center w-full">
+
+              {/* LEFT */}
+              <div className="text-white">
+
+                <p className="uppercase tracking-[0.35em] text-yellow-400 text-sm mb-6">
                   Lesvos Island • Greece
                 </p>
 
-                <h1 className="text-5xl md:text-7xl font-extrabold leading-tight drop-shadow-2xl">
-                  Vatera Beach
+                <h1 className="text-6xl md:text-8xl font-black leading-[0.95] tracking-tight">
+                  Vatera
+                  <span className="block text-yellow-400">
+            Beach
+          </span>
                 </h1>
 
-                <p className="mt-6 text-lg md:text-2xl text-gray-200 leading-relaxed max-w-2xl">
-                  Endless golden sand, crystal-clear waters, unforgettable sunsets,
-                  and authentic Greek summer vibes.
+                <p className="mt-8 text-xl md:text-2xl text-gray-200 leading-relaxed max-w-xl">
+                  Endless golden sand, crystal-clear waters,
+                  unforgettable sunsets and authentic Greek summer vibes.
                 </p>
 
-                <div className="mt-10 flex flex-wrap justify-center lg:justify-start gap-4">
+                <div className="mt-10 flex flex-wrap gap-5">
+
                   <Link
                       href="/beaches"
-                      className="px-8 py-4 rounded-full bg-yellow-500 text-black font-semibold hover:bg-yellow-400 transition-all duration-300 shadow-2xl"
+                      className="px-8 py-4 rounded-full bg-yellow-500 text-black font-bold hover:bg-yellow-400 transition-all duration-300 shadow-[0_10px_40px_rgba(234,179,8,0.4)]"
                   >
                     Explore Beaches
                   </Link>
 
                   <a
                       href="#discover"
-                      className="px-8 py-4 rounded-full border border-white/50 backdrop-blur-md bg-white/10 hover:bg-white/20 transition-all duration-300"
+                      className="px-8 py-4 rounded-full border border-white/30 bg-white/10 backdrop-blur-md hover:bg-white/20 transition-all duration-300"
                   >
                     Discover More
                   </a>
+
                 </div>
+
               </div>
 
-              {/* RIGHT IMAGE CARD */}
-              <div className="hidden lg:flex justify-center">
-                <div className="relative w-[420px] h-[520px] rounded-[2rem] overflow-hidden shadow-[0_20px_80px_rgba(0,0,0,0.5)] border border-white/20 backdrop-blur-md">
+              {/* RIGHT FLOATING CARD */}
+              <div className="hidden lg:flex justify-end">
+
+                <div className="relative w-[380px] h-[540px] rounded-[2.5rem] overflow-hidden border border-white/20 shadow-[0_20px_80px_rgba(0,0,0,0.6)] backdrop-blur-xl hover:-translate-y-3 transition duration-700">
 
                   <Image
-                      src="/wetlands.jpg"
-                      alt="Vatera Beach"
+                      src="/vatera2.jpg"
+                      alt="Vatera View"
                       fill
-                      className="object-cover hover:scale-105 transition duration-700"
+                      className="object-cover hover:scale-110 transition duration-1000"
                   />
 
                   {/* Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent" />
 
-                  {/* Bottom content */}
+                  {/* Floating glass badge */}
+                  <div className="absolute top-6 left-6 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm">
+                    ✨ Southern Lesvos
+                  </div>
+
+                  {/* Bottom Content */}
                   <div className="absolute bottom-0 left-0 p-8 text-white">
-                    <p className="text-sm uppercase tracking-[0.25em] text-yellow-400">
-                      Southern Lesvos
+
+                    <p className="uppercase tracking-[0.3em] text-yellow-400 text-xs mb-3">
+                      Pure Summer Escape
                     </p>
 
-                    <h3 className="text-3xl font-bold mt-2">
-                      Pure Summer Escape
+                    <h3 className="text-4xl font-bold leading-tight">
+                      One of the most beautiful beaches in Greece
                     </h3>
 
-                    <p className="mt-3 text-gray-200 leading-relaxed">
-                      Relax on one of the longest and most beautiful beaches in Greece.
+                    <p className="mt-4 text-gray-300 leading-relaxed">
+                      Relax, swim, explore and enjoy authentic island life by the sea.
                     </p>
+
                   </div>
+
                 </div>
+
               </div>
 
             </div>
+
           </div>
 
-          {/* Bottom fade */}
-          <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white to-transparent" />
+          {/* BOTTOM FADE */}
+          <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-white to-transparent" />
+
         </section>
 
         {/* DISCOVER */}
