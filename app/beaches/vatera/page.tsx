@@ -1,122 +1,331 @@
 import Image from "next/image";
 import Link from "next/link";
+import { MapPin, Waves, Sunset, Car, Umbrella, Trees } from "lucide-react";
 
 export const metadata = {
-  title: "Παραλία Βατερά",
+  title: "Vatera Beach | Lesvos",
   description:
-    "Η παραλία Βατερά στη Λέσβο: η μεγαλύτερη παραλία του νησιού, ιδανική για χαλάρωση, οικογένειες και καλό φαγητό δίπλα στη θάλασσα.",
+      "Discover Vatera Beach in Lesvos — a breathtaking 8km sandy coastline with crystal-clear waters, seaside taverns, sunsets, and relaxing summer vibes.",
 };
 
 export default function VateraPage() {
   return (
-    <main className="bg-neutral-100 text-neutral-900">
+      <main className="bg-white text-neutral-900 overflow-hidden">
+        {/* HERO */}
+        <section className="relative h-screen w-full">
+          <Image
+              src="/vatera.jpg"
+              alt="Vatera Beach Lesvos"
+              fill
+              priority
+              className="object-cover scale-105"
+          />
 
-      {/* HERO */}
-      <section className="relative h-[60vh] w-full">
-        <Image
-          src="/vatera.jpg"
-          alt="Παραλία Βατερά Λέσβος"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-black/40" />
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/20" />
 
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-center text-white px-6">
-          <h1 className="text-4xl md:text-5xl font-bold">
-            Beach of Vatera
-          </h1>
-          <p className="mt-2 text-lg text-gray-200">
-            The largest beach in Lesvos, perfect for relaxation and family holidays.
-          </p>
-        </div>
-      </section>
+          {/* Floating content */}
+          <div className="absolute inset-0 flex items-center justify-center px-6">
+            <div className="text-center text-white max-w-3xl">
+              <p className="uppercase tracking-[0.3em] text-sm text-yellow-400 mb-4">
+                Lesvos Island • Greece
+              </p>
 
-      {/* CONTENT */}
-      <section className="max-w-5xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-12">
+              <h1 className="text-5xl md:text-7xl font-extrabold leading-tight drop-shadow-2xl">
+                Vatera Beach
+              </h1>
 
-        {/* MAIN CONTENT */}
-        <div className="md:col-span-2 space-y-10">
+              <p className="mt-6 text-lg md:text-2xl text-gray-200 leading-relaxed">
+                Endless golden sand, crystal-clear waters, unforgettable sunsets,
+                and authentic Greek summer vibes.
+              </p>
 
-          {/* Overview */}
+              <div className="mt-10 flex flex-wrap justify-center gap-4">
+                <Link
+                    href="/beaches"
+                    className="px-8 py-4 rounded-full bg-yellow-500 text-black font-semibold hover:bg-yellow-400 transition-all duration-300 shadow-2xl"
+                >
+                  Explore Beaches
+                </Link>
+
+                <a
+                    href="#discover"
+                    className="px-8 py-4 rounded-full border border-white/50 backdrop-blur-md bg-white/10 hover:bg-white/20 transition-all duration-300"
+                >
+                  Discover More
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom fade */}
+          <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white to-transparent" />
+        </section>
+
+        {/* DISCOVER */}
+        <section
+            id="discover"
+            className="max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-20 items-center"
+        >
+          {/* Text */}
           <div>
-            <h2 className="text-2xl font-semibold mb-3">Why you should go</h2>
-            <p className="text-gray-700 leading-relaxed">
-              Vatera is an extensive sandy beach in southern Lesvos, a ideal for relaxing holidays by the sea. The combination
-              floating beach, clean water and seaside taverns
-              makes it a favorite choice for families and couples.
+            <p className="text-yellow-600 font-semibold uppercase tracking-widest mb-3">
+              Why Visit Vatera
+            </p>
+
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8">
+              The longest beach in Lesvos with authentic island beauty
+            </h2>
+
+            <p className="text-lg text-gray-600 leading-relaxed mb-6">
+              Vatera is one of the most impressive coastal destinations in Lesvos.
+              Stretching for almost 8 kilometers, this sandy paradise combines
+              peaceful relaxation, crystal-clear shallow waters, and traditional
+              Greek hospitality.
+            </p>
+
+            <p className="text-lg text-gray-600 leading-relaxed">
+              Whether you want to swim, enjoy fresh seafood by the sea, walk
+              endlessly along the coast, or simply watch the sunset with a drink
+              in hand — Vatera offers the perfect summer escape.
             </p>
           </div>
 
-          {/* Highlights */}
-          <div>
-            <h2 className="text-2xl font-semibold mb-3">Highlights</h2>
-            <ul className="list-disc pl-5 text-gray-700 space-y-2">
-              <li> Very large in length, ideal for walking </li>
-              <li> Dry waters – suitable for children </li>
-              <li> Taverns and coffee literally on the wave </li>
-              <li> Beautiful sunsets </li>
-            </ul>
-          </div>
+          {/* Image Card */}
+          <div className="relative h-[500px] rounded-[2rem] overflow-hidden shadow-2xl group">
+            <Image
+                src="/vatera.jpg"
+                alt="Sunset at Vatera Beach"
+                fill
+                className="object-cover group-hover:scale-105 transition duration-700"
+            />
 
-          {/* Practical info */}
-          <div>
-            <h2 className="text-2xl font-semibold mb-3">Useful Informations</h2>
-            <ul className="text-gray-700 space-y-2">
-              <li> <strong> Type: </strong> Sandy </li>
-              <li> <strong> Organization: </strong> Umbrellas & sunbeds in places </li>
-              <li> <strong> Access: </strong> Easy by car </li>
-              <li> <strong> Ideal for: </strong> Families, relaxation </li>
-            </ul>
-          </div>
-        </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
 
-        {/* SIDEBAR */}
-        <aside className="space-y-8">
+            <div className="absolute bottom-8 left-8 text-white">
+              <p className="text-sm uppercase tracking-[0.2em] text-yellow-400">
+                Southern Lesvos
+              </p>
+
+              <h3 className="text-3xl font-bold mt-2">
+                Pure Summer Energy
+              </h3>
+            </div>
+          </div>
+        </section>
+
+        {/* FEATURES */}
+        <section className="bg-neutral-100 py-24">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center max-w-2xl mx-auto mb-16">
+              <p className="text-yellow-600 font-semibold uppercase tracking-widest mb-3">
+                Highlights
+              </p>
+
+              <h2 className="text-4xl font-bold mb-4">
+                Everything you need for a perfect beach day
+              </h2>
+
+              <p className="text-gray-600 text-lg">
+                Vatera combines natural beauty with comfort and accessibility.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
+              {[
+                {
+                  icon: Waves,
+                  title: "Crystal Waters",
+                  text: "Clean, calm and shallow sea ideal for families and relaxing swims.",
+                },
+                {
+                  icon: Sunset,
+                  title: "Epic Sunsets",
+                  text: "Enjoy magical golden-hour views directly from the beach.",
+                },
+                {
+                  icon: Umbrella,
+                  title: "Beach Facilities",
+                  text: "Sunbeds, umbrellas, taverns and cafes along the coast.",
+                },
+                {
+                  icon: Trees,
+                  title: "Peaceful Atmosphere",
+                  text: "A huge beach with plenty of space even during summer.",
+                },
+              ].map((item, index) => (
+                  <div
+                      key={index}
+                      className="bg-white rounded-[2rem] p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+                  >
+                    <item.icon className="w-12 h-12 text-yellow-500 mb-6" />
+
+                    <h3 className="text-2xl font-bold mb-4">
+                      {item.title}
+                    </h3>
+
+                    <p className="text-gray-600 leading-relaxed">
+                      {item.text}
+                    </p>
+                  </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* INFO + MAP */}
+        <section className="max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-3 gap-12">
+          {/* Info card */}
+          <div className="lg:col-span-1">
+            <div className="sticky top-10 bg-neutral-900 text-white rounded-[2rem] p-8 shadow-2xl">
+              <h2 className="text-3xl font-bold mb-8">
+                Useful Information
+              </h2>
+
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <Waves className="w-6 h-6 text-yellow-400 mt-1" />
+                  <div>
+                    <h4 className="font-semibold">Beach Type</h4>
+                    <p className="text-gray-300">Long sandy coastline</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <Umbrella className="w-6 h-6 text-yellow-400 mt-1" />
+                  <div>
+                    <h4 className="font-semibold">Facilities</h4>
+                    <p className="text-gray-300">
+                      Sunbeds, umbrellas & taverns
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <Car className="w-6 h-6 text-yellow-400 mt-1" />
+                  <div>
+                    <h4 className="font-semibold">Access</h4>
+                    <p className="text-gray-300">Easy access by car</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <MapPin className="w-6 h-6 text-yellow-400 mt-1" />
+                  <div>
+                    <h4 className="font-semibold">Ideal For</h4>
+                    <p className="text-gray-300">
+                      Families, couples & relaxation
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
           {/* Map */}
-          <div className="w-full h-48 rounded-lg overflow-hidden">
-            <iframe
-                src="https://www.google.com/maps/place/%CE%92%CE%B1%CF%84%CE%B5%CF%81%CE%AC+813+00,+%CE%95%CE%BB%CE%BB%CE%AC%CE%B4%CE%B1/@39.0205683,26.1787428,4538m/data=!3m2!1e3!4b1!4m6!3m5!1s0x14baef8e3ce47107:0xa00bd2f74c274e0!8m2!3d39.0195659!4d26.1978707!16zL20vMDJsOG43?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-            />
+          <div className="lg:col-span-2">
+            <div className="rounded-[2rem] overflow-hidden shadow-2xl h-[500px] border border-neutral-200">
+              <iframe
+                  src="https://www.google.com/maps/place/%CE%92%CE%B1%CF%84%CE%B5%CF%81%CE%AC+813+00,+%CE%95%CE%BB%CE%BB%CE%AC%CE%B4%CE%B1/@39.0205683,26.1787428,4538m/data=!3m2!1e3!4b1!4m6!3m5!1s0x14baef8e3ce47107:0xa00bd2f74c274e0!8m2!3d39.0195659!4d26.1978707!16zL20vMDJsOG43?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
           </div>
+        </section>
 
+        {/* NEARBY */}
+        <section className="bg-neutral-950 text-white py-24">
+          <div className="max-w-6xl mx-auto px-6 text-center">
+            <p className="text-yellow-400 uppercase tracking-[0.3em] text-sm mb-3">
+              Nearby Places
+            </p>
 
-          {/* Nearby */}
-          <div className="bg-white rounded-xl shadow p-4">
-            <h3 className="font-semibold mb-3">Nearby Vatera</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                🏘{" "}
-                <Link href="/villages/plomari" className="text-blue-600 hover:underline">
+            <h2 className="text-4xl md:text-5xl font-bold mb-14">
+              Explore around Vatera
+            </h2>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              <Link
+                  href="/villages/plomari"
+                  className="group bg-white/5 border border-white/10 rounded-[2rem] p-10 hover:bg-white/10 transition-all duration-300"
+              >
+                <div className="text-5xl mb-6">🏘</div>
+
+                <h3 className="text-2xl font-bold group-hover:text-yellow-400 transition">
                   Plomari
-                </Link>
-              </li>
-              <li>🍽 Seafront taverns</li>
-              <li>🏖 Smaller quieter beaches in the area</li>
-            </ul>
+                </h3>
+
+                <p className="text-gray-400 mt-4">
+                  Traditional seaside town famous for ouzo and local culture.
+                </p>
+              </Link>
+
+              <div className="bg-white/5 border border-white/10 rounded-[2rem] p-10">
+                <div className="text-5xl mb-6">🍽</div>
+
+                <h3 className="text-2xl font-bold">
+                  Seaside Taverns
+                </h3>
+
+                <p className="text-gray-400 mt-4">
+                  Fresh seafood and authentic Greek flavors by the beach.
+                </p>
+              </div>
+
+              <div className="bg-white/5 border border-white/10 rounded-[2rem] p-10">
+                <div className="text-5xl mb-6">🏖</div>
+
+                <h3 className="text-2xl font-bold">
+                  Quiet Beaches
+                </h3>
+
+                <p className="text-gray-400 mt-4">
+                  Hidden smaller beaches nearby for peaceful moments.
+                </p>
+              </div>
+            </div>
           </div>
-        </aside>
-      </section>
+        </section>
 
-      {/* CTA */}
-      <section className="bg-neutral-900 text-white py-16 text-center">
-        <h2 className="text-2xl font-semibold mb-4">
-          Δείτε κι άλλες παραλίες στη Λέσβο
-        </h2>
-        <Link
-          href="/beaches"
-          className="inline-block px-6 py-3 bg-yellow-600 text-black rounded-lg font-semibold hover:bg-yellow-500 transition"
-        >
-          Όλες οι παραλίες
-        </Link>
-      </section>
+        {/* CTA */}
+        <section className="relative py-28 overflow-hidden">
+          <div className="absolute inset-0">
+            <Image
+                src="/vatera.jpg"
+                alt="Vatera background"
+                fill
+                className="object-cover"
+            />
 
-    </main>
+            <div className="absolute inset-0 bg-black/70" />
+          </div>
+
+          <div className="relative z-10 max-w-4xl mx-auto text-center px-6 text-white">
+            <p className="uppercase tracking-[0.3em] text-yellow-400 text-sm mb-4">
+              Discover Lesvos
+            </p>
+
+            <h2 className="text-4xl md:text-6xl font-extrabold leading-tight">
+              Explore more beautiful beaches on the island
+            </h2>
+
+            <p className="mt-6 text-xl text-gray-300">
+              Find hidden gems, crystal waters, and authentic summer destinations
+              all around Lesvos.
+            </p>
+
+            <Link
+                href="/beaches"
+                className="inline-block mt-10 px-10 py-5 bg-yellow-500 text-black font-bold rounded-full hover:bg-yellow-400 transition-all duration-300 shadow-2xl"
+            >
+              View All Beaches
+            </Link>
+          </div>
+        </section>
+      </main>
   );
 }

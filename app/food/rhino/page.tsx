@@ -214,8 +214,8 @@ export default function DessertShopGuidePage() {
                         className="relative"
                     >
                         <img
-                            src="/petite/petite7.jpg"
-                            alt="Dessert"
+                            src="/rhino/rhino3.jpg"
+                            alt="cocktail"
                             className="rounded-[32px] sm:rounded-[40px] h-[420px] sm:h-[700px] w-full object-cover shadow-[0_40px_120px_rgba(0,0,0,0.6)]"
                         />
 
@@ -281,10 +281,9 @@ export default function DessertShopGuidePage() {
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-5 auto-rows-[220px] sm:auto-rows-[250px]">
                         {[
-                            "/rhino/rhino2.jpg",
+                            "/rhino/rhino1.jpg",
                             "/rhino/rhino3.jpg",
                             "/rhino/rhino4.jpg",
-                            "/rhino/rhino6.jpg",
                             "/rhino/rhino5.jpg",
                             "/rhino/rhino1.jpg"
 
