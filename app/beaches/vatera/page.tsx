@@ -16,7 +16,7 @@ export default function VateraPage() {
 
           {/* BACKGROUND IMAGE */}
           <Image
-              src="/vatera.jpg"
+              src="/petra.jpg"
               alt="Vatera Beach"
               fill
               priority
@@ -82,7 +82,7 @@ export default function VateraPage() {
                 <div className="relative w-[380px] h-[540px] rounded-[2.5rem] overflow-hidden border border-white/20 shadow-[0_20px_80px_rgba(0,0,0,0.6)] backdrop-blur-xl hover:-translate-y-3 transition duration-700">
 
                   <Image
-                      src="/vatera2.jpg"
+                      src="/petra.jpg"
                       alt="Vatera View"
                       fill
                       className="object-cover hover:scale-110 transition duration-1000"

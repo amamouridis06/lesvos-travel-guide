@@ -13,6 +13,126 @@ export default function BeachesPage() {
       name: "Άγιος Ισίδωρος",
       img: "/agios-isidoros.jpg",
       desc: "Διάσημη παραλία με γαλάζια σημαία."
+    },
+    {
+      slug: "skala-eresou",
+      name: "Σκάλα Ερεσού",
+      img: "/skala-eresou.jpg",
+      desc: "Μεγάλη αμμώδης παραλία με χαλαρό vibe."
+    },
+    {
+      slug: "petra",
+      name: "Πέτρα",
+      img: "/petra.jpg",
+      desc: "Οργανωμένη παραλία κάτω από τον βράχο της Πέτρας."
+    },
+    {
+      slug: "anaxos",
+      name: "Ανάξος",
+      img: "/anaxos.jpg",
+      desc: "Ήρεμη παραλία ιδανική για οικογένειες."
+    },
+    {
+      slug: "molyvos",
+      name: "Μόλυβος",
+      img: "/molyvos.jpg",
+      desc: "Παραλία με θέα το γραφικό κάστρο του Μολύβου."
+    },
+    {
+      slug: "tsamakia",
+      name: "Τσαμάκια",
+      img: "/tsamakia.jpg",
+      desc: "Η πιο κοντινή οργανωμένη παραλία στη Μυτιλήνη."
+    },
+    {
+      slug: "eftalou",
+      name: "Εφταλού",
+      img: "/eftalou.jpg",
+      desc: "Παραλία με βότσαλο και φυσικές θερμές πηγές."
+    },
+    {
+      slug: "sigri",
+      name: "Σίγρι",
+      img: "/sigri.jpg",
+      desc: "Ήσυχη παραλία με εξωτικό τοπίο."
+    },
+    {
+      slug: "gavathas",
+      name: "Γαβαθάς",
+      img: "/gavathas.jpg",
+      desc: "Ρηχή αμμώδης παραλία για χαλάρωση."
+    },
+    {
+      slug: "tarti",
+      name: "Ταρτί",
+      img: "/tarti.jpg",
+      desc: "Κρυφή φυσική παραλία με καταγάλανα νερά."
+    },
+    {
+      slug: "melinda",
+      name: "Μελίντα",
+      img: "/melinda.jpg",
+      desc: "Ήσυχη παραθαλάσσια περιοχή με όμορφα νερά."
+    },
+    {
+      slug: "drota",
+      name: "Δρώτα",
+      img: "/drota.jpg",
+      desc: "Απομονωμένη παραλία για απόλυτη ηρεμία."
+    },
+    {
+      slug: "kalloni-skala",
+      name: "Σκάλα Καλλονής",
+      img: "/skala-kallonis.jpg",
+      desc: "Μεγάλη παραλία κοντά στον κόλπο της Καλλονής."
+    },
+    {
+      slug: "charamida",
+      name: "Χαραμίδα",
+      img: "/charamida.jpg",
+      desc: "Μικρή παραλία κοντά στη Μυτιλήνη με beach bars."
+    },
+    {
+      slug: "niselia",
+      name: "Νησέλια",
+      img: "/niselia.jpg",
+      desc: "Μικρός κρυμμένος παράδεισος με καθαρά νερά."
+    },
+    {
+      slug: "agios-ermogenis",
+      name: "Άγιος Ερμογένης",
+      img: "/agios-ermogenis.jpg",
+      desc: "Γραφική παραλία μέσα σε καταπράσινο τοπίο."
+    },
+    {
+      slug: "kanoni",
+      name: "Κανόνι",
+      img: "/kanoni.jpg",
+      desc: "Εξωτική παραλία με μοναδικό φυσικό τοπίο."
+    },
+    {
+      slug: "kampoudi",
+      name: "Καμπούδι",
+      img: "/kampoudi.jpg",
+      desc: "Μικρή ήρεμη παραλία ιδανική για χαλάρωση."
+    },
+    {
+      slug: "faneromeni",
+      name: "Φανερωμένη",
+      img: "/faneromeni.jpg",
+      desc: "Άγρια φυσική ομορφιά και γαλαζοπράσινα νερά."
+    },
+    {
+      slug: "kagia",
+      name: "Κάγια",
+      img: "/kagia.jpg",
+      desc: "Μικρός κρυφός κόλπος με εντυπωσιακά νερά."
+    },
+    {
+      slug: "ampelia",
+      name: "Αμπέλια",
+      img: "/ampelia.jpg",
+      desc: "Ήσυχη βοτσαλωτή παραλία κοντά στον Μόλυβο."
     }
   ];
 
