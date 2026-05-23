@@ -354,7 +354,191 @@ export default function VateraPage() {
             </div>
           </div>
         </section>
+        {/* LOCAL GUIDE */}
+        <section className="bg-white py-24">
+          <div className="max-w-7xl mx-auto px-6">
 
+            {/* HEADER */}
+            <div className="text-center max-w-3xl mx-auto mb-20">
+              <p className="uppercase tracking-[0.3em] text-yellow-500 text-sm mb-4">
+                Local Guide
+              </p>
+
+              <h2 className="text-4xl md:text-6xl font-black leading-tight">
+                Experience More Around Vatera
+              </h2>
+
+              <p className="mt-6 text-lg text-gray-600 leading-relaxed">
+                Discover where to stay, eat and explore near one of the most beautiful
+                beaches in Lesvos.
+              </p>
+            </div>
+
+            {/* GRID */}
+            <div className="grid lg:grid-cols-3 gap-8">
+
+              {/* ACCOMMODATION */}
+              <div className="group bg-neutral-100 rounded-[2rem] overflow-hidden hover:-translate-y-2 transition duration-500 shadow-lg hover:shadow-2xl">
+
+                <div className="relative h-64 overflow-hidden">
+                  <Image
+                      src="/hotel-placeholder.jpg"
+                      alt="Accommodation"
+                      fill
+                      className="object-cover group-hover:scale-110 transition duration-700"
+                  />
+
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+
+                  <div className="absolute bottom-6 left-6 text-white">
+                    <p className="uppercase tracking-[0.25em] text-yellow-400 text-xs">
+                      Stay
+                    </p>
+
+                    <h3 className="text-3xl font-bold mt-2">
+                      Recommended Accommodation
+                    </h3>
+                  </div>
+                </div>
+
+                <div className="p-8">
+
+                  {/* ADD YOUR HOTEL HERE */}
+                  <div className="space-y-4">
+
+                    <div className="bg-white rounded-2xl p-5 hover:shadow-lg transition">
+                      <h4 className="text-xl font-bold">
+                        Hotel Name
+                      </h4>
+
+                      <p className="text-gray-600 mt-2">
+                        Short hotel description here.
+                      </p>
+                    </div>
+
+                    <div className="bg-white rounded-2xl p-5 hover:shadow-lg transition">
+                      <h4 className="text-xl font-bold">
+                        Another Accommodation
+                      </h4>
+
+                      <p className="text-gray-600 mt-2">
+                        Add your own recommended places.
+                      </p>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              {/* RESTAURANTS */}
+              <div className="group bg-neutral-100 rounded-[2rem] overflow-hidden hover:-translate-y-2 transition duration-500 shadow-lg hover:shadow-2xl">
+
+                <div className="relative h-64 overflow-hidden">
+                  <Image
+                      src="/restaurant-placeholder.jpg"
+                      alt="Restaurants"
+                      fill
+                      className="object-cover group-hover:scale-110 transition duration-700"
+                  />
+
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+
+                  <div className="absolute bottom-6 left-6 text-white">
+                    <p className="uppercase tracking-[0.25em] text-yellow-400 text-xs">
+                      Taste
+                    </p>
+
+                    <h3 className="text-3xl font-bold mt-2">
+                      Recommended Restaurants
+                    </h3>
+                  </div>
+                </div>
+
+                <div className="p-8">
+
+                  {/* ADD YOUR RESTAURANTS HERE */}
+                  <div className="space-y-4">
+
+                    <div className="bg-white rounded-2xl p-5 hover:shadow-lg transition">
+                      <h4 className="text-xl font-bold">
+                        Restaurant Name
+                      </h4>
+
+                      <p className="text-gray-600 mt-2">
+                        Add description and specialties here.
+                      </p>
+                    </div>
+
+                    <div className="bg-white rounded-2xl p-5 hover:shadow-lg transition">
+                      <h4 className="text-xl font-bold">
+                        Seafood Tavern
+                      </h4>
+
+                      <p className="text-gray-600 mt-2">
+                        Traditional Greek cuisine by the sea.
+                      </p>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              {/* ATTRACTIONS */}
+              <div className="group bg-neutral-100 rounded-[2rem] overflow-hidden hover:-translate-y-2 transition duration-500 shadow-lg hover:shadow-2xl">
+
+                <div className="relative h-64 overflow-hidden">
+                  <Image
+                      src="/attractions-placeholder.jpg"
+                      alt="Attractions"
+                      fill
+                      className="object-cover group-hover:scale-110 transition duration-700"
+                  />
+
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+
+                  <div className="absolute bottom-6 left-6 text-white">
+                    <p className="uppercase tracking-[0.25em] text-yellow-400 text-xs">
+                      Explore
+                    </p>
+
+                    <h3 className="text-3xl font-bold mt-2">
+                      Nearby Attractions
+                    </h3>
+                  </div>
+                </div>
+
+                <div className="p-8">
+
+                  {/* ADD YOUR ATTRACTIONS HERE */}
+                  <div className="space-y-4">
+
+                    <div className="bg-white rounded-2xl p-5 hover:shadow-lg transition">
+                      <h4 className="text-xl font-bold">
+                        Attraction Name
+                      </h4>
+
+                      <p className="text-gray-600 mt-2">
+                        Add nearby points of interest.
+                      </p>
+                    </div>
+
+                    <div className="bg-white rounded-2xl p-5 hover:shadow-lg transition">
+                      <h4 className="text-xl font-bold">
+                        Traditional Village
+                      </h4>
+
+                      <p className="text-gray-600 mt-2">
+                        Beautiful local culture and architecture.
+                      </p>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
         {/* CTA */}
         <section className="relative py-28 overflow-hidden">
           <div className="absolute inset-0">
