@@ -15,7 +15,7 @@ export default function LesvosSouvenirStore() {
         },
         {
             id: 3,
-            name: "Aegean Island Style",
+            name: "Aegean Island Ste",
             price: "20€",
             image:
                 "https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?q=80&w=1200&auto=format&fit=crop",
