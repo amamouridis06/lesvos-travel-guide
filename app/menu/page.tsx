@@ -2,11 +2,26 @@
 
 import React, { useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import { Clock, Flame, Leaf, MapPin, Search, Sparkles, Star, UtensilsCrossed } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import {
+    Clock,
+    Flame,
+    Leaf,
+    MapPin,
+    Search,
+    Sparkles,
+    Star,
+    UtensilsCrossed,
+} from "lucide-react";
 
-const categories = ["Όλα", "Ορεκτικά", "Σαλάτες", "Κυρίως", "Ζυμαρικά", "Γλυκά", "Ποτά"] as const;
+const categories = [
+    "Όλα",
+    "Ορεκτικά",
+    "Σαλάτες",
+    "Κυρίως",
+    "Ζυμαρικά",
+    "Γλυκά",
+    "Ποτά",
+] as const;
 
 type Category = (typeof categories)[number];
 
@@ -20,33 +35,55 @@ type MenuItem = {
     image: string;
 };
 
+function Button({
+                    children,
+                    onClick,
+                    className = "",
+                }: {
+    children: React.ReactNode;
+    onClick?: () => void;
+    className?: string;
+}) {
+    return (
+        <button onClick={onClick} className={className} type="button">
+            {children}
+        </button>
+    );
+}
+
 const menuItems: MenuItem[] = [
     {
         id: "bruschetta",
         name: "Μπρουσκέτα με ντομάτα",
         category: "Ορεκτικά",
-        description: "Προζυμένιο ψωμί, φρέσκια ντομάτα, βασιλικός και παρθένο ελαιόλαδο.",
+        description:
+            "Προζυμένιο ψωμί, φρέσκια ντομάτα, βασιλικός και παρθένο ελαιόλαδο.",
         price: 6.5,
         tags: ["vegan", "popular"],
-        image: "https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?auto=format&fit=crop&w=900&q=80",
+        image:
+            "https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?auto=format&fit=crop&w=900&q=80",
     },
     {
         id: "cheese-croquettes",
         name: "Τυροκροκέτες",
         category: "Ορεκτικά",
-        description: "Τραγανές κροκέτες τριών τυριών με σπιτική μαρμελάδα ντομάτας.",
+        description:
+            "Τραγανές κροκέτες τριών τυριών με σπιτική μαρμελάδα ντομάτας.",
         price: 7.8,
         tags: ["popular"],
-        image: "https://images.unsplash.com/photo-1541529086526-db283c563270?auto=format&fit=crop&w=900&q=80",
+        image:
+            "https://images.unsplash.com/photo-1541529086526-db283c563270?auto=format&fit=crop&w=900&q=80",
     },
     {
         id: "greek-salad",
         name: "Χωριάτικη σαλάτα",
         category: "Σαλάτες",
-        description: "Ντομάτα, αγγούρι, πιπεριά, ελιές Καλαμών, φέτα, κάπαρη και ρίγανη.",
+        description:
+            "Ντομάτα, αγγούρι, πιπεριά, ελιές Καλαμών, φέτα, κάπαρη και ρίγανη.",
         price: 8.9,
         tags: ["vegetarian"],
-        image: "https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?auto=format&fit=crop&w=900&q=80",
+        image:
+            "https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?auto=format&fit=crop&w=900&q=80",
     },
     {
         id: "quinoa-salad",
@@ -55,7 +92,8 @@ const menuItems: MenuItem[] = [
         description: "Κινόα, αβοκάντο, ρόκα, ρόδι, καρύδια και dressing λεμονιού.",
         price: 10.5,
         tags: ["vegan", "fresh"],
-        image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=80",
+        image:
+            "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=80",
     },
     {
         id: "tagliata",
@@ -64,7 +102,8 @@ const menuItems: MenuItem[] = [
         description: "Μοσχάρι σχάρας, baby πατάτες, ρόκα και flakes παρμεζάνας.",
         price: 19.9,
         tags: ["chef"],
-        image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80",
+        image:
+            "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80",
     },
     {
         id: "salmon",
@@ -73,16 +112,19 @@ const menuItems: MenuItem[] = [
         description: "Φιλέτο σολομού με πουρέ σελινόριζας και λαχανικά εποχής.",
         price: 18.5,
         tags: ["chef", "fresh"],
-        image: "https://images.unsplash.com/photo-1485921325833-c519f76c4927?auto=format&fit=crop&w=900&q=80",
+        image:
+            "https://images.unsplash.com/photo-1485921325833-c519f76c4927?auto=format&fit=crop&w=900&q=80",
     },
     {
         id: "shrimp-linguine",
         name: "Λιγκουίνι με γαρίδες",
         category: "Ζυμαρικά",
-        description: "Γαρίδες, ντοματίνια, σκόρδο, λευκό κρασί και φρέσκος μαϊντανός.",
+        description:
+            "Γαρίδες, ντοματίνια, σκόρδο, λευκό κρασί και φρέσκος μαϊντανός.",
         price: 16.8,
         tags: ["spicy", "popular", "chef"],
-        image: "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=900&q=80",
+        image:
+            "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=900&q=80",
     },
     {
         id: "pesto-rigatoni",
@@ -91,7 +133,8 @@ const menuItems: MenuItem[] = [
         description: "Σπιτικό πέστο βασιλικού, κουκουνάρι και παρμεζάνα.",
         price: 12.4,
         tags: ["vegetarian"],
-        image: "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=900&q=80",
+        image:
+            "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=900&q=80",
     },
     {
         id: "lemon-cheesecake",
@@ -100,7 +143,8 @@ const menuItems: MenuItem[] = [
         description: "Κρέμα τυριού, βάση μπισκότου και δροσερή κρέμα λεμονιού.",
         price: 6.9,
         tags: ["popular"],
-        image: "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=900&q=80",
+        image:
+            "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=900&q=80",
     },
     {
         id: "chocolate-souffle",
@@ -109,7 +153,8 @@ const menuItems: MenuItem[] = [
         description: "Ζεστό σουφλέ με υγρή σοκολάτα και παγωτό βανίλια.",
         price: 7.5,
         tags: ["chef"],
-        image: "https://images.unsplash.com/photo-1611329695518-1763319f3551?auto=format&fit=crop&w=900&q=80",
+        image:
+            "https://images.unsplash.com/photo-1611329695518-1763319f3551?auto=format&fit=crop&w=900&q=80",
     },
     {
         id: "lemonade",
@@ -118,7 +163,8 @@ const menuItems: MenuItem[] = [
         description: "Φρέσκο λεμόνι, δυόσμος και ανθρακούχο νερό.",
         price: 4.2,
         tags: ["vegan", "fresh"],
-        image: "https://images.unsplash.com/photo-1621263764928-df1444c5e859?auto=format&fit=crop&w=900&q=80",
+        image:
+            "https://images.unsplash.com/photo-1621263764928-df1444c5e859?auto=format&fit=crop&w=900&q=80",
     },
     {
         id: "signature-cocktail",
@@ -127,7 +173,8 @@ const menuItems: MenuItem[] = [
         description: "Gin, elderflower, lime, αγγούρι και αρωματικός βασιλικός.",
         price: 9.8,
         tags: ["chef"],
-        image: "https://images.unsplash.com/photo-1551538827-9c037cb4f32a?auto=format&fit=crop&w=900&q=80",
+        image:
+            "https://images.unsplash.com/photo-1551538827-9c037cb4f32a?auto=format&fit=crop&w=900&q=80",
     },
 ];
 
@@ -174,7 +221,9 @@ export default function RestaurantMenuPage() {
         const normalizedSearch = searchTerm.trim().toLowerCase();
 
         return menuItems.filter((item) => {
-            const matchesCategory = activeCategory === "Όλα" || item.category === activeCategory;
+            const matchesCategory =
+                activeCategory === "Όλα" || item.category === activeCategory;
+
             const matchesSearch =
                 normalizedSearch.length === 0 ||
                 item.name.toLowerCase().includes(normalizedSearch) ||
@@ -195,9 +244,12 @@ export default function RestaurantMenuPage() {
                         <div className="grid h-11 w-11 place-items-center rounded-full bg-amber-400 text-stone-950">
                             <UtensilsCrossed className="h-5 w-5" />
                         </div>
+
                         <div>
                             <p className="text-sm font-bold leading-none">Aroma Bistro</p>
-                            <p className="mt-1 text-xs text-stone-300">Mediterranean Kitchen</p>
+                            <p className="mt-1 text-xs text-stone-300">
+                                Mediterranean Kitchen
+                            </p>
                         </div>
                     </div>
 
@@ -220,11 +272,14 @@ export default function RestaurantMenuPage() {
                         <p className="mb-5 inline-flex rounded-full border border-amber-300/30 bg-amber-300/10 px-4 py-2 text-sm font-semibold text-amber-200">
                             Fresh daily menu
                         </p>
+
                         <h1 className="max-w-3xl text-5xl font-black tracking-tight sm:text-7xl">
                             Απλό, καθαρό μενού εστιατορίου.
                         </h1>
+
                         <p className="mt-6 max-w-2xl text-lg leading-8 text-stone-300">
-                            Δες τις κατηγορίες, διάλεξε πιάτο και βρες γρήγορα ό,τι ψάχνεις χωρίς περιττά βήματα.
+                            Δες τις κατηγορίες, διάλεξε πιάτο και βρες γρήγορα ό,τι ψάχνεις
+                            χωρίς περιττά βήματα.
                         </p>
                     </motion.div>
 
@@ -239,10 +294,16 @@ export default function RestaurantMenuPage() {
                             alt="Restaurant table"
                             className="h-80 w-full object-cover sm:h-96"
                         />
+
                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+
                         <div className="absolute bottom-6 left-6 right-6">
-                            <p className="text-sm font-semibold text-amber-300">Today's mood</p>
-                            <h2 className="mt-1 text-3xl font-black">Μεσογειακές γεύσεις</h2>
+                            <p className="text-sm font-semibold text-amber-300">
+                                Today's mood
+                            </p>
+                            <h2 className="mt-1 text-3xl font-black">
+                                Μεσογειακές γεύσεις
+                            </h2>
                         </div>
                     </motion.div>
                 </div>
@@ -253,8 +314,12 @@ export default function RestaurantMenuPage() {
                     <div className="mx-auto flex max-w-6xl flex-col gap-4">
                         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
                             <div>
-                                <p className="text-sm font-bold uppercase tracking-[0.25em] text-amber-700">Menu</p>
-                                <h2 className="mt-1 text-3xl font-black tracking-tight sm:text-4xl">Οι επιλογές μας</h2>
+                                <p className="text-sm font-bold uppercase tracking-[0.25em] text-amber-700">
+                                    Menu
+                                </p>
+                                <h2 className="mt-1 text-3xl font-black tracking-tight sm:text-4xl">
+                                    Οι επιλογές μας
+                                </h2>
                             </div>
 
                             <label className="relative block w-full md:max-w-sm">
@@ -273,11 +338,10 @@ export default function RestaurantMenuPage() {
                                 <Button
                                     key={category}
                                     onClick={() => setActiveCategory(category)}
-                                    variant={activeCategory === category ? "default" : "outline"}
-                                    className={`shrink-0 rounded-full px-5 ${
+                                    className={`shrink-0 rounded-full px-5 py-2 transition ${
                                         activeCategory === category
                                             ? "bg-stone-950 text-white hover:bg-stone-800"
-                                            : "border-stone-300 bg-white/80 text-stone-700 hover:bg-white"
+                                            : "border border-stone-300 bg-white/80 text-stone-700 hover:bg-white"
                                     }`}
                                 >
                                     {category}
@@ -289,7 +353,11 @@ export default function RestaurantMenuPage() {
 
                 <div className="mt-7 rounded-[1.5rem] border border-stone-200 bg-white/80 p-4 shadow-sm">
                     <p className="text-sm font-semibold text-stone-600">
-                        Βρέθηκαν <span className="font-black text-stone-950">{filteredItems.length}</span> επιλογές
+                        Βρέθηκαν{" "}
+                        <span className="font-black text-stone-950">
+              {filteredItems.length}
+            </span>{" "}
+                        επιλογές
                     </p>
                 </div>
 
@@ -302,33 +370,41 @@ export default function RestaurantMenuPage() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.35, delay: index * 0.03 }}
                         >
-                            <Card className="group h-full overflow-hidden rounded-[2rem] border-none bg-white shadow-sm ring-1 ring-stone-200/70 transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+                            <div className="group h-full overflow-hidden rounded-[2rem] bg-white shadow-sm ring-1 ring-stone-200/70 transition duration-300 hover:-translate-y-1 hover:shadow-xl">
                                 <div className="relative h-52 overflow-hidden">
                                     <img
                                         src={item.image}
                                         alt={item.name}
                                         className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                                     />
+
                                     <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/75 to-transparent" />
+
                                     <div className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1.5 text-xs font-black text-stone-950 backdrop-blur">
                                         {item.category}
                                     </div>
+
                                     <div className="absolute bottom-4 right-4 rounded-2xl bg-amber-400 px-4 py-2 text-lg font-black text-stone-950 shadow-lg">
                                         {formatPrice(item.price)}
                                     </div>
                                 </div>
 
-                                <CardContent className="p-6">
-                                    <h3 className="text-2xl font-black leading-tight text-stone-950">{item.name}</h3>
-                                    <p className="mt-3 leading-7 text-stone-600">{item.description}</p>
+                                <div className="p-6">
+                                    <h3 className="text-2xl font-black leading-tight text-stone-950">
+                                        {item.name}
+                                    </h3>
+
+                                    <p className="mt-3 leading-7 text-stone-600">
+                                        {item.description}
+                                    </p>
 
                                     <div className="mt-6 flex flex-wrap gap-2">
                                         {item.tags.map((tag) => (
                                             <TagBadge key={tag} tag={tag} />
                                         ))}
                                     </div>
-                                </CardContent>
-                            </Card>
+                                </div>
+                            </div>
                         </motion.article>
                     ))}
                 </motion.div>
@@ -336,13 +412,17 @@ export default function RestaurantMenuPage() {
                 {filteredItems.length === 0 && (
                     <div className="mt-12 rounded-[2rem] border border-dashed border-stone-300 bg-white p-12 text-center shadow-sm">
                         <h3 className="text-2xl font-black">Δεν βρέθηκαν πιάτα</h3>
-                        <p className="mt-2 text-stone-600">Δοκίμασε άλλη κατηγορία ή διαφορετική αναζήτηση.</p>
+
+                        <p className="mt-2 text-stone-600">
+                            Δοκίμασε άλλη κατηγορία ή διαφορετική αναζήτηση.
+                        </p>
+
                         <Button
                             onClick={() => {
                                 setActiveCategory("Όλα");
                                 setSearchTerm("");
                             }}
-                            className="mt-6 rounded-full bg-stone-950 px-6 text-white hover:bg-stone-800"
+                            className="mt-6 rounded-full bg-stone-950 px-6 py-2 text-white hover:bg-stone-800"
                         >
                             Καθαρισμός
                         </Button>
