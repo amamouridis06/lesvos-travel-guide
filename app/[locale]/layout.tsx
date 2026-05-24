@@ -3,7 +3,7 @@ import { Syne, Inter } from "next/font/google";
 import NavBar from "@/components/NavBar";
 import WelcomePopup from "@/components/WelcomePopup";
 import ScrollToTop from "@/components/ScrollToTop";
-import "./globals.css";
+import "../globals.css";
 
 const syne = Syne({ subsets: ["latin"], variable: "--font-syne" });
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -33,11 +33,7 @@ export const metadata = {
 
 
 
-export default function RootLayout({
-                                     children,
-                                   }: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({children,}: {children: React.ReactNode;}) {
   return (
       <html lang="en" className={`${syne.variable} ${inter.variable}`}>
       <body className={inter.className}>
@@ -55,4 +51,15 @@ export default function RootLayout({
       </body>
       </html>
   );
+}
+
+export default function LocaleLayout({children,params,}: {
+    children: React.ReactNode
+    params: { locale: string }
+}) {
+    return (
+        <html lang={params.locale}>
+        <body>{children}</body>
+        </html>
+    )
 }
