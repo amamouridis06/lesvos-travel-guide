@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { Clock, Flame, Leaf, MapPin, Search, Sparkles, Star, UtensilsCrossed } from "lucide-react";
