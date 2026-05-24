@@ -8,7 +8,7 @@ export default function LesvosSouvenirStore() {
         },
         {
             id: 2,
-            name: "Mytilene Vibes",
+            name: "Mytilene Vibe",
             price: "22€",
             image:
                 "https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?q=80&w=1200&auto=format&fit=crop",
