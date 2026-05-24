@@ -11,6 +11,7 @@ import {
     Compass,
     Gift,
     Luggage,
+    MapPin,
     Menu,
     Plane,
     Search,
@@ -21,14 +22,7 @@ import {
     X,
 } from "lucide-react";
 
-const serviceCategories = [
-    "Όλα",
-    "Transfers",
-    "Tours",
-    "VIP",
-    "Family",
-    "Airport",
-] as const;
+const serviceCategories = ["Όλα", "Transfers", "Tours", "VIP", "Family", "Airport"] as const;
 
 type ServiceCategory = (typeof serviceCategories)[number];
 
@@ -49,94 +43,79 @@ const services: Service[] = [
         id: "airport-transfer",
         title: "Airport Private Transfer",
         category: "Airport",
-        description:
-            "Ιδιωτική μεταφορά από/προς αεροδρόμιο με επαγγελματία οδηγό, άνετο όχημα και παρακολούθηση πτήσης.",
+        description: "Ιδιωτική μεταφορά από/προς αεροδρόμιο με επαγγελματία οδηγό, άνετο όχημα και παρακολούθηση πτήσης.",
         duration: "24/7",
         capacity: "1-7 άτομα",
         tags: ["Meet & greet", "Flight tracking", "Fixed price"],
         featured: true,
-        image:
-            "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1400&q=80",
+        image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1400&q=80",
     },
     {
         id: "city-transfer",
         title: "City to City Transfer",
         category: "Transfers",
-        description:
-            "Άνετες μετακινήσεις μεταξύ πόλεων, ξενοδοχείων, λιμανιών και σημείων ενδιαφέροντος.",
+        description: "Άνετες μετακινήσεις μεταξύ πόλεων, ξενοδοχείων, λιμανιών και σημείων ενδιαφέροντος.",
         duration: "Flexible",
         capacity: "1-8 άτομα",
         tags: ["Door to door", "Comfort", "Private ride"],
-        image:
-            "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=1400&q=80",
+        image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=1400&q=80",
     },
     {
         id: "athens-tour",
         title: "Athens Highlights Tour",
         category: "Tours",
-        description:
-            "Ιδιωτική ξενάγηση στα σημαντικότερα σημεία της Αθήνας με στάσεις για φωτογραφίες και local tips.",
+        description: "Ιδιωτική ξενάγηση στα σημαντικότερα σημεία της Αθήνας με στάσεις για φωτογραφίες και local tips.",
         duration: "4 ώρες",
         capacity: "1-6 άτομα",
         tags: ["Acropolis view", "Photo stops", "Local guide"],
-        image:
-            "https://images.unsplash.com/photo-1555993539-1732b0258235?auto=format&fit=crop&w=1400&q=80",
+        image: "https://images.unsplash.com/photo-1555993539-1732b0258235?auto=format&fit=crop&w=1400&q=80",
     },
     {
         id: "sunset-tour",
         title: "Sunset Coastal Tour",
         category: "Tours",
-        description:
-            "Διαδρομή στην Αθηναϊκή Ριβιέρα με στάσεις στη θάλασσα, καφέ και ηλιοβασίλεμα.",
+        description: "Διαδρομή στην Αθηναϊκή Ριβιέρα με στάσεις στη θάλασσα, καφέ και ηλιοβασίλεμα.",
         duration: "5 ώρες",
         capacity: "1-6 άτομα",
         tags: ["Sunset", "Coastline", "Relaxed"],
-        image:
-            "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=80",
+        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=80",
     },
     {
         id: "vip-chauffeur",
         title: "VIP Chauffeur Service",
         category: "VIP",
-        description:
-            "Premium υπηρεσία οδηγού για επαγγελματικά ταξίδια, events, meetings και απαιτητικούς πελάτες.",
+        description: "Premium υπηρεσία οδηγού για επαγγελματικά ταξίδια, events, meetings και απαιτητικούς πελάτες.",
         duration: "Hourly / Daily",
         capacity: "1-3 άτομα",
         tags: ["Executive", "Discreet", "Luxury"],
-        image:
-            "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1400&q=80",
+        image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1400&q=80",
     },
     {
         id: "family-transfer",
         title: "Family Transfer",
         category: "Family",
-        description:
-            "Ιδανική λύση για οικογένειες με χώρο για αποσκευές, παιδικά καθίσματα κατόπιν αιτήματος και ασφαλή μετακίνηση.",
+        description: "Ιδανική λύση για οικογένειες με χώρο για αποσκευές, παιδικά καθίσματα κατόπιν αιτήματος και ασφαλή μετακίνηση.",
         duration: "Flexible",
         capacity: "1-7 άτομα",
         tags: ["Child seats", "Luggage space", "Safe"],
-        image:
-            "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1400&q=80",
+        image: "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1400&q=80",
     },
 ];
 
 const benefits = [
     {
         title: "Επαγγελματίες οδηγοί",
-        description:
-            "Ευγενικοί, έμπειροι οδηγοί με γνώση της περιοχής και έμφαση στην ασφάλεια.",
+        description: "Ευγενικοί, έμπειροι οδηγοί με γνώση της περιοχής και έμφαση στην ασφάλεια.",
         icon: ShieldCheck,
     },
     {
         title: "Σταθερές τιμές",
-        description:
-            "Ξεκάθαρη χρέωση χωρίς κρυφές επιβαρύνσεις και χωρίς άγχος για τον πελάτη.",
+        description: "Ξεκάθαρη χρέωση χωρίς κρυφές επιβαρύνσεις και χωρίς άγχος για τον πελάτη.",
         icon: Sparkles,
     },
     {
         title: "24/7 εξυπηρέτηση",
-        description:
-            "Μεταφορές και επικοινωνία όλη την ημέρα, ιδανικά για πτήσεις και late arrivals.",
+        description: "Μεταφορές και επικοινωνία όλη την ημέρα, ιδανικά για πτήσεις και late arrivals.",
         icon: Clock,
     },
 ];
@@ -146,22 +125,19 @@ const fleet = [
         title: "Premium Sedan",
         passengers: "1-3 επιβάτες",
         luggage: "2 βαλίτσες",
-        image:
-            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1200&q=80",
+        image: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1200&q=80",
     },
     {
         title: "Luxury SUV",
         passengers: "1-4 επιβάτες",
         luggage: "4 βαλίτσες",
-        image:
-            "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=1200&q=80",
+        image: "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=1200&q=80",
     },
     {
         title: "Private Minivan",
         passengers: "1-8 επιβάτες",
         luggage: "8 βαλίτσες",
-        image:
-            "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80",
+        image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80",
     },
 ];
 
@@ -195,7 +171,6 @@ function PromoPopup({ onClose }: { onClose: () => void }) {
         <motion.div
             initial={{ opacity: 0, y: 30, scale: 0.96 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 30, scale: 0.96 }}
             transition={{ duration: 0.35 }}
             className="fixed bottom-5 right-5 z-50 w-[calc(100%-2.5rem)] max-w-sm overflow-hidden rounded-[2rem] bg-white shadow-2xl shadow-slate-950/20 ring-1 ring-slate-200"
         >
@@ -213,23 +188,16 @@ function PromoPopup({ onClose }: { onClose: () => void }) {
                     <Gift className="h-5 w-5" />
                 </div>
 
-                <p className="mt-5 text-sm font-black uppercase tracking-[0.22em]">
-                    Special offer
-                </p>
-
-                <h3 className="mt-2 pr-8 text-2xl font-black leading-tight">
-                    -15% σε Airport Private Transfers
-                </h3>
-
+                <p className="mt-5 text-sm font-black uppercase tracking-[0.22em]">Special offer</p>
+                <h3 className="mt-2 pr-8 text-2xl font-black leading-tight">-15% σε Airport Private Transfers</h3>
                 <p className="mt-3 text-sm font-semibold leading-6 text-slate-800">
-                    Κλείσε online σήμερα και απόλαυσε ιδιωτική μεταφορά από ή προς το
-                    αεροδρόμιο με ειδική τιμή.
+                    Κλείσε online σήμερα και απόλαυσε ιδιωτική μεταφορά από ή προς το αεροδρόμιο με ειδική τιμή.
                 </p>
             </div>
 
             <div className="bg-white p-5">
                 <div className="grid gap-2 text-sm text-slate-600">
-                    <p className="font-bold">✓ Meet & greet</p>
+                    <p className="font-bold">✓ Meet & greet στο αεροδρόμιο</p>
                     <p className="font-bold">✓ Παρακολούθηση πτήσης</p>
                     <p className="font-bold">✓ Σταθερή τιμή χωρίς κρυφές χρεώσεις</p>
                 </div>
@@ -247,30 +215,24 @@ function PromoPopup({ onClose }: { onClose: () => void }) {
 }
 
 export default function PrivateTransfersToursPage() {
-    const [activeCategory, setActiveCategory] =
-        useState<ServiceCategory>("Όλα");
+    const [activeCategory, setActiveCategory] = useState<ServiceCategory>("Όλα");
     const [searchTerm, setSearchTerm] = useState("");
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [promoOpen, setPromoOpen] = useState(true);
 
-    const featuredService =
-        services.find((service) => service.featured) ?? services[0];
+    const featuredService = services.find((service) => service.featured) ?? services[0];
 
     const filteredServices = useMemo(() => {
         const normalizedSearch = searchTerm.trim().toLowerCase();
 
         return services.filter((service) => {
-            const matchesCategory =
-                activeCategory === "Όλα" || service.category === activeCategory;
-
+            const matchesCategory = activeCategory === "Όλα" || service.category === activeCategory;
             const matchesSearch =
                 normalizedSearch.length === 0 ||
                 service.title.toLowerCase().includes(normalizedSearch) ||
                 service.description.toLowerCase().includes(normalizedSearch) ||
                 service.category.toLowerCase().includes(normalizedSearch) ||
-                service.tags.some((tag) =>
-                    tag.toLowerCase().includes(normalizedSearch)
-                );
+                service.tags.some((tag) => tag.toLowerCase().includes(normalizedSearch));
 
             return matchesCategory && matchesSearch;
         });
@@ -279,7 +241,6 @@ export default function PrivateTransfersToursPage() {
     return (
         <main className="min-h-screen bg-[#f8fafc] text-slate-950">
             {promoOpen && <PromoPopup onClose={() => setPromoOpen(false)} />}
-
             <section className="relative min-h-screen overflow-hidden bg-[#07111f] px-5 py-5 text-white sm:px-8 lg:px-14">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(245,158,11,0.22),transparent_34%),radial-gradient(circle_at_bottom_right,rgba(14,116,144,0.32),transparent_36%),linear-gradient(135deg,#07111f,#0f172a_48%,#111827)]" />
                 <div className="absolute left-1/2 top-24 h-[640px] w-[640px] -translate-x-1/2 rounded-full bg-amber-300/10 blur-3xl" />
@@ -290,30 +251,17 @@ export default function PrivateTransfersToursPage() {
                         <div className="grid h-11 w-11 place-items-center rounded-full bg-amber-400 text-slate-950 shadow-lg shadow-amber-500/20">
                             <Car className="h-5 w-5" />
                         </div>
-
                         <div>
-                            <p className="text-sm font-black leading-none">
-                                Elite Transfers & Tours
-                            </p>
-                            <p className="mt-1 text-xs text-slate-300">
-                                Private Travel Services
-                            </p>
+                            <p className="text-sm font-black leading-none">Elite Transfers & Tours</p>
+                            <p className="mt-1 text-xs text-slate-300">Private Travel Services</p>
                         </div>
                     </div>
 
                     <div className="hidden items-center gap-7 text-sm font-semibold text-slate-300 md:flex">
-                        <a href="#services" className="transition hover:text-white">
-                            Υπηρεσίες
-                        </a>
-                        <a href="#fleet" className="transition hover:text-white">
-                            Στόλος
-                        </a>
-                        <a href="#why" className="transition hover:text-white">
-                            Γιατί εμάς
-                        </a>
-                        <a href="#contact" className="transition hover:text-white">
-                            Κράτηση
-                        </a>
+                        <a href="#services" className="transition hover:text-white">Υπηρεσίες</a>
+                        <a href="#fleet" className="transition hover:text-white">Στόλος</a>
+                        <a href="#why" className="transition hover:text-white">Γιατί εμάς</a>
+                        <a href="#contact" className="transition hover:text-white">Κράτηση</a>
                     </div>
 
                     <button
@@ -322,54 +270,25 @@ export default function PrivateTransfersToursPage() {
                         type="button"
                         aria-label="Άνοιγμα μενού"
                     >
-                        {mobileMenuOpen ? (
-                            <X className="h-5 w-5" />
-                        ) : (
-                            <Menu className="h-5 w-5" />
-                        )}
+                        {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
                     </button>
                 </nav>
 
                 {mobileMenuOpen && (
                     <div className="relative z-20 mx-auto mt-3 max-w-7xl rounded-3xl border border-white/10 bg-white/10 p-4 backdrop-blur-xl md:hidden">
                         <div className="grid gap-2 text-sm font-bold text-white">
-                            <a
-                                href="#services"
-                                className="rounded-2xl px-4 py-3 hover:bg-white/10"
-                            >
-                                Υπηρεσίες
-                            </a>
-                            <a
-                                href="#fleet"
-                                className="rounded-2xl px-4 py-3 hover:bg-white/10"
-                            >
-                                Στόλος
-                            </a>
-                            <a
-                                href="#why"
-                                className="rounded-2xl px-4 py-3 hover:bg-white/10"
-                            >
-                                Γιατί εμάς
-                            </a>
-                            <a
-                                href="#contact"
-                                className="rounded-2xl px-4 py-3 hover:bg-white/10"
-                            >
-                                Κράτηση
-                            </a>
+                            <a href="#services" className="rounded-2xl px-4 py-3 hover:bg-white/10">Υπηρεσίες</a>
+                            <a href="#fleet" className="rounded-2xl px-4 py-3 hover:bg-white/10">Στόλος</a>
+                            <a href="#why" className="rounded-2xl px-4 py-3 hover:bg-white/10">Γιατί εμάς</a>
+                            <a href="#contact" className="rounded-2xl px-4 py-3 hover:bg-white/10">Κράτηση</a>
                         </div>
                     </div>
                 )}
 
                 <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-12 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:py-24">
-                    <motion.div
-                        initial={{ opacity: 0, y: 26 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.65 }}
-                    >
+                    <motion.div initial={{ opacity: 0, y: 26 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.65 }}>
                         <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-amber-300/25 bg-amber-300/10 px-4 py-2 text-sm font-bold text-amber-100 shadow-lg shadow-slate-950/20 backdrop-blur">
-                            <Award className="h-4 w-4" /> Private transfers · Tailor-made
-                            tours · 24/7
+                            <Award className="h-4 w-4" /> Private transfers · Tailor-made tours · 24/7
                         </div>
 
                         <h1 className="max-w-4xl text-5xl font-black tracking-tight sm:text-7xl lg:text-8xl">
@@ -377,9 +296,7 @@ export default function PrivateTransfersToursPage() {
                         </h1>
 
                         <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-300 sm:text-xl">
-                            Premium εταιρική παρουσίαση για υπηρεσίες private transfers και
-                            tours: αεροδρόμιο, πόλη, VIP οδηγός, οικογενειακές μετακινήσεις
-                            και εξατομικευμένες διαδρομές.
+                            Premium εταιρική παρουσίαση για υπηρεσίες private transfers και tours: αεροδρόμιο, πόλη, VIP οδηγός, οικογενειακές μετακινήσεις και εξατομικευμένες διαδρομές.
                         </p>
 
                         <div className="mt-9 flex flex-col gap-3 sm:flex-row">
@@ -389,7 +306,6 @@ export default function PrivateTransfersToursPage() {
                             >
                                 Δες υπηρεσίες <ChevronRight className="ml-2 h-4 w-4" />
                             </a>
-
                             <a
                                 href="#contact"
                                 className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-6 py-3.5 text-sm font-black text-white backdrop-blur transition hover:bg-white/15"
@@ -403,12 +319,10 @@ export default function PrivateTransfersToursPage() {
                                 <p className="text-3xl font-black">24/7</p>
                                 <p className="mt-1 text-sm text-slate-300">διαθεσιμότητα</p>
                             </div>
-
                             <div className="rounded-3xl border border-white/10 bg-white/10 p-5 backdrop-blur">
                                 <p className="text-3xl font-black">4.9</p>
                                 <p className="mt-1 text-sm text-slate-300">rating</p>
                             </div>
-
                             <div className="rounded-3xl border border-white/10 bg-white/10 p-5 backdrop-blur">
                                 <p className="text-3xl font-black">100%</p>
                                 <p className="mt-1 text-sm text-slate-300">private</p>
@@ -423,43 +337,20 @@ export default function PrivateTransfersToursPage() {
                         className="relative"
                     >
                         <div className="absolute -inset-5 rounded-[2.8rem] bg-gradient-to-br from-amber-400/25 via-cyan-500/20 to-transparent blur-2xl" />
-
                         <div className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-white/10 shadow-2xl backdrop-blur-xl">
                             <div className="relative h-[540px] overflow-hidden">
-                                <img
-                                    src={featuredService.image}
-                                    alt={featuredService.title}
-                                    className="h-full w-full object-cover"
-                                />
-
+                                <img src={featuredService.image} alt={featuredService.title} className="h-full w-full object-cover" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#07111f] via-[#07111f]/35 to-transparent" />
-
                                 <div className="absolute left-5 top-5 rounded-full bg-amber-400 px-4 py-2 text-sm font-black text-slate-950 shadow-lg">
                                     Featured service
                                 </div>
-
                                 <div className="absolute bottom-0 left-0 right-0 p-7">
-                                    <p className="text-sm font-bold uppercase tracking-[0.25em] text-amber-300">
-                                        {featuredService.category}
-                                    </p>
-
-                                    <h2 className="mt-3 text-4xl font-black text-white">
-                                        {featuredService.title}
-                                    </h2>
-
-                                    <p className="mt-3 max-w-xl leading-7 text-slate-300">
-                                        {featuredService.description}
-                                    </p>
-
+                                    <p className="text-sm font-bold uppercase tracking-[0.25em] text-amber-300">{featuredService.category}</p>
+                                    <h2 className="mt-3 text-4xl font-black text-white">{featuredService.title}</h2>
+                                    <p className="mt-3 max-w-xl leading-7 text-slate-300">{featuredService.description}</p>
                                     <div className="mt-5 flex flex-wrap items-center gap-2">
-                    <span className="rounded-full bg-amber-400 px-3 py-1 text-xs font-black text-slate-950">
-                      {featuredService.duration}
-                    </span>
-
-                                        <span className="rounded-full bg-white/15 px-3 py-1 text-xs font-black text-white backdrop-blur">
-                      {featuredService.capacity}
-                    </span>
-
+                                        <span className="rounded-full bg-amber-400 px-3 py-1 text-xs font-black text-slate-950">{featuredService.duration}</span>
+                                        <span className="rounded-full bg-white/15 px-3 py-1 text-xs font-black text-white backdrop-blur">{featuredService.capacity}</span>
                                         {featuredService.tags.map((tag) => (
                                             <Tag key={tag} label={tag} />
                                         ))}
@@ -475,12 +366,8 @@ export default function PrivateTransfersToursPage() {
                 <div className="mx-auto max-w-7xl">
                     <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
                         <div>
-                            <p className="text-sm font-black uppercase tracking-[0.28em] text-amber-600">
-                                Υπηρεσίες
-                            </p>
-                            <h2 className="mt-3 text-4xl font-black tracking-tight text-slate-950 sm:text-6xl">
-                                Transfers & Tours
-                            </h2>
+                            <p className="text-sm font-black uppercase tracking-[0.28em] text-amber-600">Υπηρεσίες</p>
+                            <h2 className="mt-3 text-4xl font-black tracking-tight text-slate-950 sm:text-6xl">Transfers & Tours</h2>
                         </div>
 
                         <label className="relative block w-full lg:max-w-md">
@@ -521,47 +408,28 @@ export default function PrivateTransfersToursPage() {
                             >
                                 <div className="group h-full overflow-hidden rounded-[2rem] bg-white shadow-sm ring-1 ring-slate-200/80 transition duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-slate-200">
                                     <div className="relative h-72 overflow-hidden bg-slate-950">
-                                        <img
-                                            src={service.image}
-                                            alt={service.title}
-                                            className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
-                                        />
-
+                                        <img src={service.image} alt={service.title} className="h-full w-full object-cover transition duration-700 group-hover:scale-110" />
                                         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent" />
-
                                         <div className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1.5 text-xs font-black text-slate-950 backdrop-blur">
                                             {service.category}
                                         </div>
-
                                         {service.featured && (
                                             <div className="absolute right-4 top-4 rounded-full bg-amber-400 px-3 py-1.5 text-xs font-black text-slate-950">
                                                 Featured
                                             </div>
                                         )}
-
                                         <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between gap-3 text-white">
                                             <div>
-                                                <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-200">
-                                                    {service.duration}
-                                                </p>
-                                                <p className="mt-1 text-xl font-black">
-                                                    {service.capacity}
-                                                </p>
+                                                <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-200">{service.duration}</p>
+                                                <p className="mt-1 text-xl font-black">{service.capacity}</p>
                                             </div>
-
                                             <Star className="h-5 w-5 fill-amber-300 text-amber-300" />
                                         </div>
                                     </div>
 
                                     <div className="p-6">
-                                        <h3 className="text-2xl font-black leading-tight text-slate-950">
-                                            {service.title}
-                                        </h3>
-
-                                        <p className="mt-3 leading-7 text-slate-600">
-                                            {service.description}
-                                        </p>
-
+                                        <h3 className="text-2xl font-black leading-tight text-slate-950">{service.title}</h3>
+                                        <p className="mt-3 leading-7 text-slate-600">{service.description}</p>
                                         <div className="mt-6 flex flex-wrap gap-2">
                                             {service.tags.map((tag) => (
                                                 <Tag key={tag} label={tag} />
@@ -578,17 +446,10 @@ export default function PrivateTransfersToursPage() {
             <section id="fleet" className="bg-white px-5 py-20 sm:px-8 lg:px-14">
                 <div className="mx-auto max-w-7xl">
                     <div className="max-w-3xl">
-                        <p className="text-sm font-black uppercase tracking-[0.28em] text-amber-600">
-                            Στόλος
-                        </p>
-
-                        <h2 className="mt-3 text-4xl font-black tracking-tight text-slate-950 sm:text-6xl">
-                            Άνετα οχήματα για κάθε διαδρομή
-                        </h2>
-
+                        <p className="text-sm font-black uppercase tracking-[0.28em] text-amber-600">Στόλος</p>
+                        <h2 className="mt-3 text-4xl font-black tracking-tight text-slate-950 sm:text-6xl">Άνετα οχήματα για κάθε διαδρομή</h2>
                         <p className="mt-5 text-lg leading-8 text-slate-600">
-                            Από executive μεταφορές μέχρι οικογενειακές διαδρομές και μικρά
-                            groups.
+                            Από executive μεταφορές μέχρι οικογενειακές διαδρομές και μικρά groups.
                         </p>
                     </div>
 
@@ -602,25 +463,12 @@ export default function PrivateTransfersToursPage() {
                                 transition={{ duration: 0.4, delay: index * 0.08 }}
                                 className="overflow-hidden rounded-[2rem] bg-[#f8fafc] shadow-sm ring-1 ring-slate-200"
                             >
-                                <img
-                                    src={vehicle.image}
-                                    alt={vehicle.title}
-                                    className="h-56 w-full object-cover"
-                                />
-
+                                <img src={vehicle.image} alt={vehicle.title} className="h-56 w-full object-cover" />
                                 <div className="p-6">
                                     <h3 className="text-2xl font-black">{vehicle.title}</h3>
-
                                     <div className="mt-5 grid gap-3 text-sm font-bold text-slate-600">
-                                        <p className="inline-flex items-center gap-2">
-                                            <Users className="h-4 w-4 text-amber-500" />
-                                            {vehicle.passengers}
-                                        </p>
-
-                                        <p className="inline-flex items-center gap-2">
-                                            <Luggage className="h-4 w-4 text-amber-500" />
-                                            {vehicle.luggage}
-                                        </p>
+                                        <p className="inline-flex items-center gap-2"><Users className="h-4 w-4 text-amber-500" /> {vehicle.passengers}</p>
+                                        <p className="inline-flex items-center gap-2"><Luggage className="h-4 w-4 text-amber-500" /> {vehicle.luggage}</p>
                                     </div>
                                 </div>
                             </motion.div>
@@ -632,19 +480,13 @@ export default function PrivateTransfersToursPage() {
             <section id="why" className="bg-[#07111f] px-5 py-20 text-white sm:px-8 lg:px-14">
                 <div className="mx-auto max-w-7xl">
                     <div className="max-w-3xl">
-                        <p className="text-sm font-black uppercase tracking-[0.28em] text-amber-300">
-                            Γιατί εμάς
-                        </p>
-
-                        <h2 className="mt-3 text-4xl font-black tracking-tight sm:text-6xl">
-                            Αξιόπιστη μετακίνηση από την αρχή μέχρι το τέλος
-                        </h2>
+                        <p className="text-sm font-black uppercase tracking-[0.28em] text-amber-300">Γιατί εμάς</p>
+                        <h2 className="mt-3 text-4xl font-black tracking-tight sm:text-6xl">Αξιόπιστη μετακίνηση από την αρχή μέχρι το τέλος</h2>
                     </div>
 
                     <div className="mt-10 grid gap-5 md:grid-cols-3">
                         {benefits.map((benefit, index) => {
                             const Icon = benefit.icon;
-
                             return (
                                 <motion.div
                                     key={benefit.title}
@@ -657,14 +499,8 @@ export default function PrivateTransfersToursPage() {
                                     <div className="grid h-12 w-12 place-items-center rounded-2xl bg-amber-400 text-slate-950">
                                         <Icon className="h-5 w-5" />
                                     </div>
-
-                                    <h3 className="mt-6 text-xl font-black">
-                                        {benefit.title}
-                                    </h3>
-
-                                    <p className="mt-3 leading-7 text-slate-300">
-                                        {benefit.description}
-                                    </p>
+                                    <h3 className="mt-6 text-xl font-black">{benefit.title}</h3>
+                                    <p className="mt-3 leading-7 text-slate-300">{benefit.description}</p>
                                 </motion.div>
                             );
                         })}
@@ -675,35 +511,44 @@ export default function PrivateTransfersToursPage() {
             <section id="contact" className="bg-[#f8fafc] px-5 py-20 sm:px-8 lg:px-14">
                 <div className="mx-auto grid max-w-7xl overflow-hidden rounded-[2.5rem] bg-white shadow-2xl shadow-slate-200 ring-1 ring-slate-200 lg:grid-cols-[1fr_0.9fr]">
                     <div className="p-8 sm:p-12">
-                        <p className="text-sm font-black uppercase tracking-[0.28em] text-amber-600">
-                            Κράτηση
-                        </p>
-
+                        <p className="text-sm font-black uppercase tracking-[0.28em] text-amber-600">Κράτηση</p>
                         <h2 className="mt-3 text-4xl font-black tracking-tight text-slate-950 sm:text-5xl">
                             Ζητήστε προσφορά για transfer ή private tour.
                         </h2>
-
                         <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-600">
-                            Συμπληρώστε τις λεπτομέρειες της διαδρομής ή της εμπειρίας και η
-                            ομάδα θα προτείνει την κατάλληλη λύση.
+                            Συμπληρώστε τις λεπτομέρειες της διαδρομής ή της εμπειρίας και η ομάδα θα προτείνει την κατάλληλη λύση.
                         </p>
 
                         <div className="mt-8 grid gap-4 sm:grid-cols-2">
-                            <div className="rounded-3xl bg-amber-50 p-5">
+                            <a href="tel:+302101234567" className="rounded-3xl bg-amber-50 p-5 transition hover:bg-amber-100">
                                 <Plane className="h-5 w-5 text-amber-600" />
-                                <p className="mt-3 font-black">Airport transfers</p>
-                                <p className="mt-1 text-sm text-slate-600">
-                                    Άφιξη, αναχώρηση, λιμάνι, ξενοδοχείο
-                                </p>
-                            </div>
+                                <p className="mt-3 font-black">+30 210 123 4567</p>
+                                <p className="mt-1 text-sm text-slate-600">Τηλέφωνο κρατήσεων</p>
+                            </a>
+
+                            <a href="https://wa.me/306901234567" target="_blank" rel="noreferrer" className="rounded-3xl bg-amber-50 p-5 transition hover:bg-amber-100">
+                                <CalendarCheck className="h-5 w-5 text-amber-600" />
+                                <p className="mt-3 font-black">WhatsApp</p>
+                                <p className="mt-1 text-sm text-slate-600">+30 690 123 4567</p>
+                            </a>
+
+                            <a href="mailto:info@elitetransfers.gr" className="rounded-3xl bg-amber-50 p-5 transition hover:bg-amber-100">
+                                <MapPin className="h-5 w-5 text-amber-600" />
+                                <p className="mt-3 font-black">info@elitetransfers.gr</p>
+                                <p className="mt-1 text-sm text-slate-600">Email επικοινωνίας</p>
+                            </a>
 
                             <div className="rounded-3xl bg-amber-50 p-5">
-                                <CalendarCheck className="h-5 w-5 text-amber-600" />
-                                <p className="mt-3 font-black">Custom tours</p>
-                                <p className="mt-1 text-sm text-slate-600">
-                                    Ημερήσιες εκδρομές και tailor-made εμπειρίες
-                                </p>
+                                <Clock className="h-5 w-5 text-amber-600" />
+                                <p className="mt-3 font-black">24/7 διαθέσιμοι</p>
+                                <p className="mt-1 text-sm text-slate-600">Airport transfers & private tours</p>
                             </div>
+                        </div>
+
+                        <div className="mt-6 rounded-3xl border border-slate-200 bg-white p-5">
+                            <p className="text-sm font-black uppercase tracking-[0.2em] text-amber-600">Office</p>
+                            <p className="mt-2 font-black text-slate-950">Leof. Poseidonos 45, Glyfada, Athens, Greece</p>
+                            <p className="mt-1 text-sm text-slate-600">Για συναντήσεις, εταιρικές συνεργασίες και VIP bookings.</p>
                         </div>
                     </div>
 
@@ -713,13 +558,12 @@ export default function PrivateTransfersToursPage() {
                             alt="Private transfer car"
                             className="h-full w-full object-cover opacity-75"
                         />
-
                         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/25 to-transparent" />
-
                         <div className="absolute bottom-8 left-8 right-8 text-white">
                             <Compass className="h-9 w-9 text-amber-300" />
-                            <p className="mt-4 text-2xl font-black">
-                                Travel privately. Arrive relaxed.
+                            <p className="mt-4 text-2xl font-black">Travel privately. Arrive relaxed.</p>
+                            <p className="mt-2 text-sm leading-6 text-slate-300">
+                                Ιδανικό layout για εταιρεία μεταφορών, tours, VIP chauffeur και τουριστικές υπηρεσίες.
                             </p>
                         </div>
                     </div>
