@@ -179,7 +179,7 @@ export default function TavernPage() {
                                     key={important}
                                     className="rounded-xl bg-stone-100 px-4 py-3 text-stone-700"
                                 >
-                                    ❌ {important}
+                                     {important}
                                 </div>
                             ))}
                         </div>

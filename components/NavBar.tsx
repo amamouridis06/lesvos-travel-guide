@@ -39,7 +39,7 @@ export default function NavBar() {
                 Beaches
               </Link>
 
-              <Link href="/food" className="hover:text-yellow-300 transition whitespace-nowrap">
+              <Link href="/food-drinks" className="hover:text-yellow-300 transition whitespace-nowrap">
                 Food & Drinks
               </Link>
 
@@ -101,7 +101,7 @@ export default function NavBar() {
                   Beaches
                 </Link>
 
-                <Link href="/food" onClick={closeMenu} className="py-3 border-b border-white/10 hover:text-yellow-300 transition">
+                <Link href="/food-drinks" onClick={closeMenu} className="py-3 border-b border-white/10 hover:text-yellow-300 transition">
                   Food & Drinks
                 </Link>
 
