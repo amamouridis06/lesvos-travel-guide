@@ -44,6 +44,15 @@ const cafeTaverns: FoodItem[] = [
     alt: "Pallas",
     href: "/under-construction",
   },
+  {
+    title: "Taverna Mpampis",
+    category: "Tavern",
+    description: "Fresh meat, and tranditional dishes in north Lesvos",
+    location: "Molyvos, Lesvos",
+    image: "/mpampis/mpampis-logo.jpg",
+    alt: "Mpampis",
+    href: "/tavernaompampis",
+  },
 ];
 
 const Restaurants: FoodItem[] = [

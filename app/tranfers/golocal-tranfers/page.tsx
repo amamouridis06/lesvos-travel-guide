@@ -246,33 +246,33 @@ export default function PrivateTransfersToursPage() {
                 <div className="absolute left-1/2 top-24 h-[640px] w-[640px] -translate-x-1/2 rounded-full bg-amber-300/10 blur-3xl" />
                 <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-[#f8fafc] to-transparent" />
 
-                <nav className="relative z-20 mx-auto flex max-w-7xl items-center justify-between rounded-full border border-white/10 bg-white/10 px-4 py-3 shadow-2xl backdrop-blur-xl sm:px-5">
-                    <div className="flex items-center gap-3">
-                        <div className="grid h-11 w-11 place-items-center rounded-full bg-amber-400 text-slate-950 shadow-lg shadow-amber-500/20">
-                            <Car className="h-5 w-5" />
-                        </div>
-                        <div>
-                            <p className="text-sm font-black leading-none">Elite Transfers & Tours</p>
-                            <p className="mt-1 text-xs text-slate-300">Private Travel Services</p>
-                        </div>
-                    </div>
+                {/*<nav className="relative z-20 mx-auto flex max-w-7xl items-center justify-between rounded-full border border-white/10 bg-white/10 px-4 py-3 shadow-2xl backdrop-blur-xl sm:px-5">*/}
+                {/*    <div className="flex items-center gap-3">*/}
+                {/*        <div className="grid h-11 w-11 place-items-center rounded-full bg-amber-400 text-slate-950 shadow-lg shadow-amber-500/20">*/}
+                {/*            <Car className="h-5 w-5" />*/}
+                {/*        </div>*/}
+                {/*        <div>*/}
+                {/*            <p className="text-sm font-black leading-none">Elite Transfers & Tours</p>*/}
+                {/*            <p className="mt-1 text-xs text-slate-300">Private Travel Services</p>*/}
+                {/*        </div>*/}
+                {/*    </div>*/}
 
-                    <div className="hidden items-center gap-7 text-sm font-semibold text-slate-300 md:flex">
-                        <a href="#services" className="transition hover:text-white">Υπηρεσίες</a>
-                        <a href="#fleet" className="transition hover:text-white">Στόλος</a>
-                        <a href="#why" className="transition hover:text-white">Γιατί εμάς</a>
-                        <a href="#contact" className="transition hover:text-white">Κράτηση</a>
-                    </div>
+                {/*    <div className="hidden items-center gap-7 text-sm font-semibold text-slate-300 md:flex">*/}
+                {/*        <a href="#services" className="transition hover:text-white">Υπηρεσίες</a>*/}
+                {/*        <a href="#fleet" className="transition hover:text-white">Στόλος</a>*/}
+                {/*        <a href="#why" className="transition hover:text-white">Γιατί εμάς</a>*/}
+                {/*        <a href="#contact" className="transition hover:text-white">Κράτηση</a>*/}
+                {/*    </div>*/}
 
-                    <button
-                        onClick={() => setMobileMenuOpen((value) => !value)}
-                        className="grid h-11 w-11 place-items-center rounded-full bg-white/10 text-white md:hidden"
-                        type="button"
-                        aria-label="Άνοιγμα μενού"
-                    >
-                        {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-                    </button>
-                </nav>
+                {/*    <button*/}
+                {/*        onClick={() => setMobileMenuOpen((value) => !value)}*/}
+                {/*        className="grid h-11 w-11 place-items-center rounded-full bg-white/10 text-white md:hidden"*/}
+                {/*        type="button"*/}
+                {/*        aria-label="Άνοιγμα μενού"*/}
+                {/*    >*/}
+                {/*        {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}*/}
+                {/*    </button>*/}
+                {/*</nav>*/}
 
                 {mobileMenuOpen && (
                     <div className="relative z-20 mx-auto mt-3 max-w-7xl rounded-3xl border border-white/10 bg-white/10 p-4 backdrop-blur-xl md:hidden">
