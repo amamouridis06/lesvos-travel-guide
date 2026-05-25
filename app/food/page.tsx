@@ -51,7 +51,7 @@ const cafeTaverns: FoodItem[] = [
     location: "Molyvos, Lesvos",
     image: "/mpampis/mpampis-logo.jpg",
     alt: "Mpampis",
-    href: "/tavernaompampis",
+    href: "/food/tavernaompampis",
   },
 ];
 

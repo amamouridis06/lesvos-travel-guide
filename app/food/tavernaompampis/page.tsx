@@ -43,7 +43,7 @@ export default function TavernPage() {
             "Vegetarian options"
         ],
         important: [
-            "Τhere is no accessibility for people with disabilities"
+            "There is a little accessibility for people with disabilities. There are two stairs outside the tavern but there are no toilets for people with disabilities"
         ],
         openingHours: "10:00 - 23:30",
         phone: "+30 22530 72600",
@@ -146,11 +146,8 @@ export default function TavernPage() {
                         </div>
 
                         <div className="mt-6 grid gap-3">
-                            {/*<button className="rounded-xl bg-stone-900 px-5 py-4 text-base font-medium text-white transition hover:bg-stone-700">*/}
-                            {/*  Book a table*/}
-                            {/*</button></>*/}
                             <Link
-                                href="https://maps.app.goo.gl/8YfmkHVaHJr539hn8"
+                                href="https://maps.app.goo.gl/mH8B9JpytyFEZdAU7"
                                 target="_blank"
                                 className="inline-block rounded-xl border border-stone-300 bg-white px-5 py-4 text-base font-medium text-stone-900 transition hover:bg-stone-100"
                             >

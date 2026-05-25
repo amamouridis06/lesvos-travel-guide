@@ -48,6 +48,7 @@ const appartment = {
     "Check-in time: 15:00 to 23:00; Check-out time: 08:00 to 10:00",
     "Some street noise may be expected",
     "Valid ID and credit card required at check-in",
+    "Τhere is no accessibility for people with disabilities"
   ],
   gallery: [
     { src: IMG.house, alt: "Where Comfort Meets Clean" },

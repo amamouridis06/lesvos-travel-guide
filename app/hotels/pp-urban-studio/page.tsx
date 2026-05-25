@@ -41,6 +41,7 @@ const hotel = {
     knowBefore: [
         "Located in the city centre",
         "Valid ID and credit card required at check-in",
+        "There is a little accessibility for people with disabilities. There are lift for the studio but there are no toilets for people with disabilities"
     ],
     gallery: [
         { src: IMG.entry, alt: "entry", caption: "Entry: A first impression that stays." },

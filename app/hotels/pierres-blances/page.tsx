@@ -55,6 +55,7 @@ const hotel = {
         "Valid ID and credit card required at check-in",
         "The property is located a short drive from Mytilene, so a car is recommended for easier access and exploring the island",
         "Private pools may be seasonal and subject to weather conditions",
+        "Τhere is accessibility for people with disabilities"
     ],
     gallery: [
         { src: IMG.pool, alt: "entry"},

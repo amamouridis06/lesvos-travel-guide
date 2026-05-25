@@ -39,6 +39,7 @@ export default function RestaurantTravelGuideListing() {
       "Gluten-free dishes available for guests with gluten intolerance",
       "Lactose-free and dairy-free options available",
       "Vegetarian dishes",
+      "Τhere is accessibility for people with disabilities and toilets for these people"
     ],
     openingHours: "Daily: 12:00 – 21:30",
     phone: "+30 2253 072680",
