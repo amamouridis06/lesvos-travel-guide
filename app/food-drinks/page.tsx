@@ -33,7 +33,7 @@ const cafeTaverns: FoodItem[] = [
     location: "Kalloni, Lesvos",
     image: "/tryfon/tryfon6.jpg",
     alt: "Tryfon",
-    href: "/tryfon",
+    href: "/food-drinks/tryfon",
   },
   {
     title: "Pallas Cafe - Grill",
@@ -51,7 +51,7 @@ const cafeTaverns: FoodItem[] = [
     location: "Molyvos, Lesvos",
     image: "/mpampis/mpampis-logo.jpg",
     alt: "Mpampis",
-    href: "/food/tavernaompampis",
+    href: "/food-drinks/tavernaompampis",
   },
 ];
 
@@ -63,7 +63,7 @@ const Restaurants: FoodItem[] = [
     location: "Pamfila, Lesvos",
     image: "/limanaki/limanaki_pamf.jpg",
     alt: "To Limanaki ton Pamfilon",
-    href: "/limanaki_pamfilon",
+    href: "/food-drinks/limanaki_pamfilon",
   },
   {
     title: "Taverna To Votsalo",
@@ -80,8 +80,8 @@ const Restaurants: FoodItem[] = [
     description: "Authentic Greek flavors, and fantastic hospitality.",
     location: "Molyvos, Lesvos",
     image: "/tropicana/tropicana1.jpg",
-    alt: "Tropicana ",
-    href: "/food/tropicana-platanos",
+    alt: "Tropicana",
+    href: "/food-drinks/tropicana-platanos",
   },
   {
     title: "Nisi Restaurant",
@@ -90,7 +90,7 @@ const Restaurants: FoodItem[] = [
     location: "Molyvos, Lesvos",
     image: "/nisi/nisi_logo.png",
     alt: "Nisi ",
-    href: "/food/nisi-restaurant",
+    href: "/food-drinks/nisi-restaurant",
   },
   {
     title: "Petite",
@@ -99,7 +99,7 @@ const Restaurants: FoodItem[] = [
     location: "Molyvos, Lesvos",
     image: "/petite/petite7.jpg",
     alt: "Petite",
-    href: "/food/petite",
+    href: "/food-drinks/petite",
   },
 ];
 
@@ -111,16 +111,25 @@ const Bars: FoodItem[] = [
     location: "Agios Isidoros, Lesvos",
     image: "/naf/naf-logo.jpg",
     alt: "Naf",
-    href: "/food/nafs-cocktail-corner",
+    href: "/food-drinks/nafs-cocktail-corner",
   },
   {
     title: "Rhino",
     category: "Bars",
-    description: "Enjoy cocktails, music, and nightlife in the city ",
+    description: "Enjoy cocktails, music, and nightlife in the city",
     location: "Mytilene, Lesvos",
     image: "/rhino/rhino-logo.jpg",
     alt: "Rhino",
-    href: "/food/rhino",
+    href: "/food-drinks/rhino",
+  },
+  {
+    title: "Azul Paraíso",
+    category: "Bars",
+    description: "Enjoy cocktails, music, and sunset in North Lesvos",
+    location: "Anaxos, Lesvos",
+    image: "/azul/azul-logo.jpg",
+    alt: "Azul",
+    href: "/food-drinks/azul-paraiso",
   },
 ];
 

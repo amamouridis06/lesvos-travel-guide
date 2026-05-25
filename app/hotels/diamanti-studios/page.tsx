@@ -47,7 +47,8 @@ const hotel = {
         "Just a little steps far for the beach of Skala Kallonis, perfect for walking",
         "View in sea",
         "The Skala Kallonis square is just 4 minutes far",
-        "There are a lot of restaurants and cafes nearby"
+        "There are a lot of restaurants and cafes nearby",
+        "Τhere is no accessibility for people with disabilities"
     ],
     gallery: [
         { src: IMG.bed1, alt: "bed" },

@@ -46,7 +46,8 @@ const hotel = {
         "Valid ID and credit card required at check-in",
         "Just a little steps far for the village of Molyvos, perfect for walking",
         "View in castle of Molyvos",
-        "The price is for a (Double Room per night during the low season). Breakfast is included."
+        "The price is for a (Double Room per night during the low season). Breakfast is included.",
+        "Τhere is accessibility for people with disabilities"
     ],
     gallery: [
         { src: IMG.view, alt: "entry"},
