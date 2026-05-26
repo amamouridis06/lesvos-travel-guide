@@ -47,17 +47,6 @@ const featuredCompanies = [
     },
 ];
 
-// {
-//     name: "Tryfon Parmakellis",
-//         area: "Kalloni · Airport · Port",
-//     phone: "+30 22530 23238",
-//     whatsapp: "+30 6976683130",
-//     vehicle: "Standard taxi",
-//     languages: "Greek, English",
-//     availability: "Available daily",
-//     image:
-//     "/taxi/tryfon-taxi.jpg",
-// },
 export default function TaxiServicesPage() {
     return (
         <main className="min-h-screen bg-slate-950 text-white">
@@ -214,7 +203,11 @@ export default function TaxiServicesPage() {
                                         ))}
                                     </div>
 
-                                    <div className="mt-8 flex gap-4">
+                                    {/* BUTTONS */}
+
+                                    <div className="mt-8 flex flex-wrap gap-4">
+                                        {/* FULL COMPANY PAGE */}
+
                                         <Link
                                             href={`/companies/${company.slug}`}
                                             className="rounded-2xl bg-slate-950 px-6 py-3 font-semibold text-white transition hover:bg-slate-800"
@@ -222,9 +215,23 @@ export default function TaxiServicesPage() {
                                             View Company
                                         </Link>
 
-                                        <button className="rounded-2xl border border-slate-300 px-6 py-3 font-semibold transition hover:bg-slate-100">
+                                        {/* GO DIRECTLY TO FLEET SECTION */}
+
+                                        <Link
+                                            href={`/companies/${company.slug}#fleet`}
+                                            className="rounded-2xl border border-slate-300 px-6 py-3 font-semibold transition hover:bg-slate-100"
+                                        >
                                             Fleet Details
-                                        </button>
+                                        </Link>
+
+                                        {/* OPTIONAL EXTRA LINKS */}
+
+                                        <Link
+                                            href={`/companies/${company.slug}#booking`}
+                                            className="rounded-2xl border border-yellow-400 bg-yellow-400 px-6 py-3 font-semibold text-slate-950 transition hover:bg-yellow-300"
+                                        >
+                                            Book Transfer
+                                        </Link>
                                     </div>
                                 </div>
                             </article>
@@ -272,4 +279,3 @@ export default function TaxiServicesPage() {
         </main>
     );
 }
-
