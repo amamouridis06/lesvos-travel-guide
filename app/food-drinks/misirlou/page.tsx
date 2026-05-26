@@ -1,17 +1,17 @@
 import React from "react";
 import Link from "next/link";
 
-export default function NisiPage() {
+export default function MisirlouPage() {
     const restaurant = {
-        name: "Nisi Restaurant",
+        name: "Misirlou",
         category: " Restaurant",
         location: "Molyvos, Lesvos",
-        rating: 4.8,
-        reviews: 323,
+        rating: 4.7,
+        reviews: 365,
         description: [
-            <p>The Nisi Restaurant was founded by two brothers whose journey took them across borders, through different kitchens, and into the heart of new flavors, cultures, and experiences.</p>,
-            <p>Inspired by the places we visited, the people we met, and the hospitality that shaped us, we created a warm, relaxed, and authentic space where good food, fine wine, and great company come together.</p>,
-            <p>The Nisi Restaurant is more than just a place to eat. It is part of our story — a place where every dish is prepared with care, every table is welcomed with warmth, and every shared moment truly matters.</p>
+            <p>In the picturesque harbor of Molyvos, Misirlou stands out as a unique gastronomic destination that combines the warmth of Greek hospitality with creative flavors from around the world. Set against the endless blue of the Aegean Sea and the breathtaking view of the iconic castle of Molyvos, it offers an experience where authentic island atmosphere meets great food and pure enjoyment..</p>,
+            <p>The menu features carefully crafted dishes inspired by Greek cuisine, enriched with international influences and creative touches. From aromatic coffee and refreshing beers to signature cocktails and fine drinks by the sea, every moment at Misirlou becomes a small escape filled with flavor and relaxation.</p>,
+            <p>Misirlou is the perfect place for authentic summer moments, wonderful gatherings, and unforgettable experiences in the most enchanting spot of Molyvos.</p>
         ],
         heroImage:
             "/nisi/nisi_hero.jpg",
@@ -39,9 +39,10 @@ export default function NisiPage() {
         important: [
             "Τhere is no accessibility for people with disabilities"
         ],
-        openingHours: "10:00 - 00:00",
-        phone: "+30 22530 72172",
-        instagram: "@restaurant_nisi",
+        openingHours: "13:00 - 23:30",
+        phone: "+30 22530 72388",
+        instagram: "@misirlou_bar_restaurant",
+        facebook: "@Misirlou Bar and Restaurant "
     };
 
     return (
@@ -144,7 +145,7 @@ export default function NisiPage() {
                             {/*  Book a table*/}
                             {/*</button></>*/}
                             <Link
-                                href="https://maps.app.goo.gl/8YfmkHVaHJr539hn8"
+                                href="https://maps.app.goo.gl/2nxRfbdxCwPaQAe17"
                                 target="_blank"
                                 className="inline-block rounded-xl border border-stone-300 bg-white px-5 py-4 text-base font-medium text-stone-900 transition hover:bg-stone-100"
                             >
@@ -176,7 +177,7 @@ export default function NisiPage() {
                                     key={important}
                                     className="rounded-xl bg-stone-100 px-4 py-3 text-stone-700"
                                 >
-                                    ❌ {important}
+                                     {important}
                                 </div>
                             ))}
                         </div>
