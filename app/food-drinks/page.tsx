@@ -95,11 +95,20 @@ const Restaurants: FoodItem[] = [
   {
     title: "Petite",
     category: "Restaurant",
-    description: "Delicius pancaked and wafles",
+    description: "Delicius pancakes and wafles",
     location: "Molyvos, Lesvos",
     image: "/petite/petite7.jpg",
     alt: "Petite",
     href: "/food-drinks/petite",
+  },
+  {
+    title: "Misirlou",
+    category: "Restaurant",
+    description: "Greek flavors, cocktails, seaside relaxation, escape.",
+    location: "Molyvos, Lesvos",
+    image: "/petite/petite7.jpg",
+    alt: "Petite",
+    href: "/food-drinks/misirlou",
   },
 ];
 
@@ -125,7 +134,7 @@ const Bars: FoodItem[] = [
   {
     title: "Azul Paraíso",
     category: "Bars",
-    description: "Enjoy cocktails, music, and sunset in North Lesvos",
+    description: "Brunch, burgers, bao, shrimp, cocktails, all-day cravings",
     location: "Anaxos, Lesvos",
     image: "/azul/azul-logo.jpg",
     alt: "Azul",

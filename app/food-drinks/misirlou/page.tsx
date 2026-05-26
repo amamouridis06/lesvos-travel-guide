@@ -138,6 +138,10 @@ export default function MisirlouPage() {
                                 <p className="font-medium text-stone-900">📸 Instagram</p>
                                 <p>{restaurant.instagram}</p>
                             </div>
+                            <div>
+                                <p className="font-medium text-stone-900">📸 Facebook</p>
+                                <p>{restaurant.facebook}</p>
+                            </div>
                         </div>
 
                         <div className="mt-6 grid gap-3">
