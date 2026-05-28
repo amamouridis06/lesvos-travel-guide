@@ -150,7 +150,16 @@ const locProd: FoodItem[] = [
     location: "Kalloni, Lesvos",
     image: "/selaxas/sel-logo.jpg",
     alt: "Sel",
-    href: "/food/selachas",
+    href: "/food-drinks/selachas",
+  },
+  {
+    title: "Ouzo Aigaio",
+    category: "Local Products",
+    description: "Local Product. Ouzo with meze",
+    location: "Papados, Lesvos",
+    image: "/aigaio/aigaio1.jpg",
+    alt: "Sel",
+    href: "/food-drinks/ouzo-aigaio",
   },
 ];
 

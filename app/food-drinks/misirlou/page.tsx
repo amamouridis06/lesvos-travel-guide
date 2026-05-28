@@ -31,15 +31,11 @@ export default function MisirlouPage() {
             "/misirlou/misirlou14.jpg",
             "/misirlou/misirlou15.jpg",
             "/misirlou/misirlou16.jpg",
-            "/misirlou/misirlou17.jpg",
-            "/misirlou/misirlou17.jpg",
-            "/misirlou/misirlou17.jpg",
             "/misirlou/misirlou18.jpg",
             "/misirlou/misirlou19.jpg",
 
         ],
         highlights: [
-            "Fresh seafood",
             "Local products",
             "Romantic atmosphere",
             "Family friendly",
@@ -49,7 +45,7 @@ export default function MisirlouPage() {
             "Vegetarian options"
         ],
         important: [
-            "Τhere is no accessibility for people with disabilities"
+            "Τhere is accessibility for people with disabilities"
         ],
         openingHours: "13:00 - 23:30",
         phone: "+30 22530 72388",
