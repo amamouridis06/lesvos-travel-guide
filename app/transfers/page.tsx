@@ -4,35 +4,35 @@ import Link from "next/link";
 const featuredDrivers = [
     {
         id: 1,
-        slug: "nikos-taxi",
-        name: "Nikos Taxi",
-        area: "Mytilene",
-        vehicle: "Mercedes E-Class",
+        slug: "/transfers/drivers/parmakellis",
+        name: "Parmakellis Tryfon",
+        area: "Kalloni",
+        vehicle: "Mercedes",
         image:
-            "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200&auto=format&fit=crop",
+            "/taxi/tryfon-taxi.jpg",
     },
 
-    {
-        id: 2,
-        slug: "giannis-transfers",
-        name: "Giannis Transfers",
-        area: "Petra",
-        vehicle: "Skoda Octavia",
-        image:
-            "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1200&auto=format&fit=crop",
-    },
+    // {
+    //     id: 2,
+    //     slug: "giannis-transfers",
+    //     name: "Giannis Transfers",
+    //     area: "Petra",
+    //     vehicle: "Skoda Octavia",
+    //     image:
+    //         "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1200&auto=format&fit=crop",
+    // },
 ];
 
 const featuredCompanies = [
     {
         id: 1,
-        slug: "golocal-transfers",
+        slug: "/transfers/companies/golocal-transfers",
         name: "GO LOCAL Transfers & Tours",
         location: "Molyvos",
         vehicles: 2,
         services: ["Airport", "Port", "VIP"],
         image:
-            "golocal/cars.png",
+            "/golocal/cars.png",
     },
 
     // {
@@ -55,7 +55,7 @@ export default function TaxiServicesPage() {
             <section className="relative overflow-hidden">
                 <div className="absolute inset-0">
                     <img
-                        src="https://images.unsplash.com/photo-1519767840294-07a5b0b28f3a?q=80&w=1600&auto=format&fit=crop"
+                        src="/golocal/cars.png"
                         alt="Lesvos Taxi Services"
                         className="h-full w-full object-cover opacity-30"
                     />
