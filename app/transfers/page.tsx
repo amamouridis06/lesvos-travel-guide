@@ -4,7 +4,7 @@ import Link from "next/link";
 const featuredDrivers = [
     {
         id: 1,
-        slug: "/transfers/drivers/parmakellis",
+        slug: "/parmakellis",
         name: "Parmakellis Tryfon",
         area: "Kalloni",
         vehicle: "Mercedes",
@@ -26,7 +26,7 @@ const featuredDrivers = [
 const featuredCompanies = [
     {
         id: 1,
-        slug: "/transfers/companies/golocal-transfers",
+        slug: "/golocal-transfers",
         name: "GO LOCAL Transfers & Tours",
         location: "Molyvos",
         vehicles: 2,
@@ -138,7 +138,7 @@ export default function TaxiServicesPage() {
                                     </p>
 
                                     <Link
-                                        href={`/drivers/${driver.slug}`}
+                                        href={`/transfers/drivers/${driver.slug}`}
                                         className="mt-6 inline-flex rounded-2xl bg-slate-950 px-5 py-3 font-semibold text-white transition hover:bg-slate-800"
                                     >
                                         View Driver
@@ -209,7 +209,7 @@ export default function TaxiServicesPage() {
                                         {/* FULL COMPANY PAGE */}
 
                                         <Link
-                                            href={`/companies/${company.slug}`}
+                                            href={`/transfers/companies${company.slug}`}
                                             className="rounded-2xl bg-slate-950 px-6 py-3 font-semibold text-white transition hover:bg-slate-800"
                                         >
                                             View Company
@@ -218,7 +218,7 @@ export default function TaxiServicesPage() {
                                         {/* GO DIRECTLY TO FLEET SECTION */}
 
                                         <Link
-                                            href={`/companies/${company.slug}#fleet`}
+                                            href={`/transfers/companies/${company.slug}#fleet`}
                                             className="rounded-2xl border border-slate-300 px-6 py-3 font-semibold transition hover:bg-slate-100"
                                         >
                                             Fleet Details
@@ -227,7 +227,7 @@ export default function TaxiServicesPage() {
                                         {/* OPTIONAL EXTRA LINKS */}
 
                                         <Link
-                                            href={`/companies/${company.slug}#booking`}
+                                            href={`/transfers/companies/${company.slug}#booking`}
                                             className="rounded-2xl border border-yellow-400 bg-yellow-400 px-6 py-3 font-semibold text-slate-950 transition hover:bg-yellow-300"
                                         >
                                             Book Transfer
