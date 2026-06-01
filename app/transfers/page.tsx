@@ -26,25 +26,25 @@ const featuredDrivers = [
 const featuredCompanies = [
     {
         id: 1,
-        slug: "lesvos-transfer-express",
-        name: "Lesvos Transfer Express",
-        location: "Mytilene",
-        vehicles: 12,
+        slug: "golocal-transfers",
+        name: "GO LOCAL Transfers & Tours",
+        location: "Molyvos",
+        vehicles: 2,
         services: ["Airport", "Port", "VIP"],
         image:
-            "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?q=80&w=1200&auto=format&fit=crop",
+            "golocal/cars.png",
     },
 
-    {
-        id: 2,
-        slug: "aegean-vip-rides",
-        name: "Aegean VIP Rides",
-        location: "Molyvos",
-        vehicles: 8,
-        services: ["Luxury", "Private Tours", "Night Rides"],
-        image:
-            "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?q=80&w=1200&auto=format&fit=crop",
-    },
+    // {
+    //     id: 2,
+    //     slug: "aegean-vip-rides",
+    //     name: "Aegean VIP Rides",
+    //     location: "Molyvos",
+    //     vehicles: 8,
+    //     services: ["Luxury", "Private Tours", "Night Rides"],
+    //     image:
+    //         "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?q=80&w=1200&auto=format&fit=crop",
+    // },
 ];
 
 export default function TaxiServicesPage() {

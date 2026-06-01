@@ -48,7 +48,7 @@ const services: Service[] = [
         capacity: "1-7 άτομα",
         tags: ["Meet & greet", "Flight tracking", "Fixed price"],
         featured: true,
-        image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1400&q=80",
+        image: "golocal/cars.png",
     },
     {
         id: "city-transfer",
@@ -122,23 +122,23 @@ const benefits = [
 
 const fleet = [
     {
-        title: "Premium Sedan",
-        passengers: "1-3 επιβάτες",
-        luggage: "2 βαλίτσες",
-        image: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1200&q=80",
+        title: "Μini van",
+        passengers: "9 επιβάτες",
+        luggage: "6-7 βαλίτσες",
+        image: "golocal/minivan1.jpg",
     },
     {
         title: "Luxury SUV",
-        passengers: "1-4 επιβάτες",
-        luggage: "4 βαλίτσες",
-        image: "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=1200&q=80",
+        passengers: "7 επιβάτες",
+        luggage: "μεχρι 3 βαλίτσες",
+        image: "golocal/suv.png",
     },
-    {
-        title: "Private Minivan",
-        passengers: "1-8 επιβάτες",
-        luggage: "8 βαλίτσες",
-        image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80",
-    },
+    // {
+    //     title: "Private Minivan",
+    //     passengers: "1-8 επιβάτες",
+    //     luggage: "8 βαλίτσες",
+    //     image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80",
+    // },
 ];
 
 function Button({
@@ -188,11 +188,11 @@ function PromoPopup({ onClose }: { onClose: () => void }) {
                     <Gift className="h-5 w-5" />
                 </div>
 
-                <p className="mt-5 text-sm font-black uppercase tracking-[0.22em]">Special offer</p>
-                <h3 className="mt-2 pr-8 text-2xl font-black leading-tight">-15% σε Airport Private Transfers</h3>
-                <p className="mt-3 text-sm font-semibold leading-6 text-slate-800">
-                    Κλείσε online σήμερα και απόλαυσε ιδιωτική μεταφορά από ή προς το αεροδρόμιο με ειδική τιμή.
-                </p>
+                {/*<p className="mt-5 text-sm font-black uppercase tracking-[0.22em]">Special offer</p>*/}
+                {/*<h3 className="mt-2 pr-8 text-2xl font-black leading-tight">-15% σε Airport Private Transfers</h3>*/}
+                {/*<p className="mt-3 text-sm font-semibold leading-6 text-slate-800">*/}
+                {/*    Κλείσε online σήμερα και απόλαυσε ιδιωτική μεταφορά από ή προς το αεροδρόμιο με ειδική τιμή.*/}
+                {/*</p>*/}
             </div>
 
             <div className="bg-white p-5">
@@ -554,7 +554,7 @@ export default function PrivateTransfersToursPage() {
 
                     <div className="relative min-h-[460px] bg-slate-950">
                         <img
-                            src="https://images.unsplash.com/photo-1485291571150-772bcfc10da5?auto=format&fit=crop&w=1200&q=80"
+                            src="golocal/golocal-logo.png"
                             alt="Private transfer car"
                             className="h-full w-full object-cover opacity-75"
                         />
