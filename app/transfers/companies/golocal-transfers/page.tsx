@@ -48,7 +48,7 @@ const services: Service[] = [
         capacity: "1-7 άτομα",
         tags: ["Meet & greet", "Flight tracking", "Fixed price"],
         featured: true,
-        image: "golocal/cars.png",
+        image: "/golocal/cars.png",
     },
     {
         id: "city-transfer",
@@ -125,13 +125,13 @@ const fleet = [
         title: "Μini van",
         passengers: "9 επιβάτες",
         luggage: "6-7 βαλίτσες",
-        image: "golocal/minivan1.jpg",
+        image: "/golocal/minivan1.jpg",
     },
     {
         title: "Luxury SUV",
         passengers: "7 επιβάτες",
         luggage: "μεχρι 3 βαλίτσες",
-        image: "golocal/suv.png",
+        image: "/golocal/suv.png",
     },
     // {
     //     title: "Private Minivan",
@@ -554,7 +554,7 @@ export default function PrivateTransfersToursPage() {
 
                     <div className="relative min-h-[460px] bg-slate-950">
                         <img
-                            src="golocal/golocal-logo.png"
+                            src="/golocal/golocal-logo.png"
                             alt="Private transfer car"
                             className="h-full w-full object-cover opacity-75"
                         />
