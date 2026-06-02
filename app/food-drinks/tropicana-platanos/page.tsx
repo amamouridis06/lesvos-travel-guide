@@ -19,7 +19,9 @@ const GALLERY = [
   { type: "image", src: "/tropicana/tropicana11.jpeg" },
   { type: "image", src: "/tropicana/tropicana13.jpeg" },
   { type: "image", src: "/tropicana/tropicana12.jpeg" },
+  { type: "image", src: "/tropicana/tropicana4.jpg" },
   { type: "image", src: "/tropicana/tropicana14.jpeg" },
+  { type: "image", src: "/tropicana/tropicana5.jpg" },
   { type: "image", src: "/tropicana/tropicana15.jpeg" },
   { type: "image", src: "/tropicana/tropicana16.jpeg" },
   { type: "image", src: "/tropicana/tropicana17.jpeg" },
@@ -35,17 +37,17 @@ const DISHES = [
 ];
 
 const NEARBY = [
-  { label: "Eftalou Beach", emoji: "🏖" },
-  { label: "Petra ", emoji: "🏘" },
-  { label: "Anaxos", emoji: "🍶" },
+  { label: "Eftalou Beach", emoji: "" },
+  { label: "Petra ", emoji: "" },
+  { label: "Anaxos", emoji: "" },
 ];
 
 const INFO = [
-  { Icon: MapPin, label: "Location", value: "Mytilene-Skopelos Regional Road, Plomari 812 00" },
-  { Icon: Phone, label: "Phone", value: "2252031374" },
-  { Icon: Clock, label: "Hours", value: "Daily · Sunset till late" },
-  { Icon: Wallet, label: "Price", value: "Cocktails from €8" },
-  { Icon: Users, label: "Best for", value: "Couples, friends, sunset drinks" },
+  { Icon: MapPin, label: "Location", value: "Plateia Kiriakou, Mithimna 811 08" },
+  { Icon: Phone, label: "Phone", value: "22530 71869" },
+  { Icon: Clock, label: "Hours", value: "Daily · 9:30-23:.30" },
+  { Icon: Wallet, label: "Price", value: "10-20€" },
+  { Icon: Users, label: "Best for", value: "Couples, friends, families" },
 ];
 
 export default function TropicanaPage() {
@@ -179,131 +181,142 @@ export default function TropicanaPage() {
               </div>
             </div>
 
-            {/* GALLERY */}
-            <div id="gallery">
-              <p
-                  className="text-xs font-semibold uppercase tracking-[0.25em]"
-                  style={{ color: "#b85c3a" }}
-              >
-                Atmosphere
-              </p>
+            <div className="grid gap-4 md:grid-cols-3">
+              {restaurant.gallery.map((image, index) => (
+                  <div key={image} className="overflow-hidden rounded-2xl shadow-sm">
+                    <img
+                        src={image}
+                        alt={`Restaurant gallery ${index + 1}`}
+                        className="h-64 w-full object-cover transition duration-500 hover:scale-105"
+                    />
+                  </div>
+              ))}
+            </div>
+            {/*/!* GALLERY *!/*/}
+            {/*<div id="gallery">*/}
+            {/*  <p*/}
+            {/*      className="text-xs font-semibold uppercase tracking-[0.25em]"*/}
+            {/*      style={{ color: "#b85c3a" }}*/}
+            {/*  >*/}
+            {/*    Atmosphere*/}
+            {/*  </p>*/}
 
-              <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
-                A look from the restaurant and the dishes
-              </h2>
+            {/*  <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">*/}
+            {/*    A look from the restaurant and the dishes*/}
+            {/*  </h2>*/}
 
-              {/* MAIN SLIDER */}
-              <div
-                  className="group relative mt-8 aspect-[16/10] w-full cursor-zoom-in overflow-hidden rounded-3xl shadow-lg"
-                  onMouseEnter={() => setIsHovered(true)}
-                  onMouseLeave={() => setIsHovered(false)}
-                  onClick={() => setIsOpen(true)}
-              >
-                {GALLERY.map((item, i) =>
-                    item.type === "image" ? (
-                        <img
-                            key={item.src}
-                            src={item.src}
-                            alt=""
-                            className={`absolute inset-0 h-full w-full object-cover transition-all duration-700 ${
-                                i === index ? "opacity-100 scale-100" : "opacity-0 scale-105"
-                            }`}
-                        />
-                    ) : (
-                        <video
-                            ref={(el) => {
-                              videoRefs.current[i] = el;
-                            }}
-                            key={item.src}
-                            className={`absolute inset-0 h-full w-full object-cover transition-all duration-700 ${
-                                i === index ? "opacity-100" : "opacity-0"
-                            }`}
-                            autoPlay={i === index}
-                            muted
-                            loop
-                            playsInline
-                        >
-                          <source src={item.src} type="video/mp4" />
-                        </video>
-                    )
-                )}
+            {/*  /!* MAIN SLIDER *!/*/}
+            {/*  <div*/}
+            {/*      className="group relative mt-8 aspect-[16/10] w-full cursor-zoom-in overflow-hidden rounded-3xl shadow-lg"*/}
+            {/*      onMouseEnter={() => setIsHovered(true)}*/}
+            {/*      onMouseLeave={() => setIsHovered(false)}*/}
+            {/*      onClick={() => setIsOpen(true)}*/}
+            {/*  >*/}
+            {/*    {GALLERY.map((item, i) =>*/}
+            {/*        item.type === "image" ? (*/}
+            {/*            <img*/}
+            {/*                key={item.src}*/}
+            {/*                src={item.src}*/}
+            {/*                alt=""*/}
+            {/*                className={`absolute inset-0 h-full w-full object-cover transition-all duration-700 ${*/}
+            {/*                    i === index ? "opacity-100 scale-100" : "opacity-0 scale-105"*/}
+            {/*                }`}*/}
+            {/*            />*/}
+            {/*        ) : (*/}
+            {/*            <video*/}
+            {/*                ref={(el) => {*/}
+            {/*                  videoRefs.current[i] = el;*/}
+            {/*                }}*/}
+            {/*                key={item.src}*/}
+            {/*                className={`absolute inset-0 h-full w-full object-cover transition-all duration-700 ${*/}
+            {/*                    i === index ? "opacity-100" : "opacity-0"*/}
+            {/*                }`}*/}
+            {/*                autoPlay={i === index}*/}
+            {/*                muted*/}
+            {/*                loop*/}
+            {/*                playsInline*/}
+            {/*            >*/}
+            {/*              <source src={item.src} type="video/mp4" />*/}
+            {/*            </video>*/}
+            {/*        )*/}
+            {/*    )}*/}
 
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+            {/*    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />*/}
 
-                <button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      prev();
-                    }}
-                    aria-label="Previous slide"
-                    className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-white/90 p-2 opacity-0 transition-opacity group-hover:opacity-100"
-                >
-                  <ChevronLeft />
-                </button>
+            {/*    <button*/}
+            {/*        onClick={(e) => {*/}
+            {/*          e.stopPropagation();*/}
+            {/*          prev();*/}
+            {/*        }}*/}
+            {/*        aria-label="Previous slide"*/}
+            {/*        className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-white/90 p-2 opacity-0 transition-opacity group-hover:opacity-100"*/}
+            {/*    >*/}
+            {/*      <ChevronLeft />*/}
+            {/*    </button>*/}
 
-                <button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      next();
-                    }}
-                    aria-label="Next slide"
-                    className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-white/90 p-2 opacity-0 transition-opacity group-hover:opacity-100"
-                >
-                  <ChevronRight />
-                </button>
+            {/*    <button*/}
+            {/*        onClick={(e) => {*/}
+            {/*          e.stopPropagation();*/}
+            {/*          next();*/}
+            {/*        }}*/}
+            {/*        aria-label="Next slide"*/}
+            {/*        className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-white/90 p-2 opacity-0 transition-opacity group-hover:opacity-100"*/}
+            {/*    >*/}
+            {/*      <ChevronRight />*/}
+            {/*    </button>*/}
 
-                <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2">
-                  {GALLERY.map((_, i) => (
-                      <button
-                          key={i}
-                          aria-label={`Go to slide ${i + 1}`}
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            setIndex(i);
-                          }}
-                          className={`h-2 rounded-full bg-white transition-all ${
-                              i === index ? "w-6" : "w-2 opacity-50"
-                          }`}
-                      />
-                  ))}
-                </div>
-              </div>
+            {/*    <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2">*/}
+            {/*      {GALLERY.map((_, i) => (*/}
+            {/*          <button*/}
+            {/*              key={i}*/}
+            {/*              aria-label={`Go to slide ${i + 1}`}*/}
+            {/*              onClick={(e) => {*/}
+            {/*                e.stopPropagation();*/}
+            {/*                setIndex(i);*/}
+            {/*              }}*/}
+            {/*              className={`h-2 rounded-full bg-white transition-all ${*/}
+            {/*                  i === index ? "w-6" : "w-2 opacity-50"*/}
+            {/*              }`}*/}
+            {/*          />*/}
+            {/*      ))}*/}
+            {/*    </div>*/}
+            {/*  </div>*/}
 
               {/* THUMBNAILS */}
-              <div className="mt-4 grid grid-cols-4 gap-3">
-                {GALLERY.map((item, i) => (
-                    <button
-                        key={item.src}
-                        onClick={() => setIndex(i)}
-                        className={`relative aspect-[4/3] overflow-hidden rounded-xl ${
-                            i === index
-                                ? "ring-2 ring-offset-2"
-                                : "opacity-70 hover:opacity-100"
-                        }`}
-                    >
-                      {item.type === "image" && (
-                          <img
-                              src={item.src}
-                              alt=""
-                              className="h-full w-full object-cover"
-                          />
+          {/*    <div className="mt-4 grid grid-cols-4 gap-3">*/}
+          {/*      {GALLERY.map((item, i) => (*/}
+          {/*          <button*/}
+          {/*              key={item.src}*/}
+          {/*              onClick={() => setIndex(i)}*/}
+          {/*              className={`relative aspect-[4/3] overflow-hidden rounded-xl ${*/}
+          {/*                  i === index*/}
+          {/*                      ? "ring-2 ring-offset-2"*/}
+          {/*                      : "opacity-70 hover:opacity-100"*/}
+          {/*              }`}*/}
+          {/*          >*/}
+          {/*            {item.type === "image" && (*/}
+          {/*                <img*/}
+          {/*                    src={item.src}*/}
+          {/*                    alt=""*/}
+          {/*                    className="h-full w-full object-cover"*/}
+          {/*                />*/}
 
-                        //: (
-                      //     <>
-                      //       <img
-                      //           src={item.poster}
-                      //           alt=""
-                      //           className="h-full w-full object-cover"
-                      //       />
-                      //       <div className="absolute inset-0 flex items-center justify-center bg-black/30 text-white text-xl">
-                      //         ▶
-                      //       </div>
-                      //     </>
-                       )}
-                    </button>
-                ))}
-              </div>
-            </div>
+          {/*              //: (*/}
+          {/*            //     <>*/}
+          {/*            //       <img*/}
+          {/*            //           src={item.poster}*/}
+          {/*            //           alt=""*/}
+          {/*            //           className="h-full w-full object-cover"*/}
+          {/*            //       />*/}
+          {/*            //       <div className="absolute inset-0 flex items-center justify-center bg-black/30 text-white text-xl">*/}
+          {/*            //         ▶*/}
+          {/*            //       </div>*/}
+          {/*            //     </>*/}
+          {/*             )}*/}
+          {/*          </button>*/}
+          {/*      ))}*/}
+          {/*    </div>*/}
+          {/*  </div>*/}
           </div>
 
           {/* SIDEBAR */}

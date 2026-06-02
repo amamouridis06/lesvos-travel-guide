@@ -43,7 +43,6 @@ const hotel = {
     ],
     knowBefore: [
         "Located in the Centre Lesvos",
-        "Located in the Centre Lesvos",
         "Just a little steps far for the beach of Skala Kallonis, perfect for walking",
         "View in sea",
         "The Skala Kallonis square is just 4 minutes far",
