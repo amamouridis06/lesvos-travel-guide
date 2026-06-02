@@ -111,15 +111,8 @@ export default function RhinoPage() {
                 {/* MAIN */}
                 <div className="space-y-16 lg:col-span-2">
                     <div id="about">
-                        <p
-                            className="text-xs font-semibold uppercase tracking-[0.25em]"
-                            style={{ color: "#b85c3a" }}
-                        >
-                            The Place
-                        </p>
-
                         <h2 className="font-display mt-3 text-3xl font-semibold sm:text-4xl">
-                            About
+                            Our Story
                         </h2>
 
                         <p className="mt-5 text-lg leading-relaxed text-stone-600">
