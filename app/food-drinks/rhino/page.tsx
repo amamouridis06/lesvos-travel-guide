@@ -159,11 +159,10 @@ export default function RhinoPage() {
                     {/*    /!*    ))}*!/*/}
                     {/*    /!*</div>*!/*/}
                     {/*</div>*/}
-
+                    <h2 className="font-display mt-3 text-3xl font-semibold sm:text-4xl">
+                        Some photos from the Rhino bar
+                    </h2>
                     <div className="grid gap-4 md:grid-cols-3">
-                        <h2 className="font-display mt-3 text-3xl font-semibold sm:text-4xl">
-                            Some photos from the Rhino bar
-                        </h2>
                         {bar.map((image, index) => (
                             <div
                                 key={image.src}
