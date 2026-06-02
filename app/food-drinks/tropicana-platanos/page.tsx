@@ -15,7 +15,7 @@ import {
 // ---- Replace with your own images ----
 const HERO = "/tropicana/tropicana1.jpg";
 
-const GALLERY = [
+const restaurant = [
   { type: "image", src: "/tropicana/tropicana11.jpeg" },
   { type: "image", src: "/tropicana/tropicana13.jpeg" },
   { type: "image", src: "/tropicana/tropicana12.jpeg" },
@@ -56,8 +56,8 @@ export default function TropicanaPage() {
   const [isHovered, setIsHovered] = useState(false);
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
-  const next = () => setIndex((p) => (p + 1) % GALLERY.length);
-  const prev = () => setIndex((p) => (p - 1 + GALLERY.length) % GALLERY.length);
+  // const next = () => setIndex((p) => (p + 1) % GALLERY.length);
+  // const prev = () => setIndex((p) => (p - 1 + GALLERY.length) % GALLERY.length);
 
   // useEffect(() => {
   //   if (isHovered || isOpen) return;
@@ -355,7 +355,7 @@ export default function TropicanaPage() {
             <div className="overflow-hidden rounded-3xl border border-stone-200 bg-white shadow-soft">
               <iframe
                   title="Map of Cocktail Corner"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3643.293689587887!2d26.391484399999996!3d38.96851480000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14baf7f481beb643%3A0x2ff539f18c93758c!2sNaf&#39;s%20Cocktail%20Corner!5e1!3m2!1sen!2sgr!4v1777289072946!5m2!1sen!2sgr"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.1282669522334!2d26.1734881!3d39.369439799999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ba9bad08e0eb0d%3A0x8d3cdff7c431108!2sTropicana%20Platanos!5e1!3m2!1sen!2sgr!4v1780416181391!5m2!1sen!2sgr"
                   className="h-56 w-full border-0"
                   loading="lazy"
               />
@@ -384,65 +384,65 @@ export default function TropicanaPage() {
           </aside>
         </section>
 
-        {/* MODAL */}
-        {isOpen && (
-            <div
-                className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 p-4 backdrop-blur-sm"
-                onClick={() => setIsOpen(false)}
-            >
-              <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setIsOpen(false);
-                  }}
-                  aria-label="Close"
-                  className="absolute right-6 top-6 rounded-full bg-white/10 p-2 text-white hover:bg-white/20"
-              >
-                <X className="h-5 w-5" />
-              </button>
+        {/*/!* MODAL *!/*/}
+        {/*{isOpen && (*/}
+        {/*    <div*/}
+        {/*        className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 p-4 backdrop-blur-sm"*/}
+        {/*        onClick={() => setIsOpen(false)}*/}
+        {/*    >*/}
+        {/*      <button*/}
+        {/*          onClick={(e) => {*/}
+        {/*            e.stopPropagation();*/}
+        {/*            setIsOpen(false);*/}
+        {/*          }}*/}
+        {/*          aria-label="Close"*/}
+        {/*          className="absolute right-6 top-6 rounded-full bg-white/10 p-2 text-white hover:bg-white/20"*/}
+        {/*      >*/}
+        {/*        <X className="h-5 w-5" />*/}
+        {/*      </button>*/}
 
-              <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    prev();
-                  }}
-                  aria-label="Previous"
-                  className="absolute left-6 top-1/2 -translate-y-1/2 rounded-full bg-white/10 p-3 text-white hover:bg-white/20"
-              >
-                <ChevronLeft className="h-6 w-6" />
-              </button>
+        {/*      <button*/}
+        {/*          onClick={(e) => {*/}
+        {/*            e.stopPropagation();*/}
+        {/*            prev();*/}
+        {/*          }}*/}
+        {/*          aria-label="Previous"*/}
+        {/*          className="absolute left-6 top-1/2 -translate-y-1/2 rounded-full bg-white/10 p-3 text-white hover:bg-white/20"*/}
+        {/*      >*/}
+        {/*        <ChevronLeft className="h-6 w-6" />*/}
+        {/*      </button>*/}
 
-              {GALLERY[index].type === "image" ? (
-                  <img
-                      src={GALLERY[index].src}
-                      alt="Gallery fullscreen"
-                      className="max-h-[85vh] max-w-[90vw] object-contain"
-                      onClick={(e) => e.stopPropagation()}
-                  />
-              ) : (
-                  <video
-                      key={GALLERY[index].src}
-                      controls
-                      autoPlay
-                      className="max-h-[85vh] max-w-[90vw]"
-                      onClick={(e) => e.stopPropagation()}
-                  >
-                    <source src={GALLERY[index].src} type="video/mp4" />
-                  </video>
-              )}
+        {/*      {GALLERY[index].type === "image" ? (*/}
+        {/*          <img*/}
+        {/*              src={GALLERY[index].src}*/}
+        {/*              alt="Gallery fullscreen"*/}
+        {/*              className="max-h-[85vh] max-w-[90vw] object-contain"*/}
+        {/*              onClick={(e) => e.stopPropagation()}*/}
+        {/*          />*/}
+        {/*      ) : (*/}
+        {/*          <video*/}
+        {/*              key={GALLERY[index].src}*/}
+        {/*              controls*/}
+        {/*              autoPlay*/}
+        {/*              className="max-h-[85vh] max-w-[90vw]"*/}
+        {/*              onClick={(e) => e.stopPropagation()}*/}
+        {/*          >*/}
+        {/*            <source src={GALLERY[index].src} type="video/mp4" />*/}
+        {/*          </video>*/}
+        {/*      )}*/}
 
-              <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    next();
-                  }}
-                  aria-label="Next"
-                  className="absolute right-6 top-1/2 -translate-y-1/2 rounded-full bg-white/10 p-3 text-white hover:bg-white/20"
-              >
-                <ChevronRight className="h-6 w-6" />
-              </button>
-            </div>
-        )}
+        {/*      <button*/}
+        {/*          onClick={(e) => {*/}
+        {/*            e.stopPropagation();*/}
+        {/*            next();*/}
+        {/*          }}*/}
+        {/*          aria-label="Next"*/}
+        {/*          className="absolute right-6 top-1/2 -translate-y-1/2 rounded-full bg-white/10 p-3 text-white hover:bg-white/20"*/}
+        {/*      >*/}
+        {/*        <ChevronRight className="h-6 w-6" />*/}
+        {/*      </button>*/}
+        {/*    </div>*/}
+        {/*)}*/}
       </main>
   );
 }
