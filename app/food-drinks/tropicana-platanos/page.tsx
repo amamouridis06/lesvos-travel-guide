@@ -183,9 +183,12 @@ export default function TropicanaPage() {
 
             <div className="grid gap-4 md:grid-cols-3">
               {restaurant.map((image, index) => (
-                  <div key={image} className="overflow-hidden rounded-2xl shadow-sm">
+                  <div
+                      key={image.src}
+                      className="overflow-hidden rounded-2xl shadow-sm"
+                  >
                     <img
-                        src={image}
+                        src={image.src}
                         alt={`Restaurant gallery ${index + 1}`}
                         className="h-64 w-full object-cover transition duration-500 hover:scale-105"
                     />
