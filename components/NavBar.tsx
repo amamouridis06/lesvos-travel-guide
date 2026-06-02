@@ -56,7 +56,7 @@ export default function NavBar() {
               </Link>
 
               <Link href="/taxi-services" className="hover:text-yellow-300 transition whitespace-nowrap">
-                Taxi
+                Transfers
               </Link>
 
               <Link href="/about" className="hover:text-yellow-300 transition whitespace-nowrap">
@@ -118,7 +118,7 @@ export default function NavBar() {
                 </Link>
 
                 <Link href="/taxi-services" onClick={closeMenu} className="py-3 border-b border-white/10 hover:text-yellow-300 transition">
-                  Taxi
+                  Transfers
                 </Link>
 
                 <Link href="/about" onClick={closeMenu} className="py-3 border-b border-white/10 hover:text-yellow-300 transition">
