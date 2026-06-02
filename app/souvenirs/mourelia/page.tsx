@@ -189,11 +189,6 @@ export default function LesvosSouvenirStore(){
                             alt="Lesvos History"
                             className="rounded-3xl shadow-2xl h-[650px] w-full object-cover"
                         />
-
-                        <div className="absolute -bottom-6 -left-6 bg-[#005f73] text-white p-8 rounded-3xl shadow-xl">
-                            <div className="text-4xl font-black">2024</div>
-                            <div>Ίδρυση του Brand</div>
-                        </div>
                     </div>
                 </div>
             </section>
