@@ -103,17 +103,6 @@ export default function TropicanaPage() {
           />
           <div className="absolute inset-0 gradient-hero" />
 
-          <div className="absolute inset-x-0 top-0 z-10 flex items-center justify-between px-6 py-6 sm:px-10">
-            {/*<span className="font-display text-lg font-semibold text-white">*/}
-            {/*  Lesvos<span style={{ color: "#e0a052" }}>.</span>Guide*/}
-            {/*</span>*/}
-            {/*<nav className="hidden gap-8 text-sm text-white/85 sm:flex">*/}
-            {/*  <a href="#about" className="hover:text-white">About</a>*/}
-            {/*  <a href="#gallery" className="hover:text-white">Gallery</a>*/}
-            {/*  <a href="#visit" className="hover:text-white">Visit</a>*/}
-            {/*</nav>*/}
-          </div>
-
           <div className="absolute inset-x-0 bottom-0 z-10 px-6 pb-16 sm:px-10 sm:pb-20">
             <div className="mx-auto max-w-6xl">
             <span className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] text-white backdrop-blur-md">
@@ -129,8 +118,7 @@ export default function TropicanaPage() {
               </h1>
 
               <p className="mt-4 max-w-xl text-base text-white/80 sm:text-lg">
-                A fantastic corner for a sunset cocktail by the Aegean — slow
-                nights, warm lights, and the sea just steps away.
+                A fantastic place to eat in Molyvos with very firndly service and romantic atmposhere
               </p>
             </div>
           </div>
@@ -153,15 +141,15 @@ export default function TropicanaPage() {
               </h2>
 
               <p className="mt-5 text-lg leading-relaxed text-stone-600">
-                The cocktail bar is located in the southern part of the island
-                next to Agios Isidoros. A place that looks like it came out of a
-                fairy tale, drinking a cocktail after a swim, enjoying the sunset
-                and the calm breeze that calms you down.
+                Tropicana was founded in 1985 in Andrea Kyriakou Square, with the idea of serving locals
+                and visitors fresh juices, tropical ice cream, and homemade treats. Under the shade of two
+                οld plane trees, it soon became a favorite meeting place for friends, good food, and warm hospitality.
               </p>
 
               <p className="mt-4 text-lg leading-relaxed text-stone-600">
-                Come for the sunset, stay for the second round — the playlist gets
-                better after midnight.
+                Today, Tropicana remains a place where people come to eat, relax, sing, laugh, and feel like part of the family.
+                Yiannis began cooking his mother’s traditional recipes, adding his own creative touch, while Taxia became known for her friendly personality and joyful conversations with customers.
+                Over time, the Tropicana family grew, with relatives and friends helping to cook, serve, and welcome guests.
               </p>
             </div>
 
@@ -201,7 +189,7 @@ export default function TropicanaPage() {
               </p>
 
               <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
-                A look inside
+                A look from the restaurant and the dishes
               </h2>
 
               {/* MAIN SLIDER */}
