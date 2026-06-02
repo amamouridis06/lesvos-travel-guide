@@ -23,7 +23,6 @@ const GALLERY = [
     { type: "image", src: "/azul/azul5.jpeg" },
     { type: "image", src: "/azul/azul6.jpeg" },
     { type: "image", src: "/azul/azul7.jpeg" },
-    { type: "image", src: "/azul/azul8.jpeg" },
     { type: "image", src: "/azul/azul9.jpeg" },
     { type: "image", src: "/azul/azul10.jpeg" },
 
@@ -37,9 +36,9 @@ const COCKTAILS = [
 ];
 
 const NEARBY = [
-    { label: "Petra", emoji: "🏖" },
-    { label: "Molyvos", emoji: "🏘" },
-    { label: "", emoji: "🍶" },
+    { label: "Petra", emoji: "" },
+    { label: "Molyvos", emoji: "" },
+    { label: "Sigri", emoji: "" },
 ];
 
 const INFO = [
