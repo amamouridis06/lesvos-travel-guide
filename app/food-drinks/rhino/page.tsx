@@ -12,13 +12,13 @@ import {
     X,
 } from "lucide-react";
 
-// ---- Replace with your own images ----
-const HERO = "/rhino/rihno-logo.jpg";
+
+const HERO = "/rhino/rhino-logo.jpg";
 
 const bar = [
     { type: "image", src: "/rhino/rhino1.jpg" },
     { type: "image", src: "/rhino/rhino2.jpg" },
-    { type: "image", src: "/rhino/rhino3.jpeg" },
+    { type: "image", src: "/rhino/rhino3.jpg" },
     { type: "image", src: "/rhino/rhino4.jpg" },
     { type: "image", src: "/rhino/rhino5.jpg" },
     { type: "image", src: "/rhino/rhino6.jpg" },
@@ -134,33 +134,36 @@ export default function RhinoPage() {
                         </p>
                     </div>
 
-                    {/* Signatures */}
-                    <div>
-                        <p
-                            className="text-xs font-semibold uppercase tracking-[0.25em]"
-                            style={{ color: "#b85c3a" }}
-                        >
-                            What to try
-                        </p>
+                    {/*/!* Signatures *!/*/}
+                    {/*<div>*/}
+                    {/*    <p*/}
+                    {/*        className="text-xs font-semibold uppercase tracking-[0.25em]"*/}
+                    {/*        style={{ color: "#b85c3a" }}*/}
+                    {/*    >*/}
+                    {/*        What to try*/}
+                    {/*    </p>*/}
 
-                        <h2 className="font-display mt-3 text-3xl font-semibold sm:text-4xl">
-                            Signatures of the house
-                        </h2>
+                    {/*    <h2 className="font-display mt-3 text-3xl font-semibold sm:text-4xl">*/}
+                    {/*        Signatures of the house*/}
+                    {/*    </h2>*/}
 
-                        {/*<div className="mt-8 grid gap-4 sm:grid-cols-2">*/}
-                        {/*    {DISHES.map((c) => (*/}
-                        {/*        <div*/}
-                        {/*            key={c.t}*/}
-                        {/*            className="rounded-2xl border border-stone-200 bg-white p-5 transition-all hover:-translate-y-0.5 hover:shadow-soft"*/}
-                        {/*        >*/}
-                        {/*            <h3 className="font-display text-xl font-semibold">{c.t}</h3>*/}
-                        {/*            /!*<p className="mt-1 text-sm text-stone-600">{c.d}</p>*!/*/}
-                        {/*        </div>*/}
-                        {/*    ))}*/}
-                        {/*</div>*/}
-                    </div>
+                    {/*    /!*<div className="mt-8 grid gap-4 sm:grid-cols-2">*!/*/}
+                    {/*    /!*    {DISHES.map((c) => (*!/*/}
+                    {/*    /!*        <div*!/*/}
+                    {/*    /!*            key={c.t}*!/*/}
+                    {/*    /!*            className="rounded-2xl border border-stone-200 bg-white p-5 transition-all hover:-translate-y-0.5 hover:shadow-soft"*!/*/}
+                    {/*    /!*        >*!/*/}
+                    {/*    /!*            <h3 className="font-display text-xl font-semibold">{c.t}</h3>*!/*/}
+                    {/*    /!*            /!*<p className="mt-1 text-sm text-stone-600">{c.d}</p>*!/*!/*/}
+                    {/*    /!*        </div>*!/*/}
+                    {/*    /!*    ))}*!/*/}
+                    {/*    /!*</div>*!/*/}
+                    {/*</div>*/}
 
                     <div className="grid gap-4 md:grid-cols-3">
+                        <h2 className="font-display mt-3 text-3xl font-semibold sm:text-4xl">
+                            Some photos from the Rhino bar
+                        </h2>
                         {bar.map((image, index) => (
                             <div
                                 key={image.src}
