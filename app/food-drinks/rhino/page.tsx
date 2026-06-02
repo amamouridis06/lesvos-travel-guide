@@ -209,7 +209,7 @@ export default function RhinoPage() {
                     <div className="overflow-hidden rounded-3xl border border-stone-200 bg-white shadow-soft">
                         <iframe
                             title="Map of Rhino"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2256.6301743966465!2d26.555110600479995!3d39.10736028207269!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ba6736b11c0103%3A0xc08bc413d1c56cdd!2sRhino%20Bar!5e1!3m2!1sen!2sgr!4v1780422340808!5m2!1sen!2sgr" width="600" height="450" style="border:0;"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2256.6301743966465!2d26.555110600479995!3d39.10736028207269!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ba6736b11c0103%3A0xc08bc413d1c56cdd!2sRhino%20Bar!5e1!3m2!1sen!2sgr!4v1780422340808!5m2!1sen!2sgr"
                             className="h-56 w-full border-0"
                             loading="lazy"
                         />
