@@ -2,9 +2,6 @@ import React from 'react';
 
 type Product = {
     id: number;
-    name: string;
-    price: string;
-    badge: string;
     image: string;
 };
 
@@ -12,8 +9,7 @@ export default function LesvosSouvenirStore(){
     const products: Product[] = [
         {
             id: 1,
-            image:
-                '/mourelia/mourelia1.jpg',
+            image: '/mourelia/mourelia1.jpg',
         },
         {
             id: 2,
