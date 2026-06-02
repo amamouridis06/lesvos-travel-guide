@@ -8,7 +8,7 @@ type Product = {
     image: string;
 };
 
-export default function LesvosSouvenirStore(): JSX.Element {
+export default function LesvosSouvenirStore(){
     const products: Product[] = [
         {
             id: 1,
