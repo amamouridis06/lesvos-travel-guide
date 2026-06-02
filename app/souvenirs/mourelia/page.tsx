@@ -129,7 +129,7 @@ export default function LesvosSouvenirStore(){
                 <div className="relative z-10 max-w-4xl px-6 text-center text-white">
 
                     <h1 className="mt-4 text-6xl font-black leading-tight md:text-8xl">
-                        Wear The Spirit Of Lesvos
+                        KalosTaMourelia
                     </h1>
 
                     <p className="mt-8 text-xl text-slate-200 md:text-2xl">
@@ -141,11 +141,11 @@ export default function LesvosSouvenirStore(){
                 <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
                     <div>
       <span className="uppercase tracking-[4px] text-[#ee9b00] font-semibold">
-        Η Ιστορία μας
+        Our Story
       </span>
 
                         <h2 className="text-5xl font-black mt-4 mb-8">
-                            Ένα κομμάτι της Λέσβου σε κάθε μπλουζάκι
+                            A piece of Lesvos in each T-shirt
                         </h2>
 
                         <p className="text-lg text-slate-600 leading-relaxed mb-6">
@@ -160,21 +160,21 @@ export default function LesvosSouvenirStore(){
                             We who want to put our touch, to keep everything we loved alive over time.
                         </p>
 
-                        <p className="text-lg text-slate-600 leading-relaxed">
+                        <p className="text-lg text-slate-600 leading-relaxed mb-6">
                             We are Christina and Panagiotis, who inspires us with the special
                             humor and countless words and phrases of the inhabitants of Lesvos.
                             That we have been trying for years, as a game, to copy the accent of our grandparents.
                             That their smile lives in every new word we learn.
                         </p>
-                        <p className="text-lg text-slate-600 leading-relaxed">
+                        <p className="text-lg text-slate-600 leading-relaxed mb-6">
                             We are Christina and Panagiotis, who worship the beautiful
                             design and the original ideas and that we created this page with a lot.
                             For you and your loved ones.
                         </p>
-                        <p className="text-lg text-slate-600 leading-relaxed">
+                        <p className="text-lg text-slate-600 leading-relaxed mb-6">
                             We are Christina and Panagiotis. That is, Ta Mourelia.
                         </p>
-                        <p className="text-lg text-slate-600 leading-relaxed">
+                        <p className="text-lg text-slate-600 leading-relaxed mb-6">
                             Panagiotis Lambridis and Christina Paraskevopoulou have
                             been professional graphic designers, with experience in the
                             industry for over 25 years. They live and work in Athens and Lesvos
@@ -185,7 +185,7 @@ export default function LesvosSouvenirStore(){
 
                     <div className="relative">
                         <img
-                            src="/images/lesvos-history.jpg"
+                            src="/mourelia/mourelia-story.png"
                             alt="Lesvos History"
                             className="rounded-3xl shadow-2xl h-[650px] w-full object-cover"
                         />
