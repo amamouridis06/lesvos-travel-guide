@@ -1,315 +1,241 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { MapPin, Clock3, CakeSlice, Euro, Star } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import {
+    MapPin,
+    Phone,
+    Clock,
+    Wallet,
+    Users,
+    ChevronLeft,
+    ChevronRight,
+    X,
+} from "lucide-react";
 
-export default function DessertShopGuidePage() {
+// ---- Replace with your own images ----
+const HERO = "/rhino/rihno-logo.jpg";
+
+const bar = [
+    { type: "image", src: "/rhino/rhino1.jpg" },
+    { type: "image", src: "/rhino/rhino2.jpg" },
+    { type: "image", src: "/rhino/rhino3.jpeg" },
+    { type: "image", src: "/rhino/rhino4.jpg" },
+    { type: "image", src: "/rhino/rhino5.jpg" },
+    { type: "image", src: "/rhino/rhino6.jpg" },
+];
+
+
+
+const NEARBY = [
+    { label: "Castle of Mytilene", emoji: "" },
+    { label: "Statue of Freedom Mytilene", emoji: "" },
+    { label: "Tsamakia Beach", emoji: "" },
+];
+
+const INFO = [
+    { Icon: MapPin, label: "Location", value: "Aigaiou 5, Mytilene, 81100" },
+    { Icon: Phone, label: "Phone", value: "6948766963" },
+    { Icon: Clock, label: "Hours", value: "Daily · 8:30 — 3:00" },
+    { Icon: Wallet, label: "Price", value: "5-10€" },
+    { Icon: Users, label: "Best for", value: "Couples, friends" },
+];
+
+export default function RhinoPage() {
+    const [index, setIndex] = useState(0);
+    const [isOpen, setIsOpen] = useState(false);
+    const [isHovered, setIsHovered] = useState(false);
+    const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+
+    // useEffect(() => {
+    //     videoRefs.current.forEach((video, i) => {
+    //         if (!video) return;
+    //
+    //         if (i === index && !isOpen) {
+    //             video.play().catch(() => {});
+    //         } else {
+    //             video.pause();
+    //             video.currentTime = 0;
+    //         }
+    //     });
+    // }, [index, isOpen]);
+
     return (
-        <main className="bg-gradient-to-b from-white via-sky-50 to-cyan-100 text-slate-800 overflow-hidden scroll-smooth relative">
-            {/* Animated Background Blobs */}
-            <motion.div
-                animate={{
-                    x: [0, 40, 0],
-                    y: [0, -30, 0],
-                }}
-                transition={{
-                    duration: 10,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                }}
-                className="absolute top-10 sm:top-20 left-0 sm:left-10 w-52 h-52 sm:w-72 sm:h-72 bg-cyan-300/30 blur-3xl rounded-full"
-            />
+        <main
+            className="min-h-screen text-stone-900"
+            style={{
+                backgroundColor: "#fbf8f3",
+                fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif",
+            }}
+        >
+            <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+        .font-display { font-family: 'Fraunces', Georgia, serif; letter-spacing: -0.02em; }
+        .gradient-warm { background: linear-gradient(135deg, #b85c3a, #e0a052); }
+        .gradient-hero { background: linear-gradient(180deg, transparent 0%, rgba(20,15,10,.3) 50%, rgba(20,15,10,.85) 100%); }
+        .shadow-soft { box-shadow: 0 10px 40px -15px rgba(60,40,30,.25); }
+        .shadow-elevated { box-shadow: 0 20px 60px -20px rgba(60,40,30,.35); }
+      `}</style>
 
-            <motion.div
-                animate={{
-                    x: [0, -50, 0],
-                    y: [0, 40, 0],
-                }}
-                transition={{
-                    duration: 14,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                }}
-                className="absolute bottom-10 sm:bottom-20 right-0 sm:right-10 w-64 h-64 sm:w-96 sm:h-96 bg-orange-200/30 blur-3xl rounded-full"
-            />
             {/* HERO */}
-            <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 py-24 sm:py-0">
-                <div className="absolute inset-0 overflow-hidden">
-                    <motion.img
-                        initial={{ scale: 1.2, opacity: 0 }}
-                        animate={{ scale: 1, opacity: 1 }}
-                        transition={{ duration: 1.8, ease: "easeOut" }}
-                        src="/rhino/rhino1.jpg"
-                        alt="Coctail"
-                        className="w-full h-full object-cover"
-                    />
+            <section className="relative h-[80vh] min-h-[520px] w-full overflow-hidden">
+                <img
+                    src={HERO}
+                    alt="Bartender pouring a cocktail at a seaside bar in Lesvos at sunset"
+                    className="absolute inset-0 h-full w-full object-cover"
+                />
+                <div className="absolute inset-0 gradient-hero" />
 
-                    <div className="absolute inset-0 bg-gradient-to-b from-sky-300/40 via-cyan-200/30 to-white/95" />
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.15),transparent_40%)]" />
-                </div>
-
-                <motion.div
-                    initial={{ opacity: 0, y: 80 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1 }}
-                    className="relative z-10 max-w-6xl text-center px-2 sm:px-0"
-                >
-                    <motion.h1
-                        initial={{ opacity: 0, y: 40 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.4, duration: 1 }}
-                        className="text-5xl sm:text-6xl md:text-8xl font-black leading-none mb-6 sm:mb-8 px-2"
-                    >
-                        Rhino
-                        <span className="block bg-gradient-to-r from-cyan-500 via-sky-400 to-orange-300 bg-clip-text text-transparent">
-
-            </span>
-                    </motion.h1>
-
-                    <motion.p
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.2, duration: 0.4 }}
-                        className="max-w-3xl mx-auto text-base sm:text-lg md:text-2xl text-slate-900 leading-relaxed mb-10 sm:mb-12 px-2"
-                    >
-                        A premium dessert destination in the port of Molyvos with pancakes, waffles and crepes for
-                        travelers looking for something really unique.
-                    </motion.p>
-
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 1, duration: 0.8 }}
-                        className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 sm:gap-5 w-full sm:w-auto px-4"
-                    >
-                    </motion.div>
-                </motion.div>
-            </section>
-
-            {/* GLASS INFO CARDS */}
-            <section className="relative z-20 -mt-10 sm:-mt-24 px-4 sm:px-6 pb-20 sm:pb-28">
-                <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-                    {[
-                        {
-                            icon: <MapPin className="w-7 h-7" />,
-                            title: "Location",
-                            value: "Aigaiou 5, Mytilene, 81100 ",
-                        },
-                        {
-                            icon: <Clock3 className="w-7 h-7" />,
-                            title: "Open Daily",
-                            value: "8:30 — 3:00",
-                        },
-                        {
-                            icon: <CakeSlice className="w-7 h-7" />,
-                            title: "Signature",
-                            value: "Cocktails",
-                        },
-                        {
-                            icon: <Euro className="w-7 h-7" />,
-                            title: "Average",
-                            value: "€5 — €10",
-                        },
-                    ].map((item, i) => (
-                        <motion.div
-                            key={i}
-                            initial={{ opacity: 0, y: 40 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ delay: i * 0.1, duration: 0.7 }}
-                            viewport={{ once: true }}
-                            whileHover={{ y: -12, scale: 1.03 }}
-                            className="backdrop-blur-2xl bg-white/70 border border-cyan-100 rounded-[28px] sm:rounded-[32px] p-5 sm:p-8 shadow-2xl"
-                        >
-                            <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br from-cyan-400 to-orange-300 text-black flex items-center justify-center mb-4 sm:mb-6 shadow-xl">
-                                {item.icon}
-                            </div>
-
-                            <p className="text-slate-600 text-sm uppercase tracking-widest mb-2">
-                                {item.title}
-                            </p>
-
-                            <h3 className="text-xl sm:text-2xl font-bold text-slate-800">
-                                {item.value}
-                            </h3>
-                        </motion.div>
-                    ))}
-                </div>
-            </section>
-
-            {/* STORY SECTION */}
-            <section className="max-w-6xl mx-auto px-4 sm:px-6 py-20 sm:py-32">
-                <motion.div
-                    animate={{
-                        backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
-                    }}
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{
-                        backgroundPosition: {
-                            duration: 12,
-                            repeat: Infinity,
-                            ease: "linear",
-                        },
-                        opacity: {
-                            duration: 0.8,
-                        },
-                        y: {
-                            duration: 0.8,
-                        },
-                    }}
-                    viewport={{ once: true }}
-                    className="text-center mb-20"
-                >
-          <span className="text-cyan-500 uppercase tracking-[0.3em] text-sm font-bold">
-            About The Place
-          </span>
-
-                    <h2 className="text-4xl sm:text-5xl md:text-7xl font-black mt-6 mb-6 sm:mb-8 leading-tight">
-                        A Dessert Experience
-                        <span className="block text-slate-500">Beyond Taste</span>
-                    </h2>
-
-                    <p className="max-w-4xl mx-auto text-base sm:text-lg md:text-xl text-slate-900 font-medium leading-relaxed px-2">
-                        <p>Rhino Bar in Mytilene is a destination of its own, offering a unique blend of simplicity, quality, and atmosphere.
-                            From the very first hours of the day, it welcomes guests with exceptional coffee, crafted from carefully selected blends
-                            and prepared with technical precision for the perfect start to your morning. </p>
-                        <p>As the day unfolds, the space transforms into an inviting evening spot, where a curated selection of drinks and creative cocktails
-                            takes center stage. The warm hospitality, smiling staff, and relaxed ambiance — especially on its cool balcony — create an experience
-                            that feels both effortless and memorable. </p>
-                        <p>Whether you are seeking an energizing coffee break or a refreshing night out, Rhino is a place that effortlessly wins you over.</p>
-                    </p>
-                </motion.div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6">
-                    {[
-                        "/rhino/rhino4.jpg",
-                    ].map((img, i) => (
-                        <motion.div
-                            key={i}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ delay: i * 0.15, duration: 0.7 }}
-                            viewport={{ once: true }}
-                            whileHover={{ scale: 1.03, rotate: 1 }}
-                            className="overflow-hidden rounded-[32px]"
-                        >
-                            <img
-                                src={img}
-                                alt="bar"
-                                className="h-[320px] sm:h-[420px] w-full object-cover hover:scale-110 transition-transform duration-700"
-                            />
-                        </motion.div>
-                    ))}
-                </div>
-            </section>
-
-            {/* FEATURE SECTION */}
-            <section className="max-w-7xl mx-auto px-6 pb-32">
-                <div className="grid lg:grid-cols-2 gap-10 sm:gap-16 items-center">
-                    <motion.div
-                        initial={{ opacity: 0, x: -60 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.9 }}
-                        viewport={{ once: true }}
-                        className="relative"
-                    >
-                        <img
-                            src="/rhino/rhino3.jpg"
-                            alt="cocktail"
-                            className="rounded-[32px] sm:rounded-[40px] h-[420px] sm:h-[700px] w-full object-cover shadow-[0_40px_120px_rgba(0,0,0,0.6)]"
-                        />
-
-                        <div className="absolute bottom-4 right-4 sm:-bottom-10 sm:-right-10 bg-gradient-to-r from-cyan-400 to-orange-300 rounded-[24px] sm:rounded-[30px] p-5 sm:p-8 shadow-2xl max-w-[220px] sm:max-w-xs">
-                            <p className="text-sm uppercase tracking-[0.2em] text-slate-800 font-semibold mb-2">
-                                Waffle bites
-                            </p>
-                        </div>
-                    </motion.div>
-
-                    <motion.div
-                        initial={{ opacity: 0, x: 60 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.9 }}
-                        viewport={{ once: true }}
-                    >
-            <span className="text-cyan-500 uppercase tracking-[0.3em] text-sm font-bold">
-              Premium Experience
+                <div className="absolute inset-x-0 bottom-0 z-10 px-6 pb-16 sm:px-10 sm:pb-20">
+                    <div className="mx-auto max-w-6xl">
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] text-white backdrop-blur-md">
+              <span
+                  className="h-1.5 w-1.5 rounded-full"
+                  style={{ background: "#e0a052" }}
+              />
+              East Lesvos · Bar
             </span>
 
-                        <h2 className="text-4xl sm:text-5xl md:text-7xl font-black leading-tight mt-5 mb-6 sm:mb-8">
-                            Dessert Meets
-                            <span className="block text-slate-500">Luxury.</span>
-                        </h2>
+                        <h1 className="font-display mt-5 max-w-3xl text-4xl font-semibold leading-[1.05] text-white sm:text-6xl lg:text-7xl">
+                            Rhino
+                        </h1>
 
-                        <p className="text-slate-900 text-base sm:text-lg md:text-xl leading-relaxed mb-8 sm:mb-10">
-                            In the picturesque village of Molyvos, Lesvos, Petite offers a unique tasting experience with fluffy pancakes, delicious waffles, and handmade desserts by the sea. Featuring island-inspired aesthetics, premium ingredients, and a cozy atmosphere, it is the perfect spot for brunch, sweets, and photos that capture the feeling of summer in the Aegean.
+                        <p className="mt-4 max-w-xl text-base text-white/80 sm:text-lg">
+                            A fantastic place to drink your cocktail in the city of Mytilene
+                        </p>
+                    </div>
+                </div>
+            </section>
 
+            {/* CONTENT */}
+            <section className="mx-auto grid max-w-6xl grid-cols-1 gap-12 px-6 py-16 sm:px-10 sm:py-24 lg:grid-cols-3 lg:gap-16">
+                {/* MAIN */}
+                <div className="space-y-16 lg:col-span-2">
+                    <div id="about">
+                        <p
+                            className="text-xs font-semibold uppercase tracking-[0.25em]"
+                            style={{ color: "#b85c3a" }}
+                        >
+                            The Place
                         </p>
 
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
-                            {[
-                                "Artisan Desserts",
-                                "Tourist Favorite",
-                            ].map((item, i) => (
-                                <motion.div
-                                    key={i}
-                                    whileHover={{ scale: 1.05 }}
-                                    className="rounded-2xl border border-cyan-100 bg-white/80 backdrop-blur-xl px-6 py-5 text-lg font-medium text-slate-800"
-                                >
-                                    {item}
-                                </motion.div>
-                            ))}
-                        </div>
-                    </motion.div>
-                </div>
-            </section>
+                        <h2 className="font-display mt-3 text-3xl font-semibold sm:text-4xl">
+                            About
+                        </h2>
 
-            {/* FULL GALLERY */}
-            <section className="px-4 sm:px-6 pb-20 sm:pb-32">
-                <div className="max-w-7xl mx-auto">
-                    <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 sm:mb-14 gap-5 sm:gap-6">
-                        <div>
-              <span className="text-cyan-500 uppercase tracking-[0.3em] text-sm font-bold">
-                Photo Gallery
-              </span>
+                        <p className="mt-5 text-lg leading-relaxed text-stone-600">
+                            Rhino Bar in Mytilene is a destination of its own, offering a unique blend of simplicity, quality, and atmosphere. From the very first hours of the day, it welcomes guests with exceptional coffee, crafted from carefully selected blends and prepared with technical precision for the perfect start to your morning.
+                        </p>
 
-                            <h2 className="text-3xl sm:text-5xl font-black mt-3 sm:mt-4 leading-tight">
-                                More Photos
-                            </h2>
-                        </div>
+                        <p className="mt-4 text-lg leading-relaxed text-stone-600">
+                            As the day unfolds, the space transforms into an inviting evening spot, where a curated selection of drinks and creative cocktails takes center stage. The warm hospitality, smiling staff, and relaxed ambiance — especially on its cool balcony — create an experience that feels both effortless and memorable.
+                        </p>
+                        <p className="mt-5 text-lg leading-relaxed text-stone-600">
+                            Whether you are seeking an energizing coffee break or a refreshing night out, Rhino is a place that effortlessly wins you over.
+                        </p>
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-5 auto-rows-[220px] sm:auto-rows-[250px]">
-                        {[
-                            "/rhino/rhino1.jpg",
-                            "/rhino/rhino3.jpg",
-                            "/rhino/rhino4.jpg",
-                            "/rhino/rhino5.jpg",
-                            "/rhino/rhino1.jpg"
+                    {/* Signatures */}
+                    <div>
+                        <p
+                            className="text-xs font-semibold uppercase tracking-[0.25em]"
+                            style={{ color: "#b85c3a" }}
+                        >
+                            What to try
+                        </p>
 
-                        ].map((img, i) => (
-                            <motion.div
-                                key={i}
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                transition={{ delay: i * 0.08, duration: 0.5 }}
-                                viewport={{ once: true }}
-                                whileHover={{ scale: 1.04, y: -8 }}
-                                className={`overflow-hidden rounded-[28px] group relative ${
-                                    i === 0 || i === 3 ? "md:col-span-2 md:row-span-2" : ""
-                                }`}
+                        <h2 className="font-display mt-3 text-3xl font-semibold sm:text-4xl">
+                            Signatures of the house
+                        </h2>
+
+                        {/*<div className="mt-8 grid gap-4 sm:grid-cols-2">*/}
+                        {/*    {DISHES.map((c) => (*/}
+                        {/*        <div*/}
+                        {/*            key={c.t}*/}
+                        {/*            className="rounded-2xl border border-stone-200 bg-white p-5 transition-all hover:-translate-y-0.5 hover:shadow-soft"*/}
+                        {/*        >*/}
+                        {/*            <h3 className="font-display text-xl font-semibold">{c.t}</h3>*/}
+                        {/*            /!*<p className="mt-1 text-sm text-stone-600">{c.d}</p>*!/*/}
+                        {/*        </div>*/}
+                        {/*    ))}*/}
+                        {/*</div>*/}
+                    </div>
+
+                    <div className="grid gap-4 md:grid-cols-3">
+                        {bar.map((image, index) => (
+                            <div
+                                key={image.src}
+                                className="overflow-hidden rounded-2xl shadow-sm"
                             >
                                 <img
-                                    src={img}
-                                    alt="Gallery"
-                                    className="w-full h-full object-cover group-hover:scale-110 group-hover:rotate-1 transition-transform duration-700"
+                                    src={image.src}
+                                    alt={`bar gallery ${index + 1}`}
+                                    className="h-64 w-full object-cover transition duration-500 hover:scale-105"
                                 />
-
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
-                            </motion.div>
+                            </div>
                         ))}
                     </div>
                 </div>
+
+                {/* SIDEBAR */}
+                <aside id="visit" className="space-y-6 lg:sticky lg:top-8 lg:self-start">
+                    <div className="overflow-hidden rounded-3xl border border-stone-200 bg-white shadow-soft">
+                        <div className="gradient-warm px-6 py-5 text-white">
+                            <h3 className="font-display text-2xl font-semibold">
+                                Plan your visit
+                            </h3>
+                        </div>
+
+                        <ul className="divide-y divide-stone-200">
+                            {INFO.map(({ Icon, label, value }) => (
+                                <li key={label} className="flex items-start gap-4 px-6 py-4">
+                                    <div
+                                        className="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-stone-100"
+                                        style={{ color: "#b85c3a" }}
+                                    >
+                                        <Icon className="h-4 w-4" />
+                                    </div>
+
+                                    <div>
+                                        <p className="text-xs uppercase tracking-wider text-stone-500">
+                                            {label}
+                                        </p>
+                                        <p className="text-sm font-medium text-stone-900">{value}</p>
+                                    </div>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    <div className="overflow-hidden rounded-3xl border border-stone-200 bg-white shadow-soft">
+                        <iframe
+                            title="Map of Rhino"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2256.6301743966465!2d26.555110600479995!3d39.10736028207269!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ba6736b11c0103%3A0xc08bc413d1c56cdd!2sRhino%20Bar!5e1!3m2!1sen!2sgr!4v1780422340808!5m2!1sen!2sgr" width="600" height="450" style="border:0;"
+                            className="h-56 w-full border-0"
+                            loading="lazy"
+                        />
+                    </div>
+
+                    <div className="rounded-3xl border border-stone-200 bg-white p-6 shadow-soft">
+                        <h3 className="font-display text-xl font-semibold">Nearby</h3>
+
+                        <ul className="mt-4 space-y-3 text-sm">
+                            {NEARBY.map((n) => (
+                                <li key={n.label}>
+                                    <a
+                                        href="#"
+                                        className="flex items-center justify-between rounded-xl px-3 py-2 transition-colors hover:bg-stone-100"
+                                    >
+                    <span className="flex items-center gap-3">
+                      <span className="text-lg">{n.emoji}</span>
+                      <span className="font-medium">{n.label}</span>
+                    </span>
+                                        <ChevronRight className="h-4 w-4 text-stone-500" />
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </aside>
             </section>
         </main>
     );
