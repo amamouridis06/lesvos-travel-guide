@@ -55,20 +55,21 @@ export default function NavBar() {
                 Rentals
               </Link>
 
-              <Link href="/taxi-services" className="hover:text-yellow-300 transition whitespace-nowrap">
+              <Link href="/transfers" className="hover:text-yellow-300 transition whitespace-nowrap">
                 Transfers
               </Link>
-
-              <Link href="/about" className="hover:text-yellow-300 transition whitespace-nowrap">
-                About
+              <Link href="/souvenirs/mourelia" className="hover:text-yellow-300 transition whitespace-nowrap">
+                Souvenirs
               </Link>
-
               <Link href="/emergency" className="hover:text-yellow-300 transition whitespace-nowrap">
                 Emergency
               </Link>
 
               <Link href="/kariofilis-ecofarm" className="hover:text-yellow-300 transition whitespace-nowrap">
                 Activities
+              </Link>
+              <Link href="/about" className="hover:text-yellow-300 transition whitespace-nowrap">
+                About
               </Link>
             </div>
 
@@ -120,11 +121,9 @@ export default function NavBar() {
                 <Link href="/taxi-services" onClick={closeMenu} className="py-3 border-b border-white/10 hover:text-yellow-300 transition">
                   Transfers
                 </Link>
-
-                <Link href="/about" onClick={closeMenu} className="py-3 border-b border-white/10 hover:text-yellow-300 transition">
-                  About
+                <Link href="/souvenirs/mourelia" onClick={closeMenu} className="py-3 border-b border-white/10 hover:text-yellow-300 transition">
+                  Souvenirs
                 </Link>
-
                 <Link href="/emergency" onClick={closeMenu} className="py-3 border-b border-white/10 hover:text-yellow-300 transition">
                   Emergency
                 </Link>
@@ -132,6 +131,9 @@ export default function NavBar() {
                 <Link href="/kariofilis-ecofarm" onClick={closeMenu} className="py-3 hover:text-yellow-300 transition">
                   Activities
                 </Link>
+              <Link href="/about" onClick={closeMenu} className="py-3 border-b border-white/10 hover:text-yellow-300 transition">
+              About
+            </Link>
               </div>
             </div>
         )}
