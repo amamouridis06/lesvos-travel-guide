@@ -106,7 +106,7 @@ const Restaurants: FoodItem[] = [
     category: "Restaurant",
     description: "Greek flavors, cocktails, seaside relaxation, escape.",
     location: "Molyvos, Lesvos",
-    image: "/misirlou/misirlou2.jpg",
+    image: "/misirlou/misirlou6.jpg",
     alt: "Misirlou",
     href: "/food-drinks/misirlou",
   },

@@ -14,13 +14,12 @@ export default function MisirlouPage() {
             <p>Misirlou is the perfect place for authentic summer moments, wonderful gatherings, and unforgettable experiences in the most enchanting spot of Molyvos.</p>
         ],
         heroImage:
-            "/misirlou/misirlou2.jpg",
+            "/misirlou/misirlou6.jpg",
         gallery: [
             "/misirlou/misirlou1.jpg",
             "/misirlou/misirlou3.jpg",
             "/misirlou/misirlou4.jpg",
             "/misirlou/misirlou5.jpg",
-            "/misirlou/misirlou6.jpg",
             "/misirlou/misirlou7.jpg",
             "/misirlou/misirlou8.jpg",
             "/misirlou/misirlou9.jpg",
