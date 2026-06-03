@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function TavernPage() {
     const restaurant = {
         name: "Taverna Mpampis",
-        category: " Restaurant",
+        category: "Tavern",
         location: "Molyvos, Lesvos",
         rating: 5.0,
         reviews: 17,
@@ -31,6 +31,7 @@ export default function TavernPage() {
             "/mpampis/mpampis-logo.jpg",
         ],
         highlights: [
+            "Fresh seafood",
             "Local products",
             "Romantic atmosphere",
             "Family friendly",
@@ -113,10 +114,10 @@ export default function TavernPage() {
                     <div className="rounded-2xl bg-white p-7 shadow-sm">
                         <h2 className="text-2xl font-semibold">Why visit?</h2>
                         <p className="mt-4 leading-7 text-stone-700">
-                            Perfect for travellers who want to discover local flavours in a
-                            beautiful setting. This restaurant is ideal for sunset dinners,
-                            relaxed lunches, family meals, and anyone looking for an authentic
-                            island dining experience.
+                            A perfect choice for visitors who want to discover authentic
+                            local cuisine in a charming island atmosphere. Ideal for sunset
+                            dining, relaxed lunches, family meals, and memorable evenings enjoying
+                            traditional homemade food, fresh seafood, and hearty roast specialties.
                         </p>
                     </div>
                 </div>

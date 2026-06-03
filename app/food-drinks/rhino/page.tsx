@@ -46,19 +46,6 @@ export default function RhinoPage() {
     const [isHovered, setIsHovered] = useState(false);
     const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
-    // useEffect(() => {
-    //     videoRefs.current.forEach((video, i) => {
-    //         if (!video) return;
-    //
-    //         if (i === index && !isOpen) {
-    //             video.play().catch(() => {});
-    //         } else {
-    //             video.pause();
-    //             video.currentTime = 0;
-    //         }
-    //     });
-    // }, [index, isOpen]);
-
     return (
         <main
             className="min-h-screen text-stone-900"
