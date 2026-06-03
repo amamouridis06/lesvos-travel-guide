@@ -182,14 +182,6 @@ export default function LesvosSouvenirStore(){
                             awarded for their work, in Greece and abroad.
                         </p>
                     </div>
-
-                    <div className="relative">
-                        <img
-                            src="/mourelia/mourelia-story.png"
-                            alt="Lesvos History"
-                            className="rounded-3xl shadow-2xl h-[650px] w-full object-cover"
-                        />
-                    </div>
                 </div>
             </section>
             <section className="bg-gradient-to-b from-[#e9d8a6] to-[#f7f4ee] py-24 px-6">

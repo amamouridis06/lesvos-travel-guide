@@ -28,12 +28,6 @@ const GALLERY = [
 
 ];
 
-const COCKTAILS = [
-    { t: "Zombie", d: "rum, passion fruit, pineapple, lime" },
-    { t: "Diego", d: "tequila, mango, vanilla, lime, spicy bitters" },
-    { t: "Hanky panky", d: "Vodka, fresh ginger, cucumber, lime." },
-    { t: "Pink mule", d: "vodka, strawberry, lime, mint, ginger beer" },
-];
 
 const NEARBY = [
     { label: "Petra", emoji: "" },
@@ -156,32 +150,6 @@ export default function CocktailBarPage() {
                         </p>
                     </div>
 
-                    {/* Signatures */}
-                    <div>
-                        <p
-                            className="text-xs font-semibold uppercase tracking-[0.25em]"
-                            style={{ color: "#b85c3a" }}
-                        >
-                            What to try
-                        </p>
-
-                        <h2 className="font-display mt-3 text-3xl font-semibold sm:text-4xl">
-                            Signatures of the house
-                        </h2>
-
-                        <div className="mt-8 grid gap-4 sm:grid-cols-2">
-                            {COCKTAILS.map((c) => (
-                                <div
-                                    key={c.t}
-                                    className="rounded-2xl border border-stone-200 bg-white p-5 transition-all hover:-translate-y-0.5 hover:shadow-soft"
-                                >
-                                    <h3 className="font-display text-xl font-semibold">{c.t}</h3>
-                                    <p className="mt-1 text-sm text-stone-600">{c.d}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-
                     {/* GALLERY */}
                     <div id="gallery">
                         <p
@@ -192,7 +160,7 @@ export default function CocktailBarPage() {
                         </p>
 
                         <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
-                            A look inside
+                            A look from there
                         </h2>
 
                         {/* MAIN SLIDER */}
