@@ -31,7 +31,6 @@ export default function TavernPage() {
             "/mpampis/mpampis-logo.jpg",
         ],
         highlights: [
-            "Fresh seafood",
             "Local products",
             "Romantic atmosphere",
             "Family friendly",
