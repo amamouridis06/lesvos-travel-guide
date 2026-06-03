@@ -7,11 +7,9 @@ export default function TavernPage() {
         category: " Restaurant",
         location: "Molyvos, Lesvos",
         rating: 5.0,
-        reviews: 13,
+        reviews: 17,
         description: [
-            <p>The Nisi Restaurant was founded by two brothers whose journey took them across borders, through different kitchens, and into the heart of new flavors, cultures, and experiences.</p>,
-            <p>Inspired by the places we visited, the people we met, and the hospitality that shaped us, we created a warm, relaxed, and authentic space where good food, fine wine, and great company come together.</p>,
-            <p>The Nisi Restaurant is more than just a place to eat. It is part of our story — a place where every dish is prepared with care, every table is welcomed with warmth, and every shared moment truly matters.</p>
+            <p>We are a family business offering homemade cooked food, with a menu that includes both roast specialties and fresh seafood dishes.</p>,
         ],
         heroImage:
             "/mpampis/mpampis13.jpg",
@@ -74,8 +72,8 @@ export default function TavernPage() {
                         <div className="mt-5 flex flex-wrap gap-4 text-white/95">
                             <span>📍 {restaurant.location}</span>
                             <span>
-                ⭐ {restaurant.rating} · {restaurant.reviews} reviews
-              </span>
+                                    ⭐ {restaurant.rating} · {restaurant.reviews} reviews
+                            </span>
                         </div>
                     </div>
                 </div>
