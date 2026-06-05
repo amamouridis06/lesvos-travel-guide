@@ -72,24 +72,24 @@ const tours: Tour[] = [
             "/golocal/tour_molivos.png",
         learnMoreUrl: `${company.website}/tours/molyvos-medieval-north-lesvos`,
     },
-    {
-        title: "Coastal Escape",
-        duration: "6 hours",
-        description:
-            "A relaxed private day trip to beaches, seaside villages and scenic photo stops.",
-        image:
-            "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80",
-        learnMoreUrl: `${company.website}/tours/coastal-escape`,
-    },
-    {
-        title: "Food & Culture Experience",
-        duration: "5 hours",
-        description:
-            "Visit traditional villages, local markets and authentic places for food lovers.",
-        image:
-            "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80",
-        learnMoreUrl: `${company.website}/tours/food-culture-experience`,
-    },
+    // {
+    //     title: "Coastal Escape",
+    //     duration: "6 hours",
+    //     description:
+    //         "A relaxed private day trip to beaches, seaside villages and scenic photo stops.",
+    //     image:
+    //         "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80",
+    //     learnMoreUrl: `${company.website}/tours/coastal-escape`,
+    // },
+    // {
+    //     title: "Food & Culture Experience",
+    //     duration: "5 hours",
+    //     description:
+    //         "Visit traditional villages, local markets and authentic places for food lovers.",
+    //     image:
+    //         "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80",
+    //     learnMoreUrl: `${company.website}/tours/food-culture-experience`,
+    // },
 ];
 
 const fleet: FleetItem[] = [
