@@ -65,6 +65,7 @@ const tours: Tour[] = [
     {
         title: "Molyvos and the Medieval North",
         duration: "from 3 hours",
+        people: "up to 8 people",
         description:
             "The northern coast in close quarters — Petra and its church on the rock, Molyvos with its castle above a cobbled harbor, Eftalou where the hot springs run into the sea. The road between them is short; the day on it isn't. Stone, salt, and warm water, more or less in that order.",
         image:
