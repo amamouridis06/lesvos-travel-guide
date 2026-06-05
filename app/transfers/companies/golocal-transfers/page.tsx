@@ -2,17 +2,6 @@
 
 import { useState, type CSSProperties, type FormEvent } from "react";
 
-/**
- * TransfersAndToursCompany.tsx
- * A ready-to-use React + TypeScript landing page for a transfers and tours company.
- *
- * Usage:
- * 1. Copy this file into your React/Vite/Next project.
- * 2. Import it where needed:
- *    import TransfersAndToursCompany from "./TransfersAndToursCompany";
- * 3. Render <TransfersAndToursCompany />.
- */
-
 type Service = {
     title: string;
     description: string;
@@ -23,63 +12,91 @@ type Tour = {
     title: string;
     duration: string;
     description: string;
-    price: string;
+    image: string;
+};
+
+type FleetItem = {
+    title: string;
+    passengers: string;
+    luggage: string;
+    image: string;
 };
 
 type BookingForm = {
     fullName: string;
     email: string;
     phone: string;
-    serviceType: "transfer" | "tour";
+    serviceType: "airport-transfer" | "private-transfer" | "private-tour";
     pickupLocation: string;
     destination: string;
     date: string;
+    time: string;
     passengers: string;
     message: string;
 };
 
 const services: Service[] = [
     {
-        title: "Airport Transfers",
+        title: "Airport & Port Transfers",
         description:
-            "Άνετες και αξιόπιστες μεταφορές από και προς αεροδρόμια, λιμάνια και ξενοδοχεία.",
+            "Reliable private transfers from airports, ports, hotels and villas with meet & greet service.",
         icon: "✈️",
     },
     {
-        title: "Private Transfers",
+        title: "Private Chauffeur Service",
         description:
-            "Ιδιωτικές μετακινήσεις για ζευγάρια, οικογένειες, εταιρικούς πελάτες και VIP επισκέπτες.",
+            "Discreet, comfortable and flexible transportation for couples, families and business guests.",
         icon: "🚘",
     },
     {
-        title: "Tours & Excursions",
+        title: "Tailor-Made Tours",
         description:
-            "Επιλεγμένες εκδρομές σε αξιοθέατα, παραλίες, χωριά, γαστρονομικούς προορισμούς και ιστορικά σημεία.",
+            "Private tours designed around your schedule, interests and preferred stops.",
         icon: "🗺️",
     },
 ];
 
 const tours: Tour[] = [
     {
-        title: "City Highlights Tour",
-        duration: "4 ώρες",
+        title: "Signature City Tour",
+        duration: "4 hours",
         description:
-            "Ανακαλύψτε τα πιο σημαντικά αξιοθέατα της πόλης με άνεση και ευελιξία.",
-        price: "Από €120",
+            "Explore the highlights, hidden corners and panoramic viewpoints with a local driver.",
+        image:
+            "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=900&q=80",
     },
     {
-        title: "Beach Escape",
-        duration: "6 ώρες",
+        title: "Coastal Escape",
+        duration: "6 hours",
         description:
-            "Ημερήσια απόδραση σε μοναδικές παραλίες με ιδιωτική μεταφορά και στάσεις για φωτογραφίες.",
-        price: "Από €180",
+            "A relaxed private day trip to beaches, seaside villages and scenic photo stops.",
+        image:
+            "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80",
     },
     {
-        title: "Custom Private Tour",
-        duration: "Κατόπιν επιλογής",
+        title: "Food & Culture Experience",
+        duration: "5 hours",
         description:
-            "Σχεδιάζουμε τη διαδρομή σύμφωνα με τις ανάγκες, τον χρόνο και τα ενδιαφέροντά σας.",
-        price: "Κατόπιν αιτήματος",
+            "Visit traditional villages, local markets and authentic places for food lovers.",
+        image:
+            "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80",
+    },
+];
+
+const fleet: FleetItem[] = [
+    {
+        title: "Premium Sedan",
+        passengers: "Up to 3 passengers",
+        luggage: "2 large suitcases",
+        image:
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=900&q=80",
+    },
+    {
+        title: "Luxury Minivan",
+        passengers: "Up to 7 passengers",
+        luggage: "7 suitcases",
+        image:
+            "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=900&q=80",
     },
 ];
 
@@ -87,15 +104,16 @@ const initialForm: BookingForm = {
     fullName: "",
     email: "",
     phone: "",
-    serviceType: "transfer",
+    serviceType: "airport-transfer",
     pickupLocation: "",
     destination: "",
     date: "",
+    time: "",
     passengers: "1",
     message: "",
 };
 
-export default function TransfersAndToursCompany() {
+export default function TransfersAndToursCompanyPremium() {
     const [form, setForm] = useState<BookingForm>(initialForm);
     const [submitted, setSubmitted] = useState(false);
 
@@ -109,8 +127,6 @@ export default function TransfersAndToursCompany() {
     const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         setSubmitted(true);
-
-        // Replace this with your preferred API call, email service, or CRM integration.
         console.log("Booking request:", form);
     };
 
@@ -118,7 +134,13 @@ export default function TransfersAndToursCompany() {
         <main style={styles.page}>
             <section style={styles.hero}>
                 <nav style={styles.navbar}>
-                    <div style={styles.logo}>Aegean Transfers & Tours</div>
+                    <a href="#home" style={styles.brand}>
+                        <span style={styles.brandMark}>A</span>
+                        <span>
+              Aegean<span style={styles.brandAccent}>Way</span>
+            </span>
+                    </a>
+
                     <div style={styles.navLinks}>
                         <a href="#services" style={styles.navLink}>
                             Services
@@ -126,38 +148,82 @@ export default function TransfersAndToursCompany() {
                         <a href="#tours" style={styles.navLink}>
                             Tours
                         </a>
-                        <a href="#booking" style={styles.navLink}>
-                            Booking
+                        <a href="#fleet" style={styles.navLink}>
+                            Fleet
+                        </a>
+                        <a href="#booking" style={styles.navButton}>
+                            Book Now
                         </a>
                     </div>
                 </nav>
 
-                <div style={styles.heroContent}>
-                    <p style={styles.eyebrow}>Private Transfers • Tours • Excursions</p>
-                    <h1 style={styles.title}>Premium transfers and tailor-made tours</h1>
-                    <p style={styles.subtitle}>
-                        Αξιόπιστες μεταφορές και ιδιωτικές εκδρομές με επαγγελματίες
-                        οδηγούς, άνετα οχήματα και εξυπηρέτηση υψηλού επιπέδου.
-                    </p>
-                    <div style={styles.heroActions}>
-                        <a href="#booking" style={styles.primaryButton}>
-                            Request a Booking
-                        </a>
-                        <a href="#services" style={styles.secondaryButton}>
-                            View Services
-                        </a>
+                <div id="home" style={styles.heroGrid}>
+                    <div style={styles.heroText}>
+                        <p style={styles.eyebrow}>Private transfers & curated tours</p>
+                        <h1 style={styles.heroTitle}>
+                            Travel in comfort. Discover more.
+                        </h1>
+                        <p style={styles.heroSubtitle}>
+                            Premium airport transfers, private chauffeur services and
+                            tailor-made tours with professional local drivers.
+                        </p>
+
+                        <div style={styles.heroActions}>
+                            <a href="#booking" style={styles.primaryButton}>
+                                Request a Quote
+                            </a>
+                            <a href="#tours" style={styles.secondaryButton}>
+                                Explore Tours
+                            </a>
+                        </div>
+
+                        <div style={styles.trustBar}>
+                            <div>
+                                <strong style={styles.trustNumber}>24/7</strong>
+                                <span style={styles.trustLabel}>Availability</span>
+                            </div>
+                            <div>
+                                <strong style={styles.trustNumber}>5★</strong>
+                                <span style={styles.trustLabel}>Guest experience</span>
+                            </div>
+                            <div>
+                                <strong style={styles.trustNumber}>100%</strong>
+                                <span style={styles.trustLabel}>Private rides</span>
+                            </div>
+                        </div>
                     </div>
+
+                    <aside style={styles.heroCard}>
+                        <div style={styles.heroCardImage} />
+                        <div style={styles.heroCardContent}>
+                            <p style={styles.cardOverline}>Popular request</p>
+                            <h2 style={styles.heroCardTitle}>Airport to Hotel Transfer</h2>
+                            <p style={styles.heroCardText}>
+                                Meet & greet, luggage assistance and direct private transfer to
+                                your accommodation.
+                            </p>
+                            <a href="#booking" style={styles.cardLink}>
+                                Plan your ride →
+                            </a>
+                        </div>
+                    </aside>
                 </div>
             </section>
 
             <section id="services" style={styles.section}>
-                <p style={styles.sectionLabel}>What we offer</p>
-                <h2 style={styles.sectionTitle}>Transfers and travel experiences</h2>
+                <div style={styles.sectionHeader}>
+                    <p style={styles.sectionLabel}>Services</p>
+                    <h2 style={styles.sectionTitle}>Everything you need for a smooth trip</h2>
+                    <p style={styles.sectionDescription}>
+                        From arrival to departure, we make every journey easy, punctual and
+                        comfortable.
+                    </p>
+                </div>
 
-                <div style={styles.cardGrid}>
+                <div style={styles.serviceGrid}>
                     {services.map((service) => (
-                        <article key={service.title} style={styles.card}>
-                            <div style={styles.icon}>{service.icon}</div>
+                        <article key={service.title} style={styles.serviceCard}>
+                            <div style={styles.serviceIcon}>{service.icon}</div>
                             <h3 style={styles.cardTitle}>{service.title}</h3>
                             <p style={styles.cardText}>{service.description}</p>
                         </article>
@@ -165,55 +231,88 @@ export default function TransfersAndToursCompany() {
                 </div>
             </section>
 
-            <section style={styles.statsSection}>
-                <div style={styles.statItem}>
-                    <strong style={styles.statNumber}>24/7</strong>
-                    <span style={styles.statLabel}>Availability</span>
+            <section id="tours" style={styles.darkSection}>
+                <div style={styles.sectionHeaderLight}>
+                    <p style={styles.sectionLabelGold}>Curated tours</p>
+                    <h2 style={styles.sectionTitleLight}>Private experiences, your way</h2>
+                    <p style={styles.sectionDescriptionLight}>
+                        Choose a ready-made itinerary or let us design a custom route for
+                        your day.
+                    </p>
                 </div>
-                <div style={styles.statItem}>
-                    <strong style={styles.statNumber}>100%</strong>
-                    <span style={styles.statLabel}>Private service</span>
-                </div>
-                <div style={styles.statItem}>
-                    <strong style={styles.statNumber}>5★</strong>
-                    <span style={styles.statLabel}>Guest experience</span>
-                </div>
-            </section>
 
-            <section id="tours" style={styles.sectionAlt}>
-                <p style={styles.sectionLabel}>Popular tours</p>
-                <h2 style={styles.sectionTitle}>Explore more with a local driver</h2>
-
-                <div style={styles.tourList}>
+                <div style={styles.tourGrid}>
                     {tours.map((tour) => (
                         <article key={tour.title} style={styles.tourCard}>
-                            <div>
-                                <h3 style={styles.cardTitle}>{tour.title}</h3>
-                                <p style={styles.cardText}>{tour.description}</p>
-                            </div>
-                            <div style={styles.tourMeta}>
-                                <span>{tour.duration}</span>
-                                <strong>{tour.price}</strong>
+                            <div
+                                style={{
+                                    ...styles.tourImage,
+                                    backgroundImage: `url(${tour.image})`,
+                                }}
+                            />
+                            <div style={styles.tourContent}>
+                                <span style={styles.tourDuration}>{tour.duration}</span>
+                                <h3 style={styles.tourTitle}>{tour.title}</h3>
+                                <p style={styles.tourText}>{tour.description}</p>
                             </div>
                         </article>
                     ))}
                 </div>
             </section>
 
+            <section id="fleet" style={styles.section}>
+                <div style={styles.splitHeader}>
+                    <div>
+                        <p style={styles.sectionLabel}>Fleet</p>
+                        <h2 style={styles.sectionTitle}>Clean, comfortable vehicles</h2>
+                    </div>
+                    <p style={styles.sectionDescriptionNarrow}>
+                        Choose the right vehicle for your group, luggage and travel style.
+                    </p>
+                </div>
+
+                <div style={styles.fleetGrid}>
+                    {fleet.map((vehicle) => (
+                        <article key={vehicle.title} style={styles.fleetCard}>
+                            <div
+                                style={{
+                                    ...styles.fleetImage,
+                                    backgroundImage: `url(${vehicle.image})`,
+                                }}
+                            />
+                            <div style={styles.fleetContent}>
+                                <h3 style={styles.cardTitle}>{vehicle.title}</h3>
+                                <div style={styles.fleetMeta}>
+                                    <span>{vehicle.passengers}</span>
+                                    <span>{vehicle.luggage}</span>
+                                </div>
+                            </div>
+                        </article>
+                    ))}
+                </div>
+            </section>
+
+            <section style={styles.testimonialSection}>
+                <blockquote style={styles.quote}>
+                    “Excellent service, professional driver and a beautiful private tour.
+                    Everything was punctual, clean and perfectly organized.”
+                </blockquote>
+                <p style={styles.quoteAuthor}>— Guest Review</p>
+            </section>
+
             <section id="booking" style={styles.bookingSection}>
-                <div style={styles.bookingInfo}>
-                    <p style={styles.sectionLabel}>Booking request</p>
-                    <h2 style={styles.sectionTitle}>Plan your transfer or tour</h2>
-                    <p style={styles.cardText}>
-                        Συμπληρώστε τα στοιχεία σας και η ομάδα μας θα επικοινωνήσει μαζί
-                        σας για επιβεβαίωση διαθεσιμότητας και τελικής τιμής.
+                <div style={styles.bookingPanel}>
+                    <p style={styles.sectionLabelGold}>Booking request</p>
+                    <h2 style={styles.bookingTitle}>Tell us about your trip</h2>
+                    <p style={styles.bookingText}>
+                        Send your request and we will contact you with availability,
+                        estimated duration and final price.
                     </p>
 
-                    <ul style={styles.checkList}>
-                        <li>✔ Επαγγελματίες οδηγοί</li>
-                        <li>✔ Καθαρά και άνετα οχήματα</li>
-                        <li>✔ Ευέλικτα δρομολόγια και στάσεις</li>
-                    </ul>
+                    <div style={styles.contactBox}>
+                        <span>Need fast assistance?</span>
+                        <strong>WhatsApp / Phone: +30 690 000 0000</strong>
+                    </div>
                 </div>
 
                 <form onSubmit={handleSubmit} style={styles.form}>
@@ -257,7 +356,7 @@ export default function TransfersAndToursCompany() {
                         </label>
 
                         <label style={styles.label}>
-                            Service type
+                            Service
                             <select
                                 value={form.serviceType}
                                 onChange={(event) =>
@@ -268,39 +367,42 @@ export default function TransfersAndToursCompany() {
                                 }
                                 style={styles.input}
                             >
-                                <option value="transfer">Transfer</option>
-                                <option value="tour">Tour</option>
+                                <option value="airport-transfer">Airport / Port transfer</option>
+                                <option value="private-transfer">Private transfer</option>
+                                <option value="private-tour">Private tour</option>
                             </select>
                         </label>
                     </div>
 
-                    <label style={styles.label}>
-                        Pickup location
-                        <input
-                            required
-                            value={form.pickupLocation}
-                            onChange={(event) =>
-                                updateField("pickupLocation", event.target.value)
-                            }
-                            style={styles.input}
-                            placeholder="Airport, hotel, port, address"
-                        />
-                    </label>
-
-                    <label style={styles.label}>
-                        Destination / Tour
-                        <input
-                            required
-                            value={form.destination}
-                            onChange={(event) =>
-                                updateField("destination", event.target.value)
-                            }
-                            style={styles.input}
-                            placeholder="Destination or tour name"
-                        />
-                    </label>
-
                     <div style={styles.twoColumns}>
+                        <label style={styles.label}>
+                            Pickup location
+                            <input
+                                required
+                                value={form.pickupLocation}
+                                onChange={(event) =>
+                                    updateField("pickupLocation", event.target.value)
+                                }
+                                style={styles.input}
+                                placeholder="Airport, hotel, port, address"
+                            />
+                        </label>
+
+                        <label style={styles.label}>
+                            Destination
+                            <input
+                                required
+                                value={form.destination}
+                                onChange={(event) =>
+                                    updateField("destination", event.target.value)
+                                }
+                                style={styles.input}
+                                placeholder="Destination or tour name"
+                            />
+                        </label>
+                    </div>
+
+                    <div style={styles.threeColumns}>
                         <label style={styles.label}>
                             Date
                             <input
@@ -308,6 +410,17 @@ export default function TransfersAndToursCompany() {
                                 type="date"
                                 value={form.date}
                                 onChange={(event) => updateField("date", event.target.value)}
+                                style={styles.input}
+                            />
+                        </label>
+
+                        <label style={styles.label}>
+                            Time
+                            <input
+                                required
+                                type="time"
+                                value={form.time}
+                                onChange={(event) => updateField("time", event.target.value)}
                                 style={styles.input}
                             />
                         </label>
@@ -328,27 +441,23 @@ export default function TransfersAndToursCompany() {
                     </div>
 
                     <label style={styles.label}>
-                        Message
+                        Additional details
                         <textarea
                             value={form.message}
                             onChange={(event) => updateField("message", event.target.value)}
-                            style={{
-                                ...styles.input,
-                                minHeight: 110,
-                                resize: "vertical",
-                            }}
-                            placeholder="Tell us any special request, arrival time, flight number, or preferred stops."
+                            style={styles.textarea}
+                            placeholder="Flight number, luggage, child seats, stops, special requests..."
                         />
                     </label>
 
                     <button type="submit" style={styles.submitButton}>
-                        Send Request
+                        Send Booking Request
                     </button>
 
                     {submitted && (
                         <p style={styles.successMessage}>
-                            Ευχαριστούμε! Το αίτημά σας καταχωρήθηκε τοπικά. Συνδέστε τη
-                            φόρμα με API ή email service για αποστολή.
+                            Thank you. Your request has been recorded locally. Connect this
+                            form with your API, email service or CRM to receive submissions.
                         </p>
                     )}
                 </form>
@@ -359,19 +468,19 @@ export default function TransfersAndToursCompany() {
 
 const styles: Record<string, CSSProperties> = {
     page: {
-        margin: 0,
         minHeight: "100vh",
-        background: "#f7f5f0",
+        margin: 0,
+        background: "#f6f1e8",
         color: "#17202a",
         fontFamily:
             "Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
     },
     hero: {
-        minHeight: "720px",
-        padding: "28px clamp(20px, 5vw, 80px)",
+        minHeight: "780px",
+        padding: "28px clamp(20px, 5vw, 86px)",
         background:
-            "linear-gradient(135deg, rgba(15, 23, 42, 0.94), rgba(15, 82, 100, 0.86)), url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80') center/cover",
-        color: "#fff",
+            "linear-gradient(135deg, rgba(8, 13, 25, 0.96), rgba(13, 52, 70, 0.9)), url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1900&q=80') center/cover",
+        color: "#ffffff",
     },
     navbar: {
         display: "flex",
@@ -379,186 +488,405 @@ const styles: Record<string, CSSProperties> = {
         justifyContent: "space-between",
         gap: 24,
     },
-    logo: {
-        fontSize: 22,
-        fontWeight: 800,
-        letterSpacing: "-0.03em",
+    brand: {
+        display: "inline-flex",
+        alignItems: "center",
+        gap: 12,
+        color: "#ffffff",
+        textDecoration: "none",
+        fontSize: 23,
+        fontWeight: 900,
+        letterSpacing: "-0.04em",
+    },
+    brandMark: {
+        width: 42,
+        height: 42,
+        display: "grid",
+        placeItems: "center",
+        borderRadius: "50%",
+        background: "#d8b46a",
+        color: "#111827",
+        fontWeight: 900,
+    },
+    brandAccent: {
+        color: "#d8b46a",
     },
     navLinks: {
         display: "flex",
-        gap: 18,
+        alignItems: "center",
+        gap: 20,
         flexWrap: "wrap",
     },
     navLink: {
-        color: "#fff",
+        color: "rgba(255,255,255,0.82)",
         textDecoration: "none",
-        fontWeight: 600,
-        opacity: 0.88,
+        fontWeight: 700,
     },
-    heroContent: {
-        maxWidth: 760,
-        paddingTop: 150,
+    navButton: {
+        padding: "12px 18px",
+        borderRadius: 999,
+        background: "#ffffff",
+        color: "#111827",
+        textDecoration: "none",
+        fontWeight: 900,
+    },
+    heroGrid: {
+        display: "grid",
+        gridTemplateColumns: "minmax(280px, 1.1fr) minmax(280px, 0.75fr)",
+        gap: 52,
+        alignItems: "center",
+        paddingTop: 104,
+    },
+    heroText: {
+        maxWidth: 820,
     },
     eyebrow: {
-        marginBottom: 16,
-        color: "#facc15",
-        fontWeight: 800,
-        letterSpacing: "0.12em",
+        margin: "0 0 18px",
+        color: "#d8b46a",
+        fontSize: 13,
+        fontWeight: 900,
+        letterSpacing: "0.18em",
         textTransform: "uppercase",
     },
-    title: {
+    heroTitle: {
         margin: 0,
-        fontSize: "clamp(44px, 7vw, 86px)",
+        maxWidth: 780,
+        fontSize: "clamp(48px, 7vw, 92px)",
         lineHeight: 0.94,
-        letterSpacing: "-0.06em",
+        letterSpacing: "-0.075em",
     },
-    subtitle: {
-        maxWidth: 620,
-        marginTop: 24,
+    heroSubtitle: {
+        maxWidth: 650,
+        margin: "28px 0 0",
+        color: "rgba(255,255,255,0.78)",
         fontSize: 20,
-        lineHeight: 1.65,
-        color: "rgba(255,255,255,0.86)",
+        lineHeight: 1.75,
     },
     heroActions: {
         display: "flex",
         gap: 14,
-        marginTop: 34,
+        marginTop: 36,
         flexWrap: "wrap",
     },
     primaryButton: {
-        padding: "15px 24px",
+        padding: "16px 25px",
         borderRadius: 999,
-        background: "#facc15",
+        background: "#d8b46a",
         color: "#111827",
-        fontWeight: 800,
         textDecoration: "none",
+        fontWeight: 900,
+        boxShadow: "0 18px 34px rgba(216, 180, 106, 0.22)",
     },
     secondaryButton: {
-        padding: "15px 24px",
+        padding: "16px 25px",
         borderRadius: 999,
-        border: "1px solid rgba(255,255,255,0.45)",
-        color: "#fff",
-        fontWeight: 800,
+        border: "1px solid rgba(255,255,255,0.24)",
+        color: "#ffffff",
+        textDecoration: "none",
+        fontWeight: 900,
+        backdropFilter: "blur(12px)",
+    },
+    trustBar: {
+        marginTop: 46,
+        display: "grid",
+        gridTemplateColumns: "repeat(3, minmax(100px, 1fr))",
+        gap: 16,
+        maxWidth: 620,
+    },
+    trustNumber: {
+        display: "block",
+        fontSize: 30,
+        color: "#ffffff",
+    },
+    trustLabel: {
+        display: "block",
+        marginTop: 5,
+        color: "rgba(255,255,255,0.62)",
+        fontSize: 14,
+        fontWeight: 700,
+    },
+    heroCard: {
+        overflow: "hidden",
+        borderRadius: 34,
+        background: "rgba(255,255,255,0.1)",
+        border: "1px solid rgba(255,255,255,0.2)",
+        boxShadow: "0 34px 80px rgba(0,0,0,0.28)",
+        backdropFilter: "blur(18px)",
+    },
+    heroCardImage: {
+        height: 260,
+        background:
+            "url('https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=900&q=80') center/cover",
+    },
+    heroCardContent: {
+        padding: 28,
+    },
+    cardOverline: {
+        margin: 0,
+        color: "#d8b46a",
+        fontSize: 13,
+        fontWeight: 900,
+        textTransform: "uppercase",
+        letterSpacing: "0.14em",
+    },
+    heroCardTitle: {
+        margin: "10px 0",
+        fontSize: 28,
+        letterSpacing: "-0.04em",
+    },
+    heroCardText: {
+        color: "rgba(255,255,255,0.7)",
+        lineHeight: 1.65,
+    },
+    cardLink: {
+        display: "inline-block",
+        marginTop: 10,
+        color: "#ffffff",
+        fontWeight: 900,
         textDecoration: "none",
     },
     section: {
-        padding: "90px clamp(20px, 5vw, 80px)",
+        padding: "96px clamp(20px, 5vw, 86px)",
     },
-    sectionAlt: {
-        padding: "90px clamp(20px, 5vw, 80px)",
-        background: "#fff",
+    sectionHeader: {
+        maxWidth: 760,
+        marginBottom: 42,
+    },
+    sectionHeaderLight: {
+        maxWidth: 760,
+        marginBottom: 42,
+        color: "#ffffff",
     },
     sectionLabel: {
         margin: 0,
-        color: "#0f766e",
+        color: "#9b6b28",
+        fontSize: 13,
         fontWeight: 900,
+        letterSpacing: "0.16em",
         textTransform: "uppercase",
-        letterSpacing: "0.12em",
+    },
+    sectionLabelGold: {
+        margin: 0,
+        color: "#d8b46a",
+        fontSize: 13,
+        fontWeight: 900,
+        letterSpacing: "0.16em",
+        textTransform: "uppercase",
     },
     sectionTitle: {
-        margin: "10px 0 32px",
-        fontSize: "clamp(32px, 5vw, 52px)",
-        lineHeight: 1.02,
-        letterSpacing: "-0.05em",
+        margin: "10px 0 0",
+        fontSize: "clamp(34px, 5vw, 58px)",
+        lineHeight: 1,
+        letterSpacing: "-0.06em",
     },
-    cardGrid: {
+    sectionTitleLight: {
+        margin: "10px 0 0",
+        fontSize: "clamp(34px, 5vw, 58px)",
+        lineHeight: 1,
+        letterSpacing: "-0.06em",
+        color: "#ffffff",
+    },
+    sectionDescription: {
+        maxWidth: 620,
+        marginTop: 18,
+        color: "#697386",
+        fontSize: 18,
+        lineHeight: 1.7,
+    },
+    sectionDescriptionLight: {
+        maxWidth: 620,
+        marginTop: 18,
+        color: "rgba(255,255,255,0.68)",
+        fontSize: 18,
+        lineHeight: 1.7,
+    },
+    sectionDescriptionNarrow: {
+        maxWidth: 440,
+        color: "#697386",
+        fontSize: 18,
+        lineHeight: 1.7,
+    },
+    splitHeader: {
+        display: "flex",
+        justifyContent: "space-between",
+        gap: 24,
+        alignItems: "end",
+        marginBottom: 42,
+        flexWrap: "wrap",
+    },
+    serviceGrid: {
         display: "grid",
-        gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+        gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
         gap: 22,
     },
-    card: {
-        padding: 28,
-        background: "#fff",
-        borderRadius: 28,
-        boxShadow: "0 18px 45px rgba(15, 23, 42, 0.08)",
+    serviceCard: {
+        padding: 30,
+        borderRadius: 30,
+        background: "rgba(255,255,255,0.8)",
+        border: "1px solid rgba(23, 32, 42, 0.08)",
+        boxShadow: "0 18px 50px rgba(23, 32, 42, 0.08)",
     },
-    icon: {
-        fontSize: 38,
-        marginBottom: 16,
+    serviceIcon: {
+        width: 64,
+        height: 64,
+        display: "grid",
+        placeItems: "center",
+        borderRadius: 20,
+        background: "#efe3ca",
+        fontSize: 30,
+        marginBottom: 22,
     },
     cardTitle: {
         margin: "0 0 10px",
-        fontSize: 24,
-        letterSpacing: "-0.03em",
+        fontSize: 25,
+        letterSpacing: "-0.04em",
     },
     cardText: {
         margin: 0,
-        color: "#5b6472",
+        color: "#697386",
         fontSize: 16,
         lineHeight: 1.7,
     },
-    statsSection: {
-        margin: "0 clamp(20px, 5vw, 80px) 90px",
-        padding: 34,
+    darkSection: {
+        padding: "96px clamp(20px, 5vw, 86px)",
+        background: "#101827",
+    },
+    tourGrid: {
         display: "grid",
-        gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
-        gap: 20,
-        borderRadius: 32,
-        background: "#0f172a",
-        color: "#fff",
-    },
-    statItem: {
-        display: "flex",
-        flexDirection: "column",
-        gap: 6,
-        textAlign: "center",
-    },
-    statNumber: {
-        fontSize: 42,
-    },
-    statLabel: {
-        color: "rgba(255,255,255,0.72)",
-    },
-    tourList: {
-        display: "grid",
-        gap: 18,
+        gridTemplateColumns: "repeat(auto-fit, minmax(270px, 1fr))",
+        gap: 24,
     },
     tourCard: {
-        display: "grid",
-        gridTemplateColumns: "1fr auto",
-        gap: 24,
-        alignItems: "center",
-        padding: 28,
-        border: "1px solid #e5e7eb",
-        borderRadius: 26,
-        background: "#fbfaf7",
+        overflow: "hidden",
+        borderRadius: 30,
+        background: "#182235",
+        border: "1px solid rgba(255,255,255,0.08)",
     },
-    tourMeta: {
+    tourImage: {
+        height: 250,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+    },
+    tourContent: {
+        padding: 26,
+    },
+    tourDuration: {
+        display: "inline-flex",
+        marginBottom: 14,
+        padding: "7px 11px",
+        borderRadius: 999,
+        background: "rgba(216, 180, 106, 0.14)",
+        color: "#d8b46a",
+        fontSize: 13,
+        fontWeight: 900,
+    },
+    tourTitle: {
+        margin: "0 0 10px",
+        color: "#ffffff",
+        fontSize: 25,
+        letterSpacing: "-0.04em",
+    },
+    tourText: {
+        margin: 0,
+        color: "rgba(255,255,255,0.64)",
+        lineHeight: 1.7,
+    },
+    fleetGrid: {
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+        gap: 24,
+    },
+    fleetCard: {
+        overflow: "hidden",
+        borderRadius: 32,
+        background: "#ffffff",
+        boxShadow: "0 20px 55px rgba(23, 32, 42, 0.08)",
+    },
+    fleetImage: {
+        height: 290,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+    },
+    fleetContent: {
+        padding: 26,
+    },
+    fleetMeta: {
         display: "flex",
-        flexDirection: "column",
-        gap: 8,
-        alignItems: "flex-end",
-        whiteSpace: "nowrap",
-        color: "#0f766e",
+        gap: 10,
+        flexWrap: "wrap",
+        marginTop: 16,
+    },
+    testimonialSection: {
+        margin: "0 clamp(20px, 5vw, 86px) 96px",
+        padding: "54px clamp(24px, 5vw, 70px)",
+        borderRadius: 38,
+        background: "#ffffff",
+        boxShadow: "0 20px 55px rgba(23, 32, 42, 0.08)",
+        textAlign: "center",
+    },
+    quote: {
+        margin: 0,
+        fontSize: "clamp(26px, 4vw, 42px)",
+        lineHeight: 1.22,
+        letterSpacing: "-0.05em",
+        fontWeight: 900,
+    },
+    quoteAuthor: {
+        margin: "18px 0 0",
+        color: "#9b6b28",
+        fontWeight: 900,
     },
     bookingSection: {
-        padding: "90px clamp(20px, 5vw, 80px)",
+        padding: "96px clamp(20px, 5vw, 86px)",
         display: "grid",
-        gridTemplateColumns: "minmax(260px, 0.8fr) minmax(280px, 1.2fr)",
-        gap: 42,
-        alignItems: "start",
+        gridTemplateColumns: "minmax(280px, 0.75fr) minmax(300px, 1.25fr)",
+        gap: 32,
+        background: "#0f172a",
+        color: "#ffffff",
     },
-    bookingInfo: {
+    bookingPanel: {
+        padding: 34,
+        borderRadius: 32,
+        background: "linear-gradient(180deg, rgba(255,255,255,0.1), rgba(255,255,255,0.045))",
+        border: "1px solid rgba(255,255,255,0.1)",
+        alignSelf: "start",
         position: "sticky",
-        top: 24,
+        top: 22,
     },
-    checkList: {
-        marginTop: 24,
-        paddingLeft: 0,
-        listStyle: "none",
-        color: "#17202a",
-        lineHeight: 2,
-        fontWeight: 700,
+    bookingTitle: {
+        margin: "10px 0 14px",
+        fontSize: "clamp(34px, 5vw, 56px)",
+        lineHeight: 1,
+        letterSpacing: "-0.06em",
+    },
+    bookingText: {
+        color: "rgba(255,255,255,0.68)",
+        lineHeight: 1.75,
+        fontSize: 17,
+    },
+    contactBox: {
+        marginTop: 28,
+        padding: 20,
+        borderRadius: 24,
+        background: "rgba(216, 180, 106, 0.12)",
+        border: "1px solid rgba(216, 180, 106, 0.24)",
+        display: "grid",
+        gap: 8,
     },
     form: {
-        padding: 28,
-        background: "#fff",
-        borderRadius: 28,
-        boxShadow: "0 18px 45px rgba(15, 23, 42, 0.08)",
+        padding: 30,
+        borderRadius: 32,
+        background: "#ffffff",
+        color: "#17202a",
     },
     twoColumns: {
         display: "grid",
         gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+        gap: 16,
+    },
+    threeColumns: {
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))",
         gap: 16,
     },
     label: {
@@ -566,29 +894,45 @@ const styles: Record<string, CSSProperties> = {
         flexDirection: "column",
         gap: 8,
         marginBottom: 16,
-        fontWeight: 800,
-        color: "#263241",
+        color: "#273241",
+        fontSize: 14,
+        fontWeight: 900,
     },
     input: {
         width: "100%",
         boxSizing: "border-box",
-        border: "1px solid #d7dce3",
+        border: "1px solid #e0e4ea",
         borderRadius: 16,
         padding: "14px 15px",
+        background: "#f8fafc",
+        color: "#17202a",
         fontSize: 16,
         outline: "none",
         fontFamily: "inherit",
-        background: "#fbfaf7",
+    },
+    textarea: {
+        width: "100%",
+        minHeight: 128,
+        boxSizing: "border-box",
+        border: "1px solid #e0e4ea",
+        borderRadius: 16,
+        padding: "14px 15px",
+        background: "#f8fafc",
+        color: "#17202a",
+        fontSize: 16,
+        outline: "none",
+        fontFamily: "inherit",
+        resize: "vertical",
     },
     submitButton: {
         width: "100%",
         border: 0,
         borderRadius: 18,
-        padding: "16px 20px",
-        background: "#0f766e",
-        color: "#fff",
+        padding: "17px 22px",
+        background: "#d8b46a",
+        color: "#111827",
         fontSize: 17,
-        fontWeight: 900,
+        fontWeight: 950,
         cursor: "pointer",
     },
     successMessage: {
@@ -597,6 +941,6 @@ const styles: Record<string, CSSProperties> = {
         borderRadius: 16,
         background: "#ecfdf5",
         color: "#047857",
-        fontWeight: 700,
+        fontWeight: 800,
     },
 };
