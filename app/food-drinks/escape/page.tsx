@@ -72,7 +72,7 @@ export default function DessertShopGuidePage() {
                         transition={{ delay: 0.2, duration: 0.4 }}
                         className="max-w-3xl mx-auto text-base sm:text-lg md:text-2xl text-slate-900 leading-relaxed mb-10 sm:mb-12 px-2"
                     >
-                        Escape Espresso Bar is a cozy all-day destination in Agiasos, Lesvos, offering specialty coffee, refreshing drinks, and handcrafted cocktails. With a welcoming atmosphere, friendly service, and beautiful village views, it's the perfect place to relax, connect, and enjoy every moment.
+                        Premium coffee, refreshing drinks, and warm hospitality in Agiasos.
                     </motion.p>
 
                     <motion.div
@@ -162,11 +162,6 @@ export default function DessertShopGuidePage() {
           <span className="text-cyan-500 uppercase tracking-[0.3em] text-sm font-bold">
             About The Place
           </span>
-
-                    <h2 className="text-4xl sm:text-5xl md:text-7xl font-black mt-6 mb-6 sm:mb-8 leading-tight">
-                        A  Espresso Bar
-                    </h2>
-
                     <p className="max-w-4xl mx-auto text-base sm:text-lg md:text-xl text-slate-900 font-medium leading-relaxed px-2">
                         <p>
                             Nestled in the heart of Agiasos, just above Stavri, Escape Espresso Bar is the perfect destination for coffee, relaxation, and great company.
@@ -255,11 +250,11 @@ export default function DessertShopGuidePage() {
                             "/escape/escape2.jpeg",
                             "/escape/escape3.jpeg",
                             "/escape/escape4.jpeg",
-                            "/escape/escape5.jpeg",
+                            "/escape/escape9.jpeg",
                             "/escape/escape6.jpeg",
                             "/escape/escape7.jpeg",
                             "/escape/escape8.jpeg",
-                            "/escape/escape9.jpeg",
+                            "/escape/escape5.jpeg",
                             "/escape/escape10.jpeg",
                             "/escape/escape11.jpeg",
                             "/escape/escape12.jpg",
