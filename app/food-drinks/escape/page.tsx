@@ -72,8 +72,7 @@ export default function DessertShopGuidePage() {
                         transition={{ delay: 0.2, duration: 0.4 }}
                         className="max-w-3xl mx-auto text-base sm:text-lg md:text-2xl text-slate-900 leading-relaxed mb-10 sm:mb-12 px-2"
                     >
-                        A premium dessert destination in the port of Molyvos with pancakes, waffles and crepes for
-                        travelers looking for something really unique.
+                        Escape Espresso Bar is a cozy all-day destination in Agiasos, Lesvos, offering specialty coffee, refreshing drinks, and handcrafted cocktails. With a welcoming atmosphere, friendly service, and beautiful village views, it's the perfect place to relax, connect, and enjoy every moment.
                     </motion.p>
 
                     <motion.div
@@ -98,7 +97,7 @@ export default function DessertShopGuidePage() {
                         {
                             icon: <Clock3 className="w-7 h-7" />,
                             title: "Open Daily",
-                            value: "6:00 — until the morning",
+                            value: "6:00AM — 4:00AM",
                         },
                         {
                             icon: <Clock3 className="w-7 h-7" />,
@@ -108,7 +107,7 @@ export default function DessertShopGuidePage() {
                         {
                             icon: <Euro className="w-7 h-7" />,
                             title: "Average",
-                            value: "€1 — €5",
+                            value: "1 — 5€",
                         },
                     ].map((item, i) => (
                         <motion.div
@@ -257,7 +256,6 @@ export default function DessertShopGuidePage() {
                             "/escape/escape3.jpeg",
                             "/escape/escape4.jpeg",
                             "/escape/escape5.jpeg",
-                            "/escape/escape6.jpeg",
                             "/escape/escape6.jpeg",
                             "/escape/escape7.jpeg",
                             "/escape/escape8.jpeg",
