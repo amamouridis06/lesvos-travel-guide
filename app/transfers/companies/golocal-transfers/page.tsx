@@ -72,15 +72,16 @@ const tours: Tour[] = [
             "/golocal/tour_molivos.png",
         learnMoreUrl: `https://golocaltransfer.com/tours/molyvos-medieval-north-lesvos`,
     },
-    // {
-    //     title: "Coastal Escape",
-    //     duration: "6 hours",
-    //     description:
-    //         "A relaxed private day trip to beaches, seaside villages and scenic photo stops.",
-    //     image:
-    //         "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80",
-    //     learnMoreUrl: `${company.website}/tours/coastal-escape`,
-    // },
+    {
+        title: "Skala Sykamineas & Hidden Gems",
+        duration: "from 4 hrs",
+        people: "up to 8 people",
+        description:
+            "The northeast keeps to itself, and rewards anyone who follows it there. A working farm where olive oil and cheese come from the same hands, a monastery in Mantamados that's drawn pilgrims for nine centuries, and a fishing village at the end of the road where the boats still go out at dawn. More looking than driving.",
+        image:
+            "/golocal/sykamnias_tour.png",
+        learnMoreUrl: `https://golocaltransfer.com/tours/skala-sykaminias-hidden-countryside-lesvos`,
+    },
     // {
     //     title: "Food & Culture Experience",
     //     duration: "5 hours",
