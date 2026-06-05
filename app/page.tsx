@@ -117,10 +117,10 @@ export default function Home() {
         <Section title="Top restaurants" href="/food#cafeTaverns">
           <div className="flex lg:hidden" style={{ flexDirection: "column" }}>
             {[
-              { num: "01", name: "To Limanaki ton Pamfilon", sub: "Delicious dishes · Skala Pamfilon", tag: "Restaurant", img: "/limanaki/limanaki_pamf.jpg", href: "/food/limanaki_pamfilon" },
-              { num: "02", name: "Tropicana - Platanos", sub: "Beautiful hospitality · Vafios", tag: "Restaurant", img: "/tropicana/tropicana1.jpg", href: "/food/tropicana" },
-              { num: "03", name: "Tryfon", sub: "Locan dishes · Kalloni", tag: "Tavern", img: "/tryfon/tryfon6.jpg", href: "/food/tryfon" },
-              { num: "04", name: "Nisi Restaurant", sub: "Restaurant · Molyvos", tag: "Restaurant", img: "/nisi/nisi_logo.png", href: "/food/nisi-restaurant" }
+              { num: "01", name: "To Limanaki ton Pamfilon", sub: "Delicious dishes · Skala Pamfilon", tag: "Restaurant", img: "/limanaki/limanaki_pamf.jpg", href: "/food-drinks/limanaki_pamfilon" },
+              { num: "02", name: "Tropicana - Platanos", sub: "Beautiful hospitality · Vafios", tag: "Restaurant", img: "/tropicana/tropicana1.jpg", href: "/food-drinks/tropicana" },
+              { num: "03", name: "Tryfon", sub: "Locan dishes · Kalloni", tag: "Tavern", img: "/tryfon/tryfon6.jpg", href: "/food-drinks/tryfon" },
+              { num: "04", name: "Nisi Restaurant", sub: "Restaurant · Molyvos", tag: "Restaurant", img: "/nisi/nisi_logo.png", href: "/food-drinks/nisi-restaurant" }
             ].map((p, i, arr) => (
                 <MobileListItem key={p.name} {...p} last={i === arr.length - 1} />
             ))}
@@ -133,10 +133,10 @@ export default function Home() {
                 }}
             >
             {[
-              { num: "01", name: "To Limanaki ton Pamfilon", sub: "Delicious dishes · Skala Pamfilon", tag: "Restaurant", img: "/limanaki/limanaki_pamf.jpg", href: "/food/limanaki_pamfilon" },
-              { num: "02", name: "Tropicana - Platanos", sub: "Beautiful hospitality · Molivos", tag: "Restaurant", img: "/tropicana/tropicana1.jpg", href: "/food/tropicana" },
-              { num: "03", name: "Tryfon", sub: "Locan dishes · Kalloni", tag: "Tavern", img: "/tryfon/tryfon6.jpg", href: "/food/tryfon" },
-              { num: "04", name: "Nisi Restaurant", sub: "Restaurant · Molyvos", tag: "Restaurant", img: "/nisi/nisi_logo.png", href: "/food/nisi-restaurant" },
+              { num: "01", name: "To Limanaki ton Pamfilon", sub: "Delicious dishes · Skala Pamfilon", tag: "Restaurant", img: "/limanaki/limanaki_pamf.jpg", href: "/food-drinks/limanaki_pamfilon" },
+              { num: "02", name: "Tropicana - Platanos", sub: "Beautiful hospitality · Molivos", tag: "Restaurant", img: "/tropicana/tropicana1.jpg", href: "/food-drinks/tropicana" },
+              { num: "03", name: "Tryfon", sub: "Locan dishes · Kalloni", tag: "Tavern", img: "/tryfon/tryfon6.jpg", href: "/food-drinks/tryfon" },
+              { num: "04", name: "Nisi Restaurant", sub: "Restaurant · Molyvos", tag: "Restaurant", img: "/nisi/nisi_logo.png", href: "/food-drinks/nisi-restaurant" },
             ].map((p) => <DesktopCard key={p.name} {...p} />)}
           </div>
         </Section>

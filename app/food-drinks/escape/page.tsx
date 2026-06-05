@@ -1,362 +1,331 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import {
-    MapPin,
-    Phone,
-    Clock,
-    Wallet,
-    Users,
-    ChevronLeft,
-    ChevronRight,
-    X,
-} from "lucide-react";
+import { motion } from "framer-motion";
+import { MapPin, Clock3, CakeSlice, Euro, Star } from "lucide-react";
 
-
-const HERO = "/escape/escape4.jpeg";
-
-const GALLERY = [
-    { type: "image", src: "/escape/escape1.jpg" },
-    { type: "image", src: "/escape/escape2.jpeg" },
-    { type: "image", src: "/escape/escape3.jpeg" },
-    { type: "image", src: "/escape/escape5.jpeg" },
-    { type: "image", src: "/escape/escape6.jpeg" },
-    { type: "image", src: "/escape/escape7.jpeg" },
-    { type: "image", src: "/escape/escape9.jpeg" },
-    { type: "image", src: "/escape/escape8.jpeg" },
-    { type: "image", src: "/escape/escape10.jpeg" },
-    { type: "image", src: "/escape/escape11.jpeg" },
-
-];
-
-
-const NEARBY = [
-    { label: "Panagia of Agiasos Holy Pilgrimage", emoji: "" },
-    { label: "Polixnitos", emoji: "" },
-    { label: "Vatera", emoji: "" },
-];
-
-const INFO = [
-    { Icon: MapPin, label: "Location", value: "Agiasos 81101" },
-    { Icon: Phone, label: "Phone", value: "2252022710 / +30 6970278574" },
-    { Icon: Clock, label: "Hours", value: "Daily" },
-    { Icon: Wallet, label: "Price", value: "1 - 5 €" },
-    { Icon: Users, label: "Instagram", value: "Escape_espresso_bar" },
-    { Icon: Users, label: "Facebook", value: "Escape_espresso_bar" },
-    { Icon: Users, label: "Best for", value: "Couples, friends, families, sunset drinks" },
-];
-
-export default function CocktailBarPage() {
-    const [index, setIndex] = useState(0);
-    const [isOpen, setIsOpen] = useState(false);
-    const [isHovered, setIsHovered] = useState(false);
-    const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
-
-    const next = () => setIndex((p) => (p + 1) % GALLERY.length);
-    const prev = () => setIndex((p) => (p - 1 + GALLERY.length) % GALLERY.length);
-
-    // useEffect(() => {
-    //   if (isHovered || isOpen) return;
-    //
-    //   const id = setInterval(next, 4500);
-    //   return () => clearInterval(id);
-    // }, [isHovered, isOpen]);
-
-    useEffect(() => {
-        videoRefs.current.forEach((video, i) => {
-            if (!video) return;
-
-            if (i === index && !isOpen) {
-                video.play().catch(() => {});
-            } else {
-                video.pause();
-                video.currentTime = 0;
-            }
-        });
-    }, [index, isOpen]);
-
+export default function DessertShopGuidePage() {
     return (
-        <main
-            className="min-h-screen text-stone-900"
-            style={{
-                backgroundColor: "#fbf8f3",
-                fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif",
-            }}
-        >
-            <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
-        .font-display { font-family: 'Fraunces', Georgia, serif; letter-spacing: -0.02em; }
-        .gradient-warm { background: linear-gradient(135deg, #b85c3a, #e0a052); }
-        .gradient-hero { background: linear-gradient(180deg, transparent 0%, rgba(20,15,10,.3) 50%, rgba(20,15,10,.85) 100%); }
-        .shadow-soft { box-shadow: 0 10px 40px -15px rgba(60,40,30,.25); }
-        .shadow-elevated { box-shadow: 0 20px 60px -20px rgba(60,40,30,.35); }
-      `}</style>
+        <main className="bg-gradient-to-b from-white via-sky-50 to-cyan-100 text-slate-800 overflow-hidden scroll-smooth relative">
+            {/* Animated Background Blobs */}
+            <motion.div
+                animate={{
+                    x: [0, 40, 0],
+                    y: [0, -30, 0],
+                }}
+                transition={{
+                    duration: 10,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                }}
+                className="absolute top-10 sm:top-20 left-0 sm:left-10 w-52 h-52 sm:w-72 sm:h-72 bg-cyan-300/30 blur-3xl rounded-full"
+            />
 
+            <motion.div
+                animate={{
+                    x: [0, -50, 0],
+                    y: [0, 40, 0],
+                }}
+                transition={{
+                    duration: 14,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                }}
+                className="absolute bottom-10 sm:bottom-20 right-0 sm:right-10 w-64 h-64 sm:w-96 sm:h-96 bg-orange-200/30 blur-3xl rounded-full"
+            />
             {/* HERO */}
-            <section className="relative h-[80vh] min-h-[520px] w-full overflow-hidden">
-                <img
-                    src={HERO}
-                    alt=""
-                    className="absolute inset-0 h-full w-full object-cover"
-                />
-                <div className="absolute inset-0 gradient-hero" />
+            <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 py-24 sm:py-0">
+                <div className="absolute inset-0 overflow-hidden">
+                    <motion.img
+                        initial={{ scale: 1.2, opacity: 0 }}
+                        animate={{ scale: 1, opacity: 1 }}
+                        transition={{ duration: 1.8, ease: "easeOut" }}
+                        src="/escape/escape4.jpeg"
+                        alt="cafe"
+                        className="w-full h-full object-cover"
+                    />
 
-                <div className="absolute inset-x-0 bottom-0 z-10 px-6 pb-16 sm:px-10 sm:pb-20">
-                    <div className="mx-auto max-w-6xl">
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] text-white backdrop-blur-md">
-              <span
-                  className="h-1.5 w-1.5 rounded-full"
-                  style={{ background: "#e0a052" }}
-              />
-              Southeast Lesvos · Espresso Bar
+                    <div className="absolute inset-0 bg-gradient-to-b from-sky-300/40 via-cyan-200/30 to-white/95" />
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.15),transparent_40%)]" />
+                </div>
+
+                <motion.div
+                    initial={{ opacity: 0, y: 80 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1 }}
+                    className="relative z-10 max-w-6xl text-center px-2 sm:px-0"
+                >
+                    <motion.h1
+                        initial={{ opacity: 0, y: 40 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.4, duration: 1 }}
+                        className="text-5xl sm:text-6xl md:text-8xl font-black leading-none mb-6 sm:mb-8 px-2"
+                    >
+                        Escape Espresso Bar
+                        <span className="block bg-gradient-to-r from-cyan-500 via-sky-400 to-orange-300 bg-clip-text text-transparent">
+
             </span>
+                    </motion.h1>
 
-                        <h1 className="font-display mt-5 max-w-3xl text-4xl font-semibold leading-[1.05] text-white sm:text-6xl lg:text-7xl">
-                            Escape Espresso Bar
-                        </h1>
+                    <motion.p
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.2, duration: 0.4 }}
+                        className="max-w-3xl mx-auto text-base sm:text-lg md:text-2xl text-slate-900 leading-relaxed mb-10 sm:mb-12 px-2"
+                    >
+                        A premium dessert destination in the port of Molyvos with pancakes, waffles and crepes for
+                        travelers looking for something really unique.
+                    </motion.p>
 
-                        <p className="mt-4 max-w-xl text-base text-white/80 sm:text-lg">
-                            A fantastic place to drink your juica and your coffe with the view the mountain of Agiasos
-                        </p>
-                    </div>
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 1, duration: 0.8 }}
+                        className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 sm:gap-5 w-full sm:w-auto px-4"
+                    >
+                    </motion.div>
+                </motion.div>
+            </section>
+
+            {/* GLASS INFO CARDS */}
+            <section className="relative z-20 -mt-10 sm:-mt-24 px-4 sm:px-6 pb-20 sm:pb-28">
+                <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+                    {[
+                        {
+                            icon: <MapPin className="w-7 h-7" />,
+                            title: "Location",
+                            value: "In port of Molyvos",
+                        },
+                        {
+                            icon: <Clock3 className="w-7 h-7" />,
+                            title: "Open Daily",
+                            value: "17:00 — 23:00",
+                        },
+                        {
+                            icon: <CakeSlice className="w-7 h-7" />,
+                            title: "Signature",
+                            value: "Pancakes & Wafles",
+                        },
+                        {
+                            icon: <Euro className="w-7 h-7" />,
+                            title: "Average",
+                            value: "€5 — €10",
+                        },
+                    ].map((item, i) => (
+                        <motion.div
+                            key={i}
+                            initial={{ opacity: 0, y: 40 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ delay: i * 0.1, duration: 0.7 }}
+                            viewport={{ once: true }}
+                            whileHover={{ y: -12, scale: 1.03 }}
+                            className="backdrop-blur-2xl bg-white/70 border border-cyan-100 rounded-[28px] sm:rounded-[32px] p-5 sm:p-8 shadow-2xl"
+                        >
+                            <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br from-cyan-400 to-orange-300 text-black flex items-center justify-center mb-4 sm:mb-6 shadow-xl">
+                                {item.icon}
+                            </div>
+
+                            <p className="text-slate-600 text-sm uppercase tracking-widest mb-2">
+                                {item.title}
+                            </p>
+
+                            <h3 className="text-xl sm:text-2xl font-bold text-slate-800">
+                                {item.value}
+                            </h3>
+                        </motion.div>
+                    ))}
                 </div>
             </section>
 
-            {/* CONTENT */}
-            <section className="mx-auto grid max-w-6xl grid-cols-1 gap-12 px-6 py-16 sm:px-10 sm:py-24 lg:grid-cols-3 lg:gap-16">
-                {/* MAIN */}
-                <div className="space-y-16 lg:col-span-2">
-                    <div id="about">
-                        <p
-                            className="text-xs font-semibold uppercase tracking-[0.25em]"
-                            style={{ color: "#b85c3a" }}
-                        >
-                            About the Place
-                        </p>
+            {/* STORY SECTION */}
+            <section className="max-w-6xl mx-auto px-4 sm:px-6 py-20 sm:py-32">
+                <motion.div
+                    animate={{
+                        backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+                    }}
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{
+                        backgroundPosition: {
+                            duration: 12,
+                            repeat: Infinity,
+                            ease: "linear",
+                        },
+                        opacity: {
+                            duration: 0.8,
+                        },
+                        y: {
+                            duration: 0.8,
+                        },
+                    }}
+                    viewport={{ once: true }}
+                    className="text-center mb-20"
+                >
+          <span className="text-cyan-500 uppercase tracking-[0.3em] text-sm font-bold">
+            About The Place
+          </span>
 
-                        <p className="mt-5 text-lg leading-relaxed text-stone-600">
+                    <h2 className="text-4xl sm:text-5xl md:text-7xl font-black mt-6 mb-6 sm:mb-8 leading-tight">
+                        A Dessert Experience
+                        <span className="block text-slate-500">Beyond Taste</span>
+                    </h2>
+
+                    <p className="max-w-4xl mx-auto text-base sm:text-lg md:text-xl text-slate-900 font-medium leading-relaxed px-2">
+                        <p>
                             Nestled in the heart of Agiasos, just above Stavri, Escape Espresso Bar is the perfect destination for coffee, relaxation, and great company.
                         </p>
-
-                        <p className="mt-4 text-lg leading-relaxed text-stone-600">
+                        <p>
                             A warm and contemporary venue where premium coffee, refreshing beverages,
                             and expertly crafted cocktails come together to create the perfect experience at any time of day.
                             Start your morning with the rich aroma of freshly brewed espresso, or unwind in the evening with friends,
                             great music, and your favorite drink.
                         </p>
-                        <p className="mt-5 text-lg leading-relaxed text-stone-600">
+                        <p>
                             With its welcoming atmosphere, friendly service, and beautiful views
                             of the surrounding area, Escape Espresso Bar offers a place to step away
                             from the everyday and enjoy the moment.
                         </p>
-                        <p className="mt-5 text-lg leading-relaxed text-stone-600">
+                        <p>
                             We look forward to welcoming you and sharing the Escape experience.
                         </p>
-                    </div>
+                    </p>
+                </motion.div>
 
-                    {/* GALLERY */}
-                    <div id="gallery">
-                        <p
-                            className="text-xs font-semibold uppercase tracking-[0.25em]"
-                            style={{ color: "#b85c3a" }}
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6">
+                    {[
+                        "/escape/escape1.jpg",
+                    ].map((img, i) => (
+                        <motion.div
+                            key={i}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ delay: i * 0.15, duration: 0.7 }}
+                            viewport={{ once: true }}
+                            whileHover={{ scale: 1.03, rotate: 1 }}
+                            className="overflow-hidden rounded-[32px]"
                         >
-                            Atmosphere
-                        </p>
-
-                        <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
-                            A look from there
-                        </h2>
-
-                        {/* MAIN SLIDER */}
-                        <div
-                            className="group relative mt-8 aspect-[16/10] w-full cursor-zoom-in overflow-hidden rounded-3xl shadow-lg"
-                            onClick={() => setIsOpen(true)}
-                        >
-                            {GALLERY.map((item, i) => (
-                                <img
-                                    key={item.src}
-                                    src={item.src}
-                                    alt=""
-                                    className={`absolute inset-0 h-full w-full object-cover transition-all duration-700 ${
-                                        i === index
-                                            ? "opacity-100 scale-100"
-                                            : "opacity-0 scale-105"
-                                    }`}
-                                />
-                            ))}
-
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-
-                            <button
-                                onClick={(e) => {
-                                    e.stopPropagation();
-                                    prev();
-                                }}
-                                aria-label="Previous slide"
-                                className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-white/90 p-2 opacity-0 transition-opacity group-hover:opacity-100"
-                            >
-                                <ChevronLeft />
-                            </button>
-
-                            <button
-                                onClick={(e) => {
-                                    e.stopPropagation();
-                                    next();
-                                }}
-                                aria-label="Next slide"
-                                className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-white/90 p-2 opacity-0 transition-opacity group-hover:opacity-100"
-                            >
-                                <ChevronRight />
-                            </button>
-
-                            <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2">
-                                {GALLERY.map((_, i) => (
-                                    <button
-                                        key={i}
-                                        onClick={(e) => {
-                                            e.stopPropagation();
-                                            setIndex(i);
-                                        }}
-                                        className={`h-2 rounded-full bg-white transition-all ${
-                                            i === index ? "w-6" : "w-2 opacity-50"
-                                        }`}
-                                    />
-                                ))}
-                            </div>
-                        </div>
-
-                        {/* THUMBNAILS */}
-                        <div className="mt-4 grid grid-cols-4 gap-3">
-                            {GALLERY.map((item, i) => (
-                                <button
-                                    key={item.src}
-                                    onClick={() => setIndex(i)}
-                                    className={`relative aspect-[4/3] overflow-hidden rounded-xl ${
-                                        i === index
-                                            ? "ring-2 ring-offset-2"
-                                            : "opacity-70 hover:opacity-100"
-                                    }`}
-                                >
-                                    <img
-                                        src={item.src}
-                                        alt=""
-                                        className="h-full w-full object-cover"
-                                    />
-                                </button>
-                            ))}
-                        </div>
-                    </div>
+                            <img
+                                src={img}
+                                alt="Dessert Gallery"
+                                className="h-[320px] sm:h-[420px] w-full object-cover hover:scale-110 transition-transform duration-700"
+                            />
+                        </motion.div>
+                    ))}
                 </div>
-
-                {/* SIDEBAR */}
-                <aside id="visit" className="space-y-6 lg:sticky lg:top-8 lg:self-start">
-                    <div className="overflow-hidden rounded-3xl border border-stone-200 bg-white shadow-soft">
-                        <div className="gradient-warm px-6 py-5 text-white">
-                            <h3 className="font-display text-2xl font-semibold">
-                                Plan your visit
-                            </h3>
-                            <p className="mt-1 text-sm text-white/85">
-                                Reservations recommended on weekends.
-                            </p>
-                        </div>
-
-                        <ul className="divide-y divide-stone-200">
-                            {INFO.map(({ Icon, label, value }) => (
-                                <li key={label} className="flex items-start gap-4 px-6 py-4">
-                                    <div
-                                        className="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-stone-100"
-                                        style={{ color: "#b85c3a" }}
-                                    >
-                                        <Icon className="h-4 w-4" />
-                                    </div>
-
-                                    <div>
-                                        <p className="text-xs uppercase tracking-wider text-stone-500">
-                                            {label}
-                                        </p>
-                                        <p className="text-sm font-medium text-stone-900">{value}</p>
-                                    </div>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-
-                    <div className="overflow-hidden rounded-3xl border border-stone-200 bg-white shadow-soft">
-                        <iframe
-                            title="Map of Azul Paraiso"
-                            src=""
-                            className="h-56 w-full border-0"
-                            loading="lazy"
-                        />
-                    </div>
-
-                    <div className="rounded-3xl border border-stone-200 bg-white p-6 shadow-soft">
-                        <h3 className="font-display text-xl font-semibold">Nearby</h3>
-
-                        <ul className="mt-4 space-y-3 text-sm">
-                            {NEARBY.map((n) => (
-                                <li key={n.label}>
-                                    <a
-                                        href="#"
-                                        className="flex items-center justify-between rounded-xl px-3 py-2 transition-colors hover:bg-stone-100"
-                                    >
-                    <span className="flex items-center gap-3">
-                      <span className="text-lg">{n.emoji}</span>
-                      <span className="font-medium">{n.label}</span>
-                    </span>
-                                        <ChevronRight className="h-4 w-4 text-stone-500" />
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                </aside>
             </section>
 
-            {/* MODAL */}
-            {isOpen && (
-                <div
-                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 p-4 backdrop-blur-sm"
-                    onClick={() => setIsOpen(false)}
-                >
-                    <button
-                        onClick={(e) => {
-                            e.stopPropagation();
-                            setIsOpen(false);
-                        }}
-                        className="absolute right-6 top-6 rounded-full bg-white/10 p-2 text-white hover:bg-white/20"
+            {/* FEATURE SECTION */}
+            <section className="max-w-7xl mx-auto px-6 pb-32">
+                <div className="grid lg:grid-cols-2 gap-10 sm:gap-16 items-center">
+                    <motion.div
+                        initial={{ opacity: 0, x: -60 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.9 }}
+                        viewport={{ once: true }}
+                        className="relative"
                     >
-                        <X className="h-5 w-5" />
-                    </button>
+                        <img
+                            src="/escape/escape11.jpeg"
+                            alt="Dessert"
+                            className="rounded-[32px] sm:rounded-[40px] h-[420px] sm:h-[700px] w-full object-cover shadow-[0_40px_120px_rgba(0,0,0,0.6)]"
+                        />
 
-                    <button
-                        onClick={(e) => {
-                            e.stopPropagation();
-                            prev();
-                        }}
-                        className="absolute left-6 top-1/2 -translate-y-1/2 rounded-full bg-white/10 p-3 text-white hover:bg-white/20"
+                        <div className="absolute bottom-4 right-4 sm:-bottom-10 sm:-right-10 bg-gradient-to-r from-cyan-400 to-orange-300 rounded-[24px] sm:rounded-[30px] p-5 sm:p-8 shadow-2xl max-w-[220px] sm:max-w-xs">
+                            <p className="text-sm uppercase tracking-[0.2em] text-slate-800 font-semibold mb-2">
+                                Grandmother guice
+                            </p>
+                        </div>
+                    </motion.div>
+
+                    <motion.div
+                        initial={{ opacity: 0, x: 60 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.9 }}
+                        viewport={{ once: true }}
                     >
-                        <ChevronLeft className="h-6 w-6" />
-                    </button>
+            <span className="text-cyan-500 uppercase tracking-[0.3em] text-sm font-bold">
+              Premium Experience
+            </span>
 
-                    <img
-                        src={GALLERY[index].src}
-                        alt="Gallery fullscreen"
-                        className="max-h-[85vh] max-w-[90vw] object-contain"
-                        onClick={(e) => e.stopPropagation()}
-                    />
+                        <h2 className="text-4xl sm:text-5xl md:text-7xl font-black leading-tight mt-5 mb-6 sm:mb-8">
+                            Dessert Meets
+                            <span className="block text-slate-500">Luxury.</span>
+                        </h2>
 
-                    <button
-                        onClick={(e) => {
-                            e.stopPropagation();
-                            next();
-                        }}
-                        className="absolute right-6 top-1/2 -translate-y-1/2 rounded-full bg-white/10 p-3 text-white hover:bg-white/20"
-                    >
-                        <ChevronRight className="h-6 w-6" />
-                    </button>
+                        <p className="text-slate-900 text-base sm:text-lg md:text-xl leading-relaxed mb-8 sm:mb-10">
+                            In the picturesque village of Agiasos, Lesvos, Escape offers a unique tasting experience with view the mountain of Agiasos
+
+                        </p>
+
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+                            {[
+                                "Artisan Desserts",
+                                "Tourist Favorite",
+                            ].map((item, i) => (
+                                <motion.div
+                                    key={i}
+                                    whileHover={{ scale: 1.05 }}
+                                    className="rounded-2xl border border-cyan-100 bg-white/80 backdrop-blur-xl px-6 py-5 text-lg font-medium text-slate-800"
+                                >
+                                    {item}
+                                </motion.div>
+                            ))}
+                        </div>
+                    </motion.div>
                 </div>
-            )}
+            </section>
+
+            {/* FULL GALLERY */}
+            <section className="px-4 sm:px-6 pb-20 sm:pb-32">
+                <div className="max-w-7xl mx-auto">
+                    <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 sm:mb-14 gap-5 sm:gap-6">
+                        <div>
+              <span className="text-cyan-500 uppercase tracking-[0.3em] text-sm font-bold">
+                Photo Gallery
+              </span>
+
+                            <h2 className="text-3xl sm:text-5xl font-black mt-3 sm:mt-4 leading-tight">
+                                More Photos
+                            </h2>
+                        </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-5 auto-rows-[220px] sm:auto-rows-[250px]">
+                        {[
+                            "/escape/escape2.jpeg",
+                            "/escape/escape3.jpeg",
+                            "/escape/escape4.jpeg",
+                            "/escape/escape12.jpeg",
+                            "/escape/escape5.jpeg",
+                            "/escape/escape6.jpeg",
+                            "/escape/escape7.jpeg",
+                            "/escape/escape8.jpeg",
+                            "/escape/escape9.jpeg",
+                            "/escape/petite10.jpeg",
+
+                        ].map((img, i) => (
+                            <motion.div
+                                key={i}
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                transition={{ delay: i * 0.08, duration: 0.5 }}
+                                viewport={{ once: true }}
+                                whileHover={{ scale: 1.04, y: -8 }}
+                                className={`overflow-hidden rounded-[28px] group relative ${
+                                    i === 0 || i === 3 ? "md:col-span-2 md:row-span-2" : ""
+                                }`}
+                            >
+                                <img
+                                    src={img}
+                                    alt="Gallery"
+                                    className="w-full h-full object-cover group-hover:scale-110 group-hover:rotate-1 transition-transform duration-700"
+                                />
+
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </section>
         </main>
     );
 }
