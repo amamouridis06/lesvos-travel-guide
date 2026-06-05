@@ -9,8 +9,6 @@ import {
     Users,
     ChevronLeft,
     ChevronRight,
-    Instagram,
-    Facebook,
     X,
 } from "lucide-react";
 
@@ -43,8 +41,8 @@ const INFO = [
     { Icon: Phone, label: "Phone", value: "2252022710 / +30 6970278574" },
     { Icon: Clock, label: "Hours", value: "Daily" },
     { Icon: Wallet, label: "Price", value: "1 - 5 €" },
-    { Icon: Instagram, label: "Instagram", value: "Escape_espresso_bar" },
-    { Icon: Facebook, label: "Facebook", value: "Escape_espresso_bar" },
+    { Icon: Users, label: "Instagram", value: "Escape_espresso_bar" },
+    { Icon: Users, label: "Facebook", value: "Escape_espresso_bar" },
     { Icon: Users, label: "Best for", value: "Couples, friends, families, sunset drinks" },
 ];
 
