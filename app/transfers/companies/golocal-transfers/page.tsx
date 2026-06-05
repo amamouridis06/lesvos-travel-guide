@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+"use client";
+
+import { useState, type CSSProperties, type FormEvent } from "react";
 
 /**
  * TransfersAndToursCompany.tsx
@@ -97,11 +99,14 @@ export default function TransfersAndToursCompany() {
     const [form, setForm] = useState<BookingForm>(initialForm);
     const [submitted, setSubmitted] = useState(false);
 
-    const updateField = <K extends keyof BookingForm>(field: K, value: BookingForm[K]) => {
+    const updateField = <K extends keyof BookingForm,>(
+        field: K,
+        value: BookingForm[K]
+    ) => {
         setForm((current) => ({ ...current, [field]: value }));
     };
 
-    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         setSubmitted(true);
 
@@ -115,9 +120,15 @@ export default function TransfersAndToursCompany() {
                 <nav style={styles.navbar}>
                     <div style={styles.logo}>Aegean Transfers & Tours</div>
                     <div style={styles.navLinks}>
-                        <a href="#services" style={styles.navLink}>Services</a>
-                        <a href="#tours" style={styles.navLink}>Tours</a>
-                        <a href="#booking" style={styles.navLink}>Booking</a>
+                        <a href="#services" style={styles.navLink}>
+                            Services
+                        </a>
+                        <a href="#tours" style={styles.navLink}>
+                            Tours
+                        </a>
+                        <a href="#booking" style={styles.navLink}>
+                            Booking
+                        </a>
                     </div>
                 </nav>
 
@@ -125,12 +136,16 @@ export default function TransfersAndToursCompany() {
                     <p style={styles.eyebrow}>Private Transfers • Tours • Excursions</p>
                     <h1 style={styles.title}>Premium transfers and tailor-made tours</h1>
                     <p style={styles.subtitle}>
-                        Αξιόπιστες μεταφορές και ιδιωτικές εκδρομές με επαγγελματίες οδηγούς,
-                        άνετα οχήματα και εξυπηρέτηση υψηλού επιπέδου.
+                        Αξιόπιστες μεταφορές και ιδιωτικές εκδρομές με επαγγελματίες
+                        οδηγούς, άνετα οχήματα και εξυπηρέτηση υψηλού επιπέδου.
                     </p>
                     <div style={styles.heroActions}>
-                        <a href="#booking" style={styles.primaryButton}>Request a Booking</a>
-                        <a href="#services" style={styles.secondaryButton}>View Services</a>
+                        <a href="#booking" style={styles.primaryButton}>
+                            Request a Booking
+                        </a>
+                        <a href="#services" style={styles.secondaryButton}>
+                            View Services
+                        </a>
                     </div>
                 </div>
             </section>
@@ -138,6 +153,7 @@ export default function TransfersAndToursCompany() {
             <section id="services" style={styles.section}>
                 <p style={styles.sectionLabel}>What we offer</p>
                 <h2 style={styles.sectionTitle}>Transfers and travel experiences</h2>
+
                 <div style={styles.cardGrid}>
                     {services.map((service) => (
                         <article key={service.title} style={styles.card}>
@@ -167,6 +183,7 @@ export default function TransfersAndToursCompany() {
             <section id="tours" style={styles.sectionAlt}>
                 <p style={styles.sectionLabel}>Popular tours</p>
                 <h2 style={styles.sectionTitle}>Explore more with a local driver</h2>
+
                 <div style={styles.tourList}>
                     {tours.map((tour) => (
                         <article key={tour.title} style={styles.tourCard}>
@@ -188,9 +205,10 @@ export default function TransfersAndToursCompany() {
                     <p style={styles.sectionLabel}>Booking request</p>
                     <h2 style={styles.sectionTitle}>Plan your transfer or tour</h2>
                     <p style={styles.cardText}>
-                        Συμπληρώστε τα στοιχεία σας και η ομάδα μας θα επικοινωνήσει μαζί σας
-                        για επιβεβαίωση διαθεσιμότητας και τελικής τιμής.
+                        Συμπληρώστε τα στοιχεία σας και η ομάδα μας θα επικοινωνήσει μαζί
+                        σας για επιβεβαίωση διαθεσιμότητας και τελικής τιμής.
                     </p>
+
                     <ul style={styles.checkList}>
                         <li>✔ Επαγγελματίες οδηγοί</li>
                         <li>✔ Καθαρά και άνετα οχήματα</li>
@@ -205,11 +223,14 @@ export default function TransfersAndToursCompany() {
                             <input
                                 required
                                 value={form.fullName}
-                                onChange={(event) => updateField("fullName", event.target.value)}
+                                onChange={(event) =>
+                                    updateField("fullName", event.target.value)
+                                }
                                 style={styles.input}
                                 placeholder="Your name"
                             />
                         </label>
+
                         <label style={styles.label}>
                             Email
                             <input
@@ -234,11 +255,17 @@ export default function TransfersAndToursCompany() {
                                 placeholder="+30 690 000 0000"
                             />
                         </label>
+
                         <label style={styles.label}>
                             Service type
                             <select
                                 value={form.serviceType}
-                                onChange={(event) => updateField("serviceType", event.target.value as BookingForm["serviceType"])}
+                                onChange={(event) =>
+                                    updateField(
+                                        "serviceType",
+                                        event.target.value as BookingForm["serviceType"]
+                                    )
+                                }
                                 style={styles.input}
                             >
                                 <option value="transfer">Transfer</option>
@@ -252,7 +279,9 @@ export default function TransfersAndToursCompany() {
                         <input
                             required
                             value={form.pickupLocation}
-                            onChange={(event) => updateField("pickupLocation", event.target.value)}
+                            onChange={(event) =>
+                                updateField("pickupLocation", event.target.value)
+                            }
                             style={styles.input}
                             placeholder="Airport, hotel, port, address"
                         />
@@ -263,7 +292,9 @@ export default function TransfersAndToursCompany() {
                         <input
                             required
                             value={form.destination}
-                            onChange={(event) => updateField("destination", event.target.value)}
+                            onChange={(event) =>
+                                updateField("destination", event.target.value)
+                            }
                             style={styles.input}
                             placeholder="Destination or tour name"
                         />
@@ -280,6 +311,7 @@ export default function TransfersAndToursCompany() {
                                 style={styles.input}
                             />
                         </label>
+
                         <label style={styles.label}>
                             Passengers
                             <input
@@ -287,7 +319,9 @@ export default function TransfersAndToursCompany() {
                                 min="1"
                                 type="number"
                                 value={form.passengers}
-                                onChange={(event) => updateField("passengers", event.target.value)}
+                                onChange={(event) =>
+                                    updateField("passengers", event.target.value)
+                                }
                                 style={styles.input}
                             />
                         </label>
@@ -298,16 +332,23 @@ export default function TransfersAndToursCompany() {
                         <textarea
                             value={form.message}
                             onChange={(event) => updateField("message", event.target.value)}
-                            style={{ ...styles.input, minHeight: 110, resize: "vertical" }}
+                            style={{
+                                ...styles.input,
+                                minHeight: 110,
+                                resize: "vertical",
+                            }}
                             placeholder="Tell us any special request, arrival time, flight number, or preferred stops."
                         />
                     </label>
 
-                    <button type="submit" style={styles.submitButton}>Send Request</button>
+                    <button type="submit" style={styles.submitButton}>
+                        Send Request
+                    </button>
 
                     {submitted && (
                         <p style={styles.successMessage}>
-                            Ευχαριστούμε! Το αίτημά σας καταχωρήθηκε τοπικά. Συνδέστε τη φόρμα με API ή email service για αποστολή.
+                            Ευχαριστούμε! Το αίτημά σας καταχωρήθηκε τοπικά. Συνδέστε τη
+                            φόρμα με API ή email service για αποστολή.
                         </p>
                     )}
                 </form>
@@ -316,7 +357,7 @@ export default function TransfersAndToursCompany() {
     );
 }
 
-const styles: Record<string, React.CSSProperties> = {
+const styles: Record<string, CSSProperties> = {
     page: {
         margin: 0,
         minHeight: "100vh",
