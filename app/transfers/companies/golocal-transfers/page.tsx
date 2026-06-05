@@ -1,12 +1,6 @@
 "use client";
 
-import {
-    useEffect,
-    useMemo,
-    useState,
-    type CSSProperties,
-    type FormEvent,
-} from "react";
+import { useEffect, useMemo, useState, type CSSProperties } from "react";
 
 type Service = {
     title: string;
@@ -28,20 +22,20 @@ type FleetItem = {
     image: string;
 };
 
-type BookingForm = {
-    fullName: string;
-    email: string;
-    phone: string;
-    serviceType: "airport-transfer" | "private-transfer" | "private-tour";
-    pickupLocation: string;
-    destination: string;
-    date: string;
-    time: string;
-    passengers: string;
-    message: string;
-};
-
 type Breakpoint = "mobile" | "tablet" | "desktop";
+
+const company = {
+    name: "AegeanWay",
+    tagline: "Private Transfers & Curated Tours",
+    phone: "+30 690 000 0000",
+    whatsapp: "+30 690 000 0000",
+    email: "info@aegeanway.gr",
+    location: "Greece",
+    instagram: "@aegeanway",
+    // Replace this with your real logo image path.
+    // Example for Next.js public folder: "/logo.png"
+    logoSrc: "/logo.png",
+};
 
 const services: Service[] = [
     {
@@ -108,19 +102,6 @@ const fleet: FleetItem[] = [
     },
 ];
 
-const initialForm: BookingForm = {
-    fullName: "",
-    email: "",
-    phone: "",
-    serviceType: "airport-transfer",
-    pickupLocation: "",
-    destination: "",
-    date: "",
-    time: "",
-    passengers: "1",
-    message: "",
-};
-
 function useBreakpoint(): Breakpoint {
     const [breakpoint, setBreakpoint] = useState<Breakpoint>("desktop");
 
@@ -146,38 +127,21 @@ function useBreakpoint(): Breakpoint {
     return breakpoint;
 }
 
-export default function TransfersAndToursCompanyPremiumResponsive() {
+export default function TransfersAndToursCompanyContactLogo() {
     const breakpoint = useBreakpoint();
     const isMobile = breakpoint === "mobile";
-    const isTablet = breakpoint === "tablet";
     const styles = useMemo(() => createStyles(breakpoint), [breakpoint]);
-
-    const [form, setForm] = useState<BookingForm>(initialForm);
-    const [submitted, setSubmitted] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-    const updateField = <K extends keyof BookingForm,>(
-        field: K,
-        value: BookingForm[K]
-    ) => {
-        setForm((current) => ({ ...current, [field]: value }));
-    };
-
     const closeMobileMenu = () => setMobileMenuOpen(false);
-
-    const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
-        setSubmitted(true);
-        console.log("Booking request:", form);
-    };
 
     return (
         <main style={styles.page}>
             <section style={styles.hero}>
                 <nav style={styles.navbar}>
                     <a href="#home" style={styles.brand} onClick={closeMobileMenu}>
-                        <span style={styles.brandMark}>A</span>
-                        <span>
+                        <img src={company.logoSrc} alt={`${company.name} logo`} style={styles.logoImage} />
+                        <span style={styles.brandText}>
               Aegean<span style={styles.brandAccent}>Way</span>
             </span>
                     </a>
@@ -205,19 +169,18 @@ export default function TransfersAndToursCompanyPremiumResponsive() {
 
                 <div id="home" style={styles.heroGrid}>
                     <div style={styles.heroText}>
-                        <p style={styles.eyebrow}>Private transfers & curated tours</p>
+                        <p style={styles.eyebrow}>{company.tagline}</p>
                         <h1 style={styles.heroTitle}>Travel in comfort. Discover more.</h1>
                         <p style={styles.heroSubtitle}>
-                            Premium airport transfers, private chauffeur services and
-                            tailor-made tours with professional local drivers.
+                            Premium airport transfers, private chauffeur services and tailor-made tours with professional local drivers.
                         </p>
 
                         <div style={styles.heroActions}>
-                            <a href="#booking" style={styles.primaryButton}>
-                                Request a Quote
+                            <a href={`tel:${company.phone.replace(/\s/g, "")}`} style={styles.primaryButton}>
+                                Call Now
                             </a>
-                            <a href="#tours" style={styles.secondaryButton}>
-                                Explore Tours
+                            <a href="#contact" style={styles.secondaryButton}>
+                                Contact Details
                             </a>
                         </div>
 
@@ -238,18 +201,14 @@ export default function TransfersAndToursCompanyPremiumResponsive() {
                     </div>
 
                     {!isMobile && (
-                        <aside style={styles.heroCard}>
-                            <div style={styles.heroCardImage} />
-                            <div style={styles.heroCardContent}>
-                                <p style={styles.cardOverline}>Popular request</p>
-                                <h2 style={styles.heroCardTitle}>Airport to Hotel Transfer</h2>
+                        <aside style={styles.logoShowcaseCard}>
+                            <div style={styles.logoShowcaseInner}>
+                                <img src={company.logoSrc} alt={`${company.name} logo`} style={styles.bigLogoImage} />
+                                <p style={styles.cardOverline}>Premium transfers</p>
+                                <h2 style={styles.heroCardTitle}>Private rides & curated tours</h2>
                                 <p style={styles.heroCardText}>
-                                    Meet & greet, luggage assistance and direct private transfer
-                                    to your accommodation.
+                                    Add your real logo in the public folder as <strong>/logo.png</strong> or change the logoSrc value.
                                 </p>
-                                <a href="#booking" style={styles.cardLink}>
-                                    Plan your ride →
-                                </a>
                             </div>
                         </aside>
                     )}
@@ -261,8 +220,7 @@ export default function TransfersAndToursCompanyPremiumResponsive() {
                     <p style={styles.sectionLabel}>Services</p>
                     <h2 style={styles.sectionTitle}>Everything you need for a smooth trip</h2>
                     <p style={styles.sectionDescription}>
-                        From arrival to departure, we make every journey easy, punctual and
-                        comfortable.
+                        From arrival to departure, we make every journey easy, punctual and comfortable.
                     </p>
                 </div>
 
@@ -282,8 +240,7 @@ export default function TransfersAndToursCompanyPremiumResponsive() {
                     <p style={styles.sectionLabelGold}>Curated tours</p>
                     <h2 style={styles.sectionTitleLight}>Private experiences, your way</h2>
                     <p style={styles.sectionDescriptionLight}>
-                        Choose a ready-made itinerary or let us design a custom route for
-                        your day.
+                        Choose a ready-made itinerary or let us design a custom route for your day.
                     </p>
                 </div>
 
@@ -340,171 +297,45 @@ export default function TransfersAndToursCompanyPremiumResponsive() {
 
             <section style={styles.testimonialSection}>
                 <blockquote style={styles.quote}>
-                    “Excellent service, professional driver and a beautiful private tour.
-                    Everything was punctual, clean and perfectly organized.”
+                    “Excellent service, professional driver and a beautiful private tour. Everything was punctual, clean and perfectly organized.”
                 </blockquote>
                 <p style={styles.quoteAuthor}>— Guest Review</p>
             </section>
 
-            <section id="booking" style={styles.bookingSection}>
-                <div style={styles.bookingPanel}>
-                    <p style={styles.sectionLabelGold}>Booking request</p>
-                    <h2 style={styles.bookingTitle}>Tell us about your trip</h2>
-                    <p style={styles.bookingText}>
-                        Send your request and we will contact you with availability,
-                        estimated duration and final price.
+            <section id="contact" style={styles.contactSection}>
+                <div style={styles.contactIntro}>
+                    <p style={styles.sectionLabelGold}>Contact</p>
+                    <h2 style={styles.contactTitle}>Get in touch directly</h2>
+                    <p style={styles.contactText}>
+                        For transfers, tours, prices and availability, contact us by phone, WhatsApp or email.
                     </p>
-
-                    <div style={styles.contactBox}>
-                        <span>Need fast assistance?</span>
-                        <strong>WhatsApp / Phone: +30 690 000 0000</strong>
-                    </div>
                 </div>
 
-                <form onSubmit={handleSubmit} style={styles.form}>
-                    <div style={styles.twoColumns}>
-                        <label style={styles.label}>
-                            Full name
-                            <input
-                                required
-                                value={form.fullName}
-                                onChange={(event) => updateField("fullName", event.target.value)}
-                                style={styles.input}
-                                placeholder="Your name"
-                            />
-                        </label>
+                <div style={styles.contactGrid}>
+                    <a href={`tel:${company.phone.replace(/\s/g, "")}`} style={styles.contactCard}>
+                        <span style={styles.contactIcon}>☎</span>
+                        <span style={styles.contactLabel}>Phone</span>
+                        <strong style={styles.contactValue}>{company.phone}</strong>
+                    </a>
 
-                        <label style={styles.label}>
-                            Email
-                            <input
-                                required
-                                type="email"
-                                value={form.email}
-                                onChange={(event) => updateField("email", event.target.value)}
-                                style={styles.input}
-                                placeholder="name@example.com"
-                            />
-                        </label>
+                    <a href={`https://wa.me/${company.whatsapp.replace(/\D/g, "")}`} style={styles.contactCard}>
+                        <span style={styles.contactIcon}>💬</span>
+                        <span style={styles.contactLabel}>WhatsApp</span>
+                        <strong style={styles.contactValue}>{company.whatsapp}</strong>
+                    </a>
+
+                    <a href={`mailto:${company.email}`} style={styles.contactCard}>
+                        <span style={styles.contactIcon}>✉</span>
+                        <span style={styles.contactLabel}>Email</span>
+                        <strong style={styles.contactValue}>{company.email}</strong>
+                    </a>
+
+                    <div style={styles.contactCard}>
+                        <span style={styles.contactIcon}>📍</span>
+                        <span style={styles.contactLabel}>Location</span>
+                        <strong style={styles.contactValue}>{company.location}</strong>
                     </div>
-
-                    <div style={styles.twoColumns}>
-                        <label style={styles.label}>
-                            Phone
-                            <input
-                                required
-                                value={form.phone}
-                                onChange={(event) => updateField("phone", event.target.value)}
-                                style={styles.input}
-                                placeholder="+30 690 000 0000"
-                            />
-                        </label>
-
-                        <label style={styles.label}>
-                            Service
-                            <select
-                                value={form.serviceType}
-                                onChange={(event) =>
-                                    updateField(
-                                        "serviceType",
-                                        event.target.value as BookingForm["serviceType"]
-                                    )
-                                }
-                                style={styles.input}
-                            >
-                                <option value="airport-transfer">Airport / Port transfer</option>
-                                <option value="private-transfer">Private transfer</option>
-                                <option value="private-tour">Private tour</option>
-                            </select>
-                        </label>
-                    </div>
-
-                    <div style={styles.twoColumns}>
-                        <label style={styles.label}>
-                            Pickup location
-                            <input
-                                required
-                                value={form.pickupLocation}
-                                onChange={(event) =>
-                                    updateField("pickupLocation", event.target.value)
-                                }
-                                style={styles.input}
-                                placeholder="Airport, hotel, port, address"
-                            />
-                        </label>
-
-                        <label style={styles.label}>
-                            Destination
-                            <input
-                                required
-                                value={form.destination}
-                                onChange={(event) =>
-                                    updateField("destination", event.target.value)
-                                }
-                                style={styles.input}
-                                placeholder="Destination or tour name"
-                            />
-                        </label>
-                    </div>
-
-                    <div style={isTablet ? styles.twoColumns : styles.threeColumns}>
-                        <label style={styles.label}>
-                            Date
-                            <input
-                                required
-                                type="date"
-                                value={form.date}
-                                onChange={(event) => updateField("date", event.target.value)}
-                                style={styles.input}
-                            />
-                        </label>
-
-                        <label style={styles.label}>
-                            Time
-                            <input
-                                required
-                                type="time"
-                                value={form.time}
-                                onChange={(event) => updateField("time", event.target.value)}
-                                style={styles.input}
-                            />
-                        </label>
-
-                        <label style={styles.label}>
-                            Passengers
-                            <input
-                                required
-                                min="1"
-                                type="number"
-                                value={form.passengers}
-                                onChange={(event) =>
-                                    updateField("passengers", event.target.value)
-                                }
-                                style={styles.input}
-                            />
-                        </label>
-                    </div>
-
-                    <label style={styles.label}>
-                        Additional details
-                        <textarea
-                            value={form.message}
-                            onChange={(event) => updateField("message", event.target.value)}
-                            style={styles.textarea}
-                            placeholder="Flight number, luggage, child seats, stops, special requests..."
-                        />
-                    </label>
-
-                    <button type="submit" style={styles.submitButton}>
-                        Send Booking Request
-                    </button>
-
-                    {submitted && (
-                        <p style={styles.successMessage}>
-                            Thank you. Your request has been recorded locally. Connect this
-                            form with your API, email service or CRM to receive submissions.
-                        </p>
-                    )}
-                </form>
+                </div>
             </section>
         </main>
     );
@@ -528,8 +359,8 @@ function NavLinks({
             <a href="#fleet" style={styles.navLink} onClick={onNavigate}>
                 Fleet
             </a>
-            <a href="#booking" style={styles.navButton} onClick={onNavigate}>
-                Book Now
+            <a href="#contact" style={styles.navButton} onClick={onNavigate}>
+                Contact
             </a>
         </div>
     );
@@ -557,9 +388,7 @@ function createStyles(breakpoint: Breakpoint): Record<string, CSSProperties> {
         },
         hero: {
             minHeight: isMobile ? "auto" : isTablet ? "760px" : "780px",
-            padding: `${isMobile ? "18px" : "28px"} ${pagePadding} ${
-                isMobile ? "58px" : "80px"
-            }`,
+            padding: `${isMobile ? "18px" : "28px"} ${pagePadding} ${isMobile ? "58px" : "80px"}`,
             background:
                 "linear-gradient(135deg, rgba(8, 13, 25, 0.96), rgba(13, 52, 70, 0.9)), url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1900&q=80') center/cover",
             color: "#ffffff",
@@ -578,21 +407,21 @@ function createStyles(breakpoint: Breakpoint): Record<string, CSSProperties> {
             gap: isMobile ? 9 : 12,
             color: "#ffffff",
             textDecoration: "none",
+            minWidth: 0,
+        },
+        logoImage: {
+            width: isMobile ? 42 : 52,
+            height: isMobile ? 42 : 52,
+            objectFit: "contain",
+            borderRadius: 14,
+            background: "rgba(255,255,255,0.96)",
+            padding: 6,
+            boxShadow: "0 12px 30px rgba(0,0,0,0.18)",
+        },
+        brandText: {
             fontSize: isMobile ? 19 : 23,
             fontWeight: 900,
             letterSpacing: "-0.04em",
-            minWidth: 0,
-        },
-        brandMark: {
-            width: isMobile ? 36 : 42,
-            height: isMobile ? 36 : 42,
-            display: "grid",
-            flex: "0 0 auto",
-            placeItems: "center",
-            borderRadius: "50%",
-            background: "#d8b46a",
-            color: "#111827",
-            fontWeight: 900,
         },
         brandAccent: {
             color: "#d8b46a",
@@ -668,7 +497,7 @@ function createStyles(breakpoint: Breakpoint): Record<string, CSSProperties> {
         heroTitle: {
             margin: 0,
             maxWidth: 780,
-            fontSize: isMobile ? "46px" : isTablet ? "64px" : "clamp(58px, 7vw, 92px)",
+            fontSize: isMobile ? "44px" : isTablet ? "64px" : "clamp(58px, 7vw, 92px)",
             lineHeight: isMobile ? 0.98 : 0.94,
             letterSpacing: isMobile ? "-0.06em" : "-0.075em",
         },
@@ -732,7 +561,7 @@ function createStyles(breakpoint: Breakpoint): Record<string, CSSProperties> {
             fontSize: 14,
             fontWeight: 700,
         },
-        heroCard: {
+        logoShowcaseCard: {
             overflow: "hidden",
             borderRadius: isTablet ? 28 : 34,
             background: "rgba(255,255,255,0.1)",
@@ -740,13 +569,24 @@ function createStyles(breakpoint: Breakpoint): Record<string, CSSProperties> {
             boxShadow: "0 34px 80px rgba(0,0,0,0.28)",
             backdropFilter: "blur(18px)",
         },
-        heroCardImage: {
-            height: isTablet ? 220 : 260,
-            background:
-                "url('https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=900&q=80') center/cover",
+        logoShowcaseInner: {
+            padding: isTablet ? 28 : 36,
+            minHeight: isTablet ? 360 : 430,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "flex-start",
         },
-        heroCardContent: {
-            padding: isTablet ? 22 : 28,
+        bigLogoImage: {
+            width: isTablet ? 150 : 190,
+            maxWidth: "100%",
+            height: "auto",
+            objectFit: "contain",
+            borderRadius: 26,
+            background: "rgba(255,255,255,0.96)",
+            padding: 18,
+            marginBottom: 28,
+            boxShadow: "0 18px 40px rgba(0,0,0,0.22)",
         },
         cardOverline: {
             margin: 0,
@@ -758,19 +598,12 @@ function createStyles(breakpoint: Breakpoint): Record<string, CSSProperties> {
         },
         heroCardTitle: {
             margin: "10px 0",
-            fontSize: isTablet ? 24 : 28,
+            fontSize: isTablet ? 24 : 30,
             letterSpacing: "-0.04em",
         },
         heroCardText: {
-            color: "rgba(255,255,255,0.7)",
+            color: "rgba(255,255,255,0.72)",
             lineHeight: 1.65,
-        },
-        cardLink: {
-            display: "inline-block",
-            marginTop: 10,
-            color: "#ffffff",
-            fontWeight: 900,
-            textDecoration: "none",
         },
         section: {
             padding: sectionPadding,
@@ -845,9 +678,7 @@ function createStyles(breakpoint: Breakpoint): Record<string, CSSProperties> {
         },
         serviceGrid: {
             display: "grid",
-            gridTemplateColumns: isMobile
-                ? "1fr"
-                : "repeat(auto-fit, minmax(250px, 1fr))",
+            gridTemplateColumns: isMobile ? "1fr" : "repeat(auto-fit, minmax(250px, 1fr))",
             gap: isMobile ? 16 : 22,
         },
         serviceCard: {
@@ -983,126 +814,70 @@ function createStyles(breakpoint: Breakpoint): Record<string, CSSProperties> {
             color: "#9b6b28",
             fontWeight: 900,
         },
-        bookingSection: {
+        contactSection: {
             padding: sectionPadding,
-            display: "grid",
-            gridTemplateColumns: isMobile || isTablet
-                ? "1fr"
-                : "minmax(280px, 0.75fr) minmax(300px, 1.25fr)",
-            gap: isMobile ? 20 : 32,
             background: "#0f172a",
             color: "#ffffff",
         },
-        bookingPanel: {
-            padding: isMobile ? 24 : 34,
-            borderRadius: isMobile ? 26 : 32,
-            background:
-                "linear-gradient(180deg, rgba(255,255,255,0.1), rgba(255,255,255,0.045))",
-            border: "1px solid rgba(255,255,255,0.1)",
-            alignSelf: "start",
-            position: isMobile || isTablet ? "static" : "sticky",
-            top: 22,
+        contactIntro: {
+            maxWidth: 720,
+            marginBottom: isMobile ? 28 : 42,
         },
-        bookingTitle: {
+        contactTitle: {
             margin: "10px 0 14px",
-            fontSize: isMobile ? 34 : isTablet ? 44 : "clamp(34px, 5vw, 56px)",
+            fontSize: isMobile ? 36 : isTablet ? 46 : "clamp(38px, 5vw, 60px)",
             lineHeight: 1.02,
             letterSpacing: "-0.06em",
         },
-        bookingText: {
+        contactText: {
+            maxWidth: 620,
             color: "rgba(255,255,255,0.68)",
             lineHeight: 1.75,
-            fontSize: isMobile ? 16 : 17,
+            fontSize: isMobile ? 16 : 18,
         },
-        contactBox: {
-            marginTop: 24,
-            padding: isMobile ? 18 : 20,
-            borderRadius: 24,
-            background: "rgba(216, 180, 106, 0.12)",
-            border: "1px solid rgba(216, 180, 106, 0.24)",
-            display: "grid",
-            gap: 8,
-            overflowWrap: "anywhere",
-        },
-        form: {
-            padding: isMobile ? 20 : 30,
-            borderRadius: isMobile ? 26 : 32,
-            background: "#ffffff",
-            color: "#17202a",
-            minWidth: 0,
-        },
-        twoColumns: {
-            display: "grid",
-            gridTemplateColumns: isMobile ? "1fr" : "repeat(2, minmax(0, 1fr))",
-            gap: isMobile ? 0 : 16,
-        },
-        threeColumns: {
+        contactGrid: {
             display: "grid",
             gridTemplateColumns: isMobile
                 ? "1fr"
                 : isTablet
                     ? "repeat(2, minmax(0, 1fr))"
-                    : "repeat(3, minmax(0, 1fr))",
-            gap: isMobile ? 0 : 16,
+                    : "repeat(4, minmax(0, 1fr))",
+            gap: 16,
         },
-        label: {
+        contactCard: {
+            minHeight: isMobile ? 132 : 160,
+            padding: isMobile ? 20 : 24,
+            borderRadius: isMobile ? 24 : 30,
+            background: "linear-gradient(180deg, rgba(255,255,255,0.1), rgba(255,255,255,0.045))",
+            border: "1px solid rgba(255,255,255,0.1)",
+            color: "#ffffff",
+            textDecoration: "none",
             display: "flex",
             flexDirection: "column",
-            gap: 8,
-            marginBottom: 16,
-            color: "#273241",
-            fontSize: 14,
-            fontWeight: 900,
-            minWidth: 0,
+            justifyContent: "space-between",
+            gap: 12,
+            overflowWrap: "anywhere",
         },
-        input: {
-            width: "100%",
-            minHeight: 50,
-            boxSizing: "border-box",
-            border: "1px solid #e0e4ea",
-            borderRadius: 16,
-            padding: "14px 15px",
-            background: "#f8fafc",
-            color: "#17202a",
-            fontSize: 16,
-            outline: "none",
-            fontFamily: "inherit",
-            appearance: "none",
-        },
-        textarea: {
-            width: "100%",
-            minHeight: isMobile ? 116 : 128,
-            boxSizing: "border-box",
-            border: "1px solid #e0e4ea",
-            borderRadius: 16,
-            padding: "14px 15px",
-            background: "#f8fafc",
-            color: "#17202a",
-            fontSize: 16,
-            outline: "none",
-            fontFamily: "inherit",
-            resize: "vertical",
-        },
-        submitButton: {
-            width: "100%",
-            minHeight: 54,
-            border: 0,
+        contactIcon: {
+            width: 48,
+            height: 48,
+            display: "grid",
+            placeItems: "center",
             borderRadius: 18,
-            padding: "17px 22px",
-            background: "#d8b46a",
-            color: "#111827",
-            fontSize: 17,
-            fontWeight: 950,
-            cursor: "pointer",
+            background: "rgba(216, 180, 106, 0.14)",
+            color: "#d8b46a",
+            fontSize: 24,
         },
-        successMessage: {
-            marginTop: 16,
-            padding: 14,
-            borderRadius: 16,
-            background: "#ecfdf5",
-            color: "#047857",
+        contactLabel: {
+            color: "rgba(255,255,255,0.62)",
             fontWeight: 800,
-            lineHeight: 1.5,
+            fontSize: 13,
+            textTransform: "uppercase",
+            letterSpacing: "0.12em",
+        },
+        contactValue: {
+            fontSize: isMobile ? 18 : 20,
+            lineHeight: 1.35,
         },
     };
 }

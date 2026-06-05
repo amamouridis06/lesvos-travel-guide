@@ -32,7 +32,7 @@ const featuredCompanies = [
         vehicles: 2,
         services: ["Airport", "Port", "VIP"],
         image:
-            "/golocal/cars.png",
+            "/golocal/golocal-logo.png",
     },
 
     // {
