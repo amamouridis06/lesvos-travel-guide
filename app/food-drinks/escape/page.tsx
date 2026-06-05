@@ -93,22 +93,22 @@ export default function DessertShopGuidePage() {
                         {
                             icon: <MapPin className="w-7 h-7" />,
                             title: "Location",
-                            value: "In port of Molyvos",
+                            value: "Agiasos, 81101",
                         },
                         {
                             icon: <Clock3 className="w-7 h-7" />,
                             title: "Open Daily",
-                            value: "17:00 — 23:00",
+                            value: "6:00 — until the morning",
                         },
                         {
-                            icon: <CakeSlice className="w-7 h-7" />,
-                            title: "Signature",
-                            value: "Pancakes & Wafles",
+                            icon: <X className="w-7 h-7" />,
+                            title: "Instagram",
+                            value: "Escape_espresso_bar",
                         },
                         {
                             icon: <Euro className="w-7 h-7" />,
                             title: "Average",
-                            value: "€5 — €10",
+                            value: "€1 — €5",
                         },
                     ].map((item, i) => (
                         <motion.div
@@ -165,8 +165,7 @@ export default function DessertShopGuidePage() {
           </span>
 
                     <h2 className="text-4xl sm:text-5xl md:text-7xl font-black mt-6 mb-6 sm:mb-8 leading-tight">
-                        A Dessert Experience
-                        <span className="block text-slate-500">Beyond Taste</span>
+                        A  Espresso Bar
                     </h2>
 
                     <p className="max-w-4xl mx-auto text-base sm:text-lg md:text-xl text-slate-900 font-medium leading-relaxed px-2">
@@ -190,27 +189,27 @@ export default function DessertShopGuidePage() {
                     </p>
                 </motion.div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6">
-                    {[
-                        "/escape/escape1.jpg",
-                    ].map((img, i) => (
-                        <motion.div
-                            key={i}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ delay: i * 0.15, duration: 0.7 }}
-                            viewport={{ once: true }}
-                            whileHover={{ scale: 1.03, rotate: 1 }}
-                            className="overflow-hidden rounded-[32px]"
-                        >
-                            <img
-                                src={img}
-                                alt="Dessert Gallery"
-                                className="h-[320px] sm:h-[420px] w-full object-cover hover:scale-110 transition-transform duration-700"
-                            />
-                        </motion.div>
-                    ))}
-                </div>
+                {/*<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6">*/}
+                {/*    {[*/}
+                {/*        "/escape/escape1.jpg",*/}
+                {/*    ].map((img, i) => (*/}
+                {/*        <motion.div*/}
+                {/*            key={i}*/}
+                {/*            initial={{ opacity: 0, y: 30 }}*/}
+                {/*            whileInView={{ opacity: 1, y: 0 }}*/}
+                {/*            transition={{ delay: i * 0.15, duration: 0.7 }}*/}
+                {/*            viewport={{ once: true }}*/}
+                {/*            whileHover={{ scale: 1.03, rotate: 1 }}*/}
+                {/*            className="overflow-hidden rounded-[32px]"*/}
+                {/*        >*/}
+                {/*            <img*/}
+                {/*                src={img}*/}
+                {/*                alt="Dessert Gallery"*/}
+                {/*                className="h-[320px] sm:h-[420px] w-full object-cover hover:scale-110 transition-transform duration-700"*/}
+                {/*            />*/}
+                {/*        </motion.div>*/}
+                {/*    ))}*/}
+                {/*</div>*/}
             </section>
 
             {/* FEATURE SECTION */}
@@ -225,13 +224,13 @@ export default function DessertShopGuidePage() {
                     >
                         <img
                             src="/escape/escape11.jpeg"
-                            alt="Dessert"
+                            alt="Juice"
                             className="rounded-[32px] sm:rounded-[40px] h-[420px] sm:h-[700px] w-full object-cover shadow-[0_40px_120px_rgba(0,0,0,0.6)]"
                         />
 
                         <div className="absolute bottom-4 right-4 sm:-bottom-10 sm:-right-10 bg-gradient-to-r from-cyan-400 to-orange-300 rounded-[24px] sm:rounded-[30px] p-5 sm:p-8 shadow-2xl max-w-[220px] sm:max-w-xs">
                             <p className="text-sm uppercase tracking-[0.2em] text-slate-800 font-semibold mb-2">
-                                Grandmother guice
+                                Grandmother Juice
                             </p>
                         </div>
                     </motion.div>
@@ -247,7 +246,7 @@ export default function DessertShopGuidePage() {
             </span>
 
                         <h2 className="text-4xl sm:text-5xl md:text-7xl font-black leading-tight mt-5 mb-6 sm:mb-8">
-                            Dessert Meets
+                            Cafe and Cocktails Meet
                             <span className="block text-slate-500">Luxury.</span>
                         </h2>
 
@@ -256,20 +255,20 @@ export default function DessertShopGuidePage() {
 
                         </p>
 
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
-                            {[
-                                "Artisan Desserts",
-                                "Tourist Favorite",
-                            ].map((item, i) => (
-                                <motion.div
-                                    key={i}
-                                    whileHover={{ scale: 1.05 }}
-                                    className="rounded-2xl border border-cyan-100 bg-white/80 backdrop-blur-xl px-6 py-5 text-lg font-medium text-slate-800"
-                                >
-                                    {item}
-                                </motion.div>
-                            ))}
-                        </div>
+                        {/*<div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">*/}
+                        {/*    {[*/}
+                        {/*        "Artisan Desserts",*/}
+                        {/*        "Tourist Favorite",*/}
+                        {/*    ].map((item, i) => (*/}
+                        {/*        <motion.div*/}
+                        {/*            key={i}*/}
+                        {/*            whileHover={{ scale: 1.05 }}*/}
+                        {/*            className="rounded-2xl border border-cyan-100 bg-white/80 backdrop-blur-xl px-6 py-5 text-lg font-medium text-slate-800"*/}
+                        {/*        >*/}
+                        {/*            {item}*/}
+                        {/*        </motion.div>*/}
+                        {/*    ))}*/}
+                        {/*</div>*/}
                     </motion.div>
                 </div>
             </section>

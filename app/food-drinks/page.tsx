@@ -143,9 +143,9 @@ const Bars: FoodItem[] = [
   {
     title: "Escape Espresso Bar",
     category: "Bars",
-    description: "Brunch, burgers, bao, shrimp, cocktails, all-day cravings",
+    description: "Juices, Cafe , Cocktails, Drinks",
     location: "Agiasos, Lesvos",
-    image: "/escape/escape4.jpeg",
+    image: "/escape/escape12.jpeg",
     alt: "Escape",
     href: "/food-drinks/escape",
 },
