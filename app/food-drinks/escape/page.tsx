@@ -101,7 +101,7 @@ export default function DessertShopGuidePage() {
                             value: "6:00 — until the morning",
                         },
                         {
-                            icon: <X className="w-7 h-7" />,
+                            icon: <Clock3 className="w-7 h-7" />,
                             title: "Instagram",
                             value: "Escape_espresso_bar",
                         },
@@ -188,28 +188,6 @@ export default function DessertShopGuidePage() {
                         </p>
                     </p>
                 </motion.div>
-
-                {/*<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6">*/}
-                {/*    {[*/}
-                {/*        "/escape/escape1.jpg",*/}
-                {/*    ].map((img, i) => (*/}
-                {/*        <motion.div*/}
-                {/*            key={i}*/}
-                {/*            initial={{ opacity: 0, y: 30 }}*/}
-                {/*            whileInView={{ opacity: 1, y: 0 }}*/}
-                {/*            transition={{ delay: i * 0.15, duration: 0.7 }}*/}
-                {/*            viewport={{ once: true }}*/}
-                {/*            whileHover={{ scale: 1.03, rotate: 1 }}*/}
-                {/*            className="overflow-hidden rounded-[32px]"*/}
-                {/*        >*/}
-                {/*            <img*/}
-                {/*                src={img}*/}
-                {/*                alt="Dessert Gallery"*/}
-                {/*                className="h-[320px] sm:h-[420px] w-full object-cover hover:scale-110 transition-transform duration-700"*/}
-                {/*            />*/}
-                {/*        </motion.div>*/}
-                {/*    ))}*/}
-                {/*</div>*/}
             </section>
 
             {/* FEATURE SECTION */}
@@ -254,21 +232,6 @@ export default function DessertShopGuidePage() {
                             In the picturesque village of Agiasos, Lesvos, Escape offers a unique tasting experience with view the mountain of Agiasos
 
                         </p>
-
-                        {/*<div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">*/}
-                        {/*    {[*/}
-                        {/*        "Artisan Desserts",*/}
-                        {/*        "Tourist Favorite",*/}
-                        {/*    ].map((item, i) => (*/}
-                        {/*        <motion.div*/}
-                        {/*            key={i}*/}
-                        {/*            whileHover={{ scale: 1.05 }}*/}
-                        {/*            className="rounded-2xl border border-cyan-100 bg-white/80 backdrop-blur-xl px-6 py-5 text-lg font-medium text-slate-800"*/}
-                        {/*        >*/}
-                        {/*            {item}*/}
-                        {/*        </motion.div>*/}
-                        {/*    ))}*/}
-                        {/*</div>*/}
                     </motion.div>
                 </div>
             </section>
@@ -296,10 +259,13 @@ export default function DessertShopGuidePage() {
                             "/escape/escape12.jpeg",
                             "/escape/escape5.jpeg",
                             "/escape/escape6.jpeg",
+                            "/escape/escape6.jpeg",
                             "/escape/escape7.jpeg",
                             "/escape/escape8.jpeg",
                             "/escape/escape9.jpeg",
-                            "/escape/petite10.jpeg",
+                            "/escape/escape10.jpeg",
+                            "/escape/escape11.jpeg",
+                            "/escape/escape12.jpeg",
 
                         ].map((img, i) => (
                             <motion.div
