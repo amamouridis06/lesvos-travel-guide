@@ -262,6 +262,7 @@ export default function TransfersAndToursCompanyContactLogo() {
                             />
                             <div style={styles.tourContent}>
                                 <span style={styles.tourDuration}>{tour.duration}</span>
+                                <span style={styles.tourPeople}>{tour.people}</span>
                                 <h3 style={styles.tourTitle}>{tour.title}</h3>
                                 <p style={styles.tourText}>{tour.description}</p>
                                 <a
@@ -785,6 +786,22 @@ function createStyles(breakpoint: Breakpoint): Record<string, CSSProperties> {
             fontSize: 14,
             fontWeight: 900,
             boxShadow: "0 14px 28px rgba(216, 180, 106, 0.16)",
+        },
+        tourMeta: {
+            display: "flex",
+            gap: 10,
+            flexWrap: "wrap",
+            marginBottom: 14,
+        },
+
+        tourPeople: {
+            display: "inline-flex",
+            padding: "7px 11px",
+            borderRadius: 999,
+            background: "rgba(255,255,255,0.08)",
+            color: "rgba(255,255,255,0.78)",
+            fontSize: 13,
+            fontWeight: 900,
         },
         fleetGrid: {
             display: "grid",
