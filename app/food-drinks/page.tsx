@@ -145,7 +145,7 @@ const Bars: FoodItem[] = [
     category: "Bars",
     description: "Juices, Cafe , Cocktails, Drinks",
     location: "Agiasos, Lesvos",
-    image: "/escape/escape12.jpeg",
+    image: "/escape/escape12.jpg",
     alt: "Escape",
     href: "/food-drinks/escape",
 },

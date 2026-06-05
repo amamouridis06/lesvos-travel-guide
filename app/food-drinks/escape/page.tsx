@@ -256,7 +256,6 @@ export default function DessertShopGuidePage() {
                             "/escape/escape2.jpeg",
                             "/escape/escape3.jpeg",
                             "/escape/escape4.jpeg",
-                            "/escape/escape12.jpeg",
                             "/escape/escape5.jpeg",
                             "/escape/escape6.jpeg",
                             "/escape/escape6.jpeg",
@@ -265,7 +264,7 @@ export default function DessertShopGuidePage() {
                             "/escape/escape9.jpeg",
                             "/escape/escape10.jpeg",
                             "/escape/escape11.jpeg",
-                            "/escape/escape12.jpeg",
+                            "/escape/escape12.jpg",
 
                         ].map((img, i) => (
                             <motion.div
