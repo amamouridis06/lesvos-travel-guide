@@ -34,10 +34,10 @@ const company = {
     email: " info@golocaltransfer.com",
     location: "Molivos, Lesvos",
     instagram: "@aegeanway",
-    website: "www.golocaltransfer.com",
+    // website: "www.golocaltransfer.com",
     // Replace this with your real logo image path.
     // Example for Next.js public folder: "/logo.png"
-    logoSrc: "/logo.png",
+    logoSrc: "/golocal/golocal-logo.png",
 };
 
 const services: Service[] = [
@@ -70,7 +70,7 @@ const tours: Tour[] = [
             "The northern coast in close quarters — Petra and its church on the rock, Molyvos with its castle above a cobbled harbor, Eftalou where the hot springs run into the sea. The road between them is short; the day on it isn't. Stone, salt, and warm water, more or less in that order.",
         image:
             "/golocal/tour_molivos.png",
-        learnMoreUrl: `${company.website}/tours/molyvos-medieval-north-lesvos`,
+        learnMoreUrl: `https://golocaltransfer.com/tours/molyvos-medieval-north-lesvos`,
     },
     // {
     //     title: "Coastal Escape",
