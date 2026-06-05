@@ -13,6 +13,8 @@ type Tour = {
     duration: string;
     description: string;
     image: string;
+    people: string;
+    learnMoreUrl: string;
 };
 
 type FleetItem = {
@@ -25,13 +27,14 @@ type FleetItem = {
 type Breakpoint = "mobile" | "tablet" | "desktop";
 
 const company = {
-    name: "AegeanWay",
+    name: "GO LOCAL Transfers & Tours",
     tagline: "Private Transfers & Curated Tours",
-    phone: "+30 690 000 0000",
-    whatsapp: "+30 690 000 0000",
-    email: "info@aegeanway.gr",
-    location: "Greece",
+    phone: "+306985800976",
+    whatsapp: "+306985800976",
+    email: " info@golocaltransfer.com",
+    location: "Molivos, Lesvos",
     instagram: "@aegeanway",
+    website: "www.golocaltransfer.com",
     // Replace this with your real logo image path.
     // Example for Next.js public folder: "/logo.png"
     logoSrc: "/logo.png",
@@ -60,12 +63,13 @@ const services: Service[] = [
 
 const tours: Tour[] = [
     {
-        title: "Signature City Tour",
-        duration: "4 hours",
+        title: "Molyvos and the Medieval North",
+        duration: "from 3 hours",
         description:
-            "Explore the highlights, hidden corners and panoramic viewpoints with a local driver.",
+            "The northern coast in close quarters — Petra and its church on the rock, Molyvos with its castle above a cobbled harbor, Eftalou where the hot springs run into the sea. The road between them is short; the day on it isn't. Stone, salt, and warm water, more or less in that order.",
         image:
-            "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=900&q=80",
+            "/golocal/tour_molivos.png",
+        learnMoreUrl: `${company.website}/tours/molyvos-medieval-north-lesvos`,
     },
     {
         title: "Coastal Escape",
@@ -74,6 +78,7 @@ const tours: Tour[] = [
             "A relaxed private day trip to beaches, seaside villages and scenic photo stops.",
         image:
             "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80",
+        learnMoreUrl: `${company.website}/tours/coastal-escape`,
     },
     {
         title: "Food & Culture Experience",
@@ -82,6 +87,7 @@ const tours: Tour[] = [
             "Visit traditional villages, local markets and authentic places for food lovers.",
         image:
             "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80",
+        learnMoreUrl: `${company.website}/tours/food-culture-experience`,
     },
 ];
 
@@ -257,6 +263,14 @@ export default function TransfersAndToursCompanyContactLogo() {
                                 <span style={styles.tourDuration}>{tour.duration}</span>
                                 <h3 style={styles.tourTitle}>{tour.title}</h3>
                                 <p style={styles.tourText}>{tour.description}</p>
+                                <a
+                                    href={tour.learnMoreUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    style={styles.tourButton}
+                                >
+                                    Learn More
+                                </a>
                             </div>
                         </article>
                     ))}
@@ -756,6 +770,20 @@ function createStyles(breakpoint: Breakpoint): Record<string, CSSProperties> {
             margin: 0,
             color: "rgba(255,255,255,0.64)",
             lineHeight: 1.7,
+        },
+        tourButton: {
+            display: "inline-flex",
+            alignItems: "center",
+            justifyContent: "center",
+            marginTop: 20,
+            padding: "12px 18px",
+            borderRadius: 999,
+            background: "#d8b46a",
+            color: "#111827",
+            textDecoration: "none",
+            fontSize: 14,
+            fontWeight: 900,
+            boxShadow: "0 14px 28px rgba(216, 180, 106, 0.16)",
         },
         fleetGrid: {
             display: "grid",
