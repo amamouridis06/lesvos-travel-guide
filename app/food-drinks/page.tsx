@@ -140,6 +140,15 @@ const Bars: FoodItem[] = [
     alt: "Azul",
     href: "/food-drinks/azul-paraiso",
   },
+  {
+    title: "Escape Espresso Bar",
+    category: "Bars",
+    description: "Brunch, burgers, bao, shrimp, cocktails, all-day cravings",
+    location: "Agiasos, Lesvos",
+    image: "/escape/escape4.jpeg",
+    alt: "Escape",
+    href: "/food-drinks/escape",
+},
 ];
 
 const locProd: FoodItem[] = [
