@@ -170,38 +170,20 @@ export default function CocktailBarPage() {
                         {/* MAIN SLIDER */}
                         <div
                             className="group relative mt-8 aspect-[16/10] w-full cursor-zoom-in overflow-hidden rounded-3xl shadow-lg"
-                            onMouseEnter={() => setIsHovered(true)}
-                            onMouseLeave={() => setIsHovered(false)}
                             onClick={() => setIsOpen(true)}
                         >
-                            {GALLERY.map((item, i) =>
-                                item.type === "image" ? (
-                                    <img
-                                        key={item.src}
-                                        src={item.src}
-                                        alt=""
-                                        className={`absolute inset-0 h-full w-full object-cover transition-all duration-700 ${
-                                            i === index ? "opacity-100 scale-100" : "opacity-0 scale-105"
-                                        }`}
-                                    />
-                                ) : (
-                                    <video
-                                        ref={(el) => {
-                                            videoRefs.current[i] = el;
-                                        }}
-                                        key={item.src}
-                                        className={`absolute inset-0 h-full w-full object-cover transition-all duration-700 ${
-                                            i === index ? "opacity-100" : "opacity-0"
-                                        }`}
-                                        autoPlay={i === index}
-                                        muted
-                                        loop
-                                        playsInline
-                                    >
-                                        <source src={item.src} type="video/mp4" />
-                                    </video>
-                                )
-                            )}
+                            {GALLERY.map((item, i) => (
+                                <img
+                                    key={item.src}
+                                    src={item.src}
+                                    alt=""
+                                    className={`absolute inset-0 h-full w-full object-cover transition-all duration-700 ${
+                                        i === index
+                                            ? "opacity-100 scale-100"
+                                            : "opacity-0 scale-105"
+                                    }`}
+                                />
+                            ))}
 
                             <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
 
@@ -231,7 +213,6 @@ export default function CocktailBarPage() {
                                 {GALLERY.map((_, i) => (
                                     <button
                                         key={i}
-                                        aria-label={`Go to slide ${i + 1}`}
                                         onClick={(e) => {
                                             e.stopPropagation();
                                             setIndex(i);
@@ -256,24 +237,11 @@ export default function CocktailBarPage() {
                                             : "opacity-70 hover:opacity-100"
                                     }`}
                                 >
-                                    {item.type === "image" ? (
-                                        <img
-                                            src={item.src}
-                                            alt=""
-                                            className="h-full w-full object-cover"
-                                        />
-                                    ) : (
-                                        <>
-                                            <img
-                                                src={item.poster}
-                                                alt=""
-                                                className="h-full w-full object-cover"
-                                            />
-                                            <div className="absolute inset-0 flex items-center justify-center bg-black/30 text-white text-xl">
-                                                ▶
-                                            </div>
-                                        </>
-                                    )}
+                                    <img
+                                        src={item.src}
+                                        alt=""
+                                        className="h-full w-full object-cover"
+                                    />
                                 </button>
                             ))}
                         </div>
@@ -316,7 +284,7 @@ export default function CocktailBarPage() {
                     <div className="overflow-hidden rounded-3xl border border-stone-200 bg-white shadow-soft">
                         <iframe
                             title="Map of Azul Paraiso"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1963.5247238812365!2d26.14773563380499!3d39.320488057589785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ba9152a2634441%3A0x6bae6a710312b476!2sAZUL%20Para%C3%ADso!5e1!3m2!1sen!2sgr!4v1779712681168!5m2!1sen!2sgr"
+                            src=""
                             className="h-56 w-full border-0"
                             loading="lazy"
                         />
@@ -356,7 +324,6 @@ export default function CocktailBarPage() {
                             e.stopPropagation();
                             setIsOpen(false);
                         }}
-                        aria-label="Close"
                         className="absolute right-6 top-6 rounded-full bg-white/10 p-2 text-white hover:bg-white/20"
                     >
                         <X className="h-5 w-5" />
@@ -367,37 +334,23 @@ export default function CocktailBarPage() {
                             e.stopPropagation();
                             prev();
                         }}
-                        aria-label="Previous"
                         className="absolute left-6 top-1/2 -translate-y-1/2 rounded-full bg-white/10 p-3 text-white hover:bg-white/20"
                     >
                         <ChevronLeft className="h-6 w-6" />
                     </button>
 
-                    {GALLERY[index].type === "image" ? (
-                        <img
-                            src={GALLERY[index].src}
-                            alt="Gallery fullscreen"
-                            className="max-h-[85vh] max-w-[90vw] object-contain"
-                            onClick={(e) => e.stopPropagation()}
-                        />
-                    ) : (
-                        <video
-                            key={GALLERY[index].src}
-                            controls
-                            autoPlay
-                            className="max-h-[85vh] max-w-[90vw]"
-                            onClick={(e) => e.stopPropagation()}
-                        >
-                            <source src={GALLERY[index].src} type="video/mp4" />
-                        </video>
-                    )}
+                    <img
+                        src={GALLERY[index].src}
+                        alt="Gallery fullscreen"
+                        className="max-h-[85vh] max-w-[90vw] object-contain"
+                        onClick={(e) => e.stopPropagation()}
+                    />
 
                     <button
                         onClick={(e) => {
                             e.stopPropagation();
                             next();
                         }}
-                        aria-label="Next"
                         className="absolute right-6 top-1/2 -translate-y-1/2 rounded-full bg-white/10 p-3 text-white hover:bg-white/20"
                     >
                         <ChevronRight className="h-6 w-6" />
