@@ -118,21 +118,21 @@ export default function LesvosSouvenirStore(){
         <div className="min-h-screen bg-[#f7f4ee] text-slate-800">
 
 
-            <section className="relative flex h-screen items-center justify-center overflow-hidden">
+            <section className="relative flex min-h-[70vh] md:h-screen items-center justify-center overflow-hidden">
                 <img
                     src="/mourelia/mourelia9.jpg"
                     alt="Lesvos"
                     className="absolute inset-0 h-full w-full object-cover"
                 />
+
                 <div className="absolute inset-0 bg-black/50" />
 
-                <div className="relative z-10 max-w-4xl px-6 text-center text-white">
-
-                    <h1 className="mt-4 text-6xl font-black leading-tight md:text-8xl">
-                        KalosTaMourelia
+                <div className="relative z-10 max-w-4xl px-4 sm:px-6 text-center text-white">
+                    <h1 className="mt-4 text-4xl font-black leading-tight sm:text-5xl md:text-6xl lg:text-8xl">
+                        Kalos Ta Mourelia
                     </h1>
 
-                    <p className="mt-8 text-xl text-slate-200 md:text-2xl">
+                    <p className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl lg:text-2xl text-slate-200 max-w-2xl mx-auto">
                         Premium souvenir t-shirts inspired by Mytilene and the Aegean Sea.
                     </p>
                 </div>
