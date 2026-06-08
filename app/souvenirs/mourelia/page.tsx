@@ -138,11 +138,11 @@ export default function LesvosSouvenirStore(){
                 </div>
             </section>
             <section className="py-24 px-6 bg-white">
-                <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+                <div className="max-w-6xl mx-auto">
                     <div>
-      <span className="uppercase tracking-[4px] text-[#ee9b00] font-semibold">
-        Our Story
-      </span>
+                        <span className="uppercase tracking-[4px] text-[#ee9b00] font-semibold">
+                             Our Story
+                        </span>
 
                         <h2 className="text-5xl font-black mt-4 mb-8">
                             A piece of Lesvos in each T-shirt
@@ -180,6 +180,28 @@ export default function LesvosSouvenirStore(){
                             industry for over 25 years. They live and work in Athens and Lesvos
                             while they are the owners of the creative office FiftyTwo and have been
                             awarded for their work, in Greece and abroad.
+                        </p>
+                    </div>
+                </div>
+                <div className="mt-12 border-t border-slate-200 pt-8">
+                    <h3 className="text-2xl font-bold mb-4 text-slate-900">
+                        Contact Information
+                    </h3>
+
+                    <div className="space-y-3 text-lg text-slate-600">
+                        <p>
+                            <strong>Email:</strong> info@kalostamourelia.gr
+                        </p>
+
+                        <p>
+                            <strong>Phone:</strong> 2111833835
+                        </p>
+
+                        <p>
+                            <strong>Location:</strong> 50 Patriarchou Ioakeim, Tavros - Athens, Attica - Postal Code 17778
+                        </p>
+                        <p>
+                            <strong>Website:</strong> www.kalostamourelia.gr
                         </p>
                     </div>
                 </div>
