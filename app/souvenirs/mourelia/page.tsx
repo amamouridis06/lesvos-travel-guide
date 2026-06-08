@@ -183,26 +183,59 @@ export default function LesvosSouvenirStore(){
                         </p>
                     </div>
                 </div>
-                <div className="mt-12 border-t border-slate-200 pt-8">
-                    <h3 className="text-2xl font-bold mb-4 text-slate-900">
-                        Contact Information
-                    </h3>
+                <div className="mt-16">
+                    <div className="rounded-3xl bg-slate-50 border border-slate-200 p-8 md:p-12">
+                        <div className="mb-8">
+            <span className="uppercase tracking-[4px] text-[#ee9b00] font-semibold text-sm">
+                Contact Us
+            </span>
 
-                    <div className="space-y-3 text-lg text-slate-600">
-                        <p>
-                            <strong>Email:</strong> info@kalostamourelia.gr
-                        </p>
+                            <h3 className="text-3xl font-black text-slate-900 mt-3">
+                                We'd Love to Hear From You
+                            </h3>
 
-                        <p>
-                            <strong>Phone:</strong> 2111833835
-                        </p>
+                            <p className="mt-4 text-slate-600 text-lg leading-relaxed">
+                                Whether you have a question about our products, an order, or a
+                                collaboration opportunity, feel free to get in touch with us.
+                            </p>
+                        </div>
 
-                        <p>
-                            <strong>Location:</strong> 50 Patriarchou Ioakeim, Tavros - Athens, Attica - Postal Code 17778
-                        </p>
-                        <p>
-                            <strong>Website:</strong> www.kalostamourelia.gr
-                        </p>
+                        <div className="grid md:grid-cols-3 gap-6">
+                            <div className="bg-white rounded-2xl p-6 border border-slate-200">
+                                <p className="text-sm uppercase tracking-wider text-slate-500 mb-2">
+                                    Email
+                                </p>
+                                <p className="font-semibold text-slate-900">
+                                    info@kalostamourelia.gr
+                                </p>
+                            </div>
+
+                            <div className="bg-white rounded-2xl p-6 border border-slate-200">
+                                <p className="text-sm uppercase tracking-wider text-slate-500 mb-2">
+                                    Phone
+                                </p>
+                                <p className="font-semibold text-slate-900">
+                                    2111833835
+                                </p>
+                            </div>
+
+                            <div className="bg-white rounded-2xl p-6 border border-slate-200">
+                                <p className="text-sm uppercase tracking-wider text-slate-500 mb-2">
+                                    Location
+                                </p>
+                                <p className="font-semibold text-slate-900">
+                                    50 Patriarchou Ioakeim, Tavros - Athens, Attica - Postal Code 17778
+                                </p>
+                            </div>
+                            <div className="bg-white rounded-2xl p-6 border border-slate-200">
+                                <p className="text-sm uppercase tracking-wider text-slate-500 mb-2">
+                                    Website
+                                </p>
+                                <p className="font-semibold text-slate-900">
+                                    www.kalostamourelia.gr
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -218,24 +251,6 @@ export default function LesvosSouvenirStore(){
 
                                 className="h-96 w-full object-cover transition duration-700 group-hover:scale-110"
                             />
-
-                {/*            <div className="p-6">*/}
-                {/*<span className="rounded-full bg-[#ee9b00] px-3 py-1 text-sm text-white">*/}
-                {/*  {product.badge}*/}
-                {/*</span>*/}
-
-                {/*                /!*<h3 className="mt-4 text-2xl font-bold">{product.name}</h3>*!/*/}
-
-                {/*  /!*              <div className="mt-5 flex items-center justify-between">*!/*/}
-                {/*  /!*<span className="text-2xl font-bold text-[#005f73]">*!/*/}
-                {/*  /!*  {product.price}*!/*/}
-                {/*  /!*</span>*!/*/}
-                {/*  */}
-                {/*  /!*                  <button className="rounded-xl bg-[#005f73] px-5 py-2 text-white">*!/*/}
-                {/*  /!*                      Buy*!/*/}
-                {/*  /!*                  </button>*!/*/}
-                {/*  /!*              </div>*!/*/}
-                {/*            </div>*/}
                         </div>
                     ))}
                 </div>
