@@ -77,36 +77,86 @@ const tours: Tour[] = [
         duration: "from 4 hrs",
         people: "up to 8 people",
         description:
-            "The northeast keeps to itself, and rewards anyone who follows it there. A working farm where olive oil and cheese come from the same hands, a monastery in Mantamados that's drawn pilgrims for nine centuries, and a fishing village at the end of the road where the boats still go out at dawn. More looking than driving.",
+            "The northeast keeps to itself, and rewards anyone who follows it there. " +
+            "A working farm where olive oil and cheese come from the same hands, a monastery in Mantamados that's drawn pilgrims for nine centuries" +
+            ", and a fishing village at the end of the road where the boats still go out at dawn. More looking than driving.",
         image:
             "/golocal/sykamnias_tour.png",
         learnMoreUrl: `https://golocaltransfer.com/tours/skala-sykaminias-hidden-countryside-lesvos`,
     },
-    // {
-    //     title: "Food & Culture Experience",
-    //     duration: "5 hours",
-    //     description:
-    //         "Visit traditional villages, local markets and authentic places for food lovers.",
-    //     image:
-    //         "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80",
-    //     learnMoreUrl: `${company.website}/tours/food-culture-experience`,
-    // },
+    {
+        title: "A Day in Mytilene",
+        duration: "from 5½ hrs",
+        description:
+            "The capital isn't large, but it punches above its weight. The Castle of Mytilene — one of the largest in the Mediterranean " +
+            "— holds the harbor at one end; Ermou Street, still a working market, runs the length of the old town. The Theophilos and Teriade" +
+            " museums hold work most island towns would build themselves around. Sappho watches the waterfront. End the day at Therma, where the " +
+            "hot springs meet the sea.",
+        image:
+            "/golocal/mytilene_tour.png",
+        learnMoreUrl: `https://golocaltransfer.com/tours/day-in-mytilene-lesvos`,
+    },
+    {
+        title: "A Day in Mytilene",
+        duration: "from 5½ hrs",
+        description:
+            "The capital isn't large, but it punches above its weight. The Castle of Mytilene — one of the largest in the Mediterranean —" +
+            " holds the harbor at one end; Ermou Street, still a working market, runs the length of the old town. The Theophilos and Teriade " +
+            "museums hold work most island towns would build themselves around. Sappho watches the waterfront. End the day at Therma, where the " +
+            "hot springs meet the sea.",
+        image:
+            "/golocal/mytilene_tour.png",
+        learnMoreUrl: `https://golocaltransfer.com/tours/day-in-mytilene-lesvos`,
+    },
+    {
+        title: "Petrified Forest & West Lesvos",
+        duration: "from 7 hrs",
+        description:
+            "Twenty million years ago, a volcanic eruption turned an entire forest to stone." +
+            " We climb first to Agios Hypselos Monastery — the view from up there stops you — then down " +
+            "to Sigri and the open-air park where the fossilized trunks still stand, and the museum that tells the story behind them. " +
+            "The day ends at Skala Eressos, a long unhurried beach at the western edge of the island.",
+        image:
+            "/golocal/petrified_tours.png",
+        learnMoreUrl: `https://golocaltransfer.com/tours/petrified-forest-west-lesvos`,
+    },
+    {
+        title: "The Ouzo Trail to Plomari",
+        duration: "from 7 hrs",
+        description:
+            "A road from the mountains to the sea, and ouzo at the bottom of it. Agiasos first — cobbled, cool, deep in pine, with woodworkers and" +
+            " a famous church to keep it interesting. Then down to Plomari and the Barbayiannis distillery, where the recipe hasn't changed in more than" +
+            " a century. By late afternoon, anise and salt air make a kind of sense together.",
+        image:
+            "/golocal/plomari_tours.png",
+        learnMoreUrl: `https://golocaltransfer.com/tours/ouzo-trail-plomari-lesvos`,
+    },
+    {
+        title: "Build Your Own Tour",
+        duration: "on demand",
+        description:
+            "Some days are best left unplanned until the morning. Tell us the kind of day you want — slow and coastal, deep into the mountains, food-first, photography-led" +
+            " — and we'll shape the route around it. The island is large, the roads are quiet, and a good day here usually finds itself.",
+        image:
+            "/golocal/golocal-logo.png",
+        learnMoreUrl: `https://golocaltransfer.com/tours-lesvos`,
+    },
 ];
 
 const fleet: FleetItem[] = [
     {
-        title: "Premium Sedan",
-        passengers: "Up to 3 passengers",
-        luggage: "2 large suitcases",
+        title: "Minivan",
+        passengers: "Up to 9 passengers",
+        luggage: "6-7 large suitcases",
         image:
-            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=900&q=80",
+            "/golocal/minivan1.png",
     },
     {
-        title: "Luxury Minivan",
+        title: "SUV",
         passengers: "Up to 7 passengers",
-        luggage: "7 suitcases",
+        luggage: "3 large suitcases and backpacks",
         image:
-            "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=900&q=80",
+            "/golocal/suv.png",
     },
 ];
 
@@ -292,19 +342,19 @@ export default function TransfersAndToursCompanyContactLogo() {
                 </div>
             </section>
 
-            <section style={styles.testimonialSection}>
-                <blockquote style={styles.quote}>
-                    “Excellent service, professional driver and a beautiful private tour. Everything was punctual, clean and perfectly organized.”
-                </blockquote>
-                <p style={styles.quoteAuthor}>— Guest Review</p>
-            </section>
+            {/*<section style={styles.testimonialSection}>*/}
+            {/*    <blockquote style={styles.quote}>*/}
+            {/*        “Excellent service, professional driver and a beautiful private tour. Everything was punctual, clean and perfectly organized.”*/}
+            {/*    </blockquote>*/}
+            {/*    <p style={styles.quoteAuthor}>— Guest Review</p>*/}
+            {/*</section>*/}
 
             <section id="contact" style={styles.contactSection}>
                 <div style={styles.contactIntro}>
                     <p style={styles.sectionLabelGold}>Contact</p>
                     <h2 style={styles.contactTitle}>Get in touch directly</h2>
                     <p style={styles.contactText}>
-                        For transfers, tours, prices and availability, contact us by phone, WhatsApp or email.
+                        For transfers, tours, prices and availability, contact by phone, WhatsApp or email.
                     </p>
                 </div>
 
