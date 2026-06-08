@@ -146,6 +146,13 @@ const fleet: FleetItem[] = [
         image:
             "/golocal/suv.jpg",
     },
+    {
+        title: "Minivan & SUV",
+        passengers: "Up to 7 passengers",
+        luggage: "3 large suitcases and backpacks",
+        image:
+            "/golocal/cars.jpg",
+    },
 ];
 
 function useBreakpoint(): Breakpoint {
