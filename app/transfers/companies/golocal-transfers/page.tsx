@@ -137,14 +137,14 @@ const fleet: FleetItem[] = [
         passengers: "Up to 9 passengers",
         luggage: "6-7 large suitcases",
         image:
-            "/golocal/minivan1.png",
+            "/golocal/minivan1.jpg",
     },
     {
         title: "SUV",
         passengers: "Up to 7 passengers",
         luggage: "3 large suitcases and backpacks",
         image:
-            "/golocal/suv.png",
+            "/golocal/suv.jpg",
     },
 ];
 
