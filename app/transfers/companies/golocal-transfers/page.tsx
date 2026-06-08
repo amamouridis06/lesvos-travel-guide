@@ -83,6 +83,7 @@ const tours: Tour[] = [
     {
         title: "A Day in Mytilene",
         duration: "from 5½ hrs",
+        people: "up to 8 people",
         description:
             "The capital isn't large, but it punches above its weight. The Castle of Mytilene — one of the largest in the Mediterranean — holds the harbor at one end; Ermou Street, still a working market, runs the length of the old town. The Theophilos and Teriade        museums hold work most island towns would build themselves around. Sappho watches the waterfront. End the day at Therma, where the hot springs meet the sea.",
         image:
@@ -92,6 +93,7 @@ const tours: Tour[] = [
     {
         title: "A Day in Mytilene",
         duration: "from 5½ hrs",
+        people: "up to 8 people",
         description:
             "The capital isn't large, but it punches above its weight. The Castle of Mytilene — one of the largest in the Mediterranean —" +
             " holds the harbor at one end; Ermou Street, still a working market, runs the length of the old town. The Theophilos and Teriade " +
@@ -104,6 +106,7 @@ const tours: Tour[] = [
     {
         title: "Petrified Forest & West Lesvos",
         duration: "from 7 hrs",
+        people: "up to 8 people",
         description:
             "Twenty million years ago, a volcanic eruption turned an entire forest to stone." +
             " We climb first to Agios Hypselos Monastery — the view from up there stops you — then down " +
@@ -116,6 +119,7 @@ const tours: Tour[] = [
     {
         title: "The Ouzo Trail to Plomari",
         duration: "from 7 hrs",
+        people: "up to 8 people",
         description:
             "A road from the mountains to the sea, and ouzo at the bottom of it. Agiasos first — cobbled, cool, deep in pine, with woodworkers and" +
             " a famous church to keep it interesting. Then down to Plomari and the Barbayiannis distillery, where the recipe hasn't changed in more than" +
@@ -127,6 +131,7 @@ const tours: Tour[] = [
     {
         title: "Build Your Own Tour",
         duration: "on demand",
+        people: "up to 8 people",
         description:
             "Some days are best left unplanned until the morning. Tell us the kind of day you want — slow and coastal, deep into the mountains, food-first, photography-led" +
             " — and we'll shape the route around it. The island is large, the roads are quiet, and a good day here usually finds itself.",
