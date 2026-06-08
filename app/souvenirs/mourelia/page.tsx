@@ -186,17 +186,12 @@ export default function LesvosSouvenirStore(){
                 <div className="mt-16">
                     <div className="rounded-3xl bg-slate-50 border border-slate-200 p-8 md:p-12">
                         <div className="mb-8">
-            <span className="uppercase tracking-[4px] text-[#ee9b00] font-semibold text-sm">
-                Contact Us
-            </span>
-
-                            <h3 className="text-3xl font-black text-slate-900 mt-3">
-                                We'd Love to Hear From You
-                            </h3>
-
+                            <span className="uppercase tracking-[4px] text-[#ee9b00] font-semibold text-sm">
+                                Contact Us
+                            </span>
                             <p className="mt-4 text-slate-600 text-lg leading-relaxed">
-                                Whether you have a question about our products, an order, or a
-                                collaboration opportunity, feel free to get in touch with us.
+                                Whether you have a question about the products, an order, or a
+                                collaboration opportunity, feel free to get in touch with them.
                             </p>
                         </div>
 
