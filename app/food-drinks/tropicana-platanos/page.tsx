@@ -120,7 +120,7 @@ export default function TropicanaPage() {
               </h1>
 
               <p className="mt-4 max-w-xl text-base text-white/80 sm:text-lg">
-                A fantastic place to eat in Molyvos with very firndly service and romantic atmposhere
+                Enjoy an unforgettable dining experience in Molyvos, where delicious food, friendly hospitality, and a romantic setting come together perfectly.
               </p>
             </div>
           </div>

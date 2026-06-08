@@ -29,11 +29,11 @@ type Breakpoint = "mobile" | "tablet" | "desktop";
 const company = {
     name: "GO LOCAL Transfers & Tours",
     tagline: "Private Transfers & Curated Tours",
-    phone: "+306985800976",
-    whatsapp: "+306985800976",
-    email: " info@golocaltransfer.com",
+    phone: "+30 6985800976",
+    whatsapp: "+30 6985800976",
+    email: "info@golocaltransfer.com",
     location: "Molivos, Lesvos",
-    instagram: "@aegeanway",
+    instagram: "@golocal_lesvos",
     // website: "www.golocaltransfer.com",
     // Replace this with your real logo image path.
     // Example for Next.js public folder: "/logo.png"
@@ -150,30 +150,13 @@ export default function TransfersAndToursCompanyContactLogo() {
                     <a href="#home" style={styles.brand} onClick={closeMobileMenu}>
                         <img src={company.logoSrc} alt={`${company.name} logo`} style={styles.logoImage} />
                         <span style={styles.brandText}>
-              Aegean<span style={styles.brandAccent}>Way</span>
+              Go<span style={styles.brandAccent}>Local</span>
             </span>
                     </a>
 
-                    {isMobile ? (
-                        <button
-                            type="button"
-                            aria-label="Toggle navigation menu"
-                            aria-expanded={mobileMenuOpen}
-                            onClick={() => setMobileMenuOpen((open) => !open)}
-                            style={styles.menuButton}
-                        >
-                            {mobileMenuOpen ? "✕" : "☰"}
-                        </button>
-                    ) : (
-                        <NavLinks styles={styles} onNavigate={closeMobileMenu} />
-                    )}
                 </nav>
 
-                {isMobile && mobileMenuOpen && (
-                    <div style={styles.mobileMenu}>
-                        <NavLinks styles={styles} onNavigate={closeMobileMenu} />
-                    </div>
-                )}
+
 
                 <div id="home" style={styles.heroGrid}>
                     <div style={styles.heroText}>
@@ -214,9 +197,6 @@ export default function TransfersAndToursCompanyContactLogo() {
                                 <img src={company.logoSrc} alt={`${company.name} logo`} style={styles.bigLogoImage} />
                                 <p style={styles.cardOverline}>Premium transfers</p>
                                 <h2 style={styles.heroCardTitle}>Private rides & curated tours</h2>
-                                <p style={styles.heroCardText}>
-                                    Add your real logo in the public folder as <strong>/logo.png</strong> or change the logoSrc value.
-                                </p>
                             </div>
                         </aside>
                     )}
@@ -358,30 +338,7 @@ export default function TransfersAndToursCompanyContactLogo() {
     );
 }
 
-function NavLinks({
-                      styles,
-                      onNavigate,
-                  }: {
-    styles: Record<string, CSSProperties>;
-    onNavigate: () => void;
-}) {
-    return (
-        <div style={styles.navLinks}>
-            <a href="#services" style={styles.navLink} onClick={onNavigate}>
-                Services
-            </a>
-            <a href="#tours" style={styles.navLink} onClick={onNavigate}>
-                Tours
-            </a>
-            <a href="#fleet" style={styles.navLink} onClick={onNavigate}>
-                Fleet
-            </a>
-            <a href="#contact" style={styles.navButton} onClick={onNavigate}>
-                Contact
-            </a>
-        </div>
-    );
-}
+
 
 function createStyles(breakpoint: Breakpoint): Record<string, CSSProperties> {
     const isMobile = breakpoint === "mobile";
