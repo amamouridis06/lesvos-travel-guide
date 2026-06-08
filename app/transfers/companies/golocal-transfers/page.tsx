@@ -35,8 +35,6 @@ const company = {
     location: "Molivos, Lesvos",
     instagram: "@golocal_lesvos",
     // website: "www.golocaltransfer.com",
-    // Replace this with your real logo image path.
-    // Example for Next.js public folder: "/logo.png"
     logoSrc: "/golocal/golocal-logo.png",
 };
 
@@ -77,9 +75,7 @@ const tours: Tour[] = [
         duration: "from 4 hrs",
         people: "up to 8 people",
         description:
-            "The northeast keeps to itself, and rewards anyone who follows it there. " +
-            "A working farm where olive oil and cheese come from the same hands, a monastery in Mantamados that's drawn pilgrims for nine centuries" +
-            ", and a fishing village at the end of the road where the boats still go out at dawn. More looking than driving.",
+            "The northeast keeps to itself, and rewards anyone who follows it there. Α working farm where olive oil and cheese come from the same hands, a monastery in Mantamados that's drawn pilgrims for nine centuries, and a fishing village at the end of the road where the boats still go out at dawn. More looking than driving.",
         image:
             "/golocal/sykamnias_tour.png",
         learnMoreUrl: `https://golocaltransfer.com/tours/skala-sykaminias-hidden-countryside-lesvos`,
@@ -88,10 +84,7 @@ const tours: Tour[] = [
         title: "A Day in Mytilene",
         duration: "from 5½ hrs",
         description:
-            "The capital isn't large, but it punches above its weight. The Castle of Mytilene — one of the largest in the Mediterranean " +
-            "— holds the harbor at one end; Ermou Street, still a working market, runs the length of the old town. The Theophilos and Teriade" +
-            " museums hold work most island towns would build themselves around. Sappho watches the waterfront. End the day at Therma, where the " +
-            "hot springs meet the sea.",
+            "The capital isn't large, but it punches above its weight. The Castle of Mytilene — one of the largest in the Mediterranean — holds the harbor at one end; Ermou Street, still a working market, runs the length of the old town. The Theophilos and Teriade        museums hold work most island towns would build themselves around. Sappho watches the waterfront. End the day at Therma, where the hot springs meet the sea.",
         image:
             "/golocal/mytilene_tour.png",
         learnMoreUrl: `https://golocaltransfer.com/tours/day-in-mytilene-lesvos`,
