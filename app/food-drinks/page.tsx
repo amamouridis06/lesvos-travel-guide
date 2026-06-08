@@ -57,6 +57,15 @@ const cafeTaverns: FoodItem[] = [
 
 const Restaurants: FoodItem[] = [
   {
+    title: "Tropicana - Platanos",
+    category: "Restaurant",
+    description: "Authentic Greek flavors, and fantastic hospitality.",
+    location: "Molyvos, Lesvos",
+    image: "/tropicana/tropicana1.jpg",
+    alt: "Tropicana",
+    href: "/food-drinks/tropicana-platanos",
+  },
+  {
     title: "To Limanaki ton Pamfilon",
     category: "Restaurants",
     description: "Fresh fish, local dishes, and a relaxing seaside atmosphere.",
@@ -73,15 +82,6 @@ const Restaurants: FoodItem[] = [
     image: "/votsalo/votsalo-logo.jpg",
     alt: "Taverna To Votsalo",
     href: "/food/taverna-to-votsalo",
-  },
-  {
-    title: "Tropicana - Platanos",
-    category: "Restaurant",
-    description: "Authentic Greek flavors, and fantastic hospitality.",
-    location: "Molyvos, Lesvos",
-    image: "/tropicana/tropicana1.jpg",
-    alt: "Tropicana",
-    href: "/food-drinks/tropicana-platanos",
   },
   {
     title: "Nisi Restaurant",
