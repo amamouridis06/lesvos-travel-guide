@@ -85,16 +85,6 @@ const tours: Tour[] = [
         duration: "from 5½ hrs",
         people: "up to 8 people",
         description:
-            "The capital isn't large, but it punches above its weight. The Castle of Mytilene — one of the largest in the Mediterranean — holds the harbor at one end; Ermou Street, still a working market, runs the length of the old town. The Theophilos and Teriade        museums hold work most island towns would build themselves around. Sappho watches the waterfront. End the day at Therma, where the hot springs meet the sea.",
-        image:
-            "/golocal/mytilene_tour.png",
-        learnMoreUrl: `https://golocaltransfer.com/tours/day-in-mytilene-lesvos`,
-    },
-    {
-        title: "A Day in Mytilene",
-        duration: "from 5½ hrs",
-        people: "up to 8 people",
-        description:
             "The capital isn't large, but it punches above its weight. The Castle of Mytilene — one of the largest in the Mediterranean —" +
             " holds the harbor at one end; Ermou Street, still a working market, runs the length of the old town. The Theophilos and Teriade " +
             "museums hold work most island towns would build themselves around. Sappho watches the waterfront. End the day at Therma, where the " +
@@ -740,8 +730,8 @@ function createStyles(breakpoint: Breakpoint): Record<string, CSSProperties> {
             gridTemplateColumns: isMobile
                 ? "1fr"
                 : isTablet
-                    ? "repeat(2, minmax(0, 1fr))"
-                    : "repeat(auto-fit, minmax(270px, 1fr))",
+                    ? "repeat(2, 1fr)"
+                    : "repeat(3, 1fr)",
             gap: isMobile ? 18 : 24,
         },
         tourCard: {
