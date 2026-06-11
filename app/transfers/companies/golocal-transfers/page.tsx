@@ -197,11 +197,11 @@ export default function TransfersAndToursCompanyContactLogo() {
 
                 <div id="home" style={styles.heroGrid}>
                     <div style={styles.heroText}>
-                        {/*<p style={styles.eyebrow}>{company.tagline}</p>*/}
-                        {/*<h1 style={styles.heroTitle}>Travel in comfort. Discover more.</h1>*/}
-                        {/*<p style={styles.heroSubtitle}>*/}
-                        {/*    Premium airport transfers, private chauffeur services and tailor-made tours with professional local drivers.*/}
-                        {/*</p>*/}
+                        <p style={styles.eyebrow}>{company.tagline}</p>
+                        <h1 style={styles.heroTitle}>Travel in comfort. Discover more.</h1>
+                        <p style={styles.heroSubtitle}>
+                            Premium airport transfers, private chauffeur services and tailor-made tours with professional local drivers.
+                        </p>
 
                         <div style={styles.heroActions}>
                             <a href={`tel:${company.phone.replace(/\s/g, "")}`} style={styles.primaryButton}>
@@ -228,15 +228,15 @@ export default function TransfersAndToursCompanyContactLogo() {
                         </div>
                     </div>
 
-                    {!isMobile && (
-                        <aside style={styles.logoShowcaseCard}>
-                            <div style={styles.logoShowcaseInner}>
-                                <img src={company.logoSrc} alt={`${company.name} logo`} style={styles.bigLogoImage} />
-                                <p style={styles.cardOverline}>Premium transfers</p>
-                                <h2 style={styles.heroCardTitle}>Private rides & curated tours</h2>
-                            </div>
-                        </aside>
-                    )}
+                    {/*{!isMobile && (*/}
+                    {/*    <aside style={styles.logoShowcaseCard}>*/}
+                    {/*        <div style={styles.logoShowcaseInner}>*/}
+                    {/*            <img src={company.logoSrc} alt={`${company.name} logo`} style={styles.bigLogoImage} />*/}
+                    {/*            <p style={styles.cardOverline}>Premium transfers</p>*/}
+                    {/*            <h2 style={styles.heroCardTitle}>Private rides & curated tours</h2>*/}
+                    {/*        </div>*/}
+                    {/*    </aside>*/}
+                    {/*)}*/}
                 </div>
             </section>
 
