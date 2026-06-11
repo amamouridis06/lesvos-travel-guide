@@ -34,7 +34,6 @@ const company = {
     email: "info@golocaltransfer.com",
     location: "Molivos, Lesvos",
     instagram: "@golocal_lesvos",
-    // website: "www.golocaltransfer.com",
     logoSrc: "/golocal/golocal-logo.png",
 };
 
@@ -48,13 +47,13 @@ const services: Service[] = [
     {
         title: "Private Chauffeur Service",
         description:
-            "Discreet, comfortable and flexible transportation for couples, families and business guests.",
+            "Discreet, comfortable, and flexible transportation tailored for couples, families, and business travelers.",
         icon: "🚘",
     },
     {
         title: "Tailor-Made Tours",
         description:
-            "Private tours designed around your schedule, interests and preferred stops.",
+            "Private tours tailored to your schedule, interests, and preferred destinations.",
         icon: "🗺️",
     },
 ];
@@ -146,13 +145,6 @@ const fleet: FleetItem[] = [
         image:
             "/golocal/suv1.jpg",
     },
-    // {
-    //     title: "Minivan & SUV",
-    //     passengers: "Up to 7 passengers",
-    //     luggage: "3 large suitcases and backpacks",
-    //     image:
-    //         "/golocal/cars.png",
-    // },
 ];
 
 function useBreakpoint(): Breakpoint {
@@ -409,7 +401,7 @@ function createStyles(breakpoint: Breakpoint): Record<string, CSSProperties> {
             minHeight: isMobile ? "auto" : isTablet ? "760px" : "780px",
             padding: `${isMobile ? "18px" : "28px"} ${pagePadding} ${isMobile ? "58px" : "80px"}`,
             background:
-                "linear-gradient(135deg, rgba(8, 13, 25, 0.96), rgba(13, 52, 70, 0.9)), url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1900&q=80') center/cover",
+                "linear-gradient(135deg, rgba(8, 13, 25, 0.96), rgba(13, 52, 70, 0.9)), url('/golocal/golocal-logo.png') center/cover",
             color: "#ffffff",
         },
         navbar: {
