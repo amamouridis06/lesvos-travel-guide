@@ -183,15 +183,15 @@ export default function TransfersAndToursCompanyContactLogo() {
     return (
         <main style={styles.page}>
             <section style={styles.hero}>
-                <nav style={styles.navbar}>
-                    <a href="#home" style={styles.brand} onClick={closeMobileMenu}>
-                        <img src={company.logoSrc} alt={`${company.name} logo`} style={styles.logoImage} />
-                        <span style={styles.brandText}>
-              Go<span style={styles.brandAccent}>Local</span>
-            </span>
-                    </a>
+            {/*    <nav style={styles.navbar}>*/}
+            {/*        <a href="#home" style={styles.brand} onClick={closeMobileMenu}>*/}
+            {/*            <img src={company.logoSrc} alt={`${company.name} logo`} style={styles.logoImage} />*/}
+            {/*            <span style={styles.brandText}>*/}
+            {/*  Go<span style={styles.brandAccent}>Local</span>*/}
+            {/*</span>*/}
+            {/*        </a>*/}
 
-                </nav>
+            {/*    </nav>*/}
 
 
 
