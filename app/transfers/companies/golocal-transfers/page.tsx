@@ -144,15 +144,15 @@ const fleet: FleetItem[] = [
         passengers: "Up to 7 passengers",
         luggage: "3 large suitcases and backpacks",
         image:
-            "/golocal/suv.jpg",
+            "/golocal/suv1.jpg",
     },
-    {
-        title: "Minivan & SUV",
-        passengers: "Up to 7 passengers",
-        luggage: "3 large suitcases and backpacks",
-        image:
-            "/golocal/cars.jpg",
-    },
+    // {
+    //     title: "Minivan & SUV",
+    //     passengers: "Up to 7 passengers",
+    //     luggage: "3 large suitcases and backpacks",
+    //     image:
+    //         "/golocal/cars.png",
+    // },
 ];
 
 function useBreakpoint(): Breakpoint {
