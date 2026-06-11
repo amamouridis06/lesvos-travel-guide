@@ -107,7 +107,7 @@ export default function DessertShopGuidePage() {
                         {
                             icon: <Euro className="w-7 h-7" />,
                             title: "Average",
-                            value: "1 — 5€",
+                            value: "1 — 10€",
                         },
                     ].map((item, i) => (
                         <motion.div
