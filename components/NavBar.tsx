@@ -98,7 +98,7 @@ export default function NavBar() {
                   Villages
                 </Link>
 
-                <Link href="/beaches" onClick={closeMenu} className="py-3 border-b border-white/10 hover:text-yellow-300 transition">
+                <Link href="/under-construction" onClick={closeMenu} className="py-3 border-b border-white/10 hover:text-yellow-300 transition">
                   Beaches
                 </Link>
 
@@ -118,7 +118,7 @@ export default function NavBar() {
                   Rentals
                 </Link>
 
-                <Link href="/taxi-services" onClick={closeMenu} className="py-3 border-b border-white/10 hover:text-yellow-300 transition">
+                <Link href="/transfers" onClick={closeMenu} className="py-3 border-b border-white/10 hover:text-yellow-300 transition">
                   Transfers
                 </Link>
                 <Link href="/souvenirs/mourelia" onClick={closeMenu} className="py-3 border-b border-white/10 hover:text-yellow-300 transition">
