@@ -87,7 +87,7 @@ const tours: Tour[] = [
             "The capital isn't large, but it punches above its weight. The Castle of Mytilene — one of the largest in the Mediterranean —" +
             " holds the harbor at one end; Ermou Street, still a working market, runs the length of the old town. The Theophilos and Teriade " +
             "museums hold work most island towns would build themselves around. Sappho watches the waterfront. End the day at Therma, where the " +
-            "hot springs meet the sea.",
+            "hot springs meet the sea",
         image:
             "/golocal/mytilene_tour.png",
         learnMoreUrl: `https://golocaltransfer.com/tours/day-in-mytilene-lesvos`,
