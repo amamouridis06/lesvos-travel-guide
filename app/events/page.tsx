@@ -15,7 +15,7 @@ type EventItem = {
 const upcomingEvents: EventItem[] = [
     {
         id: 1,
-        title: "Summer Music Night",
+        title: "Summer Music Nigh",
         date: "2026-07-05",
         time: "20:30",
         location: "Old Town Square",
