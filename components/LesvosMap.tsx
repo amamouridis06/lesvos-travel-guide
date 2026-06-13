@@ -20,7 +20,8 @@ type PlaceCategory =
     | "Food"
     | "Nature"
     | "Culture"
-    | "Accomodation";
+    | "Accomodation"
+    | "Bar";
 type LesvosPlace = {
     id: number;
     name: string;
@@ -45,7 +46,7 @@ const lesvosPlaces: LesvosPlace[] = [
         href: "/places/skala-kallonis",
     },
     {
-        id: 11,
+        id: 2,
         name: "Diamanti Studios",
         location: "Kalloni Lesvos",
         category: "Accomodation",
@@ -56,7 +57,7 @@ const lesvosPlaces: LesvosPlace[] = [
         href: "/hotels/diamanti-studios",
     },
     {
-        id: 12,
+        id: 3,
         name: "Hotel Petrino",
         location: "Molyvos Lesvos",
         category: "Accomodation",
@@ -67,7 +68,7 @@ const lesvosPlaces: LesvosPlace[] = [
         href: "/hotels/petrino",
     },
     {
-        id: 8,
+        id: 4,
         name: "Mytilene",
         location: "Southeastern Lesvos",
         category: "Town",
@@ -78,7 +79,7 @@ const lesvosPlaces: LesvosPlace[] = [
         href: "/places/mytilene",
     },
     {
-        id: 2,
+        id: 5,
         name: "Tryfon",
         location: "Central Lesvos",
         category: "Food",
@@ -89,7 +90,7 @@ const lesvosPlaces: LesvosPlace[] = [
         href: "/food-drinks/tryfon",
     },
     {
-        id: 3,
+        id: 6,
         name: "Tropicana Platanos",
         location: "Northern Lesvos",
         category: "Food",
@@ -99,10 +100,8 @@ const lesvosPlaces: LesvosPlace[] = [
         image: "/tropicana/tropicana1.jpg",
         href: "/food-drinks/tropicana",
     },
-
-
     {
-        id: 10,
+        id: 7,
         name: "Petra",
         location: "Northern Lesvos",
         category: "Beach",
@@ -113,7 +112,7 @@ const lesvosPlaces: LesvosPlace[] = [
         href: "/places/petra",
     },
     {
-        id: 4,
+        id: 8,
         name: "Skala Eresou",
         location: "Western Lesvos",
         category: "Beach",
@@ -124,7 +123,7 @@ const lesvosPlaces: LesvosPlace[] = [
         href: "/places/skala-eresou",
     },
     {
-        id: 5,
+        id: 9,
         name: "Plomari",
         location: "Southern Lesvos",
         category: "Food",
@@ -135,7 +134,7 @@ const lesvosPlaces: LesvosPlace[] = [
         href: "/places/plomari",
     },
     {
-        id: 6,
+        id: 10,
         name: "Sigri",
         location: "Western Lesvos",
         category: "Nature",
@@ -146,7 +145,7 @@ const lesvosPlaces: LesvosPlace[] = [
         href: "/places/sigri",
     },
     {
-        id: 7,
+        id: 11,
         name: "Agiasos",
         location: "Central Lesvos",
         category: "Culture",
@@ -156,6 +155,73 @@ const lesvosPlaces: LesvosPlace[] = [
         image: "/images/explore/agiasos.jpg",
         href: "/places/agiasos",
     },
+    {
+        id: 12,
+        name: "Presidential Beach Villa",
+        location: "Pyrgi Lesvos",
+        category: "Accomodation",
+        description:
+            "A luxury villa in a fanastic village in East Lesvoss",
+        coordinates: [39.0891364,26.5202991],
+        image: "/villa/outdoor2.jpg",
+        href: "/hotels/presidential-beach-villa",
+    },
+    {
+        id: 13,
+        name: "PP Urban Studio",
+        location: "Xarilaou Trikoupi 9 Mytilene, Lesvos",
+        category: "Accomodation",
+        description:
+            "Where modern living meets the city’s heartbeat.",
+        coordinates: [39.1048645,26.5530956],
+        image: "/pp/pp.beds.jpg",
+        href: "/hotels/pp-urban-studio",
+    },
+    {
+        id: 13,
+        name: "Pierres Blanches Residences",
+        location: " Mytilene, Lesvos",
+        category: "Accomodation",
+        description:
+            "Residences in East Lesvos",
+        coordinates: [39.0936071,26.5401768],
+        image: "/pierres/hero.jpeg",
+        href: "/hotels/pierres-blances",
+    },
+    {
+        id: 14,
+        name: "Eressian Hotel & Hammam Spa",
+        location: " Mytilene, Lesvos",
+        category: "Accomodation",
+        description:
+            "Where modern living meets the village life.",
+        coordinates: [39.1700789,25.9349545],
+        image: "/eressian/er_pool1.jpg",
+        href: "/hotels/eressian",
+    },
+    {
+        id: 15,
+        name: "Eressian Hotel & Hammam Spa",
+        location: " Mytilene, Lesvos",
+        category: "Accomodation",
+        description:
+            "Where the sea meets stillness.",
+        coordinates: [39.207121,26.2080755],
+        image: "/thanos/thanosbed.jpg",
+        href: "/hotels/thanos-cozy-appartments",
+    },
+    {
+        id: 15,
+        name: "Azul Paraiso",
+        location: " Mytilene, Lesvos",
+        category: "Bar",
+        description:
+            "A fantastic place to drink your cocktail by the sea and you can eat the best choice the fantastic pancakes",
+        coordinates: [39.3202104,26.1492031],
+        image: "/azul/azul-hero.jpeg",
+        href: "/hotels/azul-paraiso",
+    },
+
 ];
 
 const categoryLabels: Record<PlaceCategory, string> = {
@@ -166,6 +232,7 @@ const categoryLabels: Record<PlaceCategory, string> = {
     Nature: "Nature",
     Culture: "Culture",
     Accomodation:"Accomodation",
+    Bar:"Bar",
 };
 
 function createMarkerIcon(image: string, selected: boolean) {
