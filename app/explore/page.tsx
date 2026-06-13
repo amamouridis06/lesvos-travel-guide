@@ -1,5 +1,6 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import {
     AnimatePresence,
     motion,
@@ -27,10 +28,23 @@ type Destination = {
     rating: number;
     duration: string;
     tag: string;
-    mapX: number;
-    mapY: number;
     href: string;
 };
+
+const LesvosMap = dynamic(() => import("@/components/LesvosMap"), {
+    ssr: false,
+    loading: () => (
+        <div className="flex min-h-[680px] items-center justify-center rounded-[2.5rem] border border-white/10 bg-[#10201d]">
+            <div className="text-center">
+                <div className="mx-auto h-11 w-11 animate-spin rounded-full border-2 border-white/15 border-t-orange-300" />
+
+                <p className="mt-5 text-sm font-semibold text-white/50">
+                    Loading Lesvos map...
+                </p>
+            </div>
+        </div>
+    ),
+});
 
 const categories: {
     name: Category;
@@ -47,111 +61,83 @@ const categories: {
 const destinations: Destination[] = [
     {
         id: 1,
-        title: "Secret Sunset Cove",
-        location: "South Coast",
-        category: "Beaches",
+        title: "Molyvos",
+        location: "Northern Lesvos",
+        category: "Culture",
         description:
-            "A secluded bay with crystal-clear water, dramatic cliffs and unforgettable sunset views.",
-        image: "/images/explore/secret-cove.jpg",
+            "A traditional stone-built village with narrow streets, sea views and an impressive medieval castle.",
+        image: "/images/explore/molyvos.jpg",
         rating: 4.9,
-        duration: "Half day",
-        tag: "Hidden gem",
-        mapX: 68,
-        mapY: 72,
-        href: "/places/secret-sunset-cove",
+        duration: "Full day",
+        tag: "Must visit",
+        href: "/places/molyvos",
     },
     {
         id: 2,
-        title: "The Ancient Quarter",
-        location: "Old Town",
-        category: "Culture",
+        title: "Petra Beach",
+        location: "Northern Lesvos",
+        category: "Beaches",
         description:
-            "Wander through stone alleys, historical buildings and centuries of fascinating local stories.",
-        image: "/images/explore/ancient-quarter.jpg",
+            "A beautiful organized beach beside a lively village with cafés, restaurants and sunset views.",
+        image: "/images/explore/petra.jpg",
         rating: 4.8,
-        duration: "2–3 hours",
-        tag: "Must visit",
-        mapX: 46,
-        mapY: 41,
-        href: "/places/ancient-quarter",
+        duration: "Full day",
+        tag: "Popular",
+        href: "/places/petra",
     },
     {
         id: 3,
-        title: "Clifftop Taverna",
-        location: "West Village",
-        category: "Food",
+        title: "Skala Eresou",
+        location: "Western Lesvos",
+        category: "Beaches",
         description:
-            "Authentic local cuisine served above the sea in one of the area's most atmospheric locations.",
-        image: "/images/explore/clifftop-taverna.jpg",
+            "A long sandy beach with crystal-clear water, relaxed atmosphere and unforgettable sunsets.",
+        image: "/images/explore/skala-eresou.jpg",
         rating: 4.9,
-        duration: "Dinner",
-        tag: "Local favorite",
-        mapX: 25,
-        mapY: 48,
-        href: "/places/clifftop-taverna",
+        duration: "Full day",
+        tag: "Sunset spot",
+        href: "/places/skala-eresou",
     },
     {
         id: 4,
-        title: "Emerald Forest Trail",
-        location: "Northern Hills",
-        category: "Nature",
+        title: "Plomari",
+        location: "Southern Lesvos",
+        category: "Food",
         description:
-            "A peaceful hiking route through pine forest, natural springs and panoramic viewpoints.",
-        image: "/images/explore/forest-trail.jpg",
-        rating: 4.7,
-        duration: "3 hours",
-        tag: "Adventure",
-        mapX: 54,
-        mapY: 20,
-        href: "/places/emerald-forest-trail",
+            "Discover traditional ouzo distilleries, seafood tavernas and authentic local flavors by the sea.",
+        image: "/images/explore/plomari.jpg",
+        rating: 4.8,
+        duration: "Half day",
+        tag: "Local taste",
+        href: "/places/plomari",
     },
     {
         id: 5,
-        title: "Moonlight Rooftop",
-        location: "Central Harbor",
-        category: "Nightlife",
+        title: "Petrified Forest",
+        location: "Western Lesvos",
+        category: "Nature",
         description:
-            "Signature cocktails, live DJ sets and illuminated harbor views from an elegant rooftop.",
-        image: "/images/explore/moonlight-rooftop.jpg",
-        rating: 4.8,
-        duration: "Evening",
-        tag: "Trending",
-        mapX: 61,
-        mapY: 50,
-        href: "/places/moonlight-rooftop",
+            "Explore one of the island’s most remarkable natural monuments in a dramatic volcanic landscape.",
+        image: "/images/explore/petrified-forest.jpg",
+        rating: 4.9,
+        duration: "3–4 hours",
+        tag: "Unique nature",
+        href: "/places/petrified-forest",
     },
     {
         id: 6,
-        title: "Blue Lagoon Escape",
-        location: "East Bay",
-        category: "Beaches",
+        title: "Mytilene Nights",
+        location: "Mytilene",
+        category: "Nightlife",
         description:
-            "A spectacular swimming spot reached by a short coastal path through untouched scenery.",
-        image: "/images/explore/blue-lagoon.jpg",
-        rating: 4.9,
-        duration: "Full day",
-        tag: "Top rated",
-        mapX: 82,
-        mapY: 44,
-        href: "/places/blue-lagoon",
+            "Waterfront bars, elegant rooftops, live music and vibrant summer evenings in the island’s capital.",
+        image: "/images/explore/mytilene-nightlife.jpg",
+        rating: 4.7,
+        duration: "Evening",
+        tag: "Night out",
+        href: "/places/mytilene-nightlife",
     },
 ];
-
-function ArrowIcon() {
-    return (
-        <svg
-            aria-hidden="true"
-            viewBox="0 0 24 24"
-            className="h-4 w-4"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-        >
-            <path d="M5 12h14" />
-            <path d="m13 6 6 6-6 6" />
-        </svg>
-    );
-}
 
 function SearchIcon() {
     return (
@@ -185,6 +171,22 @@ function LocationIcon() {
     );
 }
 
+function ArrowIcon() {
+    return (
+        <svg
+            aria-hidden="true"
+            viewBox="0 0 24 24"
+            className="h-4 w-4"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+        >
+            <path d="M5 12h14" />
+            <path d="m13 6 6 6-6 6" />
+        </svg>
+    );
+}
+
 function DestinationCard({
                              destination,
                              index,
@@ -205,8 +207,8 @@ function DestinationCard({
         damping: 24,
     });
 
-    const rotateX = useTransform(smoothY, [-0.5, 0.5], [6, -6]);
-    const rotateY = useTransform(smoothX, [-0.5, 0.5], [-6, 6]);
+    const rotateX = useTransform(smoothY, [-0.5, 0.5], [5, -5]);
+    const rotateY = useTransform(smoothX, [-0.5, 0.5], [-5, 5]);
 
     return (
         <motion.article
@@ -220,10 +222,15 @@ function DestinationCard({
                 ease: [0.22, 1, 0.36, 1],
             }}
             onPointerMove={(event) => {
-                const rect = event.currentTarget.getBoundingClientRect();
+                const rectangle = event.currentTarget.getBoundingClientRect();
 
-                pointerX.set((event.clientX - rect.left) / rect.width - 0.5);
-                pointerY.set((event.clientY - rect.top) / rect.height - 0.5);
+                pointerX.set(
+                    (event.clientX - rectangle.left) / rectangle.width - 0.5,
+                );
+
+                pointerY.set(
+                    (event.clientY - rectangle.top) / rectangle.height - 0.5,
+                );
             }}
             onPointerLeave={() => {
                 pointerX.set(0);
@@ -236,28 +243,29 @@ function DestinationCard({
             }}
             className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.06] shadow-[0_30px_80px_rgba(0,0,0,0.28)]"
         >
-            <div className="relative h-[390px] overflow-hidden">
+            <div className="relative h-[400px] overflow-hidden">
                 <motion.img
                     src={destination.image}
                     alt={destination.title}
                     className="absolute inset-0 h-full w-full object-cover"
                     whileHover={{ scale: 1.08 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    transition={{
+                        duration: 0.8,
+                        ease: "easeOut",
+                    }}
                 />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-[#080b0c] via-[#080b0c]/25 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#07100f] via-[#07100f]/20 to-transparent" />
 
                 <div className="absolute inset-0 bg-gradient-to-br from-orange-400/10 via-transparent to-cyan-300/10 opacity-0 transition duration-700 group-hover:opacity-100" />
 
-                <div className="absolute left-5 top-5 flex items-center gap-2">
-          <span className="rounded-full border border-white/20 bg-black/25 px-4 py-2 text-xs font-bold text-white backdrop-blur-xl">
-            {destination.tag}
-          </span>
-                </div>
+                <span className="absolute left-5 top-5 rounded-full border border-white/20 bg-black/25 px-4 py-2 text-xs font-bold text-white backdrop-blur-xl">
+          {destination.tag}
+        </span>
 
-                <div className="absolute right-5 top-5 rounded-full border border-white/20 bg-black/25 px-3 py-2 text-xs font-bold text-white backdrop-blur-xl">
-                    ★ {destination.rating}
-                </div>
+                <span className="absolute right-5 top-5 rounded-full border border-white/20 bg-black/25 px-3 py-2 text-xs font-bold text-white backdrop-blur-xl">
+          ★ {destination.rating}
+        </span>
 
                 <div className="absolute inset-x-0 bottom-0 p-6">
                     <div className="mb-3 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-orange-200">
@@ -293,9 +301,9 @@ function DestinationCard({
 }
 
 export default function ExplorePage() {
-    const [activeCategory, setActiveCategory] = useState<Category>("All");
-    const [selectedDestination, setSelectedDestination] =
-        useState<Destination>(destinations[0]);
+    const [activeCategory, setActiveCategory] =
+        useState<Category>("All");
+
     const [search, setSearch] = useState("");
 
     const filteredDestinations = useMemo(() => {
@@ -321,27 +329,32 @@ export default function ExplorePage() {
 
         document
             .getElementById("featured-destinations")
-            ?.scrollIntoView({ behavior: "smooth" });
+            ?.scrollIntoView({
+                behavior: "smooth",
+            });
     }
 
     return (
         <main className="min-h-screen overflow-hidden bg-[#07100f] text-white">
-            {/* HERO */}
+            {/* Hero */}
             <section className="relative flex min-h-[92vh] items-center overflow-hidden">
                 <motion.div
-                    initial={{ scale: 1.1 }}
+                    initial={{ scale: 1.12 }}
                     animate={{ scale: 1 }}
-                    transition={{ duration: 2, ease: "easeOut" }}
+                    transition={{
+                        duration: 2,
+                        ease: "easeOut",
+                    }}
                     className="absolute inset-0"
                 >
                     <img
-                        src="/images/explore/explore-hero.jpg"
-                        alt="Beautiful travel destination"
+                        src="/images/explore/lesvos-hero.jpg"
+                        alt="Beautiful coast of Lesvos"
                         className="h-full w-full object-cover"
                     />
                 </motion.div>
 
-                <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,12,11,0.96)_0%,rgba(5,12,11,0.66)_47%,rgba(5,12,11,0.18)_100%)]" />
+                <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,12,11,0.97)_0%,rgba(5,12,11,0.72)_48%,rgba(5,12,11,0.15)_100%)]" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#07100f] via-transparent to-black/20" />
 
                 <motion.div
@@ -384,7 +397,8 @@ export default function ExplorePage() {
                 <span className="absolute h-full w-full animate-ping rounded-full bg-orange-300 opacity-70" />
                 <span className="relative h-2.5 w-2.5 rounded-full bg-orange-300" />
               </span>
-                            Your journey starts here
+
+                            Discover Lesvos
                         </motion.div>
 
                         <motion.h1
@@ -395,29 +409,35 @@ export default function ExplorePage() {
                                 delay: 0.1,
                                 ease: [0.22, 1, 0.36, 1],
                             }}
-                            className="max-w-4xl text-6xl font-black leading-[0.9] tracking-[-0.07em] sm:text-7xl lg:text-[7.5rem]"
+                            className="max-w-5xl text-6xl font-black leading-[0.9] tracking-[-0.07em] sm:text-7xl lg:text-[7.2rem]"
                         >
-                            Explore beyond
+                            Explore the soul
                             <span className="block bg-gradient-to-r from-orange-200 via-amber-300 to-cyan-200 bg-clip-text text-transparent">
-                the ordinary.
+                of Lesvos.
               </span>
                         </motion.h1>
 
                         <motion.p
                             initial={{ opacity: 0, y: 25 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.7, delay: 0.3 }}
+                            transition={{
+                                duration: 0.7,
+                                delay: 0.3,
+                            }}
                             className="mt-8 max-w-2xl text-lg leading-8 text-white/65 md:text-xl"
                         >
-                            Discover secret beaches, authentic flavors, cultural treasures
-                            and unforgettable local experiences.
+                            Discover traditional villages, hidden beaches, authentic
+                            flavors, natural wonders and unforgettable island experiences.
                         </motion.p>
 
                         <motion.form
                             onSubmit={handleSearch}
                             initial={{ opacity: 0, y: 25 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.7, delay: 0.45 }}
+                            transition={{
+                                duration: 0.7,
+                                delay: 0.45,
+                            }}
                             className="mt-10 flex max-w-2xl flex-col gap-3 rounded-[1.75rem] border border-white/15 bg-white/10 p-3 shadow-[0_25px_70px_rgba(0,0,0,0.35)] backdrop-blur-2xl sm:flex-row"
                         >
                             <label className="flex min-w-0 flex-1 items-center gap-3 px-3">
@@ -429,7 +449,7 @@ export default function ExplorePage() {
                                     type="search"
                                     value={search}
                                     onChange={(event) => setSearch(event.target.value)}
-                                    placeholder="Search beaches, food, villages..."
+                                    placeholder="Search beaches, villages, food..."
                                     className="w-full bg-transparent py-3 text-sm text-white outline-none placeholder:text-white/40"
                                 />
                             </label>
@@ -453,15 +473,19 @@ export default function ExplorePage() {
                     className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-[10px] font-bold uppercase tracking-[0.25em] text-white/40 md:flex"
                 >
                     Scroll to discover
+
                     <motion.span
                         animate={{ y: [0, 8, 0] }}
-                        transition={{ duration: 1.7, repeat: Infinity }}
+                        transition={{
+                            duration: 1.7,
+                            repeat: Infinity,
+                        }}
                         className="h-8 w-px bg-gradient-to-b from-white/60 to-transparent"
                     />
                 </motion.div>
             </section>
 
-            {/* CATEGORIES */}
+            {/* Categories */}
             <section className="relative z-10 mx-auto max-w-7xl px-6 py-16 lg:px-8">
                 <div className="flex gap-3 overflow-x-auto pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
                     {categories.map((category, index) => {
@@ -496,15 +520,20 @@ export default function ExplorePage() {
                                     />
                                 )}
 
-                                <span className="relative z-10 text-lg">{category.icon}</span>
-                                <span className="relative z-10">{category.name}</span>
+                                <span className="relative z-10 text-lg">
+                  {category.icon}
+                </span>
+
+                                <span className="relative z-10">
+                  {category.name}
+                </span>
                             </motion.button>
                         );
                     })}
                 </div>
             </section>
 
-            {/* DESTINATIONS */}
+            {/* Destinations */}
             <section
                 id="featured-destinations"
                 className="mx-auto max-w-7xl px-6 pb-28 lg:px-8"
@@ -512,18 +541,18 @@ export default function ExplorePage() {
                 <div className="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
                     <div>
                         <p className="text-xs font-black uppercase tracking-[0.28em] text-orange-300">
-                            Handpicked for you
+                            Handpicked places
                         </p>
 
                         <h2 className="mt-4 max-w-3xl text-4xl font-black tracking-[-0.05em] sm:text-6xl">
-                            Places worth getting
-                            <span className="text-white/35"> lost in.</span>
+                            Experience the best
+                            <span className="text-white/35"> of Lesvos.</span>
                         </h2>
                     </div>
 
                     <p className="max-w-sm text-sm leading-7 text-white/50">
-                        Carefully selected destinations combining natural beauty, local
-                        character and unforgettable experiences.
+                        Explore carefully selected locations combining natural beauty,
+                        local culture and authentic island life.
                     </p>
                 </div>
 
@@ -549,9 +578,11 @@ export default function ExplorePage() {
                         className="rounded-[2rem] border border-dashed border-white/15 px-6 py-20 text-center"
                     >
                         <span className="text-4xl">⌕</span>
+
                         <h3 className="mt-5 text-2xl font-black">
                             No destinations found
                         </h3>
+
                         <p className="mt-2 text-white/50">
                             Try another search or category.
                         </p>
@@ -570,161 +601,35 @@ export default function ExplorePage() {
                 )}
             </section>
 
-            {/* MAP */}
-            <section className="relative border-y border-white/10 bg-white/[0.03]">
-                <div className="mx-auto grid max-w-7xl gap-12 px-6 py-24 lg:grid-cols-[0.78fr_1.22fr] lg:items-center lg:px-8">
+            {/* Lesvos map */}
+            <section className="relative border-y border-white/10 bg-white/[0.025]">
+                <div className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
                     <motion.div
-                        initial={{ opacity: 0, x: -35 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true, amount: 0.35 }}
+                        initial={{ opacity: 0, y: 35 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{
+                            once: true,
+                            amount: 0.2,
+                        }}
                         transition={{ duration: 0.7 }}
+                        className="mb-12 text-center"
                     >
                         <p className="text-xs font-black uppercase tracking-[0.28em] text-cyan-200">
-                            Interactive map
+                            Interactive island map
                         </p>
 
-                        <h2 className="mt-5 text-4xl font-black tracking-[-0.05em] sm:text-6xl">
-                            Find your next
-                            <span className="block text-white/35">favorite place.</span>
+                        <h2 className="mx-auto mt-5 max-w-4xl text-4xl font-black tracking-[-0.05em] sm:text-6xl">
+                            Discover Lesvos
+                            <span className="text-white/35"> on the map.</span>
                         </h2>
 
-                        <p className="mt-6 max-w-lg text-base leading-8 text-white/55">
-                            Select a point on the map to preview beaches, restaurants,
-                            cultural landmarks and unique local experiences.
+                        <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-white/55">
+                            Select a location, zoom around the island and discover
+                            villages, beaches, food, culture and natural attractions.
                         </p>
-
-                        <AnimatePresence mode="wait">
-                            <motion.div
-                                key={selectedDestination.id}
-                                initial={{ opacity: 0, y: 15 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, y: -15 }}
-                                transition={{ duration: 0.3 }}
-                                className="mt-9 overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/[0.07] p-3"
-                            >
-                                <div className="flex items-center gap-4">
-                                    <img
-                                        src={selectedDestination.image}
-                                        alt={selectedDestination.title}
-                                        className="h-24 w-24 rounded-2xl object-cover"
-                                    />
-
-                                    <div className="min-w-0 flex-1">
-                    <span className="text-xs font-bold uppercase tracking-wider text-orange-300">
-                      {selectedDestination.category}
-                    </span>
-
-                                        <h3 className="mt-1 truncate text-xl font-black">
-                                            {selectedDestination.title}
-                                        </h3>
-
-                                        <p className="mt-1 flex items-center gap-1.5 text-xs text-white/50">
-                                            <LocationIcon />
-                                            {selectedDestination.location}
-                                        </p>
-                                    </div>
-
-                                    <a
-                                        href={selectedDestination.href}
-                                        aria-label={`Open ${selectedDestination.title}`}
-                                        className="mr-2 flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white text-stone-950 transition hover:scale-110 hover:bg-cyan-200"
-                                    >
-                                        <ArrowIcon />
-                                    </a>
-                                </div>
-                            </motion.div>
-                        </AnimatePresence>
                     </motion.div>
 
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.94 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true, amount: 0.25 }}
-                        transition={{ duration: 0.8 }}
-                        className="relative min-h-[500px] overflow-hidden rounded-[2.5rem] border border-white/10 bg-[#132320] shadow-[0_40px_100px_rgba(0,0,0,0.35)]"
-                    >
-                        <div className="absolute inset-0 opacity-35">
-                            <div className="absolute left-[15%] top-[-10%] h-[120%] w-[30%] rotate-12 rounded-[50%] border-[30px] border-cyan-100/20" />
-                            <div className="absolute right-[-8%] top-[10%] h-[75%] w-[45%] -rotate-12 rounded-[45%] bg-emerald-200/10" />
-                            <div className="absolute bottom-[-20%] left-[25%] h-[65%] w-[55%] rounded-[50%] bg-orange-200/10" />
-                        </div>
-
-                        <div
-                            className="absolute inset-0 opacity-[0.12]"
-                            style={{
-                                backgroundImage:
-                                    "linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px)",
-                                backgroundSize: "42px 42px",
-                            }}
-                        />
-
-                        <div className="absolute left-7 top-7 z-20 rounded-full border border-white/10 bg-black/25 px-4 py-2 text-xs font-bold text-white/70 backdrop-blur-xl">
-                            Explore map · {destinations.length} locations
-                        </div>
-
-                        {destinations.map((destination, index) => {
-                            const isSelected =
-                                selectedDestination.id === destination.id;
-
-                            return (
-                                <motion.button
-                                    key={destination.id}
-                                    type="button"
-                                    aria-label={`Select ${destination.title}`}
-                                    initial={{ opacity: 0, scale: 0 }}
-                                    whileInView={{ opacity: 1, scale: 1 }}
-                                    viewport={{ once: true }}
-                                    transition={{
-                                        delay: 0.2 + index * 0.1,
-                                        type: "spring",
-                                    }}
-                                    whileHover={{ scale: 1.18 }}
-                                    whileTap={{ scale: 0.9 }}
-                                    onClick={() => setSelectedDestination(destination)}
-                                    className="absolute z-10 -translate-x-1/2 -translate-y-1/2"
-                                    style={{
-                                        left: `${destination.mapX}%`,
-                                        top: `${destination.mapY}%`,
-                                    }}
-                                >
-                                    {isSelected && (
-                                        <motion.span
-                                            layoutId="selected-map-pulse"
-                                            className="absolute -inset-4 rounded-full bg-orange-300/20"
-                                            animate={{
-                                                scale: [1, 1.45, 1],
-                                                opacity: [0.7, 0.1, 0.7],
-                                            }}
-                                            transition={{
-                                                duration: 2,
-                                                repeat: Infinity,
-                                            }}
-                                        />
-                                    )}
-
-                                    <span
-                                        className={`relative flex h-12 w-12 items-center justify-center rounded-full border-4 shadow-xl transition ${
-                                            isSelected
-                                                ? "border-orange-100 bg-orange-300 text-stone-950"
-                                                : "border-white/30 bg-[#10201d] text-white"
-                                        }`}
-                                    >
-                    <LocationIcon />
-                  </span>
-
-                                    {isSelected && (
-                                        <motion.span
-                                            initial={{ opacity: 0, y: 6 }}
-                                            animate={{ opacity: 1, y: 0 }}
-                                            className="absolute left-1/2 top-[calc(100%+10px)] w-max -translate-x-1/2 rounded-full bg-white px-3 py-1.5 text-[10px] font-black text-stone-950 shadow-xl"
-                                        >
-                                            {destination.title}
-                                        </motion.span>
-                                    )}
-                                </motion.button>
-                            );
-                        })}
-                    </motion.div>
+                    <LesvosMap />
                 </div>
             </section>
 
@@ -733,24 +638,28 @@ export default function ExplorePage() {
                 <motion.div
                     initial={{ opacity: 0, y: 35 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.35 }}
+                    viewport={{
+                        once: true,
+                        amount: 0.35,
+                    }}
                     className="relative mx-auto max-w-7xl overflow-hidden rounded-[2.75rem] border border-white/10 px-7 py-20 text-center sm:px-12"
                 >
                     <div className="absolute inset-0 bg-gradient-to-br from-orange-400/25 via-emerald-300/10 to-cyan-300/20" />
+
                     <div className="absolute left-1/2 top-1/2 h-80 w-80 -translate-x-1/2 -translate-y-1/2 rounded-full bg-orange-200/20 blur-[100px]" />
 
                     <div className="relative">
             <span className="text-xs font-black uppercase tracking-[0.3em] text-orange-200">
-              Build your own journey
+              Create your journey
             </span>
 
                         <h2 className="mx-auto mt-5 max-w-3xl text-4xl font-black tracking-[-0.05em] sm:text-6xl">
-                            Ready to explore it your way?
+                            Ready to experience Lesvos?
                         </h2>
 
                         <p className="mx-auto mt-5 max-w-xl leading-7 text-white/60">
-                            Save your favorite locations and create a personalized travel
-                            plan for every day of your trip.
+                            Save your favorite places and create a personalized travel
+                            itinerary for your stay on the island.
                         </p>
 
                         <motion.a
