@@ -396,117 +396,136 @@ export default function LesvosMap({
             (place) => place.category === activeCategory,
         );
     }, [activeCategory]);
-
     return (
-        <section className="relative overflow-hidden rounded-[1.5rem] sm:rounded-[2rem] lg:rounded-[2.5rem] border border-white/10 bg-[#07100f] shadow-[0_40px_120px_rgba(0,0,0,0.4)]">
-            <div className="grid lg:grid-cols-[320px_1fr] xl:grid-cols-[360px_1fr]">
-                <aside className="relative z-[500] border-b border-white/10 bg-[#091311] p-4 sm:p-5 lg:p-6 lg:border-b-0 lg:border-r">
-                    <p className="text-xs font-black uppercase tracking-[0.25em] text-orange-300">
-                        Explore Lesvos
-                    </p>
+        <section
+            className="relative overflow-hidden rounded-2xl border border-white/10 bg-[#07100f] shadow-[0_30px_90px_rgba(0,0,0,0.35)] sm:rounded-[2rem] xl:rounded-[2.5rem]">
+            <div className="grid xl:grid-cols-[360px_minmax(0,1fr)] 2xl:grid-cols-[390px_minmax(0,1fr)]">
+                {/* Sidebar */}
+                <aside
+                    className="relative z-[500] border-b border-white/10 bg-[#091311] p-4 sm:p-6 xl:border-b-0 xl:border-r xl:p-7">
+                    <div className="max-w-2xl xl:max-w-none">
+                        <p className="text-[10px] font-black uppercase tracking-[0.24em] text-orange-300 sm:text-xs">
+                            Explore Lesvos
+                        </p>
 
-                    <h2 className="mt-4 text-3xl font-black sm:text-4xl tracking-[-0.05em] text-white">
-                        Discover the
-                        <span className="block text-white/35">whole island.</span>
-                    </h2>
+                        <h2 className="mt-3 text-2xl font-black tracking-[-0.05em] text-white sm:mt-4 sm:text-4xl">
+                            Discover the
+                            <span className="block text-white/35">whole island.</span>
+                        </h2>
 
-                    <p className="mt-4 text-sm leading-7 text-white/55">
-                        Select a destination to move around the map and discover beaches,
-                        villages, food and cultural locations.
-                    </p>
-
-                    <div className="mt-5 flex gap-2 overflow-x-auto pb-2 sm:mt-7 lg:flex-wrap">
-                        {[
-                            "All",
-                            "Beach",
-                            "Village",
-                            "Town",
-                            "Food",
-                            "Nature",
-                            "Culture",
-                            "Accomodation",
-                            "Bar"
-                        ].map((category) => {
-                            const isActive = activeCategory === category;
-
-                            return (
-                                <button
-                                    key={category}
-                                    type="button"
-                                    onClick={() =>
-                                        setActiveCategory(
-                                            category as PlaceCategory | "All",
-                                        )
-                                    }
-                                    className={`shrink-0 rounded-full border px-4 py-2 text-xs font-bold transition ${
-                                        isActive
-                                            ? "border-orange-300 bg-orange-300 text-stone-950"
-                                            : "border-white/10 bg-white/[0.05] text-white/60 hover:border-white/25 hover:text-white"
-                                    }`}
-                                >
-                                    {category === "All"
-                                        ? "All"
-                                        : categoryLabels[category as PlaceCategory]}
-                                </button>
-                            );
-                        })}
+                        <p className="mt-3 max-w-xl text-xs leading-6 text-white/55 sm:mt-4 sm:text-sm sm:leading-7">
+                            Select a destination and discover beaches, villages, food,
+                            accommodation and cultural locations.
+                        </p>
                     </div>
 
-                    <div className="mt-5 flex gap-3 overflow-x-auto pb-2 lg:mt-7 lg:block lg:max-h-[390px] lg:space-y-3 lg:overflow-y-auto lg:pr-2">
-                        {visiblePlaces.map((place) => {
-                            const isSelected = selectedPlace.id === place.id;
+                    {/* Category filters */}
+                    <div className="-mx-4 mt-5 overflow-hidden px-4 sm:-mx-6 sm:px-6 xl:mx-0 xl:px-0">
+                        <div
+                            className="flex gap-2 overflow-x-auto pb-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden xl:flex-wrap xl:overflow-visible">
+                            {[
+                                "All",
+                                "Beach",
+                                "Village",
+                                "Town",
+                                "Food",
+                                "Nature",
+                                "Culture",
+                                "Accommodation",
+                                "Bar",
+                            ].map((category) => {
+                                const isActive = activeCategory === category;
 
-                            return (
-                                <button
-                                    key={place.id}
-                                    type="button"
-                                    onClick={() => setSelectedPlace(place)}
-                                    className={`flex min-w-[230px] items-center gap-3 rounded-2xl lg:min-w-0 lg:w-full border p-3 text-left transition ${
-                                        isSelected
-                                            ? "border-orange-300/60 bg-orange-300/10"
-                                            : "border-white/10 bg-white/[0.04] hover:bg-white/[0.08]"
-                                    }`}
-                                >
-                                    <img
-                                        src={place.image}
-                                        alt=""
-                                        className="h-14 w-14 sm:h-16 sm:w-16 shrink-0 rounded-xl object-cover"
-                                    />
+                                return (
+                                    <button
+                                        key={category}
+                                        type="button"
+                                        onClick={() =>
+                                            setActiveCategory(category as PlaceCategory | "All")
+                                        }
+                                        className={`shrink-0 rounded-full border px-3.5 py-2 text-[11px] font-bold transition sm:px-4 sm:text-xs ${
+                                            isActive
+                                                ? "border-orange-300 bg-orange-300 text-stone-950 shadow-[0_8px_24px_rgba(253,186,116,0.25)]"
+                                                : "border-white/10 bg-white/[0.05] text-white/60 hover:border-white/25 hover:bg-white/[0.08] hover:text-white"
+                                        }`}
+                                    >
+                                        {category === "All"
+                                            ? "All"
+                                            : categoryLabels[category as PlaceCategory]}
+                                    </button>
+                                );
+                            })}
+                        </div>
+                    </div>
 
-                                    <span className="min-w-0">
-                    <span className="block text-[10px] font-black uppercase tracking-wider text-orange-300">
+                    {/* Places list */}
+                    <div className="-mx-4 mt-3 overflow-hidden px-4 sm:-mx-6 sm:px-6 xl:mx-0 xl:mt-6 xl:px-0">
+                        <div
+                            className="flex snap-x snap-mandatory gap-3 overflow-x-auto pb-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden xl:block xl:max-h-[520px] xl:space-y-3 xl:overflow-y-auto xl:overflow-x-hidden xl:pb-0 xl:pr-2">
+                            {visiblePlaces.map((place) => {
+                                const isSelected = selectedPlace.id === place.id;
+
+                                return (
+                                    <button
+                                        key={place.id}
+                                        type="button"
+                                        onClick={() => setSelectedPlace(place)}
+                                        className={`flex min-w-[245px] snap-start items-center gap-3 rounded-2xl border p-3 text-left transition sm:min-w-[280px] xl:w-full xl:min-w-0 ${
+                                            isSelected
+                                                ? "border-orange-300/60 bg-orange-300/10 shadow-[0_10px_35px_rgba(0,0,0,0.18)]"
+                                                : "border-white/10 bg-white/[0.04] hover:border-white/20 hover:bg-white/[0.08]"
+                                        }`}
+                                    >
+                                        <img
+                                            src={place.image}
+                                            alt={place.name}
+                                            className="h-14 w-14 shrink-0 rounded-xl object-cover sm:h-16 sm:w-16"
+                                        />
+
+                                        <span className="min-w-0 flex-1">
+                    <span
+                        className="block text-[9px] font-black uppercase tracking-[0.14em] text-orange-300 sm:text-[10px]">
                       {categoryLabels[place.category]}
                     </span>
 
-                    <span className="mt-1 block truncate text-base font-black text-white">
+                    <span className="mt-1 block truncate text-sm font-black text-white sm:text-base">
                       {place.name}
                     </span>
 
-                    <span className="mt-1 block truncate text-xs text-white/45">
+                    <span className="mt-1 block truncate text-[11px] text-white/45 sm:text-xs">
                       {place.location}
                     </span>
                   </span>
-                                </button>
-                            );
-                        })}
+                                    </button>
+                                );
+                            })}
+                        </div>
                     </div>
                 </aside>
 
-                <div className="relative min-h-[380px] sm:min-h-[480px] lg:min-h-[570px]">
+                {/* Map */}
+                <div className="relative min-w-0">
                     <MapContainer
                         center={[39.19, 26.22]}
                         zoom={9}
                         minZoom={8}
                         maxZoom={18}
                         scrollWheelZoom
-                        className="h-[380px] w-full sm:h-[480px] md:h-[560px] lg:h-[680px]"
+                        className="
+            h-[440px] w-full
+            sm:h-[560px]
+            md:h-[640px]
+            lg:h-[720px]
+            xl:h-[780px]
+            2xl:h-[840px]
+          "
                     >
                         <TileLayer
                             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                             url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
                         />
 
-                        <FlyToPlace place={selectedPlace} />
+                        <FlyToPlace place={selectedPlace}/>
 
                         {visiblePlaces.map((place) => {
                             const isSelected = selectedPlace.id === place.id;
@@ -515,35 +534,32 @@ export default function LesvosMap({
                                 <Marker
                                     key={place.id}
                                     position={place.coordinates}
-                                    icon={createMarkerIcon(
-                                        place.image,
-                                        isSelected,
-                                    )}
+                                    icon={createMarkerIcon(place.image, isSelected)}
                                     eventHandlers={{
                                         click: () => setSelectedPlace(place),
                                     }}
                                 >
-                                    <Tooltip direction="top" offset={[0, -20]}>
+                                    <Tooltip direction="top" offset={[0, -22]}>
                                         {place.name}
                                     </Tooltip>
 
                                     <Popup>
-                                        <div className="w-[220px] overflow-hidden">
+                                        <div className="w-[210px] overflow-hidden sm:w-[240px]">
                                             <img
                                                 src={place.image}
                                                 alt={place.name}
-                                                className="h-28 w-full rounded-xl object-cover"
+                                                className="h-28 w-full rounded-xl object-cover sm:h-32"
                                             />
 
-                                            <p className="mb-0 mt-3 text-xs font-bold uppercase tracking-wider text-orange-700">
+                                            <p className="mb-0 mt-3 text-[10px] font-bold uppercase tracking-wider text-orange-700 sm:text-xs">
                                                 {categoryLabels[place.category]}
                                             </p>
 
-                                            <h3 className="mb-0 mt-1 text-lg font-black text-stone-950">
+                                            <h3 className="mb-0 mt-1 text-base font-black text-stone-950 sm:text-lg">
                                                 {place.name}
                                             </h3>
 
-                                            <p className="mt-2 text-sm leading-5 text-stone-600">
+                                            <p className="mt-2 text-xs leading-5 text-stone-600 sm:text-sm">
                                                 {place.description}
                                             </p>
 
@@ -560,26 +576,31 @@ export default function LesvosMap({
                         })}
                     </MapContainer>
 
-                    <div className="pointer-events-none absolute bottom-3 left-1/2 sm:bottom-5 lg:bottom-6 z-[400] w-[calc(100%-1.5rem)] max-w-md sm:w-[calc(100%-3rem)] -translate-x-1/2 rounded-2xl border border-white/15 bg-[#07100f]/90 p-2.5 shadow-2xl sm:p-3 backdrop-blur-xl">
-                        <div className="flex items-center gap-3">
-                            <img
-                                src={selectedPlace.image}
-                                alt=""
-                                className="h-14 w-14 sm:h-16 sm:w-16 rounded-xl object-cover"
-                            />
+                    {/* Selected place card */}
+                    <div
+                        className="pointer-events-none absolute inset-x-3 bottom-3 z-[400] sm:inset-x-auto sm:bottom-5 sm:left-1/2 sm:w-[calc(100%-3rem)] sm:max-w-md sm:-translate-x-1/2 lg:bottom-6">
+                        <div
+                            className="rounded-2xl border border-white/15 bg-[#07100f]/92 p-2.5 shadow-2xl backdrop-blur-xl sm:p-3">
+                            <div className="flex items-center gap-3">
+                                <img
+                                    src={selectedPlace.image}
+                                    alt={selectedPlace.name}
+                                    className="h-14 w-14 shrink-0 rounded-xl object-cover sm:h-16 sm:w-16"
+                                />
 
-                            <div className="min-w-0">
-                                <p className="text-[10px] font-black uppercase tracking-wider text-orange-300">
-                                    {categoryLabels[selectedPlace.category]}
-                                </p>
+                                <div className="min-w-0 flex-1">
+                                    <p className="text-[9px] font-black uppercase tracking-[0.14em] text-orange-300 sm:text-[10px]">
+                                        {categoryLabels[selectedPlace.category]}
+                                    </p>
 
-                                <h3 className="truncate text-lg font-black text-white">
-                                    {selectedPlace.name}
-                                </h3>
+                                    <h3 className="mt-0.5 truncate text-base font-black text-white sm:text-lg">
+                                        {selectedPlace.name}
+                                    </h3>
 
-                                <p className="truncate text-xs text-white/50">
-                                    {selectedPlace.location}
-                                </p>
+                                    <p className="mt-0.5 truncate text-[11px] text-white/50 sm:text-xs">
+                                        {selectedPlace.location}
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
