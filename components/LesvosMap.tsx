@@ -420,41 +420,58 @@ export default function LesvosMap({
                     </div>
 
                     {/* Category filters */}
-                    <div className="-mx-4 mt-5 overflow-hidden px-4 sm:-mx-6 sm:px-6 xl:mx-0 xl:px-0">
-                        <div
-                            className="flex gap-2 overflow-x-auto pb-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden xl:flex-wrap xl:overflow-visible">
-                            {[
-                                "All",
-                                "Beach",
-                                "Village",
-                                "Town",
-                                "Food",
-                                "Nature",
-                                "Culture",
-                                "Accommodation",
-                                "Bar",
-                            ].map((category) => {
-                                const isActive = activeCategory === category;
+                    <div className="mt-5">
+                        <div className="-mx-4 overflow-hidden px-4 sm:-mx-6 sm:px-6 lg:mx-0 lg:px-0">
+                            <div
+                                className="
+        flex gap-2 overflow-x-auto pb-3
+        snap-x snap-mandatory
+        [scrollbar-width:none]
+        [&::-webkit-scrollbar]:hidden
+        lg:flex-wrap lg:overflow-visible
+      "
+                            >
+                                {[
+                                    "All",
+                                    "Beach",
+                                    "Village",
+                                    "Town",
+                                    "Food",
+                                    "Nature",
+                                    "Culture",
+                                    "Accommodation",
+                                    "Bar",
+                                ].map((category) => {
+                                    const isActive = activeCategory === category;
 
-                                return (
-                                    <button
-                                        key={category}
-                                        type="button"
-                                        onClick={() =>
-                                            setActiveCategory(category as PlaceCategory | "All")
-                                        }
-                                        className={`shrink-0 rounded-full border px-3.5 py-2 text-[11px] font-bold transition sm:px-4 sm:text-xs ${
-                                            isActive
-                                                ? "border-orange-300 bg-orange-300 text-stone-950 shadow-[0_8px_24px_rgba(253,186,116,0.25)]"
-                                                : "border-white/10 bg-white/[0.05] text-white/60 hover:border-white/25 hover:bg-white/[0.08] hover:text-white"
-                                        }`}
-                                    >
-                                        {category === "All"
-                                            ? "All"
-                                            : categoryLabels[category as PlaceCategory]}
-                                    </button>
-                                );
-                            })}
+                                    return (
+                                        <button
+                                            key={category}
+                                            type="button"
+                                            onClick={() =>
+                                                setActiveCategory(category as PlaceCategory | "All")
+                                            }
+                                            className={`
+              snap-start shrink-0
+              rounded-full border
+              px-4 py-2.5
+              text-xs font-bold
+              whitespace-nowrap
+              transition
+              ${
+                                                isActive
+                                                    ? "border-orange-300 bg-orange-300 text-stone-950"
+                                                    : "border-white/10 bg-white/[0.05] text-white/60 hover:border-white/25 hover:text-white"
+                                            }
+            `}
+                                        >
+                                            {category === "All"
+                                                ? "All"
+                                                : categoryLabels[category as PlaceCategory]}
+                                        </button>
+                                    );
+                                })}
+                            </div>
                         </div>
                     </div>
 
