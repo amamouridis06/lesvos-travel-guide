@@ -16,6 +16,7 @@ type HoneyGuideProps = {
     openingHours?: string;
     mapUrl?: string;
     price?: string;
+    accessibility?:string;
 };
 
 export default function HoneyTravelGuide({
@@ -38,10 +39,10 @@ pollen, propolis, aromatic candles and other local products. The visit to
 beekeeping laboratory combines knowledge, taste and authentic contact with
 nature, offering a unique experience that highlights the special
 character of Lesvos.`,
-                                             mainImage = "/honey/honey2.jpeg",
+                                             mainImage = "/honey/lab.png",
                                              gallery = [
                                                  "/honey/honey1.jpeg",
-                                                 "/honey/lab.png",
+                                                 "/honey/honey2.jpeg",
 
                                              ],
                                              phone = "+30 6972280267",
@@ -51,6 +52,7 @@ character of Lesvos.`,
                                              openingHours = "Δευτέρα – Σάββατο, 09:00 – 18:00",
                                              mapUrl = "https://maps.app.goo.gl/S71ZoMUEiUuUUQHH8",
                                              price = "Από 9,50 €",
+                                             accessibility = "There is also accessibility for people with mobility problems"
                                          }: HoneyGuideProps) {
     const allImages = [mainImage, ...gallery];
     const [selectedImage, setSelectedImage] = useState(mainImage);
@@ -171,7 +173,11 @@ character of Lesvos.`,
                                 title="Opening hours"
                                 content={openingHours}
                             />
-
+                            <ContactItem
+                                icon="♿"
+                                title="Accecibility"
+                                content={accecibility}
+                            />
                             <ContactItem
                                 icon="📞"
                                 title="Phone"
