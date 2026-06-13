@@ -38,9 +38,9 @@ pollen, propolis, aromatic candles and other local products. The visit to
 beekeeping laboratory combines knowledge, taste and authentic contact with
 nature, offering a unique experience that highlights the special
 character of Lesvos.`,
-                                             mainImage = "/honey/honey2.jpg",
+                                             mainImage = "/honey/honey2.jpeg",
                                              gallery = [
-                                                 "/honey/honey1.jpg",
+                                                 "/honey/honey1.jpeg",
                                                  "/honey/lab.png",
 
                                              ],
@@ -68,7 +68,7 @@ character of Lesvos.`,
 
                 <div className="absolute bottom-0 left-0 right-0 mx-auto max-w-7xl px-6 pb-10 text-white">
           <span className="inline-block rounded-full bg-amber-400 px-4 py-2 text-sm font-bold text-stone-900">
-            Τοπικό προϊόν
+            Local Product
           </span>
 
                     <h1 className="mt-4 max-w-3xl text-4xl font-black md:text-6xl">
@@ -114,7 +114,7 @@ character of Lesvos.`,
                                 >
                                     <img
                                         src={image}
-                                        alt={`${productName} - φωτογραφία ${index + 1}`}
+                                        alt={`${productName} - photo ${index + 1}`}
                                         className="h-36 w-full object-cover transition duration-300 hover:scale-105"
                                     />
                                 </button>
@@ -130,7 +130,7 @@ character of Lesvos.`,
                         <div className="mt-6 grid gap-4 sm:grid-cols-3">
                             <GuideFeature
                                 icon="🍯"
-                                title="ΓCressor"
+                                title="Cressor"
                                 description="Honey test."
                             />
 
