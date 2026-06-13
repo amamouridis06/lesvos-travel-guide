@@ -39,10 +39,10 @@ pollen, propolis, aromatic candles and other local products. The visit to
 beekeeping laboratory combines knowledge, taste and authentic contact with
 nature, offering a unique experience that highlights the special
 character of Lesvos.`,
-                                             mainImage = "/honey/lab.png",
+                                             mainImage = "/honey/honey2.jpeg",
                                              gallery = [
                                                  "/honey/honey1.jpeg",
-                                                 "/honey/honey2.jpeg",
+                                                 "/honey/lab.png"
 
                                              ],
                                              phone = "+30 6972280267",
@@ -51,7 +51,6 @@ character of Lesvos.`,
                                              address = "Sigri, Lesvos",
                                              openingHours = "Δευτέρα – Σάββατο, 09:00 – 18:00",
                                              mapUrl = "https://maps.app.goo.gl/S71ZoMUEiUuUUQHH8",
-                                             price = "Από 9,50 €",
                                              accesibility = "There is also accessibility for people with mobility problems"
                                          }: HoneyGuideProps) {
     const allImages = [mainImage, ...gallery];
@@ -157,9 +156,7 @@ character of Lesvos.`,
                             Visit informations
                         </p>
 
-                        <p className="mt-3 text-3xl font-black text-stone-900">
-                            {price}
-                        </p>
+
 
                         <div className="mt-7 space-y-6">
                             <ContactItem
@@ -214,7 +211,7 @@ character of Lesvos.`,
                                         rel="noreferrer"
                                         className="font-semibold text-amber-700 hover:underline"
                                     >
-                                        Official website
+                                        www.sigrihoney.gr
                                     </a>
                                 }
                             />

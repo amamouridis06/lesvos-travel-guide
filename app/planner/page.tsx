@@ -418,7 +418,7 @@ export default function PlannerPage() {
                 </div>
 
                 <input type="range" min="1" max="10" value={days} onChange={(event) => setDays(Number(event.target.value))} className="mt-7 w-full accent-orange-300" />
-                <div className="mt-2 flex justify-between text-[11px] text-white/35"><span>1 day</span><span>5 days</span><span>10 days</span></div>
+                <div className="mt-2 flex justify-between text-[11px] text-white/35"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10 days</span></div>
                 <p className="mt-5 rounded-2xl bg-white/[0.06] px-4 py-3 text-xs leading-5 text-white/55">{days <= 3 ? 'A focused escape with highlights close to your selected base.' : 'A deeper island journey with longer day trips and more variety.'}</p>
               </div>
             </div>
