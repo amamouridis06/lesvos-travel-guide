@@ -16,7 +16,7 @@ type HoneyGuideProps = {
     openingHours?: string;
     mapUrl?: string;
     price?: string;
-    accessibility?:string;
+    accesibility?:string;
 };
 
 export default function HoneyTravelGuide({
@@ -52,7 +52,7 @@ character of Lesvos.`,
                                              openingHours = "Δευτέρα – Σάββατο, 09:00 – 18:00",
                                              mapUrl = "https://maps.app.goo.gl/S71ZoMUEiUuUUQHH8",
                                              price = "Από 9,50 €",
-                                             accessibility = "There is also accessibility for people with mobility problems"
+                                             accesibility = "There is also accessibility for people with mobility problems"
                                          }: HoneyGuideProps) {
     const allImages = [mainImage, ...gallery];
     const [selectedImage, setSelectedImage] = useState(mainImage);
@@ -176,7 +176,7 @@ character of Lesvos.`,
                             <ContactItem
                                 icon="♿"
                                 title="Accecibility"
-                                content={accecibility}
+                                content={accesibility}
                             />
                             <ContactItem
                                 icon="📞"
