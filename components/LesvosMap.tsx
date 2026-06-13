@@ -17,7 +17,7 @@ type PlaceCategory =
     | "Town"
     | "Village"
     | "Beach"
-    | "Food & Drink"
+    | "Food"
     | "Nature"
     | "Culture"
     | "Accomodation"
@@ -315,7 +315,7 @@ const categoryLabels: Record<PlaceCategory, string> = {
     Town: "Town",
     Village: "Village",
     Beach: "Beach",
-    Food: "Food & Drink",
+    Food:"Food & Drink",
     Nature: "Nature",
     Culture: "Culture",
     Accomodation:"Accomodation",
