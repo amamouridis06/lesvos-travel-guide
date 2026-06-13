@@ -46,14 +46,25 @@ const lesvosPlaces: LesvosPlace[] = [
     },
     {
         id: 2,
-        name: "Molyvos",
-        location: "Northern Lesvos",
-        category: "Village",
+        name: "Tryfon",
+        location: "Central Lesvos",
+        category: "Food",
         description:
-            "A traditional stone-built village crowned by its medieval castle.",
-        coordinates: [39.367, 26.174],
-        image: "/images/explore/molyvos.jpg",
-        href: "/places/molyvos",
+            "A traditional tavern in centre of Lesvos",
+        coordinates: [39.2332881,26.2081099],
+        image: "/tryfon/tryfon6.jpg",
+        href: "/food-drinks/tryfon",
+    },
+    {
+        id: 3,
+        name: "Tropicana Platanos",
+        location: "Northern Lesvos",
+        category: "Food",
+        description:
+            "A traditional rastaurant in Molyvos",
+        coordinates: [39.3694398,26.173488],
+        image: "/tropicana/tropicana1.jpg",
+        href: "/food-drinks/tropicana",
     },
     {
         id: 8,
@@ -68,7 +79,7 @@ const lesvosPlaces: LesvosPlace[] = [
     },
 
     {
-        id: 3,
+        id: 10,
         name: "Petra",
         location: "Northern Lesvos",
         category: "Beach",
@@ -133,28 +144,22 @@ const categoryLabels: Record<PlaceCategory, string> = {
     Culture: "Culture",
 };
 
-function createMarkerIcon(category: PlaceCategory, selected: boolean) {
-    const icons: Record<PlaceCategory, string> = {
-        Town: "✦",
-        Village: "⌂",
-        Beach: "☀",
-        Food: "●",
-        Nature: "⌁",
-        Culture: "◆",
-    };
-
+function createMarkerIcon(image: string, selected: boolean) {
     return L.divIcon({
         className: "",
         html: `
-      <div class="lesvos-map-marker ${
-            selected ? "lesvos-map-marker--selected" : ""
+      <div class="photo-map-marker ${
+            selected ? "photo-map-marker--selected" : ""
         }">
-        <span>${icons[category]}</span>
+        <img
+          src="${image}"
+          alt=""
+        />
       </div>
     `,
-        iconSize: selected ? [54, 54] : [46, 46],
-        iconAnchor: selected ? [27, 27] : [23, 23],
-        popupAnchor: [0, -28],
+        iconSize: selected ? [66, 66] : [54, 54],
+        iconAnchor: selected ? [33, 33] : [27, 27],
+        popupAnchor: [0, -34],
     });
 }
 
