@@ -165,6 +165,7 @@ const categoryLabels: Record<PlaceCategory, string> = {
     Food: "Food & Drink",
     Nature: "Nature",
     Culture: "Culture",
+    Accomodation:"Accomodation",
 };
 
 function createMarkerIcon(image: string, selected: boolean) {
