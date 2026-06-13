@@ -481,7 +481,7 @@ export default function VateraPage() {
                 </div>
 
                 <a
-                    href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11260.803970115314!2d26.18969022114462!3d39.02023111277691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14baef8e3ce47107%3A0xa00bd2f74c274e0!2sVatera%20813%2000!5e1!3m2!1sen!2sgr!4v1781346031603!5m2!1sen!2sgr"
+                    href="https://maps.app.goo.gl/8Xde9Gf9rAHh9Tty9"
                     target="_blank"
                     rel="noreferrer"
                     className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-5 py-3.5 text-sm font-bold text-stone-950 transition hover:bg-amber-300"
