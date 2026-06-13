@@ -167,35 +167,6 @@ function SectionHeading({
 export default function VateraPage() {
   return (
       <main className="overflow-hidden bg-[#f6f1e8] text-stone-950">
-        {/* FLOATING NAV */}
-        <div className="fixed inset-x-0 top-4 z-50 px-4 sm:top-6 sm:px-6">
-          <div className="mx-auto flex max-w-6xl items-center justify-between rounded-full border border-white/15 bg-stone-950/65 px-4 py-3 text-white shadow-2xl backdrop-blur-2xl sm:px-5">
-            <Link href="/" className="text-sm font-black tracking-tight sm:text-base">
-              LESVOS<span className="text-amber-300">.</span>
-            </Link>
-
-            <div className="hidden items-center gap-6 text-sm text-white/60 md:flex">
-              <a href="#discover" className="transition hover:text-white">
-                Discover
-              </a>
-              <a href="#highlights" className="transition hover:text-white">
-                Highlights
-              </a>
-              <a href="#map" className="transition hover:text-white">
-                Map
-              </a>
-            </div>
-
-            <Link
-                href="/beaches"
-                className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-bold text-stone-950 transition hover:bg-amber-300 sm:text-sm"
-            >
-              All beaches
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
-        </div>
-
         {/* HERO */}
         <section className="relative min-h-[100svh] overflow-hidden bg-stone-950">
           <Image
@@ -543,7 +514,7 @@ export default function VateraPage() {
                 <div className="h-[430px] sm:h-[540px]">
                   <iframe
                       title="Map of Vatera Beach"
-                      src="https://www.openstreetmap.org/export/embed.html?bbox=26.145%2C38.930%2C26.235%2C38.990&layer=mapnik"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11260.803970115314!2d26.18969022114462!3d39.02023111277691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14baef8e3ce47107%3A0xa00bd2f74c274e0!2sVatera%20813%2000!5e1!3m2!1sen!2sgr!4v1781346031603!5m2!1sen!2sgr"
                       width="100%"
                       height="100%"
                       style={{ border: 0 }}
