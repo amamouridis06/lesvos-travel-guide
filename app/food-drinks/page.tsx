@@ -170,6 +170,15 @@ const locProd: FoodItem[] = [
     alt: "Sel",
     href: "/food-drinks/ouzo-aigaio",
   },
+  {
+    title: "Honey in the Petrified Forest",
+    category: "Local Products",
+    description: "Local Product. Honey",
+    location: "Sigri, Lesvos",
+    image: "/honey/honey-logo.png",
+    alt: "Honey",
+    href: "/food-drinks/sigri-honey",
+  },
 ];
 
 /* ================= CATEGORIES ================= */
