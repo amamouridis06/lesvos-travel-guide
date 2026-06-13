@@ -46,14 +46,14 @@ const lesvosPlaces: LesvosPlace[] = [
     },
     {
         id: 2,
-        name: "Molyvos",
+        name: "Taverna Mpampis",
         location: "Northern Lesvos",
-        category: "Village",
+        category: "Food",
         description:
-            "A beautiful traditional settlement crowned by a medieval castle.",
-        coordinates: [39.367, 26.174],
-        image: "/images/explore/molyvos.jpg",
-        href: "/places/molyvos",
+            "A beautiful traditional restaurant in village of Molyvos.",
+        coordinates: [39.3679029, 26.1718652],
+        image: "/mpampis/mpampis13.jpg",
+        href: "/food-drinks/tavernaompampis",
     },
     {
         id: 3,
