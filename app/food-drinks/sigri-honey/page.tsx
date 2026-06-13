@@ -46,7 +46,7 @@ character of Lesvos.`,
 
                                              ],
                                              phone = "+30 6972280267",
-                                             email = "info@oreinikypseli.gr",
+                                             email = "info@sigrihoney.gr",
                                              website = "www.sigrihoney.gr",
                                              address = "Sigri, Lesvos",
                                              openingHours = "Δευτέρα – Σάββατο, 09:00 – 18:00",
