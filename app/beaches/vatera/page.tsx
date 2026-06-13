@@ -4,8 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
+  Bath,
   Car,
+  ChevronRight,
   Clock3,
+  Coffee,
   Compass,
   MapPin,
   Navigation,
@@ -20,105 +23,106 @@ import {
   Waves,
 } from "lucide-react";
 
+const quickFacts = [
+  { value: "8 km", label: "Coastline" },
+  { value: "Sandy", label: "Beach type" },
+  { value: "Easy", label: "Car access" },
+  { value: "Sunset", label: "Best moment" },
+];
+
 const highlights = [
   {
     icon: Waves,
     title: "Crystal-clear water",
-    text: "Clear, welcoming sea with plenty of space for swimming and relaxing.",
+    text: "Calm, welcoming sea with plenty of room for swimming and floating.",
   },
   {
     icon: Sunset,
-    title: "Beautiful sunsets",
-    text: "Golden-hour views across the coastline make every evening memorable.",
+    title: "Golden sunsets",
+    text: "Long evenings painted in amber light across the southern coast.",
   },
   {
     icon: Umbrella,
     title: "Comfort by the sea",
-    text: "Organised sections, sunbeds, cafés and tavernas along the coast.",
+    text: "Sunbeds, cafés and tavernas are available along organised sections.",
   },
   {
     icon: Trees,
-    title: "Peaceful atmosphere",
-    text: "A vast shoreline where even busy summer days still feel unhurried.",
+    title: "Space to unwind",
+    text: "A wide coastline that still feels calm even during the summer season.",
   },
 ];
 
 const practicalInfo = [
+  { icon: Waves, label: "Beach type", value: "Long sandy coastline" },
+  { icon: Umbrella, label: "Facilities", value: "Sunbeds, cafés and tavernas" },
+  { icon: Car, label: "Access", value: "Easy access by car" },
+  { icon: ParkingCircle, label: "Parking", value: "Available nearby" },
+  { icon: Clock3, label: "Best time", value: "Morning until sunset" },
+  { icon: ShieldCheck, label: "Ideal for", value: "Families, couples and relaxation" },
+];
+
+const experiences = [
   {
-    icon: Waves,
-    label: "Beach type",
-    value: "Long sandy coastline",
+    icon: Sun,
+    title: "Slow beach mornings",
+    text: "Start early with calm water, soft light and plenty of space.",
   },
   {
-    icon: Umbrella,
-    label: "Facilities",
-    value: "Sunbeds, cafés and tavernas",
+    icon: Utensils,
+    title: "Long seaside lunches",
+    text: "Fresh fish, local mezedes and unhurried tables by the coast.",
   },
   {
-    icon: Car,
-    label: "Access",
-    value: "Easy access by car",
-  },
-  {
-    icon: ParkingCircle,
-    label: "Parking",
-    value: "Available near the beach",
-  },
-  {
-    icon: Clock3,
-    label: "Best time",
-    value: "Morning to sunset",
-  },
-  {
-    icon: ShieldCheck,
-    label: "Ideal for",
-    value: "Families, couples and relaxation",
+    icon: Coffee,
+    title: "Sunset coffee",
+    text: "Stay into the evening and watch the shoreline turn golden.",
   },
 ];
 
 const localGuide = [
   {
     eyebrow: "Stay",
-    title: "Accommodation",
+    title: "Where to stay",
     image: "/hotel-placeholder.jpg",
     items: [
       {
-        title: "Beachfront stays",
-        text: "Choose a room close to the shore for easy access and sunset views.",
+        title: "Beachfront rooms",
+        text: "Ideal for sunrise walks and effortless access to the sea.",
       },
       {
         title: "Family apartments",
-        text: "A practical option for longer stays and relaxed summer holidays.",
+        text: "A comfortable option for longer holidays and relaxed routines.",
       },
     ],
   },
   {
     eyebrow: "Taste",
-    title: "Food & drink",
+    title: "Where to eat",
     image: "/restaurant-placeholder.jpg",
     items: [
       {
         title: "Seaside tavernas",
-        text: "Fresh fish, local mezedes and classic Greek dishes by the water.",
+        text: "Fresh seafood, grilled dishes and authentic Greek flavours.",
       },
       {
-        title: "Sunset drinks",
-        text: "Enjoy coffee, cocktails and light bites as the sun goes down.",
+        title: "Casual cafés",
+        text: "Coffee, cold drinks and light bites throughout the day.",
       },
     ],
   },
   {
     eyebrow: "Explore",
-    title: "Nearby experiences",
+    title: "What to discover",
     image: "/attractions-placeholder.jpg",
     items: [
       {
         title: "Traditional villages",
-        text: "Discover local architecture, quiet streets and authentic island life.",
+        text: "Quiet streets, local architecture and everyday island life.",
       },
       {
         title: "Southern Lesvos",
-        text: "Combine Vatera with scenic drives, beaches and cultural stops nearby.",
+        text: "Combine Vatera with scenic roads, beaches and cultural stops.",
       },
     ],
   },
@@ -129,22 +133,34 @@ function SectionHeading({
                           title,
                           description,
                           centered = false,
+                          light = false,
                         }: {
   eyebrow: string;
   title: string;
   description?: string;
   centered?: boolean;
+  light?: boolean;
 }) {
   return (
       <div className={centered ? "mx-auto max-w-3xl text-center" : "max-w-3xl"}>
-        <p className="text-xs font-bold uppercase tracking-[0.28em] text-amber-600 sm:text-sm">
+        <p className="text-xs font-bold uppercase tracking-[0.3em] text-amber-500 sm:text-sm">
           {eyebrow}
         </p>
-        <h2 className="mt-4 text-3xl font-black tracking-[-0.04em] text-stone-950 sm:text-4xl lg:text-5xl">
+
+        <h2
+            className={`mt-4 text-3xl font-black tracking-[-0.045em] sm:text-4xl lg:text-6xl ${
+                light ? "text-white" : "text-stone-950"
+            }`}
+        >
           {title}
         </h2>
+
         {description ? (
-            <p className="mt-5 text-base leading-7 text-stone-600 sm:text-lg sm:leading-8">
+            <p
+                className={`mt-5 text-base leading-7 sm:text-lg sm:leading-8 ${
+                    light ? "text-white/60" : "text-stone-600"
+                }`}
+            >
               {description}
             </p>
         ) : null}
@@ -154,31 +170,31 @@ function SectionHeading({
 
 export default function VateraPage() {
   return (
-      <main className="overflow-hidden bg-[#f8f6f1] text-stone-950">
+      <main className="overflow-hidden bg-[#f7f3ec] text-stone-950">
         {/* HERO */}
-        <section className="relative min-h-[92svh] overflow-hidden bg-stone-950">
+        <section className="relative min-h-[96svh] overflow-hidden bg-stone-950">
           <Image
               src="/petra.jpg"
               alt="Vatera Beach in Lesvos"
               fill
               priority
               sizes="100vw"
-              className="object-cover"
+              className="object-cover scale-[1.02]"
           />
 
-          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(12,10,8,0.92)_0%,rgba(12,10,8,0.68)_45%,rgba(12,10,8,0.18)_100%)]" />
-          <div className="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-transparent to-black/20" />
-          <div className="absolute left-[18%] top-[32%] h-80 w-80 rounded-full bg-amber-300/10 blur-[120px]" />
+          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(20,16,10,0.95)_0%,rgba(20,16,10,0.72)_46%,rgba(20,16,10,0.16)_100%)]" />
+          <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-black/20" />
+          <div className="absolute left-[16%] top-[30%] h-[420px] w-[420px] rounded-full bg-amber-300/10 blur-[130px]" />
 
-          <div className="relative z-10 mx-auto flex min-h-[92svh] max-w-7xl items-center px-4 py-24 sm:px-6 lg:px-8">
-            <div className="grid w-full gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
+          <div className="relative z-10 mx-auto flex min-h-[96svh] max-w-7xl items-center px-4 py-24 sm:px-6 lg:px-8">
+            <div className="grid w-full gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:items-end">
               <div className="max-w-4xl text-white">
-                <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-white/85 backdrop-blur-xl">
+                <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.22em] text-white/85 backdrop-blur-xl sm:text-xs">
                   <MapPin className="h-4 w-4 text-amber-300" />
                   Southern Lesvos · Greece
                 </div>
 
-                <h1 className="mt-7 text-5xl font-black leading-[0.9] tracking-[-0.06em] sm:text-6xl md:text-8xl lg:text-[7.5rem]">
+                <h1 className="mt-7 text-6xl font-black leading-[0.86] tracking-[-0.07em] sm:text-7xl md:text-8xl lg:text-[8rem]">
                   Vatera
                   <span className="block bg-gradient-to-r from-amber-200 via-yellow-400 to-orange-300 bg-clip-text text-transparent">
                   Beach
@@ -186,14 +202,14 @@ export default function VateraPage() {
                 </h1>
 
                 <p className="mt-7 max-w-2xl text-base leading-7 text-white/70 sm:text-lg sm:leading-8 md:text-xl">
-                  A wide golden coastline, clear Aegean water and an easy-going
-                  atmosphere made for long summer days.
+                  An endless golden shoreline, clear Aegean water and the kind of
+                  peaceful rhythm that turns a beach day into a memory.
                 </p>
 
                 <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                   <a
                       href="#discover"
-                      className="inline-flex items-center justify-center gap-2 rounded-full bg-amber-400 px-6 py-3.5 text-sm font-bold text-stone-950 shadow-[0_16px_50px_rgba(251,191,36,0.28)] transition hover:-translate-y-0.5 hover:bg-amber-300"
+                      className="inline-flex items-center justify-center gap-2 rounded-full bg-amber-400 px-6 py-3.5 text-sm font-bold text-stone-950 shadow-[0_18px_55px_rgba(251,191,36,0.3)] transition hover:-translate-y-0.5 hover:bg-amber-300"
                   >
                     Discover Vatera
                     <ArrowRight className="h-4 w-4" />
@@ -208,48 +224,44 @@ export default function VateraPage() {
                 </div>
 
                 <div className="mt-10 grid max-w-2xl grid-cols-2 gap-3 sm:grid-cols-4">
-                  {[
-                    ["8 km", "Coastline"],
-                    ["Sandy", "Beach type"],
-                    ["Easy", "Car access"],
-                    ["Sunset", "Best moment"],
-                  ].map(([value, label]) => (
+                  {quickFacts.map((fact) => (
                       <div
-                          key={label}
+                          key={fact.label}
                           className="rounded-2xl border border-white/10 bg-white/[0.07] p-4 backdrop-blur-xl"
                       >
-                        <p className="text-xl font-black text-white">{value}</p>
-                        <p className="mt-1 text-xs text-white/50">{label}</p>
+                        <p className="text-xl font-black text-white">{fact.value}</p>
+                        <p className="mt-1 text-xs text-white/45">{fact.label}</p>
                       </div>
                   ))}
                 </div>
               </div>
 
               <div className="hidden justify-end lg:flex">
-                <div className="relative h-[520px] w-[360px] overflow-hidden rounded-[2.25rem] border border-white/15 bg-white/10 shadow-[0_40px_100px_rgba(0,0,0,0.45)]">
+                <div className="relative h-[560px] w-[380px] overflow-hidden rounded-[2.5rem] border border-white/15 bg-white/10 shadow-[0_45px_120px_rgba(0,0,0,0.5)]">
                   <Image
                       src="/vatera1.jpg"
-                      alt="Vatera coast"
+                      alt="Vatera coast at sunset"
                       fill
-                      sizes="360px"
+                      sizes="380px"
                       className="object-cover transition duration-1000 hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-transparent" />
 
-                  <div className="absolute left-5 top-5 rounded-full border border-white/15 bg-black/25 px-4 py-2 text-xs font-semibold text-white backdrop-blur-xl">
-                    <span className="mr-2 text-amber-300">✦</span>
+                  <div className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-black/25 px-4 py-2 text-xs font-semibold text-white backdrop-blur-xl">
+                    <Sparkles className="h-4 w-4 text-amber-300" />
                     Local favourite
                   </div>
 
-                  <div className="absolute inset-x-0 bottom-0 p-7 text-white">
+                  <div className="absolute inset-x-0 bottom-0 p-8 text-white">
                     <p className="text-xs font-bold uppercase tracking-[0.24em] text-amber-300">
                       Summer escape
                     </p>
-                    <h2 className="mt-3 text-3xl font-black tracking-tight">
+                    <h2 className="mt-3 text-4xl font-black tracking-[-0.04em]">
                       Space, sea and slow island days
                     </h2>
                     <p className="mt-4 text-sm leading-6 text-white/65">
-                      Swim, relax and enjoy the simplicity of southern Lesvos.
+                      A destination made for swimming, walking, eating well and
+                      staying longer than planned.
                     </p>
                   </div>
                 </div>
@@ -257,76 +269,83 @@ export default function VateraPage() {
             </div>
           </div>
 
-          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#f8f6f1] to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#f7f3ec] to-transparent" />
         </section>
 
         {/* INTRO */}
         <section
             id="discover"
-            className="mx-auto grid max-w-7xl gap-12 px-4 py-20 sm:px-6 md:py-28 lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:px-8"
+            className="mx-auto grid max-w-7xl gap-12 px-4 py-20 sm:px-6 md:py-28 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:px-8"
         >
           <div>
             <SectionHeading
-                eyebrow="Why visit Vatera"
-                title="A beach that gives you room to breathe"
-                description="Vatera combines a long open coastline with relaxed island life. It is the kind of place where the day can begin with a quiet swim and end with fresh seafood and sunset light."
+                eyebrow="Why Vatera"
+                title="A beach that feels almost endless"
+                description="Vatera is one of those rare places where simplicity becomes the luxury. Swim, walk, eat by the sea and let the whole day unfold at its own pace."
             />
 
-            <div className="mt-8 grid gap-4 sm:grid-cols-2">
-              {[
-                {
-                  icon: Sun,
-                  title: "All-day destination",
-                  text: "Easy to enjoy from the first swim of the morning until sunset.",
-                },
-                {
-                  icon: Utensils,
-                  title: "Local flavours",
-                  text: "Traditional tavernas and cafés are available along the coast.",
-                },
-                {
-                  icon: Compass,
-                  title: "Great base",
-                  text: "A practical starting point for exploring southern Lesvos.",
-                },
-                {
-                  icon: Sparkles,
-                  title: "Relaxed character",
-                  text: "Spacious, welcoming and never overly formal.",
-                },
-              ].map((item) => (
+            <div className="mt-8 space-y-4">
+              {experiences.map((item) => (
                   <div
                       key={item.title}
-                      className="rounded-2xl border border-stone-200 bg-white p-5 shadow-sm"
+                      className="flex gap-4 rounded-2xl border border-stone-200 bg-white p-5 shadow-sm"
                   >
-                    <item.icon className="h-6 w-6 text-amber-600" />
-                    <h3 className="mt-4 font-bold text-stone-950">{item.title}</h3>
-                    <p className="mt-2 text-sm leading-6 text-stone-600">{item.text}</p>
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-amber-100 text-amber-700">
+                      <item.icon className="h-5 w-5" />
+                    </div>
+
+                    <div>
+                      <h3 className="font-bold text-stone-950">{item.title}</h3>
+                      <p className="mt-1 text-sm leading-6 text-stone-600">
+                        {item.text}
+                      </p>
+                    </div>
                   </div>
               ))}
             </div>
           </div>
 
-          <div className="relative min-h-[430px] overflow-hidden rounded-[2rem] bg-stone-900 shadow-[0_35px_90px_rgba(28,25,23,0.18)] sm:min-h-[540px]">
-            <Image
-                src="/vatera1.jpg"
-                alt="Sunset at Vatera Beach"
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+          <div className="grid gap-4 sm:grid-cols-2">
+            <div className="relative min-h-[520px] overflow-hidden rounded-[2rem] sm:row-span-2">
+              <Image
+                  src="/vatera1.jpg"
+                  alt="Vatera Beach"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 33vw"
+                  className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+              <div className="absolute bottom-0 p-6 text-white">
+                <p className="text-xs font-bold uppercase tracking-[0.24em] text-amber-300">
+                  Golden coast
+                </p>
+                <h3 className="mt-2 text-3xl font-black">Room to slow down</h3>
+              </div>
+            </div>
 
-            <div className="absolute bottom-0 left-0 max-w-lg p-6 text-white sm:p-9">
-              <p className="text-xs font-bold uppercase tracking-[0.24em] text-amber-300">
-                Southern Lesvos
+            <div className="relative min-h-[250px] overflow-hidden rounded-[2rem]">
+              <Image
+                  src="/petra.jpg"
+                  alt="Sea view in Lesvos"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 33vw"
+                  className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+              <div className="absolute bottom-0 p-5 text-white">
+                <p className="text-sm font-semibold">Clear Aegean water</p>
+              </div>
+            </div>
+
+            <div className="rounded-[2rem] bg-[#1b261f] p-6 text-white sm:p-8">
+              <Bath className="h-8 w-8 text-amber-300" />
+              <p className="mt-8 text-xs font-bold uppercase tracking-[0.24em] text-amber-300">
+                Best for
               </p>
-              <h3 className="mt-3 text-3xl font-black tracking-tight sm:text-4xl">
-                Golden-hour simplicity
-              </h3>
-              <p className="mt-4 text-sm leading-6 text-white/70 sm:text-base">
-                A coastline designed for unhurried walks, clear water and quiet
-                moments by the sea.
+              <h3 className="mt-3 text-3xl font-black">Long, effortless beach days</h3>
+              <p className="mt-4 text-sm leading-6 text-white/55">
+                Perfect for families, couples and travellers looking for space,
+                comfort and a relaxed pace.
               </p>
             </div>
           </div>
@@ -337,16 +356,17 @@ export default function VateraPage() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionHeading
                 eyebrow="Beach highlights"
-                title="Everything you need for an easy summer day"
-                description="Natural beauty, comfort and space come together along one of Lesvos’ most impressive coastlines."
+                title="Everything you need for a beautiful summer day"
+                description="A balance of natural beauty, comfort and calm, all along one spectacular coastline."
                 centered
+                light
             />
 
             <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {highlights.map((item, index) => (
                   <article
                       key={item.title}
-                      className="group rounded-[1.75rem] border border-white/10 bg-white/[0.055] p-6 transition duration-300 hover:-translate-y-1 hover:border-amber-300/30 hover:bg-white/[0.08]"
+                      className="group rounded-[1.85rem] border border-white/10 bg-white/[0.055] p-6 transition duration-300 hover:-translate-y-1 hover:border-amber-300/30 hover:bg-white/[0.08]"
                   >
                     <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-300 text-stone-950">
                       <item.icon className="h-6 w-6" />
@@ -367,10 +387,10 @@ export default function VateraPage() {
           </div>
         </section>
 
-        {/* PRACTICAL INFO + MAP */}
+        {/* INFO + MAP */}
         <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 md:py-28 lg:px-8">
-          <div className="grid gap-8 lg:grid-cols-[0.82fr_1.18fr]">
-            <div className="rounded-[2rem] bg-[#17201c] p-6 text-white shadow-xl sm:p-8">
+          <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
+            <div className="rounded-[2rem] bg-[#17201c] p-6 text-white shadow-[0_30px_80px_rgba(28,25,23,0.18)] sm:p-8">
               <p className="text-xs font-bold uppercase tracking-[0.24em] text-amber-300">
                 Plan your visit
               </p>
@@ -408,7 +428,7 @@ export default function VateraPage() {
               </a>
             </div>
 
-            <div className="overflow-hidden rounded-[2rem] border border-stone-200 bg-white shadow-xl">
+            <div className="overflow-hidden rounded-[2rem] border border-stone-200 bg-white shadow-[0_30px_80px_rgba(28,25,23,0.14)]">
               <div className="flex flex-col gap-3 border-b border-stone-200 p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6">
                 <div>
                   <p className="text-xs font-bold uppercase tracking-[0.22em] text-amber-600">
@@ -444,8 +464,8 @@ export default function VateraPage() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionHeading
                 eyebrow="Local guide"
-                title="Make more of your stay"
-                description="Use Vatera as a base for simple beach days, local food and short journeys around southern Lesvos."
+                title="Stay, taste and explore"
+                description="Everything you need to turn a beach visit into a fuller experience of southern Lesvos."
                 centered
             />
 
@@ -453,17 +473,17 @@ export default function VateraPage() {
               {localGuide.map((section) => (
                   <article
                       key={section.title}
-                      className="overflow-hidden rounded-[2rem] border border-stone-200 bg-[#faf9f6] shadow-sm"
+                      className="group overflow-hidden rounded-[2rem] border border-stone-200 bg-[#faf8f4] shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
                   >
-                    <div className="relative h-60 overflow-hidden">
+                    <div className="relative h-64 overflow-hidden">
                       <Image
                           src={section.image}
                           alt={section.title}
                           fill
                           sizes="(max-width: 1024px) 100vw, 33vw"
-                          className="object-cover transition duration-700 hover:scale-105"
+                          className="object-cover transition duration-700 group-hover:scale-105"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
 
                       <div className="absolute bottom-0 left-0 p-6 text-white">
                         <p className="text-xs font-bold uppercase tracking-[0.22em] text-amber-300">
@@ -479,10 +499,15 @@ export default function VateraPage() {
                               key={item.title}
                               className="rounded-2xl border border-stone-200 bg-white p-5"
                           >
-                            <h4 className="font-bold text-stone-950">{item.title}</h4>
-                            <p className="mt-2 text-sm leading-6 text-stone-600">
-                              {item.text}
-                            </p>
+                            <div className="flex items-start justify-between gap-4">
+                              <div>
+                                <h4 className="font-bold text-stone-950">{item.title}</h4>
+                                <p className="mt-2 text-sm leading-6 text-stone-600">
+                                  {item.text}
+                                </p>
+                              </div>
+                              <ChevronRight className="mt-1 h-4 w-4 shrink-0 text-amber-600" />
+                            </div>
                           </div>
                       ))}
                     </div>
@@ -534,7 +559,7 @@ export default function VateraPage() {
                   <Link
                       key={item.title}
                       href={item.href}
-                      className="group rounded-[1.75rem] border border-white/10 bg-white/[0.055] p-6 transition hover:-translate-y-1 hover:border-amber-300/30 hover:bg-white/[0.08]"
+                      className="group rounded-[1.85rem] border border-white/10 bg-white/[0.055] p-6 transition hover:-translate-y-1 hover:border-amber-300/30 hover:bg-white/[0.08]"
                   >
                     <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-300 text-stone-950">
                       <item.icon className="h-6 w-6" />
@@ -562,14 +587,14 @@ export default function VateraPage() {
               sizes="100vw"
               className="object-cover"
           />
-          <div className="absolute inset-0 bg-stone-950/78" />
-          <div className="absolute inset-0 bg-gradient-to-r from-stone-950/70 via-transparent to-stone-950/35" />
+          <div className="absolute inset-0 bg-stone-950/80" />
+          <div className="absolute inset-0 bg-gradient-to-r from-stone-950/75 via-transparent to-stone-950/35" />
 
           <div className="relative z-10 mx-auto max-w-4xl px-4 text-center text-white sm:px-6">
             <p className="text-xs font-bold uppercase tracking-[0.28em] text-amber-300">
               Discover Lesvos
             </p>
-            <h2 className="mt-5 text-4xl font-black tracking-[-0.04em] sm:text-5xl lg:text-6xl">
+            <h2 className="mt-5 text-4xl font-black tracking-[-0.045em] sm:text-5xl lg:text-6xl">
               Find your next island escape
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-white/65 sm:text-lg">
