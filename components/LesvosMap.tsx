@@ -17,7 +17,7 @@ type PlaceCategory =
     | "Town"
     | "Village"
     | "Beach"
-    | "Food"
+    | "Food & Drink"
     | "Nature"
     | "Culture"
     | "Accomodation"
