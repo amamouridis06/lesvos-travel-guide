@@ -12,7 +12,7 @@ import { FormEvent, useMemo, useState } from "react";
 
 type Category =
     | "All"
-    | "Beaches"
+    | "Beachs"
     | "Culture"
     | "Food"
     | "Nature"
