@@ -46,15 +46,27 @@ const lesvosPlaces: LesvosPlace[] = [
     },
     {
         id: 2,
-        name: "Taverna Mpampis",
+        name: "Molyvos",
         location: "Northern Lesvos",
-        category: "Food",
+        category: "Village",
         description:
-            "A beautiful traditional restaurant in village of Molyvos.",
-        coordinates: [39.3679029, 26.1718652],
-        image: "/mpampis/mpampis13.jpg",
-        href: "/food-drinks/tavernaompampis",
+            "A traditional stone-built village crowned by its medieval castle.",
+        coordinates: [39.367, 26.174],
+        image: "/images/explore/molyvos.jpg",
+        href: "/places/molyvos",
     },
+    {
+        id: 8,
+        name: "Skala Kallonis",
+        location: "Central Lesvos",
+        category: "Village",
+        description:
+            "A tranquil fishing village on the Gulf of Kalloni, known for sardines and birdwatching.",
+        coordinates: [39.208, 26.208],
+        image: "/images/explore/skala-kallonis.jpg",
+        href: "/places/skala-kallonis",
+    },
+
     {
         id: 3,
         name: "Petra",
@@ -162,11 +174,35 @@ function FlyToPlace({
     return null;
 }
 
-export default function LesvosMap() {
+type LesvosMapProps = {
+    selectedPlaceName?: string;
+};
+
+export default function LesvosMap({
+                                      selectedPlaceName,
+                                  }: LesvosMapProps) {
     const [selectedPlace, setSelectedPlace] = useState(lesvosPlaces[0]);
     const [activeCategory, setActiveCategory] = useState<
         PlaceCategory | "All"
     >("All");
+
+    useEffect(() => {
+        if (!selectedPlaceName) return;
+
+        const normalizedSelected = selectedPlaceName
+            .toLowerCase()
+            .replace("mytilini", "mytilene")
+            .replace("molivos", "molyvos");
+
+        const matchingPlace = lesvosPlaces.find((place) =>
+            place.name.toLowerCase() === normalizedSelected,
+        );
+
+        if (matchingPlace) {
+            setSelectedPlace(matchingPlace);
+            setActiveCategory("All");
+        }
+    }, [selectedPlaceName]);
 
     const visiblePlaces = useMemo(() => {
         if (activeCategory === "All") {
