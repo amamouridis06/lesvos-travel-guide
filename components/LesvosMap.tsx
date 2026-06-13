@@ -19,8 +19,8 @@ type PlaceCategory =
     | "Beach"
     | "Food"
     | "Nature"
-    | "Culture";
-
+    | "Culture"
+    | "Accomodation";
 type LesvosPlace = {
     id: number;
     name: string;
@@ -35,6 +35,39 @@ type LesvosPlace = {
 const lesvosPlaces: LesvosPlace[] = [
     {
         id: 1,
+        name: "Skala Kallonis",
+        location: "Central Lesvos",
+        category: "Village",
+        description:
+            "A tranquil fishing village on the Gulf of Kalloni, known for sardines and birdwatching.",
+        coordinates: [39.208, 26.208],
+        image: "/images/explore/skala-kallonis.jpg",
+        href: "/places/skala-kallonis",
+    },
+    {
+        id: 11,
+        name: "Diamanti Studios",
+        location: "Kalloni Lesvos",
+        category: "Accomodation",
+        description:
+            "Studios in a fanastic village in Central Lesvos",
+        coordinates: [39.206767,26.207183],
+        image: "/diamanti/house.jpg",
+        href: "/hotels/diamanti-studios",
+    },
+    {
+        id: 12,
+        name: "Hotel Petrino",
+        location: "Molyvos Lesvos",
+        category: "Accomodation",
+        description:
+            "A hotel in a fanastic village in North Lesvos",
+        coordinates: [39.3665856,26.1800643],
+        image: "/petrino/petrino1.jpg",
+        href: "/hotels/petrino",
+    },
+    {
+        id: 8,
         name: "Mytilene",
         location: "Southeastern Lesvos",
         category: "Town",
@@ -66,17 +99,7 @@ const lesvosPlaces: LesvosPlace[] = [
         image: "/tropicana/tropicana1.jpg",
         href: "/food-drinks/tropicana",
     },
-    {
-        id: 8,
-        name: "Skala Kallonis",
-        location: "Central Lesvos",
-        category: "Village",
-        description:
-            "A tranquil fishing village on the Gulf of Kalloni, known for sardines and birdwatching.",
-        coordinates: [39.208, 26.208],
-        image: "/images/explore/skala-kallonis.jpg",
-        href: "/places/skala-kallonis",
-    },
+
 
     {
         id: 10,
