@@ -81,7 +81,7 @@ const Restaurants: FoodItem[] = [
     location: "Eftalou, Lesvos",
     image: "/votsalo/votsalo-logo.jpg",
     alt: "Taverna To Votsalo",
-    href: "/food/taverna-to-votsalo",
+    href: "/food-drinks/taverna-to-votsalo",
   },
   {
     title: "Nisi Restaurant",

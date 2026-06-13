@@ -27,10 +27,6 @@ export default function NavBar() {
                           gap-3 lg:gap-6
                           text-xs lg:text-sm">
 
-              <Link href="/" className="hover:text-yellow-300 transition whitespace-nowrap">
-                Home
-              </Link>
-
               <Link href="/under-construction" className="hover:text-yellow-300 transition whitespace-nowrap">
                 Villages
               </Link>
@@ -90,10 +86,6 @@ export default function NavBar() {
         {mobileOpen && (
             <div className="md:hidden bg-emerald-900/95 border-t border-emerald-800 shadow-lg text-white">
               <div className="max-w-6xl mx-auto px-4 py-4 flex flex-col">
-                <Link href="/" onClick={closeMenu} className="py-3 border-b border-white/10 hover:text-yellow-300 transition">
-                  Home
-                </Link>
-
                 <Link href="/under-construction" onClick={closeMenu} className="py-3 border-b border-white/10 hover:text-yellow-300 transition">
                   Villages
                 </Link>

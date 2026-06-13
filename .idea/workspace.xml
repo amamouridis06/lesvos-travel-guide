@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7c9bc8c7-ef82-4a4e-9be0-f078e0e09aa3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/app/food-drinks/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/food-drinks/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/LesvosMap.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/LesvosMap.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/NavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/NavBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;amamouridis06&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:amamouridis06/lesvos-travel-guide.git&quot;,
+    &quot;accountId&quot;: &quot;82c03bbc-84e8-4bf5-92d7-de53c817c305&quot;
+  }
+}</component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="3CJxmUjRsxhGsJB9XuYHwv2ATrd" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
+    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/angel/Projects/lesvos-travel-guide/app/food/nisi-restaurant&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2025.3.2\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\angel\Projects\lesvos-travel-guide\app\food\nisi-restaurant" />
+      <recent name="C:\Users\angel\Projects\lesvos-travel-guide\app\hotels\presidential-beach-villa" />
+      <recent name="C:\Users\angel\Projects\lesvos-travel-guide\app\food\taverna-to-votsalo" />
+      <recent name="C:\Users\angel\Projects\lesvos-travel-guide\app\rentals" />
+      <recent name="C:\Users\angel\Projects\lesvos-travel-guide\app\hotels\pp-urban-studio" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\angel\Projects\lesvos-travel-guide\app\transfers\drivers" />
+      <recent name="C:\Users\angel\Projects\lesvos-travel-guide\app\transfers\companies" />
+      <recent name="C:\Users\angel\Projects\lesvos-travel-guide\app\transfers" />
+      <recent name="C:\Users\angel\Projects\lesvos-travel-guide\app\food-drinks" />
+      <recent name="C:\Users\angel\Projects\lesvos-travel-guide\app" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.Next.js: server-side">
+    <configuration name="Next.js: debug client-side" type="JavascriptDebugType" uri="http://localhost:3000/">
+      <method v="2" />
+    </configuration>
+    <configuration name="Next.js: server-side" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.30387.90" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7c9bc8c7-ef82-4a4e-9be0-f078e0e09aa3" name="Changes" comment="" />
+      <created>1776117632424</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1776117632424</updated>
+      <workItem from="1776117633639" duration="670000" />
+      <workItem from="1776159006389" duration="6263000" />
+      <workItem from="1777210679091" duration="418000" />
+      <workItem from="1777288559403" duration="20397000" />
+      <workItem from="1777412269709" duration="2304000" />
+      <workItem from="1777453398745" duration="29748000" />
+      <workItem from="1777641823167" duration="3920000" />
+      <workItem from="1777657915093" duration="135000" />
+      <workItem from="1777720697163" duration="4675000" />
+      <workItem from="1777837327564" duration="6715000" />
+      <workItem from="1777916553072" duration="6514000" />
+      <workItem from="1777973011556" duration="1738000" />
+      <workItem from="1777976911604" duration="3158000" />
+      <workItem from="1777987929277" duration="9792000" />
+      <workItem from="1778024080431" duration="17989000" />
+      <workItem from="1778166271062" duration="82000" />
+      <workItem from="1778169317678" duration="10104000" />
+      <workItem from="1778228260190" duration="2899000" />
+      <workItem from="1778233938933" duration="26180000" />
+      <workItem from="1778423055015" duration="11277000" />
+      <workItem from="1778485963897" duration="8231000" />
+      <workItem from="1778576553047" duration="1808000" />
+      <workItem from="1778593096098" duration="6876000" />
+      <workItem from="1778600913643" duration="73000" />
+      <workItem from="1778602781744" duration="650000" />
+      <workItem from="1778608641634" duration="807000" />
+      <workItem from="1778677240006" duration="838000" />
+      <workItem from="1778683041274" duration="2786000" />
+      <workItem from="1778748711238" duration="15225000" />
+      <workItem from="1778873846090" duration="5343000" />
+      <workItem from="1778927250264" duration="30000" />
+      <workItem from="1778936050864" duration="11117000" />
+      <workItem from="1779010973347" duration="15062000" />
+      <workItem from="1779191665228" duration="1815000" />
+      <workItem from="1779356693165" duration="1243000" />
+      <workItem from="1779448085513" duration="9942000" />
+      <workItem from="1779541244480" duration="5030000" />
+      <workItem from="1779625272978" duration="2810000" />
+      <workItem from="1779632348882" duration="10634000" />
+      <workItem from="1779708204279" duration="4623000" />
+      <workItem from="1779797828976" duration="6335000" />
+      <workItem from="1779911845024" duration="871000" />
+      <workItem from="1779922894395" duration="1241000" />
+      <workItem from="1779992965058" duration="2986000" />
+      <workItem from="1780074479117" duration="4705000" />
+      <workItem from="1780300806248" duration="4078000" />
+      <workItem from="1780308971605" duration="36000" />
+      <workItem from="1780314270944" duration="1950000" />
+      <workItem from="1780408967160" duration="17067000" />
+      <workItem from="1780470478867" duration="2731000" />
+      <workItem from="1780493796632" duration="2235000" />
+      <workItem from="1780672666731" duration="13501000" />
+      <workItem from="1780911445307" duration="6605000" />
+      <workItem from="1781178969054" duration="1798000" />
+      <workItem from="1781189403889" duration="4064000" />
+      <workItem from="1781196062917" duration="93000" />
+      <workItem from="1781201952397" duration="2454000" />
+      <workItem from="1781293285221" duration="1269000" />
+      <workItem from="1781336946980" duration="7284000" />
+      <workItem from="1781355936707" duration="11772000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
+  </component>
+</project>

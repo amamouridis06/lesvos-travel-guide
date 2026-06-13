@@ -201,8 +201,8 @@ const lesvosPlaces: LesvosPlace[] = [
     },
     {
         id: 15,
-        name: "Eressian Hotel & Hammam Spa",
-        location: " Mytilene, Lesvos",
+        name: "Thanos Cozy Apartments",
+        location: "Skala Kallonis, Lesvos",
         category: "Accomodation",
         description:
             "Where the sea meets stillness.",
@@ -211,7 +211,7 @@ const lesvosPlaces: LesvosPlace[] = [
         href: "/hotels/thanos-cozy-appartments",
     },
     {
-        id: 15,
+        id: 16,
         name: "Azul Paraiso",
         location: " Mytilene, Lesvos",
         category: "Bar",
@@ -219,9 +219,107 @@ const lesvosPlaces: LesvosPlace[] = [
             "A fantastic place to drink your cocktail by the sea and you can eat the best choice the fantastic pancakes",
         coordinates: [39.3202104,26.1492031],
         image: "/azul/azul-hero.jpeg",
-        href: "/hotels/azul-paraiso",
+        href: "/food-drinks/azul-paraiso",
     },
-
+    {
+        id: 16,
+        name: "Azul Paraiso",
+        location: " Mytilene, Lesvos",
+        category: "Bar",
+        description:
+            "A fantastic place to drink your cocktail by the sea and you can eat the best choice the fantastic pancakes",
+        coordinates: [39.3202104,26.1492031],
+        image: "/azul/azul-hero.jpeg",
+        href: "/food-drinks/azul-paraiso",
+    },
+    {
+        id: 17,
+        name: "Molyvos",
+        location: "Northern Lesvos",
+        category: "Village",
+        description:
+            "A fantastic to eat, drink and to walk",
+        coordinates: [39.3692702,26.1685807],
+        image: "/villages/molivos1.jpeg",
+        href: "/villages/molyvos",
+    },
+    {
+        id: 18,
+        name: "Pallas Cafe - Grill",
+        location: " Mesotopos, Lesvos",
+        category: "Food",
+        description:
+            "Fresh meat, local dishes in a beautiful village",
+        coordinates: [39.1315723,26.0036708],
+        image: "/pallas/palas.jpg",
+        href: "/food-drinks/pallas",
+    },
+    {
+        id: 19,
+        name: "Taverna Mpampis",
+        location: "Molyvos, Lesvos",
+        category: "Food",
+        description:
+            "Fresh meat, local dishes in a beautiful village",
+        coordinates: [39.3673861,26.1753635],
+        image: "/mpampis/mpampis13.jpg",
+        href: "/food-drinks/tavernaompampis",
+    },
+    {
+        id: 19,
+        name: "Taverna Mpampis",
+        location: "Molyvos, Lesvos",
+        category: "Food",
+        description:
+            "Fresh meat, local dishes in a beautiful village",
+        coordinates: [39.3673861,26.1753635],
+        image: "/mpampis/mpampis13.jpg",
+        href: "/food-drinks/tavernaompampis",
+    },
+    {
+        id: 20,
+        name: "Nisi Restaurant",
+        location: "Plateia Kiriakou,811 08 Molyvos, Lesvos",
+        category: "Food",
+        description:
+            "Authentic Greek flavors, and fantastic hospitality.",
+        coordinates: [39.3693073,26.1733986],
+        image: "/nisi/nisi10.jpg",
+        href: "/food-drinks/nisi-restaurant",
+    },
+    {
+        id: 21,
+        name: "To Limanaki Ton Pamfilon",
+        location: "Skala Pamfilon, Lesvos",
+        category: "Food",
+        description:
+            "Fresh fish, local dishes, and a relaxing seaside atmosphere.",
+        coordinates: [39.1600419,26.530802],
+        image: "/limanaki/limanaki_pamf1.jpg",
+        href: "/food-drinks/limanaki_pamfilon",
+    },
+    {
+        id: 22,
+        name: "Petite",
+        location: "Molyvos Harbour, Lesvos",
+        category: "Food",
+        description:
+            "Delicius pancakes and wafles",
+        coordinates: [39.3692427,26.1685039],
+        image: "/petite/petite7.jpg",
+        href: "/food-drinks/petite",
+    },
+    {
+        id: 22,
+        name: "Misirlou",
+        location: "Molyvos Harbour, Lesvos",
+        category: "Food",
+        description:
+            "Greek flavors, cocktails, seaside relaxation, escape.",
+        coordinates: [39.3690915,26.1694041],
+        image: "/misirlou/misirlou6.jpg",
+        href: "/food-drinks/misirlou",
+    },
 ];
 
 const categoryLabels: Record<PlaceCategory, string> = {
