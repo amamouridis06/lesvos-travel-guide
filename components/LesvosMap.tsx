@@ -336,7 +336,7 @@ export default function LesvosMap({
                                     key={place.id}
                                     position={place.coordinates}
                                     icon={createMarkerIcon(
-                                        place.category,
+                                        place.image,
                                         isSelected,
                                     )}
                                     eventHandlers={{
