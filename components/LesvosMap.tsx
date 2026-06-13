@@ -82,7 +82,7 @@ const lesvosPlaces: LesvosPlace[] = [
         id: 5,
         name: "Tryfon",
         location: "Central Lesvos",
-        category: "Food",
+        category: "Food & Drink",
         description:
             "A traditional tavern in centre of Lesvos",
         coordinates: [39.2332881,26.2081099],
@@ -93,7 +93,7 @@ const lesvosPlaces: LesvosPlace[] = [
         id: 6,
         name: "Tropicana Platanos",
         location: "Northern Lesvos",
-        category: "Food",
+        category: "Food & Drink",
         description:
             "A traditional rastaurant in Molyvos",
         coordinates: [39.3694398,26.173488],
@@ -126,7 +126,7 @@ const lesvosPlaces: LesvosPlace[] = [
         id: 9,
         name: "Plomari",
         location: "Southern Lesvos",
-        category: "Food",
+        category: "Village",
         description:
             "A charming coastal town associated with the island’s famous ouzo tradition.",
         coordinates: [38.976, 26.37],
@@ -191,7 +191,7 @@ const lesvosPlaces: LesvosPlace[] = [
     {
         id: 14,
         name: "Eressian Hotel & Hammam Spa",
-        location: " Mytilene, Lesvos",
+        location: "Eresos, Lesvos",
         category: "Accomodation",
         description:
             "Where modern living meets the village life.",
@@ -213,18 +213,7 @@ const lesvosPlaces: LesvosPlace[] = [
     {
         id: 16,
         name: "Azul Paraiso",
-        location: " Mytilene, Lesvos",
-        category: "Bar",
-        description:
-            "A fantastic place to drink your cocktail by the sea and you can eat the best choice the fantastic pancakes",
-        coordinates: [39.3202104,26.1492031],
-        image: "/azul/azul-hero.jpeg",
-        href: "/food-drinks/azul-paraiso",
-    },
-    {
-        id: 16,
-        name: "Azul Paraiso",
-        location: " Mytilene, Lesvos",
+        location: "Anaxos, Lesvos",
         category: "Bar",
         description:
             "A fantastic place to drink your cocktail by the sea and you can eat the best choice the fantastic pancakes",
@@ -247,7 +236,7 @@ const lesvosPlaces: LesvosPlace[] = [
         id: 18,
         name: "Pallas Cafe - Grill",
         location: " Mesotopos, Lesvos",
-        category: "Food",
+        category: "Food & Drink",
         description:
             "Fresh meat, local dishes in a beautiful village",
         coordinates: [39.1315723,26.0036708],
@@ -258,7 +247,7 @@ const lesvosPlaces: LesvosPlace[] = [
         id: 19,
         name: "Taverna Mpampis",
         location: "Molyvos, Lesvos",
-        category: "Food",
+        category: "Food & Drink",
         description:
             "Fresh meat, local dishes in a beautiful village",
         coordinates: [39.3673861,26.1753635],
@@ -269,7 +258,7 @@ const lesvosPlaces: LesvosPlace[] = [
         id: 19,
         name: "Taverna Mpampis",
         location: "Molyvos, Lesvos",
-        category: "Food",
+        category: "Food & Drink",
         description:
             "Fresh meat, local dishes in a beautiful village",
         coordinates: [39.3673861,26.1753635],
@@ -291,7 +280,7 @@ const lesvosPlaces: LesvosPlace[] = [
         id: 21,
         name: "To Limanaki Ton Pamfilon",
         location: "Skala Pamfilon, Lesvos",
-        category: "Food",
+        category: "Food & Drink",
         description:
             "Fresh fish, local dishes, and a relaxing seaside atmosphere.",
         coordinates: [39.1600419,26.530802],
@@ -302,7 +291,7 @@ const lesvosPlaces: LesvosPlace[] = [
         id: 22,
         name: "Petite",
         location: "Molyvos Harbour, Lesvos",
-        category: "Food",
+        category: "Food & Drink",
         description:
             "Delicius pancakes and wafles",
         coordinates: [39.3692427,26.1685039],
@@ -313,7 +302,7 @@ const lesvosPlaces: LesvosPlace[] = [
         id: 22,
         name: "Misirlou",
         location: "Molyvos Harbour, Lesvos",
-        category: "Food",
+        category: "Food & Drink",
         description:
             "Greek flavors, cocktails, seaside relaxation, escape.",
         coordinates: [39.3690915,26.1694041],
@@ -330,7 +319,7 @@ const categoryLabels: Record<PlaceCategory, string> = {
     Nature: "Nature",
     Culture: "Culture",
     Accomodation:"Accomodation",
-    Bar:"Bar",
+    Bar: "Bar",
 };
 
 function createMarkerIcon(image: string, selected: boolean) {
@@ -435,6 +424,8 @@ export default function LesvosMap({
                             "Food",
                             "Nature",
                             "Culture",
+                            "Accomodation",
+                            "Bar"
                         ].map((category) => {
                             const isActive = activeCategory === category;
 
