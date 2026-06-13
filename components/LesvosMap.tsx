@@ -269,7 +269,7 @@ const lesvosPlaces: LesvosPlace[] = [
         id: 20,
         name: "Nisi Restaurant",
         location: "Plateia Kiriakou,811 08 Molyvos, Lesvos",
-        category: "Food",
+        category: "Food & Drinks",
         description:
             "Authentic Greek flavors, and fantastic hospitality.",
         coordinates: [39.3693073,26.1733986],
