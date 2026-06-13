@@ -215,14 +215,14 @@ export default function LesvosMap({
     }, [activeCategory]);
 
     return (
-        <section className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-[#07100f] shadow-[0_40px_120px_rgba(0,0,0,0.4)]">
-            <div className="grid lg:grid-cols-[360px_1fr]">
-                <aside className="relative z-[500] border-b border-white/10 bg-[#091311] p-6 lg:border-b-0 lg:border-r">
+        <section className="relative overflow-hidden rounded-[1.5rem] sm:rounded-[2rem] lg:rounded-[2.5rem] border border-white/10 bg-[#07100f] shadow-[0_40px_120px_rgba(0,0,0,0.4)]">
+            <div className="grid lg:grid-cols-[320px_1fr] xl:grid-cols-[360px_1fr]">
+                <aside className="relative z-[500] border-b border-white/10 bg-[#091311] p-4 sm:p-5 lg:p-6 lg:border-b-0 lg:border-r">
                     <p className="text-xs font-black uppercase tracking-[0.25em] text-orange-300">
                         Explore Lesvos
                     </p>
 
-                    <h2 className="mt-4 text-4xl font-black tracking-[-0.05em] text-white">
+                    <h2 className="mt-4 text-3xl font-black sm:text-4xl tracking-[-0.05em] text-white">
                         Discover the
                         <span className="block text-white/35">whole island.</span>
                     </h2>
@@ -232,7 +232,7 @@ export default function LesvosMap({
                         villages, food and cultural locations.
                     </p>
 
-                    <div className="mt-7 flex gap-2 overflow-x-auto pb-2 lg:flex-wrap">
+                    <div className="mt-5 flex gap-2 overflow-x-auto pb-2 sm:mt-7 lg:flex-wrap">
                         {[
                             "All",
                             "Beach",
@@ -267,7 +267,7 @@ export default function LesvosMap({
                         })}
                     </div>
 
-                    <div className="mt-7 space-y-3 lg:max-h-[390px] lg:overflow-y-auto lg:pr-2">
+                    <div className="mt-5 flex gap-3 overflow-x-auto pb-2 lg:mt-7 lg:block lg:max-h-[390px] lg:space-y-3 lg:overflow-y-auto lg:pr-2">
                         {visiblePlaces.map((place) => {
                             const isSelected = selectedPlace.id === place.id;
 
@@ -276,7 +276,7 @@ export default function LesvosMap({
                                     key={place.id}
                                     type="button"
                                     onClick={() => setSelectedPlace(place)}
-                                    className={`flex w-full items-center gap-3 rounded-2xl border p-3 text-left transition ${
+                                    className={`flex min-w-[230px] items-center gap-3 rounded-2xl lg:min-w-0 lg:w-full border p-3 text-left transition ${
                                         isSelected
                                             ? "border-orange-300/60 bg-orange-300/10"
                                             : "border-white/10 bg-white/[0.04] hover:bg-white/[0.08]"
@@ -285,7 +285,7 @@ export default function LesvosMap({
                                     <img
                                         src={place.image}
                                         alt=""
-                                        className="h-16 w-16 shrink-0 rounded-xl object-cover"
+                                        className="h-14 w-14 sm:h-16 sm:w-16 shrink-0 rounded-xl object-cover"
                                     />
 
                                     <span className="min-w-0">
@@ -307,14 +307,14 @@ export default function LesvosMap({
                     </div>
                 </aside>
 
-                <div className="relative min-h-[570px]">
+                <div className="relative min-h-[380px] sm:min-h-[480px] lg:min-h-[570px]">
                     <MapContainer
                         center={[39.19, 26.22]}
                         zoom={9}
                         minZoom={8}
                         maxZoom={18}
                         scrollWheelZoom
-                        className="h-[570px] w-full lg:h-[680px]"
+                        className="h-[380px] w-full sm:h-[480px] md:h-[560px] lg:h-[680px]"
                     >
                         <TileLayer
                             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -375,12 +375,12 @@ export default function LesvosMap({
                         })}
                     </MapContainer>
 
-                    <div className="pointer-events-none absolute bottom-6 left-1/2 z-[400] w-[calc(100%-3rem)] max-w-md -translate-x-1/2 rounded-2xl border border-white/15 bg-[#07100f]/90 p-3 shadow-2xl backdrop-blur-xl">
+                    <div className="pointer-events-none absolute bottom-3 left-1/2 sm:bottom-5 lg:bottom-6 z-[400] w-[calc(100%-1.5rem)] max-w-md sm:w-[calc(100%-3rem)] -translate-x-1/2 rounded-2xl border border-white/15 bg-[#07100f]/90 p-2.5 shadow-2xl sm:p-3 backdrop-blur-xl">
                         <div className="flex items-center gap-3">
                             <img
                                 src={selectedPlace.image}
                                 alt=""
-                                className="h-16 w-16 rounded-xl object-cover"
+                                className="h-14 w-14 sm:h-16 sm:w-16 rounded-xl object-cover"
                             />
 
                             <div className="min-w-0">
