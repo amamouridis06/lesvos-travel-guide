@@ -1,407 +1,281 @@
-"use client";
+import React, { useState } from "react";
 
-import { useMemo, useState } from "react";
-
-type ProductImage = {
-    src: string;
-    alt?: string;
-};
-
-type ContactDetails = {
+type HoneyGuideProps = {
+    productName?: string;
     producerName?: string;
+    location?: string;
+    shortDescription?: string;
+    fullDescription?: string;
+    mainImage?: string;
+    gallery?: string[];
     phone?: string;
     email?: string;
     website?: string;
     address?: string;
-    instagram?: string;
-    facebook?: string;
+    openingHours?: string;
+    mapUrl?: string;
+    price?: string;
 };
 
-type HoneyProductProps = {
-    title?: string;
-    category?: string;
-    origin?: string;
-    shortDescription?: string;
-    history?: string;
-    images?: ProductImage[];
-    price?: number;
-    currency?: string;
-    weight?: string;
-    features?: string[];
-    contact?: ContactDetails;
-};
+export default function HoneyTravelGuide({
+                                             productName = "Θυμαρίσιο Μέλι Κρήτης",
+                                             producerName = "Μελισσοκομείο Η Ορεινή Κυψέλη",
+                                             location = "Σητεία, Κρήτη",
+                                             shortDescription = "Αγνό θυμαρίσιο μέλι μικρής παραγωγής από τα βουνά της ανατολικής Κρήτης.",
+                                             fullDescription = `Το μέλι παράγεται με παραδοσιακές μεθόδους από οικογενειακό 
+  μελισσοκομείο. Οι κυψέλες μεταφέρονται σε περιοχές πλούσιες σε θυμάρι και 
+  άγρια βότανα, προσφέροντας ένα μέλι με έντονο άρωμα, γεμάτη γεύση και 
+  φυσικό χρυσαφένιο χρώμα.
 
-const DEFAULT_IMAGE: ProductImage = {
-    src: "/images/honey-placeholder.jpg",
-    alt: "Traditional local honey",
-};
-
-function ExternalLinkIcon() {
-    return (
-        <svg
-            aria-hidden="true"
-            viewBox="0 0 24 24"
-            fill="none"
-            className="h-4 w-4"
-            stroke="currentColor"
-            strokeWidth={1.8}
-        >
-            <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M14 5h5v5M13 11l6-6M19 13v6H5V5h6"
-            />
-        </svg>
-    );
-}
-
-function PhoneIcon() {
-    return (
-        <svg
-            aria-hidden="true"
-            viewBox="0 0 24 24"
-            fill="none"
-            className="h-5 w-5"
-            stroke="currentColor"
-            strokeWidth={1.8}
-        >
-            <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M6.8 3.5 9.3 3l2 5-2 1.5a15.4 15.4 0 0 0 5.2 5.2l1.5-2 5 2-.5 2.5A3 3 0 0 1 17.6 20C10.1 19.4 4.6 13.9 4 6.4A3 3 0 0 1 6.8 3.5Z"
-            />
-        </svg>
-    );
-}
-
-function EmailIcon() {
-    return (
-        <svg
-            aria-hidden="true"
-            viewBox="0 0 24 24"
-            fill="none"
-            className="h-5 w-5"
-            stroke="currentColor"
-            strokeWidth={1.8}
-        >
-            <rect x="3" y="5" width="18" height="14" rx="2" />
-            <path strokeLinecap="round" d="m4 7 8 6 8-6" />
-        </svg>
-    );
-}
-
-function LocationIcon() {
-    return (
-        <svg
-            aria-hidden="true"
-            viewBox="0 0 24 24"
-            fill="none"
-            className="h-5 w-5"
-            stroke="currentColor"
-            strokeWidth={1.8}
-        >
-            <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M12 21s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12Z"
-            />
-            <circle cx="12" cy="9" r="2.5" />
-        </svg>
-    );
-}
-
-function normalizeExternalUrl(url?: string) {
-    if (!url) return undefined;
-
-    if (url.startsWith("http://") || url.startsWith("https://")) {
-        return url;
-    }
-
-    return `https://${url}`;
-}
-
-export default function HoneyProduct({
-                                         title = "Anaxos Wildflower Honey",
-                                         category = "Authentic local product",
-                                         origin = "Anaxos, Lesvos, Greece",
-                                         shortDescription = "Premium local honey with a rich floral aroma, smooth texture and naturally balanced sweetness.",
-                                         history = `Our family has been producing honey in northern Lesvos for three generations.
-
-The story began with a small number of traditional beehives near Anaxos. The knowledge and care of beekeeping passed from one generation to the next.
-
-Today, our honey is still produced in small batches, with respect for nature, the bees and the traditional methods of the island.`,
-                                         images = [],
-                                         price,
-                                         currency = "EUR",
-                                         weight,
-                                         features = [],
-                                         contact,
-                                     }: HoneyProductProps) {
-    const [activeImageIndex, setActiveImageIndex] = useState(0);
-
-    const safeImages = useMemo<ProductImage[]>(() => {
-        if (!Array.isArray(images) || images.length === 0) {
-            return [DEFAULT_IMAGE];
-        }
-
-        const validImages = images.filter(
-            (image): image is ProductImage =>
-                Boolean(image) &&
-                typeof image.src === "string" &&
-                image.src.trim().length > 0,
-        );
-
-        return validImages.length > 0 ? validImages : [DEFAULT_IMAGE];
-    }, [images]);
-
-    const activeImage =
-        safeImages[activeImageIndex] ?? safeImages[0] ?? DEFAULT_IMAGE;
-
-    const formattedPrice = useMemo(() => {
-        if (typeof price !== "number" || Number.isNaN(price)) {
-            return null;
-        }
-
-        try {
-            return new Intl.NumberFormat("el-GR", {
-                style: "currency",
-                currency,
-            }).format(price);
-        } catch {
-            return `${price.toFixed(2)} ${currency}`;
-        }
-    }, [price, currency]);
-
-    const safeFeatures = Array.isArray(features)
-        ? features.filter(
-            (feature): feature is string =>
-                typeof feature === "string" && feature.trim().length > 0,
-        )
-        : [];
-
-    const websiteUrl = normalizeExternalUrl(contact?.website);
-    const instagramUrl = normalizeExternalUrl(contact?.instagram);
-    const facebookUrl = normalizeExternalUrl(contact?.facebook);
-
-    const phoneHref = contact?.phone
-        ? `tel:${contact.phone.replace(/[^\d+]/g, "")}`
-        : undefined;
+  Οι επισκέπτες μπορούν να γνωρίσουν τον παραγωγό, να μάθουν περισσότερα 
+  για τη διαδικασία παραγωγής και να δοκιμάσουν διαφορετικές ποικιλίες μελιού.`,
+                                             mainImage = "/images/honey/main-honey.jpg",
+                                             gallery = [
+                                                 "/images/honey/honey-jar.jpg",
+                                                 "/images/honey/beehives.jpg",
+                                                 "/images/honey/producer.jpg",
+                                                 "/images/honey/landscape.jpg",
+                                             ],
+                                             phone = "+30 691 234 5678",
+                                             email = "info@oreinikypseli.gr",
+                                             website = "https://example.com",
+                                             address = "Επαρχιακή Οδός Σητείας, Λασίθι, Κρήτη",
+                                             openingHours = "Δευτέρα – Σάββατο, 09:00 – 18:00",
+                                             mapUrl = "https://maps.google.com",
+                                             price = "Από 9,50 €",
+                                         }: HoneyGuideProps) {
+    const allImages = [mainImage, ...gallery];
+    const [selectedImage, setSelectedImage] = useState(mainImage);
 
     return (
-        <article className="mx-auto w-full max-w-6xl overflow-hidden rounded-[2rem] border border-amber-100 bg-white shadow-[0_24px_80px_rgba(92,60,12,0.12)]">
-            <div className="grid lg:grid-cols-[1.05fr_1fr]">
-                <section
-                    aria-label="Product image gallery"
-                    className="bg-amber-50 p-4 sm:p-6"
-                >
-                    <div className="relative overflow-hidden rounded-3xl bg-stone-100">
-                        <img
-                            src={activeImage.src}
-                            alt={activeImage.alt || title}
-                            className="h-[360px] w-full object-cover sm:h-[480px] lg:h-[620px]"
-                        />
+        <main className="min-h-screen bg-[#fffaf0] text-stone-800">
+            <section className="relative">
+                <img
+                    src={selectedImage}
+                    alt={productName}
+                    className="h-[420px] w-full object-cover md:h-[560px]"
+                />
 
-                        <div className="absolute left-5 top-5 rounded-full bg-white/90 px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-amber-900 shadow-sm backdrop-blur">
-                            Local product
-                        </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
 
-                        {weight && (
-                            <div className="absolute bottom-5 right-5 rounded-2xl bg-stone-950/65 px-4 py-3 text-white backdrop-blur">
-                                <p className="text-xs uppercase tracking-wider text-white/70">
-                                    Net weight
-                                </p>
-                                <p className="mt-1 font-semibold">{weight}</p>
-                            </div>
-                        )}
-                    </div>
+                <div className="absolute bottom-0 left-0 right-0 mx-auto max-w-7xl px-6 pb-10 text-white">
+          <span className="inline-block rounded-full bg-amber-400 px-4 py-2 text-sm font-bold text-stone-900">
+            Τοπικό προϊόν
+          </span>
 
-                    {safeImages.length > 1 && (
-                        <div className="mt-4 grid grid-cols-3 gap-3 sm:grid-cols-4">
-                            {safeImages.map((image, index) => {
-                                const isActive = activeImageIndex === index;
-
-                                return (
-                                    <button
-                                        key={`${image.src}-${index}`}
-                                        type="button"
-                                        onClick={() => setActiveImageIndex(index)}
-                                        aria-label={`View image ${index + 1}`}
-                                        aria-pressed={isActive}
-                                        className={`overflow-hidden rounded-xl border-2 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-700 focus-visible:ring-offset-2 ${
-                                            isActive
-                                                ? "border-amber-700"
-                                                : "border-transparent hover:border-amber-300"
-                                        }`}
-                                    >
-                                        <img
-                                            src={image.src}
-                                            alt={image.alt || `${title} image ${index + 1}`}
-                                            className="h-20 w-full object-cover sm:h-24"
-                                            loading="lazy"
-                                        />
-                                    </button>
-                                );
-                            })}
-                        </div>
-                    )}
-                </section>
-
-                <section className="flex flex-col p-7 sm:p-10 lg:p-12">
-                    <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-700">
-                        {category}
-                    </p>
-
-                    <h1 className="mt-3 font-serif text-4xl font-semibold leading-tight text-stone-900 sm:text-5xl">
-                        {title}
+                    <h1 className="mt-4 max-w-3xl text-4xl font-black md:text-6xl">
+                        {productName}
                     </h1>
 
-                    <div className="mt-4 flex items-center gap-2 text-sm font-medium text-stone-500">
-                        <LocationIcon />
-                        <span>{origin}</span>
-                    </div>
-
-                    <p className="mt-7 text-base leading-8 text-stone-600">
-                        {shortDescription}
+                    <p className="mt-3 text-lg font-medium">
+                        {producerName} · {location}
                     </p>
+                </div>
+            </section>
 
-                    {safeFeatures.length > 0 && (
-                        <ul className="mt-7 flex flex-wrap gap-2">
-                            {safeFeatures.map((feature) => (
-                                <li
-                                    key={feature}
-                                    className="rounded-full border border-amber-200 bg-amber-50 px-4 py-2 text-sm font-medium text-amber-900"
-                                >
-                                    {feature}
-                                </li>
-                            ))}
-                        </ul>
-                    )}
-
-                    <div className="my-8 h-px bg-stone-100" />
-
-                    <section aria-labelledby="product-history">
-                        <p className="text-xs font-bold uppercase tracking-[0.18em] text-amber-700">
-                            Our story
+            <div className="mx-auto grid max-w-7xl gap-10 px-6 py-12 lg:grid-cols-[1fr_360px]">
+                <div>
+                    <section>
+                        <p className="text-xl leading-9 text-stone-700">
+                            {shortDescription}
                         </p>
 
-                        <h2
-                            id="product-history"
-                            className="mt-2 font-serif text-2xl font-semibold text-stone-900"
-                        >
-                            The history behind the honey
+                        <h2 className="mt-10 text-3xl font-black">
+                            Η ιστορία του προϊόντος
                         </h2>
 
-                        <p className="mt-4 whitespace-pre-line text-base leading-8 text-stone-600">
-                            {history}
-                        </p>
+                        <div className="mt-5 whitespace-pre-line text-lg leading-8 text-stone-700">
+                            {fullDescription}
+                        </div>
                     </section>
 
-                    {formattedPrice && (
-                        <>
-                            <div className="my-8 h-px bg-stone-100" />
+                    <section className="mt-12">
+                        <h2 className="text-3xl font-black">Φωτογραφίες</h2>
 
-                            <div>
-                                <p className="text-sm text-stone-500">Price</p>
-                                <p className="mt-1 text-3xl font-semibold text-stone-900">
-                                    {formattedPrice}
-                                </p>
-                            </div>
-                        </>
-                    )}
-
-                    {contact && (
-                        <>
-                            <div className="my-8 h-px bg-stone-100" />
-
-                            <section
-                                aria-labelledby="contact-heading"
-                                className="rounded-2xl border border-stone-200 bg-stone-50 p-6"
-                            >
-                                <p className="text-xs font-bold uppercase tracking-[0.18em] text-amber-700">
-                                    Contact
-                                </p>
-
-                                <h2
-                                    id="contact-heading"
-                                    className="mt-2 text-xl font-semibold text-stone-900"
+                        <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-4">
+                            {allImages.map((image, index) => (
+                                <button
+                                    key={`${image}-${index}`}
+                                    type="button"
+                                    onClick={() => setSelectedImage(image)}
+                                    className={`overflow-hidden rounded-2xl border-4 transition ${
+                                        selectedImage === image
+                                            ? "border-amber-500"
+                                            : "border-transparent"
+                                    }`}
                                 >
-                                    Meet the producer
-                                </h2>
+                                    <img
+                                        src={image}
+                                        alt={`${productName} - φωτογραφία ${index + 1}`}
+                                        className="h-36 w-full object-cover transition duration-300 hover:scale-105"
+                                    />
+                                </button>
+                            ))}
+                        </div>
+                    </section>
 
-                                {contact.producerName && (
-                                    <p className="mt-3 font-medium text-stone-700">
-                                        {contact.producerName}
-                                    </p>
-                                )}
+                    <section className="mt-12 rounded-3xl bg-amber-100 p-7">
+                        <h2 className="text-2xl font-black">
+                            Τι μπορεί να κάνει ο επισκέπτης
+                        </h2>
 
-                                {contact.address && (
-                                    <p className="mt-2 text-sm leading-6 text-stone-500">
-                                        {contact.address}
-                                    </p>
-                                )}
+                        <div className="mt-6 grid gap-4 sm:grid-cols-3">
+                            <GuideFeature
+                                icon="🍯"
+                                title="Γευσιγνωσία"
+                                description="Δοκιμή διαφορετικών ποικιλιών μελιού."
+                            />
 
-                                <div className="mt-5 grid gap-3 sm:grid-cols-2">
-                                    {contact.phone && phoneHref && (
-                                        <a
-                                            href={phoneHref}
-                                            className="flex items-center gap-3 rounded-xl border border-stone-200 bg-white px-4 py-3 text-sm font-semibold text-stone-700 transition hover:border-amber-300 hover:text-amber-800"
-                                        >
-                                            <PhoneIcon />
-                                            <span>{contact.phone}</span>
-                                        </a>
-                                    )}
+                            <GuideFeature
+                                icon="🐝"
+                                title="Γνωριμία με τον παραγωγό"
+                                description="Μάθετε για τη μελισσοκομία και την παραγωγή."
+                            />
 
-                                    {contact.email && (
-                                        <a
-                                            href={`mailto:${contact.email}`}
-                                            className="flex items-center gap-3 rounded-xl border border-stone-200 bg-white px-4 py-3 text-sm font-semibold text-stone-700 transition hover:border-amber-300 hover:text-amber-800"
-                                        >
-                                            <EmailIcon />
-                                            <span className="break-all">{contact.email}</span>
-                                        </a>
-                                    )}
+                            <GuideFeature
+                                icon="🛍️"
+                                title="Αγορά προϊόντων"
+                                description="Αγορά μελιού και τοπικών προϊόντων."
+                            />
+                        </div>
+                    </section>
+                </div>
 
-                                    {websiteUrl && (
-                                        <a
-                                            href={websiteUrl}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="flex items-center justify-between gap-3 rounded-xl border border-stone-200 bg-white px-4 py-3 text-sm font-semibold text-stone-700 transition hover:border-amber-300 hover:text-amber-800"
-                                        >
-                                            <span>Website</span>
-                                            <ExternalLinkIcon />
-                                        </a>
-                                    )}
+                <aside>
+                    <div className="sticky top-6 rounded-3xl bg-white p-7 shadow-xl">
+                        <p className="text-sm font-bold uppercase tracking-widest text-amber-700">
+                            Πληροφορίες επίσκεψης
+                        </p>
 
-                                    {instagramUrl && (
-                                        <a
-                                            href={instagramUrl}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="flex items-center justify-between gap-3 rounded-xl border border-stone-200 bg-white px-4 py-3 text-sm font-semibold text-stone-700 transition hover:border-amber-300 hover:text-amber-800"
-                                        >
-                                            <span>Instagram</span>
-                                            <ExternalLinkIcon />
-                                        </a>
-                                    )}
+                        <p className="mt-3 text-3xl font-black text-stone-900">
+                            {price}
+                        </p>
 
-                                    {facebookUrl && (
-                                        <a
-                                            href={facebookUrl}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="flex items-center justify-between gap-3 rounded-xl border border-stone-200 bg-white px-4 py-3 text-sm font-semibold text-stone-700 transition hover:border-amber-300 hover:text-amber-800"
-                                        >
-                                            <span>Facebook</span>
-                                            <ExternalLinkIcon />
-                                        </a>
-                                    )}
-                                </div>
-                            </section>
-                        </>
-                    )}
-                </section>
+                        <div className="mt-7 space-y-6">
+                            <ContactItem
+                                icon="📍"
+                                title="Διεύθυνση"
+                                content={address}
+                            />
+
+                            <ContactItem
+                                icon="🕒"
+                                title="Ώρες λειτουργίας"
+                                content={openingHours}
+                            />
+
+                            <ContactItem
+                                icon="📞"
+                                title="Τηλέφωνο"
+                                content={
+                                    <a
+                                        href={`tel:${phone.replace(/\s/g, "")}`}
+                                        className="font-semibold text-amber-700 hover:underline"
+                                    >
+                                        {phone}
+                                    </a>
+                                }
+                            />
+
+                            <ContactItem
+                                icon="✉️"
+                                title="Email"
+                                content={
+                                    <a
+                                        href={`mailto:${email}`}
+                                        className="break-all font-semibold text-amber-700 hover:underline"
+                                    >
+                                        {email}
+                                    </a>
+                                }
+                            />
+
+                            <ContactItem
+                                icon="🌐"
+                                title="Ιστοσελίδα"
+                                content={
+                                    <a
+                                        href={website}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className="font-semibold text-amber-700 hover:underline"
+                                    >
+                                        Επίσημη ιστοσελίδα
+                                    </a>
+                                }
+                            />
+                        </div>
+
+                        <div className="mt-8 grid gap-3">
+                            <a
+                                href={`tel:${phone.replace(/\s/g, "")}`}
+                                className="rounded-full bg-amber-500 px-6 py-4 text-center font-bold text-stone-950 transition hover:bg-amber-400"
+                            >
+                                Τηλεφωνική επικοινωνία
+                            </a>
+
+                            <a
+                                href={mapUrl}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="rounded-full border-2 border-stone-900 px-6 py-4 text-center font-bold transition hover:bg-stone-900 hover:text-white"
+                            >
+                                Προβολή στον χάρτη
+                            </a>
+                        </div>
+                    </div>
+                </aside>
             </div>
+        </main>
+    );
+}
+
+type ContactItemProps = {
+    icon: string;
+    title: string;
+    content: React.ReactNode;
+};
+
+function ContactItem({ icon, title, content }: ContactItemProps) {
+    return (
+        <div className="flex items-start gap-4">
+      <span
+          className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-amber-100 text-xl"
+          aria-hidden="true"
+      >
+        {icon}
+      </span>
+
+            <div>
+                <p className="text-sm font-bold text-stone-500">{title}</p>
+                <div className="mt-1 leading-6 text-stone-800">{content}</div>
+            </div>
+        </div>
+    );
+}
+
+type GuideFeatureProps = {
+    icon: string;
+    title: string;
+    description: string;
+};
+
+function GuideFeature({
+                          icon,
+                          title,
+                          description,
+                      }: GuideFeatureProps) {
+    return (
+        <article className="rounded-2xl bg-white p-5">
+      <span className="text-3xl" aria-hidden="true">
+        {icon}
+      </span>
+
+            <h3 className="mt-3 font-black">{title}</h3>
+
+            <p className="mt-2 text-sm leading-6 text-stone-600">
+                {description}
+            </p>
         </article>
     );
 }
