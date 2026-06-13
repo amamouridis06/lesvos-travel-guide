@@ -14,7 +14,7 @@ import L, { LatLngExpression } from "leaflet";
 import "leaflet/dist/leaflet.css";
 
 type PlaceCategory =
-    | "Town"
+    | "Tow"
     | "Village"
     | "Beach"
     | "Food"
