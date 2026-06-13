@@ -19,30 +19,37 @@ type HoneyGuideProps = {
 };
 
 export default function HoneyTravelGuide({
-                                             productName = "Θυμαρίσιο Μέλι Κρήτης",
-                                             producerName = "Μελισσοκομείο Η Ορεινή Κυψέλη",
-                                             location = "Σητεία, Κρήτη",
-                                             shortDescription = "Αγνό θυμαρίσιο μέλι μικρής παραγωγής από τα βουνά της ανατολικής Κρήτης.",
-                                             fullDescription = `Το μέλι παράγεται με παραδοσιακές μεθόδους από οικογενειακό 
-  μελισσοκομείο. Οι κυψέλες μεταφέρονται σε περιοχές πλούσιες σε θυμάρι και 
-  άγρια βότανα, προσφέροντας ένα μέλι με έντονο άρωμα, γεμάτη γεύση και 
-  φυσικό χρυσαφένιο χρώμα.
+       productName = "Sigrihoney- Honey in the Petrified Forest",
+       producerName = "Beekeeper - Producer: Antonis Georgiou",
+       location = "Sigri, Lesvos",
+       shortDescription = "Pure thyme honey of small production from the mountains in Sigri.",
+        fullDescription = `«Honey in the Fossilized Forest » is a separate destination in
+                            western Lesvos, in the picturesque Sigri, in the heart of the only Disinfected
+Forest. In our visit lab, visitors have the opportunity to
+get to know the bee world up close and the production process
+and standardization of honey, from the hive to the jar. Through
+tour of the space and information about the beekeeping of Lesvos,
+discover the importance of bees for the environment and local
+biodiversity.
 
-  Οι επισκέπτες μπορούν να γνωρίσουν τον παραγωγό, να μάθουν περισσότερα 
-  για τη διαδικασία παραγωγής και να δοκιμάσουν διαφορετικές ποικιλίες μελιού.`,
-                                             mainImage = "/images/honey/main-honey.jpg",
+  At the same time, they can try and get supplied
+authentic hive products, such as thyme honey, other honey varieties,
+pollen, propolis, aromatic candles and other local products. The visit to
+beekeeping laboratory combines knowledge, taste and authentic contact with
+nature, offering a unique experience that highlights the special
+character of Lesvos.`,
+                                             mainImage = "/honey/honey2.jpg",
                                              gallery = [
-                                                 "/images/honey/honey-jar.jpg",
-                                                 "/images/honey/beehives.jpg",
-                                                 "/images/honey/producer.jpg",
-                                                 "/images/honey/landscape.jpg",
+                                                 "/honey/honey1.jpg",
+                                                 "/honey/lab.png",
+
                                              ],
-                                             phone = "+30 691 234 5678",
+                                             phone = "+30 6972280267",
                                              email = "info@oreinikypseli.gr",
-                                             website = "https://example.com",
-                                             address = "Επαρχιακή Οδός Σητείας, Λασίθι, Κρήτη",
+                                             website = "www.sigrihoney.gr",
+                                             address = "Sigri, Lesvos",
                                              openingHours = "Δευτέρα – Σάββατο, 09:00 – 18:00",
-                                             mapUrl = "https://maps.google.com",
+                                             mapUrl = "https://maps.app.goo.gl/S71ZoMUEiUuUUQHH8",
                                              price = "Από 9,50 €",
                                          }: HoneyGuideProps) {
     const allImages = [mainImage, ...gallery];
@@ -82,7 +89,7 @@ export default function HoneyTravelGuide({
                         </p>
 
                         <h2 className="mt-10 text-3xl font-black">
-                            Η ιστορία του προϊόντος
+                            Their History
                         </h2>
 
                         <div className="mt-5 whitespace-pre-line text-lg leading-8 text-stone-700">
@@ -91,7 +98,7 @@ export default function HoneyTravelGuide({
                     </section>
 
                     <section className="mt-12">
-                        <h2 className="text-3xl font-black">Φωτογραφίες</h2>
+                        <h2 className="text-3xl font-black">Gallery</h2>
 
                         <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-4">
                             {allImages.map((image, index) => (
@@ -117,26 +124,26 @@ export default function HoneyTravelGuide({
 
                     <section className="mt-12 rounded-3xl bg-amber-100 p-7">
                         <h2 className="text-2xl font-black">
-                            Τι μπορεί να κάνει ο επισκέπτης
+                            What can the visitor do?
                         </h2>
 
                         <div className="mt-6 grid gap-4 sm:grid-cols-3">
                             <GuideFeature
                                 icon="🍯"
-                                title="Γευσιγνωσία"
-                                description="Δοκιμή διαφορετικών ποικιλιών μελιού."
+                                title="ΓCressor"
+                                description="Honey test."
                             />
 
                             <GuideFeature
                                 icon="🐝"
-                                title="Γνωριμία με τον παραγωγό"
-                                description="Μάθετε για τη μελισσοκομία και την παραγωγή."
+                                title="Meet the producer"
+                                description="Learn about beekeeping and production."
                             />
 
                             <GuideFeature
                                 icon="🛍️"
-                                title="Αγορά προϊόντων"
-                                description="Αγορά μελιού και τοπικών προϊόντων."
+                                title="Buy products"
+                                description="Buy honey and local products."
                             />
                         </div>
                     </section>
@@ -145,7 +152,7 @@ export default function HoneyTravelGuide({
                 <aside>
                     <div className="sticky top-6 rounded-3xl bg-white p-7 shadow-xl">
                         <p className="text-sm font-bold uppercase tracking-widest text-amber-700">
-                            Πληροφορίες επίσκεψης
+                            Visit informations
                         </p>
 
                         <p className="mt-3 text-3xl font-black text-stone-900">
@@ -155,19 +162,19 @@ export default function HoneyTravelGuide({
                         <div className="mt-7 space-y-6">
                             <ContactItem
                                 icon="📍"
-                                title="Διεύθυνση"
+                                title="Adress"
                                 content={address}
                             />
 
                             <ContactItem
                                 icon="🕒"
-                                title="Ώρες λειτουργίας"
+                                title="Opening hours"
                                 content={openingHours}
                             />
 
                             <ContactItem
                                 icon="📞"
-                                title="Τηλέφωνο"
+                                title="Phone"
                                 content={
                                     <a
                                         href={`tel:${phone.replace(/\s/g, "")}`}
@@ -193,7 +200,7 @@ export default function HoneyTravelGuide({
 
                             <ContactItem
                                 icon="🌐"
-                                title="Ιστοσελίδα"
+                                title="Website"
                                 content={
                                     <a
                                         href={website}
@@ -201,7 +208,7 @@ export default function HoneyTravelGuide({
                                         rel="noreferrer"
                                         className="font-semibold text-amber-700 hover:underline"
                                     >
-                                        Επίσημη ιστοσελίδα
+                                        Official website
                                     </a>
                                 }
                             />
@@ -212,7 +219,7 @@ export default function HoneyTravelGuide({
                                 href={`tel:${phone.replace(/\s/g, "")}`}
                                 className="rounded-full bg-amber-500 px-6 py-4 text-center font-bold text-stone-950 transition hover:bg-amber-400"
                             >
-                                Τηλεφωνική επικοινωνία
+                                Phone Contact
                             </a>
 
                             <a
@@ -221,7 +228,7 @@ export default function HoneyTravelGuide({
                                 rel="noreferrer"
                                 className="rounded-full border-2 border-stone-900 px-6 py-4 text-center font-bold transition hover:bg-stone-900 hover:text-white"
                             >
-                                Προβολή στον χάρτη
+                                View on the map
                             </a>
                         </div>
                     </div>
