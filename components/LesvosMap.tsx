@@ -15,7 +15,7 @@ import "leaflet/dist/leaflet.css";
 
 type PlaceCategory =
     | "Town"
-    | "Villages"
+    | "Village"
     | "Beach"
     | "Food"
     | "Nature"
