@@ -137,7 +137,7 @@ const nearbyPlaces = [
     {
         title: "Local food",
         text: "Discover seafood, grilled dishes and authentic island flavours nearby.",
-        href: "/food",
+        href: "/food-drinks",
         icon: UtensilsCrossed,
     },
     {
@@ -181,7 +181,7 @@ function SectionHeading({
             </p>
 
             <h2
-                className={`mt-4 text-4xl font-black leading-[0.98] tracking-[-0.055em] sm:text-5xl lg:text-6xl ${
+                className={`mt-4 text-3xl font-black leading-[0.98] tracking-[-0.055em] sm:text-5xl lg:text-6xl ${
                     light ? "text-white" : "text-stone-950"
                 }`}
             >
@@ -217,9 +217,9 @@ export default function PetraPage() {
 
                 <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(18,13,8,0.96)_0%,rgba(18,13,8,0.7)_45%,rgba(18,13,8,0.2)_100%)]" />
                 <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-black/25" />
-                <div className="absolute left-[12%] top-[28%] h-[420px] w-[420px] rounded-full bg-amber-300/10 blur-[130px]" />
+                <div className="hidden lg:block absolute left-[12%] top-[28%] h-[420px] w-[420px] rounded-full bg-amber-300/10 blur-[130px]" />
 
-                <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-7xl items-center px-4 pb-20 pt-32 sm:px-6 lg:px-8">
+                <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-7xl items-center px-4 pb-12 pt-24 sm:pb-20 sm:pt-32">
                     <div className="grid w-full gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:items-end">
                         <motion.div
                             initial={{ opacity: 0, y: 34 }}
@@ -229,10 +229,10 @@ export default function PetraPage() {
                         >
                             <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.24em] text-white/85 backdrop-blur-xl sm:text-xs">
                                 <MapPin className="h-4 w-4 text-amber-300" />
-                                Southern Lesvos · Greece
+                                Northern Lesvos · Greece
                             </div>
 
-                            <h1 className="mt-7 text-[4.25rem] font-black leading-[0.82] tracking-[-0.075em] sm:text-8xl lg:text-[9rem]">
+                            <h1 className="mt-6 text-5xl font-black leading-[0.9] tracking-[-0.05em] sm:text-7xl lg:text-[9rem]">
                                 Petra
                                 <span className="block bg-gradient-to-r from-amber-100 via-yellow-300 to-orange-300 bg-clip-text text-transparent">
                   Beach
@@ -240,8 +240,7 @@ export default function PetraPage() {
                             </h1>
 
                             <p className="mt-8 max-w-2xl text-base leading-7 text-white/68 sm:text-lg sm:leading-8 md:text-xl">
-                                A wide golden shoreline, clear Aegean water and the kind of
-                                peaceful atmosphere that makes you forget the time.
+                               A picturesque seaside village known for its iconic rock-top church, sandy beach and authentic island charm.
                             </p>
 
                             <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
@@ -262,13 +261,13 @@ export default function PetraPage() {
                                 </a>
                             </div>
 
-                            <div className="mt-12 grid max-w-2xl grid-cols-2 gap-3 sm:grid-cols-4">
+                            <div className="mt-8 grid grid-cols-2 gap-3 sm:mt-12 sm:max-w-2xl sm:grid-cols-4">
                                 {quickFacts.map((fact) => (
                                     <div
                                         key={fact.label}
-                                        className="rounded-2xl border border-white/10 bg-white/[0.07] p-4 backdrop-blur-xl"
+                                        className="min-h-[110px] rounded-2xl border border-white/10 bg-white/[0.07] p-3 sm:p-4 backdrop-blur-xl"
                                     >
-                                        <p className="text-xl font-black text-white">{fact.value}</p>
+                                        <p className="text-base font-black text-white sm:text-xl">{fact.value}</p>
                                         <p className="mt-1 text-xs text-white/45">{fact.label}</p>
                                     </div>
                                 ))}
@@ -303,7 +302,7 @@ export default function PetraPage() {
                     {...fadeUp}
                     className="grid gap-4 sm:grid-cols-[1.15fr_0.85fr]"
                 >
-                    <div className="relative min-h-[560px] overflow-hidden rounded-[2.25rem]">
+                    <div className="relative h-[380px] sm:min-h-[560px] overflow-hidden rounded-[2.25rem]">
                         <Image
                             src="/petra.jpg"
                             alt="Petra"
@@ -365,7 +364,7 @@ export default function PetraPage() {
                         light
                     />
 
-                    <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                    <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
                         {highlights.map((item, index) => (
                             <motion.article
                                 key={item.title}
@@ -534,7 +533,7 @@ export default function PetraPage() {
                     <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
                         <SectionHeading
                             eyebrow="Nearby places"
-                            title="Continue exploring southern Lesvos"
+                            title="Continue exploring northern Lesvos"
                             light
                         />
 
