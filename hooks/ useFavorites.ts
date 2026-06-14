@@ -7,7 +7,7 @@ export type FavoriteDestination = {
     name: string;
     location: string;
     category: string;
-    description?: string;
+    description?: string
     image: string;
     href: string;
 };
