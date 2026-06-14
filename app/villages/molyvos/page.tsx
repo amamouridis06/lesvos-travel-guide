@@ -19,6 +19,7 @@ import {
   Star,
   Home,
   UtensilsCrossed,
+  Landmark
 } from "lucide-react";
 
 const quickFacts = [
@@ -31,7 +32,7 @@ const quickFacts = [
 
 const highlights = [
   {
-    icon: Castle,
+    icon: Landmark,
     title: "Molyvos Castle",
     text: "One of the best-preserved medieval castles in the Aegean.",
   },
