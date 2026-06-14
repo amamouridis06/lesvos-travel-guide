@@ -5,7 +5,7 @@ import { Heart } from "lucide-react";
 import {
     FavoriteDestination,
     useFavorites,
-} from "@/hooks/useFavorites";
+} from "../hooks/useFavorites";
 
 type FavoriteButtonProps = {
     destination: FavoriteDestination;
