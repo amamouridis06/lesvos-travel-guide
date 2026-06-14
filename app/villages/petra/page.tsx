@@ -18,7 +18,6 @@ import {
     Sparkles,
     Sun,
     Church,
-    Beach,
     Waves,
     Star,
     House,
@@ -40,7 +39,7 @@ const highlights = [
         text: "The village's most famous landmark, standing atop a dramatic rock with panoramic views.",
     },
     {
-        icon: Beach,
+        icon: Sun,
         title: "Sandy Beach",
         text: "One of the best beaches on Lesvos, ideal for swimming, sunbathing, and water sports",
     },
