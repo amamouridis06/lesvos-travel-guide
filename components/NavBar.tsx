@@ -89,6 +89,10 @@ const navCategories: NavCategory[] = [
         label: "Join Our Team",
         href: "/join-us",
       },
+      {
+        label: "FAQ",
+        href: "/faq",
+      },
     ],
   },
 ];
