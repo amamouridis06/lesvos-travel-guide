@@ -133,7 +133,7 @@ const nearbyPlaces = [
   },
   {
     title: "Anaxos",
-    text: "Popular beach resort with golden sand and clear waters.",
+    text: "Popular beach resort with clear waters.",
     href: "/villages/anaxos",
     icon: Waves,
   },
@@ -475,7 +475,7 @@ export default function PetraPage() {
                 </div>
 
                 <a
-                    href="https://maps.app.goo.gl/M6cTXwFzBcFQawMr8"
+                    href="https://maps.app.goo.gl/EG2A4eF1QPK472HE9"
                     target="_blank"
                     rel="noreferrer"
                     className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-5 py-3.5 text-sm font-bold text-stone-950 transition hover:bg-amber-300"
@@ -507,8 +507,8 @@ export default function PetraPage() {
 
                 <div className="h-[430px] sm:h-[540px]">
                   <iframe
-                      title="Map of Petra"
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6526.009267440373!2d26.17694835!3d39.329244900000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ba905dd15bad67%3A0x400bd2ce2b9b590!2sPetra%20811%2009!5e1!3m2!1sen!2sgr!4v1781433033043!5m2!1sen!2sgr"
+                      title="Map of Molyvos"
+                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6522.433521628601!2d26.16840904591944!3d39.36754488650966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ba84d0ca43c0c7%3A0x400bd2ce2b9b550!2sMithymna!5e1!3m2!1sen!2sgr!4v1781439123757!5m2!1sen!2sgr"
                       width="100%"
                       height="100%"
                       style={{ border: 0 }}

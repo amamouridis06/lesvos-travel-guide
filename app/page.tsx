@@ -61,9 +61,10 @@ export default function Home() {
           {/* Mobile: list */}
           <div className="flex lg:hidden" style={{ flexDirection: "column" }}>
             {[
-              { num: "01", name: "Molyvos", sub: "Medieval village · North", tag: "Village", img: "/villages/molivos.jpg", href: "/under-construction" },
+              { num: "01", name: "Molyvos", sub: "Medieval village · North", tag: "Village", img: "/villages/molivos1.jpg", href: "villages/molyvos" },
               { num: "02", name: "Vatera", sub: "Blue flag beach · South", tag: "Beach", img: "/villages/vatera.jpg", href: "/under-construction" },
               { num: "03", name: "Plomari", sub: "Ouzo capital · South", tag: "Village", img: "/villages/plomari2.jpg", href: "/under-construction" },
+              { num: "04", name: "Petra", sub: "Ouzo capital · North", tag: "Village", img: "/villages/petra.jpg", href: "/villages/petra" },
             ].map((p, i, arr) => (
                 <MobileListItem key={p.name} {...p} last={i === arr.length - 1} />
             ))}
@@ -77,9 +78,10 @@ export default function Home() {
                 }}
             >
             {[
-              { num: "01", name: "Molyvos", sub: "Medieval village · North", tag: "Village", img: "/villages/molivos.jpg", href: "/under-construction" },
-              { num: "02", name: "Vatera", sub: "Blue flag beach · South", tag: "Beach", img: "/villages/vatera.jpg", href: "/under-construction" },
-              { num: "03", name: "Plomari", sub: "Ouzo capital · South", tag: "Village", img: "/villages/plomari2.jpg", href: "/under-construction" },
+                { num: "01", name: "Molyvos", sub: "Medieval village · North", tag: "Village", img: "/villages/molivos1.jpg", href: "villages/molyvos" },
+                { num: "02", name: "Vatera", sub: "Blue flag beach · South", tag: "Beach", img: "/villages/vatera.jpg", href: "/under-construction" },
+                { num: "03", name: "Plomari", sub: "Ouzo capital · South", tag: "Village", img: "/villages/plomari2.jpg", href: "/under-construction" },
+                { num: "04", name: "Petra", sub: "Petra Village · North", tag: "Village", img: "/villages/petra.jpg", href: "/villages/petra" },
             ].map((p) => <DesktopCard key={p.name} {...p} />)}
           </div>
         </Section>

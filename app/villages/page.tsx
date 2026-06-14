@@ -32,6 +32,12 @@ const villages = [
     href: "/villages/antissa",
   },
   {
+    name: "Molyvos",
+    description: "Where every street tells a story.",
+    image: "/villages/molyvos1.jpg",
+    href: "/villages/molyvos",
+  },
+  {
     name: "Asomatos",
     description: "Small, peaceful, authentic",
     image: "/placeholder.jpg",
