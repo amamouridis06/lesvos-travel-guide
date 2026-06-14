@@ -61,10 +61,10 @@ export default function Home() {
           {/* Mobile: list */}
           <div className="flex lg:hidden" style={{ flexDirection: "column" }}>
             {[
-              { num: "01", name: "Molyvos", sub: "Medieval village · North", tag: "Village", img: "/villages/molivos1.jpg", href: "villages/molyvos" },
-              { num: "02", name: "Vatera", sub: "Blue flag beach · South", tag: "Beach", img: "/villages/vatera.jpg", href: "/under-construction" },
+              { num: "01", name: "Molyvos", sub: "Medieval village · North", tag: "Village", img: "/villages/molivos1.jpeg", href: "villages/molyvos" },
+              { num: "02", name: "Vatera", sub: "Blue flag beach · South", tag: "Beach", img: "/villages/vatera.jpg", href: "villages/vatera" },
               { num: "03", name: "Plomari", sub: "Ouzo capital · South", tag: "Village", img: "/villages/plomari2.jpg", href: "/under-construction" },
-              { num: "04", name: "Petra", sub: "Ouzo capital · North", tag: "Village", img: "/villages/petra.jpg", href: "/villages/petra" },
+              { num: "04", name: "Petra", sub: "Ouzo capital · North", tag: "Village", img: "/petra.jpg", href: "/villages/petra" },
             ].map((p, i, arr) => (
                 <MobileListItem key={p.name} {...p} last={i === arr.length - 1} />
             ))}
@@ -78,10 +78,10 @@ export default function Home() {
                 }}
             >
             {[
-                { num: "01", name: "Molyvos", sub: "Medieval village · North", tag: "Village", img: "/villages/molivos1.jpg", href: "villages/molyvos" },
+                { num: "01", name: "Molyvos", sub: "Medieval village · North", tag: "Village", img: "/villages/molivos1.jpeg", href: "villages/molyvos" },
                 { num: "02", name: "Vatera", sub: "Blue flag beach · South", tag: "Beach", img: "/villages/vatera.jpg", href: "/under-construction" },
                 { num: "03", name: "Plomari", sub: "Ouzo capital · South", tag: "Village", img: "/villages/plomari2.jpg", href: "/under-construction" },
-                { num: "04", name: "Petra", sub: "Petra Village · North", tag: "Village", img: "/villages/petra.jpg", href: "/villages/petra" },
+                { num: "04", name: "Petra", sub: "Petra Village · North", tag: "Village", img: "/petra.jpg", href: "/villages/petra" },
             ].map((p) => <DesktopCard key={p.name} {...p} />)}
           </div>
         </Section>
@@ -146,18 +146,18 @@ export default function Home() {
         <Section title="Top bars" href="/food#bars">
           <div className="flex lg:hidden" style={{ flexDirection: "column" }}>
             {[
-              { num: "01", name: "Naf's Cocktail Corner", sub: "Cocktail · Agios Isidoros", tag: "bar", img: "/naf/naf-logo.jpg", href: "/food/nafs-cocktail-corner" },
-              // { num: "02", name: "Vafios", sub: "Traditional · Vafios", tag: "Restaurant", img: "/rest2.jpg", href: "/restaurants/vafios" },
-              // { num: "03", name: "Cavo d'Oro", sub: "Mediterranean · Molyvos", tag: "Restaurant", img: "/rest3.jpg", href: "/restaurants/cavo-doro" },
+                { num: "01", name: "Naf's Cocktail Corner", sub: "Cocktail · Agios Isidoros", tag: "bar", img: "/naf/naf-logo.jpg", href: "/food-drinks/nafs-cocktail-corner" },
+                { num: "02", name: "Azul Paraíso", sub: "Bar · Anaxos", tag: "bar", img: "/azul/azul-logo.jpg", href: "/food-drinks/azul-paraiso" },
+                { num: "03", name: "Escape Espresso Bar", sub: "Espresso bar · Agiasos", tag: "bar", img: "/escape/escape12.jpg", href: "/food-drinks/escape" },
             ].map((p, i, arr) => (
                 <MobileListItem key={p.name} {...p} last={i === arr.length - 1} />
             ))}
           </div>
             <div className="hidden lg:grid" style={{ gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
             {[
-              { num: "01", name: "Naf's Cocktail Corner", sub: "Cocktail · Agios Isidoros", tag: "bar", img: "/naf/naf-logo.jpg", href: "/food/nafs-cocktail-corner" },
-              // { num: "02", name: "Vafios", sub: "Traditional · Vafios", tag: "Restaurant", img: "/rest2.jpg", href: "/restaurants/vafios" },
-              // { num: "03", name: "Cavo d'Oro", sub: "Mediterranean · Molyvos", tag: "Restaurant", img: "/rest3.jpg", href: "/restaurants/cavo-doro" },
+              { num: "01", name: "Naf's Cocktail Corner", sub: "Cocktail · Agios Isidoros", tag: "bar", img: "/naf/naf-logo.jpg", href: "/food-drinks/nafs-cocktail-corner" },
+               { num: "02", name: "Azul Paraíso", sub: "Bar · Anaxos", tag: "bar", img: "/azul/azul-logo.jpg", href: "/food-drinks/azul-paraiso" },
+              { num: "03", name: "Escape Espresso Bar", sub: "Espresso bar · Agiasos", tag: "bar", img: "/escape/escape12.jpg", href: "/food-drinks/escape" },
             ].map((p) => <DesktopCard key={p.name} {...p} />)}
           </div>
         </Section>
