@@ -3,129 +3,227 @@
 import Link from "next/link";
 import { useState } from "react";
 
+type NavLink = {
+  label: string;
+  href: string;
+};
+
+type NavCategory = {
+  label: string;
+  items: NavLink[];
+};
+
+const navCategories: NavCategory[] = [
+  {
+    label: "Discover",
+    items: [
+      {
+        label: "Villages",
+        href: "/under-construction",
+      },
+      {
+        label: "Beaches",
+        href: "/beaches",
+      },
+      {
+        label: "Nature",
+        href: "/under-construction",
+      },
+    ],
+  },
+  {
+    label: "Stay",
+    items: [
+      {
+        label: "Hotels",
+        href: "/hotels",
+      },
+      {
+        label: "Rentals",
+        href: "/rentals",
+      },
+    ],
+  },
+  {
+    label: "Experience",
+    items: [
+      {
+        label: "Food & Drinks",
+        href: "/food-drinks",
+      },
+      {
+        label: "Activities",
+        href: "/kariofilis-ecofarm",
+      },
+      {
+        label: "Souvenirs",
+        href: "/souvenirs/mourelia",
+      },
+    ],
+  },
+  {
+    label: "Travel Info",
+    items: [
+      {
+        label: "Transfers",
+        href: "/transfers",
+      },
+      {
+        label: "Emergency",
+        href: "/emergency",
+      },
+    ],
+  },
+];
+
 export default function NavBar() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [openMobileCategory, setOpenMobileCategory] =
+      useState<string | null>(null);
 
-  const closeMenu = () => setMobileOpen(false);
+  const closeMenu = () => {
+    setMobileOpen(false);
+    setOpenMobileCategory(null);
+  };
+
+  const toggleMobileCategory = (label: string) => {
+    setOpenMobileCategory((currentCategory) =>
+        currentCategory === label ? null : label
+    );
+  };
 
   return (
-      <nav className="fixed top-0 left-0 w-full z-50 bg-emerald-900/85 backdrop-blur-lg border-b border-emerald-800 shadow-md">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Top bar */}
-          <div className="flex items-center justify-between h-16">
+      <nav className="fixed left-0 top-0 z-50 w-full border-b border-emerald-800 bg-emerald-900/90 shadow-md backdrop-blur-lg">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex h-16 items-center justify-between">
             {/* Logo */}
             <Link
                 href="/"
-                className="text-white font-semibold text-sm sm:text-base lg:text-lg whitespace-nowrap"
                 onClick={closeMenu}
+                className="whitespace-nowrap text-sm font-semibold text-white transition hover:text-yellow-300 sm:text-base lg:text-lg"
             >
               Lesvos Travel Guide
             </Link>
 
-            {/* Desktop + Tablet Navigation */}
-            <div className="hidden md:flex items-center text-white font-medium
-                          gap-3 lg:gap-6
-                          text-xs lg:text-sm">
+            {/* Desktop navigation */}
+            <div className="hidden items-center gap-5 text-sm font-medium text-white md:flex lg:gap-8">
+              {navCategories.map((category) => (
+                  <div
+                      key={category.label}
+                      className="group relative"
+                  >
+                    <button
+                        type="button"
+                        className="flex items-center gap-1 py-5 transition hover:text-yellow-300 focus:text-yellow-300 focus:outline-none"
+                    >
+                      {category.label}
 
-              <Link href="/under-construction" className="hover:text-yellow-300 transition whitespace-nowrap">
-                Villages
-              </Link>
+                      <span
+                          aria-hidden="true"
+                          className="text-xs transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180"
+                      >
+                    ▾
+                  </span>
+                    </button>
 
-              <Link href="/beaches" className="hover:text-yellow-300 transition whitespace-nowrap">
-                Beaches
-              </Link>
+                    {/* Dropdown */}
+                    <div className="invisible absolute left-1/2 top-full min-w-52 -translate-x-1/2 translate-y-2 rounded-xl border border-white/10 bg-emerald-950/95 p-2 opacity-0 shadow-xl backdrop-blur-lg transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
+                      {category.items.map((item) => (
+                          <Link
+                              key={item.label}
+                              href={item.href}
+                              className="block rounded-lg px-4 py-3 whitespace-nowrap text-white transition hover:bg-white/10 hover:text-yellow-300 focus:bg-white/10 focus:text-yellow-300 focus:outline-none"
+                          >
+                            {item.label}
+                          </Link>
+                      ))}
+                    </div>
+                  </div>
+              ))}
 
-              <Link href="/food-drinks" className="hover:text-yellow-300 transition whitespace-nowrap">
-                Food & Drinks
-              </Link>
-
-              <Link href="/under-construction" className="hover:text-yellow-300 transition whitespace-nowrap">
-                Nature
-              </Link>
-
-              <Link href="/hotels" className="hover:text-yellow-300 transition whitespace-nowrap">
-                Hotels
-              </Link>
-
-              <Link href="/rentals" className="hover:text-yellow-300 transition whitespace-nowrap">
-                Rentals
-              </Link>
-
-              <Link href="/transfers" className="hover:text-yellow-300 transition whitespace-nowrap">
-                Transfers
-              </Link>
-              <Link href="/souvenirs/mourelia" className="hover:text-yellow-300 transition whitespace-nowrap">
-                Souvenirs
-              </Link>
-              <Link href="/emergency" className="hover:text-yellow-300 transition whitespace-nowrap">
-                Emergency
-              </Link>
-
-              <Link href="/kariofilis-ecofarm" className="hover:text-yellow-300 transition whitespace-nowrap">
-                Activities
-              </Link>
-              <Link href="/about" className="hover:text-yellow-300 transition whitespace-nowrap">
+              <Link
+                  href="/about"
+                  className="py-5 transition hover:text-yellow-300"
+              >
                 About
               </Link>
             </div>
 
-            {/* Mobile button */}
-            <div className="md:hidden">
-              <button
-                  className="text-2xl text-white leading-none"
-                  onClick={() => setMobileOpen(!mobileOpen)}
-                  aria-label="Toggle menu"
-              >
-                {mobileOpen ? "✕" : "☰"}
-              </button>
-            </div>
+            {/* Mobile menu button */}
+            <button
+                type="button"
+                aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
+                aria-expanded={mobileOpen}
+                aria-controls="mobile-navigation"
+                onClick={() => {
+                  setMobileOpen((currentValue) => !currentValue);
+                  setOpenMobileCategory(null);
+                }}
+                className="flex h-10 w-10 items-center justify-center rounded-lg text-2xl leading-none text-white transition hover:bg-white/10 hover:text-yellow-300 md:hidden"
+            >
+              {mobileOpen ? "✕" : "☰"}
+            </button>
           </div>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile navigation */}
         {mobileOpen && (
-            <div className="md:hidden bg-emerald-900/95 border-t border-emerald-800 shadow-lg text-white">
-              <div className="max-w-6xl mx-auto px-4 py-4 flex flex-col">
-                <Link href="/under-construction" onClick={closeMenu} className="py-3 border-b border-white/10 hover:text-yellow-300 transition">
-                  Villages
-                </Link>
+            <div
+                id="mobile-navigation"
+                className="max-h-[calc(100vh-4rem)] overflow-y-auto border-t border-emerald-800 bg-emerald-950/95 text-white shadow-lg md:hidden"
+            >
+              <div className="mx-auto max-w-7xl px-4 py-3">
+                {navCategories.map((category) => {
+                  const isOpen = openMobileCategory === category.label;
 
-                <Link href="/under-construction" onClick={closeMenu} className="py-3 border-b border-white/10 hover:text-yellow-300 transition">
-                  Beaches
-                </Link>
+                  return (
+                      <div
+                          key={category.label}
+                          className="border-b border-white/10"
+                      >
+                        <button
+                            type="button"
+                            aria-expanded={isOpen}
+                            onClick={() => toggleMobileCategory(category.label)}
+                            className="flex w-full items-center justify-between py-4 text-left font-medium transition hover:text-yellow-300"
+                        >
+                          <span>{category.label}</span>
 
-                <Link href="/food-drinks" onClick={closeMenu} className="py-3 border-b border-white/10 hover:text-yellow-300 transition">
-                  Food & Drinks
-                </Link>
+                          <span
+                              aria-hidden="true"
+                              className={`text-sm transition-transform duration-200 ${
+                                  isOpen ? "rotate-180" : ""
+                              }`}
+                          >
+                      ▾
+                    </span>
+                        </button>
 
-                <Link href="/under-construction" onClick={closeMenu} className="py-3 border-b border-white/10 hover:text-yellow-300 transition">
-                  Nature
-                </Link>
+                        {isOpen && (
+                            <div className="mb-3 rounded-xl bg-black/10 p-2">
+                              {category.items.map((item) => (
+                                  <Link
+                                      key={item.label}
+                                      href={item.href}
+                                      onClick={closeMenu}
+                                      className="block rounded-lg px-4 py-3 text-sm text-white/90 transition hover:bg-white/10 hover:text-yellow-300"
+                                  >
+                                    {item.label}
+                                  </Link>
+                              ))}
+                            </div>
+                        )}
+                      </div>
+                  );
+                })}
 
-                <Link href="/hotels" onClick={closeMenu} className="py-3 border-b border-white/10 hover:text-yellow-300 transition">
-                  Hotels
+                <Link
+                    href="/about"
+                    onClick={closeMenu}
+                    className="block border-b border-white/10 py-4 font-medium transition hover:text-yellow-300"
+                >
+                  About
                 </Link>
-
-                <Link href="/rentals" onClick={closeMenu} className="py-3 border-b border-white/10 hover:text-yellow-300 transition">
-                  Rentals
-                </Link>
-
-                <Link href="/transfers" onClick={closeMenu} className="py-3 border-b border-white/10 hover:text-yellow-300 transition">
-                  Transfers
-                </Link>
-                <Link href="/souvenirs/mourelia" onClick={closeMenu} className="py-3 border-b border-white/10 hover:text-yellow-300 transition">
-                  Souvenirs
-                </Link>
-                <Link href="/emergency" onClick={closeMenu} className="py-3 border-b border-white/10 hover:text-yellow-300 transition">
-                  Emergency
-                </Link>
-
-                <Link href="/kariofilis-ecofarm" onClick={closeMenu} className="py-3 hover:text-yellow-300 transition">
-                  Activities
-                </Link>
-              <Link href="/about" onClick={closeMenu} className="py-3 border-b border-white/10 hover:text-yellow-300 transition">
-              About
-            </Link>
               </div>
             </div>
         )}
