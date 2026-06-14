@@ -19,7 +19,8 @@ import {
   Star,
   Home,
   UtensilsCrossed,
-  Landmark
+  Landmark,
+  Camera
 } from "lucide-react";
 
 const quickFacts = [

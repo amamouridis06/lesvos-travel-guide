@@ -49,7 +49,7 @@ character of Lesvos.`,
                                              email = "info@sigrihoney.gr",
                                              website = "www.sigrihoney.gr",
                                              address = "Sigri, Lesvos",
-                                             openingHours = "Δευτέρα – Σάββατο, 09:00 – 18:00",
+                                             openingHours = "The summer schedule is 1/7 with 30/9, 10:00-15:00 and 17:00-20:00 all week. The rest of the months after communication ",
                                              mapUrl = "https://maps.app.goo.gl/S71ZoMUEiUuUUQHH8",
                                              accesibility = "There is also accessibility for people with mobility problems"
                                          }: HoneyGuideProps) {
