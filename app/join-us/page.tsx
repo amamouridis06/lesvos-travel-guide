@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { FormEvent, useState } from "react";
 
-const TEAM_EMAIL = "lesvostravelguide@gmail.com";
+const TEAM_EMAIL = "";
 
 const opportunities = [
   {
