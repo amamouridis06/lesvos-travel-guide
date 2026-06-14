@@ -1,4 +1,5 @@
 import Link from "next/link";
+import FavoriteButton from "@/components/FavoriteButton";
 
 export default function Home() {
   return (

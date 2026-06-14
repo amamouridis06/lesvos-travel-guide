@@ -1,4 +1,5 @@
 import Link from "next/link";
+import FavoriteButton from "@/components/FavoriteButton";
 
 export const metadata = {
   title: "Χωριά της Λέσβου | Lesvos Travel Guide",
