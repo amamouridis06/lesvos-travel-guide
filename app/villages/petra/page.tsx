@@ -22,7 +22,7 @@ import {
     Waves,
     Star,
     House,
-    Utensils,
+    UtensilsCrossed
 } from "lucide-react";
 
 const quickFacts = [
