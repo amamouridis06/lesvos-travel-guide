@@ -9,19 +9,16 @@ import {
     Car,
     ChevronRight,
     Clock3,
-    Coffee,
     Compass,
     MapPin,
     Navigation,
-    ParkingCircle,
-    ShieldCheck,
     Sparkles,
     Sun,
     Church,
     Waves,
     Star,
-    House,
-    UtensilsCrossed
+    Home,
+    UtensilsCrossed,
 } from "lucide-react";
 
 const quickFacts = [
@@ -49,7 +46,7 @@ const highlights = [
         text: "Lined with cafés, tavernas, and shops overlooking the Aegean Sea",
     },
     {
-        icon: House,
+        icon: Home,
         title: "Traditional Architecture",
         text: "Charming stone houses, narrow streets, and colorful courtyards",
     },
@@ -71,12 +68,36 @@ const highlights = [
 ];
 
 const practicalInfo = [
-    { label: "Location", value: "North Lesvos" },
-    { label: "Distance from Mytilene", value: "55 km" },
-    { label: "Best Season", value: "May – October" },
-    { label: "Beach", value: "Sandy & organized" },
-    { label: "Main Attraction", value: "Panagia Glykofilousa" },
-    { label: "Access", value: "Car, taxi, bus" },
+    {
+        icon: MapPin,
+        label: "Location",
+        value: "North Lesvos",
+    },
+    {
+        icon: Navigation,
+        label: "Distance from Mytilene",
+        value: "55 km",
+    },
+    {
+        icon: Clock3,
+        label: "Best Season",
+        value: "May – October",
+    },
+    {
+        icon: Waves,
+        label: "Beach",
+        value: "Sandy & organized",
+    },
+    {
+        icon: Church,
+        label: "Main Attraction",
+        value: "Panagia Glykofilousa",
+    },
+    {
+        icon: Car,
+        label: "Access",
+        value: "Car, taxi, bus",
+    },
 ];
 
 const guideCards = [
