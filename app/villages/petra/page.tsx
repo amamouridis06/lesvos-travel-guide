@@ -54,7 +54,7 @@ const highlights = [
         text: "Charming stone houses, narrow streets, and colorful courtyards",
     },
     {
-        icon: Sunset,
+        icon: Sun,
         title: "Scenic Views",
         text: "Beautiful sunsets and stunning views of the coastline from the church rock.",
     },
