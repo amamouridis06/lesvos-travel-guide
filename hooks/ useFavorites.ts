@@ -77,31 +77,6 @@ export function useFavorites() {
         saveFavorites([]);
     }, [saveFavorites]);
 
-    useEffect(() => {
-        const syncFavorites = () => {
-            setFavorites(getStoredFavorites());
-        };
-
-        window.addEventListener(
-            "favorites-updated",
-            syncFavorites,
-        );
-
-        window.addEventListener("storage", syncFavorites);
-
-        return () => {
-            window.removeEventListener(
-                "favorites-updated",
-                syncFavorites,
-            );
-
-            window.removeEventListener(
-                "storage",
-                syncFavorites,
-            );
-        };
-    }, []);
-
     return {
         favorites,
         favoritesCount: favorites.length,
