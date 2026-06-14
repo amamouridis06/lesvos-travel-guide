@@ -3,8 +3,8 @@
 import Link from "next/link";
 import { Heart } from "lucide-react";
 
-import FavoriteButton from "@/components/FavoriteButton";
-import { useFavorites } from "@/hooks/useFavorites";
+import FavoriteButton from "../../components/FavoriteButton";
+import { useFavorites } from "../../hooks/useFavorites";
 
 export default function FavoritesPage() {
     const {
