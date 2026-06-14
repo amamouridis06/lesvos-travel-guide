@@ -234,9 +234,6 @@ export default function PetraPage() {
 
                             <h1 className="mt-6 text-5xl font-black leading-[0.9] tracking-[-0.05em] sm:text-7xl lg:text-[9rem]">
                                 Petra
-                                <span className="block bg-gradient-to-r from-amber-100 via-yellow-300 to-orange-300 bg-clip-text text-transparent">
-                  Beach
-                </span>
                             </h1>
 
                             <p className="mt-8 max-w-2xl text-base leading-7 text-white/68 sm:text-lg sm:leading-8 md:text-xl">
