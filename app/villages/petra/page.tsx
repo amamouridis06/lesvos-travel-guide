@@ -22,11 +22,11 @@ import {
 } from "lucide-react";
 
 const quickFacts = [
-    { value: "Northern coast of Lesvos, Greece", label: "📍 Location:" },
-    { value:  "\"Petra\" means rock in Greek", label: "Name Meaning"},
-    { value: "Panagia Glykofilousa, a church perched on a giant rock", label: "Main Landmark" },
-    { value: "Its long sandy beach and traditional village atmosphere", label: "Famous For" },
-    { value: "Molyvos, known for its medieval castle and picturesque harbor.", label: "Nearby Attraction" },
+    { value: "North Lesvos", label: "Location" },
+    { value:  "Rock Village", label: "Name Meaning"},
+    { value: "Panagia Glykofilousa", label: "Landmark" },
+    { value: "Sandy Beach", label: "Famous For" },
+    { value: "Near Molyvos", label: "Nearby" },
 ];
 
 const highlights = [
@@ -201,14 +201,14 @@ function SectionHeading({
     );
 }
 
-export default function VateraPage() {
+export default function PetraPage() {
     return (
         <main className="overflow-hidden bg-[#f6f1e8] text-stone-950">
             {/* HERO */}
             <section className="relative min-h-[100svh] overflow-hidden bg-stone-950">
                 <Image
                     src="/petra.jpg"
-                    alt="Vatera Beach in Lesvos"
+                    alt="Petra in Lesvos"
                     fill
                     priority
                     sizes="100vw"
@@ -233,7 +233,7 @@ export default function VateraPage() {
                             </div>
 
                             <h1 className="mt-7 text-[4.25rem] font-black leading-[0.82] tracking-[-0.075em] sm:text-8xl lg:text-[9rem]">
-                                Vatera
+                                Petra
                                 <span className="block bg-gradient-to-r from-amber-100 via-yellow-300 to-orange-300 bg-clip-text text-transparent">
                   Beach
                 </span>
@@ -249,7 +249,7 @@ export default function VateraPage() {
                                     href="#discover"
                                     className="inline-flex items-center justify-center gap-2 rounded-full bg-amber-400 px-6 py-4 text-sm font-bold text-stone-950 shadow-[0_18px_55px_rgba(251,191,36,0.3)] transition hover:-translate-y-0.5 hover:bg-amber-300"
                                 >
-                                    Discover Vatera
+                                    Discover Petra
                                     <ArrowDown className="h-4 w-4" />
                                 </a>
 
@@ -283,8 +283,8 @@ export default function VateraPage() {
                         >
                             <div className="relative h-[590px] w-[400px] overflow-hidden rounded-[2.75rem] border border-white/15 bg-white/10 shadow-[0_50px_140px_rgba(0,0,0,0.55)]">
                                 <Image
-                                    src="/vatera1.jpg"
-                                    alt="Vatera coast at sunset"
+                                    src="/petra.jpg"
+                                    alt="Petra"
                                     fill
                                     sizes="400px"
                                     className="object-cover transition duration-1000 hover:scale-105"
@@ -322,15 +322,14 @@ export default function VateraPage() {
             >
                 <div>
                     <SectionHeading
-                        eyebrow="Why Vatera"
+                        eyebrow="Why Petra"
                         title="A beach that feels almost endless"
-                        description="Vatera is one of those places where simplicity becomes the luxury. Swim, walk, eat beside the sea and let the whole day unfold at its own pace."
+                        description="Petra combines traditional island charm, a beautiful sandy beach, and one of Lesvos' most iconic landmarks. With its picturesque streets, seaside tavernas, and breathtaking views from the Church of Panagia Glykofilousa, it offers an authentic Greek island experience."
                     />
 
                     <motion.div {...fadeUp} className="mt-9 border-l-2 border-amber-400 pl-5">
                         <p className="text-xl font-semibold leading-8 text-stone-800">
-                            “The perfect place for travellers who want less noise, more sea and
-                            a genuine sense of island life.”
+                            “Where the Rock Meets the Sea”
                         </p>
                     </motion.div>
                 </div>
@@ -341,8 +340,8 @@ export default function VateraPage() {
                 >
                     <div className="relative min-h-[560px] overflow-hidden rounded-[2.25rem]">
                         <Image
-                            src="/vatera1.jpg"
-                            alt="Vatera Beach"
+                            src="/petra.jpg"
+                            alt="Petra"
                             fill
                             sizes="(max-width: 1024px) 100vw, 45vw"
                             className="object-cover"
