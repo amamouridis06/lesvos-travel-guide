@@ -34,7 +34,7 @@ const villages = [
   {
     name: "Molyvos",
     description: "Where every street tells a story.",
-    image: "/villages/molyvos1.jpg",
+    image: "/villages/molivos1.jpg",
     href: "/villages/molyvos",
   },
   {
