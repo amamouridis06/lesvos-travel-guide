@@ -5,13 +5,13 @@ export default function BeachesPage() {
     {
       slug: "vatera",
       name: "Βατερά",
-      img: "/vatera.jpg",
+      img: "/villages/vatera.jpg",
       desc: "Αμμώδης παραλία μήκους 8 km."
     },
     {
       slug: "agios-isidoros",
       name: "Άγιος Ισίδωρος",
-      img: "/agios-isidoros.jpg",
+      img: "/villages/agios-isidoros.jpg",
       desc: "Διάσημη παραλία με γαλάζια σημαία."
     },
     {
@@ -35,7 +35,7 @@ export default function BeachesPage() {
     {
       slug: "molyvos",
       name: "Μόλυβος",
-      img: "/molyvos.jpg",
+      img: "/villages/molyvos1.jpg",
       desc: "Παραλία με θέα το γραφικό κάστρο του Μολύβου."
     },
     {
