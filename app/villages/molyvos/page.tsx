@@ -81,7 +81,7 @@ const practicalInfo = [
     value: "April – October",
   },
   {
-    icon: Castle,
+    icon: Landmark,
     label: "Main Attraction",
     value: "Molyvos Castle",
   },
