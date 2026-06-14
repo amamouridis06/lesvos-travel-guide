@@ -274,41 +274,6 @@ export default function PetraPage() {
                                 ))}
                             </div>
                         </motion.div>
-
-                        <motion.div
-                            initial={{ opacity: 0, x: 40 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ delay: 0.18, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-                            className="hidden justify-end lg:flex"
-                        >
-                            <div className="relative h-[590px] w-[400px] overflow-hidden rounded-[2.75rem] border border-white/15 bg-white/10 shadow-[0_50px_140px_rgba(0,0,0,0.55)]">
-                                <Image
-                                    src="/petra.jpg"
-                                    alt="Petra"
-                                    fill
-                                    sizes="400px"
-                                    className="object-cover transition duration-1000 hover:scale-105"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/5 to-transparent" />
-
-                                <div className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-black/25 px-4 py-2 text-xs font-semibold text-white backdrop-blur-xl">
-                                    <Sparkles className="h-4 w-4 text-amber-300" />
-                                    Local favourite
-                                </div>
-
-                                <div className="absolute inset-x-0 bottom-0 p-8 text-white">
-                                    <p className="text-xs font-bold uppercase tracking-[0.24em] text-amber-300">
-                                        Summer escape
-                                    </p>
-                                    <h2 className="mt-3 text-4xl font-black tracking-[-0.045em]">
-                                        Sea, space and slow island days
-                                    </h2>
-                                    <p className="mt-4 text-sm leading-6 text-white/65">
-                                        Swim, walk, eat well and stay until the coastline turns gold.
-                                    </p>
-                                </div>
-                            </div>
-                        </motion.div>
                     </div>
                 </div>
 
