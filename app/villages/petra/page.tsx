@@ -117,7 +117,7 @@ const nearbyPlaces = [
         title: "Local food",
         text: "Discover seafood, grilled dishes and authentic island flavours nearby.",
         href: "/food",
-        icon: Utensils,
+        icon: UtensilsCrossed,
     },
     {
         title: "More beaches",
