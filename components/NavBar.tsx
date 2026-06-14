@@ -95,6 +95,11 @@ const navCategories: NavCategory[] = [
       },
     ],
   },
+  {
+    label: "Favourites",
+    href: "/favourites",
+  },
+
 ];
 
 export default function NavBar() {

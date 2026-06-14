@@ -41,15 +41,10 @@ export default function FavoriteButton({
 
                 toggleFavorite(destination);
             }}
-            aria-label={
-                saved
-                    ? `Remove ${destination.name} from favorites`
-                    : `Add ${destination.name} to favorites`
-            }
-            className={`flex h-11 w-11 items-center justify-center rounded-full border backdrop-blur-xl transition ${
+            className={`flex h-11 w-11 items-center justify-center rounded-full border transition ${
                 saved
                     ? "border-rose-400 bg-rose-500 text-white"
-                    : "border-white/20 bg-black/30 text-white hover:bg-white hover:text-stone-950"
+                    : "border-white/20 bg-black/30 text-white hover:bg-white hover:text-black"
             } ${className}`}
         >
             <Heart
