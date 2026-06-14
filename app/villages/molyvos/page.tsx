@@ -309,39 +309,6 @@ export default function PetraPage() {
                 <p className="text-xs font-bold uppercase tracking-[0.24em] text-amber-300">
                   Golden coast
                 </p>
-                <h3 className="mt-3 text-4xl font-black tracking-tight">
-                  Room to slow down
-                </h3>
-              </div>
-            </div>
-
-            <div className="grid gap-4">
-              <div className="relative min-h-[270px] overflow-hidden rounded-[2rem]">
-                <Image
-                    src="/petra.jpg"
-                    alt="Aegean sea view"
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 30vw"
-                    className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-                <div className="absolute bottom-0 p-5 text-white">
-                  <p className="text-lg font-bold">Clear Aegean water</p>
-                </div>
-              </div>
-
-              <div className="rounded-[2rem] bg-[#1b261f] p-7 text-white">
-                <Sun className="h-8 w-8 text-amber-300" />
-                <p className="mt-10 text-xs font-bold uppercase tracking-[0.24em] text-amber-300">
-                  Best for
-                </p>
-                <h3 className="mt-3 text-3xl font-black">
-                  Long, effortless beach days
-                </h3>
-                <p className="mt-4 text-sm leading-6 text-white/55">
-                  Ideal for families, couples and travellers searching for space,
-                  comfort and a relaxed pace.
-                </p>
               </div>
             </div>
           </motion.div>
