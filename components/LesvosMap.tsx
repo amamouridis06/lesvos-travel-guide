@@ -20,7 +20,7 @@ type PlaceCategory =
     | "Food"
     | "Nature"
     | "Culture"
-    | "Accomodation"
+    | "Accommodation"
     | "Bar";
 type LesvosPlace = {
     id: number;
@@ -318,7 +318,7 @@ const categoryLabels: Record<PlaceCategory, string> = {
     Food:"Food",
     Nature: "Nature",
     Culture: "Culture",
-    Accomodation:"Accomodation",
+    Accommodation:"Accommodation",
     Bar: "Bar",
 };
 
