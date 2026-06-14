@@ -65,7 +65,7 @@ const highlights = [
         text: "Close to Molyvos and Anaxos, two of the island's most popular destinations.",
     },
     {
-        icon: Utensils,
+        icon: UtensilsCrossed,
         title: "Local Cuisine",
         text: "Fresh seafood, olive oil, local cheeses, and traditional Greek dishes served in seaside tavernas.",
     }
