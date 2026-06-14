@@ -23,7 +23,7 @@ const navCategories: NavCategory[] = [
       },
       {
         label: "Beaches",
-        href: "/beaches",
+        href: "/under-construction",
       },
       {
         label: "Nature",
@@ -53,11 +53,15 @@ const navCategories: NavCategory[] = [
       },
       {
         label: "Activities",
-        href: "/kariofilis-ecofarm",
+        href: "/under-construction",
       },
       {
         label: "Souvenirs",
         href: "/souvenirs/mourelia",
+      },
+      {
+        label: "Events",
+        href: "/under-construction",
       },
     ],
   },
@@ -71,6 +75,19 @@ const navCategories: NavCategory[] = [
       {
         label: "Emergency",
         href: "/emergency",
+      },
+    ],
+  },
+  {
+    label: "About",
+    items: [
+      {
+        label: "About Us",
+        href: "/about",
+      },
+      {
+        label: "Join Our Team",
+        href: "/join-us",
       },
     ],
   },
@@ -140,13 +157,6 @@ export default function NavBar() {
                     </div>
                   </div>
               ))}
-
-              <Link
-                  href="/about"
-                  className="py-5 transition hover:text-yellow-300"
-              >
-                About
-              </Link>
             </div>
 
             {/* Mobile menu button */}
