@@ -71,22 +71,22 @@ const practicalInfo = [
   {
     icon: Car,
     title: "Getting There",
-    text: "Eresos is located in southwestern Lesvos and is best reached by car. The drive from Mytilene takes approximately two hours.",
+    label: "Eresos is located in southwestern Lesvos and is best reached by car. The drive from Mytilene takes approximately two hours.",
   },
   {
     icon: Clock3,
     title: "Best Time to Visit",
-    text: "Spring and early autumn are ideal for exploring the village, while summer offers a livelier atmosphere and easy access to nearby beaches.",
+    label: "Spring and early autumn are ideal for exploring the village, while summer offers a livelier atmosphere and easy access to nearby beaches.",
   },
   {
     icon: UtensilsCrossed,
     title: "Food & Cafés",
-    text: "Around the village square, you will find traditional cafés, bakeries and local tavernas serving authentic Lesvos dishes.",
+    label: "Around the village square, you will find traditional cafés, bakeries and local tavernas serving authentic Lesvos dishes.",
   },
   {
     icon: Home,
     title: "Where to Stay",
-    text: "Accommodation options are more limited inside Eresos village, with a wider selection available in nearby Skala Eresou.",
+    label: "Accommodation options are more limited inside Eresos village, with a wider selection available in nearby Skala Eresou.",
   },
 ];
 
