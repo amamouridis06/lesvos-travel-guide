@@ -2,7 +2,6 @@
 
 import React, { useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import FavoriteButton from "@/components/FavoriteButton";
 
 type EventItem = {
     id: number;
