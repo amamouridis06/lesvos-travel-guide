@@ -18,6 +18,7 @@ import {
   UtensilsCrossed,
   Landmark,
   Camera,
+  Mountain
 } from "lucide-react";
 
 const quickFacts = [
