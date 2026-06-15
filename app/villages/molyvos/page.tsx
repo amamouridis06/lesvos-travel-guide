@@ -23,6 +23,22 @@ import {
   Camera
 } from "lucide-react";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Molyvos (Mithymna), Lesvos | Travel Guide",
+  description:
+      "Discover Molyvos in Lesvos: medieval castle, traditional architecture, scenic harbor, beaches and local cuisine.",
+  keywords: [
+    "Molyvos",
+    "Mithymna",
+    "Lesvos",
+    "Lesbos",
+    "Greece",
+    "travel guide"
+  ],
+};
+
 const quickFacts = [
   { value: "North Lesvos", label: "Location" },
   { value: "Medieval Village", label: "Known For" },
