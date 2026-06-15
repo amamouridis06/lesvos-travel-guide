@@ -438,7 +438,7 @@ export default function PlomariPage() {
                 </div>
 
                 <a
-                    href="https://maps.app.goo.gl/UE2Z6uA29i46KMHT7"
+                    href="https://maps.app.goo.gl/NSCnQ3FPtcNqjorE8"
                     target="_blank"
                     rel="noreferrer"
                     className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-5 py-3.5 text-sm font-bold text-stone-950 transition hover:bg-amber-300"
@@ -470,8 +470,8 @@ export default function PlomariPage() {
 
                 <div className="h-[430px] sm:h-[540px]">
                   <iframe
-                      title="Map of Sigri"
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4640.094825095451!2d25.850234775963557!3d39.210818595012505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bac634f0f9ec95%3A0x500bd2ce2baae40!2sSigri!5e1!3m2!1sen!2sgr!4v1781512686288!5m2!1sen!2sgr"
+                      title="Map of Plomari"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13117.6465749908!2d26.36226636601393!3d38.97629999731379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14baf6e960a76133%3A0x400bd2ce2b9b5a0!2sPlomari!5e1!3m2!1sen!2sgr!4v1781517222905!5m2!1sen!2sgr"
                       width="100%"
                       height="100%"
                       style={{ border: 0 }}

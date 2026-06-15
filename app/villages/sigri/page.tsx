@@ -20,11 +20,11 @@ import {
 
 const quickFacts = [
   { value: "Western Lesvos", label: "Location" },
-  { value: "About 300 residents", label: "Population" },
-  { value: "The Petrified Forest of Lesvos", label: "Famous for" },
-  { value: "Part of the UNESCO Global Geopark of Lesvos", label: "UNESCO Status" },
-  { value: "Nature, geology, beaches, sunsets, tranquility", label: "Best for" },
-  { value: "Known as", label: "One of the best sunset spots on the island" },
+  { value: "300", label: "Population" },
+  { value: "Petrified Forest", label: "Famous for" },
+  { value: "UNESCO Global Geopark", label: "Status" },
+  { value: "Nature & Beaches", label: "Best for" },
+  { value: "Sunset Village", label: "Known as" },
 ];
 
 const highlights = [
@@ -263,14 +263,19 @@ export default function SigriPage() {
                   </a>
                 </div>
 
-                <div className="mt-8 grid grid-cols-2 gap-3 sm:mt-12 sm:max-w-2xl sm:grid-cols-3 lg:grid-cols-6">
+                <div className="mt-8 grid grid-cols-2 gap-3 sm:mt-12 sm:max-w-2xl sm:grid-cols-3 lg:grid-cols-3">
                   {quickFacts.map((fact) => (
                       <div
                           key={fact.label}
-                          className="min-h-[110px] rounded-2xl border border-white/10 bg-white/[0.07] p-3 sm:p-4 backdrop-blur-xl"
+                          className="h-[120px] rounded-2xl border border-white/10 bg-white/[0.07] p-4 backdrop-blur-xl flex flex-col justify-between"
                       >
-                        <p className="text-base font-black text-white sm:text-xl">{fact.value}</p>
-                        <p className="mt-1 text-xs text-white/45">{fact.label}</p>
+                        <p className="text-sm sm:text-lg font-black leading-tight text-white">
+                          {fact.value}
+                        </p>
+
+                        <p className="text-xs text-white/45">
+                          {fact.label}
+                        </p>
                       </div>
                   ))}
                 </div>
