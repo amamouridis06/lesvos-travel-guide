@@ -95,10 +95,10 @@ const navCategories: NavCategory[] = [
       },
     ],
   },
-  {
-    label: "Favourites",
-    href: "/favourites",
-  },
+  // {
+  //   label: "Favourites",
+  //   href: "/favourites",
+  // },
 
 ];
 
