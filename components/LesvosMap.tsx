@@ -49,7 +49,7 @@ const lesvosPlaces: LesvosPlace[] = [
         id: 2,
         name: "Diamanti Studios",
         location: "Kalloni Lesvos",
-        category: "Accomodation",
+        category: "Accommodation",
         description:
             "Studios in a fanastic village in Central Lesvos",
         coordinates: [39.206767,26.207183],
@@ -60,7 +60,7 @@ const lesvosPlaces: LesvosPlace[] = [
         id: 3,
         name: "Hotel Petrino",
         location: "Molyvos Lesvos",
-        category: "Accomodation",
+        category: "Accommodation",
         description:
             "A hotel in a fanastic village in North Lesvos",
         coordinates: [39.3665856,26.1800643],
@@ -159,7 +159,7 @@ const lesvosPlaces: LesvosPlace[] = [
         id: 12,
         name: "Presidential Beach Villa",
         location: "Pyrgi Lesvos",
-        category: "Accomodation",
+        category: "Accommodation",
         description:
             "A luxury villa in a fanastic village in East Lesvoss",
         coordinates: [39.0891364,26.5202991],
@@ -170,7 +170,7 @@ const lesvosPlaces: LesvosPlace[] = [
         id: 13,
         name: "PP Urban Studio",
         location: "Xarilaou Trikoupi 9 Mytilene, Lesvos",
-        category: "Accomodation",
+        category: "Accommodation",
         description:
             "Where modern living meets the city’s heartbeat.",
         coordinates: [39.1048645,26.5530956],
@@ -181,7 +181,7 @@ const lesvosPlaces: LesvosPlace[] = [
         id: 13,
         name: "Pierres Blanches Residences",
         location: " Mytilene, Lesvos",
-        category: "Accomodation",
+        category: "Accommodation",
         description:
             "Residences in East Lesvos",
         coordinates: [39.0936071,26.5401768],
@@ -192,7 +192,7 @@ const lesvosPlaces: LesvosPlace[] = [
         id: 14,
         name: "Eressian Hotel & Hammam Spa",
         location: "Eresos, Lesvos",
-        category: "Accomodation",
+        category: "Accommodation",
         description:
             "Where modern living meets the village life.",
         coordinates: [39.1700789,25.9349545],
@@ -203,7 +203,7 @@ const lesvosPlaces: LesvosPlace[] = [
         id: 15,
         name: "Thanos Cozy Apartments",
         location: "Skala Kallonis, Lesvos",
-        category: "Accomodation",
+        category: "Accommodation",
         description:
             "Where the sea meets stillness.",
         coordinates: [39.207121,26.2080755],
