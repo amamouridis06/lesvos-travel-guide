@@ -443,9 +443,9 @@ export default function PetraPage() {
                         </div>
                         <div>
                           <p className="text-xs font-semibold uppercase tracking-wider text-white/40">
-                            {item.label}
+                            {item.title}
                           </p>
-                          <p className="mt-1 font-semibold text-white">{item.value}</p>
+                          <p className="mt-1 font-semibold text-white">{item.label}</p>
                         </div>
                       </div>
                   ))}
@@ -533,7 +533,7 @@ export default function PetraPage() {
                         {item.title}
                       </h3>
 
-                      <p className="mt-3 text-sm leading-6 text-white/55">{item.text}</p>
+                      <p className="mt-3 text-sm leading-6 text-white/55">{item.description}</p>
 
                       <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-amber-300">
                         Explore

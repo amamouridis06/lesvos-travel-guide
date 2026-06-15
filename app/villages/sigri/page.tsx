@@ -9,18 +9,13 @@ import {
   Car,
   ChevronRight,
   Clock3,
-  Compass,
   MapPin,
   Navigation,
-  Sparkles,
   Sun,
-  Church,
   Waves,
   Star,
   Home,
-  UtensilsCrossed,
   Landmark,
-  Camera
 } from "lucide-react";
 
 const quickFacts = [
@@ -59,30 +54,38 @@ const practicalInfo = [
   {
     icon: Clock3,
     label: "Best Time to Visit",
-    value: "☀️ June–September: Warm weather, beach season, and boat trips",
-    value: "🌸 April–May: Ideal for hiking and exploring the Petrified Forest.",
-    value: "🍂 October: Pleasant temperatures and fewer visitors.",
+    values: [
+      "☀️ June–September: Warm weather, beach season and boat trips",
+      "🌸 April–May: Ideal for hiking and exploring the Petrified Forest",
+      "🍂 October: Pleasant temperatures and fewer visitors",
+    ],
   },
   {
     icon: Car,
     label: "Transport",
-    value: "Renting a car is highly recommended.",
-    value: "Public buses are available but less frequent than in eastern Lesvos.",
+    values: [
+      "🚗 Renting a car is highly recommended",
+      "🚌 Public buses are available but less frequent than in eastern Lesvos",
+    ],
   },
   {
     icon: Star,
     label: "Local Specialties",
-    value: "•\tFresh fish and seafood",
-    value: "•\tOuzo",
-    value: "•\tLocal honey",
-    value: "•\tOlive oil",
-    value: "•\tLadotyri cheese",
-    value: "•\tTraditional Lesvian meze",
+    values: [
+      "🐟 Fresh fish and seafood",
+      "🥃 Ouzo",
+      "🍯 Local honey",
+      "🫒 Olive oil",
+      "🧀 Ladotyri cheese",
+      "🍽️ Traditional Lesvian meze",
+    ],
   },
   {
     icon: Star,
     label: "Local Tip",
-    value: "Visit the museum first, then the Petrified Forest, spend the afternoon at Faneromeni Beach, and finish your day with seafood and sunset views at the harbor.",
+    values: [
+      "🌅 Visit the museum first, then the Petrified Forest, spend the afternoon at Faneromeni Beach and finish the day with seafood and sunset views at the harbor.",
+    ],
   },
 ];
 
@@ -205,7 +208,7 @@ export default function SigriPage() {
         {/* HERO */}
         <section className="relative min-h-[100svh] overflow-hidden bg-stone-950">
           <Image
-              src="/"
+              src="/sigri/sigri-sunset.jpg"
               alt="Sigri in Lesvos"
               fill
               priority
@@ -235,7 +238,11 @@ export default function SigriPage() {
                 </h1>
 
                 <p className="mt-8 max-w-2xl text-base leading-7 text-white/68 sm:text-lg sm:leading-8 md:text-xl">
-                 TO DO!!
+                  Sigri is one of the most unique destinations in Lesvos, known for its
+                  dramatic volcanic landscape, the world-famous Petrified Forest, peaceful
+                  beaches and unforgettable sunsets. This traditional fishing village offers a
+                  quieter side of the island where nature, history and authentic local life
+                  come together.
                 </p>
 
                 <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
@@ -256,7 +263,7 @@ export default function SigriPage() {
                   </a>
                 </div>
 
-                <div className="mt-8 grid grid-cols-2 gap-3 sm:mt-12 sm:max-w-2xl sm:grid-cols-4">
+                <div className="mt-8 grid grid-cols-2 gap-3 sm:mt-12 sm:max-w-2xl sm:grid-cols-3 lg:grid-cols-6">
                   {quickFacts.map((fact) => (
                       <div
                           key={fact.label}
@@ -299,7 +306,7 @@ export default function SigriPage() {
           >
             <div className="relative h-[380px] sm:min-h-[560px] overflow-hidden rounded-[2.25rem]">
               <Image
-                  src=""
+                  src="/sigri/sigri-village.jpg"
                   alt="Sigri"
                   fill
                   sizes="(max-width: 1024px) 100vw, 45vw"
@@ -436,7 +443,16 @@ export default function SigriPage() {
                           <p className="text-xs font-semibold uppercase tracking-wider text-white/40">
                             {item.label}
                           </p>
-                          <p className="mt-1 font-semibold text-white">{item.value}</p>
+                          <div className="mt-2 space-y-1">
+                            {item.values.map((value) => (
+                                <p
+                                    key={value}
+                                    className="text-sm leading-6 text-white/90"
+                                >
+                                  {value}
+                                </p>
+                            ))}
+                          </div>
                         </div>
                       </div>
                   ))}
@@ -540,7 +556,7 @@ export default function SigriPage() {
         {/* CTA */}
         <section className="relative overflow-hidden py-28 sm:py-36">
           <Image
-              src="/"
+              src="/sigri/sigri-hero.jpg"
               alt="sigri"
               fill
               sizes="100vw"

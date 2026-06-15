@@ -9,19 +9,15 @@ import {
   Car,
   ChevronRight,
   Clock3,
-  Compass,
   MapPin,
   Navigation,
-  Sparkles,
   Sun,
-  Church,
   Waves,
   Star,
   Home,
   UtensilsCrossed,
   Landmark,
   Camera,
-  Mountain
 } from "lucide-react";
 
 const quickFacts = [
@@ -36,22 +32,22 @@ const highlights = [
   {
     icon: Landmark,
     title: "Ouzo Culture",
-    text: "Plomari is the birthplace of the famous Ouzo Plomari and one of Greece's most important ouzo-producing towns. Several distilleries and museums explain the production process and offer tastings. ",
+    text: "Plomari is the birthplace of the famous Ouzo Plomari and one of Greece's most important ouzo-producing towns.",
   },
   {
-    icon: Star,
+    icon: Home,
     title: "Traditional Town Center",
-    text: "One of Greece's most important geological museums, explaining the volcanic history of the Aegean and the formation of the Petrified Forest.",
+    text: "Narrow streets, stone houses, cafés and local shops create one of Lesvos' most authentic town atmospheres.",
   },
   {
     icon: Waves,
-    title: "Beaches",
-    text: "The area is known for crystal-clear water and beautiful pebble beaches. ",
+    title: "Beautiful Beaches",
+    text: "The area is known for crystal-clear waters and beautiful pebble beaches such as Agios Isidoros and Melinda.",
   },
   {
     icon: Sun,
-    title: "Spectacular Sunsets",
-    text: "Its western location makes Sigri one of the island's premier sunset destinations.",
+    title: "Seafront Atmosphere",
+    text: "The harbor promenade is ideal for relaxing walks, seafood dining and sunset views over the Aegean.",
   },
 ];
 
@@ -61,33 +57,32 @@ const practicalInfo = [
   {
     icon: Clock3,
     label: "Best Time to Visit",
-    value: "•\t☀️ June–September: Beach weather and lively atmosphere.",
-    value: "•\t🌿 May and October: Warm sea, fewer tourists, lower prices",
+    value:
+        "☀️ June–September: Beach weather and lively atmosphere. 🌿 May and October: Warm sea, fewer tourists, lower prices.",
   },
   {
     icon: Car,
     label: "Transport",
-    value: "•\tRenting a car  is highly recommended.",
-    value: "•\tLocal buses connect Plomari with Mytilene, but schedules can be limited.",
+    value:
+        "Renting a car is highly recommended. Local buses connect Plomari with Mytilene, but schedules can be limited.",
   },
   {
     icon: Star,
     label: "Local Specialties",
-    value: "•\tFresh seafood",
-    value: "•\tOuzo",
-    value: "•\tOlive oil and local olives ",
-    value: "•\tLadotyri cheese",
-    value: "•\tSardines",
+    value:
+        "Fresh seafood, ouzo, olive oil, local olives, Ladotyri cheese and sardines.",
   },
   {
     icon: Star,
     label: "Local Tip",
-    value: "Enjoy sunset with an ouzo and meze at the harbor. Unlike many Greek island resorts, Plomari still feels genuinely local and authentic, with tourism blending naturally into everyday life.",
+    value:
+        "Enjoy sunset with an ouzo and meze at the harbor. Unlike many Greek island resorts, Plomari still feels genuinely local and authentic.",
   },
   {
     icon: Star,
-    label: "Local Tip",
-    value: "If you're staying in Plomari for 3–5 days, it's one of the best bases on Lesvos for combining beaches, traditional villages, hiking, and authentic Greek food without the crowds found on more famous islands. ",
+    label: "Stay Longer",
+    value:
+        "Plomari is one of the best bases on Lesvos for combining beaches, traditional villages, hiking and authentic Greek food.",
   },
 ];
 
@@ -121,27 +116,26 @@ const guideCards = [
 const nearbyPlaces = [
   {
     title: "Agiasos (20–25 min)",
-    text: "Mountain village famous for traditional architecture, chestnut forests, and local crafts.",
-    href: "/villages/skala-eresos",
+    text: "Mountain village famous for traditional architecture, chestnut forests and local crafts.",
+    href: "/villages/agiasos",
     icon: Mountain,
   },
   {
     title: "Molyvos (1.5 hours)",
     text: "The island's most picturesque medieval town with a castle overlooking the sea.",
-    href: "/villages/anaxos",
+    href: "/villages/molyvos",
     icon: Home,
   },
   {
-    title: "Kalloni environmental information center",
-    text: "Kalloni environmental information center Address: Skala Kallonis 811 07, Greece Phone: +30 2251 047033",
-    text:"Great introduction to Lesvos' wetlands and birdlife. The Gulf of Kalloni is one of Greece's top birdwatching locations",
-    href: "/attractions/eftalou",
+    title: "Kalloni Environmental Information Center",
+    text: "A great introduction to Lesvos' wetlands and birdlife. The Gulf of Kalloni is one of Greece's top birdwatching locations.",
+    href: "/attractions/kalloni-environmental-center",
     icon: Landmark,
   },
   {
     title: "Mytilene (1 hour)",
-    text: "Island capital with museums, castle, shopping, cafés, and ferry connections. Nearby is the Archaeological Museum of Mytilene..",
-    href: "/attractions/eftalou",
+    text: "The island capital with museums, castle, shopping, cafés and ferry connections.",
+    href: "/destinations/mytilene",
     icon: Home,
   },
 ];
@@ -199,7 +193,7 @@ function SectionHeading({
   );
 }
 
-export default function SigriPage() {
+export default function PlomariPage() {
   return (
       <main className="overflow-hidden bg-[#f6f1e8] text-stone-950">
         {/* HERO */}
@@ -227,11 +221,11 @@ export default function SigriPage() {
               >
                 <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.24em] text-white/85 backdrop-blur-xl sm:text-xs">
                   <MapPin className="h-4 w-4 text-amber-300" />
-                  Western Lesvos · Greece
+                  Southern Lesvos · Greece
                 </div>
 
                 <h1 className="mt-6 text-5xl font-black leading-[0.9] tracking-[-0.05em] sm:text-7xl lg:text-[9rem]">
-                  Sigri
+                  Plomari
                 </h1>
 
                 <p className="mt-8 max-w-2xl text-base leading-7 text-white/68 sm:text-lg sm:leading-8 md:text-xl">
@@ -243,7 +237,7 @@ export default function SigriPage() {
                       href="#discover"
                       className="inline-flex items-center justify-center gap-2 rounded-full bg-amber-400 px-6 py-4 text-sm font-bold text-stone-950 shadow-[0_18px_55px_rgba(251,191,36,0.3)] transition hover:-translate-y-0.5 hover:bg-amber-300"
                   >
-                    Discover Sigri
+                    Discover Plomari
                     <ArrowDown className="h-4 w-4" />
                   </a>
 
@@ -299,7 +293,7 @@ export default function SigriPage() {
           >
             <div className="relative h-[380px] sm:min-h-[560px] overflow-hidden rounded-[2.25rem]">
               <Image
-                  src=""
+                  src="/plomari/plomari-hero.jpg"
                   alt="Sigri"
                   fill
                   sizes="(max-width: 1024px) 100vw, 45vw"
@@ -540,7 +534,7 @@ export default function SigriPage() {
         {/* CTA */}
         <section className="relative overflow-hidden py-28 sm:py-36">
           <Image
-              src="/"
+              src="/plomari/plomari-town.jpg"
               alt="sigri"
               fill
               sizes="100vw"
