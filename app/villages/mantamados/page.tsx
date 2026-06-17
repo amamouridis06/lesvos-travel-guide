@@ -17,7 +17,6 @@ import {
   Home,
   Landmark,
   Palette,
-  Cheese
 } from "lucide-react";
 
 const quickFacts = [
@@ -36,7 +35,7 @@ const highlights = [
     text: "One of Greece's most important pilgrimage sites, famous for its miraculous icon of Archangel Michael.",
   },
   {
-    icon: Cheese,
+    icon: Star,
     title: "Ladotyri Cheese",
     text: "Mantamados is renowned for producing Lesvos' famous Ladotyri, a traditional cheese aged in olive oil.",
   },
