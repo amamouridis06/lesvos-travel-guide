@@ -19,7 +19,7 @@ const navCategories: NavCategory[] = [
     items: [
       {
         label: "Villages",
-        href: "/under-construction",
+        href: "/villages",
       },
       {
         label: "Beaches",
