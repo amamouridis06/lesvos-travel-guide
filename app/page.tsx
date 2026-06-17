@@ -90,10 +90,10 @@ export default function Home() {
         <Section title="Top hotels" href="/hotels">
           <div className="flex lg:hidden" style={{ flexDirection: "column" }}>
             {[
-              { num: "01", name: "Eressian Hotel & Hammam Spa", sub: "Villa Hotel · Mytilene", tag: "Hotel", img: "/eressian/er_pool1.jpg", href: "/hotels/eressian" },
-               { num: "02", name: "Presidential Beach Villa", sub: "Villa · Pyrgi", tag: "Hotel", img: "/villa/hero.jpg", href: "/hotels/presidential-beach-villa" },
-              { num: "03", name: "Hotel Petrino", sub: "Luxury · Molyvos", tag: "Hotel", img: "/petrino/petrino3.png", href: "/hotels/petrino" },
-              { num: "04", name: "Theofilos Paradise Boutique Hotel", sub: "Luxury · Mytilene", tag: "Hotel", img: "/theofilos/theo-entry.jpg", href: "/hotels/theofilos-paradise" }
+              { num: "01", name: "Eressian Hotel & Hammam Spa", sub: "Villa Hotel · Mytilene", tag: "Hotel", img: "/eressian/er_pool1.jpg", href: "/accommodation/eressian" },
+               { num: "02", name: "Presidential Beach Villa", sub: "Villa · Pyrgi", tag: "Hotel", img: "/villa/hero.jpg", href: "/accommodation/presidential-beach-villa" },
+              { num: "03", name: "Hotel Petrino", sub: "Luxury · Molyvos", tag: "Hotel", img: "/petrino/petrino3.png", href: "/accommodation/petrino" },
+              { num: "04", name: "Theofilos Paradise Boutique Hotel", sub: "Luxury · Mytilene", tag: "Hotel", img: "/theofilos/theo-entry.jpg", href: "/accommodation/theofilos-paradise" }
             ].map((p, i, arr) => (
                 <MobileListItem key={p.name} {...p} last={i === arr.length - 1} />
             ))}
@@ -106,10 +106,10 @@ export default function Home() {
                 }}
             >
             {[
-                { num: "01", name: "Eressian Hotel & Hammam Spa", sub: "Villa Hotel · Mytilene", tag: "Hotel", img: "/eressian/er_pool1.jpg", href: "/hotels/eressian" },
-                { num: "02", name: "Presidential Beach Villa", sub: "Villa · Pyrgi", tag: "Hotel", img: "/villa/hero.jpg", href: "/hotels/presidential-beach-villa" },
-                { num: "03", name: "Hotel Petrino", sub: "Luxury · Molyvos", tag: "Hotel", img: "/petrino/petrino3.png", href: "/hotels/petrino" },
-                { num: "04", name: "Theofilos Paradise Boutique Hotel", sub: "Luxury · Mytilene", tag: "Hotel", img: "/theofilos/theo-entry.jpg", href: "/hotels/theofilos-paradise" },
+                { num: "01", name: "Eressian Hotel & Hammam Spa", sub: "Villa Hotel · Mytilene", tag: "Hotel", img: "/eressian/er_pool1.jpg", href: "/accommodation/eressian" },
+                { num: "02", name: "Presidential Beach Villa", sub: "Villa · Pyrgi", tag: "Hotel", img: "/villa/hero.jpg", href: "/accommodation/presidential-beach-villa" },
+                { num: "03", name: "Hotel Petrino", sub: "Luxury · Molyvos", tag: "Hotel", img: "/petrino/petrino3.png", href: "/accommodation/petrino" },
+                { num: "04", name: "Theofilos Paradise Boutique Hotel", sub: "Luxury · Mytilene", tag: "Hotel", img: "/theofilos/theo-entry.jpg", href: "/accommodation/theofilos-paradise" },
 
             ].map((p) => <DesktopCard key={p.name} {...p} />)}
           </div>

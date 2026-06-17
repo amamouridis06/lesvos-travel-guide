@@ -21,7 +21,7 @@ const hotels = [
         description: "A fantastic villa with view the sea",
         location: "📍Pyrgi, Lesvos",
         image: "/villa/hero.jpg",
-        href: "/hotels/presidential-beach-villa",
+        href: "/accommodation/presidential-beach-villa",
         stars: 4
     },
     {
@@ -29,7 +29,7 @@ const hotels = [
         description: "Luxury hotel in the heart of the city centre",
         location: "📍Mytilene, Lesvos, 81100",
         image: "/theofilos/theo-entry.jpg",
-        href: "/hotels/theofilos-paradise",
+        href: "/accommodation/theofilos-paradise",
         stars: 4
     },
     {
@@ -37,7 +37,7 @@ const hotels = [
         description: "A renovated studio in the heart of the city",
         location: "📍Mytilene, Lesvos, 81100",
         image: "/pp/pp.beds.jpg",
-        href: "/hotels/pp-urban-studio",
+        href: "/accommodation/pp-urban-studio",
         stars: 4
     },
     {
@@ -45,7 +45,7 @@ const hotels = [
         description: "Traditional, peaceful, local",
         location: "📍Skalla Kallonis, Lesvos, 81107",
         image: "/thanos/thanosbed.jpg",
-        href: "/hotels/thanos-cozy-appartments",
+        href: "/accommodation/thanos-cozy-appartments",
         stars: 4
     },
     {
@@ -53,7 +53,7 @@ const hotels = [
         description: "A modern studio in heart of centre lesvos nearby the sea",
         location: "📍Skala Kallonis, Lesvos",
         image: "/diamanti/house.jpg",
-        href: "/hotels/diamanti-studios",
+        href: "/accommodation/diamanti-studios",
         stars: 3
     },
     {
@@ -61,7 +61,7 @@ const hotels = [
         description: "Luxury, Hammam, Serenity, Cocktails, Dreams, Aegean",
         location: "📍Eresos, Lesvos",
         image: "/eressian/er_pool1.jpg",
-        href: "/hotels/eressian",
+        href: "/accommodation/eressian",
         stars: 3
     },
     {
@@ -69,7 +69,7 @@ const hotels = [
         description: "A hotel with view the castle",
         location: "📍Molyvos, Lesvos",
         image: "/petrino/petrino4.png",
-        href: "/hotels/petrino",
+        href: "/accommodation/petrino",
         stars:2
     },
     {
@@ -77,7 +77,7 @@ const hotels = [
         description: "Homes with privates pools",
         location: "📍Mytilene, Lesvos",
         image: "/pierres/hero.jpeg",
-        href: "/hotels/pierres-blances",
+        href: "/accommodation/pierres-blances",
         stars:4
     },
 

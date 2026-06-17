@@ -55,36 +55,36 @@ const practicalInfo = [
     icon: Clock3,
     label: "Best Time to Visit",
     values: [
-      "☀️ June–September: Warm weather, beach season and boat trips",
-      "🌸 April–May: Ideal for hiking and exploring the Petrified Forest",
-      "🍂 October: Pleasant temperatures and fewer visitors",
+      "☀️ Jun–Sep: Beaches & boat tripss",
+      "🌸 Apr–May: Hiking & Petrified Forest",
+      "🍂 Oct: Mild weather, fewer crowds",
     ],
   },
   {
     icon: Car,
     label: "Transport",
     values: [
-      "🚗 Renting a car is highly recommended",
-      "🚌 Public buses are available but less frequent than in eastern Lesvos",
+      "🚗 Car rental recommended",
+      "🚌 Limited bus service",
     ],
   },
   {
     icon: Star,
     label: "Local Specialties",
     values: [
-      "🐟 Fresh fish and seafood",
+      "🐟 Seafood",
       "🥃 Ouzo",
-      "🍯 Local honey",
+      "🍯 Honey",
       "🫒 Olive oil",
       "🧀 Ladotyri cheese",
-      "🍽️ Traditional Lesvian meze",
+      "🍽️ Lesvian meze",
     ],
   },
   {
     icon: Star,
     label: "Local Tip",
     values: [
-      "🌅 Visit the museum first, then the Petrified Forest, spend the afternoon at Faneromeni Beach and finish the day with seafood and sunset views at the harbor.",
+      "🏛️ Museum → 🌳 Petrified Forest → 🏖️ Faneromeni Beach → 🌅 Harbor sunset",
     ],
   },
 ];
@@ -588,10 +588,10 @@ export default function SigriPage() {
             </p>
 
             <Link
-                href="/beaches"
+                href="/planner"
                 className="mt-9 inline-flex items-center gap-2 rounded-full bg-amber-400 px-7 py-4 text-sm font-bold text-stone-950 transition hover:-translate-y-0.5 hover:bg-amber-300"
             >
-              View all beaches
+              View more
               <ArrowRight className="h-4 w-4" />
             </Link>
           </motion.div>
