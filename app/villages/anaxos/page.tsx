@@ -119,21 +119,25 @@ const nearbyPlaces = [
   {
     title: "Petra (5 min)",
     text: "Beautiful coastal village famous for its church atop a dramatic rock.",
+    href: "/villages/petra",
     icon: Home,
   },
   {
     title: "Molyvos (10 min)",
     text: "The island's iconic medieval town with a castle and stunning sunsets.",
+    href: "/villages/molyvos",
     icon: Landmark,
   },
   {
     title: "Eftalou (15 min)",
     text: "Known for its thermal springs and quiet beaches.",
+    href: "/villages/eftalou",
     icon: Home,
   },
   {
     title: "Mantamados (25 min)",
     text: "Historic village famous for the Taxiarchis Monastery and Ladotyri cheese.",
+    href: "/villages/mantamados",
     icon: Home,
   },
 ];

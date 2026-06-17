@@ -119,25 +119,25 @@ const nearbyPlaces = [
   {
     title: "Molyvos (25 min)",
     text: "The island's most famous medieval town with its castle and stone alleys.",
-    href: "/villages/skala-eresos",
+    href: "/villages/molyvos",
     icon: Home,
   },
   {
     title: "Petra (20 min)",
     text: "Beautiful seaside village famous for its church on a rocky hill.",
-    href: "/villages/anaxos",
+    href: "/villages/petra",
     icon: Home,
   },
   {
     title: "Kapi (10 min)",
     text: "Traditional inland village with authentic tavernas and local life.",
-    href: "/attractions/eftalou",
+    href: "/villages/kapi",
     icon: Home,
   },
   {
     title: "Mytilene (45 min)",
     text: "The island capital with museums, shopping, and ferry connections.",
-    href: "/attractions/eftalou",
+    href: "/villages/mytilene",
     icon: Home,
   },
 ];

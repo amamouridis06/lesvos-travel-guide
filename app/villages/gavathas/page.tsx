@@ -120,21 +120,25 @@ const nearbyPlaces = [
     {
         title: "Sigri (20 min)",
         text: "Traditional fishing village and gateway to the Petrified Forest.",
+        href: "/villages/sigri",
         icon: Home,
     },
     {
         title: "Petrified Forest (25 min)",
         text: "One of the world's most important fossil forests and a UNESCO Global Geopark.",
+        href: "/villages/sigri",
         icon: Landmark,
     },
     {
         title: "Skala Eresos (25 min)",
         text: "Popular seaside resort with a long beach and lively promenade.",
+        href: "/villages/skala-eresou",
         icon: Home,
     },
     {
         title: "Antissa (15 min)",
         text: "Traditional village surrounded by olive groves and countryside.",
+        href: "/villages/antissa",
         icon: Home,
     },
 ];

@@ -120,21 +120,25 @@ const nearbyPlaces = [
   {
     title: "Mytilene (30 min)",
     text: "The island capital with museums, shopping and the main port.",
+    href: "/villages/mytilene",
     icon: Home,
   },
   {
     title: "Mount Olympus (10 min)",
     text: "Lesvos' highest peak with hiking trails and panoramic views.",
+    href: "/villages/agiasos",
     icon: Home,
   },
   {
     title: "Plomari (35 min)",
     text: "The birthplace of ouzo and one of the island's most charming coastal towns.",
+    href: "/villages/plomari",
     icon: Home,
   },
   {
     title: "Thermi (25 min)",
     text: "Historic village known for its monasteries and thermal springs.",
+    href: "/villages/thermi",
     icon: Home,
   },
 ];

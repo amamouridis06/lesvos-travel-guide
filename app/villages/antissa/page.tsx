@@ -119,21 +119,25 @@ const nearbyPlaces = [
   {
     title: "Sigri (20 min)",
     text: "Traditional fishing village and home to the Natural History Museum.",
+    href: "/villages/sigri",
     icon: Home,
   },
   {
     title: "Petrified Forest (25 min)",
     text: "A UNESCO Global Geopark and one of the world's most important fossil forests.",
+    href: "/villages/sigri",
     icon: Landmark,
   },
   {
     title: "Gavathas (15 min)",
     text: "Quiet seaside village with a long sandy beach.",
+    href: "/villages/gavathas",
     icon: Home,
   },
   {
     title: "Skala Eresos (20 min)",
     text: "Popular beach destination and birthplace of Sappho.",
+    href: "/villages/skala-eresou",
     icon: Home,
   },
 ];

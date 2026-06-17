@@ -126,7 +126,7 @@ const nearbyPlaces = [
     distance: "4 km",
     description:
       "A lively seaside village known for its long sandy beach, cafés, tavernas and beautiful sunsets.",
-    href: "/destinations/skala-eresou",
+    href: "/villages/skala-eresou",
   },
   {
     icon: Church,
@@ -150,7 +150,7 @@ const nearbyPlaces = [
     distance: "28 km",
     description:
       "A scenic coastal village with a castle, traditional harbour and access to the Petrified Forest of Lesvos.",
-    href: "/destinations/sigri",
+    href: "/villages/sigri",
   },
 ];
 
