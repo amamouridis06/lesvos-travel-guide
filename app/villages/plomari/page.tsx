@@ -22,12 +22,13 @@ import {
 } from "lucide-react";
 
 const quickFacts = [
-  { value: "South coast of Lesvos", label: "Location" },
-  { value: "About 3,000 in the town and 4,800 in the wider municipal area.", label: "Population" },
-  { value: "Ouzo production (often called the ouzo capital of Greece", label: "Famous for" },
-  { value: "~40 km (about 1 hour by car", label: "Distance from Mytilene" },
-  { value: "Authentic Greek atmosphere, beaches, seafood, ouzo, and relaxation", label: "Best for" },
+  { value: "South Lesvos", label: "Location" },
+  { value: "~3,000 residents", label: "Population" },
+  { value: "Ouzo capital of Greece", label: "Famous for" },
+  { value: "~40 km / 1 hour", label: "From Mytilene" },
+  { value: "Beaches, seafood & relaxation", label: "Best for" },
 ];
+
 
 const highlights = [
   {
@@ -230,7 +231,7 @@ export default function PlomariPage() {
                 </h1>
 
                 <p className="mt-8 max-w-2xl text-base leading-7 text-white/68 sm:text-lg sm:leading-8 md:text-xl">
-                  TO DO!!
+                  Plomari is a charming seaside town on the south coast of Lesvos, famous for its traditional ouzo, beautiful beaches, fresh seafood, and relaxed Greek atmosphere.
                 </p>
 
                 <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
@@ -276,9 +277,9 @@ export default function PlomariPage() {
         >
           <div>
             <SectionHeading
-                eyebrow="Why visit Sigri"
-                title="A village with history, sunset and beautiful sea"
-                description="Unlike the green eastern side of Lesvos, Sigri offers a unique volcanic landscape, world-class geological sites, uncrowded beaches, and some of the island's most spectacular sunsets. It is one of the most distinctive destinations in the entire Aegean"
+                eyebrow="Why visit Plomari"
+                title="Plomari is perfect for ouzo, beaches, seafood, and a relaxed Greek atmosphere."
+                description="Visit Plomari for its authentic island atmosphere, renowned ouzo tradition, beautiful beaches, fresh seafood, and relaxed waterfront charm."
             />
 
             <motion.div {...fadeUp} className="mt-9 border-l-2 border-amber-400 pl-5">

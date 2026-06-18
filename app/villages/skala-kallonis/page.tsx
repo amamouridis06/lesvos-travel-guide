@@ -1,175 +1,590 @@
-export const metadata = {
-  title: "Skala Kallonis | Lesvos Travel Guide",
-  description:
-    "Skala Kalloni lies along the shores of Kalloni Bay, just a few minutes from the town of Kalloni. This peaceful seaside settlement blends scenic beaches with a relaxed atmosphere, while offering convenient access to the rest of the island, making it an ideal base for exploration.",
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {
+  ArrowDown,
+  ArrowRight,
+  Car,
+  ChevronRight,
+  Clock3,
+  MapPin,
+  Navigation,
+  Sun,
+  Waves,
+  Star,
+  Home,
+  Landmark,
+} from "lucide-react";
+
+const quickFacts = [
+  { label: "Region", value: "Central Lesvos" },
+  { label: "Distance from Mytilene", value: "40 km" },
+  { label: "Best Known For", value: "Kalloni Bay" },
+  { label: "Famous Product", value: "Kalloni Sardines" },
+  { label: "Ideal For", value: "Nature & Beaches" },
+  { label: "Character", value: "Coastal Resort" },
+];
+
+const highlights = [
+  {
+    icon: Waves,
+    title: "Sandy Beach",
+    text: "A long beach with shallow waters, perfect for families and relaxed summer days.",
+  },
+  {
+    icon: Landmark,
+    title: "Kalloni Bay",
+    text: "One of Lesvos' most important natural landmarks and a haven for wildlife.",
+  },
+  {
+    icon: Home,
+    title: "Seaside Village",
+    text: "Enjoy traditional tavernas, local hospitality and a laid-back atmosphere.",
+  },
+  {
+    icon: Sun,
+    title: "Birdwatching",
+    text: "A world-renowned destination for observing migratory birds and rare species.",
+  },
+];
+
+const practicalInfo = [
+  {
+    icon: Clock3,
+    label: "Best Time to Visit",
+    values: [
+      "🌸 April–May: Ideal for birdwatching and pleasant temperatures",
+      "☀️ June–September: Perfect beach weather and seaside dining",
+      "🍂 October: Warm sea, fewer crowds and migrating birds",
+    ],
+  },
+  {
+    icon: Car,
+    label: "Getting Around",
+    values: [
+      "🚗 A car is recommended for exploring central and western Lesvos",
+      "🚌 Regular bus connections to Mytilene and nearby villages",
+    ],
+  },
+  {
+    icon: Star,
+    label: "Known For",
+    values: [
+      "🏖️ Sandy beach",
+      "🐦 Birdwatching",
+      "🐟 Kalloni sardines",
+      "🌊 Kalloni Bay",
+    ],
+  },
+  {
+    icon: Star,
+    label: "Local Tip",
+    values: [
+      "Visit the salt pans at sunrise or sunset for the best birdwatching opportunities and spectacular views across Kalloni Bay.",
+    ],
+  },
+];
+
+const guideCards = [
+  {
+    eyebrow: "Stay",
+    title: "Beachfront accommodation",
+    image: "/hotel-placeholder.jpg",
+    description:
+        "Wake up close to the sea and enjoy effortless access to the coast from early morning.",
+    href: "/stay",
+  },
+  {
+    eyebrow: "Taste",
+    title: "Seaside tavernas",
+    image: "/restaurant-placeholder.jpg",
+    description:
+        "Fresh fish, local mezedes and traditional Greek flavours served beside the water.",
+    href: "/food",
+  },
+  {
+    eyebrow: "Explore",
+    title: "Southern Lesvos",
+    image: "/attractions-placeholder.jpg",
+    description:
+        "Scenic roads, traditional villages and quieter corners are all within easy reach.",
+    href: "/explore",
+  },
+];
+
+const nearbyPlaces = [
+  {
+    title: "Kalloni (5 min)",
+    text: "The commercial centre of central Lesvos with shops, cafés and local markets.",
+    href: "/villages/kalloni",
+    icon: Home,
+  },
+  {
+    title: "Agia Paraskevi (15 min)",
+    text: "Historic village known for its olive-oil heritage and traditional architecture.",
+    href: "/villages/agia-paraskevi",
+    icon: Landmark,
+  },
+  {
+    title: "Agiasos (30 min)",
+    text: "One of Lesvos' most picturesque mountain villages, rich in culture and tradition.",
+    href: "/villages/agiasos",
+    icon: Home,
+  },
+  {
+    title: "Mytilene (40 min)",
+    text: "The island capital with museums, shopping and the main port.",
+    href: "/villages/mytilene",
+    icon: Landmark,
+  },
+];
+
+
+const fadeUp = {
+  initial: { opacity: 0, y: 28 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, amount: 0.2 },
+  transition: {
+    duration: 0.7,
+    ease: [0.22, 1, 0.36, 1] as const,
+  },
 };
 
-export default function SkalaKallonisPage() {
+function SectionHeading({
+                          eyebrow,
+                          title,
+                          description,
+                          light = false,
+                          centered = false,
+                        }: {
+  eyebrow: string;
+  title: string;
+  description?: string;
+  light?: boolean;
+  centered?: boolean;
+}) {
   return (
-    <main className="bg-neutral-100 text-neutral-900">
-      {/* HERO */}
-      <section className="relative h-[72vh] bg-[url('/skala-kallonis2.jpeg')] bg-cover bg-center">
-        <div className="absolute inset-0 bg-black/50" />
-        <div className="relative z-10 flex h-full items-end">
-          <div className="mx-auto w-full max-w-6xl px-6 pb-12">
-            <h1 className="text-4xl font-bold text-white md:text-5xl">
-              Skala Kallonis
-            </h1>
-            <p className="mt-2 text-gray-200 text-lg">
-              In the heart of Lesvos
-            </p>
-          </div>
-        </div>
-      </section>
+      <motion.div
+          {...fadeUp}
+          className={centered ? "mx-auto max-w-3xl text-center" : "max-w-3xl"}
+      >
+        <p className="text-xs font-bold uppercase tracking-[0.32em] text-amber-500 sm:text-sm">
+          {eyebrow}
+        </p>
 
-      {/* CONTENT + SIDEBAR */}
-      <section className="mx-auto max-w-6xl px-6 py-16">
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1fr)_320px]">
-          {/* MAIN CONTENT */}
-          <div className="space-y-8">
-            <div className="rounded-2xl bg-white p-6 shadow-sm">
-              <h2 className="mb-4 text-2xl font-semibold">
-                Why Visit Skala Kallonis?
-              </h2>
-              <p className="leading-relaxed text-gray-700">
-                Skala Kallonis is perfect for those seeking a peaceful seaside
-                escape, far from the crowds of mass tourism. Blending natural
-                beauty with excellent local cuisine and genuine hospitality, it
-                offers an authentic island experience — ideal for relaxation, as
-                well as a convenient base for exploring the rest of Lesvos.
+        <h2
+            className={`mt-4 text-3xl font-black leading-[0.98] tracking-[-0.055em] sm:text-5xl lg:text-6xl ${
+                light ? "text-white" : "text-stone-950"
+            }`}
+        >
+          {title}
+        </h2>
+
+        {description ? (
+            <p
+                className={`mt-5 text-base leading-7 sm:text-lg sm:leading-8 ${
+                    light ? "text-white/60" : "text-stone-600"
+                }`}
+            >
+              {description}
+            </p>
+        ) : null}
+      </motion.div>
+  );
+}
+
+export default function SkkalloniPage() {
+  return (
+      <main className="overflow-hidden bg-[#f6f1e8] text-stone-950">
+        {/* HERO */}
+        <section className="relative min-h-[100svh] overflow-hidden bg-stone-950">
+          <Image
+              src="/sigri/sigri-sunset.jpg"
+              alt="Skala Kallonis in Lesvos"
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover"
+          />
+
+          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(18,13,8,0.96)_0%,rgba(18,13,8,0.7)_45%,rgba(18,13,8,0.2)_100%)]" />
+          <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-black/25" />
+          <div className="hidden lg:block absolute left-[12%] top-[28%] h-[420px] w-[420px] rounded-full bg-amber-300/10 blur-[130px]" />
+
+          <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-7xl items-center px-4 pb-12 pt-24 sm:pb-20 sm:pt-32">
+            <div className="grid w-full gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:items-end">
+              <motion.div
+                  initial={{ opacity: 0, y: 34 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
+                  className="max-w-4xl text-white"
+              >
+                <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.24em] text-white/85 backdrop-blur-xl sm:text-xs">
+                  <MapPin className="h-4 w-4 text-amber-300" />
+                  Central Lesvos · Greece
+                </div>
+
+                <h1 className="mt-6 text-5xl font-black leading-[0.9] tracking-[-0.05em] sm:text-7xl lg:text-[9rem]">
+                  Skala Kallonis
+                </h1>
+
+                <p className="mt-8 max-w-2xl text-base leading-7 text-white/68 sm:text-lg sm:leading-8 md:text-xl">
+                  Skala Kallonis is a charming coastal destination in central Lesvos, famous for its sandy beach, world-class birdwatching and the renowned sardines of Kalloni Bay. With its laid-back atmosphere, beautiful natural surroundings and traditional seaside tavernas, it is the perfect place to experience the island's authentic character.
+                </p>
+
+                <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                  <a
+                      href="#discover"
+                      className="inline-flex items-center justify-center gap-2 rounded-full bg-amber-400 px-6 py-4 text-sm font-bold text-stone-950 shadow-[0_18px_55px_rgba(251,191,36,0.3)] transition hover:-translate-y-0.5 hover:bg-amber-300"
+                  >
+                    Discover Skala Kallonis
+                    <ArrowDown className="h-4 w-4" />
+                  </a>
+
+                  <a
+                      href="#map"
+                      className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/10 px-6 py-4 text-sm font-semibold text-white backdrop-blur-xl transition hover:bg-white/15"
+                  >
+                    View on map
+                    <Navigation className="h-4 w-4" />
+                  </a>
+                </div>
+
+                <div className="mt-8 grid grid-cols-2 gap-3 sm:mt-12 sm:max-w-2xl sm:grid-cols-3 lg:grid-cols-3">
+                  {quickFacts.map((fact) => (
+                      <div
+                          key={fact.label}
+                          className="h-[120px] rounded-2xl border border-white/10 bg-white/[0.07] p-4 backdrop-blur-xl flex flex-col justify-between"
+                      >
+                        <p className="text-sm sm:text-lg font-black leading-tight text-white">
+                          {fact.value}
+                        </p>
+
+                        <p className="text-xs text-white/45">
+                          {fact.label}
+                        </p>
+                      </div>
+                  ))}
+                </div>
+              </motion.div>
+            </div>
+          </div>
+
+          <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-[#f6f1e8] to-transparent" />
+        </section>
+
+        {/* EDITORIAL INTRO */}
+        <section
+            id="discover"
+            className="mx-auto grid max-w-7xl gap-14 px-4 py-20 sm:px-6 md:py-28 lg:grid-cols-[0.86fr_1.14fr] lg:items-center lg:px-8"
+        >
+          <div>
+            <SectionHeading
+                eyebrow="Why visit Skala Kallonis"
+                title="A village with history, sunset and beautiful sea"
+                description="Unlike the green eastern side of Lesvos, Sigri offers a unique volcanic landscape, world-class geological sites, uncrowded beaches, and some of the island's most spectacular sunsets. It is one of the most distinctive destinations in the entire Aegean"
+            />
+
+            <motion.div {...fadeUp} className="mt-9 border-l-2 border-amber-400 pl-5">
+              <p className="text-xl font-semibold leading-8 text-stone-800">
+                “Where nature, sea and tradition come together.”
+              </p>
+            </motion.div>
+          </div>
+
+          <motion.div
+              {...fadeUp}
+              className="grid gap-4 sm:grid-cols-[1.15fr_0.85fr]"
+          >
+            <div className="relative h-[380px] sm:min-h-[560px] overflow-hidden rounded-[2.25rem]">
+              <Image
+                  src="/sigri/sigri-village.jpg"
+                  alt="Skala Kallonis"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 45vw"
+                  className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent" />
+              <div className="absolute bottom-0 p-7 text-white sm:p-8">
+                <p className="text-xs font-bold uppercase tracking-[0.24em] text-amber-300">
+                  Golden coast
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </section>
+
+        {/* HIGHLIGHTS */}
+        <section id="highlights" className="bg-stone-950 py-20 text-white sm:py-24">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <SectionHeading
+                eyebrow="Beach highlights"
+                title="Everything you need for a beautiful summer day"
+                description="Natural beauty, comfort and calm come together along one spectacular coastline."
+                centered
+                light
+            />
+
+            <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+              {highlights.map((item, index) => (
+                  <motion.article
+                      key={item.title}
+                      {...fadeUp}
+                      transition={{ ...fadeUp.transition, delay: index * 0.06 }}
+                      className="group rounded-[2rem] border border-white/10 bg-white/[0.055] p-6 transition duration-300 hover:-translate-y-1 hover:border-amber-300/30 hover:bg-white/[0.08]"
+                  >
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-300 text-stone-950">
+                      <item.icon className="h-6 w-6" />
+                    </div>
+
+                    <div className="mt-9 flex items-center justify-between">
+                  <span className="text-xs font-bold text-white/30">
+                    0{index + 1}
+                  </span>
+                      <span className="h-px w-10 bg-white/10" />
+                    </div>
+
+                    <h3 className="mt-4 text-xl font-bold">{item.title}</h3>
+                    <p className="mt-3 text-sm leading-6 text-white/55">{item.text}</p>
+                  </motion.article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* GUIDE CARDS */}
+        <section className="py-20 sm:py-24">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <SectionHeading
+                eyebrow="Local guide"
+                title="Stay, taste and explore"
+                description="Turn a beach visit into a fuller experience of southern Lesvos."
+                centered
+            />
+
+            <div className="mt-12 grid gap-6 lg:grid-cols-3">
+              {guideCards.map((card, index) => (
+                  <motion.article
+                      key={card.title}
+                      {...fadeUp}
+                      transition={{ ...fadeUp.transition, delay: index * 0.08 }}
+                      className="group overflow-hidden rounded-[2.25rem] border border-stone-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-2xl"
+                  >
+                    <div className="relative h-72 overflow-hidden">
+                      <Image
+                          src={card.image}
+                          alt={card.title}
+                          fill
+                          sizes="(max-width: 1024px) 100vw, 33vw"
+                          className="object-cover transition duration-700 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/5 to-transparent" />
+
+                      <div className="absolute bottom-0 p-6 text-white">
+                        <p className="text-xs font-bold uppercase tracking-[0.24em] text-amber-300">
+                          {card.eyebrow}
+                        </p>
+                        <h3 className="mt-2 text-3xl font-black">{card.title}</h3>
+                      </div>
+                    </div>
+
+                    <div className="p-6">
+                      <p className="text-sm leading-7 text-stone-600">
+                        {card.description}
+                      </p>
+
+                      <Link
+                          href={card.href}
+                          className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-stone-950 transition group-hover:text-amber-600"
+                      >
+                        Explore
+                        <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
+                      </Link>
+                    </div>
+                  </motion.article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* MAP */}
+        <section id="map" className="border-y border-stone-200 bg-white py-20 sm:py-24">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
+              <motion.div
+                  {...fadeUp}
+                  className="rounded-[2.25rem] bg-[#17201c] p-6 text-white shadow-[0_30px_80px_rgba(28,25,23,0.18)] sm:p-8"
+              >
+                <p className="text-xs font-bold uppercase tracking-[0.24em] text-amber-300">
+                  Plan your visit
+                </p>
+                <h2 className="mt-4 text-4xl font-black tracking-[-0.045em]">
+                  Useful information
+                </h2>
+
+                <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
+                  {practicalInfo.map((item) => (
+                      <div
+                          key={item.label}
+                          className="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.055] p-4"
+                      >
+                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-300 text-stone-950">
+                          <item.icon className="h-5 w-5" />
+                        </div>
+                        <div>
+                          <p className="text-xs font-semibold uppercase tracking-wider text-white/40">
+                            {item.label}
+                          </p>
+                          <div className="mt-2 space-y-1">
+                            {item.values.map((value) => (
+                                <p
+                                    key={value}
+                                    className="text-sm leading-6 text-white/90"
+                                >
+                                  {value}
+                                </p>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                  ))}
+                </div>
+
+                <a
+                    href="https://maps.app.goo.gl/9GhvnMHYDEWbsAdT8"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-5 py-3.5 text-sm font-bold text-stone-950 transition hover:bg-amber-300"
+                >
+                  <Navigation className="h-4 w-4" />
+                  Open directions
+                </a>
+              </motion.div>
+
+              <motion.div
+                  {...fadeUp}
+                  className="overflow-hidden rounded-[2.25rem] border border-stone-200 bg-white shadow-[0_30px_80px_rgba(28,25,23,0.14)]"
+              >
+                <div className="flex flex-col gap-3 border-b border-stone-200 p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6">
+                  <div>
+                    <p className="text-xs font-bold uppercase tracking-[0.22em] text-amber-600">
+                      Location
+                    </p>
+                    <h3 className="mt-1 text-2xl font-black text-stone-950">
+                      Skala Kallonis, Lesvos
+                    </h3>
+                  </div>
+
+                  <span className="inline-flex w-fit items-center gap-2 rounded-full bg-stone-100 px-4 py-2 text-xs font-semibold text-stone-600">
+                  <MapPin className="h-4 w-4 text-amber-600" />
+                  Western coast
+                </span>
+                </div>
+
+                <div className="h-[430px] sm:h-[540px]">
+                  <iframe
+                      title="Map of Skala Kallonis"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3268.712773926386!2d26.20976765!3d39.2067548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ba92612321ace7%3A0xa00bd2f74c26dd0!2sSkala%20Kallonis!5e1!3m2!1sen!2sgr!4v1781774874117!5m2!1sen!2sgr"
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      loading="lazy"
+                      referrerPolicy="no-referrer"
+                  />
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* NEARBY */}
+        <section className="bg-[#17201c] py-20 text-white sm:py-24">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+              <SectionHeading
+                  eyebrow="Nearby places"
+                  title="Continue exploring northern Lesvos"
+                  light
+              />
+
+              <p className="max-w-xl text-sm leading-7 text-white/55 sm:text-base">
+                Combine your beach day with local villages, traditional food and
+                quieter corners of the island.
               </p>
             </div>
 
-            <div className="rounded-2xl bg-white p-6 shadow-sm">
-              <h2 className="mb-4 text-2xl font-semibold">
-                What You’ll Find in Skala Kallonis
-              </h2>
-              <ul className="list-disc list-inside space-y-3 leading-relaxed text-gray-700">
-                <li>
-                  Traditional taverns and restaurants serving fresh fish,
-                  including the famous Kalloni sardines
-                </li>
-                <li>
-                  Seafront cafés and beach bars perfect for unwinding by the
-                  water
-                </li>
-                <li>
-                  A range of accommodation options, from hotels to rooms for
-                  rent, along with essential tourist facilities
-                </li>
-                <li>
-                  A pleasant seaside promenade, ideal for leisurely walks and
-                  quiet moments by the sea
-                </li>
-              </ul>
-            </div>
+            <div className="mt-10 grid gap-4 md:grid-cols-3">
+              {nearbyPlaces.map((item, index) => (
+                  <motion.div
+                      key={item.title}
+                      {...fadeUp}
+                      transition={{ ...fadeUp.transition, delay: index * 0.07 }}
+                  >
+                    <Link
+                        href={item.href}
+                        className="group block rounded-[2rem] border border-white/10 bg-white/[0.055] p-6 transition hover:-translate-y-1 hover:border-amber-300/30 hover:bg-white/[0.08]"
+                    >
+                      <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-300 text-stone-950">
+                        <item.icon className="h-6 w-6" />
+                      </div>
 
-            <div className="rounded-2xl bg-white p-6 shadow-sm">
-              <h2 className="mb-4 text-2xl font-semibold">Ideal For</h2>
-              <ul className="list-disc list-inside space-y-3 leading-relaxed text-gray-700">
-                <li>
-                  Families with children, thanks to its calm waters, safe
-                  beaches, and laid-back environment
-                </li>
-                <li>
-                  Relaxed swimming and sunbathing, with plenty of space to
-                  unwind by the sea at your own pace
-                </li>
-                <li>
-                  Quiet moments away from noise, offering a peaceful atmosphere
-                  ideal for rest and disconnection
-                </li>
-              </ul>
-            </div>
+                      <h3 className="mt-8 text-2xl font-bold transition group-hover:text-amber-300">
+                        {item.title}
+                      </h3>
 
-            {/* WHERE TO STAY */}
-            <div className="overflow-hidden rounded-2xl bg-white shadow-sm">
-              <div className="grid grid-cols-2 gap-1">
-                <img
-                  src="/skala-kallonis.jpeg"
-                  alt="Skala Kallonis stay"
-                  className="h-44 w-full object-cover"
-                />
-                <img
-                  src="/skala-kallonis.jpeg"
-                  alt="Accommodation in Skala Kallonis"
-                  className="h-44 w-full object-cover"
-                />
-              </div>
+                      <p className="mt-3 text-sm leading-6 text-white/55">{item.text}</p>
 
-              <div className="p-6">
-                <h3 className="mb-3 text-xl font-semibold">Where to stay</h3>
-
-                <p className="mb-3 leading-relaxed text-gray-700">
-                  A great option in Skala Kalloni is{" "}
-                  <a href="X" className="font-medium text-blue-600 hover:underline">
-                    Hotel Name
-                  </a>
-                  , ideally located in the heart of the village, just a short
-                  walk from the beach, the promenade, and local taverns.
-                </p>
-
-                <p className="text-sm leading-relaxed text-gray-600">
-                  Perfect for travelers looking for a relaxed and authentic
-                  island experience with easy access to the rest of Lesvos.
-                </p>
-              </div>
+                      <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-amber-300">
+                        Explore
+                        <ChevronRight className="h-4 w-4 transition group-hover:translate-x-1" />
+                      </div>
+                    </Link>
+                  </motion.div>
+              ))}
             </div>
           </div>
+        </section>
 
-          {/* SIDEBAR */}
-          <aside className="space-y-6 lg:sticky lg:top-24 lg:self-start">
-            {/* MAP */}
-            <div className="overflow-hidden rounded-2xl bg-white shadow-sm">
-              <div className="border-b border-neutral-200 px-5 py-4">
-                <h3 className="font-semibold">Location</h3>
-              </div>
-              <div className="h-64 w-full">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3268.7127752453366!2d26.207192726145344!3d39.20675477165979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ba92612321ace7%3A0xa00bd2f74c26dd0!2sSkala%20Kallonis!5e1!3m2!1sen!2sgr!4v1776511137373!5m2!1sen!2sgr"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                />
-              </div>
-            </div>
+        {/* CTA */}
+        <section className="relative overflow-hidden py-28 sm:py-36">
+          <Image
+              src="/sigri/sigri-hero.jpg"
+              alt="Skala Kallonis"
+              fill
+              sizes="100vw"
+              className="object-cover"
+          />
+          <div className="absolute inset-0 bg-stone-950/82" />
+          <div className="absolute inset-0 bg-gradient-to-r from-stone-950/75 via-transparent to-stone-950/35" />
 
-            {/* QUICK INFO */}
-            <div className="rounded-2xl bg-white p-5 shadow-sm">
-              <h3 className="mb-3 font-semibold">Quick Info</h3>
-              <ul className="space-y-2 text-sm text-gray-700">
-                <li>📍 Kalloni Bay, central Lesvos</li>
-                <li>🏖 Calm beach and relaxed atmosphere</li>
-                <li>🍽 Great seafood and local taverns</li>
-                <li>🚗 Convenient base for exploring the island</li>
-              </ul>
-            </div>
+          <motion.div
+              {...fadeUp}
+              className="relative z-10 mx-auto max-w-4xl px-4 text-center text-white sm:px-6"
+          >
+            <p className="text-xs font-bold uppercase tracking-[0.3em] text-amber-300">
+              Discover Lesvos
+            </p>
 
-            {/* TIPS */}
-            <div className="rounded-2xl bg-white p-5 shadow-sm">
-              <h3 className="mb-3 font-semibold">Tips</h3>
-              <ul className="space-y-2 text-sm text-gray-700">
-                <li>☀️ Ideal for slow mornings and sunset walks</li>
-                <li>🍽 Try local sardines from Kalloni</li>
-                <li>🚘 Great starting point for road trips around Lesvos</li>
-              </ul>
-            </div>
+            <h2 className="mt-5 text-5xl font-black leading-[0.95] tracking-[-0.055em] sm:text-6xl lg:text-7xl">
+              Find your next island escape
+            </h2>
 
-            {/* NEARBY */}
-            <div className="rounded-2xl bg-white p-5 shadow-sm">
-              <h3 className="mb-3 font-semibold">Nearby Places</h3>
-              <ul className="space-y-2 text-sm text-gray-700">
-                <li>Kalloni</li>
-                <li>Skala Eresou</li>
-                <li>Agia Paraskevi</li>
-                <li>Sigri</li>
-              </ul>
-            </div>
-          </aside>
-        </div>
-      </section>
-    </main>
+            <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-white/65 sm:text-lg">
+              Explore beaches, villages, local flavours and memorable experiences
+              across the island.
+            </p>
+
+            <Link
+                href="/planner"
+                className="mt-9 inline-flex items-center gap-2 rounded-full bg-amber-400 px-7 py-4 text-sm font-bold text-stone-950 transition hover:-translate-y-0.5 hover:bg-amber-300"
+            >
+              View more
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </motion.div>
+        </section>
+      </main>
   );
 }

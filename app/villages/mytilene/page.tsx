@@ -19,129 +19,134 @@ import {
   Star,
   Home,
   UtensilsCrossed,
-  Landmark,
-  Camera
 } from "lucide-react";
 
-
 const quickFacts = [
-  { value: "Central Lesvos", label: "Location" },
-  { value: "~2,500 residents", label: "Population" },
-  { value: "Architecture & olive-oil heritage", label: "Famous for" },
-  { value: "~40 km / 45–50 minutes", label: "From Mytilene" },
-  { value: "Culture, history & local life", label: "Best for" },
+  { value: "Eastern Lesvos", label: "Location" },
+  { value: "Island Capital", label: "Character" },
+  { value: "Mytilene Castle", label: "Landmark" },
+  { value: "Culture & History", label: "Known For" },
+  { value: "Main Port", label: "Transport Hub" },
 ];
 
 const highlights = [
   {
+    icon: Landmark,
+    title: "Mytilene Castle",
+    text: "One of the largest castles in the Mediterranean, offering spectacular views and centuries of history.",
+  },
+  {
+    icon: Church,
+    title: "Historic Churches",
+    text: "Discover impressive churches, monasteries and religious monuments throughout the city.",
+  },
+  {
     icon: Home,
-    title: "Traditional Architecture",
-    text: "Agia Paraskevi is known for its impressive mansions, neoclassical buildings, traditional houses and picturesque village streets.",
+    title: "Neoclassical Architecture",
+    text: "Elegant mansions and historic buildings reflect Mytilene's rich cultural heritage.",
   },
   {
-    icon: Landmark,
-    title: "Olive-Oil Heritage",
-    text: "The village's restored community olive press now houses the Museum of Industrial Olive-Oil Production of Lesvos.",
+    icon: Waves,
+    title: "Seafront Promenade",
+    text: "Enjoy cafés, restaurants and beautiful views along the city's waterfront.",
   },
   {
-    icon: Landmark,
-    title: "Ancient Archaeological Sites",
-    text: "Nearby attractions include the ancient Sanctuary of Mesa and the remarkable Aeolian temple ruins at Klopedi.",
+    icon: UtensilsCrossed,
+    title: "Local Gastronomy",
+    text: "Taste fresh seafood, traditional meze and some of the finest ouzo in Greece.",
   },
   {
-    icon: Sun,
-    title: "Lively Village Square",
-    text: "Traditional cafés, local shops and tavernas create a welcoming atmosphere and an authentic taste of everyday life on Lesvos.",
+    icon: Compass,
+    title: "Museums & Culture",
+    text: "Explore archaeological collections, art exhibitions and the island's cultural history.",
+  },
+  {
+    icon: Star,
+    title: "Gateway to Lesvos",
+    text: "The ideal starting point for exploring villages, beaches and attractions across the island.",
   },
 ];
 
 const practicalInfo = [
   {
+    icon: MapPin,
+    label: "Location",
+    value: "Eastern Lesvos",
+  },
+  {
+    icon: Navigation,
+    label: "Airport",
+    value: "10 km away",
+  },
+  {
     icon: Clock3,
-    label: "Best Time to Visit",
-    value:
-      "☀️ May–October: Pleasant weather for exploring the village and nearby attractions. 🎉 Late June and early July are especially lively during the traditional Bull Festival.",
+    label: "Best Season",
+    value: "April – October",
+  },
+  {
+    icon: Home,
+    label: "Character",
+    value: "Island Capital",
+  },
+  {
+    icon: Landmark,
+    label: "Main Attraction",
+    value: "Mytilene Castle",
   },
   {
     icon: Car,
-    label: "Transport",
-    value:
-      "Agia Paraskevi is around 45–50 minutes from Mytilene by car. Renting a car is recommended for visiting nearby archaeological sites and villages.",
-  },
-  {
-    icon: Star,
-    label: "Local Specialties",
-    value:
-      "Local olive oil, Ladotyri cheese, traditional meat dishes, fresh vegetables, homemade sweets, mezedes and Lesvos ouzo.",
-  },
-  {
-    icon: Star,
-    label: "Local Tip",
-    value:
-      "Take time to explore the side streets, admire the old mansions and enjoy a coffee in the village square among local residents.",
-  },
-  {
-    icon: Star,
-    label: "Stay Longer",
-    value:
-      "Agia Paraskevi is a convenient base for exploring central Lesvos, the Gulf of Kalloni, ancient monuments and traditional inland villages.",
+    label: "Access",
+    value: "Airport, port, bus",
   },
 ];
-
 const guideCards = [
   {
     eyebrow: "Stay",
-    title: "Traditional village accommodation",
+    title: "City hotels & boutique stays",
     image: "/hotel-placeholder.jpg",
     description:
-      "Experience the peaceful rhythm of village life while staying close to the cultural and natural attractions of central Lesvos.",
+        "Choose from elegant hotels, boutique accommodation and seafront stays in the heart of the city.",
     href: "/stay",
   },
   {
     eyebrow: "Taste",
-    title: "Local cafés and tavernas",
+    title: "Local food & ouzo",
     image: "/restaurant-placeholder.jpg",
     description:
-      "Enjoy traditional Lesvos dishes, local olive oil, mezedes and coffee in the lively village centre.",
+        "Discover traditional tavernas, seafood restaurants and the flavours that define Lesvos.",
     href: "/food",
   },
   {
     eyebrow: "Explore",
-    title: "History and heritage",
+    title: "Museums & landmarks",
     image: "/attractions-placeholder.jpg",
     description:
-      "Discover ancient temples, olive-oil history, traditional architecture and the landscapes surrounding Kalloni Bay.",
+        "Visit castles, museums, churches and historic neighbourhoods that tell the story of the island.",
     href: "/explore",
   },
 ];
 
+
 const nearbyPlaces = [
   {
-    title: "Museum of Industrial Olive-Oil Production",
-    text: "A restored historic olive press presenting the traditional and industrial development of olive-oil production on Lesvos.",
-    href: "/attractions/olive-oil-museum-agia-paraskevi",
-    icon: Landmark,
+    title: "Thermi",
+    text: "Historic village known for its monasteries and thermal springs.",
+    href: "/villages/thermi",
+    icon: Compass,
   },
   {
-    title: "Sanctuary of Mesa (10–15 min)",
-    text: "An important ancient sanctuary dedicated to Zeus, Hera and Dionysus, set within the peaceful landscape of central Lesvos.",
-    href: "/attractions/sanctuary-of-mesa",
-    icon: Landmark,
-  },
-  {
-    title: "Kalloni (15–20 min)",
-    text: "A lively central town near the Gulf of Kalloni, offering shops, cafés, restaurants and access to nearby wetlands.",
-    href: "/destinations/kalloni",
+    title: "Agiasos",
+    text: "Traditional mountain village famous for its church and local crafts.",
+    href: "/villages/agiasos",
     icon: Home,
   },
   {
-    title: "Klopedi Temple (10–15 min)",
-    text: "An archaeological site featuring the remains of a rare ancient Aeolian-style temple surrounded by olive groves.",
-    href: "/attractions/klopedi-temple",
-    icon: Landmark,
+    title: "Plomari",
+    text: "The birthplace of ouzo and one of the island's most picturesque coastal towns.",
+    href: "/villages/plomari",
+    icon: Waves,
   },
 ];
-
 
 const fadeUp = {
   initial: { opacity: 0, y: 28 },
@@ -196,14 +201,14 @@ function SectionHeading({
   );
 }
 
-export default function ParaskeviPage() {
+export default function PetraPage() {
   return (
       <main className="overflow-hidden bg-[#f6f1e8] text-stone-950">
         {/* HERO */}
         <section className="relative min-h-[100svh] overflow-hidden bg-stone-950">
           <Image
               src="/petra.jpg"
-              alt="Petra in Lesvos"
+              alt="Mytilene in Lesvos"
               fill
               priority
               sizes="100vw"
@@ -224,15 +229,15 @@ export default function ParaskeviPage() {
               >
                 <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.24em] text-white/85 backdrop-blur-xl sm:text-xs">
                   <MapPin className="h-4 w-4 text-amber-300" />
-                  Central Lesvos · Greece
+                  Eastern Lesvos · Greece
                 </div>
 
                 <h1 className="mt-6 text-5xl font-black leading-[0.9] tracking-[-0.05em] sm:text-7xl lg:text-[9rem]">
-                  Agia Paraskevi
+                  Mytilene
                 </h1>
 
                 <p className="mt-8 max-w-2xl text-base leading-7 text-white/68 sm:text-lg sm:leading-8 md:text-xl">
-                  Agia Paraskevi is a charming traditional village known for its elegant architecture, olive-oil heritage, lively square, and nearby ancient sites.
+                  Mytilene is the vibrant capital of Lesvos, where history, culture and island life come together. From its imposing medieval castle and elegant neoclassical architecture to its lively waterfront and rich culinary scene, the city offers an authentic introduction to the island.
                 </p>
 
                 <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
@@ -240,7 +245,7 @@ export default function ParaskeviPage() {
                       href="#discover"
                       className="inline-flex items-center justify-center gap-2 rounded-full bg-amber-400 px-6 py-4 text-sm font-bold text-stone-950 shadow-[0_18px_55px_rgba(251,191,36,0.3)] transition hover:-translate-y-0.5 hover:bg-amber-300"
                   >
-                    Discover Agia Paraskevi
+                    Discover Mytilene
                     <ArrowDown className="h-4 w-4" />
                   </a>
 
@@ -278,14 +283,14 @@ export default function ParaskeviPage() {
         >
           <div>
             <SectionHeading
-                eyebrow="Why Eresos"
-                title="Tradition and Heritage in Central Lesvos"
-                description="Visit Agia Paraskevi for its authentic atmosphere, beautiful old houses, local cafés, cultural landmarks, and rich olive-growing history."
+                eyebrow="Why visit Mytilene"
+                title="The cultural and historic heart of Lesvos"
+                description="As the island's capital, Mytilene blends centuries of history with modern island life. Explore medieval landmarks, bustling waterfront cafés, museums and traditional neighbourhoods that showcase the rich heritage of Lesvos."
             />
 
             <motion.div {...fadeUp} className="mt-9 border-l-2 border-amber-400 pl-5">
               <p className="text-xl font-semibold leading-8 text-stone-800">
-                “Where history, tradition, and village life come together”
+                “Where the story of Lesvos begins.”
               </p>
             </motion.div>
           </div>
@@ -297,7 +302,7 @@ export default function ParaskeviPage() {
             <div className="relative h-[380px] sm:min-h-[560px] overflow-hidden rounded-[2.25rem]">
               <Image
                   src="/petra.jpg"
-                  alt="Petra"
+                  alt="Mytilene"
                   fill
                   sizes="(max-width: 1024px) 100vw, 45vw"
                   className="object-cover"
@@ -305,8 +310,11 @@ export default function ParaskeviPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent" />
               <div className="absolute bottom-0 p-7 text-white sm:p-8">
                 <p className="text-xs font-bold uppercase tracking-[0.24em] text-amber-300">
-                  Tranditional Village
+                  The city
                 </p>
+                <h3 className="mt-3 text-4xl font-black tracking-tight">
+                  Room to slow down
+                </h3>
               </div>
             </div>
           </motion.div>
@@ -316,9 +324,9 @@ export default function ParaskeviPage() {
         <section id="highlights" className="bg-stone-950 py-20 text-white sm:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionHeading
-                eyebrow="Beach highlights"
-                title="Everything you need for a beautiful summer day"
-                description="Natural beauty, comfort and calm come together along one spectacular coastline."
+                eyebrow="City highlights"
+                title="History, culture and island life"
+                description="From medieval fortresses to vibrant waterfront streets, Mytilene offers something for every traveller."
                 centered
                 light
             />
@@ -356,7 +364,7 @@ export default function ParaskeviPage() {
             <SectionHeading
                 eyebrow="Local guide"
                 title="Stay, taste and explore"
-                description="Turn a beach visit into a fuller experience of southern Lesvos."
+                description="Experience the cultural, historical and culinary highlights of Lesvos from its vibrant capital."
                 centered
             />
 
@@ -431,16 +439,16 @@ export default function ParaskeviPage() {
                         </div>
                         <div>
                           <p className="text-xs font-semibold uppercase tracking-wider text-white/40">
-                            {item.title}
+                            {item.label}
                           </p>
-                          <p className="mt-1 font-semibold text-white">{item.label}</p>
+                          <p className="mt-1 font-semibold text-white">{item.value}</p>
                         </div>
                       </div>
                   ))}
                 </div>
 
                 <a
-                    href="https://maps.app.goo.gl/ncphvAn2sRNB2ymJ7"
+                    href="https://maps.app.goo.gl/tyHMY1Gk6RHcjDiu6"
                     target="_blank"
                     rel="noreferrer"
                     className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-5 py-3.5 text-sm font-bold text-stone-950 transition hover:bg-amber-300"
@@ -460,20 +468,20 @@ export default function ParaskeviPage() {
                       Location
                     </p>
                     <h3 className="mt-1 text-2xl font-black text-stone-950">
-                      Eresos, Lesvos
+                      Mytilene, Lesvos
                     </h3>
                   </div>
 
                   <span className="inline-flex w-fit items-center gap-2 rounded-full bg-stone-100 px-4 py-2 text-xs font-semibold text-stone-600">
                   <MapPin className="h-4 w-4 text-amber-600" />
-                  Central Village
+                  Eastern Lesvos
                 </span>
                 </div>
 
                 <div className="h-[430px] sm:h-[540px]">
                   <iframe
-                      title="Map of Agia Paraskevi"
-                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20139.67574451829!2d26.256331630735414!3d39.24596915851728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ba8e5de3945e17%3A0x60972a5bc9902686!2zzpHOsy4gzqDOsc-BzrHPg866zrXPhc6uIDgxMSAwMg!5e1!3m2!1sel!2sgr!4v1781715811099!5m2!1sel!2sgr"
+                      title="Map of Mytilene"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26189.597213951707!2d26.55665285!3d39.09947885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ba67737b10d11d%3A0x1140413fae6f7183!2sMitilini%20811%2000!5e1!3m2!1sen!2sgr!4v1781775885140!5m2!1sen!2sgr"
                       width="100%"
                       height="100%"
                       style={{ border: 0 }}
@@ -492,7 +500,7 @@ export default function ParaskeviPage() {
             <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
               <SectionHeading
                   eyebrow="Nearby places"
-                  title="Continue exploring northern Lesvos"
+                  title="Continue exploring eastern Lesvos"
                   light
               />
 
@@ -521,7 +529,7 @@ export default function ParaskeviPage() {
                         {item.title}
                       </h3>
 
-                      <p className="mt-3 text-sm leading-6 text-white/55">{item.description}</p>
+                      <p className="mt-3 text-sm leading-6 text-white/55">{item.text}</p>
 
                       <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-amber-300">
                         Explore
@@ -538,7 +546,7 @@ export default function ParaskeviPage() {
         <section className="relative overflow-hidden py-28 sm:py-36">
           <Image
               src="/petra.jpg"
-              alt="petra"
+              alt="mytilene"
               fill
               sizes="100vw"
               className="object-cover"

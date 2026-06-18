@@ -1,9 +1,9 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Χωριά της Λέσβου | Lesvos Travel Guide",
+  title: "Villages of Lesvos | Lesvos Travel Guide",
   description:
-    "Ανακαλύψτε τα πιο όμορφα και γραφικά χωριά της Λέσβου, με παράδοση, ιστορία και αυθεντική ατμόσφαιρα.",
+    "Explore the most charming villages of Lesvos, each offering a unique blend of history, local traditions, stunning landscapes, and authentic Greek island life..",
 };
 
 const villages = [
@@ -35,7 +35,7 @@ const villages = [
     name: "Plomari",
     description: "",
     image: "/placeholder.jpg",
-    href: "/villages/ploamari",
+    href: "/villages/plomari",
   },
   {
     name: "Eresos",
@@ -44,10 +44,10 @@ const villages = [
     href: "/villages/eresos",
   },
   {
-    name: "Eresos",
+    name: "Lepetymnos",
     description: "",
     image: "/placeholder.jpg",
-    href: "/villages/eresos",
+    href: "/villages/lepetymnos",
   },
   {
     name: "Agiasos",
@@ -73,6 +73,24 @@ const villages = [
     image: "/placeholder.jpg",
     href: "/villages/mantamados",
  },
+  {
+    name: "Skala Kallonis",
+    description: "",
+    image: "/placeholder.jpg",
+    href: "/villages/skala-kallonis",
+  },
+  {
+    name: "Vatoussa",
+    description: "",
+    image: "/placeholder.jpg",
+    href: "/villages/vatoussa",
+  },
+  {
+    name: "Mytilene",
+    description: "",
+    image: "/placeholder.jpg",
+    href: "/villages/mytilene",
+  }
 ];
 
 export default function VillagesPage() {
@@ -85,10 +103,10 @@ export default function VillagesPage() {
         <div className="relative z-10 h-full flex items-end">
           <div className="max-w-6xl mx-auto px-6 pb-12">
             <h1 className="text-4xl md:text-5xl font-bold text-white">
-              Χωριά της Λέσβου
+             Villages of Lesvos
             </h1>
             <p className="text-gray-200 mt-2 max-w-xl">
-              Παραδοσιακοί οικισμοί, ιστορία και αυθεντική νησιωτική ζωή
+              Traditional settlements, history and authentic island life
             </p>
           </div>
         </div>
