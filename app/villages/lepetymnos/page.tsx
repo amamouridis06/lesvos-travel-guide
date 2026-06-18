@@ -526,7 +526,7 @@ export default function ParaskeviPage() {
                         {item.title}
                       </h3>
 
-                      <p className="mt-3 text-sm leading-6 text-white/55">{item.description}</p>
+                      <p className="mt-3 text-sm leading-6 text-white/55">{item.text}</p>
 
                       <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-amber-300">
                         Explore

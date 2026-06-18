@@ -118,25 +118,25 @@ const guideCards = [
 const nearbyPlaces = [
   {
     title: "Museum of Industrial Olive-Oil Production",
-    text: "A restored historic olive press presenting the traditional and industrial development of olive-oil production on Lesvos.",
+    description: "A restored historic olive press presenting the traditional and industrial development of olive-oil production on Lesvos.",
     href: "/attractions/olive-oil-museum-agia-paraskevi",
     icon: Landmark,
   },
   {
     title: "Sanctuary of Mesa (10–15 min)",
-    text: "An important ancient sanctuary dedicated to Zeus, Hera and Dionysus, set within the peaceful landscape of central Lesvos.",
+    description: "An important ancient sanctuary dedicated to Zeus, Hera and Dionysus, set within the peaceful landscape of central Lesvos.",
     href: "/attractions/sanctuary-of-mesa",
     icon: Landmark,
   },
   {
     title: "Kalloni (15–20 min)",
-    text: "A lively central town near the Gulf of Kalloni, offering shops, cafés, restaurants and access to nearby wetlands.",
+    description: "A lively central town near the Gulf of Kalloni, offering shops, cafés, restaurants and access to nearby wetlands.",
     href: "/destinations/kalloni",
     icon: Home,
   },
   {
     title: "Klopedi Temple (10–15 min)",
-    text: "An archaeological site featuring the remains of a rare ancient Aeolian-style temple surrounded by olive groves.",
+    description: "An archaeological site featuring the remains of a rare ancient Aeolian-style temple surrounded by olive groves.",
     href: "/attractions/klopedi-temple",
     icon: Landmark,
   },
