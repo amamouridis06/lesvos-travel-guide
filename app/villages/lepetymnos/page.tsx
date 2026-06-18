@@ -20,7 +20,8 @@ import {
   Home,
   UtensilsCrossed,
   Landmark,
-  Camera
+  Camera,
+  TreePine,
 } from "lucide-react";
 
 
