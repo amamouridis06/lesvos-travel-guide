@@ -431,9 +431,9 @@ export default function ParaskeviPage() {
                         </div>
                         <div>
                           <p className="text-xs font-semibold uppercase tracking-wider text-white/40">
-                            {item.title}
+                            {item.label}
                           </p>
-                          <p className="mt-1 font-semibold text-white">{item.label}</p>
+                          <p className="mt-1 font-semibold text-white">{item.value}</p>
                         </div>
                       </div>
                   ))}
