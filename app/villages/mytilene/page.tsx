@@ -18,6 +18,7 @@ import {
   Waves,
   Star,
   Home,
+  Landmark,
   UtensilsCrossed,
 } from "lucide-react";
 
