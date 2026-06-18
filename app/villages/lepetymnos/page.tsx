@@ -12,15 +12,12 @@ import {
   Compass,
   MapPin,
   Navigation,
-  Sparkles,
   Sun,
-  Church,
   Waves,
   Star,
   Home,
   UtensilsCrossed,
   Landmark,
-  Camera,
   TreePine,
 } from "lucide-react";
 
@@ -430,16 +427,29 @@ export default function ParaskeviPage() {
                   {practicalInfo.map((item) => (
                       <div
                           key={item.label}
-                          className="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.055] p-4"
+                          className="rounded-2xl border border-white/10 bg-white/[0.055] p-4"
                       >
-                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-300 text-stone-950">
-                          <item.icon className="h-5 w-5" />
-                        </div>
-                        <div>
-                          <p className="text-xs font-semibold uppercase tracking-wider text-white/40">
-                            {item.title}
-                          </p>
-                          <p className="mt-1 font-semibold text-white">{item.label}</p>
+                        <div className="flex items-start gap-4">
+                          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-300 text-stone-950">
+                            <item.icon className="h-5 w-5" />
+                          </div>
+
+                          <div className="flex-1">
+                            <p className="text-xs font-semibold uppercase tracking-wider text-white/40">
+                              {item.label}
+                            </p>
+
+                            <div className="mt-2 space-y-1">
+                              {item.values.map((value) => (
+                                  <p
+                                      key={value}
+                                      className="text-sm leading-6 text-white/90"
+                                  >
+                                    {value}
+                                  </p>
+                              ))}
+                            </div>
+                          </div>
                         </div>
                       </div>
                   ))}
