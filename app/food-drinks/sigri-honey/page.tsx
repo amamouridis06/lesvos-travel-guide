@@ -49,7 +49,8 @@ character of Lesvos.`,
                                              email = "info@sigrihoney.gr",
                                              website = "www.sigrihoney.gr",
                                              address = "Sigri, Lesvos",
-                                             openingHours = "The summer schedule is 1/7 with 30/9, 10:00-15:00 and 17:00-20:00 all week. The rest of the months after communication ",
+                                             openingHours = "1/7–30/9: Daily 10:00–15:00 & 17:00–20:00.\n" +
+                                                 "Rest of the year: Hours upon communication.",
                                              mapUrl = "https://maps.app.goo.gl/S71ZoMUEiUuUUQHH8",
                                              accesibility = "There is also accessibility for people with mobility problems"
                                          }: HoneyGuideProps) {
@@ -108,9 +109,7 @@ character of Lesvos.`,
                                     type="button"
                                     onClick={() => setSelectedImage(image)}
                                     className={`overflow-hidden rounded-2xl border-4 transition ${
-                                        selectedImage === image
-                                            ? "border-amber-500"
-                                            : "border-transparent"
+                                        selectedImage === image ? "border-transparent" : "border-transparent"
                                     }`}
                                 >
                                     <img

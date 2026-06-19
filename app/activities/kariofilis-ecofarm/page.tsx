@@ -304,11 +304,11 @@ export default function FarmRestaurantGuidePage() {
                     <p>📞 +30 6979 458991</p>
                     <p>🌐 www.example.com</p>
                     <p>📩 giwrgos.kariofyllis@gmail.com</p>
-                    <p>🕒  He accepts visits, following an agreement</p>
+                    <p>🕒 He accepts visits, following an agreement</p>
                 </div>
 
                 <a
-                    href="+30 6979 458991"
+                    href="+30 6979458991"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-10 inline-block rounded-2xl bg-emerald-700 px-10 py-4 text-sm font-semibold text-white shadow-xl transition hover:scale-105"
