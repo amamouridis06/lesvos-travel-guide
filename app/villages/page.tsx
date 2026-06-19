@@ -18,6 +18,7 @@ const villages = [
   { name: "Skala Kallonis", description: "A peaceful fishing village by the bay, loved for sunsets, seafood and birdwatching.", image: "/placeholder.jpg", href: "/villages/skala-kallonis" },
   { name: "Vatoussa", description: "A preserved traditional settlement with elegant houses and a timeless village rhythm.", image: "/placeholder.jpg", href: "/villages/vatoussa" },
   { name: "Mytilene", description: "The lively capital of Lesvos, blending history, culture, markets and waterfront energy.", image: "/placeholder.jpg", href: "/villages/mytilene" },
+  { name: "Vafeios", description: "", image: "/placeholder.jpg", href: "/villages/vafeios" },
 ];
 
 export default function VillagesPage() {

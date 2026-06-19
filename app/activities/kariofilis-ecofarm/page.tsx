@@ -18,8 +18,7 @@ export default function FarmRestaurantGuidePage() {
                         </h1>
 
                         <p className="mx-auto max-w-2xl text-lg text-stone-200 md:text-xl">
-                            An authentic pharm-to-table experience where nature,
-                            local gastronomy and hospitality unite.
+                            An authentic experience with a lot of activities
                         </p>
 
                         <button className="mt-8 rounded-2xl bg-white px-8 py-4 text-sm font-semibold text-stone-900 shadow-xl transition hover:scale-105">
@@ -109,7 +108,7 @@ export default function FarmRestaurantGuidePage() {
                         <div className="rounded-3xl bg-stone-50 p-8 shadow-lg">
                             <div className="mb-5 overflow-hidden rounded-2xl">
                                 <img
-                                    src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200&auto=format&fit=crop"
+                                    src="/kariofyllis/kariofyllis5.jpeg"
                                     alt="Restaurant"
                                     className="h-56 w-full object-cover"
                                 />
