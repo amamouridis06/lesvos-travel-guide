@@ -138,8 +138,7 @@ export default function FarmRestaurantGuidePage() {
                             </h3>
 
                             <p className="leading-7 text-stone-600">
-                                Cooking classes, tastings, tours and unique
-                                experiences in nature.
+                                Tastings, tours and unique experiences in nature.
                             </p>
                         </div>
                     </div>
@@ -233,11 +232,6 @@ export default function FarmRestaurantGuidePage() {
                         </h2>
 
                         <div className="space-y-5 text-lg text-stone-600">
-                            <div className="flex items-start gap-4">
-                                <span className="mt-1 text-emerald-700">✓</span>
-                                <p>Authentic drug-to-table experience</p>
-                            </div>
-
                             <div className="flex items-start gap-4">
                                 <span className="mt-1 text-emerald-700">✓</span>
                                 <p>Local Mediterranean gastronomy</p>
