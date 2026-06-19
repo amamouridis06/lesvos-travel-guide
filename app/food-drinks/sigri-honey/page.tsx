@@ -24,7 +24,7 @@ export default function HoneyTravelGuide({
        producerName = "Beekeeper - Producer: Antonis Georgiou",
        location = "Sigri, Lesvos",
        shortDescription = "Pure thyme honey of small production from the mountains in Sigri.",
-        fullDescription = `«Honey in the Fossilized Forest » is a separate destination in
+        fullDescription = `«Honey in the Fossilized Forest» is a separate destination in
                             western Lesvos, in the picturesque Sigri, in the heart of the only Disinfected
 Forest. In our visit lab, visitors have the opportunity to
 get to know the bee world up close and the production process
@@ -94,7 +94,7 @@ character of Lesvos.`,
                             Their History
                         </h2>
 
-                        <div className="mt-5 whitespace-pre-line text-lg leading-8 text-stone-700">
+                        <div className="mt-5 whitespace-pre-line text-center text-lg leading-8 text-stone-700">
                             {fullDescription}
                         </div>
                     </section>
@@ -130,7 +130,7 @@ character of Lesvos.`,
                         <div className="mt-6 grid gap-4 sm:grid-cols-3">
                             <GuideFeature
                                 icon="🍯"
-                                title="Cressor"
+                                title="Crestor"
                                 description="Honey test."
                             />
 
@@ -152,7 +152,7 @@ character of Lesvos.`,
                 <aside>
                     <div className="sticky top-6 rounded-3xl bg-white p-7 shadow-xl">
                         <p className="text-sm font-bold uppercase tracking-widest text-amber-700">
-                            Visit informations
+                            Visit information
                         </p>
 
 
