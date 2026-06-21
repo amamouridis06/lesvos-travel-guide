@@ -30,7 +30,9 @@ import {
   Wind,
 } from "lucide-react";
 
-type IconType = React.ComponentType<React.SVGProps<SVGSVGElement>>;
+import type { LucideIcon } from "lucide-react";
+
+type IconType = LucideIcon;
 
 type FeatureCard = {
   icon: IconType;
