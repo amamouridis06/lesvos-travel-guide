@@ -135,7 +135,7 @@ const quickInfo: QuickInfoItem[] = [
     icon: Route,
     label: "Access",
     value: "Boat / Viewpoint",
-    detail: "Beach and viewpoint are separate",
+    detail: "Beach and viewpoint are separat",
   },
   {
     icon: Navigation,
