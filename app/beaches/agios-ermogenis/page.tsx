@@ -1,122 +1,185 @@
-import Image from "next/image";
-import Link from "next/link";
+"use client";
 
-export const metadata = {
-  title: "Παραλία Βατερά",
-  description:
-    "Η παραλία Βατερά στη Λέσβο: η μεγαλύτερη παραλία του νησιού, ιδανική για χαλάρωση, οικογένειες και καλό φαγητό δίπλα στη θάλασσα.",
+import { motion } from "framer-motion";
+import { MapPin, Waves, Sun, Car, Clock, Star } from "lucide-react";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 35 },
+  show: { opacity: 1, y: 0 },
 };
 
-export default function VateraPage() {
+export default function BeachGuidePage() {
   return (
-    <main className="bg-neutral-100 text-neutral-900">
+      <main className="min-h-screen bg-white overflow-hidden">
+        <section className="relative h-[70vh]">
+          <motion.img
+              src="/images/beaches/navagio.jpg"
+              alt="Beach"
+              className="absolute inset-0 h-full w-full object-cover"
+              initial={{ scale: 1.15 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 1.6, ease: "easeOut" }}
+          />
 
-      {/* HERO */}
-      <section className="relative h-[60vh] w-full">
-        <Image
-          src="/vatera.jpg"
-          alt="Παραλία Βατερά Λέσβος"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-black/45" />
 
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-center text-white px-6">
-          <h1 className="text-4xl md:text-5xl font-bold">
-            Beach of Vatera
-          </h1>
-          <p className="mt-2 text-lg text-gray-200">
-            The largest beach in Lesvos, perfect for relaxation and family holidays.
-          </p>
-        </div>
-      </section>
+          <motion.div
+              className="relative z-10 flex h-full items-end"
+              initial="hidden"
+              animate="show"
+              transition={{ staggerChildren: 0.15 }}
+          >
+            <div className="mx-auto max-w-7xl px-6 pb-16 text-white">
+              <motion.span
+                  variants={fadeUp}
+                  className="rounded-full bg-cyan-500 px-4 py-1 text-sm font-semibold"
+              >
+                Beach Guide
+              </motion.span>
 
-      {/* CONTENT */}
-      <section className="max-w-5xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-12">
+              <motion.h1
+                  variants={fadeUp}
+                  className="mt-4 text-5xl font-bold md:text-7xl"
+              >
+                Navagio Beach
+              </motion.h1>
 
-        {/* MAIN CONTENT */}
-        <div className="md:col-span-2 space-y-10">
+              <motion.div
+                  variants={fadeUp}
+                  className="mt-4 flex flex-wrap gap-6 text-lg"
+              >
+                <div className="flex items-center gap-2">
+                  <MapPin size={20} /> Zakynthos, Greece
+                </div>
 
-          {/* Overview */}
-          <div>
-            <h2 className="text-2xl font-semibold mb-3">Why you should go</h2>
-            <p className="text-gray-700 leading-relaxed">
-              Vatera is an extensive sandy beach in southern Lesvos, a ideal for relaxing holidays by the sea. The combination
-              floating beach, clean water and seaside taverns
-              makes it a favorite choice for families and couples.
-            </p>
-          </div>
+                <div className="flex items-center gap-2">
+                  <Star className="fill-yellow-400 text-yellow-400" size={20} />
+                  4.9/5
+                </div>
+              </motion.div>
+            </div>
+          </motion.div>
+        </section>
 
-          {/* Highlights */}
-          <div>
-            <h2 className="text-2xl font-semibold mb-3">Highlights</h2>
-            <ul className="list-disc pl-5 text-gray-700 space-y-2">
-              <li> Very large in length, ideal for walking </li>
-              <li> Dry waters – suitable for children </li>
-              <li> Taverns and coffee literally on the wave </li>
-              <li> Beautiful sunsets </li>
-            </ul>
-          </div>
+        <section className="mx-auto grid max-w-7xl gap-10 px-6 py-16 lg:grid-cols-3">
+          <motion.div
+              className="space-y-10 lg:col-span-2"
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ staggerChildren: 0.15 }}
+          >
+            <motion.div variants={fadeUp}>
+              <h2 className="mb-4 text-3xl font-bold">Overview</h2>
+              <p className="leading-8 text-gray-600">
+                Navagio Beach is one of Greece's most famous beaches, known for
+                its crystal-clear turquoise waters, dramatic white cliffs and the
+                iconic shipwreck resting on its shore.
+              </p>
+            </motion.div>
 
-          {/* Practical info */}
-          <div>
-            <h2 className="text-2xl font-semibold mb-3">Useful Informations</h2>
-            <ul className="text-gray-700 space-y-2">
-              <li> <strong> Type: </strong> Sandy </li>
-              <li> <strong> Organization: </strong> Umbrellas & sunbeds in places </li>
-              <li> <strong> Access: </strong> Easy by car </li>
-              <li> <strong> Ideal for: </strong> Families, relaxation </li>
-            </ul>
-          </div>
-        </div>
+            <motion.div variants={fadeUp}>
+              <h2 className="mb-5 text-3xl font-bold">Why Visit?</h2>
 
-        {/* SIDEBAR */}
-        <aside className="space-y-8">
+              <div className="grid gap-5 md:grid-cols-2">
+                {[
+                  "Crystal clear water",
+                  "Perfect for photography",
+                  "Unique shipwreck",
+                  "Boat tours available",
+                  "Amazing sunset views",
+                  "Snorkeling",
+                ].map((item, index) => (
+                    <motion.div
+                        key={item}
+                        className="rounded-xl border p-5 shadow-sm"
+                        initial={{ opacity: 0, y: 25 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        whileHover={{ y: -6, scale: 1.02 }}
+                        transition={{ delay: index * 0.08, duration: 0.45 }}
+                        viewport={{ once: true }}
+                    >
+                      ✅ {item}
+                    </motion.div>
+                ))}
+              </div>
+            </motion.div>
 
-          {/* Map */}
-          <div className="w-full h-48 rounded-lg overflow-hidden">
-            <iframe
-                src="https://www.google.com/maps/place/%CE%92%CE%B1%CF%84%CE%B5%CF%81%CE%AC+813+00,+%CE%95%CE%BB%CE%BB%CE%AC%CE%B4%CE%B1/@39.0205683,26.1787428,4538m/data=!3m2!1e3!4b1!4m6!3m5!1s0x14baef8e3ce47107:0xa00bd2f74c274e0!8m2!3d39.0195659!4d26.1978707!16zL20vMDJsOG43?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
+            <motion.div variants={fadeUp}>
+              <h2 className="mb-4 text-3xl font-bold">Gallery</h2>
 
+              <div className="grid gap-4 md:grid-cols-3">
+                {[1, 2, 3].map((i) => (
+                    <motion.img
+                        key={i}
+                        src={`/images/beaches/navagio-${i}.jpg`}
+                        className="h-56 w-full rounded-xl object-cover"
+                        whileHover={{ scale: 1.05 }}
+                        transition={{ duration: 0.35 }}
+                    />
+                ))}
+              </div>
+            </motion.div>
+          </motion.div>
 
-          {/* Nearby */}
-          <div className="bg-white rounded-xl shadow p-4">
-            <h3 className="font-semibold mb-3">Nearby Vatera</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                🏘{" "}
-                <Link href="/villages/plomari" className="text-blue-600 hover:underline">
-                  Plomari
-                </Link>
-              </li>
-              <li>🍽 Seafront taverns</li>
-              <li>🏖 Smaller quieter beaches in the area</li>
-            </ul>
-          </div>
-        </aside>
-      </section>
+          <motion.aside
+              className="space-y-6"
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+          >
+            <motion.div
+                className="rounded-2xl border p-6 shadow"
+                whileHover={{ y: -6 }}
+            >
+              <h3 className="mb-6 text-2xl font-bold">Quick Info</h3>
 
-      {/* CTA */}
-      <section className="bg-neutral-900 text-white py-16 text-center">
-        <h2 className="text-2xl font-semibold mb-4">
-          Δείτε κι άλλες παραλίες στη Λέσβο
-        </h2>
-        <Link
-          href="/beaches"
-          className="inline-block px-6 py-3 bg-yellow-600 text-black rounded-lg font-semibold hover:bg-yellow-500 transition"
-        >
-          Όλες οι παραλίες
-        </Link>
-      </section>
+              <div className="space-y-5">
+                {[
+                  [Clock, "Best Time", "May - September"],
+                  [Sun, "Water Temperature", "24°C - 27°C"],
+                  [Car, "Access", "Boat or viewpoint"],
+                  [Waves, "Sea", "Crystal Clear"],
+                ].map(([Icon, title, text]) => {
+                  const TypedIcon = Icon as typeof Clock;
 
-    </main>
+                  return (
+                      <div key={title as string} className="flex gap-3">
+                        <TypedIcon />
+                        <div>
+                          <p className="font-semibold">{title as string}</p>
+                          <p className="text-gray-500">{text as string}</p>
+                        </div>
+                      </div>
+                  );
+                })}
+              </div>
+
+              <motion.button
+                  className="mt-8 w-full rounded-xl bg-cyan-600 py-3 font-semibold text-white"
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.97 }}
+              >
+                View on Map
+              </motion.button>
+            </motion.div>
+
+            <motion.div
+                className="rounded-2xl bg-cyan-50 p-6"
+                whileHover={{ scale: 1.02 }}
+            >
+              <h3 className="text-xl font-bold">Travel Tips</h3>
+
+              <ul className="mt-4 space-y-3 text-gray-600">
+                <li>🌞 Visit before 10 AM to avoid crowds.</li>
+                <li>🛥️ Book boat tours in advance.</li>
+                <li>📸 Bring a drone where permitted.</li>
+                <li>💧 Carry enough water.</li>
+              </ul>
+            </motion.div>
+          </motion.aside>
+        </section>
+      </main>
   );
 }
