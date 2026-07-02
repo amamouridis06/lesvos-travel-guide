@@ -112,9 +112,9 @@ const container = {
 };
 
 const heroBadges = [
-  "Ionian Coast",
-  "Boat Access",
-  "Viewpoint",
+  "Lesvos Coast",
+  "Easy Access",
+  "Quiet Cove",
   "Crystal Waters",
 ];
 
@@ -122,203 +122,206 @@ const quickInfo: QuickInfoItem[] = [
   {
     icon: Clock,
     label: "Best time",
-    value: "May - September",
-    detail: "Early morning for fewer crowds",
+    value: "June - September",
+    detail: "Morning or late afternoon for softer light",
   },
   {
     icon: Sun,
     label: "Water temp",
-    value: "24°C - 27°C",
+    value: "23°C - 26°C",
     detail: "Warmest from July to September",
   },
   {
     icon: Route,
     label: "Access",
-    value: "Boat / Viewpoint",
-    detail: "Beach and viewpoint are separat",
+    value: "By car / Short walk",
+    detail: "Easy access from the local road",
   },
   {
     icon: Navigation,
     label: "Region",
-    value: "Zakynthos",
-    detail: "Ionian Islands, Greece",
+    value: "Lesvos",
+    detail: "Near Mytilene, Greece",
   },
 ];
 
 const features: FeatureCard[] = [
   {
     icon: Waves,
-    title: "Turquoise waters",
+    title: "Clear calm waters",
     description:
-        "Bright Ionian blue water with a dramatic contrast against white limestone cliffs.",
+        "A peaceful beach with clean blue water, ideal for swimming and relaxing.",
   },
   {
     icon: Camera,
-    title: "Iconic scenery",
+    title: "Natural scenery",
     description:
-        "One of the most recognizable coastal scenes in Greece, perfect for editorial travel photography.",
+        "A beautiful coastal setting with soft colors, rocks and a quiet local atmosphere.",
   },
   {
-    icon: Sailboat,
-    title: "Boat experience",
+    icon: Car,
+    title: "Easy access",
     description:
-        "The beach shoreline is reached by sea, making the arrival feel like part of the destination.",
-  },
-  {
-    icon: Mountain,
-    title: "Cliff viewpoint",
-    description:
-        "A separate panoramic viewpoint gives you the famous top-down angle of the cove.",
+        "Reach the beach by road, making it a simple stop during a day trip around Lesvos.",
   },
   {
     icon: Umbrella,
-    title: "Beach essentials",
+    title: "Relaxed beach day",
     description:
-        "Bring water, sunscreen and comfortable sandals because facilities are limited near the cove.",
+        "Perfect for visitors who want something calmer than the busier beaches.",
+  },
+  {
+    icon: Sun,
+    title: "Golden light",
+    description:
+        "Late afternoon gives the beach a warm, cinematic feel for photos and walks.",
   },
   {
     icon: ShieldCheck,
-    title: "Plan safely",
+    title: "Plan comfortably",
     description:
-        "Check local sea conditions and access rules before visiting, especially during windy days.",
+        "Bring water, sunscreen and beach shoes if you want to explore the rocky edges.",
   },
 ];
 
 const itinerary: ItineraryStep[] = [
   {
-    time: "08:00",
-    title: "Start early",
-    description:
-        "Leave before the main rush and aim for calmer morning light and sea conditions.",
-  },
-  {
     time: "09:30",
-    title: "Boat approach",
+    title: "Arrive relaxed",
     description:
-        "Arrive by boat and enjoy the coastline before stepping into the cove.",
+        "Start your visit in the morning when the beach is quieter and the sun is softer.",
   },
   {
-    time: "11:00",
-    title: "Swim & photos",
+    time: "10:30",
+    title: "Swim & unwind",
     description:
-        "Use the quieter part of the morning for swimming and photography before peak traffic.",
+        "Enjoy the clear water and slow beach atmosphere without rushing the day.",
   },
   {
-    time: "17:30",
-    title: "Viewpoint moment",
+    time: "13:00",
+    title: "Lunch nearby",
     description:
-        "Visit the viewpoint separately for the cinematic panorama and softer late-day colors.",
+        "Continue with a relaxed meal in the wider Mytilene area or nearby villages.",
+  },
+  {
+    time: "18:00",
+    title: "Golden hour stop",
+    description:
+        "Return or stay later for warmer light and a more peaceful coastal mood.",
   },
 ];
 
 const gallery: GalleryItem[] = [
   {
-    src: "/images/beaches/navagio-1.jpg",
-    alt: "Navagio Beach aerial view",
+    src: "/images/beaches/agios-ermogenis-1.jpg",
+    alt: "Agios Ermogenis Beach view",
     className: "lg:col-span-2 lg:row-span-2 h-[320px] lg:h-[620px]",
   },
   {
-    src: "/images/beaches/navagio-2.jpg",
-    alt: "Navagio Beach cliffs",
+    src: "/images/beaches/agios-ermogenis-2.jpg",
+    alt: "Agios Ermogenis clear waters",
     className: "h-[300px]",
   },
   {
-    src: "/images/beaches/navagio-3.jpg",
-    alt: "Navagio Beach sea",
+    src: "/images/beaches/agios-ermogenis-3.jpg",
+    alt: "Agios Ermogenis coastline",
     className: "h-[300px]",
   },
   {
-    src: "/images/beaches/navagio-4.jpg",
-    alt: "Navagio Beach boat",
+    src: "/images/beaches/agios-ermogenis-4.jpg",
+    alt: "Agios Ermogenis beach detail",
     className: "h-[300px]",
   },
   {
-    src: "/images/beaches/navagio-5.jpg",
-    alt: "Navagio Beach detail",
+    src: "/images/beaches/agios-ermogenis-5.jpg",
+    alt: "Agios Ermogenis sea view",
     className: "h-[300px]",
   },
 ];
 
 const experiences = [
   {
-    title: "Private boat tour",
-    description: "A polished way to explore the coast, caves and hidden swimming spots.",
-    meta: "Best for couples",
-    icon: Sailboat,
+    title: "Calm swim stop",
+    description:
+        "A simple and peaceful place to enjoy the sea without a heavy tourist feeling.",
+    meta: "Best for relaxing",
+    icon: Waves,
   },
   {
-    title: "Viewpoint drive",
-    description: "A scenic route for the classic panorama above the limestone cliffs.",
-    meta: "Best near sunset",
+    title: "Coastal drive",
+    description:
+        "Combine the beach with a scenic route around the southern side of Lesvos.",
+    meta: "Best by car",
     icon: Car,
   },
   {
-    title: "Coastal photography",
-    description: "Strong contrast, clean color palette and dramatic natural textures.",
-    meta: "Best in morning light",
+    title: "Photography walk",
+    description:
+        "Capture soft coastal colors, clear water and the quiet natural setting.",
+    meta: "Best at golden hour",
     icon: Camera,
   },
 ];
 
 const nearby = [
   {
-    title: "Cliff Viewpoint",
-    category: "View",
-    distance: "Separate access",
+    title: "Mytilene",
+    category: "Town",
+    distance: "Nearby city",
   },
   {
-    title: "Blue Caves",
-    category: "Boat stop",
-    distance: "Nearby coast",
+    title: "Agios Ermogenis Chapel",
+    category: "Landmark",
+    distance: "Close to the beach",
   },
   {
-    title: "Agios Nikolaos Port",
-    category: "Departure point",
-    distance: "Popular option",
+    title: "Local tavernas",
+    category: "Food",
+    distance: "Short drive",
   },
 ];
 
 const reviews = [
   {
-    name: "Elena",
+    name: "Maria",
     country: "Athens",
-    rating: "5.0",
-    text: "The color of the water is unreal. Go early and keep the viewpoint as a separate stop.",
-  },
-  {
-    name: "Marco",
-    country: "Milan",
     rating: "4.9",
-    text: "The boat approach makes the whole visit feel cinematic. The cliffs are incredible.",
+    text: "Peaceful, clean and easy to reach. A lovely beach for a relaxed day near Mytilene.",
   },
   {
-    name: "Nadia",
-    country: "Paris",
+    name: "Nikos",
+    country: "Lesvos",
     rating: "4.8",
-    text: "Beautiful place, but planning matters. Early morning was the right choice.",
+    text: "Great for swimming when you want something calm and natural without too much noise.",
+  },
+  {
+    name: "Anna",
+    country: "Thessaloniki",
+    rating: "4.9",
+    text: "Beautiful clear water and a quiet atmosphere. Best in the morning or late afternoon.",
   },
 ];
 
 const faqs: FAQItem[] = [
   {
-    question: "Can I drive directly to the beach?",
+    question: "Can I drive close to Agios Ermogenis Beach?",
     answer:
-        "No. The shoreline is generally reached by boat. The famous viewpoint is a separate visit by road.",
+        "Yes. It is easier to access than remote boat-only beaches, usually by road with a short walk depending on where you park.",
   },
   {
     question: "When is the best time to visit?",
     answer:
-        "May to September is the classic beach season. For a calmer experience, aim for early morning.",
+        "June to September is ideal for swimming. Morning and late afternoon are best for a calmer atmosphere.",
   },
   {
     question: "Is it good for families?",
     answer:
-        "It can be, but boat access and limited facilities mean you should plan carefully with children.",
+        "Yes, it can work well for families because it is calmer and easier to reach, but bring your own essentials.",
   },
   {
-    question: "Do I need to book a boat tour?",
+    question: "Do I need a boat tour?",
     answer:
-        "Booking ahead is recommended in high season, especially if you want a better time slot.",
+        "No. Agios Ermogenis Beach is not a boat-only beach, so you can plan it as a simple road trip stop.",
   },
 ];
 
