@@ -199,19 +199,9 @@ const lesvosPlaces: LesvosPlace[] = [
         image: "/eressian/er_pool1.jpg",
         href: "/hotels/eressian",
     },
+
     {
         id: 15,
-        name: "Thanos Cozy Apartments",
-        location: "Skala Kallonis, Lesvos",
-        category: "Accommodation",
-        description:
-            "Where the sea meets stillness.",
-        coordinates: [39.207121,26.2080755],
-        image: "/thanos/thanosbed.jpg",
-        href: "/hotels/thanos-cozy-appartments",
-    },
-    {
-        id: 16,
         name: "Azul Paraiso",
         location: "Anaxos, Lesvos",
         category: "Bar",
@@ -222,7 +212,7 @@ const lesvosPlaces: LesvosPlace[] = [
         href: "/food-drinks/azul-paraiso",
     },
     {
-        id: 17,
+        id: 16,
         name: "Molyvos",
         location: "Northern Lesvos",
         category: "Village",
@@ -233,7 +223,7 @@ const lesvosPlaces: LesvosPlace[] = [
         href: "/villages/molyvos",
     },
     {
-        id: 18,
+        id: 17,
         name: "Pallas Cafe - Grill",
         location: " Mesotopos, Lesvos",
         category: "Food",
@@ -244,7 +234,7 @@ const lesvosPlaces: LesvosPlace[] = [
         href: "/food-drinks/pallas",
     },
     {
-        id: 19,
+        id: 18,
         name: "Taverna Mpampis",
         location: "Molyvos, Lesvos",
         category: "Food",

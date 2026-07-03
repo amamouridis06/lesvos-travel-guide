@@ -35,8 +35,8 @@ const navCategories: NavCategory[] = [
     label: "Stay",
     items: [
       {
-        label: "Hotels",
-        href: "/hotels",
+        label: "Accommodation",
+        href: "/accommodation",
       },
       {
         label: "Rentals",
@@ -53,7 +53,7 @@ const navCategories: NavCategory[] = [
       },
       {
         label: "Activities",
-        href: "/under-construction",
+        href: "/activities/kariofilis-ecofarm",
       },
       {
         label: "Souvenirs",
