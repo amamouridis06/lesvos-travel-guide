@@ -5,7 +5,7 @@ const IMG = {
     hero: "/serenity/serenity6.jpg",
     balcony: "/serenity/serenity4.jpg",
     kitch: "/serenity/serenity1.jpg",
-    bed: "/serenity/serenity2.jpg",
+    bed: "/serenity/serenity2.png",
     liv: "/serenity/serenity5.jpg",
     outdoor: "/serenity/serenity3.jpg",
     bath:"/serenity/serenity7.jpg",
@@ -47,7 +47,6 @@ const hotel = {
     ],
     gallery: [
         { src: IMG.balcony, alt: "balcony"},
-        { src: IMG.bed, alt: "bed room"},
         { src: IMG.outdoor, alt: "outdoor" },
         { src: IMG.kitch, alt: "kitch" },
         { src: IMG.liv, alt: "liv" },
