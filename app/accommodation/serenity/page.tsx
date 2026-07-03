@@ -12,13 +12,13 @@ const IMG = {
 };
 
 const hotel = {
-    name: "Serenity- Vacation  Home Rental",
+    name: "Serenity",
     region: "Petra Lesvos",
     country: "Greece",
     fromPrice: "€70",
     tagline: "A house in a fanastic village in North Lesvos",
     intro:
-        "Welcome to Serenity- Vacation  Home Rental in Petra",
+        "Welcome to Serenity in Petra",
     body: [
         "Enjoy a peaceful escape in the beautiful village of Petra, ideally located within walking distance of the beach and the charming village center.",
         "Nestled among a lush olive grove, the property offers an authentic island atmosphere, combining tranquility with modern comfort.",
@@ -47,6 +47,7 @@ const hotel = {
     ],
     gallery: [
         { src: IMG.balcony, alt: "balcony"},
+        { src: IMG.bed, alt: "bed room"},
         { src: IMG.outdoor, alt: "outdoor" },
         { src: IMG.kitch, alt: "kitch" },
         { src: IMG.liv, alt: "liv" },
@@ -247,7 +248,7 @@ export default function PPUrban() {
 
                         <div className="mt-12 flex items-center gap-4 text-xs uppercase tracking-[0.24em] md:tracking-[0.3em]" style={{ color: "var(--ms-muted)" }}>
                             <span className="ms-hairline" />
-                            <span>Serenity- Vacation  Home Rental</span>
+                            <span>Serenity</span>
                         </div>
                     </main>
 
@@ -282,7 +283,7 @@ export default function PPUrban() {
 
                                 <div className="mt-7 border-t pt-5 text-[11px] uppercase tracking-[0.22em] sm:tracking-[0.28em]" style={{ borderColor: "var(--ms-border)", color: "var(--ms-muted)" }}>
                                     {[
-                                        ["Cancellation", "Call the hotel"],
+                                        ["Cancellation", "Call the owner"],
                                     ].map(([k, v]) => (
                                         <div key={k} className="flex justify-between gap-4 py-1.5">
                                             <span>{k}</span>
