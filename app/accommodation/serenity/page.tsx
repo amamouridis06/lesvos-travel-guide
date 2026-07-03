@@ -247,7 +247,7 @@ export default function PPUrban() {
 
                         <div className="mt-12 flex items-center gap-4 text-xs uppercase tracking-[0.24em] md:tracking-[0.3em]" style={{ color: "var(--ms-muted)" }}>
                             <span className="ms-hairline" />
-                            <span>Hotel Petrino</span>
+                            <span>Serenity- Vacation  Home Rental</span>
                         </div>
                     </main>
 
@@ -340,11 +340,11 @@ export default function PPUrban() {
                             For reservations, special requests or availability inquiries, the team is available daily to assist you.
                         </p>
                         <div className="mt-8 space-y-4 text-sm" style={{ color: "var(--ms-muted)" }}>
-                            <p><strong className="text-[color:var(--ms-fg)]">Phone:</strong> +30 698 506 5704 </p>
-                            <p><strong className="text-[color:var(--ms-fg)]">Email:</strong> petrino.molyvos@gmail.com </p>
-                            <p><strong className="text-[color:var(--ms-fg)]">Region:</strong> Molyvos, Lesvos </p>
-                            <p><strong className="text-[color:var(--ms-fg)]">Instagram:</strong> petrino.hotel</p>
-                            <p><strong className="text-[color:var(--ms-fg)]">Facebook:</strong> hotelpetrino</p>
+                            <p><strong className="text-[color:var(--ms-fg)]">Phone:</strong> +30 694 694 0511</p>
+                            <p><strong className="text-[color:var(--ms-fg)]">Email:</strong> serenity.lesvos@gmail.com </p>
+                            <p><strong className="text-[color:var(--ms-fg)]">Region:</strong> Petra, Lesvos </p>
+                            <p><strong className="text-[color:var(--ms-fg)]">Instagram:</strong> serenity.vacationhome</p>
+                            <p><strong className="text-[color:var(--ms-fg)]">Facebook:</strong>  Serenity- Vacation  Home Rental</p>
                         </div>
                     </div>
                 </div>
