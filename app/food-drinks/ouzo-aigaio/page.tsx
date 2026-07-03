@@ -151,51 +151,6 @@ export default function OuzoCompanyPagePremium() {
             `}</style>
             <main className="min-h-screen overflow-x-hidden bg-[#eff6ff] text-[#0f172a] selection:bg-[#3b82f6] selection:text-white">
                 <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#0b1f3a]/85 text-white backdrop-blur-xl">
-                    <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-8">
-                        <a href="#top" className="group flex items-center gap-3">
-            <span className="grid h-11 w-11 place-items-center rounded-full border border-[#60a5fa]/40 bg-white/5 transition group-hover:rotate-6 group-hover:bg-white/10">
-              <Wine className="h-5 w-5 text-[#93c5fd]" />
-            </span>
-                            <span>
-              <span className="block font-serif text-lg tracking-wide">Aegean Ouzo</span>
-              <span className="block text-[10px] uppercase tracking-[0.32em] text-white/55">
-                Est. 1924 · Greece
-              </span>
-            </span>
-                        </a>
-
-                        <nav className="hidden items-center gap-8 lg:flex">
-                            {navItems.map((item) => (
-                                <a
-                                    key={item.href}
-                                    href={item.href}
-                                    className="text-sm text-white/70 transition hover:text-white"
-                                >
-                                    {item.label}
-                                </a>
-                            ))}
-                        </nav>
-
-                        <div className="hidden items-center gap-3 sm:flex">
-                            <a
-                                href="#products"
-                                className="inline-flex items-center gap-2 rounded-full border border-[#60a5fa]/50 px-5 py-2.5 text-sm font-medium text-[#bfdbfe] transition hover:bg-[#60a5fa] hover:text-[#0f172a]"
-                            >
-                                Ανακάλυψε τη συλλογή
-                                <ArrowRight className="h-4 w-4" />
-                            </a>
-                        </div>
-
-                        <button
-                            type="button"
-                            aria-label={mobileMenuOpen ? "Κλείσιμο μενού" : "Άνοιγμα μενού"}
-                            className="rounded-full border border-white/15 p-2.5 sm:hidden"
-                            onClick={() => setMobileMenuOpen((value) => !value)}
-                        >
-                            {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-                        </button>
-                    </div>
-
                     {mobileMenuOpen && (
                         <div className="border-t border-white/10 bg-[#0b1f3a] px-5 py-5 sm:hidden">
                             <nav className="flex flex-col gap-1">

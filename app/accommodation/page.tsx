@@ -80,6 +80,14 @@ const hotels = [
         href: "/accommodation/pierres-blances",
         stars:4
     },
+    {
+        name: "Serenity- Vacation  Home Rental",
+        description: "A renovated stay in village of Petra",
+        location: "📍Petra, Lesvos",
+        image: "/serenity/serenity6.jpg",
+        href: "/accommodation/serenity",
+        stars: 3
+    },
 
 ];
 
