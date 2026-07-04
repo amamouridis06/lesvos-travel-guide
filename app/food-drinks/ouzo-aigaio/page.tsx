@@ -30,24 +30,6 @@ const ArrowRight = (props: IconProps) => (
     </Icon>
 );
 
-const ChevronRight = (props: IconProps) => (
-    <Icon {...props}>
-        <path d="m9 18 6-6-6-6" />
-    </Icon>
-);
-
-const Menu = (props: IconProps) => (
-    <Icon {...props}>
-        <path d="M4 7h16M4 12h16M4 17h16" />
-    </Icon>
-);
-
-const X = (props: IconProps) => (
-    <Icon {...props}>
-        <path d="M6 6l12 12M18 6 6 18" />
-    </Icon>
-);
-
 const Search = (props: IconProps) => (
     <Icon {...props}>
         <circle cx="11" cy="11" r="7" />
@@ -195,7 +177,6 @@ function getCategoryBadge(category: OuzoProduct["category"]) {
 export default function OuzoCompanyPagePremium() {
     const [activeCategory, setActiveCategory] = useState<ProductCategory>("Όλα");
     const [searchTerm, setSearchTerm] = useState("");
-    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     const filteredProducts = useMemo(() => {
         const query = searchTerm.trim().toLocaleLowerCase("el");
@@ -302,10 +283,6 @@ export default function OuzoCompanyPagePremium() {
                     animation-delay: 0.24s;
                 }
 
-                .delay-3 {
-                    animation-delay: 0.36s;
-                }
-
                 .shine {
                     position: relative;
                     overflow: hidden;
@@ -341,38 +318,42 @@ export default function OuzoCompanyPagePremium() {
             `}</style>
 
             <main className="min-h-screen overflow-x-hidden bg-[#eff6ff] text-[#0f172a] selection:bg-[#3b82f6] selection:text-white">
-                <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#07182d]/85 text-white backdrop-blur-xl">
-                    <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-8">
-                        <a href="#top" className="group flex items-center gap-3">
-              <span className="grid h-11 w-11 place-items-center rounded-full border border-[#60a5fa]/30 bg-[#3b82f6]/15 text-[#93c5fd] transition group-hover:scale-105">
-                <Droplets className="h-5 w-5" />
-              </span>
-                            <span>
-                <span className="block font-serif text-xl leading-none">
-                  Aegean Ouzo
-                </span>
-                <span className="mt-1 block text-[10px] uppercase tracking-[0.24em] text-white/45">
-                  Est. 1924
-                </span>
-              </span>
-                        </a>
+                <section id="top" className="relative min-h-[880px] bg-[#07182d] text-white">
+                    <div className="absolute inset-0 overflow-hidden">
+                        <div className="animate-drift absolute -left-48 top-32 h-96 w-96 rounded-full bg-[#1d4ed8]/35 blur-3xl" />
+                        <div className="animate-pulse-glow absolute -right-24 bottom-0 h-[520px] w-[520px] rounded-full bg-[#3b82f6]/15 blur-3xl" />
+                        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.025)_1px,transparent_1px)] bg-[size:64px_64px]" />
+                    </div>
 
-                        <nav className="hidden items-center gap-8 sm:flex">
-                            {navItems.map((item) => (
-                                <a
-                                    key={item.href}
-                                    href={item.href}
-                                    className="text-sm font-medium text-white/70 transition hover:text-white"
-                                >
-                                    {item.label}
-                                </a>
-                            ))}
-                        </nav>
+                    <div className="relative z-20 mx-auto max-w-7xl px-5 pt-10 sm:px-8">
+                        <div className="flex flex-wrap items-center justify-center gap-4 rounded-[2rem] border border-white/10 bg-white/5 px-4 py-4 backdrop-blur-xl sm:justify-between sm:px-6">
+                            <a href="#top" className="group flex items-center gap-3">
+                <span className="grid h-11 w-11 place-items-center rounded-full border border-[#60a5fa]/30 bg-[#3b82f6]/15 text-[#93c5fd] transition group-hover:scale-105">
+                  <Droplets className="h-5 w-5" />
+                </span>
 
-                        <div className="hidden items-center gap-3 sm:flex">
-              <span className="rounded-full border border-white/10 px-3 py-2 text-xs text-white/55">
-                18+ Υπεύθυνα
-              </span>
+                                <span>
+                  <span className="block font-serif text-xl leading-none">
+                    Aegean Ouzo
+                  </span>
+                  <span className="mt-1 block text-[10px] uppercase tracking-[0.24em] text-white/45">
+                    Est. 1924
+                  </span>
+                </span>
+                            </a>
+
+                            <nav className="flex flex-wrap items-center justify-center gap-2">
+                                {navItems.map((item) => (
+                                    <a
+                                        key={item.href}
+                                        href={item.href}
+                                        className="rounded-full px-4 py-2 text-sm font-medium text-white/70 transition hover:bg-white/10 hover:text-white"
+                                    >
+                                        {item.label}
+                                    </a>
+                                ))}
+                            </nav>
+
                             <a
                                 href="#contact"
                                 className="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-[#0f172a] transition hover:-translate-y-0.5 hover:bg-[#bfdbfe]"
@@ -380,56 +361,9 @@ export default function OuzoCompanyPagePremium() {
                                 Συνεργασία
                             </a>
                         </div>
-
-                        <button
-                            type="button"
-                            aria-label={mobileMenuOpen ? "Κλείσιμο μενού" : "Άνοιγμα μενού"}
-                            aria-expanded={mobileMenuOpen}
-                            onClick={() => setMobileMenuOpen((value) => !value)}
-                            className="grid h-11 w-11 place-items-center rounded-full border border-white/10 text-white sm:hidden"
-                        >
-                            {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-                        </button>
                     </div>
 
-                    {mobileMenuOpen && (
-                        <div className="border-t border-white/10 bg-[#07182d] px-5 py-5 sm:hidden">
-                            <nav className="flex flex-col gap-1">
-                                {navItems.map((item) => (
-                                    <a
-                                        key={item.href}
-                                        href={item.href}
-                                        onClick={() => setMobileMenuOpen(false)}
-                                        className="flex items-center justify-between rounded-xl px-4 py-3 text-white/80 hover:bg-white/5 hover:text-white"
-                                    >
-                                        {item.label}
-                                        <ChevronRight className="h-4 w-4" />
-                                    </a>
-                                ))}
-                            </nav>
-
-                            <a
-                                href="#contact"
-                                onClick={() => setMobileMenuOpen(false)}
-                                className="mt-4 flex items-center justify-center rounded-full bg-[#3b82f6] px-5 py-3 text-sm font-semibold text-white"
-                            >
-                                Ζήτησε συνεργασία
-                            </a>
-                        </div>
-                    )}
-                </header>
-
-                <section
-                    id="top"
-                    className="relative min-h-[880px] bg-[#07182d] pt-20 text-white"
-                >
-                    <div className="absolute inset-0 overflow-hidden">
-                        <div className="animate-drift absolute -left-48 top-32 h-96 w-96 rounded-full bg-[#1d4ed8]/35 blur-3xl" />
-                        <div className="animate-pulse-glow absolute -right-24 bottom-0 h-[520px] w-[520px] rounded-full bg-[#3b82f6]/15 blur-3xl" />
-                        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.025)_1px,transparent_1px)] bg-[size:64px_64px]" />
-                    </div>
-
-                    <div className="relative mx-auto grid min-h-[800px] max-w-7xl items-center gap-14 px-5 py-16 sm:px-8 lg:grid-cols-[1.05fr_.95fr] lg:py-24">
+                    <div className="relative mx-auto grid min-h-[760px] max-w-7xl items-center gap-14 px-5 py-16 sm:px-8 lg:grid-cols-[1.05fr_.95fr] lg:py-20">
                         <div className="max-w-2xl animate-fade-up">
                             <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.2em] text-[#93c5fd] backdrop-blur">
                                 <Sparkles className="h-3.5 w-3.5" />
