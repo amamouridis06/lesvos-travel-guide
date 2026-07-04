@@ -15,7 +15,7 @@ const hotel = {
     name: "Serenity",
     region: "Petra Lesvos",
     country: "Greece",
-    fromPrice: "€70",
+    fromPrice: "from 80 to 120 depending on the season",
     tagline: "A house in a fanastic village in North Lesvos",
     intro:
         "Welcome to Serenity in Petra",
@@ -39,7 +39,7 @@ const hotel = {
         "Located in the North Lesvos",
         "Valid ID and credit card required at check-in",
         "Just a little steps far for the square of Petra, perfect for walking",
-        "Τhere is accessibility for people with disabilities"
+        "Τhere is a liitle accessibility for people with disabilities(there are two little stairs)"
     ],
     gallery: [
         { src: IMG.balcony, alt: "balcony"},
