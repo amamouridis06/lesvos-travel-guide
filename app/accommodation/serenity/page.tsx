@@ -32,9 +32,6 @@ const hotel = {
     ],
     pros: [
         "Beautiful stone-built hotel with authentic character and a warm atmosphere",
-        "Excellent location next to a charming medieval village and historic castle",
-        "Relaxing swimming pool with scenic countryside views",
-        "Stylish on-site bar perfect for evening drinks and relaxation",
         "Peaceful setting ideal for romantic getaways and restful stays",
         "A perfect blend of traditional charm and modern comforts",
     ],
@@ -42,7 +39,6 @@ const hotel = {
         "Located in the North Lesvos",
         "Valid ID and credit card required at check-in",
         "Just a little steps far for the square of Petra, perfect for walking",
-        "The price is for a (Double Room per night during the low season). Breakfast is included.",
         "Τhere is accessibility for people with disabilities"
     ],
     gallery: [
