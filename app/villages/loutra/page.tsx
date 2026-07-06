@@ -74,6 +74,18 @@ const practicalInfo = [
   },
   {
     icon: Star,
+    label: "Local Products",
+    values: [
+      "•\t🫒Extra virgin olive oil",
+      "•\t🍯 Local honey",
+      "•\t🧀 Traditional cheeses",
+      "•\t🍷 Local wine",
+      "•\t🥃 Ouzo",
+      "•\t🌿 Herbs and herbal teas",
+    ],
+  },
+  {
+    icon: Star,
     label: "Local Tip",
     values: [
       "Spend the morning exploring Mytilene, enjoy lunch in Loutra, relax at the thermal springs in the afternoon, and end your day with dinner in the village or by the nearby coast. Loutra combines wellness, history, and authentic Lesvian hospitality in a peaceful setting. ♨️🌿🏡",
@@ -111,28 +123,28 @@ const guideCards = [
 
 const nearbyPlaces = [
   {
-    title: "Molyvos (15 min)",
-    text: "Historic medieval town with a castle and stunning sea views.",
-    href: "/villages/molyvos",
-    icon: Landmark,
-  },
-  {
-    title: "Petra (20 min)",
-    text: "Picturesque coastal village famous for its church on a rock.",
-    href: "/villages/petra",
+    title: "Mytilene (10 min)",
+    text: "The island's capital, offering museums, shopping, restaurants, the castle, and the main ferry port.",
+    href: "/villages/mytilene",
     icon: Home,
   },
   {
-    title: "Anaxos (20 min)",
-    text: "Family-friendly beach resort with golden sands.",
+    title: "Thermi (15 min)",
+    text: "Another village famous for its thermal springs, monasteries, and beautiful coastal scenery.",
+    href: "/villages/thermi",
+    icon: Home,
+  },
+  {
+    title: "Agios Ermogenis Beach (20 min)",
+    text: "A popular beach with crystal-clear water, surrounded by pine trees and rocky cliffs.",
     href: "/villages/anaxos",
     icon: Waves,
   },
   {
-    title: "Mantamados (30 min)",
-    text: "Traditional village known for the Taxiarchis Monastery.",
+    title: "Roman Aqueduct of Moria (15 min)",
+    text: "One of the best-preserved Roman aqueducts in Greece, dating back nearly 2,000 years",
     href: "/villages/mantamados",
-    icon: Home,
+    icon: Landmark,
   },
 ];
 
@@ -189,7 +201,7 @@ function SectionHeading({
   );
 }
 
-export default function ParaskeviPage() {
+export default function LoutraPage() {
   return (
       <main className="overflow-hidden bg-[#f6f1e8] text-stone-950">
         {/* HERO */}
@@ -217,15 +229,15 @@ export default function ParaskeviPage() {
               >
                 <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.24em] text-white/85 backdrop-blur-xl sm:text-xs">
                   <MapPin className="h-4 w-4 text-amber-300" />
-                  Northern Lesvos· Greece
+                  Southeastern Lesvos · Greece
                 </div>
 
                 <h1 className="mt-6 text-5xl font-black leading-[0.9] tracking-[-0.05em] sm:text-7xl lg:text-[9rem]">
-                  Lepetymnos
+                  Loutra
                 </h1>
 
                 <p className="mt-8 max-w-2xl text-base leading-7 text-white/68 sm:text-lg sm:leading-8 md:text-xl">
-                  Lepetymnos is a peaceful mountain destination in northern Lesvos, home to the island's highest peak. Surrounded by dramatic landscapes, hiking trails and panoramic Aegean views, it offers a completely different side of Lesvos away from the coast.
+                  Loutra is a peaceful traditional village in southeastern Lesvos, known for its thermal heritage, olive groves and quiet countryside atmosphere. Just a short drive from Mytilene, it combines authentic village life, wellness history and easy access to nearby beaches and cultural sites.
                 </p>
 
                 <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
@@ -233,7 +245,7 @@ export default function ParaskeviPage() {
                       href="#discover"
                       className="inline-flex items-center justify-center gap-2 rounded-full bg-amber-400 px-6 py-4 text-sm font-bold text-stone-950 shadow-[0_18px_55px_rgba(251,191,36,0.3)] transition hover:-translate-y-0.5 hover:bg-amber-300"
                   >
-                    Discover Lepetymnos
+                    Discover Loutra
                     <ArrowDown className="h-4 w-4" />
                   </a>
 
@@ -271,9 +283,9 @@ export default function ParaskeviPage() {
         >
           <div>
             <SectionHeading
-                eyebrow="Why visit Lepetymnos"
-                title="Discover the highest point of Lesvos"
-                description="From panoramic mountain views to peaceful hiking trails and authentic rural landscapes, Lepetymnos is a paradise for nature lovers and outdoor enthusiasts."
+                eyebrow="Why visit Loutra"
+                title="A peaceful village with thermal heritage"
+                description="From natural hot springs and olive groves to traditional stone houses and easy access to Mytilene, Loutra is ideal for slow travel, wellness and authentic Lesvian countryside charm."
             />
 
             <motion.div {...fadeUp} className="mt-9 border-l-2 border-amber-400 pl-5">
@@ -478,8 +490,8 @@ export default function ParaskeviPage() {
 
                 <div className="h-[430px] sm:h-[540px]">
                   <iframe
-                      title="Map of Lepetymnos"
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.3178395714594!2d26.27346535!3d39.3653804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ba848b992f0367%3A0x9360e57af920a080!2sLepetimnos%20811%2008!5e1!3m2!1sen!2sgr!4v1781774171189!5m2!1sen!2sgr"
+                      title="Map of Loutra"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3638.7642796357272!2d26.54335515!3d39.0564934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ba5dbbcd5a468b%3A0x1d95b4593413a633!2zzpvOv8-Fz4TPgc6sIDgxMSAwMA!5e1!3m2!1sel!2sgr!4v1783187380071!5m2!1sel!2sgr"
                       width="100%"
                       height="100%"
                       style={{ border: 0 }}
@@ -544,7 +556,7 @@ export default function ParaskeviPage() {
         <section className="relative overflow-hidden py-28 sm:py-36">
           <Image
               src="/Lepetymnos.jpg"
-              alt="Lepetymnos"
+              alt="Loutra"
               fill
               sizes="100vw"
               className="object-cover"

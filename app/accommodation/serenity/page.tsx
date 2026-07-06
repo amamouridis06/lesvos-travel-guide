@@ -16,7 +16,7 @@ const hotel = {
     region: "Petra Lesvos",
     country: "Greece",
     fromPrice: "from 80 to 120",
-    tagline: "A house in a fanastic village in North Lesvos",
+    tagline: "A house in a fantastic village in North Lesvos",
     intro:
         "Welcome to Serenity in Petra",
     body: [
@@ -355,7 +355,7 @@ export default function PPUrban() {
                             <p className="ms-eyebrow">From the visit</p>
                         </div>
                         <h2 className="ms-display mt-4 text-4xl leading-tight md:text-6xl">
-                            A few moments<br />
+                            A glimpse<br />
                             <span className="italic" style={{ color: "var(--ms-gold)" }}>from the stay.</span>
                         </h2>
                     </div>

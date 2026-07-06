@@ -377,7 +377,7 @@ export default function PPUrban() {
                             <p className="ms-eyebrow">From the houses</p>
                         </div>
                         <h2 className="ms-display mt-4 text-4xl leading-tight md:text-6xl">
-                            "A glimpse <br />
+                            A glimpse <br />
                             <span className="italic" style={{ color: "var(--ms-gold)" }}>of the houses.</span>
                         </h2>
                     </div>
