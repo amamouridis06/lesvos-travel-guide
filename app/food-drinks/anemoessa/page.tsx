@@ -3,16 +3,11 @@ import Link from "next/link";
 
 export default function AnamoesaPage() {
     const restaurant = {
-        name: "Misirlou",
+        name: "Anemoessa Restaurant",
         category: " Restaurant",
         location: "Skala Sykamnias, Lesvos",
         description: [
-            <p> At Anemoessa, in Skala Sikamineas, Lesvos, you’ll enjoy the freshest fish and unique seafood recipes.</p>,
-            <p>Take in the charm of the picturesque harbor with views of the Panagia Gorgona (Virgin Mary the Mermaid) and the endless blue, in a relaxed atmosphere that reflects professionalism and genuine hospitality.</p>,
-            <p>An ideal choice for a romantic dinner, family moments, a relaxed “ouzo” with friends, or your most special occasions.</p>,
-            <p>Sunset hour is truly magical at our place.</p>,
-            <p>Don’t miss our signature dishes: seafood stuffed cabbage rolls, cuttlefish ink orzo, and our standout lobster pasta – all distinguished by their flavor, quality, and creativity.</p>,
-            <p>To finish, we offer a unique Armenovil, crafted by the finest pastry chef (zaharoplastis) in our town.</p>
+            <p> At Anemoessa, in Skala Sikamineas, Lesvos, you’ll enjoy the freshest fish and unique seafood recipes. Take in the charm of the picturesque harbor with views of the Panagia Gorgona (Virgin Mary the Mermaid) and the endless blue, in a relaxed atmosphere that reflects professionalism and genuine hospitality.An ideal choice for a romantic dinner, family moments, a relaxed “ouzo” with friends, or your most special occasions. Sunset hour is truly magical at our place. Don’t miss our signature dishes: seafood stuffed cabbage rolls, cuttlefish ink orzo, and our standout lobster pasta – all distinguished by their flavor, quality, and creativity. To finish, we offer a unique Armenovil, crafted by the finest pastry chef (zaharoplastis) in our town. </p>
         ],
         heroImage:
             "/anemoessa/anemoessa_hero.png",
