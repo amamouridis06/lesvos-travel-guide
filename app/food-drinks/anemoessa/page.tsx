@@ -5,7 +5,7 @@ export default function AnamoesaPage() {
     const restaurant = {
         name: "Misirlou",
         category: " Restaurant",
-        location: "Molyvos, Lesvos",
+        location: "Skala Sykamnias, Lesvos",
         description: [
             <p> At Anemoessa, in Skala Sikamineas, Lesvos, you’ll enjoy the freshest fish and unique seafood recipes.</p>,
             <p>Take in the charm of the picturesque harbor with views of the Panagia Gorgona (Virgin Mary the Mermaid) and the endless blue, in a relaxed atmosphere that reflects professionalism and genuine hospitality.</p>,
@@ -15,7 +15,7 @@ export default function AnamoesaPage() {
             <p>To finish, we offer a unique Armenovil, crafted by the finest pastry chef (zaharoplastis) in our town.</p>
         ],
         heroImage:
-            "/misirlou/misirlou6.jpg",
+            "/anemoessa/anemoessa_hero.png",
         gallery: [
             "/misirlou/misirlou1.jpg",
             "/misirlou/misirlou3.jpg",
@@ -85,7 +85,7 @@ export default function AnamoesaPage() {
                 <div className="space-y-8">
                     <div className="rounded-2xl bg-white p-7 shadow-sm">
                         <h2 className="text-2xl font-semibold">Our Story</h2>
-                        <p className="text-lg leading-8 text-stone-700">
+                        <p className="mb-4 text-lg leading-8 text-stone-700">
                             {restaurant.description}
                         </p>
 
