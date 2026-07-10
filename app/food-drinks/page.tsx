@@ -67,7 +67,7 @@ const Restaurants: FoodItem[] = [
   },
   {
     title: "To Limanaki ton Pamfilon",
-    category: "Restaurants",
+    category: "Restaurant",
     description: "Fresh fish, local dishes, and a relaxing seaside atmosphere.",
     location: "Pamfila, Lesvos",
     image: "/limanaki/limanaki_pamf.jpg",
@@ -109,6 +109,15 @@ const Restaurants: FoodItem[] = [
     image: "/misirlou/misirlou6.jpg",
     alt: "Misirlou",
     href: "/food-drinks/misirlou",
+  },
+  {
+    title: "Anemoessa Restaurant",
+    category: "Restaurant",
+    description: "Authentic Greek flavors, seaside sunsets, fresh seafood, and  hospitality.",
+    location: "Skala Sykamnias, Lesvos",
+    image: "/anemoessa/anemoessa_logo.png",
+    alt: "Anemoessa Restaurant",
+    href: "/food-drinks/anemoessa",
   },
 ];
 
