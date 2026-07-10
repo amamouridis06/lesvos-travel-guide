@@ -235,14 +235,6 @@ export default function NavBar() {
                       </div>
                   );
                 })}
-
-                <Link
-                    href="/about"
-                    onClick={closeMenu}
-                    className="block border-b border-white/10 py-4 font-medium transition hover:text-yellow-300"
-                >
-                  About
-                </Link>
               </div>
             </div>
         )}
