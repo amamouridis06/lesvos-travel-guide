@@ -94,7 +94,7 @@ character of Lesvos.`,
                             Their History
                         </h2>
 
-                        <div className="mt-5 whitespace-pre-line text-justify text-lg leading-8 text-stone-700">
+                        <div className="mt-5 max-w-prose whitespace-pre-line break-words text-left text-base leading-7 text-stone-700 sm:text-justify sm:text-lg sm:leading-8">
                             {fullDescription}
                         </div>
                     </section>
