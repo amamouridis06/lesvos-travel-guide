@@ -24,21 +24,8 @@ export default function HoneyTravelGuide({
        producerName = "Beekeeper - Producer: Antonis Georgiou",
        location = "Sigri, Lesvos",
        shortDescription = "Pure thyme honey of small production from the mountains in Sigri.",
-        fullDescription = `«Honey in the Fossilized Forest» is a separate destination in
-                            western Lesvos, in the picturesque Sigri, in the heart of the only Disinfected
-Forest. In our visit lab, visitors have the opportunity to
-get to know the bee world up close and the production process
-and standardization of honey, from the hive to the jar. Through
-tour of the space and information about the beekeeping of Lesvos,
-discover the importance of bees for the environment and local
-biodiversity.
-
-  At the same time, they can try and get supplied
-authentic hive products, such as thyme honey, other honey varieties,
-pollen, propolis, aromatic candles and other local products. The visit to
-beekeeping laboratory combines knowledge, taste and authentic contact with
-nature, offering a unique experience that highlights the special
-character of Lesvos.`,
+        fullDescription = `«Honey in the Fossilized Forest» is a separate destination in estern Lesvos, in the picturesque Sigri, in the heart of the only Petrified Forest. In our visit lab, visitors have the opportunity to get to know the bee world up close and the production process and standardization of honey, from the hive to the jar. Through tour of the space and information about the beekeeping of Lesvos, discover the importance of bees for the environment and local biodiversity.
+    At the same time, they can try and get supplied authentic hive products, such as thyme honey, other honey varieties, pollen, propolis, aromatic candles and other local products. The visit to bekeeping laboratory combines knowledge, taste and authentic contact with nature, offering a unique experience that highlights the special character of Lesvos.`,
                                              mainImage = "/honey/honey2.jpeg",
                                              gallery = [
                                                  "/honey/honey1.jpeg",
@@ -94,7 +81,7 @@ character of Lesvos.`,
                             Their History
                         </h2>
 
-                        <div className="mt-5 max-w-prose whitespace-pre-line break-words text-left text-base leading-7 text-stone-700 sm:text-justify sm:text-lg sm:leading-8">
+                        <div className="mt-5 text-left text-base leading-7 text-stone-700 sm:text-lg sm:leading-8">
                             {fullDescription}
                         </div>
                     </section>
