@@ -1,36 +1,31 @@
 import React from "react";
 import Link from "next/link";
 
-export default function MisirlouPage() {
+export default function ApolafsiPage() {
     const restaurant = {
-        name: "Misirlou",
-        category: " Restaurant",
-        location: "Molyvos, Lesvos",
+        name: "Taverna Apolafsi",
+        category: "Tavrern",
+        location: "Plomari, Lesvos",
         description: [
-            <p>In the picturesque harbor of Molyvos, Misirlou stands out as a unique gastronomic destination that combines the warmth of Greek hospitality with creative flavors from around the world. Set against the endless blue of the Aegean Sea and the breathtaking view of the iconic castle of Molyvos, it offers an experience where authentic island atmosphere meets great food and pure enjoyment..</p>,
-            <p>The menu features carefully crafted dishes inspired by Greek cuisine, enriched with international influences and creative touches. From aromatic coffee and refreshing beers to signature cocktails and fine drinks by the sea, every moment at Misirlou becomes a small escape filled with flavor and relaxation.</p>,
-            <p>Misirlou is the perfect place for authentic summer moments, wonderful gatherings, and unforgettable experiences in the most enchanting spot of Molyvos.</p>
+            <p>Overlooking the Aegean Sea in the picturesque port of Plomari, Apolafsi Taverna brings together classic Greek cuisine and the authentic flavours of Lesvos.</p>,
+            <p>Our menu features fresh fish and seafood, traditional local specialities, and charcoal-grilled meats, all prepared with a focus on quality, fresh ingredients, and simplicity.</p>
+            <p>Set right by the sea, our taverna is the perfect place to enjoy lunch or dinner while taking in views of the harbour and experiencing the warm hospitality for which Plomari is known.</p>
         ],
         heroImage:
-            "/misirlou/misirlou6.jpg",
+            "/apolafsi/a-hero.jpg",
         gallery: [
-            "/misirlou/misirlou1.jpg",
-            "/misirlou/misirlou3.jpg",
-            "/misirlou/misirlou4.jpg",
-            "/misirlou/misirlou5.jpg",
-            "/misirlou/misirlou7.jpg",
-            "/misirlou/misirlou8.jpg",
-            "/misirlou/misirlou9.jpg",
-            "/misirlou/misirlou10.jpg",
-            "/misirlou/misirlou11.jpg",
-            "/misirlou/misirlou12.jpg",
-            "/misirlou/misirlou13.jpg",
-            "/misirlou/misirlou14.jpg",
-            "/misirlou/misirlou15.jpg",
-            "/misirlou/misirlou16.jpg",
-            "/misirlou/misirlou18.jpg",
-            "/misirlou/misirlou19.jpg",
-
+            "/apolafsi/a1.jpg",
+            "/apolafsi/a2.jpg",
+            "/apolafsi/a3.jpg",
+            "/apolafsi/a4.jpg",
+            "/apolafsi/a5.jpg",
+            "/apolafsi/a6.jpg",
+            "/apolafsi/a7.jpg",
+            "/apolafsi/a8.jpg",
+            "/apolafsi/a9.jpg",
+            "/apolafsi/a10.jpg",
+            "/apolafsi/a11.jpg",
+            "/apolafsi/a12.jpg",
         ],
         highlights: [
             "Local products",
@@ -45,9 +40,9 @@ export default function MisirlouPage() {
             "Τhere is accessibility for people with disabilities"
         ],
         openingHours: "13:00 - 23:30",
-        phone: "+30 22530 72388",
-        instagram: "@misirlou_bar_restaurant",
-        facebook: "@Misirlou Bar and Restaurant "
+        phone: "+30  22520 33193",
+        instagram: "tavernaapolafsi",
+        facebook: "Ταβέρνα η Απόλαυση"
     };
 
     return (
@@ -147,11 +142,8 @@ export default function MisirlouPage() {
                         </div>
 
                         <div className="mt-6 grid gap-3">
-                            {/*<button className="rounded-xl bg-stone-900 px-5 py-4 text-base font-medium text-white transition hover:bg-stone-700">*/}
-                            {/*  Book a table*/}
-                            {/*</button></>*/}
                             <Link
-                                href="https://maps.app.goo.gl/2nxRfbdxCwPaQAe17"
+                                href="https://maps.app.goo.gl/8sPTdVBUWZCKaAt38"
                                 target="_blank"
                                 className="inline-block rounded-xl border border-stone-300 bg-white px-5 py-4 text-base font-medium text-stone-900 transition hover:bg-stone-100"
                             >
@@ -183,7 +175,7 @@ export default function MisirlouPage() {
                                     key={important}
                                     className="rounded-xl bg-stone-100 px-4 py-3 text-stone-700"
                                 >
-                                     {important}
+                                    {important}
                                 </div>
                             ))}
                         </div>

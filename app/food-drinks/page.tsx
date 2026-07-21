@@ -53,6 +53,15 @@ const cafeTaverns: FoodItem[] = [
     alt: "Mpampis",
     href: "/food-drinks/tavernaompampis",
   },
+  {
+    title: "Taverna Apolafsi",
+    category: "Tavern",
+    description: "Fresh meat, and tranditional dishes in north Lesvos",
+    location: "Plomari, Lesvos",
+    image: "/apolafsi/a-hero.jpg",
+    alt: "Apolafsi",
+    href: "/food-drinks/tavernaapolafsi",
+  },
 ];
 
 const Restaurants: FoodItem[] = [
