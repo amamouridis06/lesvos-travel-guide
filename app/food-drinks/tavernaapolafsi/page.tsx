@@ -8,7 +8,7 @@ export default function ApolafsiPage() {
         location: "Plomari, Lesvos",
         description: [
             <p>Overlooking the Aegean Sea in the picturesque port of Plomari, Apolafsi Taverna brings together classic Greek cuisine and the authentic flavours of Lesvos.</p>,
-            <p>Our menu features fresh fish and seafood, traditional local specialities, and charcoal-grilled meats, all prepared with a focus on quality, fresh ingredients, and simplicity.</p>
+            <p>Our menu features fresh fish and seafood, traditional local specialities, and charcoal-grilled meats, all prepared with a focus on quality, fresh ingredients, and simplicity.</p>,
             <p>Set right by the sea, our taverna is the perfect place to enjoy lunch or dinner while taking in views of the harbour and experiencing the warm hospitality for which Plomari is known.</p>
         ],
         heroImage:
