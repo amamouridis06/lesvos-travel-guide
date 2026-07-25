@@ -12,22 +12,13 @@ export default function AnamoesaPage() {
         heroImage:
             "/anemoessa/anemoessa_hero.png",
         gallery: [
-            "/misirlou/misirlou1.jpg",
-            "/misirlou/misirlou3.jpg",
-            "/misirlou/misirlou4.jpg",
-            "/misirlou/misirlou5.jpg",
-            "/misirlou/misirlou7.jpg",
-            "/misirlou/misirlou8.jpg",
-            "/misirlou/misirlou9.jpg",
-            "/misirlou/misirlou10.jpg",
-            "/misirlou/misirlou11.jpg",
-            "/misirlou/misirlou12.jpg",
-            "/misirlou/misirlou13.jpg",
-            "/misirlou/misirlou14.jpg",
-            "/misirlou/misirlou15.jpg",
-            "/misirlou/misirlou16.jpg",
-            "/misirlou/misirlou18.jpg",
-            "/misirlou/misirlou19.jpg",
+            "/anemoessa/an1.jpg",
+            "/anemoessa/an2.jpg",
+            "/anemoessa/an3.jpg",
+            "/anemoessa/an4.jpg",
+            "/anemoessa/an5.jpg",
+            "/anemoessa/an6.jpg",
+
 
         ],
         highlights: [
