@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import { useMemo, useState } from "react";
+import { useId, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 const LesvosMap = dynamic(() => import("@/components/LesvosMap"), {
@@ -159,9 +159,9 @@ const itineraries = {
       {
         place: "Mytilini",
         area: "Eastern Lesvos",
-        see: ["Medieval Castle", "Ermou Street","Archaeological Museum"],
+        see: ["Medieval Castle", "Ermou Street", "Archaeological Museum"],
         eat: [
-          "To Limanaki tou Pafilon ",
+          "To Limanaki tou Pafilon",
           "Mezedopoleio Averof (mezedes since 1841)",
           "Taverna Ermis (traditional harbour fare)",
           "Café Sappho (coffee & breakfast)",
@@ -169,7 +169,7 @@ const itineraries = {
         tip: "Best explored in the late afternoon and evening when the harbour buzzes with life.",
       },
       {
-        place: "S",
+        place: "Thermi",
         area: "Near Mytilini",
         see: ["Thermal springs", "Coastal path"],
         eat: ["Taverna Akrogiali (beach grills & local fish)"],
@@ -305,7 +305,9 @@ function SectionTitle({
   );
 }
 
-function Icon({ name }: { name: "pin" | "calendar" | "spark" | "eye" | "food" | "tip" | "arrow" }) {
+type IconName = "pin" | "calendar" | "spark" | "eye" | "food" | "tip" | "arrow";
+
+function Icon({ name }: { name: IconName }) {
   const paths = {
     pin: <><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></>,
     calendar: <><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></>,
@@ -338,7 +340,8 @@ function BulletList({ items, tone }: { items: readonly string[]; tone: "orange" 
 
 export default function PlannerPage() {
   const [location, setLocation] = useState<LocationKey | "">("");
-  const [days, setDays] = useState<number>(3);
+  const [days, setDays] = useState(3);
+  const tripLengthId = useId();
 
   const selectedLocation = location ? itineraries[location] : null;
 
@@ -350,7 +353,7 @@ export default function PlannerPage() {
   }, [location, days]);
 
   return (
-      <main className="min-h-screen overflow-hidden bg-[#f7f4ee] text-slate-950">
+      <main className="min-h-screen overflow-hidden bg-[#f7f4ee] text-slate-950 antialiased">
         <section className="relative isolate overflow-hidden bg-[#07110f] text-white">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(251,146,60,0.22),transparent_30%),radial-gradient(circle_at_85%_25%,rgba(34,211,238,0.14),transparent_28%),linear-gradient(to_bottom,#07110f,#0c1714)]" />
           <div className="absolute -left-24 top-24 h-72 w-72 rounded-full border border-white/10 bg-white/[0.03] blur-sm" />
@@ -387,7 +390,7 @@ export default function PlannerPage() {
         </section>
 
         <section className="relative z-20 mx-auto -mt-12 max-w-6xl px-3 sm:-mt-16 sm:px-6 md:-mt-20 lg:px-8">
-          <motion.div initial={{ opacity: 0, y: 35 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2, duration: 0.7 }} className="overflow-hidden rounded-[1.5rem] border border-white/80 bg-white/90 p-4 sm:rounded-[2rem] sm:p-6 md:p-8 shadow-[0_30px_90px_rgba(15,23,42,0.14)] backdrop-blur-xl sm:p-8">
+          <motion.div initial={{ opacity: 0, y: 35 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2, duration: 0.7 }} className="overflow-hidden rounded-[1.5rem] border border-white/80 bg-white/90 p-4 shadow-[0_30px_90px_rgba(15,23,42,0.14)] backdrop-blur-xl sm:rounded-[2rem] sm:p-8">
             <div className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
               <div>
                 <div className="mb-3 flex items-center gap-2 text-sm font-bold text-slate-900"><span className="flex h-9 w-9 items-center justify-center rounded-xl bg-orange-100 text-orange-600"><Icon name="pin" /></span>Choose your base</div>
@@ -396,7 +399,7 @@ export default function PlannerPage() {
                     const item = itineraries[key];
                     const active = location === key;
                     return (
-                        <motion.button key={key} type="button" whileHover={{ y: -3 }} whileTap={{ scale: 0.98 }} onClick={() => setLocation(key)} className={`rounded-2xl border px-4 py-3.5 text-left sm:py-4 transition ${active ? "border-orange-300 bg-orange-50 shadow-[0_12px_30px_rgba(249,115,22,0.12)]" : "border-slate-200 bg-slate-50 hover:border-slate-300 hover:bg-white"}`}>
+                        <motion.button key={key} type="button" whileHover={{ y: -3 }} whileTap={{ scale: 0.98 }} onClick={() => setLocation(key)} aria-pressed={active} className={`rounded-2xl border px-4 py-3.5 text-left transition sm:py-4 ${active ? "border-orange-300 bg-orange-50 shadow-[0_12px_30px_rgba(249,115,22,0.12)]" : "border-slate-200 bg-slate-50 hover:border-slate-300 hover:bg-white"}`}>
                           <span className={`block text-xs font-black uppercase tracking-[0.16em] ${active ? "text-orange-600" : "text-slate-400"}`}>Base</span>
                           <span className="mt-2 block text-sm font-black text-slate-950 sm:text-base">{item.label}</span>
                         </motion.button>
@@ -417,7 +420,7 @@ export default function PlannerPage() {
                   <span className="rounded-full bg-orange-300 px-4 py-2 text-sm font-black text-slate-950">{days} {days === 1 ? 'day' : 'days'}</span>
                 </div>
 
-                <input type="range" min="1" max="10" value={days} onChange={(event) => setDays(Number(event.target.value))} className="mt-7 w-full accent-orange-300" />
+                <input id={tripLengthId} type="range" min="1" max="10" step="1" value={days} aria-valuemin={1} aria-valuemax={10} aria-valuenow={days} aria-valuetext={`${days} ${days === 1 ? "day" : "days"}`} onChange={(event) => setDays(Number(event.target.value))} className="mt-7 w-full cursor-pointer accent-orange-300" />
                 <div className="mt-2 flex justify-between text-[11px] text-white/35"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10 days</span></div>
                 <p className="mt-5 rounded-2xl bg-white/[0.06] px-4 py-3 text-xs leading-5 text-white/55">{days <= 3 ? 'A focused escape with highlights close to your selected base.' : 'A deeper island journey with longer day trips and more variety.'}</p>
               </div>
@@ -440,14 +443,14 @@ export default function PlannerPage() {
           </div>
 
           {location ? (
-              <div className="relative">
+              <div className="relative" aria-live="polite">
                 <div className="absolute bottom-8 left-[27px] top-8 hidden w-px bg-gradient-to-b from-orange-300 via-slate-200 to-transparent md:block" />
                 <div className="space-y-6">
                   {plan.map((day, index) => (
                       <motion.article key={`${day.day}-${day.place}`} initial={{ opacity: 0, y: 28 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ delay: Math.min(index * 0.05, 0.25) }} className="relative md:pl-20">
                         <div className="absolute left-0 top-8 hidden h-14 w-14 items-center justify-center rounded-2xl border-4 border-[#f7f4ee] bg-slate-950 text-lg font-black text-white shadow-xl md:flex">{String(day.day).padStart(2,'0')}</div>
                         <div className="overflow-hidden rounded-[1.5rem] border border-slate-200/80 sm:rounded-[2rem] bg-white shadow-[0_18px_55px_rgba(15,23,42,0.07)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(15,23,42,0.12)]">
-                          <div className="flex flex-col gap-4 border-b border-slate-100 bg-gradient-to-r from-slate-950 to-[#15231f] px-4 py-5 text-white sm:flex-row sm:px-6 sm:py-6 sm:items-center sm:justify-between sm:px-7">
+                          <div className="flex flex-col gap-4 border-b border-slate-100 bg-gradient-to-r from-slate-950 to-[#15231f] px-4 py-5 text-white sm:flex-row sm:items-center sm:justify-between sm:px-7 sm:py-6">
                             <div><p className="text-xs font-black uppercase tracking-[0.22em] text-orange-300">Day {day.day}</p><h3 className="mt-2 text-2xl font-black tracking-tight sm:text-3xl">{day.place}</h3></div>
                             <span className="inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-white/[0.07] px-4 py-2 text-xs font-bold text-white/70"><Icon name="pin" />{day.area}</span>
                           </div>
@@ -480,11 +483,11 @@ export default function PlannerPage() {
         </section>
 
         <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8 lg:pb-24">
-          <div className="relative overflow-hidden rounded-[1.75rem] bg-slate-950 px-5 py-10 sm:rounded-[2.5rem] sm:px-8 sm:py-12 text-white shadow-[0_30px_90px_rgba(15,23,42,0.18)] sm:px-10 sm:py-14">
+          <div className="relative overflow-hidden rounded-[1.75rem] bg-slate-950 px-5 py-10 text-white shadow-[0_30px_90px_rgba(15,23,42,0.18)] sm:rounded-[2.5rem] sm:px-10 sm:py-14">
             <div className="absolute right-[-80px] top-[-100px] h-72 w-72 rounded-full bg-orange-400/20 blur-3xl" />
             <div className="relative flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
               <div className="max-w-2xl"><p className="text-xs font-black uppercase tracking-[0.24em] text-orange-300">Keep discovering</p><h3 className="mt-4 text-3xl font-black tracking-[-0.04em] sm:text-4xl">Turn your itinerary into an unforgettable Lesvos story.</h3><p className="mt-4 text-sm leading-7 text-white/55 sm:text-base">Explore more villages, beaches, experiences and local recommendations across the guide.</p></div>
-              <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap"><Link href="/" className="inline-flex items-center justify-center gap-2 rounded-2xl bg-white px-6 py-4 text-sm font-black text-slate-950 transition hover:bg-orange-200">Back home <Icon name="arrow" /></Link><Link href="/villages" className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/15 bg-white/[0.06] px-6 py-4 text-sm font-black text-white transition hover:bg-white/[0.12]">Explore villages <Icon name="arrow" /></Link></div>
+              <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap"><Link href="/" className="inline-flex items-center justify-center gap-2 rounded-2xl bg-white px-6 py-4 text-sm font-black text-slate-950 transition hover:bg-orange-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950">Back home <Icon name="arrow" /></Link><Link href="/villages" className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/15 bg-white/[0.06] px-6 py-4 text-sm font-black text-white transition hover:bg-white/[0.12] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950">Explore villages <Icon name="arrow" /></Link></div>
             </div>
           </div>
         </section>
