@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useMemo, useState } from "react";
+import React from "react";
 
 type IconProps = React.SVGProps<SVGSVGElement>;
 
@@ -30,13 +30,6 @@ const ArrowRight = (props: IconProps) => (
     </Icon>
 );
 
-const Search = (props: IconProps) => (
-    <Icon {...props}>
-        <circle cx="11" cy="11" r="7" />
-        <path d="m20 20-3.5-3.5" />
-    </Icon>
-);
-
 const Sparkles = (props: IconProps) => (
     <Icon {...props}>
         <path d="m12 3 1.4 3.6L17 8l-3.6 1.4L12 13l-1.4-3.6L7 8l3.6-1.4L12 3Z" />
@@ -55,21 +48,6 @@ const MapPin = (props: IconProps) => (
     <Icon {...props}>
         <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" />
         <circle cx="12" cy="10" r="2.5" />
-    </Icon>
-);
-
-const Clock3 = (props: IconProps) => (
-    <Icon {...props}>
-        <circle cx="12" cy="12" r="9" />
-        <path d="M12 7v5l-3 2" />
-    </Icon>
-);
-
-const Instagram = (props: IconProps) => (
-    <Icon {...props}>
-        <rect x="3" y="3" width="18" height="18" rx="5" />
-        <circle cx="12" cy="12" r="4" />
-        <circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none" />
     </Icon>
 );
 
@@ -93,120 +71,20 @@ const Utensils = (props: IconProps) => (
     </Icon>
 );
 
-const productCategories = ["Όλα", "Κλασικό", "Premium", "Limited", "Mini"] as const;
-
-type ProductCategory = (typeof productCategories)[number];
-
-type LocalProduct = {
-    id: string;
-    name: string;
-    category: Exclude<ProductCategory, "Όλα">;
-    description: string;
-    alcohol: string;
-    size: string;
-    note: string;
-    image: string;
-    featured?: boolean;
-};
-
-const products: LocalProduct[] = [
-    {
-        id: "1",
-        name: "Aegean Classic",
-        category: "Κλασικό",
-        description:
-            "Η πιο καθαρή και γνώριμη εκδοχή του ούζου. Ιδανικό για όσους θέλουν να ξεκινήσουν από την αυθεντική γεύση.",
-        alcohol: "40% vol.",
-        size: "700 ml",
-        note: "Για πρώτο tasting",
-        featured: true,
-        image:
-            "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1400&q=90",
-    },
-    {
-        id: "2",
-        name: "Aegean Reserve",
-        category: "Premium",
-        description:
-            "Πιο αρωματικό και γεμάτο. Ταιριάζει σε αργό δείπνο δίπλα στη θάλασσα ή σε μια πιο ιδιαίτερη γαστρονομική στάση.",
-        alcohol: "42% vol.",
-        size: "700 ml",
-        note: "Για food pairing",
-        image:
-            "https://images.unsplash.com/photo-1569529465841-dfecdab7503b?auto=format&fit=crop&w=1400&q=90",
-    },
-    {
-        id: "3",
-        name: "Aegean No. 7",
-        category: "Limited",
-        description:
-            "Μικρή παραγωγή, πιο συλλεκτικός χαρακτήρας και προσεγμένη φιάλη. Ωραία επιλογή ως αναμνηστικό από το ταξίδι.",
-        alcohol: "45% vol.",
-        size: "500 ml",
-        note: "Για δώρο",
-        image:
-            "https://images.unsplash.com/photo-1473973266408-ed4e27abdd47?auto=format&fit=crop&w=1400&q=90",
-    },
-    {
-        id: "4",
-        name: "Aegean Mini",
-        category: "Mini",
-        description:
-            "Μικρή συσκευασία για ταξιδιώτες που θέλουν να πάρουν μαζί τους μια γεύση Αιγαίου χωρίς να γεμίσουν τη βαλίτσα.",
-        alcohol: "40% vol.",
-        size: "200 ml",
-        note: "Για τη βαλίτσα",
-        image:
-            "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1400&q=90",
-    },
-];
+const Glass = (props: IconProps) => (
+    <Icon {...props}>
+        <path d="M6 3h12l-1.5 8a4.6 4.6 0 0 1-9 0L6 3Z" />
+        <path d="M12 15v6M8.5 21h7" />
+    </Icon>
+);
 
 const guideLinks = [
-    { label: "Τοπικό προϊόν", href: "#local-product" },
-    { label: "Πώς να το δοκιμάσεις", href: "#experience" },
-    { label: "Επιλογές", href: "#products" },
+    { label: "Ούζο Αιγαίο", href: "#ouzo-aigaio" },
+    { label: "Η εμπειρία", href: "#experience" },
+    { label: "Σερβίρισμα", href: "#serving" },
 ];
 
-function getCategoryBadge(category: LocalProduct["category"]) {
-    switch (category) {
-        case "Premium":
-            return "Food pairing";
-        case "Limited":
-            return "Souvenir pick";
-        case "Mini":
-            return "Travel size";
-        default:
-            return "Local classic";
-    }
-}
-
-export default function LocalOuzoGuideSection() {
-    const [activeCategory, setActiveCategory] = useState<ProductCategory>("Όλα");
-    const [searchTerm, setSearchTerm] = useState("");
-
-    const filteredProducts = useMemo(() => {
-        const query = searchTerm.trim().toLocaleLowerCase("el");
-
-        return products.filter((product) => {
-            const matchesCategory =
-                activeCategory === "Όλα" || product.category === activeCategory;
-
-            const matchesSearch =
-                !query ||
-                product.name.toLocaleLowerCase("el").includes(query) ||
-                product.description.toLocaleLowerCase("el").includes(query) ||
-                product.category.toLocaleLowerCase("el").includes(query) ||
-                product.note.toLocaleLowerCase("el").includes(query);
-
-            return matchesCategory && matchesSearch;
-        });
-    }, [activeCategory, searchTerm]);
-
-    const resetFilters = () => {
-        setActiveCategory("Όλα");
-        setSearchTerm("");
-    };
-
+export default function OuzoAigaioPage() {
     return (
         <>
             <style jsx global>{`
@@ -265,13 +143,6 @@ export default function LocalOuzoGuideSection() {
                     animation-delay: 0.24s;
                 }
 
-                .editorial-card {
-                    background-image:
-                            linear-gradient(rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.78)),
-                            radial-gradient(circle at top left, rgba(59, 130, 246, 0.18), transparent 36%),
-                            radial-gradient(circle at bottom right, rgba(14, 165, 233, 0.12), transparent 34%);
-                }
-
                 @media (prefers-reduced-motion: reduce) {
                     *,
                     *::before,
@@ -284,26 +155,29 @@ export default function LocalOuzoGuideSection() {
             `}</style>
 
             <main className="min-h-screen overflow-x-hidden bg-[#f8fafc] text-[#0f172a] selection:bg-[#2563eb] selection:text-white">
+                {/* HERO */}
                 <section
-                    id="local-product"
+                    id="ouzo-aigaio"
                     className="relative overflow-hidden bg-[#f8fafc] px-5 py-8 sm:px-8 lg:py-12"
                 >
                     <div className="absolute -left-40 top-20 h-96 w-96 rounded-full bg-[#bfdbfe]/70 blur-3xl" />
                     <div className="absolute -right-40 bottom-12 h-[480px] w-[480px] rounded-full bg-[#dbeafe] blur-3xl" />
 
                     <div className="relative mx-auto max-w-7xl">
+                        {/* NAV */}
                         <div className="mb-8 flex flex-wrap items-center justify-center gap-3 rounded-[2rem] border border-[#0f172a]/10 bg-white/75 px-4 py-4 shadow-xl shadow-[#0f172a]/5 backdrop-blur-xl sm:justify-between sm:px-6">
-                            <a href="#local-product" className="group flex items-center gap-3">
+                            <a href="#ouzo-aigaio" className="group flex items-center gap-3">
                 <span className="grid h-11 w-11 place-items-center rounded-full bg-[#0f172a] text-white transition group-hover:scale-105">
                   <Compass className="h-5 w-5" />
                 </span>
 
                                 <span>
                   <span className="block font-serif text-xl leading-none">
-                    Local Taste Guide
+                    Ούζο Αιγαίο
                   </span>
+
                   <span className="mt-1 block text-[10px] uppercase tracking-[0.24em] text-[#64748b]">
-                    Greek spirits & places
+                    Γεύση ελληνικού καλοκαιριού
                   </span>
                 </span>
                             </a>
@@ -321,39 +195,39 @@ export default function LocalOuzoGuideSection() {
                             </nav>
 
                             <a
-                                href="#products"
+                                href="#serving"
                                 className="rounded-full bg-[#2563eb] px-5 py-2.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#1d4ed8]"
                             >
-                                Δες επιλογές
+                                Ανακάλυψέ το
                             </a>
                         </div>
 
+                        {/* HERO CONTENT */}
                         <div className="grid min-h-[720px] items-center gap-12 rounded-[2.75rem] border border-[#0f172a]/10 bg-white/70 p-5 shadow-2xl shadow-[#0f172a]/5 backdrop-blur-xl sm:p-8 lg:grid-cols-[1.05fr_.95fr] lg:p-12">
                             <div className="max-w-2xl animate-fade-up">
                                 <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#2563eb]/15 bg-[#eff6ff] px-4 py-2 text-xs uppercase tracking-[0.18em] text-[#2563eb]">
                                     <Sparkles className="h-3.5 w-3.5" />
-                                    Πρόταση ταξιδιωτικού οδηγού
+                                    Αυθεντική ελληνική απόλαυση
                                 </div>
 
                                 <h1 className="font-serif text-5xl leading-[1] tracking-[-0.045em] text-[#0f172a] sm:text-7xl lg:text-[82px]">
-                                    Μια γεύση Αιγαίου,
+                                    Ούζο
                                     <span className="mt-2 block italic text-[#2563eb]">
-                    πριν φύγεις.
+                    Αιγαίο.
                   </span>
                                 </h1>
 
                                 <p className="mt-8 max-w-xl text-base leading-8 text-[#475569] sm:text-lg">
-                                    Αν θέλεις να γνωρίσεις έναν τόπο, ξεκίνα από αυτά που
-                                    σερβίρονται στο τραπέζι του. Το Aegean Ouzo είναι μια
-                                    τοπική πρόταση που συνδέει άρωμα, φιλοξενία και ελληνικό
-                                    καλοκαίρι σε μία εμπειρία.
+                                    Ένα ούζο που φέρνει στο ποτήρι σου εικόνες από το Αιγαίο,
+                                    ελληνικά τραπέζια, θαλασσινούς μεζέδες και εκείνες τις
+                                    καλοκαιρινές στιγμές που θέλεις να κρατήσουν λίγο περισσότερο.
                                 </p>
 
                                 <div className="mt-10 grid gap-3 sm:grid-cols-3">
                                     {[
-                                        ["01", "Τοπικό προϊόν"],
-                                        ["02", "Ιδανικό με μεζέδες"],
-                                        ["03", "Ωραίο souvenir"],
+                                        ["01", "Αυθεντικό ούζο"],
+                                        ["02", "Με ελληνικούς μεζέδες"],
+                                        ["03", "Γεύση Αιγαίου"],
                                     ].map(([number, label]) => (
                                         <div
                                             key={label}
@@ -362,6 +236,7 @@ export default function LocalOuzoGuideSection() {
                                             <p className="text-xs font-semibold text-[#2563eb]">
                                                 {number}
                                             </p>
+
                                             <p className="mt-3 font-serif text-xl">{label}</p>
                                         </div>
                                     ))}
@@ -372,41 +247,46 @@ export default function LocalOuzoGuideSection() {
                                         href="#experience"
                                         className="inline-flex items-center justify-center gap-2 rounded-full bg-[#0f172a] px-7 py-4 font-semibold text-white shadow-xl shadow-[#0f172a]/10 transition hover:-translate-y-0.5 hover:bg-[#2563eb]"
                                     >
-                                        Πώς να το δοκιμάσεις
+                                        Γνώρισε το Ούζο Αιγαίο
                                         <ArrowRight className="h-4 w-4" />
                                     </a>
 
                                     <a
-                                        href="#products"
+                                        href="#serving"
                                         className="inline-flex items-center justify-center rounded-full border border-[#0f172a]/15 bg-white px-7 py-4 font-medium text-[#0f172a] transition hover:bg-[#eff6ff]"
                                     >
-                                        Δες τη συλλογή
+                                        Πώς σερβίρεται
                                     </a>
                                 </div>
                             </div>
 
+                            {/* PRODUCT IMAGE */}
                             <div className="relative mx-auto w-full max-w-xl animate-fade-up delay-2 lg:max-w-none">
                                 <div className="absolute -right-6 -top-6 z-10 rounded-2xl bg-[#0f172a] px-5 py-4 text-white shadow-xl">
                                     <p className="text-[10px] uppercase tracking-[0.22em] text-white/50">
-                                        Guide note
+                                        Ούζο Αιγαίο
                                     </p>
-                                    <p className="mt-1 font-serif text-2xl">Try it slowly</p>
+                                    <p className="mt-1 font-serif text-2xl">
+                                        Ελληνικό καλοκαίρι
+                                    </p>
                                 </div>
 
                                 <div className="relative overflow-hidden rounded-[2.25rem] shadow-2xl shadow-[#0f172a]/15">
                                     <img
                                         src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1400&q=90"
-                                        alt="Τοπικό ούζο ως εμπειρία ταξιδιού"
+                                        alt="Ούζο Αιγαίο"
                                         className="h-[520px] w-full object-cover sm:h-[640px]"
                                     />
+
                                     <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/80 via-transparent to-transparent" />
 
                                     <div className="absolute bottom-0 left-0 right-0 p-7 sm:p-10">
                                         <p className="text-xs uppercase tracking-[0.25em] text-[#bfdbfe]">
-                                            Local ritual
+                                            Το ελληνικό ritual
                                         </p>
+
                                         <p className="mt-2 max-w-sm font-serif text-3xl text-white">
-                                            Σερβίρεται με νερό, πάγο και μικρούς ελληνικούς μεζέδες.
+                                            Νερό, πάγος, καλή παρέα και ένα τραπέζι γεμάτο μεζέδες.
                                         </p>
                                     </div>
                                 </div>
@@ -416,12 +296,14 @@ export default function LocalOuzoGuideSection() {
                                         <div className="grid h-11 w-11 place-items-center rounded-full bg-[#dbeafe] text-[#2563eb]">
                                             <Star className="h-5 w-5" />
                                         </div>
+
                                         <div>
                                             <p className="text-sm font-semibold text-[#0f172a]">
-                                                Travel pick
+                                                Ούζο Αιγαίο
                                             </p>
+
                                             <p className="text-xs text-[#64748b]">
-                                                Για αυθεντική τοπική γεύση
+                                                Μια γεύση από Ελλάδα
                                             </p>
                                         </div>
                                     </div>
@@ -431,7 +313,11 @@ export default function LocalOuzoGuideSection() {
                     </div>
                 </section>
 
-                <section id="experience" className="bg-[#0f172a] py-24 text-white sm:py-32">
+                {/* EXPERIENCE */}
+                <section
+                    id="experience"
+                    className="bg-[#0f172a] py-24 text-white sm:py-32"
+                >
                     <div className="mx-auto max-w-7xl px-5 sm:px-8">
                         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
                             <div className="animate-fade-up">
@@ -440,13 +326,14 @@ export default function LocalOuzoGuideSection() {
                                 </p>
 
                                 <h2 className="mt-5 max-w-xl font-serif text-4xl leading-tight tracking-[-0.03em] sm:text-6xl">
-                                    Δεν είναι απλώς ποτό. Είναι στάση στο ταξίδι.
+                                    Το Ούζο Αιγαίο δεν είναι απλώς ένα ποτό.
                                 </h2>
 
                                 <p className="mt-7 max-w-xl text-lg leading-8 text-white/60">
-                                    Στον οδηγό σου μπορεί να παρουσιαστεί ως μικρή τοπική
-                                    εμπειρία: κάτι που ο επισκέπτης δοκιμάζει σε ένα ταβερνάκι,
-                                    παίρνει ως δώρο ή συνδέει με μια βραδιά δίπλα στη θάλασσα.
+                                    Είναι η στιγμή που το τραπέζι γεμίζει με μικρά πιάτα, η παρέα
+                                    μεγαλώνει και ο χρόνος κυλά λίγο πιο αργά. Μια αυθεντικά
+                                    ελληνική συνήθεια που συνδέεται με τη θάλασσα, τη φιλοξενία
+                                    και το καλοκαίρι.
                                 </p>
                             </div>
 
@@ -455,22 +342,22 @@ export default function LocalOuzoGuideSection() {
                                     {
                                         icon: Utensils,
                                         title: "Με τι ταιριάζει",
-                                        body: "Με θαλασσινά, ελιές, τυριά, ντολμαδάκια και απλούς ελληνικούς μεζέδες.",
+                                        body: "Θαλασσινά, χταπόδι, ελιές, τυριά, ντολμαδάκια και αγαπημένοι ελληνικοί μεζέδες.",
                                     },
                                     {
                                         icon: Droplets,
-                                        title: "Πώς σερβίρεται",
-                                        body: "Συνήθως με λίγο νερό και πάγο, ώστε να ανοίξουν τα αρώματα του γλυκάνισου.",
+                                        title: "Με λίγο νερό",
+                                        body: "Πρόσθεσε λίγο δροσερό νερό ώστε το ούζο να αποκτήσει τον χαρακτηριστικό γαλακτώδη τόνο του.",
                                     },
                                     {
-                                        icon: MapPin,
-                                        title: "Γιατί να το ψάξεις",
-                                        body: "Γιατί είναι από τις γεύσεις που συνδέονται άμεσα με ελληνική φιλοξενία και καλοκαίρι.",
+                                        icon: Glass,
+                                        title: "Με πάγο",
+                                        body: "Λίγα παγάκια ολοκληρώνουν το σερβίρισμα και το κρατούν δροσερό τις ζεστές καλοκαιρινές ημέρες.",
                                     },
                                     {
                                         icon: Compass,
-                                        title: "Tip οδηγού",
-                                        body: "Πρότεινέ το ως after-dinner εμπειρία ή ως τοπικό προϊόν που αξίζει να μπει στη βαλίτσα.",
+                                        title: "Σαν να είσαι στο Αιγαίο",
+                                        body: "Ιδανικό για ένα χαλαρό μεσημέρι, ένα τραπέζι δίπλα στη θάλασσα ή ένα όμορφο καλοκαιρινό βράδυ.",
                                     },
                                 ].map(({ icon: ExperienceIcon, title, body }) => (
                                     <div
@@ -482,6 +369,7 @@ export default function LocalOuzoGuideSection() {
                     </span>
 
                                         <h3 className="mt-6 font-serif text-2xl">{title}</h3>
+
                                         <p className="mt-3 text-sm leading-6 text-white/55">
                                             {body}
                                         </p>
@@ -492,183 +380,124 @@ export default function LocalOuzoGuideSection() {
                     </div>
                 </section>
 
-                <section id="products" className="bg-[#f1f5f9] py-24 sm:py-32">
+                {/* SERVING */}
+                <section id="serving" className="bg-[#f1f5f9] py-24 sm:py-32">
                     <div className="mx-auto max-w-7xl px-5 sm:px-8">
-                        <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
-                            <div>
-                                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#2563eb]">
-                                    Επιλογές για τον ταξιδιώτη
-                                </p>
+                        <div className="mx-auto max-w-3xl text-center">
+                            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#2563eb]">
+                                Πώς απολαμβάνεται
+                            </p>
 
-                                <h2 className="mt-4 max-w-3xl font-serif text-4xl tracking-[-0.03em] sm:text-6xl">
-                                    Ποια εκδοχή ταιριάζει στην εμπειρία σου;
-                                </h2>
-                            </div>
+                            <h2 className="mt-4 font-serif text-4xl tracking-[-0.03em] sm:text-6xl">
+                                Απλά. Αργά. Ελληνικά.
+                            </h2>
 
-                            <label className="relative block w-full lg:w-[340px]">
-                                <span className="sr-only">Αναζήτηση προϊόντος</span>
-                                <Search className="absolute left-5 top-1/2 h-4 w-4 -translate-y-1/2 text-[#64748b]" />
-                                <input
-                                    value={searchTerm}
-                                    onChange={(event) => setSearchTerm(event.target.value)}
-                                    placeholder="Αναζήτηση επιλογής..."
-                                    className="h-14 w-full rounded-full border border-[#0f172a]/10 bg-white pl-12 pr-5 text-sm outline-none transition placeholder:text-[#64748b]/70 focus:border-[#2563eb]"
-                                />
-                            </label>
+                            <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-[#64748b]">
+                                Το Ούζο Αιγαίο θέλει χρόνο, παρέα και ένα τραπέζι γεμάτο μικρές
+                                γεύσεις. Δεν χρειάζονται πολλά για να δημιουργηθεί η σωστή
+                                στιγμή.
+                            </p>
                         </div>
 
-                        <div className="mt-10 flex flex-wrap gap-2">
-                            {productCategories.map((category) => (
-                                <button
-                                    key={category}
-                                    type="button"
-                                    onClick={() => setActiveCategory(category)}
-                                    className={`rounded-full px-5 py-2.5 text-sm font-medium transition duration-300 hover:-translate-y-0.5 ${
-                                        activeCategory === category
-                                            ? "bg-[#0f172a] text-white shadow-lg shadow-[#0f172a]/15"
-                                            : "border border-[#0f172a]/10 bg-white text-[#475569] hover:bg-[#eff6ff]"
-                                    }`}
-                                >
-                                    {category}
-                                </button>
-                            ))}
-                        </div>
-
-                        <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-                            {filteredProducts.map((product) => (
+                        <div className="mt-14 grid gap-6 md:grid-cols-3">
+                            {[
+                                {
+                                    number: "01",
+                                    title: "Σέρβιρε το ούζο",
+                                    body: "Βάλε το Ούζο Αιγαίο σε ένα ψηλό ή παραδοσιακό ποτήρι.",
+                                },
+                                {
+                                    number: "02",
+                                    title: "Πρόσθεσε νερό & πάγο",
+                                    body: "Πρόσθεσε δροσερό νερό και στη συνέχεια λίγα παγάκια.",
+                                },
+                                {
+                                    number: "03",
+                                    title: "Βάλε τους μεζέδες",
+                                    body: "Συνόδευσέ το με θαλασσινά, τυριά, ελιές και αγαπημένες ελληνικές γεύσεις.",
+                                },
+                            ].map(({ number, title, body }) => (
                                 <article
-                                    key={product.id}
-                                    style={{ animationDelay: `${Number(product.id) * 90}ms` }}
-                                    className={`group animate-fade-up overflow-hidden rounded-[1.75rem] border border-[#0f172a]/10 bg-white transition duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#0f172a]/10 ${
-                                        product.featured ? "md:col-span-2 xl:col-span-1" : ""
-                                    }`}
+                                    key={number}
+                                    className="group rounded-[2rem] border border-[#0f172a]/10 bg-white p-8 shadow-sm transition duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#0f172a]/10"
                                 >
-                                    <div className="relative overflow-hidden">
-                                        <img
-                                            src={product.image}
-                                            alt={product.name}
-                                            className="h-80 w-full object-cover transition duration-700 group-hover:scale-105"
-                                        />
+                  <span className="text-xs font-semibold tracking-[0.2em] text-[#2563eb]">
+                    {number}
+                  </span>
 
-                                        <div className="absolute inset-x-0 top-0 flex items-center justify-between p-4">
-                      <span className="rounded-full bg-white/90 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#0f172a] backdrop-blur">
-                        {getCategoryBadge(product.category)}
-                      </span>
+                                    <h3 className="mt-7 font-serif text-3xl">{title}</h3>
 
-                                            <span className="rounded-full bg-[#0f172a]/75 px-3 py-1.5 text-xs text-white backdrop-blur">
-                        {product.size}
-                      </span>
-                                        </div>
-                                    </div>
-
-                                    <div className="p-6">
-                                        <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#2563eb]">
-                                            {product.note}
-                                        </p>
-
-                                        <h3 className="mt-3 font-serif text-3xl">
-                                            {product.name}
-                                        </h3>
-
-                                        <p className="mt-4 min-h-[96px] text-sm leading-6 text-[#64748b]">
-                                            {product.description}
-                                        </p>
-
-                                        <div className="mt-6 flex items-center justify-between border-t border-[#0f172a]/10 pt-5">
-                      <span className="text-sm font-semibold">
-                        {product.alcohol}
-                      </span>
-
-                                            <button
-                                                type="button"
-                                                aria-label={`Περισσότερα για ${product.name}`}
-                                                className="grid h-10 w-10 place-items-center rounded-full bg-[#0f172a] text-white transition duration-300 hover:scale-110 group-hover:rotate-[-8deg] group-hover:bg-[#2563eb]"
-                                            >
-                                                <ArrowRight className="h-4 w-4" />
-                                            </button>
-                                        </div>
-                                    </div>
+                                    <p className="mt-4 text-sm leading-7 text-[#64748b]">
+                                        {body}
+                                    </p>
                                 </article>
                             ))}
                         </div>
-
-                        {filteredProducts.length === 0 && (
-                            <div className="mt-12 rounded-3xl border border-dashed border-[#0f172a]/20 bg-white px-6 py-16 text-center">
-                                <Search className="mx-auto h-8 w-8 text-[#64748b]" />
-                                <h3 className="mt-4 font-serif text-2xl">
-                                    Δεν βρέθηκε επιλογή
-                                </h3>
-                                <p className="mt-2 text-sm text-[#64748b]">
-                                    Δοκίμασε διαφορετικό όρο ή κατηγορία.
-                                </p>
-
-                                <button
-                                    type="button"
-                                    onClick={resetFilters}
-                                    className="mt-6 rounded-full bg-[#0f172a] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#2563eb]"
-                                >
-                                    Καθαρισμός φίλτρων
-                                </button>
-                            </div>
-                        )}
                     </div>
                 </section>
 
+                {/* FINAL CTA */}
                 <section className="bg-white py-24 sm:py-32">
                     <div className="mx-auto max-w-7xl px-5 sm:px-8">
-                        <div className="overflow-hidden rounded-[2rem] border border-[#0f172a]/10 bg-[#eff6ff]">
-                            <div className="grid lg:grid-cols-[1.1fr_0.9fr]">
-                                <div className="p-8 sm:p-12 lg:p-16">
+                        <div className="relative overflow-hidden rounded-[2.5rem] bg-[#eff6ff] p-8 sm:p-12 lg:p-16">
+                            <div className="absolute -right-28 -top-28 h-80 w-80 rounded-full bg-[#bfdbfe] blur-3xl" />
+
+                            <div className="relative grid gap-12 lg:grid-cols-[1.1fr_.9fr] lg:items-center">
+                                <div>
                                     <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#2563eb]">
-                                        Σημείωση οδηγού
+                                        Ούζο Αιγαίο
                                     </p>
 
-                                    <h2 className="mt-5 max-w-xl font-serif text-4xl leading-tight sm:text-6xl">
-                                        Πρόσθεσέ το ως τοπική πρόταση, όχι ως απλή διαφήμιση.
+                                    <h2 className="mt-5 max-w-2xl font-serif text-4xl leading-tight sm:text-6xl">
+                                        Μια μικρή γουλιά από το ελληνικό καλοκαίρι.
                                     </h2>
 
                                     <p className="mt-6 max-w-xl leading-7 text-[#475569]">
-                                        Μπορείς να το παρουσιάσεις δίπλα σε προτάσεις για φαγητό,
-                                        παραθαλάσσιες βόλτες ή αγορές τοπικών προϊόντων. Έτσι
-                                        μοιάζει οργανικό μέσα στον ταξιδιωτικό οδηγό σου.
+                                        Από ένα μεσημεριανό τραπέζι δίπλα στη θάλασσα μέχρι μια
+                                        βραδιά με φίλους, το Ούζο Αιγαίο είναι φτιαγμένο για τις
+                                        στιγμές που αξίζει να μοιράζεσαι.
                                     </p>
 
                                     <a
                                         href="mailto:hello@aegeanouzo.gr"
                                         className="mt-9 inline-flex items-center gap-2 rounded-full bg-[#2563eb] px-7 py-4 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#1d4ed8]"
                                     >
-                                        Επικοινωνία με παραγωγό
+                                        Επικοινωνία
                                         <ArrowRight className="h-4 w-4" />
                                     </a>
                                 </div>
 
-                                <div className="grid border-t border-[#0f172a]/10 lg:border-l lg:border-t-0">
+                                <div className="grid gap-4">
                                     {[
-                                        { icon: MapPin, title: "Περιοχή", text: "Αθήνα, Ελλάδα" },
                                         {
-                                            icon: Clock3,
-                                            title: "Πότε να το προτείνεις",
-                                            text: "Μεσημεριανό, δείπνο ή sunset stop",
+                                            icon: MapPin,
+                                            title: "Ελληνική ταυτότητα",
+                                            text: "Ένα προϊόν συνδεδεμένο με το ελληνικό τραπέζι και το Αιγαίο.",
                                         },
                                         {
-                                            icon: Instagram,
-                                            title: "Για τον ταξιδιώτη",
-                                            text: "Τοπική γεύση, δώρο ή εμπειρία",
+                                            icon: Utensils,
+                                            title: "Ιδανικό με μεζέδες",
+                                            text: "Απολαμβάνεται καλύτερα με φαγητό, παρέα και χαλαρό ρυθμό.",
                                         },
-                                    ].map(({ icon: InfoIcon, title, text }, index) => (
+                                        {
+                                            icon: Sparkles,
+                                            title: "Καλοκαιρινή εμπειρία",
+                                            text: "Για στιγμές που μυρίζουν θάλασσα και Ελλάδα.",
+                                        },
+                                    ].map(({ icon: InfoIcon, title, text }) => (
                                         <div
                                             key={title}
-                                            className={`flex gap-5 p-8 sm:p-10 ${
-                                                index > 0 ? "border-t border-[#0f172a]/10" : ""
-                                            }`}
+                                            className="flex gap-5 rounded-3xl border border-[#0f172a]/10 bg-white/80 p-6 backdrop-blur"
                                         >
-                      <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-[#2563eb]/20 bg-white text-[#2563eb]">
+                      <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-[#dbeafe] text-[#2563eb]">
                         <InfoIcon className="h-5 w-5" />
                       </span>
 
                                             <div>
                                                 <p className="font-serif text-xl">{title}</p>
-                                                <p className="mt-2 text-sm text-[#64748b]">{text}</p>
+                                                <p className="mt-2 text-sm leading-6 text-[#64748b]">
+                                                    {text}
+                                                </p>
                                             </div>
                                         </div>
                                     ))}
