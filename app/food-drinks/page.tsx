@@ -47,7 +47,7 @@ const cafeTaverns: FoodItem[] = [
   {
     title: "Taverna Mpampis",
     category: "Tavern",
-    description: "Fresh meat, and tranditional dishes in north Lesvos",
+    description: "Fresh meat, and tranditional dishes in North Lesvos",
     location: "Molyvos, Lesvos",
     image: "/mpampis/mpampis-logo.jpg",
     alt: "Mpampis",
@@ -56,7 +56,7 @@ const cafeTaverns: FoodItem[] = [
   {
     title: "Taverna Apolafsi",
     category: "Tavern",
-    description: "Fresh meat, and tranditional dishes in north Lesvos",
+    description: "Fresh meat, and tranditional dishes in South Lesvos",
     location: "Plomari, Lesvos",
     image: "/apolafsi/a-hero.jpg",
     alt: "Apolafsi",
