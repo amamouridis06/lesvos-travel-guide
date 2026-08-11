@@ -537,7 +537,7 @@ export default function OuzoAigaioPage() {
 
                             <div className="rounded-[2rem] border border-[#0f172a]/10 bg-[#f8fafc] p-8 sm:p-10">
                 <span className="grid h-12 w-12 place-items-center rounded-full bg-[#dbeafe] text-[#2563eb]">
-                  Accessibility className="h-5 w-5" />
+                  <Accessibility className="h-5 w-5" />
                 </span>
 
                                 <p className="mt-7 text-xs font-semibold uppercase tracking-[0.22em] text-[#2563eb]">
