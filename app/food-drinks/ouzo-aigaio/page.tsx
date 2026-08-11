@@ -78,11 +78,20 @@ const Glass = (props: IconProps) => (
     </Icon>
 );
 
-const guideLinks = [
-    { label: "Ούζο Αιγαίο", href: "#ouzo-aigaio" },
-    { label: "Η εμπειρία", href: "#experience" },
-    { label: "Σερβίρισμα", href: "#serving" },
-];
+const Mail = (props: IconProps) => (
+    <Icon {...props}>
+        <rect x="3" y="5" width="18" height="14" rx="2" />
+        <path d="m3 7 9 6 9-6" />
+    </Icon>
+);
+
+const Phone = (props: IconProps) => (
+    <Icon {...props}>
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11L8 9.73a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92Z" />
+    </Icon>
+);
+
+
 
 export default function OuzoAigaioPage() {
     return (
@@ -164,45 +173,25 @@ export default function OuzoAigaioPage() {
                     <div className="absolute -right-40 bottom-12 h-[480px] w-[480px] rounded-full bg-[#dbeafe] blur-3xl" />
 
                     <div className="relative mx-auto max-w-7xl">
-                        {/* NAV */}
                         <div className="mb-8 flex flex-wrap items-center justify-center gap-3 rounded-[2rem] border border-[#0f172a]/10 bg-white/75 px-4 py-4 shadow-xl shadow-[#0f172a]/5 backdrop-blur-xl sm:justify-between sm:px-6">
                             <a href="#ouzo-aigaio" className="group flex items-center gap-3">
                 <span className="grid h-11 w-11 place-items-center rounded-full bg-[#0f172a] text-white transition group-hover:scale-105">
                   <Compass className="h-5 w-5" />
                 </span>
 
-                                <span>
-                  <span className="block font-serif text-xl leading-none">
-                    Ούζο Αιγαίο
-                  </span>
 
-                  <span className="mt-1 block text-[10px] uppercase tracking-[0.24em] text-[#64748b]">
-                    Γεύση ελληνικού καλοκαιριού
-                  </span>
-                </span>
                             </a>
 
-                            <nav className="flex flex-wrap items-center justify-center gap-2">
-                                {guideLinks.map((item) => (
-                                    <a
-                                        key={item.href}
-                                        href={item.href}
-                                        className="rounded-full px-4 py-2 text-sm font-medium text-[#475569] transition hover:bg-[#eff6ff] hover:text-[#0f172a]"
-                                    >
-                                        {item.label}
-                                    </a>
-                                ))}
-                            </nav>
+
 
                             <a
-                                href="#serving"
+                                href="#contact"
                                 className="rounded-full bg-[#2563eb] px-5 py-2.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#1d4ed8]"
                             >
-                                Ανακάλυψέ το
+                                Επικοινωνία
                             </a>
                         </div>
 
-                        {/* HERO CONTENT */}
                         <div className="grid min-h-[720px] items-center gap-12 rounded-[2.75rem] border border-[#0f172a]/10 bg-white/70 p-5 shadow-2xl shadow-[#0f172a]/5 backdrop-blur-xl sm:p-8 lg:grid-cols-[1.05fr_.95fr] lg:p-12">
                             <div className="max-w-2xl animate-fade-up">
                                 <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#2563eb]/15 bg-[#eff6ff] px-4 py-2 text-xs uppercase tracking-[0.18em] text-[#2563eb]">
@@ -260,7 +249,6 @@ export default function OuzoAigaioPage() {
                                 </div>
                             </div>
 
-                            {/* PRODUCT IMAGE */}
                             <div className="relative mx-auto w-full max-w-xl animate-fade-up delay-2 lg:max-w-none">
                                 <div className="absolute -right-6 -top-6 z-10 rounded-2xl bg-[#0f172a] px-5 py-4 text-white shadow-xl">
                                     <p className="text-[10px] uppercase tracking-[0.22em] text-white/50">
@@ -436,8 +424,85 @@ export default function OuzoAigaioPage() {
                     </div>
                 </section>
 
+                {/* CONTACT */}
+                <section id="contact" className="bg-white py-24 sm:py-32">
+                    <div className="mx-auto max-w-7xl px-5 sm:px-8">
+                        <div className="grid overflow-hidden rounded-[2.5rem] border border-[#0f172a]/10 bg-[#0f172a] shadow-2xl shadow-[#0f172a]/10 lg:grid-cols-[0.9fr_1.1fr]">
+                            <div className="p-8 text-white sm:p-12 lg:p-16">
+                                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#93c5fd]">
+                                    Επικοινωνία
+                                </p>
+
+                                <h2 className="mt-5 max-w-xl font-serif text-4xl leading-tight sm:text-6xl">
+                                    Ας μιλήσουμε για το Ούζο Αιγαίο.
+                                </h2>
+
+                                <p className="mt-6 max-w-lg text-base leading-8 text-white/60">
+                                    Για πληροφορίες σχετικά με το Ούζο Αιγαίο, συνεργασίες,
+                                    σημεία διάθεσης ή οποιαδήποτε άλλη ερώτηση, επικοινώνησε μαζί
+                                    μας.
+                                </p>
+
+                                <div className="mt-10 space-y-4">
+                                    <a
+                                        href="mailto:hello@aegeanouzo.gr"
+                                        className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:bg-white/10"
+                                    >
+                    <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-[#3b82f6]/15 text-[#93c5fd]">
+                      <Mail className="h-5 w-5" />
+                    </span>
+
+                                        <div>
+                                            <p className="text-xs uppercase tracking-[0.18em] text-white/40">
+                                                Email
+                                            </p>
+
+                                            <p className="mt-1 font-medium">
+                                                hello@aegeanouzo.gr
+                                            </p>
+                                        </div>
+                                    </a>
+
+                                    <a
+                                        href="tel:+302100000000"
+                                        className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:bg-white/10"
+                                    >
+                    <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-[#3b82f6]/15 text-[#93c5fd]">
+                      <Phone className="h-5 w-5" />
+                    </span>
+
+                                        <div>
+                                            <p className="text-xs uppercase tracking-[0.18em] text-white/40">
+                                                Τηλέφωνο
+                                            </p>
+
+                                            <p className="mt-1 font-medium">
+                                                +30 210 000 0000
+                                            </p>
+                                        </div>
+                                    </a>
+
+                                    <div className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-5">
+                    <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-[#3b82f6]/15 text-[#93c5fd]">
+                      <MapPin className="h-5 w-5" />
+                    </span>
+
+                                        <div>
+                                            <p className="text-xs uppercase tracking-[0.18em] text-white/40">
+                                                Τοποθεσία
+                                            </p>
+
+                                            <p className="mt-1 font-medium">Ελλάδα</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 {/* FINAL CTA */}
-                <section className="bg-white py-24 sm:py-32">
+                <section className="bg-[#f8fafc] py-24 sm:py-32">
                     <div className="mx-auto max-w-7xl px-5 sm:px-8">
                         <div className="relative overflow-hidden rounded-[2.5rem] bg-[#eff6ff] p-8 sm:p-12 lg:p-16">
                             <div className="absolute -right-28 -top-28 h-80 w-80 rounded-full bg-[#bfdbfe] blur-3xl" />
@@ -459,7 +524,7 @@ export default function OuzoAigaioPage() {
                                     </p>
 
                                     <a
-                                        href="mailto:hello@aegeanouzo.gr"
+                                        href="#contact"
                                         className="mt-9 inline-flex items-center gap-2 rounded-full bg-[#2563eb] px-7 py-4 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#1d4ed8]"
                                     >
                                         Επικοινωνία
@@ -495,6 +560,7 @@ export default function OuzoAigaioPage() {
 
                                             <div>
                                                 <p className="font-serif text-xl">{title}</p>
+
                                                 <p className="mt-2 text-sm leading-6 text-[#64748b]">
                                                     {text}
                                                 </p>
