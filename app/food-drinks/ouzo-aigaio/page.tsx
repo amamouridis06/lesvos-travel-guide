@@ -40,7 +40,6 @@ const Sparkles = (props: IconProps) => (
 const Droplets = (props: IconProps) => (
     <Icon {...props}>
         <path d="M12 3s-5 5.2-5 9a5 5 0 0 0 10 0c0-3.8-5-9-5-9Z" />
-        <path d="M5 16c-1.2 1.4-2 2.7-2 3.8a2.5 2.5 0 0 0 5 0" />
     </Icon>
 );
 
@@ -78,19 +77,6 @@ const Glass = (props: IconProps) => (
     </Icon>
 );
 
-const Mail = (props: IconProps) => (
-    <Icon {...props}>
-        <rect x="3" y="5" width="18" height="14" rx="2" />
-        <path d="m3 7 9 6 9-6" />
-    </Icon>
-);
-
-const Phone = (props: IconProps) => (
-    <Icon {...props}>
-        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11L8 9.73a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92Z" />
-    </Icon>
-);
-
 const Clock = (props: IconProps) => (
     <Icon {...props}>
         <circle cx="12" cy="12" r="9" />
@@ -103,7 +89,6 @@ const Store = (props: IconProps) => (
         <path d="M4 10v10h16V10" />
         <path d="M3 10 5 4h14l2 6" />
         <path d="M8 20v-6h8v6" />
-        <path d="M3 10c0 2 3 2 3 0 0 2 3 2 3 0 0 2 3 2 3 0 0 2 3 2 3 0 0 2 3 2 3 0" />
     </Icon>
 );
 
@@ -128,65 +113,98 @@ const Accessibility = (props: IconProps) => (
     </Icon>
 );
 
-const guideLinks = [
-    { label: "Ούζο Αιγαίο", href: "#ouzo-aigaio" },
-    { label: "Η εμπειρία", href: "#experience" },
-    { label: "Σερβίρισμα", href: "#serving" },
-    { label: "Πού θα το βρεις", href: "#availability" },
-    { label: "Επικοινωνία", href: "#contact" },
+/*
+ * ============================================================
+ * ΠΡΟΪΟΝΤΑ
+ * ============================================================
+ *
+ * Για να αλλάξει η φωτογραφία ενός προϊόντος,
+ * αλλάζει μόνο το "image".
+ *
+ * Οι φωτογραφίες μπορούν π.χ. να τοποθετηθούν:
+ *
+ * public/images/ouzo-aigaio.jpg
+ * public/images/aigaio-dry.jpg
+ */
+
+const products = [
+    {
+        id: "aigaio",
+        name: "Ούζο Αιγαίο",
+        colorName: "Μπλε",
+        image: "/images/ouzo-aigaio.jpg",
+        alt: "Ούζο Αιγαίο",
+        description:
+            "Το Ούζο Αιγαίο διατίθεται σε τέσσερις διαφορετικές συσκευασίες.",
+        sizes: ["50 ml", "200 ml", "500 ml", "700 ml"],
+        accent: "blue",
+    },
+    {
+        id: "aigaio-dry",
+        name: "Αιγαίο Dry",
+        colorName: "Κόκκινο",
+        image: "/images/aigaio-dry.jpg",
+        alt: "Ούζο Αιγαίο Dry",
+        description:
+            "Το Αιγαίο Dry διατίθεται σε δύο διαφορετικές συσκευασίες.",
+        sizes: ["200 ml", "700 ml"],
+        accent: "red",
+    },
 ];
 
 export default function OuzoAigaioPage() {
     return (
         <>
             <style jsx global>{`
-                html {
-                    scroll-behavior: smooth;
-                }
+        html {
+          scroll-behavior: smooth;
+        }
 
-                @keyframes fadeUp {
-                    from {
-                        opacity: 0;
-                        transform: translateY(24px);
-                    }
-                    to {
-                        opacity: 1;
-                        transform: translateY(0);
-                    }
-                }
+        @keyframes fadeUp {
+          from {
+            opacity: 0;
+            transform: translateY(24px);
+          }
 
-                @keyframes floatSoft {
-                    0%,
-                    100% {
-                        transform: translateY(0) rotate(0deg);
-                    }
-                    50% {
-                        transform: translateY(-12px) rotate(1.5deg);
-                    }
-                }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
 
-                .animate-fade-up {
-                    animation: fadeUp 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
-                }
+        @keyframes floatSoft {
+          0%,
+          100% {
+            transform: translateY(0) rotate(0deg);
+          }
 
-                .animate-float-soft {
-                    animation: floatSoft 5.5s ease-in-out infinite;
-                }
+          50% {
+            transform: translateY(-12px) rotate(1.5deg);
+          }
+        }
 
-                .delay-2 {
-                    animation-delay: 0.24s;
-                }
+        .animate-fade-up {
+          animation: fadeUp 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
 
-                @media (prefers-reduced-motion: reduce) {
-                    *,
-                    *::before,
-                    *::after {
-                        animation-duration: 0.01ms !important;
-                        animation-iteration-count: 1 !important;
-                        scroll-behavior: auto !important;
-                    }
-                }
-            `}</style>
+        .animate-float-soft {
+          animation: floatSoft 5.5s ease-in-out infinite;
+        }
+
+        .delay-2 {
+          animation-delay: 0.24s;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          *,
+          *::before,
+          *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            scroll-behavior: auto !important;
+          }
+        }
+      `}</style>
 
             <main className="min-h-screen overflow-x-hidden bg-[#f8fafc] text-[#0f172a] selection:bg-[#2563eb] selection:text-white">
 
@@ -199,45 +217,6 @@ export default function OuzoAigaioPage() {
                     <div className="absolute -right-40 bottom-12 h-[480px] w-[480px] rounded-full bg-[#dbeafe] blur-3xl" />
 
                     <div className="relative mx-auto max-w-7xl">
-                        {/* NAV */}
-                        <div className="mb-8 flex flex-wrap items-center justify-center gap-3 rounded-[2rem] border border-[#0f172a]/10 bg-white/75 px-4 py-4 shadow-xl shadow-[#0f172a]/5 backdrop-blur-xl sm:justify-between sm:px-6">
-                            <a href="#ouzo-aigaio" className="group flex items-center gap-3">
-                <span className="grid h-11 w-11 place-items-center rounded-full bg-[#0f172a] text-white transition group-hover:scale-105">
-                  <Compass className="h-5 w-5" />
-                </span>
-
-                                <span>
-                  <span className="block font-serif text-xl leading-none">
-                    Ούζο Αιγαίο
-                  </span>
-
-                  <span className="mt-1 block text-[10px] uppercase tracking-[0.24em] text-[#64748b]">
-                    Από τον Παππάδο Γέρας
-                  </span>
-                </span>
-                            </a>
-
-                            <nav className="hidden flex-wrap items-center justify-center gap-1 xl:flex">
-                                {guideLinks.map((item) => (
-                                    <a
-                                        key={item.href}
-                                        href={item.href}
-                                        className="rounded-full px-3 py-2 text-sm font-medium text-[#475569] transition hover:bg-[#eff6ff] hover:text-[#0f172a]"
-                                    >
-                                        {item.label}
-                                    </a>
-                                ))}
-                            </nav>
-
-                            <a
-                                href="#contact"
-                                className="rounded-full bg-[#2563eb] px-5 py-2.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#1d4ed8]"
-                            >
-                                Επικοινωνία
-                            </a>
-                        </div>
-
-                        {/* HERO CONTENT */}
                         <div className="grid min-h-[720px] items-center gap-12 rounded-[2.75rem] border border-[#0f172a]/10 bg-white/70 p-5 shadow-2xl shadow-[#0f172a]/5 backdrop-blur-xl sm:p-8 lg:grid-cols-[1.05fr_.95fr] lg:p-12">
                             <div className="max-w-2xl animate-fade-up">
                                 <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#2563eb]/15 bg-[#eff6ff] px-4 py-2 text-xs uppercase tracking-[0.18em] text-[#2563eb]">
@@ -245,24 +224,24 @@ export default function OuzoAigaioPage() {
                                     Παραγωγή στον Παππάδο Γέρας, Λέσβος
                                 </div>
 
-                                <h1 className="font-serif text-5xl leading-[1] tracking-[-0.045em] text-[#0f172a] sm:text-7xl lg:text-[82px]">
-                                    Ούζο
+                                <h1 className="font-serif text-5xl leading-[1] tracking-[-0.045em] sm:text-7xl lg:text-[82px]">
+                                    Ούζα
                                     <span className="mt-2 block italic text-[#2563eb]">
                     Αιγαίο.
                   </span>
                                 </h1>
 
                                 <p className="mt-8 max-w-xl text-base leading-8 text-[#475569] sm:text-lg">
-                                    Το Ούζο Αιγαίο παράγεται στην ποτοποιία μας στον Παππάδο
-                                    Γέρας της Λέσβου και φέρνει στο ποτήρι εικόνες από το Αιγαίο,
-                                    το ελληνικό τραπέζι και τη λεσβιακή παράδοση του ούζου.
+                                    Τα ούζα Αιγαίο παράγονται στην ποτοποιία στον Παππάδο
+                                    Γέρας της Λέσβου και συνδέονται με το Αιγαίο, το ελληνικό
+                                    τραπέζι και την παράδοση του ούζου στο νησί.
                                 </p>
 
                                 <div className="mt-10 grid gap-3 sm:grid-cols-3">
                                     {[
-                                        ["01", "Παππάδος Γέρας"],
-                                        ["02", "Παραγωγή στη Λέσβο"],
-                                        ["03", "Γεύση Αιγαίου"],
+                                        ["01", "Παράγονται στη Λέσβο"],
+                                        ["02", "Συνοδεύουν μεζέδες"],
+                                        ["03", "Διατίθενται σε πολλά μεγέθη"],
                                     ].map(([number, label]) => (
                                         <div
                                             key={label}
@@ -271,6 +250,7 @@ export default function OuzoAigaioPage() {
                                             <p className="text-xs font-semibold text-[#2563eb]">
                                                 {number}
                                             </p>
+
                                             <p className="mt-3 font-serif text-xl">{label}</p>
                                         </div>
                                     ))}
@@ -278,10 +258,10 @@ export default function OuzoAigaioPage() {
 
                                 <div className="mt-10 flex flex-col gap-4 sm:flex-row">
                                     <a
-                                        href="#experience"
+                                        href="#products"
                                         className="inline-flex items-center justify-center gap-2 rounded-full bg-[#0f172a] px-7 py-4 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#2563eb]"
                                     >
-                                        Γνώρισε το Ούζο Αιγαίο
+                                        Παρουσιάζονται τα προϊόντα
                                         <ArrowRight className="h-4 w-4" />
                                     </a>
 
@@ -289,17 +269,17 @@ export default function OuzoAigaioPage() {
                                         href="#availability"
                                         className="inline-flex items-center justify-center rounded-full border border-[#0f172a]/15 bg-white px-7 py-4 font-medium transition hover:bg-[#eff6ff]"
                                     >
-                                        Πού θα το βρεις
+                                        Πού διατίθενται
                                     </a>
                                 </div>
                             </div>
 
-                            {/* IMAGE */}
                             <div className="relative mx-auto w-full max-w-xl animate-fade-up delay-2 lg:max-w-none">
                                 <div className="absolute -right-6 -top-6 z-10 rounded-2xl bg-[#0f172a] px-5 py-4 text-white shadow-xl">
                                     <p className="text-[10px] uppercase tracking-[0.22em] text-white/50">
-                                        Ούζο Αιγαίο
+                                        Ούζα Αιγαίο
                                     </p>
+
                                     <p className="mt-1 font-serif text-2xl">
                                         Από τη Λέσβο
                                     </p>
@@ -307,8 +287,8 @@ export default function OuzoAigaioPage() {
 
                                 <div className="relative overflow-hidden rounded-[2.25rem] shadow-2xl shadow-[#0f172a]/15">
                                     <img
-                                        src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1400&q=90"
-                                        alt="Ούζο Αιγαίο"
+                                        src="/images/ouzo-aigaio.jpg"
+                                        alt="Ούζα Αιγαίο"
                                         className="h-[520px] w-full object-cover sm:h-[640px]"
                                     />
 
@@ -316,11 +296,11 @@ export default function OuzoAigaioPage() {
 
                                     <div className="absolute bottom-0 left-0 right-0 p-7 sm:p-10">
                                         <p className="text-xs uppercase tracking-[0.25em] text-[#bfdbfe]">
-                                            Το ελληνικό ritual
+                                            Από τον Παππάδο Γέρας
                                         </p>
 
                                         <p className="mt-2 max-w-sm font-serif text-3xl text-white">
-                                            Νερό, πάγος, καλή παρέα και ένα τραπέζι γεμάτο μεζέδες.
+                                            Παράγονται στη Λέσβο και συνοδεύουν το ελληνικό τραπέζι.
                                         </p>
                                     </div>
                                 </div>
@@ -333,10 +313,11 @@ export default function OuzoAigaioPage() {
 
                                         <div>
                                             <p className="text-sm font-semibold">
-                                                Ούζο Αιγαίο
+                                                Ούζα Αιγαίο
                                             </p>
+
                                             <p className="text-xs text-[#64748b]">
-                                                Παραγωγή στον Παππάδο Γέρας
+                                                Παράγονται στον Παππάδο Γέρας
                                             </p>
                                         </div>
                                     </div>
@@ -359,12 +340,12 @@ export default function OuzoAigaioPage() {
                                 </p>
 
                                 <h2 className="mt-5 max-w-xl font-serif text-4xl leading-tight sm:text-6xl">
-                                    Το Ούζο Αιγαίο στο ελληνικό τραπέζι.
+                                    Τα ούζα Αιγαίο βρίσκουν τη θέση τους στο ελληνικό τραπέζι.
                                 </h2>
 
                                 <p className="mt-7 max-w-xl text-lg leading-8 text-white/60">
-                                    Μια γεύση που συνδέεται με τη Λέσβο, τη θάλασσα, την παρέα
-                                    και τα τραπέζια με μικρούς ελληνικούς μεζέδες.
+                                    Συνδέονται με τη Λέσβο, τη θάλασσα, τις παρέες και τα
+                                    τραπέζια που γεμίζουν με μικρούς ελληνικούς μεζέδες.
                                 </p>
                             </div>
 
@@ -372,23 +353,23 @@ export default function OuzoAigaioPage() {
                                 {[
                                     {
                                         icon: Utensils,
-                                        title: "Με τι ταιριάζει",
-                                        body: "Θαλασσινά, χταπόδι, ελιές, τυριά, ντολμαδάκια και ελληνικοί μεζέδες.",
+                                        title: "Συνοδεύονται με μεζέδες",
+                                        body: "Μπορούν να συνοδευτούν από θαλασσινά, χταπόδι, ελιές, τυριά και άλλους ελληνικούς μεζέδες.",
                                     },
                                     {
                                         icon: Droplets,
-                                        title: "Με λίγο νερό",
-                                        body: "Πρόσθεσε λίγο δροσερό νερό ώστε να αναδειχθούν τα χαρακτηριστικά του ούζου.",
+                                        title: "Σερβίρονται με νερό",
+                                        body: "Μπορούν να σερβιριστούν με δροσερό νερό, ανάλογα με την προτίμηση των καταναλωτών.",
                                     },
                                     {
                                         icon: Glass,
-                                        title: "Με πάγο",
-                                        body: "Μπορεί να σερβιριστεί δροσερό, μαζί με νερό και πάγο.",
+                                        title: "Σερβίρονται με πάγο",
+                                        body: "Μπορούν επίσης να απολαμβάνονται δροσερά με την προσθήκη πάγου.",
                                     },
                                     {
                                         icon: MapPin,
-                                        title: "Από τη Λέσβο",
-                                        body: "Η παραγωγή πραγματοποιείται στην ποτοποιία μας στον Παππάδο Γέρας.",
+                                        title: "Παράγονται στη Λέσβο",
+                                        body: "Η παραγωγή τους πραγματοποιείται στην ποτοποιία στον Παππάδο Γέρας.",
                                     },
                                 ].map(({ icon: ExperienceIcon, title, body }) => (
                                     <div
@@ -400,6 +381,7 @@ export default function OuzoAigaioPage() {
                     </span>
 
                                         <h3 className="mt-6 font-serif text-2xl">{title}</h3>
+
                                         <p className="mt-3 text-sm leading-6 text-white/55">
                                             {body}
                                         </p>
@@ -410,67 +392,115 @@ export default function OuzoAigaioPage() {
                     </div>
                 </section>
 
-                {/* SERVING */}
-                <section id="serving" className="bg-[#f1f5f9] py-24 sm:py-32">
+                {/* PRODUCTS */}
+                <section id="products" className="bg-[#f1f5f9] py-24 sm:py-32">
                     <div className="mx-auto max-w-7xl px-5 sm:px-8">
                         <div className="mx-auto max-w-3xl text-center">
                             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#2563eb]">
-                                Πώς απολαμβάνεται
+                                Τα προϊόντα
                             </p>
 
-                            <h2 className="mt-4 font-serif text-4xl sm:text-6xl">
-                                Απλά. Αργά. Ελληνικά.
+                            <h2 className="mt-5 font-serif text-4xl leading-tight sm:text-6xl">
+                                Διατίθενται σε διαφορετικές εκδοχές και συσκευασίες.
                             </h2>
+
+                            <p className="mx-auto mt-6 max-w-2xl leading-7 text-[#64748b]">
+                                Κάθε προϊόν παρουσιάζεται ξεχωριστά, μαζί με τη φωτογραφία
+                                και τις διαθέσιμες συσκευασίες του.
+                            </p>
                         </div>
 
-                        <div className="mt-14 grid gap-6 md:grid-cols-3">
-                            {[
-                                {
-                                    number: "01",
-                                    title: "Σέρβιρε το ούζο",
-                                    body: "Βάλε το Ούζο Αιγαίο στο ποτήρι και άφησέ το να γίνει μέρος του τραπεζιού.",
-                                },
-                                {
-                                    number: "02",
-                                    title: "Νερό & πάγος",
-                                    body: "Πρόσθεσε δροσερό νερό και, αν επιθυμείς, λίγα παγάκια.",
-                                },
-                                {
-                                    number: "03",
-                                    title: "Συνόδευσέ το",
-                                    body: "Ταίριαξέ το με θαλασσινά, ελιές, τυριά και αγαπημένους ελληνικούς μεζέδες.",
-                                },
-                            ].map(({ number, title, body }) => (
-                                <article
-                                    key={number}
-                                    className="rounded-[2rem] border border-[#0f172a]/10 bg-white p-8 transition hover:-translate-y-2 hover:shadow-2xl"
-                                >
-                  <span className="text-xs font-semibold tracking-[0.2em] text-[#2563eb]">
-                    {number}
-                  </span>
+                        <div className="mt-14 grid gap-8 lg:grid-cols-2">
+                            {products.map((product) => {
+                                const isRed = product.accent === "red";
 
-                                    <h3 className="mt-7 font-serif text-3xl">{title}</h3>
-                                    <p className="mt-4 text-sm leading-7 text-[#64748b]">
-                                        {body}
-                                    </p>
-                                </article>
-                            ))}
+                                return (
+                                    <article
+                                        key={product.id}
+                                        className="group overflow-hidden rounded-[2.25rem] border border-[#0f172a]/10 bg-white shadow-lg shadow-[#0f172a]/5 transition duration-500 hover:-translate-y-2 hover:shadow-2xl"
+                                    >
+                                        {/* ΦΩΤΟΓΡΑΦΙΑ ΠΡΟΪΟΝΤΟΣ */}
+                                        <div className="relative overflow-hidden bg-white">
+                                            <img
+                                                src={product.image}
+                                                alt={product.alt}
+                                                className="h-[440px] w-full object-contain p-6 transition duration-700 group-hover:scale-[1.03] sm:h-[520px]"
+                                            />
+
+                                            <span
+                                                className={`absolute left-5 top-5 rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] ${
+                                                    isRed
+                                                        ? "bg-red-50 text-red-600"
+                                                        : "bg-[#eff6ff] text-[#2563eb]"
+                                                }`}
+                                            >
+                        {product.colorName}
+                      </span>
+                                        </div>
+
+                                        <div className="border-t border-[#0f172a]/10 p-8 sm:p-10">
+                                            <div className="flex items-start gap-4">
+                        <span
+                            className={`grid h-12 w-12 shrink-0 place-items-center rounded-full ${
+                                isRed
+                                    ? "bg-red-50 text-red-600"
+                                    : "bg-[#dbeafe] text-[#2563eb]"
+                            }`}
+                        >
+                          <Package className="h-5 w-5" />
+                        </span>
+
+                                                <div>
+                                                    <h3 className="font-serif text-3xl sm:text-4xl">
+                                                        {product.name}
+                                                    </h3>
+
+                                                    <p className="mt-3 leading-7 text-[#64748b]">
+                                                        {product.description}
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            <div className="mt-8">
+                                                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#64748b]">
+                                                    Διαθέσιμες συσκευασίες
+                                                </p>
+
+                                                <div className="mt-4 flex flex-wrap gap-2">
+                                                    {product.sizes.map((size) => (
+                                                        <span
+                                                            key={size}
+                                                            className={`rounded-full border px-5 py-2.5 text-sm font-semibold ${
+                                                                isRed
+                                                                    ? "border-red-200 bg-red-50 text-red-600"
+                                                                    : "border-[#2563eb]/15 bg-[#eff6ff] text-[#2563eb]"
+                                                            }`}
+                                                        >
+                              {size}
+                            </span>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                );
+                            })}
                         </div>
                     </div>
                 </section>
 
-                {/* AVAILABILITY / VISIT */}
+                {/* AVAILABILITY */}
                 <section id="availability" className="bg-white py-24 sm:py-32">
                     <div className="mx-auto max-w-7xl px-5 sm:px-8">
                         <div className="max-w-3xl">
                             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#2563eb]">
-                                Πού θα μας βρεις
+                                Πληροφορίες διάθεσης
                             </p>
 
                             <h2 className="mt-5 font-serif text-4xl leading-tight sm:text-6xl">
-                                Παραγωγή στον Παππάδο Γέρας.
+                                Παράγονται στον Παππάδο Γέρας.
                                 <span className="block italic text-[#2563eb]">
-                  Λιανική κάθε Σάββατο.
+                  Διατίθενται και λιανικώς κάθε Σάββατο.
                 </span>
                             </h2>
                         </div>
@@ -482,16 +512,16 @@ export default function OuzoAigaioPage() {
                 </span>
 
                                 <p className="mt-7 text-xs uppercase tracking-[0.22em] text-[#93c5fd]">
-                                    Η ποτοποιία
+                                    Οι εγκαταστάσεις
                                 </p>
 
                                 <h3 className="mt-3 font-serif text-3xl">
-                                    Παππάδος Γέρας, Λέσβος
+                                    Βρίσκονται στον Παππάδο Γέρας, Λέσβος
                                 </h3>
 
                                 <p className="mt-5 leading-7 text-white/60">
-                                    Στην ποτοποιία μας στον Παππάδο Γέρας πραγματοποιείται
-                                    η παραγωγή των προϊόντων μας.
+                                    Στις εγκαταστάσεις της ποτοποιίας πραγματοποιείται η
+                                    παραγωγή των προϊόντων.
                                 </p>
 
                                 <div className="mt-8 rounded-2xl border border-white/10 bg-white/5 p-5">
@@ -522,7 +552,7 @@ export default function OuzoAigaioPage() {
                                 </p>
 
                                 <h3 className="mt-3 font-serif text-3xl">
-                                    Κάθε Σάββατο
+                                    Εξυπηρετούνται κάθε Σάββατο
                                 </h3>
 
                                 <p className="mt-3 font-serif text-5xl text-[#2563eb]">
@@ -530,8 +560,8 @@ export default function OuzoAigaioPage() {
                                 </p>
 
                                 <p className="mt-5 leading-7 text-[#475569]">
-                                    Υπάρχει δυνατότητα λιανικής αγοράς προϊόντων απευθείας
-                                    από την ποτοποιία μας κατά το παραπάνω ωράριο.
+                                    Οι καταναλωτές μπορούν να προμηθεύονται προϊόντα
+                                    απευθείας από την ποτοποιία κατά το παραπάνω ωράριο.
                                 </p>
                             </div>
 
@@ -545,15 +575,15 @@ export default function OuzoAigaioPage() {
                                 </p>
 
                                 <h3 className="mt-3 font-serif text-3xl">
-                                    Παραλαβή κατόπιν επικοινωνίας
+                                    Μπορούν να εξυπηρετηθούν κατόπιν επικοινωνίας
                                 </h3>
 
                                 <p className="mt-5 leading-7 text-[#64748b]">
                                     Καθώς οι εγκαταστάσεις παραγωγής δεν είναι επισκέψιμες,
                                     δεν υπάρχει οργανωμένος χώρος επίσκεψης ή ξενάγησης.
-                                    Για οποιαδήποτε ανάγκη σχετικά με την παραλαβή προϊόντων,
-                                    ιδιαίτερα για άτομα με κινητικές δυσκολίες, μπορούμε να
-                                    εξυπηρετήσουμε κατόπιν επικοινωνίας.
+                                    Για ανάγκες σχετικές με την παραλαβή προϊόντων, καθώς
+                                    και για άτομα με κινητικές δυσκολίες, μπορούν να
+                                    εξυπηρετηθούν κατόπιν προηγούμενης επικοινωνίας.
                                 </p>
                             </div>
 
@@ -567,12 +597,12 @@ export default function OuzoAigaioPage() {
                                 </p>
 
                                 <h3 className="mt-3 font-serif text-3xl">
-                                    Σε επιλεγμένα σημεία στη Λέσβο
+                                    Μπορούν να τα προμηθευτούν σε όλη τη Λέσβο
                                 </h3>
 
                                 <p className="mt-5 leading-7 text-[#64748b]">
-                                    Τα προϊόντα μας διατίθενται σε κάβες, καταστήματα τοπικών
-                                    προϊόντων, τουριστικά καταστήματα, supermarkets και σε
+                                    Τα προϊόντα διατίθενται σε κάβες, καταστήματα τοπικών
+                                    προϊόντων, τουριστικά καταστήματα, supermarkets και
                                     συνεργαζόμενους χώρους εστίασης στη Λέσβο.
                                 </p>
                             </div>
@@ -580,104 +610,24 @@ export default function OuzoAigaioPage() {
                     </div>
                 </section>
 
-                {/* PACKAGING */}
-                <section className="bg-[#f1f5f9] py-24 sm:py-32">
-                    <div className="mx-auto max-w-7xl px-5 sm:px-8">
-                        <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
-                            <div>
-                                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#2563eb]">
-                                    Διαθέσιμες συσκευασίες
-                                </p>
-
-                                <h2 className="mt-5 font-serif text-4xl leading-tight sm:text-6xl">
-                                    Διάλεξε το μέγεθος που σου ταιριάζει.
-                                </h2>
-
-                                <p className="mt-6 max-w-lg leading-7 text-[#64748b]">
-                                    Το Ούζο Αιγαίο δεν διατίθεται μόνο στη συσκευασία των
-                                    200 ml. Υπάρχουν διαφορετικά μεγέθη ανάλογα με το προϊόν.
-                                </p>
-                            </div>
-
-                            <div className="grid gap-6 md:grid-cols-2">
-                                <article className="relative overflow-hidden rounded-[2rem] border border-[#2563eb]/15 bg-white p-8 shadow-xl shadow-[#0f172a]/5">
-                                    <div className="absolute right-0 top-0 h-32 w-32 rounded-full bg-[#dbeafe] blur-3xl" />
-
-                                    <div className="relative">
-                    <span className="grid h-12 w-12 place-items-center rounded-full bg-[#dbeafe] text-[#2563eb]">
-                      <Package className="h-5 w-5" />
-                    </span>
-
-                                        <p className="mt-7 text-xs font-semibold uppercase tracking-[0.22em] text-[#2563eb]">
-                                            Μπλε
-                                        </p>
-
-                                        <h3 className="mt-2 font-serif text-3xl">
-                                            Ούζο Αιγαίο
-                                        </h3>
-
-                                        <div className="mt-7 flex flex-wrap gap-2">
-                                            {["50 ml", "200 ml", "500 ml", "700 ml"].map((size) => (
-                                                <span
-                                                    key={size}
-                                                    className="rounded-full border border-[#2563eb]/15 bg-[#eff6ff] px-4 py-2 text-sm font-semibold text-[#2563eb]"
-                                                >
-                          {size}
-                        </span>
-                                            ))}
-                                        </div>
-                                    </div>
-                                </article>
-
-                                <article className="relative overflow-hidden rounded-[2rem] border border-red-200 bg-white p-8 shadow-xl shadow-[#0f172a]/5">
-                                    <div className="relative">
-                    <span className="grid h-12 w-12 place-items-center rounded-full bg-red-50 text-red-600">
-                      <Package className="h-5 w-5" />
-                    </span>
-
-                                        <p className="mt-7 text-xs font-semibold uppercase tracking-[0.22em] text-red-600">
-                                            Κόκκινο
-                                        </p>
-
-                                        <h3 className="mt-2 font-serif text-3xl">
-                                            Αιγαίο Dry
-                                        </h3>
-
-                                        <div className="mt-7 flex flex-wrap gap-2">
-                                            {["200 ml", "700 ml"].map((size) => (
-                                                <span
-                                                    key={size}
-                                                    className="rounded-full border border-red-200 bg-red-50 px-4 py-2 text-sm font-semibold text-red-600"
-                                                >
-                          {size}
-                        </span>
-                                            ))}
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
                 {/* CONTACT */}
-                <section id="contact" className="bg-white py-24 sm:py-32">
+                <section id="contact" className="bg-[#f1f5f9] py-24 sm:py-32">
                     <div className="mx-auto max-w-7xl px-5 sm:px-8">
-                        <div className="grid overflow-hidden rounded-[2.5rem] border border-[#0f172a]/10 bg-[#0f172a] shadow-2xl shadow-[#0f172a]/10 lg:grid-cols-[0.9fr_1.1fr]">
-
+                        <div className="grid overflow-hidden rounded-[2.5rem] bg-[#0f172a] shadow-2xl lg:grid-cols-[0.9fr_1.1fr]">
                             <div className="p-8 text-white sm:p-12 lg:p-16">
                                 <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#93c5fd]">
                                     Επικοινωνία
                                 </p>
 
                                 <h2 className="mt-5 max-w-xl font-serif text-4xl leading-tight sm:text-6xl">
-                                    Επικοινώνησε με την ποτοποιία μας.
+                                    Μπορούν να επικοινωνήσουν με την ποτοποιία.
                                 </h2>
 
                                 <p className="mt-6 max-w-lg text-base leading-8 text-white/60">
-                                    Για πληροφορίες σχετικά με τα προϊόντα, σημεία πώλησης,
-                                    λιανική παραλαβή ή ειδικές ανάγκες εξυπηρέτησης, μπορείς
-                                    να επικοινωνήσεις μαζί μας.
+                                    Για πληροφορίες σχετικά με τα προϊόντα, τα σημεία
+                                    πώλησης, τη λιανική παραλαβή ή ειδικές ανάγκες
+                                    εξυπηρέτησης, μπορούν να επικοινωνήσουν απευθείας
+                                    με την ποτοποιία.
                                 </p>
 
                                 <div className="mt-10 space-y-4">
@@ -690,6 +640,7 @@ export default function OuzoAigaioPage() {
                                             <p className="text-xs uppercase tracking-[0.18em] text-white/40">
                                                 Τοποθεσία
                                             </p>
+
                                             <p className="mt-1 font-medium">
                                                 Παππάδος Γέρας, Λέσβος
                                             </p>
@@ -705,28 +656,22 @@ export default function OuzoAigaioPage() {
                                             <p className="text-xs uppercase tracking-[0.18em] text-white/40">
                                                 Λιανική πώληση
                                             </p>
+
                                             <p className="mt-1 font-medium">
-                                                Σάββατο 09:00–14:00
+                                                Κάθε Σάββατο, 09:00–14:00
                                             </p>
                                         </div>
                                     </div>
-
-                                    {/*
-                    Βάλε εδώ το πραγματικό email και τηλέφωνο όταν τα έχεις:
-
-                    <a href="mailto:your@email.gr">...</a>
-                    <a href="tel:+30...">...</a>
-                  */}
                                 </div>
                             </div>
 
-                            <div className="bg-[#f8fafc] p-8 sm:p-12 lg:p-16">
+                            <div className="bg-white p-8 sm:p-12 lg:p-16">
                                 <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#2563eb]">
                                     Χρήσιμες πληροφορίες
                                 </p>
 
                                 <h3 className="mt-4 font-serif text-3xl sm:text-4xl">
-                                    Πριν έρθεις στην ποτοποιία
+                                    Τι χρειάζεται να γνωρίζουν
                                 </h3>
 
                                 <div className="mt-9 space-y-4">
@@ -738,18 +683,18 @@ export default function OuzoAigaioPage() {
                                         },
                                         {
                                             icon: Store,
-                                            title: "Λιανική αγορά",
-                                            body: "Μπορείς να προμηθευτείς προϊόντα από την ποτοποιία κάθε Σάββατο, 09:00–14:00.",
+                                            title: "Μπορούν να αγοράσουν λιανικώς",
+                                            body: "Μπορούν να προμηθεύονται προϊόντα από την ποτοποιία κάθε Σάββατο από τις 09:00 έως τις 14:00.",
                                         },
                                         {
                                             icon: Accessibility,
-                                            title: "Ειδική εξυπηρέτηση",
-                                            body: "Για ανάγκες παραλαβής ή εξυπηρέτησης ατόμων με κινητικές δυσκολίες, επικοινώνησε μαζί μας εκ των προτέρων.",
+                                            title: "Μπορούν να ζητήσουν ειδική εξυπηρέτηση",
+                                            body: "Για παραλαβές ή ανάγκες ατόμων με κινητικές δυσκολίες μπορούν να εξυπηρετούνται κατόπιν επικοινωνίας.",
                                         },
                                     ].map(({ icon: ContactIcon, title, body }) => (
                                         <div
                                             key={title}
-                                            className="flex gap-4 rounded-2xl border border-[#0f172a]/10 bg-white p-5"
+                                            className="flex gap-4 rounded-2xl border border-[#0f172a]/10 bg-[#f8fafc] p-5"
                                         >
                       <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-[#eff6ff] text-[#2563eb]">
                         <ContactIcon className="h-5 w-5" />
@@ -757,6 +702,7 @@ export default function OuzoAigaioPage() {
 
                                             <div>
                                                 <p className="font-semibold">{title}</p>
+
                                                 <p className="mt-1 text-sm leading-6 text-[#64748b]">
                                                     {body}
                                                 </p>
@@ -764,21 +710,13 @@ export default function OuzoAigaioPage() {
                                         </div>
                                     ))}
                                 </div>
-
-                                <a
-                                    href="#availability"
-                                    className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#2563eb] px-7 py-4 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#1d4ed8]"
-                                >
-                                    Δες πληροφορίες επίσκεψης
-                                    <ArrowRight className="h-4 w-4" />
-                                </a>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                {/* FINAL CTA */}
-                <section className="bg-[#f8fafc] py-24 sm:py-32">
+                {/* FINAL */}
+                <section className="bg-white py-24 sm:py-32">
                     <div className="mx-auto max-w-7xl px-5 sm:px-8">
                         <div className="relative overflow-hidden rounded-[2.5rem] bg-[#eff6ff] p-8 sm:p-12 lg:p-16">
                             <div className="absolute -right-28 -top-28 h-80 w-80 rounded-full bg-[#bfdbfe] blur-3xl" />
@@ -786,26 +724,27 @@ export default function OuzoAigaioPage() {
                             <div className="relative grid gap-12 lg:grid-cols-[1.1fr_.9fr] lg:items-center">
                                 <div>
                                     <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#2563eb]">
-                                        Ούζο Αιγαίο
+                                        Ούζα Αιγαίο
                                     </p>
 
                                     <h2 className="mt-5 max-w-2xl font-serif text-4xl leading-tight sm:text-6xl">
-                                        Από τον Παππάδο Γέρας,
+                                        Παράγονται στον Παππάδο Γέρας.
                                         <span className="block italic text-[#2563eb]">
-                      μια γεύση από τη Λέσβο.
+                      Διατίθενται σε όλη τη Λέσβο.
                     </span>
                                     </h2>
 
                                     <p className="mt-6 max-w-xl leading-7 text-[#475569]">
-                                        Βρες τα προϊόντα μας στην ποτοποιία κάθε Σάββατο ή
-                                        σε επιλεγμένα σημεία πώλησης σε ολόκληρη τη Λέσβο.
+                                        Τα προϊόντα μπορούν να προμηθεύονται από την ποτοποιία
+                                        κάθε Σάββατο, καθώς και από επιλεγμένα σημεία πώλησης
+                                        στη Λέσβο.
                                     </p>
 
                                     <a
                                         href="#contact"
                                         className="mt-9 inline-flex items-center gap-2 rounded-full bg-[#2563eb] px-7 py-4 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#1d4ed8]"
                                     >
-                                        Επικοινωνία
+                                        Πληροφορίες επικοινωνίας
                                         <ArrowRight className="h-4 w-4" />
                                     </a>
                                 </div>
@@ -814,18 +753,18 @@ export default function OuzoAigaioPage() {
                                     {[
                                         {
                                             icon: MapPin,
-                                            title: "Παππάδος Γέρας",
-                                            text: "Εδώ πραγματοποιείται η παραγωγή των προϊόντων μας.",
+                                            title: "Παράγονται στον Παππάδο Γέρας",
+                                            text: "Εκεί πραγματοποιείται η παραγωγή των προϊόντων.",
                                         },
                                         {
                                             icon: Clock,
-                                            title: "Σάββατο 09:00–14:00",
-                                            text: "Λιανική πώληση απευθείας από την ποτοποιία.",
+                                            title: "Πωλούνται λιανικώς κάθε Σάββατο",
+                                            text: "Η λιανική πώληση πραγματοποιείται από τις 09:00 έως τις 14:00.",
                                         },
                                         {
                                             icon: Store,
-                                            title: "Σε όλη τη Λέσβο",
-                                            text: "Κάβες, τοπικά και τουριστικά καταστήματα, supermarkets και συνεργαζόμενοι χώροι εστίασης.",
+                                            title: "Διατίθενται στη Λέσβο",
+                                            text: "Βρίσκονται σε κάβες, καταστήματα, supermarkets και συνεργαζόμενους χώρους εστίασης.",
                                         },
                                     ].map(({ icon: InfoIcon, title, text }) => (
                                         <div
@@ -838,6 +777,7 @@ export default function OuzoAigaioPage() {
 
                                             <div>
                                                 <p className="font-serif text-xl">{title}</p>
+
                                                 <p className="mt-2 text-sm leading-6 text-[#64748b]">
                                                     {text}
                                                 </p>
@@ -849,8 +789,8 @@ export default function OuzoAigaioPage() {
                         </div>
 
                         <p className="mx-auto mt-8 max-w-3xl text-center text-xs leading-6 text-[#64748b]">
-                            Απολαύστε υπεύθυνα. Η κατανάλωση αλκοόλ επιτρέπεται μόνο σε
-                            άτομα άνω των 18 ετών.
+                            Απολαμβάνουν υπεύθυνα. Η κατανάλωση αλκοόλ επιτρέπεται μόνο
+                            σε άτομα άνω των 18 ετών.
                         </p>
                     </div>
                 </section>
