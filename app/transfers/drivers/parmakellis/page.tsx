@@ -3,7 +3,7 @@ import React from "react";
 export default function NikosDriverPage() {
     const driver = {
         name: "Parmakellis Tryfon",
-        area: "Mytilene",
+        area: "Kalloni",
         vehicle: "Mercedes E-Class",
         languages: "Greek · English",
         availability: "24/7 Available",
@@ -12,7 +12,7 @@ export default function NikosDriverPage() {
         image:
             "/taxi/tryfon-taxi.jpg",
         description:
-            "Professional taxi driver based in Mytilene offering safe and comfortable transfers across Lesvos island.",
+            "Professional taxi driver based in Kalloni offering safe and comfortable transfers across Lesvos island.",
         services: ["Airport Transfers", "Port Pickup", "Private Tours", "Night Rides"],
     };
 
@@ -25,7 +25,7 @@ export default function NikosDriverPage() {
                     alt={driver.name}
                     className="absolute inset-0 h-full w-full object-cover opacity-30"
                 />
-                <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-950/90 to-yellow-950/60" />
+                <div className="absolute inset-0">
 
                 <div className="relative z-10 mx-auto flex h-full max-w-5xl items-center px-6">
                     <div>
