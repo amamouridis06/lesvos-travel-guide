@@ -2,15 +2,15 @@ import React from "react";
 
 export default function NikosDriverPage() {
     const driver = {
-        name: "Nikos Taxi",
+        name: "Parmakellis Tryfon",
         area: "Mytilene",
         vehicle: "Mercedes E-Class",
         languages: "Greek · English",
         availability: "24/7 Available",
-        phone: "+30 690 000 0000",
-        whatsapp: "+306900000000",
+        phone: "+30 6976683130",
+        whatsapp: "+306976683130",
         image:
-            "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1600&auto=format&fit=crop",
+            "/taxi/tryfon-taxi.jpg",
         description:
             "Professional taxi driver based in Mytilene offering safe and comfortable transfers across Lesvos island.",
         services: ["Airport Transfers", "Port Pickup", "Private Tours", "Night Rides"],
